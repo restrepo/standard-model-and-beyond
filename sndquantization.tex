@@ -1,0 +1,1354 @@
+%instiki:category: QuantumFieldTheory
+\chapter{Second quantization}
+\label{cha:second-quantization} %noinstiki
+%instiki:
+%instiki:***
+%instiki:
+%instiki:[[Beyond|Contents]]
+%instiki:
+%instiki:***
+%instiki:
+%instiki:* [Fock space for real scalar fields](#fock-space-real)
+%instiki:
+%instiki:* [Quantization of Fermions](#quant-ferm)
+%instiki:
+
+
+Two key ingredients to formulate the Quantum Field Theory (QFT) are the quantization of systems in which the particles can be created and destroyed (quamtum theory of radiation) and the behavior of relativistic systems. When both ingredients are present the particles can be understood as the excited modes of certain field. When the particles in a system are not relativistic, the formalism of creation and annihilation operators is just an alternative method to describe the Hamiltonian of the Schr\"odinger equation. In relativistic systems however, the existence of negative energy states force the construction of new quantum states, the Fock states, in order to have proper defined probabilities for the states of the system. In section xx we start by building the Fock states associated to a massless not relativistic scalar field. Then we generalize the results to a massive scalar field satisfying the Klein-Gordon equation.
+
+Some parts of the discussion were based in some topics of chapters 4-6 of \cite{Maggiore:2005qv}.
+
+
+\section{Quantization of the nonrelativistic string}
+\label{sec:fock-space-real}
+
+\subsection{The clasical string}
+\label{sec:clasical-string}
+
+In conventional quantization the energy of one state is interpreted as the possible eigenstates of an Hamiltonian operator acting on the states of the system. 
+\begin{align}
+  \widehat{H}|\text{State}\rangle=E|\text{State}\rangle
+\end{align}
+One step further is to consider the wave function as the eigenstate  of the operator--field acting on certain \emph{Fock states}
+\begin{align}
+\label{eq:1}
+  \widehat{\Phi}|\text{Fock State}\rangle=\Phi||\text{Fock State}\rangle\,,
+\end{align}
+Like that usual quantum mechanical observable, the wave function will have an uncertainty. 
+The Fock states are the states under which the classical wave function can be obtained with a small uncertainty
+\begin{align}
+    \Phi\pm\Delta\Phi=\langle\text{Fock State}|\widehat{\Phi}|\text{Fock State}\rangle
+\end{align}
+This happens when the number of quanta of the Fock state is big enough. In fact, a state with a definite number of quanta has a infinity uncertainty \cite{Gross:1993}.
+
+Eq.~\eqref{eq:1} is the basis for the calculation of cross section and decay widths in quantum field theory. Now we will study how to define a such Fock state for a scalar field.
+
+
+We have already seen in Chapter 1 of \cite{lsm} that a string have a collective wave motion that is described by a continuous field, which satisfies the familiar one-dimensional wave equation
+\begin{align}
+\label{eq:2}
+  \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}=0
+\end{align}
+This equation can be derived following two different paths. The first is to decomposing the string into individual oscillators for which the usual Lagrangian formalism can be used. The second is just by formulating certain Lagrangian density from which the equation of motion can be obtained  by using the Euler-Lagrange equation
+\begin{align}
+  \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\right]-\frac{\partial\mathcal{L}}{\partial\phi}=0\,.
+\end{align}
+In the first approach the string is considered to be composed of $N$ oscillators coupled together  by springs with a spring constant $k$. At certain time $t$, the displacement of the oscillator $i$ at time $t$ is represented by $\phi_i(t)$. In Table~\ref{tab:1} it is displayed the corresponding macroscopic quantities. Note also that $1/v^2=\mu/T$.
+\begin{table}[htp!]
+  \centering
+  \begin{tabular}{l|l}
+    micro & macro \\\hline{}
+    $l$ & $L=N l$\\
+    $m$ & $\mu=m/l$ \\
+    $k$ & $T=k l$\\
+    $\phi_i(t)=\phi(z_i,t)$ &  $\phi(z,t)$\\
+  \end{tabular}
+  \caption{From micro to macro}
+\label{tab:1}
+\end{table}
+It is worth to stress that at the Lagrangian level, which is the sum of each individual oscillator Lagrangian, it is the sum of the kinetic and potential oscillator energy. However, the Lagrangian density only have the kinetic term for the scalar field
+\begin{align}
+  \mathcal{L}&=\frac{1}{2}\left(\frac{1}{v^2}\partial^0\phi\partial_0\phi+\partial^3\phi\partial_3\phi\right)\nonumber\\
+  &\underset{v\to c=1}{\longrightarrow}\;\tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi\,.
+\end{align}
+Note that only in the case $v=c$ this Lagrangian can be written in a covariant form. Moreover, the scalar field $\phi(z,t)$ have nothing to do with the individual oscillators. An specific solution for $\phi(z,t)$ would represent one specific oscillation mode of the string. It turn out that  this specific frequency mode corresponds to an particle state, that does have not connection with the physical particles in the string. 
+
+The most general discrete solution to the wave equation  \eqref{eq:2} is the Fourier decomposition
+\begin{align}
+  \label{eq:3}
+  \phi(t,z)=\sum_{n}\frac{v}{\sqrt{2\omega_{n} L}}
+  \left(a_{n} e^{-i (\omega_n t-k_nz) }+a_{n}^* e^{i (\omega_n t-k_n z) }\right)
+\end{align}
+where the dispersion relation is
+\begin{align}
+\label{eq:4}
+  \omega_n^2=v^2 k_n^2
+\end{align}
+where $\omega_n$ is definite positive:
+\begin{align}
+  \omega_n=+|v|\sqrt{|k_n|}
+\end{align}
+
+To satisfy the boundary conditions we must have
+\begin{align}
+  \label{eq:5}
+  k_n=\frac{2\pi n}{L}
+\end{align}
+Note that
+\begin{align}
+  k_{-n}=-k_n\,.
+\end{align}
+Therefore
+\begin{align}
+  \omega_{-n}=\omega_n\,.
+\end{align}
+In three dimensions and with $v=c=1$, the Lagrangian can be written as
+\begin{align}
+\mathcal{L}=  \tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi
+\end{align}
+This Lagrangian is still covariant after the addition of a function of $\phi$. An interesting case is just the addition of the mass term
+the most general solution to the Klein--Gordon equation is 
+\begin{align}
+\mathcal{L}=  \tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi-\tfrac{1}{2}m^2\phi^2
+\end{align}
+which give to arise to Klein-Gordon 
+\begin{align}
+  \left(\partial_\mu\partial^\mu-m^2\right)\phi=0\,.
+\end{align}
+We now will check the origin of the normalization factor. For simplicity we work with one spatial dimension. By using eq.~\eqref{eq:3}
+\begin{equation}
+\label{eq:6}
+   \phi(z,t)=\sum_{n=-\infty}^\infty 
+    \frac{v}{\sqrt{2\omega_n}}
+  \left[a_n\,\phi_n(z,t)+a_n^*\,\phi_n^*(z,t)\right],
+\end{equation}
+\begin{align}
+  [E]=&\frac{1}{[E]^{1/2}[E]^{-1}}[a]\nonumber\\
+  =&E^{1/2}[a]
+\end{align}
+\begin{align}
+  [a]=[E]^{1/2}
+\end{align}
+we define
+\begin{align}
+  \phi_n(z,t)=\frac{1}{\sqrt{L}}e^{-i(\omega_n t-k_n z)}
+\end{align}
+
+y las funciones $\phi_n$ satisfacen las siguientes condiciones de normalizaci\'on
+\begin{align}
+  \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)=&\frac{1}{L}\int_0^Ldz\,e^{i(\omega_n t-k_n z)}e^{-i(\omega_m t-k_m z)}\nonumber\\
+=&\frac{1}{L}\int_0^Ldz\,\exp\{i[(\omega_n-\omega_m) t-(k_n-k_m) z]\}\nonumber\\
+=&\frac{e^{i(\omega_n-\omega_m)t}}{L}\int_0^Ldz\,e^{-i(k_n-k_m) z}\nonumber\\
+\end{align}
+When $n=m$
+\begin{align}
+    \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)=&\frac{1}{L}\int_0^Ldz\nonumber\\
+    =&1
+\end{align}
+For $n\neq m$, $2(n-m)$ is an even integer and then
+\begin{align}
+   \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)  =&\frac{e^{i(\omega_n-\omega_m)t}}{L}\left.
+\frac{e^{-i(k_n-k_m) z}}{-i(k_n-k_m)}\right|_0^L\nonumber\\
+=&\frac{e^{i(\omega_n-\omega_m)t}}{L}\frac{1}{-i(k_n-k_m)}
+\left(e^{-i2\pi(n-m) }-1\right)\nonumber\\
+=&0
+\end{align}
+In this way
+\begin{equation}
+\label{eq:7}
+  \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)=\delta_{nm}.
+\end{equation}
+Moreover
+\begin{equation}
+\label{eq:8}
+  \int_0^Ldz\,\phi_n(z,t)\phi_m(z,t)=\delta_{n,-m}e^{-2i\omega_nt}.
+\end{equation}
+
+En tal caso de 
+\begin{equation}
+  \label{eq:9}
+  H=\int_{0}^{L}\mathcal{H}\,dz\,.
+\end{equation}
+From the analysis of the Theorem of Noether in chapter~1 of \cite{lsm} we have, that in a similar way to the usual Lagrangian formulation, where the canonical conjugate  variable is used to define the Legendre transformation
+\begin{align}
+  \label{eq:10}
+  H=p \dot q-L\,,
+\end{align}
+the Hamiltonian density can be obtained from the Lagragian density trough the Legendre transformation
+\begin{align}
+\mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
+      -\mathcal{L}\\
+      &=\Pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
+\end{align}
+where
+\begin{equation}
+\label{eq:11}
+  \Pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}
+\end{equation}
+is the canonical conjugate variable (conjugate momentum) of  the canonical variable $\phi(x)$.
+
+We have then,
+\begin{align}
+\label{eq:12}
+  H&=\frac{1}{2v^2}\int_0^Ldz\,\frac{\partial\phi}{\partial t}\frac{\partial\phi}{\partial t}+
+  \frac{1}{2}\int_0^Ldz\,\frac{\partial\phi}{\partial z}\frac{\partial\phi}{\partial z}\nonumber\\
+&=\sum_{n=-\infty}^\infty\omega_n\,a_n^*a_n
+\end{align}
+\begin{align}
+  \frac{\partial\phi}{\partial t}=&\sum_{n=-\infty}^\infty \frac{v}{\sqrt{2\omega_n}}
+  \left[-i\omega_n a_n\,\phi_n(z,t)+i\omega_n a_n^*\,\phi_n^*(z,t)\right],\nonumber\\
+=&\sum_{n=-\infty}^\infty\frac{-i v\omega_n}{\sqrt{2\omega_n}}
+  \left[a_n\,\phi_n(z,t)- a_n^*\,\phi_n^*(z,t)\right],
+\end{align}
+\begin{align}
+\frac{1}{v^2}   \frac{\partial\phi}{\partial t} \frac{\partial\phi}{\partial t}=&
+\sum_{n,m=-\infty}^\infty\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}}
+  \left[a_n\,\phi_n(z,t)- a_n^*\,\phi_n^*(z,t)\right]
+\left[a_m\,\phi_m(z,t)- a_m^*\,\phi_m^*(z,t)\right]\\
+=  &
+\sum_{n,m=-\infty}^\infty\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}}
+  \left[a_n a_m \phi_n \phi_m- a_n^*a_m\phi_n^*\phi_m-a_n a_m^* \phi_n \phi_m^*+ a_n^*a_m^*\phi_n^*\phi_m^*\right]
+\end{align}
+
+\begin{align}
+  \frac{\partial\phi}{\partial z}=&\sum_{n=-\infty}^\infty \frac{v}{2\sqrt{\omega_n}}
+  \left[ik_n a_n\,\phi_n(z,t)-ik_n a_n^*\,\phi_n^*(z,t)\right],\nonumber\\
+=&\sum_{n=-\infty}^\infty\frac{i vk_n}{2\sqrt{\omega_n}}
+  \left[a_n\,\phi_n(z,t)- a_n^*\,\phi_n^*(z,t)\right],
+\end{align}
+\begin{align}
+   \frac{\partial\phi}{\partial z} \frac{\partial\phi}{\partial z}=&
+\sum_{n,m=-\infty}^\infty\frac{-v^2 k_nk_m}{2\sqrt{\omega_n\omega_m}}
+  \left[a_n\,\phi_n(z,t)- a_n^*\,\phi_n^*(z,t)\right]
+\left[a_m\,\phi_m(z,t)- a_m^*\,\phi_m^*(z,t)\right]\\
+=  &
+\sum_{n,m=-\infty}^\infty\frac{- v^2k_nk_m}{2\sqrt{\omega_n\omega_m}}
+  \left[a_n a_m \phi_n \phi_m- a_n^*a_m\phi_n^*\phi_m-a_n a_m^* \phi_n \phi_m^*+ a_n^*a_m^*\phi_n^*\phi_m^*\right]
+\end{align}
+Using eqs.~\eqref{eq:7}, and \eqref{eq:8}
+\begin{align}
+  H=  &\frac12
+\sum_{n,m=-\infty}^\infty\int_0^Ldz\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}} 
+  \left[a_n a_m \phi_n \phi_m- a_n^*a_m\phi_n^*\phi_m-a_n a_m^* \phi_n \phi_m^*+ a_n^*a_m^*\phi_n^*\phi_m^*\right]\nonumber\\
+&+\frac12\sum_{n,m=-\infty}^\infty\int_0^Ldz \frac{- v^2k_nk_m}{2\sqrt{\omega_n\omega_m}}
+  \left[a_n a_m \phi_n \phi_m- a_n^*a_m\phi_n^*\phi_m-a_n a_m^* \phi_n \phi_m^*+ a_n^*a_m^*\phi_n^*\phi_m^*\right]\nonumber\\
+  =  &\frac12
+\sum_{n,m=-\infty}^\infty\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}} 
+  \left[a_n a_m \delta_{n,-m}e^{-2i\omega_n t}- a_n^*a_m\delta_{n, m}-a_n a_m^* \delta_{n,m}+ a_n^*a_m^*\delta_{n,-m}e^{2i\omega_n t}\right] \nonumber\\
+  &+\frac12
+\sum_{n,m=-\infty}^\infty\frac{-v^2 k_nk_m}{2\sqrt{\omega_n\omega_m}} 
+  \left[a_n a_m \delta_{n,-m}e^{-2i\omega_n t}- a_n^*a_m\delta_{n, m}-a_n a_m^* \delta_{n,m}+ a_n^*a_m^*\delta_{n,-m}e^{2i\omega_n t}\right]\nonumber\\
+  =  &\frac12
+\sum_{n=-\infty}^\infty 
+  \left[\frac{- \omega_n\omega_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n e^{-2i\omega_n t}
++\frac{ \omega_n\omega_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{\omega_n\omega_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*e^{2i\omega_n t}\right]\nonumber\\
+&+\frac12
+\sum_{n=-\infty}^\infty 
+  \left[\frac{-v^2 k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n e^{-2i\omega_n t}
++\frac{ k_nk_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*e^{2i\omega_n t}\right]
+\end{align}
+Since $\omega_n=\omega_{-n}$ and $k_n=-k_{-n}$
+\begin{align}
+ H =  &\frac12
+\sum_{n=-\infty}^\infty \frac{1}{2\omega_n}
+  \left[(- \omega_n^2+v^2 k_n^2)a_n a_n e^{-2i\omega_n t}
++( \omega_n^2+v^2 k_n^2)(a_n^*a_n+a_n a_n^*)\right.\nonumber\\
+&+\left.(- \omega_n^2+v^2 k_n^2)a_n^*a_{-n}^*e^{2i\omega_n t}\right]
+\end{align}
+Finally, using eq.~\eqref{eq:4}
+\begin{align}
+\label{eq:13}
+  H=\frac{1}{2}\sum_{n=-\infty}^\infty\omega_n(a_n^*a_n+a_n a_n^*)
+\end{align}
+Since $a_n$ and $a_n^*$ are classical quantities that commutates, the Hamiltonian is
+\begin{align}
+  \label{eq:14}
+  H=\sum_{n=-\infty}^\infty\omega_na_n^*a_n=\sum_{n=-\infty}^\infty\omega_n|a_n|^2
+\end{align}
+
+In this way, the factor $\sqrt{2\omega_{n}}$ in eq.~\eqref{eq:6}, is a convenient choice of normalization for the coefficients $a_n$ which guarantees the Hamiltonian.
+
+To quantize the string, we need to promote $H$ to an operator. In canonical quantization we need to identify the proper conjugates variables. For this purpose it is convenient to write eq.~\eqref{eq:14} as the Hamiltonian of an harmonic oscillator.
+
+\subsection{Quantization of the string}
+\label{sec:quantization-string}
+
+
+This Hamiltonian can be rewritten as a sum of independent  oscillators Hamiltonians. Consider an harmonic oscillator of frequency $\omega$. The equation of motion for $F=-k q$ is
+\begin{align}
+  \ddot{q}+\frac{k}{m}q=&0\nonumber\\
+   \ddot{q}+\omega^2q=&0
+\end{align}
+with
+\begin{align}
+  \omega^2=\frac{k}{m}
+\end{align}
+This equation of motion can be obtained from the Lagrangian
+\begin{align}
+  L=T-V=\frac{1}{2}[m\dot{q}^2-k q^2]
+\end{align}
+And the Hamiltonian can be obtained from eq.~\eqref{eq:10}
+\begin{align}
+   H=&p \dot{q}-L\nonumber\\
+   =&\frac{p^2}{m}-\frac{1}{2}\frac{p^2}{m}+k q^2\nonumber\\
+   =&\frac{1}{2}\left(\frac{p^2}{m}+m \omega^2 q^2\right)\nonumber\\
+   =&\frac{1}{2m}\left({p^2}+m^2 \omega^2 q^2\right)\nonumber\\
+\end{align}
+For a set of independent oscillators we have
+\begin{align}
+\label{eq:15}
+  H=&\sum_n\frac{1}{2m}\left({p_n^2}+m^2 \omega_n^2 q_n^2\right)\nonumber\\
+  H=&\sum_n{\omega_n}\left(\frac{1}{{2m}\omega_n}p_n^2+\frac{m\omega_n}{2} q_n^2\right)
+\end{align}
+Comparing eq.~\eqref{eq:15} with Eq.~\eqref{eq:14} we see that the complex number $a_n$ can be written as ($\hbar=1$)
+\begin{align}
+  a_n=& c_1q_n+i c_2p_n
+\end{align}
+
+\begin{align}
+  a_n^*a_n=c_1^2 q_n^2+c_2^2 p_n^2
+\end{align}
+\begin{align}
+c_1=&\frac{\sqrt{m\omega_n}}{\sqrt{2}}=\frac{m\omega_n}{\sqrt{2m\omega_n}}   & c_2=&\frac{1}{\sqrt{2m\omega_n}}
+\end{align}
+\begin{align}
+  a_n=&\frac{m\omega_n q_n+i\,p_n}{\sqrt{2m\omega_n}}\nonumber\\
+  a_n^*=&\frac{m\omega_n q_n-i\,p_n}{\sqrt{2m\omega_n}}\nonumber\\
+\end{align}
+\begin{align}
+a_n+a_n^*=& 2\frac{m\omega_n}{\sqrt{2m\omega_n}}q_n=\sqrt{2m\omega_n}q_n \Rightarrow& q_n=&\frac{1}{\sqrt{2m\omega_n}}(a_n+a_n^*) \nonumber\\
+a_n-a_n^*=&\frac{2i}{\sqrt{2m\omega_n}}p_n=\frac{i\sqrt{2m\omega_n}}{m\omega_n}p_n
+\Rightarrow& p_n=&-\frac{im\omega_n}{\sqrt{2m\omega_n}}(a_n-a_n^*) 
+\end{align}
+In quantum mechanics the classical objects $q_n$ and $p_n$ are promoted to operators which satisfy the commutation relation
+
+\begin{align}
+\label{eq:16}
+  [\widehat{q}_n,\widehat{p}_m]=&i\delta_{m n} &
+  [\widehat{q}_n,\widehat{q\,}_m^\dagger]= [\widehat{p_n},\widehat{p\,}_m^\dagger]=&0\,. 
+\end{align}
+This implies that the objects $a_n$ and $a_n^*$, are also operators
+\begin{align}
+  [\widehat{q}_n,\widehat{p}_m]=&-\frac{i m\omega_m}{\sqrt{2m\omega_n 2m\omega_m}}\{ 
+[\widehat{a}_{n},\widehat{a}_{m}]-[\widehat{a}_{n},\widehat{a}_{m}^\dagger]
++[\widehat{a}_{n}^\dagger,\widehat{a}_{m}]+[\widehat{a}_{n}^\dagger,\widehat{a}_{m}^\dagger]
+\} \nonumber\\
+  [\widehat{q}_n,\widehat{p}_m]=&-\frac{i m\omega_m}{2\sqrt{m\omega_n m\omega_m}}\{ 
+[\widehat{a}_{n},\widehat{a}_{m}]-2[\widehat{a}_{n},\widehat{a}_{m}^\dagger]
++[\widehat{a}_{n}^\dagger,\widehat{a}_{m}^\dagger]
+\} 
+\end{align}
+If the operators $\widehat{a}_{n}$ and $\widehat{a}_{n}^\dagger$ satisfy the commutation relations
+\begin{align}
+\label{eq:17}
+  &\left[\widehat{a}_{n},\widehat{a}_{m}^\dagger\right]=
+\delta_{{n},{m}}&
+&\left[\widehat{a}_{n},\widehat{a}_{m}\right]=
+\left[\widehat{a}_{n}^\dagger,\widehat{a}_{m}^\dagger\right]=0\,,
+\end{align}
+then we recover equations \eqref{eq:16}. The scalar field is now an operator
+\begin{align}
+\label{eq:18}
+  \widehat{\phi}=&\sum_{n=-\infty}^\infty\frac{v}{\sqrt{2\omega_nL}}
+  \left[\widehat{a}_n\,e^{-i(\omega_n t-k_n z)}+\widehat{a\,}_n^\dagger\,e^{i(\omega_n t-k_n z)}\right],
+\end{align}
+
+
+In terms of operators $\widehat{a}_{n}$ and $\widehat{a\,}_{n}^\dagger$ the Hamiltonian from eq.~(\ref{eq:13}) can be written as
+\begin{align}
+\label{eq:129}
+\widehat{H}=&\frac{1}{2}\sum_{n=-\infty}^{\infty} \omega_n (\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\widehat{a}_{n} \widehat{a\,}_{n}^\dagger)
+\nonumber\\
+=&\frac{1}{2}\sum_{n=-\infty}^{\infty} \omega_n \left(2\widehat{a\,}_{n}^\dagger\widehat{a}_{n} 
++\left[\widehat{a}_{n}, \widehat{a\,}_{n}^\dagger\right]\right)
+\nonumber\\
+=&\sum_{n=-\infty}^{\infty} \omega_n \left(\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\frac{1}{2}\right)
+\end{align}
+Since
+\begin{align}
+  \sum_{n=-\infty}^{\infty} \frac{1}{2}\to\infty\,,
+\end{align}
+it is convenient to renormalize the Hamiltonian as
+\begin{align}
+\label{eq:130}
+  \colon\!\widehat{H}\colon=&\sum_{n=-\infty}^{\infty} \omega_n \left(\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\frac{1}{2}\right)-
+  \sum_{n=-\infty}^{\infty} \frac{1}{2}\nonumber\\
+=&\sum_{n=-\infty}^{\infty} \omega_n \widehat{a\,}_{n}^\dagger\widehat{a}_{n}
+\end{align}
+This procedure is consistent since the related physics quantities arise from energy differences, no from absolute energy determinations.
+
+  
+\begin{align}
+  \left[\widehat{H},\widehat{a}_{m}\right]=&
+  \sum_{n=-\infty}^{\infty} \omega_n
+  \left[\left(\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\frac{1}{2}\right),\widehat{a}_{m}\right]\nonumber\\
+  =&\sum_{n=-\infty}^{\infty} \omega_n\left[\widehat{a\,}_{n}^\dagger\widehat{a}_{n},\widehat{a}_{m}\right]
+\end{align}
+By using the identity
+\begin{align}
+  \left[A B,C\right]=\left[A,C\right]B+A\left[B,C\right]
+\end{align}
+we have
+\begin{align}
+\label{eq:19}
+   \left[\widehat{H},\widehat{a}_{m}\right]=&
+\sum_{n=-\infty}^{\infty} \omega_n\left(
+\left[\widehat{a\,}_{n}^\dagger,\widehat{a}_{m}\right]\widehat{a}_{n}
++\widehat{a\,}_{n}^\dagger\left[\widehat{a}_{n},\widehat{a}_{m}\right]
+\right)\nonumber\\
+=&-\sum_{n=-\infty}^{\infty} \omega_n
+\delta_{n m}\widehat{a}_{n}
+\nonumber\\
+=&- \omega_m\widehat{a}_{m}
+\end{align}
+
+\begin{align}
+\label{eq:20}
+   \left[\widehat{H},\widehat{a\,}_{m}^\dagger\right]=&
+\sum_{n=-\infty}^{\infty} \omega_n\left(
+\left[\widehat{a\,}_{n}^\dagger,\widehat{a\,}_{m}^\dagger\right]\widehat{a}_{n}
++\widehat{a\,}_{n}^\dagger\left[\widehat{a}_{n},\widehat{a\,}_{m}^\dagger\right]
+\right)\nonumber\\
+=&\sum_{n=-\infty}^{\infty} \omega_n
+\widehat{a\,}_{n}^\dagger\delta_{n m}
+\nonumber\\
+=& \omega_m\widehat{a\,}_{n}^\dagger
+\end{align}
+
+If $|m_n\rangle$ is an eigenstate of $\widehat{H}$ with eigenvalue $E_n$
+\begin{align}
+  \widehat{H}|m_n\rangle=E_n|m_n\rangle
+\end{align}
+then
+\begin{align}
+  \widehat{H}\,\widehat{a}_{n}|m_n\rangle=&
+\left(\widehat{a}_{n}\widehat{H}-\omega_n\widehat{a}_{n}\right)|m_n\rangle\nonumber\\
+=&\left(E_n-\omega_n\right)\widehat{a}_{n}|m_n\rangle\nonumber\\
+\end{align}
+$\widehat{a}_{n}|m_n\rangle$ is also an eigenstate with eigenvalue $E_n-\omega_n$. Moreover,
+\begin{align}
+  \widehat{H}\,\widehat{a\,}_{n}^\dagger|m_n\rangle=&
+\left(\widehat{a\,}_{n}^\dagger\widehat{H}+\omega_n\widehat{a\,}_{n}^\dagger\right)|m_n\rangle\nonumber\\
+=&\left(E_n+\omega_n\right)\widehat{a\,}_{n}^\dagger|m_n\rangle\nonumber\\
+\end{align}
+$\widehat{a\,}_{n}^\dagger|m_n\rangle$ is also an eigenstate with eigenvalue $E_n+\omega_n$. 
+
+As stablished in \cite{Lahiri:2005sm}
+\begin{quote}
+  In other words, the operator $\widehat{a}_{n}$ seems to annihilate a quantum of energy, of amount $\hbar\omega_n$, from the state. On the other hand, 
+  $\widehat{a\,}_{n}^\dagger$ creates a quantum of energy $\hbar\omega_n$. In this sense, they are the are the annihilation and the creation operators, respectively. [...]
+
+The ground state can be denoted by $|0\rangle$. Since this is state of lowest energy, the annihilation operator $\widehat{a\,}_{n}^\dagger$,
+acting on it, cannot produce a state of lower energy. Thus, this state must be totally annihilated by the operation of $\widehat{a}_{n}$:
+\begin{align}
+  \widehat{a}_{n}|0\rangle=&0\nonumber\\
+\langle0|\widehat{a\,}_{n}^\dagger=&0\,,
+\end{align}
+\end{quote}
+such that
+\begin{align}
+  \langle0|0\rangle=1
+\end{align}
+
+\begin{align}
+  \widehat{a\,}_{n}^\dagger|0\rangle=&|1_n\rangle\nonumber\\
+  \langle0|\widehat{a}_{n}=&\langle1_n|
+\end{align}
+
+As $|1_n\rangle$ is an Hamiltonian eigenstate of energy $E_n$, the effect of $\widehat{a\,}_{n}^\dagger$ on the ground state is to create an one-particle eigenstate of energy $E_n$
+\begin{align}
+  \langle1_n|1_n\rangle=&\langle0|\widehat{a}_{n}\widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\
+  =&\langle0|\left[\widehat{a}_{n},\widehat{a\,}_{n}^\dagger\right]|0\rangle\nonumber\\
+  =&\langle0|0\rangle\nonumber\\
+  =&1\,.
+\end{align}
+\begin{align}
+\frac{1}{\sqrt{2}} \left(\widehat{a\,}_{n}^\dagger\right)^2 |0\rangle=&|2_n\rangle\nonumber\\
+  \langle0|\frac{1}{\sqrt{2}}\left(\widehat{a}_{n}\right)^2=&\langle2_n|
+\end{align}
+
+\begin{align}
+  \langle2_n|2_n\rangle=&\frac{1}{2}\langle0|\widehat{a}_{n}\widehat{a}_{n}\widehat{a\,}_{n}^\dagger\widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\
+=&\frac{1}{2}\langle1_n|\widehat{a}_{n}\widehat{a\,}_{n}^\dagger|1_n\rangle\nonumber\\
+=&\frac{1}{2}\left(\langle1_n|\left[\widehat{a}_{n},\widehat{a\,}_{n}^\dagger\right]+\widehat{a\,}_{n}^\dagger\widehat{a}_{n}|1_n\rangle\right)\nonumber\\
+=&\frac{1}{2}\left(\langle1_n|1_n\rangle+\langle0|0\rangle\right)\nonumber\\
+  =&1\,.
+\end{align}
+By induction we get
+\begin{align}
+\label{eq:128}
+\frac{1}{\sqrt{m!}} \left(\widehat{a\,}_{n}^\dagger\right)^m |0\rangle=&|m_n\rangle
+\end{align}
+From here we 
+
+\begin{align}
+\frac{1}{\sqrt{m!}} \widehat{a\,}_{n}^\dagger\left(\widehat{a\,}_{n}^\dagger\right)^{m-1} |0\rangle=&|m_n\rangle\nonumber\\
+\frac{\sqrt{(m-1)!}}{\sqrt{m!}}\frac{1}{\sqrt{(m-1)!}} \widehat{a\,}_{n}^\dagger\left(\widehat{a\,}_{n}^\dagger\right)^{m-1} |0\rangle=&|m_n\rangle\nonumber\\
+\sqrt{\frac{(m-1)!}{m(m-1)!}} \widehat{a\,}_{n}^\dagger|(m-1)_n\rangle=&|m_n\rangle\nonumber\\
+\sqrt{\frac{1}{m}} \widehat{a\,}_{n}^\dagger|(m-1)_n\rangle=&|m_n\rangle\nonumber\\
+ \widehat{a\,}_{n}^\dagger|(m-1)_n\rangle=&\sqrt{m}|m_n\rangle\nonumber\\
+ \widehat{a\,}_{n}^\dagger|m_n\rangle=&\sqrt{m+1}|(m+1)_n\rangle
+\end{align}
+\begin{align}
+  \langle m_n|\widehat{a\,}_{n}=&\sqrt{m+1}\langle(m+1)_n|
+\end{align}
+normalization
+\begin{align}
+ \langle m_n|\widehat{a\,}_{n}  \widehat{a\,}_{n}^\dagger|m_n\rangle=&(m+1)\langle(m+1)_n|(m+1)_n\rangle\nonumber\\
+ \langle m_n|1+\widehat{a\,}_{n}^\dagger\widehat{a\,}_{n} |m_n\rangle=&(m+1)\nonumber\\
+ \langle m_n|1+\widehat{\mathcal{N}}_n |m_n\rangle=&(m+1)
+\end{align}
+where the number operator as
+\begin{align}
+  \widehat{\mathcal{N}}_n=\widehat{a\,}_{n}^\dagger\widehat{a}_{n}
+\end{align}
+
+
+If $\widehat{\mathcal{N}}_n|m_n\rangle=c|m_n\rangle$, where $c$ must be real because $\widehat{\mathcal{N}}_n$ is Hermitian
+\begin{align}
+  1+c=m+1
+\end{align}
+and
+\begin{align}
+  \widehat{\mathcal{N}}_n|m_n\rangle=m_n|m_n\rangle
+\end{align}
+From here, we can calculate the eigenvalues of $\widehat{a}_n$. Since
+\begin{align}
+\widehat{\mathcal{N}}_n\widehat{a}_n=&  
+\left[\widehat{\mathcal{N}}_n,\widehat{a}_n\right]+
+\widehat{a}_n\widehat{\mathcal{N}}_n\nonumber\\
+=&\left[\widehat{a\,}_n^\dagger,\widehat{a}_n\right]\widehat{a}_n
++\widehat{a}_n\widehat{\mathcal{N}}_n
++\widehat{a\,}_n^\dagger\left[\widehat{a}_n,\widehat{a}_n\right]\nonumber\\
+=&-\widehat{a}_n+\widehat{a}_n\widehat{\mathcal{N}}_n\nonumber\\
+=&\widehat{a}_n\left(\widehat{\mathcal{N}}_n-1\right)
+\end{align}
+\begin{align}
+  \widehat{\mathcal{N}}_n\widehat{a}_n|m_n\rangle=&(m_n-1)\widehat{a}_n|m_n\rangle
+\end{align}
+Since the state
+\begin{align}
+   \widehat{\mathcal{N}}_n|m_n-1\rangle=&(m_n-1)|m_n-1\rangle
+\end{align}
+has the same eigenvalue, therefore
+\begin{align}
+  \widehat{a}_n|m\rangle=C_-|m_n-1\rangle
+\end{align}
+where $C_-$ is a number to be determined from the normalization condition
+\begin{align}
+\label{eq:131}
+   \langle m_n|\widehat{a\,}_{n}^\dagger\widehat{a\,}_{n}  |m_n\rangle=&
+\left|C_-\right|^2\langle m_n-1|m_n-1\rangle\nonumber\\
+   \langle m_n|\widehat{\mathcal{N}}_n|m_n\rangle=&
+\left|C_-\right|^2\nonumber\\
+\left|C_-\right|^2=m_n
+\end{align}
+\begin{align}
+  \widehat{a}_n|m_n\rangle=\sqrt{m_n}|m_n-1\rangle
+\end{align}
+
+
+%\left[\right]
+
+such that
+\begin{align}
+    \langle m_n|m_n\rangle=1
+\end{align}
+Eq.~\eqref{eq:130} can be rewritten as
+\begin{align}
+  \colon\!\widehat{H}\colon=&\sum_{n=-\infty}^{\infty} \omega_n \widehat{\mathcal{N}}_n
+\end{align}
+Noting also that
+\begin{align}
+  \mathcal{N}_n|m_l\rangle=0\,,
+\end{align}
+we have that
+\begin{align}
+  \langle m_n|\colon\!\widehat{H}\colon|m_n\rangle=m_n \omega_n=m_n \hbar\omega_n\,.
+\end{align}
+Therefore, once we have proper normalized states and renormalized Hamiltonian, the energy of an state with $m$ fields of frequency $\omega_n$ is just $m$ times the energy of the one quanta of energy $\hbar\omega_n$. Note that
+\begin{align}
+  \langle 0|\colon\!\widehat{H}\colon|0\rangle=0\,.
+\end{align}
+The general procedure to redefine the zero of energy such that the vacuum energy vanishes is called \emph{normal ordering}. We define a normal-ordered product  by moving all annihilation operators to the right of all creation operators. For an operator $\widehat{X}$, its normal-ordered product will be denoted as $\colon\widehat{X}\colon$. Using this algorithm on the expression of eq.~\eqref{eq:129}, we find that
+\begin{align}
+\label{eq:133}
+  \colon\widehat{H}\colon=&\frac{1}{2}\sum_{n=-\infty}^{\infty} \omega_n \colon(\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\widehat{a}_{n} \widehat{a\,}_{n}^\dagger)\colon\nonumber\\
+=&\frac{1}{2}\sum_{n=-\infty}^{\infty} \omega_n (\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\widehat{a\,}_{n}^\dagger\widehat{a}_{n} )\nonumber\\
+=&\sum_{n=-\infty}^{\infty} \omega_n \widehat{a\,}_{n}^\dagger\widehat{a}_{n}
+\end{align}
+
+
+
+From \cite{McMahon:2009zz} (pag. 121)
+\begin{quote}
+  These idea carry over to quantum field theory, but with a different interpretation. In quantum mechanics we are talking about a single particle state $|m_n\rangle$ and energy levels $E_n=\omega(n+1/2)$. The creation and annihilation operators move the state of the particle up and down in energy from the ground.
+
+In quantum field theory, we take the notion of ``number operator'' literally. The state $|n\rangle$ is not a state of a single particle, rather is an state of the field with $N$ particles present. The background state which is also the lowest energy state is a state of the field with 0 particles (but the field is still there). The creation operator $\widehat{a\,}_n^\dagger$ adds a single quantum (a particle) to the field, while the annihilation operator $\widehat{a}_n$ destroys a single quantum (removes a single particle) from the field. As we will see, in general there will be creation operators and annihilation operators for particles as well as for antiparticles.
+
+These operators will be functions of momentum. The fields will become operators which will be written as sums over annihilation and creation operators.
+\end{quote}
+
+%DEBUG: further development
+
+From eq.
+
+
+The most general Fock state for a system of $N$ simple harmonic oscillators of frequencies $\omega_n$, $n=1,\ldots,N$, with solution
+\begin{align}
+  \widehat{\phi}=\sum_{n=1}^N\frac{v}{\sqrt{2\omega_nL}}
+\left[\widehat{a}_n\,e^{-i(\omega_n t-k_n z)}+\widehat{a\,}_n^\dagger\,e^{i(\omega_n t-k_n z)}\right],
+\end{align}
+
+\begin{align}
+  |m_1,m_2,\cdots,m_N\rangle=\prod_{n=1}^N\frac{\left(\widehat{a\,}_{n}^\dagger\right)^{m_n}}{\sqrt{m_n !}}|0\rangle\,.
+\end{align}
+\begin{align}
+  |1_1,1_2,\cdots,1_N\rangle=\prod_{n=1}^N{\left(\widehat{a\,}_{n}^\dagger\right)}|0\rangle\,.
+\end{align}
+
+\subsection{Backup}
+
+
+\begin{align}
+ \widehat{\phi}(x)|0\rangle=&\sum_{n=-\infty}^\infty\frac{v}{\sqrt{2\omega_nL}}\widehat{a\,}^\dagger_n 
+ e^{i (\omega_n t-k_n z)}|0\rangle\nonumber\\
+=&\sum_{n=-\infty}^\infty\frac{v}{\sqrt{2\omega_nL}} e^{i (\omega_n t-k_n z)}|1_n\rangle
+\end{align}
+On the other hand
+\begin{align}
+ \langle0| \widehat{\phi}(x')
+=&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}} e^{-i (\omega_m t'-k_m z')}\langle1_m|
+\end{align}
+We thus obtain
+\begin{align}
+  \langle0|\widehat{\phi}(x')\widehat{\phi}(x)|0\rangle
+  =&\sum_{n,m=-\infty}^\infty\frac{v^2}{{2L\sqrt{\omega_m\omega_n}}}  
+  e^{i [\omega_n t-\omega_m t'-k_n z+k_m z')]}\langle1_m|1_n\rangle
+\nonumber\\
+  \langle0|\widehat{\phi}(x')\widehat{\phi}(x)|0\rangle
+  =&\sum_{n,=-\infty}^\infty\frac{v^2}{{2L\omega_n}}  e^{i [\omega_n (t-t')-k_n (z-z')]}
+\end{align}
+Note that it is the square of the function, not the function itself.
+
+
+We can now check eq.~\eqref{eq:1}, From eq.~\eqref{eq:18}
+
+% \begin{align}
+%     \widehat{\phi}^+|1_n\rangle=&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}
+%   \widehat{a}_m\,e^{-i(\omega_m t-k_m z)}|1_n\rangle\nonumber\\
+% =&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}\,e^{-i(\omega_m t-k_m z)}
+%   \widehat{a}_m \widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\
+% =&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}\,e^{-i(\omega_m t-k_m z)}
+%   \left[\widehat{a}_m ,\widehat{a\,}_{n}^\dagger\right]|0\rangle\nonumber\\
+% =&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}\,e^{-i(\omega_m t-k_m z)}
+%   \delta_{m n}\right]|0\rangle\nonumber\\
+% =&\frac{v}{\sqrt{2\omega_nL}}\,e^{-i(\omega_n t-k_n z)}|0\rangle
+% \end{align}`
+The effect of $\widehat{\phi}^+$ is to annihilate an state with wave function of frequency $\omega_n$
+
+
+%\left(\right)
+
+
+
+\subsection{Generalization to three dimensions}
+\label{sec:gener-three-dimens}
+Taking into account that $E_n=\hbar\omega_n=\omega_n$, when $\hbar=1$, the most general solution to the generalization to three dimensions  of the wave equation with velocity of propagation $c=1$
+\begin{align}
+  \partial^\mu\partial_\mu\phi=0\,,
+\end{align}
+obtained from the three dimension Lagrangian 
+
+\begin{equation}
+  \mathcal{L}=\tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi\,,
+\end{equation}
+is
+\begin{align}
+  \label{eq:21}
+  \phi(t,\mathbf{x})=&\sum_\mathbf{n}\frac{1}{\sqrt{2E_\mathbf{n} L^3}}
+  \left(a_\mathbf{n} e^{-i p_\mathbf{n}\cdot x }+a_\mathbf{n}^* e^{i p_\mathbf{n}\cdot x }\right)\,,\nonumber\\
+ =&\sum_{n_x,n_y,n_z}\frac{1}{\sqrt{2E_{(n_x,n_y,n_z)} L^3}}
+  \left\{a_{(n_x,n_y,n_z)} \exp\{ -i [E_{(n_x,n_y,n_z)}t-p_{x}x-p_{y}y-p_{z}z] \} \right.\nonumber\\
+&\hspace{2cm}\left.+a_{(n_x,n_y,n_z)}^* \exp\{ i[ E_{(n_x,n_y,n_z)}t-p_{x}x-p_{y}y-p_{z}z] \} \right\}\,,
+\end{align}
+where in natural units the wave number can be identified with the momentum, $\mathbf{p}=\mathbf{k}$. In eq.~\eqref{eq:21}
+\begin{align}
+  E_{\mathbf{n}}=&p^0_{\mathbf{n}} & p_i=&\frac{2\pi}{L}n_i
+\end{align}
+where $p^0=E_\mathbf{n}$, and the solution satisfies the dispersion relation 
+\begin{align}
+  \mathbf{p}_{\mathbf{n}}^2=p_{\mathbf{n}}^2=c^2E_{\mathbf{n}}=E_{\mathbf{n}}^2\,.
+\end{align}
+
+The Energy will always be chosen to be positive
+\begin{align}
+  E_{\mathbf{n}}=\frac{2\pi}{L}\sqrt{n_x^2+n_y^2+n_z^2}
+\end{align}
+
+Since the Action is dimensionless, 
+\begin{align}
+  S=\int d^4x\, m^2\phi^2\to& [1]=[E]^{-4}[E]^2[\phi]^2\nonumber\\
+  [\phi]=&([S]/[E]^{2})^{1/2}=[E]\,,
+\end{align}
+this solution $\phi$  must have units of energy in natural units.
+To obtain the dimensions of $a_{\mathbf{n}}$, we just check the dimensions in both sides of eq.~\eqref{eq:21}
+\begin{align}
+  [E]=&\frac{1}{\sqrt{[E][E]^{-3}}}[a_{\mathbf{n}}]\nonumber\\
+  =&[E][a_{\mathbf{n}}]\,,
+\end{align}
+and therefore  $a_{\mathbf{n}}$ is dimensionless.
+
+The canonical quantization in eqs.~\eqref{eq:17}  can be  generalized to 
+\begin{align}
+  &\left[\widehat{a}_\mathbf{n},\widehat{a}_\mathbf{m}^\dagger\right]=
+\delta_{\mathbf{n},\mathbf{m}}&
+&\left[\widehat{a}_\mathbf{n},\widehat{a}_\mathbf{m}\right]=
+\left[\widehat{a}_\mathbf{n}^\dagger,\widehat{a}_\mathbf{m}^\dagger\right]=0\,,
+\end{align}
+\section{Quantization of the Klein-Gordon field}
+\label{sec:quant-klein-gord}
+
+It is convenient to put the system into a box of size $L$, so that the total volume is finite. According eq.~\eqref{eq:5}, in this case the frequency is discret. However particles like the photon or electron have frequencies in a continuum range. Therefore we need to establish relations that allows extrapolate the discrete results into the continuum, and also we will need to take the limit of  infinite volume. The Klein-Gordon equation for a real scalar field $\phi$ (Chapter~3.~\cite{lsm})
+\begin{align}
+  (\partial^\mu\partial_\mu+m^2)\phi=0\,,
+\end{align}
+can be obtained from the Lagrangian
+\begin{align}
+\label{eq:22}
+  \mathcal{L}=\tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi-\tfrac{1}{2}m^2\phi^2\,,
+\end{align}
+The solution is the same that for the case $m=0$ in eq.~\eqref{eq:21}, but 
+the new dispersion relation is
+\begin{align}
+  E_{\mathbf{n}}^2=\mathbf{p}^2_{\mathbf{n}}+m^2\,.
+\end{align}
+and therefore $m$ can be interpreted as the mass of field $\phi$.
+
+We assume that $\phi$ can have frequencies in the continuum. 
+In this way the most general solution is obtained after replacing the summatory  by an integral
+\begin{align}
+  \int d p\to \sum_n \Delta p=\sum_n p_{n+1}-p_{n}=\frac{2\pi}{L}\sum_n n+1-n=\frac{2\pi}{L}\sum_n
+\end{align}
+\begin{align}
+\label{eq:23}
+ \sum_\mathbf{n} \to \left(\frac{L}{2\pi}\right)^3\int d^3p
+\end{align}
+
+From
+\begin{align}
+  \int d^3p \delta^{(3)}(\mathbf{p}-\mathbf{q})=&1
+\end{align}
+and taking into account that
+\begin{align}
+  \sum_{\mathbf{p}} \delta_{\mathbf{p}, \mathbf{q}}=\delta_{\mathbf{p}, \mathbf{p}}=&1
+\end{align}
+we have
+\begin{align}
+  \int d^3p \delta^{(3)}(\mathbf{p}-\mathbf{q})=&\sum_n \delta_{nm}\nonumber\\
+ \sum_n \left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})=&\sum_n \delta_{\mathbf{p}, \mathbf{q}}\nonumber\\
+  \left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})=& \delta_{\mathbf{p}, \mathbf{q}}\,.
+\end{align}
+In this way
+\begin{align}
+  \delta^{(3)}(\mathbf{p}-\mathbf{q})=\left(\frac{L}{2\pi}\right)^3\delta_{\mathbf{p},\mathbf{q}}\,,
+\end{align}
+and we get that in the continuum limit
+\begin{align}
+  \label{eq:24}
+\left(\frac{L}{2\pi}\right)^3\delta_{\mathbf{p},\mathbf{q}}\to  \delta^{(3)}(\mathbf{p}-\mathbf{q})
+\end{align}
+In particular, this implies that
+\begin{align}
+  \label{eq:25}
+  (2\pi)^3\delta^{(3)}(\mathbf{p}=0)\to L^3=V
+\end{align}
+\begin{align}
+\label{eq:26}
+  \delta^3(\mathbf{0})=\frac{V}{(2\pi)^3}\,.
+\end{align}
+This expression can be also obtained from the definition
+\begin{align}
+  \delta^3(\mathbf{p})=\lim_{V\to\infty}\left(\frac{1}{(2\pi)^3}\int_V d^3x\, e^{-i\mathbf{p}\cdot\mathbf{x} }\right)\,,
+\end{align}
+before taking the limit to infinity.
+
+
+
+Therefore, in the continuum the solution in eq.~\eqref{eq:21} can be written as
+\begin{align}
+\label{eq:27}
+  \phi(t,\mathbf{x})=&\left(\frac{L}{2\pi}\right)^3\int d^3p \frac{1}{\sqrt{2E_\mathbf{p} L^3}}
+  \left(a_\mathbf{p} e^{-i p\cdot x }+a_\mathbf{p}^* e^{i p\cdot x }\right)\nonumber\\
+=&\int d^3p \frac{\sqrt{L^3}}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
+  \left(a_\mathbf{p} e^{-i p\cdot x }+a_\mathbf{p}^* e^{i p\cdot x }\right)
+\end{align}
+Using eq.~\eqref{eq:24}, we can write the commutation relations~\eqref{eq:17} in the continuum as
+\begin{align}
+\label{eq:28}
+  &\left[\widehat{a}_\mathbf{p},\widehat{a}_\mathbf{q}^\dagger\right]=
+\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})
+&\left[\widehat{a}_\mathbf{p},\widehat{a}_\mathbf{q}\right]=&
+\left[\widehat{a}_\mathbf{p}^\dagger,\widehat{a}_\mathbf{q}^\dagger\right]=0\,.
+\end{align}
+Note that again $a_{\mathbf{p}}$ is dimensionless. It is customary to write the general solution \eqref{eq:27} with
+\begin{align}
+  a_{\mathbf{p}}'=\sqrt{L^3}a_{\mathbf{p}}\,.
+\end{align}
+Then
+\begin{align}
+  \phi(t,\mathbf{x})=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
+  \left(a_\mathbf{p}' e^{-i p\cdot x }+{a_\mathbf{p}'}^* e^{i p\cdot x }\right)\,.
+\end{align}
+and the commutation relations in eq.~\eqref{eq:28} can be written as
+
+\begin{align}
+\label{eq:29}
+  &\left[\widehat{a}_{\mathbf{p}}',{\widehat{a}_{\mathbf{q}}}^{\prime \dagger}\right]=
+\left(2\pi\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})
+&\left[\widehat{a}_{\mathbf{p}}',\widehat{a}_{\mathbf{q}}'\right]=&
+\left[\widehat{a}_\mathbf{p}^{\prime\dagger},\widehat{a}_\mathbf{q}^{\prime\dagger}\right]=0\,.
+\end{align}
+In what follows we will drop out the prime in $\widehat{a}_{\mathbf{p}}'$.
+
+
+The basic principle of canonical quantization is to promote the field $\phi$ and its conjugate momentum to operators, and to impose the equal time commutation relation
+\begin{align}
+  \label{eq:30}
+  &\left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=
+  i\delta^{(3)}(\mathbf{x}-\mathbf{y})\nonumber\\
+  &\left[\widehat{\phi}(t,\mathbf{x}),\widehat{\phi}(t,\mathbf{y})\right]=
+  \left[\widehat{\Pi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=
+  0\,.
+\end{align}
+We will now check that the commutation relations in eq.~\eqref{eq:29} will just generate the equal time commutation relations in eq.~\eqref{eq:30}.
+
+Promoting the real field
+$\phi$ to a hermitian operator means to promote $a_\mathbf{p}$ to an operator; thus
+\begin{align}
+  \label{eq:31}
+  \widehat{\phi}(t,\mathbf{x})=\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
+  \left(\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a\,}_\mathbf{p}^\dagger e^{i p\cdot x }\right)
+\end{align}
+with
+\begin{align}
+\label{eq:32}
+  &\left[\widehat{a}_{\mathbf{p}},{\widehat{a\,}_{\mathbf{q}}}^{ \dagger}\right]=
+\left(2\pi\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})
+&\left[\widehat{a}_{\mathbf{p}},\widehat{a}_{\mathbf{q}}\right]=&
+\left[\widehat{a\,}_\mathbf{p}^{\dagger},\widehat{a\,}_\mathbf{q}^{\dagger}\right]=0\,.
+\end{align}
+
+The conjugate momentum can be obtained from the Klein-Gordon Lagrangian in eq.~\eqref{eq:22}, 
+by using eq.~\eqref{eq:11}
+\begin{align}
+  \widehat{\Pi}(x)=&\frac{\partial}{\partial(\partial_0\widehat{\phi})}\left[\tfrac{1}{2}(\partial_0\widehat{\phi})^2\right]\nonumber\\
+  =&\partial_0\widehat{\phi}\nonumber\\
+  =&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_{\mathbf{p}} }}
+  \left(-i E_{\mathbf{p}}\widehat{a}_{\mathbf{p}} e^{-i p\cdot x }+iE_{\mathbf{p}}\widehat{a}_{\mathbf{p}}^\dagger e^{i p\cdot x }\right)\nonumber\\
+  =&\int d^3p\,\frac{i}{(2\pi)^3}\sqrt{\frac{E_\mathbf{p}}{2}}
+  \left(-\widehat{a}_{\mathbf{p}} e^{-i p\cdot x }+\widehat{a}_{\mathbf{p}}^\dagger e^{i p\cdot x }\right)\nonumber\\
+\end{align}
+Using the expressions for $\widehat{\phi}$, and $\widehat{\Pi}$, in terms of $\widehat{a}_\mathbf{p}$, $\widehat{a}_\mathbf{p}^\dagger$, the commutation relation (\ref{eq:30}) reads 
+\begin{align}
+\left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}
+\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },
+-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }+\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]\nonumber\\
+=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\nonumber\\
+&\left\{ \left[\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]\right\}\nonumber\\
+=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\left\{ 
+\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x },-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }\right]\right.\nonumber\\
+&\left.
++\left[\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]
+\right\}\nonumber\\
+=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\left\{ 
+-e^{-i (p\cdot x+p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'} \right]\right.\nonumber\\
+&\left.
+-e^{i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'} \right]
++e^{-i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
++e^{i (p\cdot x+ p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
+\right\}\,.
+\end{align}
+Taking into account the eqs.~\eqref{eq:32}, then
+\begin{align}
+  \left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\left\{ 
+e^{-i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
+-e^{i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'} \right]
+\right\}\nonumber\\
+=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\left[
+e^{-i (p\cdot x- p'\cdot y) }\delta^{(3)}(\mathbf{p}-\mathbf{p}')
++e^{i (p\cdot x- p'\cdot y) }\delta^{(3)}(\mathbf{p}'-\mathbf{p}) 
+\right]\nonumber\\
+=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\delta^{(3)}(\mathbf{p}-\mathbf{p}')\left[
+e^{-i (p\cdot x- p'\cdot y) }
++e^{i (p\cdot x- p'\cdot y) }
+\right]\,.
+\end{align}
+$\delta^{(3)}(\mathbf{p}-\mathbf{p}')$ forces $\mathbf{p}=\mathbf{p}'$, which also means $E_{\mathbf{p}}=E_{\mathbf{p}'}$, and since $x^0=y^0=t$, we have
+\begin{align}
+  \left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=&
+\int d^3p\int d^3p'\,\frac{i}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\delta^{(3)}(\mathbf{p}-\mathbf{p}')
+\times\nonumber\\
+&\left[
+e^{-i [t(E_{\mathbf{p}}-E_{\mathbf{p}'})-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}'\cdot \mathbf{y} ] }
++e^{i[ t(E_{\mathbf{p}}-E_{\mathbf{p}'})-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}'\cdot \mathbf{y}] }
+\right]\nonumber\\
+=&\int d^3p\,\frac{i}{2(2\pi)^3}
+\left[
+e^{-i (-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}\cdot \mathbf{y} ) }
++e^{i(-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}\cdot \mathbf{y}) }
+\right]\nonumber\\
+=&\int d^3p\,\frac{i}{2(2\pi)^3}
+\left[
+e^{i \mathbf{p}\cdot( \mathbf{x}- \mathbf{y} ) }
++e^{-i\mathbf{p}\cdot( \mathbf{x}-  \mathbf{y}) }
+\right]\,.
+\end{align}
+Since
+\begin{align}
+ & \delta^{(3)}(\mathbf{x}-\mathbf{y})=\int\frac{d^3p}{(2\pi)^3}e^{-i\mathbf{p}\cdot(\mathbf{x}-\mathbf{y})}\nonumber\\
+=&\delta^{(3)}(-\mathbf{x}+\mathbf{y})=\int\frac{d^3p}{(2\pi)^3}e^{-i\mathbf{p}\cdot(-\mathbf{x}+\mathbf{y})}=
+\int\frac{d^3p}{(2\pi)^3}e^{i\mathbf{p}\cdot(\mathbf{x}-\mathbf{y})}\,,
+\end{align}
+then
+\begin{align}
+\label{eq:132}
+    \left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})\,.
+\end{align}
+The same expression is obtained for the original field operator in eq.~\eqref{eq:27} if the commutation relations \eqref{eq:28} are used. Moreover eq.~\eqref{eq:132} is covariant~\cite{Lahiri:2005sm}.
+
+Note that the commutation relations for the real scalar field in (\ref{eq:32}) are equivalent to that of a collection of independent harmonic oscillators, with one oscillator for each value of the momentum $\mathbf{p}$.
+
+Previous equations for the Hamiltonian still holds. 
+\begin{align}
+  \widehat{H}=\frac{1}{2}\int d^3p\,E_{\mathbf{p}}\left(\widehat{a\,}_{\mathbf{p}}^\dagger\widehat{a}_{\mathbf{p}}
++\widehat{a}_{\mathbf{p}}\widehat{a\,}_{\mathbf{p}}^\dagger\right)
+\end{align}
+\begin{align}
+  \left[\widehat{H},\widehat{a}_{\mathbf{p}}\right]&=-E_{\mathbf{p}}\widehat{a}_{\mathbf{p}}\nonumber\\
+  \left[\widehat{H},\widehat{a\,}_{\mathbf{p}}^\dagger \right]&=+E_{\mathbf{p}}\widehat{a\,}_{\mathbf{p}}^\dagger
+\end{align}
+%\left[\right]
+The analogy between the simple harmonic oscillator and the field is now complete. Therefore $\widehat{a\,}_{\mathbf{p}}^\dagger$ creates the quanta of momentum $p$ of the field $\widehat{\phi}$, while $\widehat{a}_{\mathbf{p}}$ is the annihilation operator for a field quantum with momentum $p$. From \cite{Lahiri:2005sm}
+\begin{quote}
+  What was the positive energy component of the classical field now annihilates the quantum, and the negative energy component now creates the quantum. This quantum is what we call particle of positive energy.
+\end{quote}
+
+
+We can now construct the Fock space following the standard procedure
+for the harmonic oscillator: we interpret $\widehat{a}_\mathbf{p}$ as destruction operators and $\widehat{a}_\mathbf{p}^\dagger$
+as creation operators, and we define a vacuum state $|0\rangle$ as the state
+annihilated by all destruction operators, so for all $\mathbf{p}$
+\begin{align}
+  \widehat{a}_\mathbf{p}|0\rangle=0\,.
+\end{align}
+We normalize the vacuum with $\langle0|0\rangle=1$. The vacuum is the state which contains no particles and no antiparticles either,
+
+The normal ordered Hamiltonian is
+\begin{align}
+   \colon\!\widehat{H}\colon=\int d^3p\,E_{\mathbf{p}}\widehat{a\,}_{\mathbf{p}}^\dagger\widehat{a}_{\mathbf{p}}
+\end{align}
+such that, as in discrete case
+\begin{align}
+  \langle0|\colon\!\widehat{H}\colon|0\rangle=0\,.
+\end{align}
+A possible normalization factor for the Fock one-particle state is ($|\mathbf{p}\rangle\equiv|1_{\mathbf{p}}\rangle$)
+\begin{align}
+\label{eq:38}
+  |\mathbf{p}\rangle=&\frac{1}{\sqrt{V}}\, \widehat{a}^\dagger_{\mathbf{p}}|0\rangle\nonumber\\
+  \langle \mathbf{p}|=&\langle0|\widehat{a}_{\mathbf{p}}\, \frac{1}{\sqrt{V}}
+\end{align}
+This state contains one quantum of the field $\widehat{\phi}$ with momenta $p^\mu=(E_{\mathbf{p}},\mathbf{p})$. Such states have positive norm, since
+\begin{align}
+    \langle \mathbf{p}|\mathbf{p}'\rangle=&\frac{1}{V} \langle0|\widehat{a}_{\mathbf{p}}\widehat{a}^\dagger_{\mathbf{p}'}|0\rangle\nonumber\\
+=&\frac{1}{V} \langle0|\widehat{a}_{\mathbf{p}}\widehat{a}^\dagger_{\mathbf{p}'}-\widehat{a}^\dagger_{\mathbf{p}'}\widehat{a}_{\mathbf{p}}|0\rangle\nonumber\\
+=&\frac{1}{V} \langle0|[\widehat{a}_{\mathbf{p}},\widehat{a}^\dagger_{\mathbf{p}'}]|0\rangle\nonumber\\
+=&\frac{(2\pi)^3}{V} \delta^{(3)}(\mathbf{p}-\mathbf{p}')\nonumber\\
+=&\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')
+\end{align}
+With this normalization, the limit to discrete case is straightforward:
+\begin{align}
+  \langle1_{\mathbf{n}}|1_{\mathbf{m}}\rangle=\delta_{\mathbf{n},\mathbf{m}}
+\end{align}
+
+
+The results are summarized in Table
+\renewcommand{\arraystretch}{1.4}
+\begin{table}[htpb!]
+  \centering
+  \begin{tabular}{l|l|l}
+%    $$&$$&$$\\
+    Discret&Continuum& Continuum $\widehat{a\,}_{\textbf{p}}'$\\\hline
+    $\sum_n$&$\left(\frac{L}{2\pi}\right)^3\int d^3p$&$\left(\frac{L}{2\pi}\right)^3\int d^3p$\\
+    $\delta_{\textbf{p},\textbf{q}}$&$\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$&
+    $\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$\\
+    $\left[\widehat{\phi}(x),\widehat{\Pi}(y)\right]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})$&
+    $\left[\widehat{\phi}(x),\widehat{\Pi}(y)\right]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})$&
+    $\left[\widehat{\phi}(x),\widehat{\Pi}(y)\right]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})$\\
+    $[\widehat{a}_{\textbf{n}},\widehat{a\,}_{\textbf{m}}^\dagger]=\delta_{\textbf{n},\textbf{m}}$&
+    $[\widehat{a}_{\textbf{p}},\widehat{a\,}_{\textbf{q}}^\dagger]=\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$&
+$[\widehat{a}_{\textbf{p}},\widehat{a\,}_{\textbf{q}}^\dagger]=(2\pi)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$\\
+    $|1_{\textbf{n}}\rangle= \widehat{a\,}_{\textbf{n}}^\dagger |0\rangle$&$|\textbf{p}\rangle=\widehat{a}^\dagger_{\mathbf{p}}|0\rangle$&
+$|\textbf{p}\rangle=\frac{1}{\sqrt{V}}\widehat{a}^\dagger_{\mathbf{p}}|0\rangle$\\
+    $\langle1_{\textbf{n}}|1_{\textbf{m}}\rangle= \delta_{\textbf{n},\textbf{m}}$&$\langle\textbf{p}|\textbf{p}'\rangle=\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')$&
+    $\langle\textbf{p}|\textbf{p}'\rangle=\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')$\\
+  \end{tabular}
+  \caption{From discret to continuos}
+  \label{tab:666}
+\end{table}
+\renewcommand{\arraystretch}{1}
+Similarly we can define many particle states. If a state has $N$ particles with all different momenta $p_1,p_2,\ldots,p_N$, it is defined by
+\begin{align}
+  \label{eq:134}
+  |\mathbf{p}_1,\ldots,\mathbf{p}_N\rangle=\frac{1}{V^{N/2}}\widehat{a\,}_{\mathbf{p}_1}^\dagger\cdots
+\widehat{a\,}_{\mathbf{p}_N}^\dagger|0\rangle
+\end{align}
+On the other hand, if we want to construct a state with $m$ particles of momentum $p$, we must have a Fock state similar to~\eqref{eq:128}
+\begin{align}
+\label{eq:135}
+  |m_{\mathbf{p}}\rangle=\frac{1}{V^{m/2}}\frac{1}{\sqrt{m!}}\left(\widehat{a\,}_{\mathbf{p}}^\dagger\right)^{m}|0\rangle\,
+\end{align}
+From\cite{Lahiri:2005sm}
+\begin{quote}
+  The vacuum, together with single particles states \eqref{eq:38} and all multi--particle states \eqref{eq:134}, \eqref{eq:135}, constitute a vector space which is calles the \emph{Fock space}. The creation and annihilation operators act on this space.
+\end{quote}
+
+
+
+It is convinient to define: 
+\begin{align}
+\label{eq:36}
+  \widehat{\phi}(x)=\widehat{\phi}_+(x)+\widehat{\phi}_-(x)
+\end{align}
+where
+\begin{align}
+\label{eq:37}
+  \widehat{\phi}_+(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
+  \widehat{a}_\mathbf{p} e^{-i p\cdot x }\nonumber\\
+  \widehat{\phi}_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x }\,.
+\end{align}
+
+The effect of the operator field, $\widehat{\phi}_\pm(x)$, on the one particle state $|\mathbf{p}\rangle$
+\begin{align}
+  \phi_\pm(x)|\mathbf{p}\rangle
+\end{align}
+will be important for the evaluation of $S$--matrix elements in Chapter~\ref{chap:fr}.
+
+Another choice of normalization is the Lorentz invariant one, to be used later. In this case, the generic state of the Fock
+space is obtained acting on the vacuum with the creation operators,
+\begin{align}
+  \left|\mathbf{p}_1,\ldots,\mathbf{p}_n\right\rangle\equiv
+  \left(2E_\mathbf{p_1}\right)^{1/2}\ldots\left(2E_\mathbf{p_n}\right)^{1/2}
+  \widehat{a}_{\mathbf{p}_1}^\dagger\ldots\widehat{a}_{\mathbf{p}_n}^\dagger|0\rangle\,.
+\end{align}
+The factors $\left(2E_\mathbf{p_1}\right)^{1/2}$ are a convenient choice of normalization. In particular,
+the one-particle states are
+\begin{align}
+  \label{eq:33}
+   \left|\mathbf{p}\right\rangle=
+  \left(2E_\mathbf{p}\right)^{1/2}
+  \widehat{a}_{\mathbf{p}}^\dagger|0\rangle\,.
+\end{align}
+From the commutations relations and eq.~(\ref{eq:32}) we find that
+\begin{align}
+\label{eq:34}
+\langle\mathbf{p}_1 |\mathbf{p}_2\rangle=&
+  \left(2E_\mathbf{p_1}\right)^{1/2}\left(2E_\mathbf{p_2}\right)^{1/2}
+ \langle0|\widehat{a}_{\mathbf{p}_1} \widehat{a}_{\mathbf{p}_2}^\dagger|0\rangle\nonumber\\
+=&\left(2E_\mathbf{p_1}\right)^{1/2}\left(2E_\mathbf{p_2}\right)^{1/2}
+ \langle0|\left[\widehat{a}_{\mathbf{p}_1}, 
+\widehat{a}_{\mathbf{p}_2}^\dagger\right]|0\rangle\nonumber\\
+=&\left(2E_\mathbf{p_1}\right)^{1/2}\left(2E_\mathbf{p_2}\right)^{1/2}\left({2\pi}\right)^3\delta^{(3)}(\mathbf{p}_1-\mathbf{p}_2)\nonumber\\
+=&2E_\mathbf{p_1}\left({2\pi}\right)^3\delta^{(3)}(\mathbf{p}_1-\mathbf{p}_2)\,.
+\end{align}
+The factors $\left(2E_\mathbf{p}\right)^{1/2}$ in eq.~(\ref{eq:33}) have been chosen so that in the above product the combination $E_{\mathbf{p}}\delta^{(3)}(\mathbf{p}-\mathbf{q})$ appears, which is Lorentz invariant. To see this perform a boost along $z$--axis. Since the transverse components of the momentum are no affected we must consider only $E_{\mathbf{p}}\delta(p_z-k_z)$. Use the form of the Lorentz transformation of $E_{\mathbf{p}},p_z$, together with the property of the Dirac delta $\delta(f(x))=\delta(x-x_0)/f'(x_0)$ \cite{Maggiore:2005qv}.
+
+Using (\ref{eq:24}) we have in a finite box
+\begin{align}
+  \label{eq:35}
+   \langle\mathbf{p}_1 |\mathbf{p}_2\rangle=&2E_\mathbf{p_1}L^3 
+   \delta_{{\mathbf{p}_1},{\mathbf{p}_2}}\nonumber\\
+=&2E_\mathbf{p_1}V
+   \delta_{{\mathbf{p}_1},{\mathbf{p}_2}}
+\end{align}
+\section{Quantization of Fermions}
+\label{sec:quant-ferm}
+We consider now the Dirac equation
+\begin{align}
+\label{eq:137}
+  (i\gamma^\mu\partial_\mu-m)\psi(x)=0
+\end{align}
+that can be obtained from the Lagrangian
+\begin{align}
+  \mathcal{L}=i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi
+\end{align}
+where
+\begin{align}
+  \overline{\psi}=\psi^\dagger\gamma^0
+\end{align}
+and the $\gamma$ matrices satisfy the Dirac algebra
+\begin{align}
+\label{eq:140}
+\left\{\gamma^\mu,\gamma^\nu\right\} = 2g^{\mu\nu}\mathbb{1}
+\end{align}
+See \cite{lsm}.
+If we assume a plane wave solution like the wave function of the Scr\"odinger equation $\psi\propto e^{-i E t}$, after sustition in eq.~\eqref{eq:137}, we have
+\begin{align}
+  \label{eq:139}
+  i \gamma^0 (-i E)-m=&0\nonumber\\
+   \gamma^0 E-m=&0
+\end{align}
+From the Dirac matrices properties we have
+\begin{align}
+  \label{eq:138}
+\left(\gamma^0\right)^\dagger=&\gamma^0 & \left(\gamma^0\right)^2=&1 & \operatorname{Tr}\gamma^0=&0\,.
+\end{align}
+Moreover, we know that if $\gamma^\mu$ satisfy the Dirac algebra, the matrices obtained after the unitary transformation
+\begin{align}
+  \widetilde{\gamma}^\mu=&U^\dagger \gamma^\mu U & \text{s.t}\ U^\dagger=&U^{-1}
+\end{align}
+also satisfy the Dirac algebra. To check this note that
+\begin{align}
+  \left\{\widetilde{\gamma}^\mu,\widetilde{\gamma}^\nu\right\}=&
+   \left\{U^\dagger{\gamma}^\mu U,U^\dagger{\gamma}^\nu U\right\}\nonumber\\
+=&U^\dagger\left\{{\gamma}^\mu,{\gamma}^\nu\right\}U\nonumber\\
+=&2g^{\mu\nu}U^\dagger U\nonumber\\
+=&2g^{\mu\nu}
+\end{align}
+In this way we can always choose $U$ such that $\gamma^0$ be diagonal. Because the restrictions in eq.~\eqref{eq:138} this implies that in this representation we have
+\begin{align}
+  \gamma^0=&\begin{pmatrix}
+    1 & 0 \\
+    0 & -1\\
+  \end{pmatrix}
+\end{align}
+where the $1$ and $0$ are the $2\times2$ identity and null matrix respectively. Replacing back in eq.~\eqref{eq:139} we have
+\begin{align}
+  \begin{pmatrix}
+    E-m&0\\
+    0  &-E-m
+  \end{pmatrix}=&0\nonumber\\
+  E=&\pm m\,.
+\end{align}
+so that from the four wave functions that compose the full Dirac spinor $\psi$, two of them are of positive energy and the other two of negative energy. 
+The Dirac spinor has four components, in this way we expect four independent solutions. Let us represent solutions in the form
+\begin{align}
+\label{eq:136}
+  \psi(x)\propto
+  \begin{pmatrix}
+    u_1(\mathbf{p})e^{-i p\cdot x}\\
+    u_2(\mathbf{p})e^{-i p\cdot x}\\
+    v_1(\mathbf{p})e^{i p\cdot x}\\
+    v_2(\mathbf{p})e^{i p\cdot x}\\
+  \end{pmatrix}
+ =\psi_+(x)+\psi_-(x)\,,
+\end{align}
+where
+\begin{align}
+  \psi_+(x)\propto\,&u_s(\mathbf{p})e^{-i (E t-\mathbf{p}\cdot \mathbf{x})}&
+  \psi_-(x)\propto\,&v_s(\mathbf{p})e^{i (E t-\mathbf{p}\cdot \mathbf{x})}
+\end{align}
+with
+\begin{align}
+  u_s(\mathbf{p})=&\begin{pmatrix}
+    u_1(\mathbf{p})\\
+    u_2(\mathbf{p})\\
+    0\\
+    0\\
+  \end{pmatrix}&
+  v_s(\mathbf{p})=& \begin{pmatrix}
+    0\\
+    0\\
+    v_1(\mathbf{p})\\
+    v_2(\mathbf{p})\\
+  \end{pmatrix}
+\end{align}
+Checking this solutions to eq.~\eqref{eq:137} we have
+
+\begin{align}
+  \label{eq:144}
+  (i\gamma^0\partial_0+i {\gamma}^i\cdot\partial_i-m)\psi_+(x)=&0\nonumber\\
+  (i\gamma^0\partial_0+i \boldsymbol{\gamma}\cdot\boldsymbol{\nabla}-m)\psi_+(x)=&0\nonumber\\
+  (\gamma^0E- \boldsymbol{\gamma}\cdot\mathbf{p}-m)\psi_+(x)=&0\nonumber\\
+  (\gamma^\mu p_\mu-m)\psi_+(x)=&0\nonumber\\
+  (\cancel{p}-m)\psi_+(x)=&0\nonumber\\
+  (\cancel{p}-m)u_s(\mathbf{p})=&0
+\end{align}
+and
+\begin{align}
+  \label{eq:142}
+   (\cancel{p}+m)v_s(\mathbf{p})=&0
+\end{align}
+This equations can also be written as
+\begin{align}
+   [(\cancel{p}-m)u_s(\mathbf{p})]^\dagger=&0\nonumber\\
+   u_s^\dagger(\mathbf{p})(\gamma_\mu^\dagger p^\mu-m)=&0\nonumber\\
+   u_s^\dagger(\mathbf{p})\gamma_\mu^\dagger\gamma^0p^\mu-m u_s^\dagger(\mathbf{p})\gamma^0=&0\nonumber\\
+   u_s^\dagger(\mathbf{p})\gamma^0\gamma_\mu p^\mu-m u_s^\dagger(\mathbf{p})\gamma^0=&0\nonumber\\
+   \bar{u}_s(\mathbf{p})(\cancel{p}-m)=&0
+\end{align}
+\begin{align}
+\label{eq:143}
+     \bar{v}_s(\mathbf{p})(\cancel{p}+m)=&0
+\end{align}
+At zero momentum, $E=m$ y
+\begin{align}
+\label{eq:141}
+\gamma^0u_s(\mathbf{0})=&+u_s(\mathbf{0})&    \gamma^0v_s(\mathbf{0})=&-v_s(\mathbf{0})
+\end{align}
+From \cite{physics/0703214}
+\begin{quote}
+  Consider the matrix $\gamma_0$. It is a $4\times4$ matrix, so it has four eigenvalues and eigenvectors. It is hermitian, so the eigenvalues are real. In fact, from Eq.~\eqref{eq:140} we know that its square is the unit matrix, so that its eigenvalues can only be $\pm1$. Since $\gamma_0$ is traceless, as we have proved in \S3, there must be tow eigenvectors witht eigenvalue $+1$ and tow with $-1$
+\end{quote}
+Eq.~\eqref{eq:141} shows that at zero momentum, the $u$--spinors and the $v$--spinors are simply eigenstates of $\gamma_0$ with eigenvalues $+1$ and $-1$.  Of course this guaranteses that
+\begin{align}
+  u_s(\mathbf{0})v_{s'}(\mathbf{0})=0
+\end{align}
+since the belong to differente eigenvalues. Note that the two $u_s(\mathbf{0})$ and the two $v_s(\mathbf{0})$ are degenerate. We define
+\begin{align}
+  \label{eq:145}
+  u_s(\mathbf{p})\propto&\xi_s & v_s(\mathbf{0})\propto\eta_{-s}
+\end{align}
+where the munis sign in $\eta_{-s}$ is just a convention. We define the normalized eigenvectors $\xi$ and $\eta$ such that
+\begin{align}
+  \xi_s^\dagger\xi_{s'}=&\delta_{s s'}&&&\eta^\dagger_s\eta_{s'}=&\delta_{s s'}\nonumber\\
+&&&\xi_s^\dagger\eta_{s'}=0&&
+\end{align}
+In this way we have
+\begin{align}
+  \xi_{1/2}=&\begin{pmatrix}
+    1\\
+    0\\
+    0\\
+    0\\
+  \end{pmatrix}&
+  \xi_{-1/2}=&\begin{pmatrix}
+    0\\
+    1\\
+    0\\
+    0\\
+  \end{pmatrix} & 
+\eta_{1/2}=&\begin{pmatrix}
+    0\\
+    0\\
+    1\\
+    0\\
+  \end{pmatrix}&
+  \eta_{-1/2}=&\begin{pmatrix}
+    0\\
+    0\\
+    0\\
+    1\\
+  \end{pmatrix}
+\end{align}
+
+To obtain the spinors for any value of $\mathbf{p}$ we know that they must satisfy eqs.~\eqref{eq:144}, \eqref{eq:142}, and, reduce to eq.~\eqref{eq:145} when $\mathbf{p}\to 0$. 
+The result is
+\begin{align}
+  u_s(\mathbf{p})=&N_{\mathbf{p}}\left(\cancel{p}+m\right)\xi_s\nonumber\\
+  v_s(\mathbf{p})=&N_{\mathbf{p}}\left(-\cancel{p}+m\right)\eta_{-s}
+\end{align}
+Choosing
+\begin{align}
+  N_{\mathbf{p}}=\frac{1}{\sqrt{E+m}}
+\end{align}
+we obtain
+\begin{align}
+  u_s^\dagger(\mathbf{p})u_{s'}(\mathbf{p})=v_s^\dagger(\mathbf{p})v_{s'}(\mathbf{p})=2E \delta_{s s'}
+\end{align}
+\begin{align}
+  u_s^\dagger(-\mathbf{p})v_{s'}(\mathbf{p})=v_s^\dagger(-\mathbf{p})u_{s'}(\mathbf{p})=0
+\end{align}
+%\left(\right)
+In terms of the conjugate spinors
+\begin{align}
+  \bar{u}_s(\mathbf{p})u_{s'}(\mathbf{p})=&2m \delta_{s s'}\nonumber\\
+  \bar{v}_s(\mathbf{p})v_{s'}(\mathbf{p})=&-2m \delta_{s s'}
+\end{align}
+\begin{align}
+  \bar{u}_s(\mathbf{p})v_{s'}(\mathbf{p})=\bar{v}_s(\mathbf{p})u_{s'}(\mathbf{p})=0
+\end{align}
+
+
+If we sum over spins we obtain
+\begin{align}
+  \sum_s u_s(\mathbf{p})\bar{u}_s(\mathbf{p})=\cancel{p}+m\nonumber\\
+  \sum_s v_s(\mathbf{p})\bar{v}_s(\mathbf{p})=\cancel{p}-m
+\end{align}
+For details see \cite{hep-ph/0703214}.
+The spinors also satisfy some completeness relations
+\begin{align}
+  \sum_s u_s(\mathbf{p})\bar{u}_s=\cancel{p}+m
+\end{align}
+\begin{align}
+  \sum_s v_s(\mathbf{p})\bar{v}_s=\cancel{p}-m
+\end{align}
+
+The solutions to the free Dirac equations are
+\begin{align}
+  \psi_{\text{particle}}(x)=&\frac{1}{\sqrt{2E_p V}}u_s(\mathbf{p})e^{-i p\cdot x}\nonumber\\
+  \psi_{\text{antiparticle}}(x)=&\frac{1}{\sqrt{2E_p V}}v_s(\mathbf{p})e^{i p\cdot x}
+\end{align}
+As with the scalar field, we write the Dirac field as an integral over momentum space of the plane wave solutions, with creation and annihilation operators as coefficients,
+\begin{align}
+  \psi(x)=\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})u_s(\mathbf{p})e^{-i p\cdot x}
++b_s^\dagger(\mathbf{p})v_s(\mathbf{p})e^{i p\cdot x}\right]
+\end{align}
+In order to obtain the quantization relations could see that if commutation relations are used we could get
+\begin{align}
+  \colon\!H\colon=\int\frac{d^3p}{(2\pi)^3}\sum_{s=1,2}E_{\mathbf{p}}\left[a^\dagger_s(\mathbf{p})a_s(\mathbf{p})-b^\dagger_s(\mathbf{p})b_s(\mathbf{p})\right]
+\end{align}
+Even after normal ordering, this Hamiltonian can give negative energy eigenvalues, which is a serious problem. If instead we assume that the creation and annihilation operators satisfy anticommutation relations
+\begin{align}
+  \left\{a_r(\mathbf{p}),a_s^\dagger(\mathbf{q})\right\}=\left\{b_r(\mathbf{p}),b_s^\dagger(\mathbf{q})\right\}=(2\pi)^3\delta_{r s}\delta^{(3)}(\mathbf{p}-\mathbf{q})
+\end{align}
+With this relations and taking into account
+\begin{align}
+  \Pi_\psi(x)=\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}=i\overline{\psi}\gamma^0=i \psi^\dagger 
+\end{align}
+we obtain
+\begin{align}
+  \left\{\psi(\mathbf{x},t),\Pi_\psi(\mathbf{y},t)\right\}=i \delta^{(3)}(\mathbf{x}-\mathbf{y}) 
+\end{align}
+With the anticommutators the normal--ordered Hamiltonian is
+\begin{align}
+    \colon\!H\colon=\int\frac{d^3p}{(2\pi)^3}\sum_{s=1,2}E_{\mathbf{p}}\left[a^\dagger_s(\mathbf{p})a_s(\mathbf{p})+b^\dagger_s(\mathbf{p})b_s(\mathbf{p})\right]
+\end{align}
+Moreover
+\begin{align}
+    \colon\!Q\colon=&q\int d^3x \colon\!\psi^\dagger\psi\colon\nonumber\\
+    =&   q \int d^3p\sum_{s=1,2}\left[a^\dagger_s(\mathbf{p})a_s(\mathbf{p})-b^\dagger_s(\mathbf{p})b_s(\mathbf{p})\right]
+\end{align}
+With this definition $a^\dagger_s(\mathbf{p})$ creates particles of charge $q$, while $b^\dagger_s(\mathbf{p})$ creates antiparticles of charge $-q$.
+In a similarly way to eq.~(\ref{eq:36}), the most general free particle solution to Dirac equation is
+\begin{align}
+  \widehat{\psi}(x)=\widehat{\psi}_+(x)+\widehat{\psi}_-(x)
+\end{align}
+\begin{align}
+  \widehat{\psi}_+(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{a}_s(\mathbf{p})u_s(\mathbf{p})e^{-i p\cdot x} 
+  \nonumber\\
+  \widehat{\psi}_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{b}_s^\dagger(\mathbf{p})v_s(\mathbf{p})e^{i p\cdot x} 
+\end{align}
+The one particle states are
+\begin{align}
+   | e^-(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
+   | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,, 
+\end{align}
+
+%\left(\right)
+
+%\left(\right)
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond"
+%%% End: 
