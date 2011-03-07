@@ -1,0 +1,136 @@
+
+\chapter{Quantization of the electromagnetic field}
+
+\section{Preliminaries}
+
+If we impose charge conservation: $\partial_\mu J^\mu=0$, the Proca Equations can be written without lost of generality as (\S{} 2.4 of \cite{lsm})
+\begin{align}
+  (\Box+m^2)A^\mu=J^\mu\,.
+\end{align}
+where $A^\mu=(\phi,\mathbf{A})$.
+
+The right side of the equation can be obtained after replacing the quantities in the equation for energy-momentum conservation
+\begin{align}
+  E^2-\mathbf{p}^2=m^2\,,
+\end{align}
+\begin{align}
+  p^\mu=i\partial^u\,.
+\end{align}
+This suggest that quantum mechanics is a key ingredient to understand the local conservation of electric charge, as we will see later.
+
+
+For the scalar part we have the Klein-Gordon equation of an real scalar field:
+\begin{align}
+   (\Box+m^2)\phi=\rho\,
+\end{align}
+which can be obtained from the Lagrangian (\S{} 3.1 of \cite{lsm})
+\begin{align}
+  \mathcal{L}=\mathcal{L}_{\text{free}}+\mathcal{L}_{\text{int}}\,,
+\end{align}
+\begin{align}
+\mathcal{L}_{\text{free}}=&\frac{1}{2}\partial^\mu\phi\partial_\mu\phi-\frac{1}{2}m^2\phi^2\nonumber\\
+\mathcal{L}_{\text{int}}=&\rho\phi\,,
+\end{align}
+where $\rho$ is the charge density of the field which is the source for $\phi$, and $\mathcal{L}_{\text{int}}$ is the interaction Lagrangian.
+
+In the same section it is shown that this Lagrangian give to arise to the Yukawa interaction
+\begin{align}
+  V(r)=-\frac{1}{4\pi}\frac{e^{-m r}}{r}\,.
+\end{align}
+
+In a similar way, when the Lorentz force
+\begin{align}
+  \mathbf{F}=q\, \mathbf{E}+q\, \mathbf{v}\times\mathbf{B}\,,
+\end{align}
+is interpreted in terms of quantum mechanical operators (\S{} 3.3 of \cite{lsm}) we have the canonical momentum
+\begin{align}
+  \partial^\mu\to \mathcal{D}^\mu=\partial^\mu+i q A^\mu\,.
+\end{align}
+
+Now, if we force the Scr\"odinger equation to be invariant under local phase changes (\S{} 3.4 of \cite{lsm}), we need to replace the normal derivate by the covariant derivate which must transform as the wave equation:
+\begin{align}
+  \label{eq:160}
+  \mathcal{D}^\mu\psi\to (\mathcal{D}^\mu\psi)'=e^{i\theta(x)}\mathcal{D}^\mu\psi\,.
+\end{align}
+This suggest to make the minimum replacement 
+\begin{align}
+\label{eq:161}
+ \mathcal{D}^\mu=\partial^\mu+i q A^\mu\,,
+\end{align}
+where $A^\mu$ is a new field that compensates the changes form the derivate. From this it can be shown that the same identity is valid for all of the powers 
+\begin{align}
+  \left[(\mathcal{D}^\mu\psi)'\right]^n=e^{i\theta(x)}(\mathcal{D}^\mu\psi)^n\,.
+\end{align}
+From eqs.~\eqref{eq:160} and \eqref{eq:161} the tranformation of $A^\mu$ can be obtained:
+\begin{align}
+  \label{eq:162}
+  A^\mu\to {A^\mu}'=A^\mu-\frac{1}{q}\partial^\mu\theta\,.
+\end{align}
+Therefore, the new field tranform like the electromagnetic field, and the modified Lagrangian for the fields $\psi$ and $A^\mu$
+\begin{align}
+  \mathcal{L}=\frac{1}{2m}\left(\mathcal{D}\psi\right)^*\cdot \mathcal{D}\psi
+-\frac{i}{2}\left[\psi^*\mathcal{D}^0\psi-\left(\mathcal{D}^0\psi\right)^*\psi\right]
+\frac{1}{4}F^{\mu\nu}F_{\mu\nu}\,,
+\end{align}
+give to arise to the Scr\"odinger equation in presence of the electromagnetic field plus the Maxwell with the explicit current
+\begin{align}
+  j^\nu=
+  \begin{cases}
+-q \psi^*\psi & \nu=0\\
+\frac{iq}{2m}\left[\left(\boldsymbol{\nabla}\psi\right)^*\psi-\psi^*\boldsymbol{\nabla}\psi-2iq\psi^*\psi \mathbf{A}\right] & \nu=i\\
+  \end{cases}.
+\end{align}
+We now turn to tue quantization of the electromagnetic field
+
+\section{Quantization of the electromagnetic field}
+Here we follow closelly \cite{Gross:1993} chapter 2.
+
+in the electromagnetic Lagrangian the generalized momentum conjugate to the time component of the four-vector potential is zero
+\begin{align}
+  \pi^0=\frac{\partial\mathcal{L}}{\partial\left(\displaystyle{\frac{\partial A^0}{\partial t}}\right)}=0\,.
+\end{align}
+Therefore, we cannot quantizate the $A^0$ field.
+
+The arbitrariness associated with the gauge freedom \eqref{eq:162} must be removed so that the field can be uniquely specified everywhere. Two popular choices for the gauge fixing, are the Lorentz gauge
+\begin{align}
+  \partial_\mu A^\mu=0\,,
+\end{align}
+and Coulomb gauge
+\begin{align}
+  \boldsymbol{\nabla}\cdot \mathbf{A}=0\,.
+\end{align}
+
+With the Lorentz gauge a new term is added to the Lagrangian which contains the time derivative of $A^0$, while in the Coulomb gauge the quantity $A^0$ may be eliminated from the Lagrangian.
+
+In the Coulomb gauge, we have for the $A^0$ component
+\begin{align}
+  \nabla^2A^0=-\rho\,.
+\end{align}
+For the $A^i$ component
+
+%%% viene de las notas Jean-Book Unicornio
+\begin{align}
+  \left[A^j(\mathbf{r}',t),\pi(\mathbf{r},t)\right]=i\left(\delta_{ij}-\frac{\partial_i\partial_j}{\nabla^2}\right)\delta^3(\mathbf{r}-\mathbf{r}')
+\equiv \delta^{3 \text{T}}(\mathbf{r}-\mathbf{r}')\,.
+\end{align}
+These commutation relations between the creation and annihilation involve only the independent degrees of freedom.
+
+The Hamiltonian obtainde from the Lagrangia is
+
+\begin{align}
+  \widehat{H}=\sum_{n,\alpha}\omega_n a_{n,\alpha}^\dagger a_{n,\alpha}\,,
+\end{align}
+while the momentum operator is
+\begin{align}
+ \widehat{ \mathbf{p}}=\sum_{n,\alpha}\mathbf{k}_n a_{n,\alpha}^\dagger a_{n,\alpha}\,,
+\end{align}
+We now shown that the particles which emerges from the quantization of the electromagnetic field (the photons) have spin one. To obtain these results, it is necessary to discuss the behavior of these fields under rotations. 
+
+To follow the non-relativistic part of this course we recommend now go directly from section~\ref{sec:s-matrix} to \ref{sec:process-probability} where the $S$--matrix is defined and the probability calculated. In Section~\ref{sec:decay-rates} there is the general formula for decay. In section \ref{sec:interaction-picture} the perturbative expansion of the $S$--matrix is presented. Finally, in section \ref{sec:atomic-decay} an application for the interaction of a non-relativistic atom with radiation, is given in the context of radiative decay.
+
+%\Left(\right)
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond"
+%%% End: 
