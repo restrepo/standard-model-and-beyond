@@ -1331,18 +1331,33 @@ Moreover
 \end{align}
 With this definition $a^\dagger_s(\mathbf{p})$ creates particles of charge $q$, while $b^\dagger_s(\mathbf{p})$ creates antiparticles of charge $-q$.
 In a similarly way to eq.~(\ref{eq:36}), the most general free particle solution to Dirac equation is
+%dar mas detalles de esta expansion
 \begin{align}
   \widehat{\psi}(x)=\widehat{\psi}_+(x)+\widehat{\psi}_-(x)
 \end{align}
 \begin{align}
+\label{eq:83}
   \widehat{\psi}_+(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{a}_s(\mathbf{p})u_s(\mathbf{p})e^{-i p\cdot x} 
   \nonumber\\
   \widehat{\psi}_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{b}_s^\dagger(\mathbf{p})v_s(\mathbf{p})e^{i p\cdot x} 
 \end{align}
-The one particle states are
+The Fourier expansion for antiparticles is 
 \begin{align}
-   | e^-(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
-   | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,, 
+\label{eq:78}
+  \widehat{\overline{\psi}}_+(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{b}_s(\mathbf{p})\bar{v}_s(\mathbf{p})e^{-i p\cdot x} 
+  \nonumber\\
+  \widehat{\overline{\psi}}_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{a}_s^\dagger(\mathbf{p})\bar{u}_s(\mathbf{p})e^{i p\cdot x} 
+\end{align}
+In this way $a_s^\dagger$ and $a_s$ are the creation and annihilation operators for particles, while $b_s^\dagger$ and $b_s$ are the creation and annihilation operators for antiparticles.
+  
+It is clear then that the one particle state is
+\begin{align}
+\label{eq:79}
+   | e^-(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle
+\end{align}
+while the one antiparticle state is
+\begin{align}
+     | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,.
 \end{align}
 
 %\left(\right)

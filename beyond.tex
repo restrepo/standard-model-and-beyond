@@ -10,6 +10,14 @@
 \usepackage{bm}
 \usepackage{simplewick}
 \usepackage[toc,page]{appendix}
+\graphicspath{{figures/}}
+%%%%%%%%%
+\usepackage{comment}
+\includecomment{inprogress}
+\specialcomment{inprogress}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{inprogress}
+%%%%%%
 %\usepackage{bbold}
 \setlength{\textwidth}{180mm}
 \setlength{\oddsidemargin}{-1cm}
@@ -44,11 +52,14 @@
 
 %$x^2$
 \include{introduction}
+\include{cft}
 \include{sndquantization}
+\include{emquantization}
 \include{smatrix}
 \include{twobody-decays}
 \include{feynman}
 \include{threebody-decays}
+\include{renormalization}
 \include{bibliography}
 
 \end{document}

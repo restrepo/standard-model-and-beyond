@@ -215,26 +215,172 @@ and so on we obtain the $S$--matrix
   S=&\sum_{n=0}^\infty S^{(n)}\nonumber\\
   =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{t_1} d t_2\ldots\int_{-\infty}^{t_{n-1}}d t_n\,{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\,.
 \end{align}
-If $H_I$ contains an even number of fermion factors, we can use the time--ordered product $\operatorname{T}\{\ldots\}$ of $n$ factors to write this expression in the equivalent form
+
+
+\section{Atomic decay}
+\label{sec:atomic-decay}
+
+Here we follow closelly \cite{Gross:1993} chapter 3.
+
+For the atomic decay at first order in perturbation theory, we have
 \begin{align}
-   S=&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{\infty} d t_2\ldots\int_{-\infty}^{\infty}d t_n\,\operatorname{T}\{{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\}\,, 
+  S_{\beta\alpha}^{(1)}=-i \int_{-\infty}^\infty dt\, \left\langle\beta\left|H_I(t)\right|\alpha\right\rangle.
 \end{align}
-In terms of the Hamiltonian density, we have
+where the Hamiltonian in the interaction picture is
 \begin{align}
-  S=1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,, 
+  H=&H_A+H_{EM}+H_I(t)=H_0+H_I(t)\,,
 \end{align}
-In the above perturbation formalism the states $|i\rangle$ and $|f\rangle$ are, as usual, eigenstates of the unperturbed free-field Hamiltonian $H_0$. As such can be introduced inside the integrals
+where, following the definition of the interaction picture
 \begin{align}
-  S_{f i}=&\langle f|S|i\rangle\nonumber\\
-  =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\langle f|\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}|i\rangle\,.
+  \psi_a(r,t)=&e^{-i H_A t}\psi_a(r)\nonumber\\
+=&U_A(t)\psi_a(r)\,,
 \end{align}
-For example, at first order
+
 \begin{align}
-  \label{eq:96}
-  S_{fi}^{(1)}=&\langle f|S^{(1)}|i\rangle\nonumber\\
-  =&\langle f|-i\int d^4x_1\,\operatorname{T}\{\mathcal{H}_I(x_1)\}|i\rangle\nonumber\\
-  =&-i\int d^4x_1\,\langle f|:\mathcal{H}_I(x_1):|i\rangle\,.
+  H_I(t)=U_A^{-1}H'_I(t)U_A\,.
 \end{align}
+The several terms of the Hamiltonia are
+
+\begin{align}
+  H_A=\frac{\mathbf{p}_e^2}{2m}-\frac{Z\alpha}{r_e}\,,
+\end{align}
+\begin{align}
+  H_{EM}=\frac{1}{2}\int d^3r\left\{:\boldsymbol{\pi}^2(r,t):+:\mathbf{B}^2(r,t):\right\}\,,
+\end{align}
+\begin{align}
+  H_I'(t)=\left\{\frac{e}{2m}\left(\mathbf{p}_e\cdot\mathbf{A}(r_e,t)+\mathbf{A}(r_e,t)\cdot \mathbf{p}_e
++\frac{e^2}{2m}\mathbf{A}^2(r_e,t)\right)\right\}\,,
+\end{align}
+and $\alpha=e^2/(4\pi)$.
+The states as defined as
+\begin{align}
+  |a,n\rangle=\psi_a(r_e)|n\rangle\,.
+\end{align}
+The scalar product of the atomic states requires an integration over the coordinate $r_e$
+\begin{align}
+  \label{eq:163}
+   \langle a',n'|a,n\rangle=\int d^3r\,\psi_{a'}^*(r_e)\psi_a(r_e)\langle n'|n\rangle.
+\end{align}
+
+For one photon decay of an initial atomic state $a$ into a final atomic state $b$ and a photon of energy $\omega_n$ and polarization $\lambda$, the states are
+\begin{align}
+  |\alpha\rangle=&|\alpha,0\rangle=\psi_a(r_e)|0\rangle\nonumber\\
+  |\beta\rangle=&|b,1_{n\lambda}\rangle=\psi_b(r_e)|1_{n\lambda}\rangle\,,
+\end{align}
+where
+\begin{align}
+  |1_{n\lambda}\rangle=a_{n\lambda}^\dagger|0\rangle
+\end{align}
+is the one-photon state with frequency $\omega_n$ and polarization $\lambda$. Since
+\begin{align}
+ \langle1_{n\lambda}|\mathbf{A}^2|0\rangle\supset\langle1_{n\lambda}|(a_{n\lambda}^\dagger a_{n\lambda}^\dagger+a_{n\lambda}^\dagger a_{n\lambda}+a_{n\lambda}a_{n\lambda})|0\rangle=\langle0|1_{n\lambda}\rangle=0
+\end{align}
+and
+\begin{align}
+\left(\mathbf{p}_e\cdot\mathbf{A}(r_e,t)+\mathbf{A}(r_e,t)\cdot \mathbf{p}_e\right)\psi_a(r_e)=&
+-i\left(\boldsymbol{\nabla}_e\cdot\mathbf{A}(r_e,t)+\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)\psi_a(r_e)
+\nonumber\\
+=&-i\left\{\left(\boldsymbol{\nabla}_e\cdot\mathbf{A}\right)\psi_a
++\mathbf{A}\cdot\boldsymbol{\nabla}_e\psi_a
++\mathbf{A}\cdot\boldsymbol{\nabla}_e\psi_a\right\}\nonumber\\
+=&-i\left\{2\mathbf{A}\cdot\boldsymbol{\nabla}_e\psi_a\right\}\,,
+\end{align}
+where $\boldsymbol{\nabla}\cdot\mathbf{A}=0$ was used.
+
+With all of this we have a simplified formula
+\begin{align}
+\label{eq:164}
+  S_{ba}=&-i\int_{-\infty}^\infty dt\langle b,1_{n\lambda}|U_A^{-1}\left(-\frac{ie}{m}\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)
+  U_A|a,0\rangle\nonumber\\
+  S_{ba}=&-i\int_{-\infty}^\infty dt\langle b,1_{n\lambda}|U_A^{-1}\left(-\frac{ie}{m}\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)
+  U_A|a,0\rangle\nonumber\\
+  S_{ba}=&-i\int_{-\infty}^\infty dt\langle b,1_{n\lambda}|e^{iE_b t}\left(-\frac{ie}{m}\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)
+  e^{-i E_a t}|a,0\rangle\nonumber\\
+  =&-\int_{-\infty}^\infty dt\,e^{i(E_b-E_a)t}\int d^3r_e\langle1_{n\lambda}|\psi_b^*(r_e)\frac{e}{m}\left(\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)
+  \psi_a(r)|0\rangle\nonumber\\
+ =&-\int_{-\infty}^\infty dt\,e^{i(E_b-E_a)t}\frac{e}{m}\int d^3r_e\left\{\psi_b^*(r_e)\boldsymbol{\nabla}_e\psi_a(r)\right\}\cdot 
+  \langle1_{n\lambda}|\mathbf{A}(r_e,t)|0\rangle.
+\end{align}
+Since
+\begin{align}
+  \langle1_{n\lambda}|\mathbf{A}(r_e,t)|0\rangle=&\sum_{n'\lambda'}\frac{1}{\sqrt{2\omega_{n'}L^3}}\boldsymbol{\epsilon}^{\lambda'}_{n'}
+  \langle1_{n\lambda}|a^\dagger_{n'\lambda'}|0\rangle e^{i k_{n'}\cdot x_e}\nonumber\\
+=&\sum_{n'\lambda'}\frac{1}{\sqrt{2\omega_{n'}L^3}}\boldsymbol{\epsilon}^{\lambda'}_{n'}
+  \langle1_{n\lambda}|a^\dagger_{n'\lambda'}|0\rangle e^{i k_{n}\cdot x_e}\nonumber\\
+=&\frac{1}{\sqrt{2\omega_{n}L^3}}\boldsymbol{\epsilon}^{\lambda}_{n}
+  \langle1_{n\lambda}|1_{n\lambda}\rangle e^{i k_{n'}\cdot x_e}\nonumber\\
+=&\frac{1}{\sqrt{2\omega_{n}L^3}}\boldsymbol{\epsilon}^{\lambda}_{n}
+  e^{i \omega_n t-\mathbf{k}_n\cdot\mathbf{r}_e}\,.
+\end{align}
+Inserting this expression into (\ref{eq:164}) gives
+%%% faltan detalles
+\begin{align}
+  S_{ba}=-i2\pi \delta(E_b+\omega_n-E_a)\frac{1}{\sqrt{L^3}}M_{ba}\,, 
+\end{align}
+where the decaya amplitude $M_{ba}$ is
+\begin{align}
+  M_{ba}=-i\frac{e}{m}\frac{1}{2\omega_n}\int d^3r_e\,e^{-i\mathbf{k}_n\cdot\mathbf{r}_e}
+  \psi_b^*(r_e)\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\boldsymbol{\nabla}_e\psi_a(r)\,.
+\end{align}
+In most atomic decays, the energy of the emmited photon, which is equal to $\omega_n=E_b-E_a$, is much less than $1/R$, where $R$ is the
+size of the atomic system, and hence the maximum range of the integral over $r_e$. In this case, the dipole approximation 
+\begin{align}
+  e^{-i\mathbf{k}_n\cdot\mathbf{r}_e}\approx1
+\end{align}
+is extremely good. Then we have
+\begin{align}
+  M_{ba}=\frac{e}{m}\frac{1}{\sqrt{2\omega_n}}\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}\,,
+\end{align}
+where
+\begin{align}
+  \mathbf{p}_{ba}=-i\int d^3r_e \psi_b^*(r_e)\boldsymbol{\nabla}_e\psi_a(r_e).
+\end{align}
+The diferential decay rate, and using
+\begin{align}
+  [2\pi \delta(E_f-E_i)]^2=2\pi \delta(E_f-E_i) T \,,
+\end{align}
+we have
+\begin{align}
+  \Delta W_{ba}=&\lim_{T\to \infty}\frac{|S_{ba}(T/2,-T/2)|^2}{T}\nonumber\\
+  =&\lim_{T\to \infty}\frac{1}{T}2\pi \delta(E_b+\omega_n-E_a) T \frac{1}{L^3}|M_{ba}|^2\nonumber\\
+  =&2\pi\delta(E_b+\omega_n-E_a)\frac{1}{L^3}|M_{ba}|^2
+\end{align}
+Then
+\begin{align}
+  \Delta W_{ba}=&\frac{2\pi}{V}\delta(E_b+\omega_n-E_a)\frac{e^2}{2\omega_n m^2}|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\,.
+\end{align}
+Summing over all final photon states to get the total $a\to b$ decay rate gives
+\begin{align}
+  W_{ba}=&\sum_{n,\lambda}\frac{2\pi}{V}\delta(E_b+\omega_n-E_a)\frac{e^2}{2\omega_n m^2}|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\nonumber\\
+  =&\sum_{\lambda}\sum_n\frac{2\pi}{V}\delta(E_b+\omega_n-E_a)\frac{e^2}{2\omega_n m^2}|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\,.
+\end{align}
+Using
+\begin{align}
+  \sum_n\to \frac{V}{(2\pi)^3}\int d^3k
+\end{align}
+\begin{align}
+   W_{ba}=&\sum_{\lambda}\int\frac{d^3k}{(2\pi)^2}\delta(E_b+\omega_n-E_a)\frac{e^2}{2\omega m^2}|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\nonumber\\
+=&\frac{e^2}{2m^2}\sum_{\lambda}\int\frac{d^3k}{(2\pi)^2\omega}\delta(E_b+\omega_n-E_a)|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\nonumber\\
+=&\frac{e^2}{2m^2}\sum_{\lambda}\int|\mathbf{k}|^2d|\mathbf{k}|\int d\Omega\frac{d^3k}{(2\pi)^2\omega}\delta(E_b+\omega-E_a)|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\,.
+\end{align}
+By using $|\mathbf{k}|=\omega$, we have
+\begin{align}
+  W_{ba}=&\frac{e^2}{2m^2}\sum_{\lambda}\int d\omega\frac{\omega}{(2\pi)^2}\delta(E_b+\omega-E_a)\int d\Omega|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\nonumber\\
+=&\frac{e^2}{4\pi}\left(\frac{\omega}{2\pi m^2}\right)\sum_{\lambda}\int d\Omega|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2\,,
+\end{align}
+where $\omega=E_b-E_a$.
+%%Faltan detalles
+Integrating over all directions $\widehat{\mathbf{k}}$ of the outgoing photon
+\begin{align}
+  \sum_{\lambda}\int d\Omega|\boldsymbol{\epsilon}^{\lambda}_{n}\cdot\mathbf{p}_{ba}|^2=\frac{8\pi}{3}|\mathbf{p}_{ba}|^2\,.
+\end{align}
+Then the total rate for the decay of the state $a$ into $b$ is
+\begin{align}
+  W_{ba}=\frac{e^2}{4\pi}\left(\frac{4\omega}{3 m^2}\right)|\mathbf{p}_{ba}|^2\,.
+\end{align}
+
+%\left(\right)
+
 
 \section{Yukawa interaction}
 \label{sec:feynman-diagrams}
@@ -252,10 +398,13 @@ For the interaction Hamiltonian we have
 \begin{align}
   \mathcal{H}_I=h:\overline{\psi}\psi\phi:
 \end{align}
-The term linear in the interaction Hamiltonian in the $S$--matrix. It is
+where the required ordered product will be explained in next section.
+The term linear in the interaction Hamiltonian in the $S$--matrix.  It is
 \begin{align}
-  S^{(1)}=-i h \int d^4x:\overline{\psi}\psi\phi:\,.
+  S^{(1)}=\nonumber\\
+=&-i h \int d^4x:\overline{\psi}\psi\phi:\,.
 \end{align}
+
 \begin{align}
   S^{(1)}=-i h \int d^4x:(\overline{\psi}_++\overline{\psi}_-)(\psi_++\psi_-)(\phi_++\phi_-):\,.
 \end{align}
@@ -333,10 +482,11 @@ Let us define the one--particle states as in eq.~\eqref{eq:38}
 \begin{align}
   | B(\mathbf{p})\rangle\equiv\sqrt{\frac{1}{V}}a^\dagger_{\mathbf{p}}|0\rangle 
 \end{align}
- 
+From eq.~\eqref{eq:79} 
 \begin{align}
-   | e^-(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}f^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
-   | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}\hat{f}^\dagger_s(\mathbf{p})|0\rangle\,, 
+  \label{eq:77}
+   | e^-(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
+   | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,, 
 \end{align}
 Using the commutation relations, our states are then normalized as
 \begin{align}
@@ -421,7 +571,58 @@ and everything else is the history presented in Chapter~\ref{cha:two-body-decays
 
 \section{Wick Theorem}
 \label{sec:wick-theorem}
-From \cite{Lahiri:2005sm}. The normal ordering procedure involved putting all the annihilation operators to the right of all creation operators so that it annihilates the vacuum 
+From \cite{Lahiri:2005sm}. The normal ordering procedure involved putting all the annihilation operators to the right of all creation operators so that it annihilates the vacuum. But the time ordering raises complications because in it all operators at earlier times must be further to the right. So creation operators at later times would be to the right of annihilation operators at later times, contrary to what we need for normal ordering. The advantage of normal ordered products is that their expectation values vanish in the vacuum. 
+
+If $H_I$ contains an even number of fermion factors, we can use the time--ordered product $\operatorname{T}\{\ldots\}$ of $n$ factors to write this expression in the equivalent form. For $S^{(2)}$ we have for example
+\begin{align}
+ \int_{-\infty}^\infty dt_1 \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_2)H_I(t_2)\}=&
+\int_{-\infty}^\infty dt_1\int_{-\infty}^{\infty}d t_2 \theta(t_2-t_1)H_I(t_2)H_I(t_2)
++\int_{-\infty}^\infty dt_1\int_{-\infty}^{\infty}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2)
+ \end{align}
+%%falta el desarrollo
+ %\begin{align}
+  % \int_{-\infty}^{t_1}d t_2 \theta(t_2-t_1)H_I(t_2)H_I(t_2)+
+ %\end{align}
+\begin{align}
+\int_{-\infty}^\infty dt_1  \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_2)H_I(t_2)\}=&
+2\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_1}d t_2 H_I(t_2)H_I(t_2)\,.
+ \end{align}
+
+
+\begin{align}
+   S=&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{\infty} d t_2\ldots\int_{-\infty}^{\infty}d t_n\,\operatorname{T}\{{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\}\,, 
+\end{align}
+In terms of the Hamiltonian density, we have
+\begin{align}
+  S=1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,, 
+\end{align}
+In the above perturbation formalism the states $|i\rangle$ and $|f\rangle$ are, as usual, eigenstates of the unperturbed free-field Hamiltonian $H_0$. As such can be introduced inside the integrals
+\begin{align}
+  S_{f i}=&\langle f|S|i\rangle\nonumber\\
+  =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\langle f|\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}|i\rangle\,.
+\end{align}
+For example, at first order
+\begin{align}
+  \label{eq:96}
+  S_{fi}^{(1)}=&\langle f|S^{(1)}|i\rangle\nonumber\\
+  =&\langle f|-i\int d^4x_1\,\operatorname{T}\{\mathcal{H}_I(x_1)\}|i\rangle\nonumber\\
+  =&-i\int d^4x_1\,\langle f|:\mathcal{H}_I(x_1):|i\rangle\,.
+\end{align}
+In order to evaluate this integrals we need to write the time ordered product in terms of the fields. This can done by induction. We start by considering the simple no trivial case with two scalar fields
+%ver cuaderno de perrito
+\begin{align}
+  T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+\,\phi(x_1)\phi(x_2)
+\end{align}
+The same expression can be obtained for fermions. Generalizing  the results for $n$ scalar or fermion fields, but with an even number of fermions fields, we have the Wick theorem
+\begin{align}
+  T\{\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n) \}
+=&:\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\nonumber\\
+&+\bcontraction{\,}{\Phi}{(x_1)}{\Phi}\,\Phi(x_1)\Phi(x_2):\Phi(x_3)\cdots\Phi(x_n):\nonumber\\
+&+:\Phi(x_1)\bcontraction{\,}{\Phi}{(x_2)}{\Phi}\,\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\cdots 
+\end{align}
+For details of the full result see for example \cite{Lahiri:2005sm}.
+
 
 \section{Scattering}
 \label{sec:scattering}
@@ -437,12 +638,17 @@ is
 \begin{align}
 S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\}\nonumber\\
 =&  \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi)_{x_2}\}\nonumber\\
-\supset& 
+=& 
+ \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi
+)_{x_2}:+
  \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}
 \bcontraction{\psi}{\phi}{)_{x_1}(\overline{\psi}\psi}{\phi}
 \psi\phi)_{x_1}(\overline{\psi}\psi\phi
-)_{x_2}:\nonumber\\
-=&\frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2
+)_{x_2}:+\cdots
+\end{align}
+The first term corresponds to two  disconnected Feynman diagrams that does not contribute to the $S$--matrix. For the process at hand, we want terms where four fermionic operators are not contracted, corresponding to the particles in the initial and final states. The second term in the previous expansion of the Wick theorem is the only satisfying this requirement. In this way
+\begin{align}
+  S^{(2)}(e^+ e^-\to e^+e^-)=&\frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2
 \bcontraction{\,}{\phi}{(x_1)}{\phi}
 \,\phi(x_1)\phi(x_2):(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:
 \end{align}
@@ -452,32 +658,41 @@ The Wick contraction can be written as:
 \,\phi(x_1)\phi(x_2)=&\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\nonumber\\
 =&i\Delta_F(x_1-x_2)
 \end{align}
-while the non-zero contribution from the fermion product is
+while 
 \begin{align}
+\label{eq:156}
   :(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:=&
-:\overline{\psi}^\alpha(x_1)\psi^\alpha(x_1)\overline{\psi}^\beta(x_2)\psi^\beta(x_2):\nonumber\\
-=&\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)\,.
+:\overline{\psi}^\alpha(x_1)\psi^\alpha(x_1)\overline{\psi}^\beta(x_2)\psi^\beta(x_2):
 \end{align}
-The $S$--matrix element the reads
+From the Fourier expansions in eqs.~\eqref{eq:83}, \eqref{eq:78} we have that $a_s^\dagger$ and $a_s$ are the creation and annihilation operators for particles. As we have only particles (and not antiparticles) in the initial and final states, the only non-zero contribution of the ordered product in eq.~\eqref{eq:156} must have the order $a^\dagger a^\dagger a\, a$. As $\psi_+$ and $\overline{\psi}_-$ are associated to $a$ and $a^\dagger$ respectively, the only non-zero contribution from the ordered fermion product is
+%\left(\right)
+
 \begin{align}
-  S^{(2)}_{fi}=&\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
+:(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:  
+=-&\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)\,.
+\end{align}
+The relevant $S$--matrix element then reads
+\begin{align}
+  S^{(2)}_{fi}=&-\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\nonumber\\
+&\times\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
 i\Delta_F(x_1-x_2)\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle\nonumber\\
-=&\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\,i\Delta_F(x_1-x_2)\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
+=&-\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\,i\Delta_F(x_1-x_2)\nonumber\\
+&\times\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
 \overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle\nonumber\\
-=&\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)e^{i q\cdot(x_1-x_2)}\nonumber\\
+=&-\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)e^{i q\cdot(x_1-x_2)}\nonumber\\
 &\times\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
 \overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle
 \end{align}
 The two particle Fock state is, after proper normalization
 \begin{align}
-  |e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle=&\frac{1}{\sqrt{V}}f^\dagger(\mathbf{p}_2)f^\dagger(\mathbf{p}_1)|0\rangle
+  |e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle=&\frac{1}{\sqrt{V}}a_s^\dagger(\mathbf{p}_2)a_s^\dagger(\mathbf{p}_1)|0\rangle
 \end{align}
 Therefore
 \begin{align}
   \psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle=&
 \int\frac{d^3k}{\sqrt{2E_k V}}\int\frac{d^3k}{\sqrt{2E_{k'}V}}
 u^\alpha(\mathbf{k})u^\beta(\mathbf{k}')e^{-i k\cdot x_1}e^{-i k'\cdot x_2}\nonumber\\
-&\times f(\mathbf{k})f(\mathbf{k}')f(\mathbf{p}_2)f(\mathbf{p}_1)|0\rangle
+&\times a_s(\mathbf{k})a_s(\mathbf{k}')a_s^\dagger(\mathbf{p}_2)a_s^\dagger(\mathbf{p}_1)|0\rangle
 \end{align}
 
 \begin{align}
@@ -538,10 +753,31 @@ For one interaction of type $\overline{\psi}\Gamma\psi$ we should have
 -\bar{u}(\mathbf{p}_1')\Gamma u(\mathbf{p}_1)\bar{u}(\mathbf{p}_2')\Gamma u(\mathbf{p}_2)
 \right]
 \end{align}
+For the interaction of a fermion pair with $W_\mu^\pm$, we know from
+the standard model Lagrangian \cite{lsm}, that
+\begin{align}
+  \frac{g^2}{2\sqrt{2}}\overline{\psi}\gamma^\mu(1-\gamma_5)\psi
+\end{align}
+Therefore in this case
+\begin{align}
+  \Gamma=\gamma^\mu(1-\gamma_5)
+\end{align}
+For $p\ll M_W^2$ the analysis is similar to the previous one with
+\begin{align}
+   \bcontraction{\,}{W^\mu}{(x_1)}{W^\nu}
+\,W^\mu(x_1)W^\nu(x_2)=&\langle0|T\{W^\mu(x_1)W^\nu(x_2)\}|0\rangle\nonumber\\
+\approx&\int\frac{d^4q}{(2\pi)^4}\frac{g^{\mu\nu}}{M_W^2}e^{-i q\cdot(x_1-x_2)}
+\end{align}
+
 For the process 
 \begin{align}
   e^-(p)+\nu_\mu(k)\to\mu^-(p')+\nu_e(k')
 \end{align}
+the global coupling for $p\ll M_W^2$ is
+\begin{align}
+  \frac{g^2}{8M_W^2}=&\frac{G_F}{\sqrt{2}}
+\end{align}
+
 After the replacement $G_F/\sqrt{2}\equiv h^2/m^2$, we have
 \begin{align}
   \label{eq:101}
@@ -562,16 +798,6 @@ The corresponding Feynman diagram is shown in Fig.~\ref{fig:sw}
   \caption{scattering with four fermions} %noinstiki
   \label{fig:sw} %noinstiki
 \end{figure} %noinstiki
-From the standard model Lagrangian \cite{lsm}, we know that
-\begin{align}
-  \Gamma=\gamma^\mu(1-\gamma_5)
-\end{align}
-For $p\ll M_W^2$ the analysis is similar to the previous one with
-\begin{align}
-   \bcontraction{\,}{W^\mu}{(x_1)}{W^\nu}
-\,W^\mu(x_1)W^\nu(x_2)=&\langle0|T\{W^\mu(x_1)W^\nu(x_2)\}|0\rangle\nonumber\\
-\approx&\int\frac{d^4q}{(2\pi)^4}\frac{g^{\mu\nu}}{M_W^2}e^{-i q\cdot(x_1-x_2)}
-\end{align}
 Therefore we have
 
 \begin{align}
@@ -579,7 +805,7 @@ Therefore we have
 \bar{u}_{\nu_e}(\mathbf{p}_2')\gamma^\mu(1-\gamma_5)u_e(\mathbf{p_1})
 \bar{u}_\mu(\mathbf{p}_1')\gamma_\mu(1-\gamma_5)u_{\nu_\mu}(\mathbf{p_2})
 \end{align}
-We now must sqaure the scattering amplitude, $\mathcal{M}$, and summing up over final spin states, and averaging over the intial spin states, as we did in Eq.~\eqref{eq:81}
+We now must sqaure the scattering amplitude, $\mathcal{M}$, and summing up over final spin states, and averaging over the intial spin states, as we did in Eq.~\eqref{eq:81}. The result that will be obtained in detail in Chapter~\ref{cha:three-body-decays} for the muon--decay is
 \begin{align}
   \label{eq:102}
   \overline{|\mathcal{M}|^2}=64\,G_F^2\,(p_1\cdot p_2)(p_1'\cdot p_2')
@@ -603,6 +829,7 @@ The $\delta$--function in Eq.~\eqref{eq:101}
 
 implies
 \begin{align}
+  \label{eq:157}
   \mathbf{p}_1+\mathbf{p}_2-\mathbf{p}_1'-\mathbf{p}_2'=0 \overset{\text{CM}}{\Rightarrow}
   \begin{cases}
     \mathbf{p}_1=-\mathbf{p}_2\\
@@ -625,34 +852,25 @@ Therefore
   \label{eq:105}
   E_2=|\mathbf{p}_1|
 \end{align}
-In this case
+We already have the expression for $|\mathbf{p}_1|$ as given in eq.~\eqref{eq:71}. In this case $m_2=0$, and $m_1=m_e$, so that
 \begin{align}
-  \label{eq:106}
-  s=&\left(\sqrt{\mathbf{p}_1^2+m_e^2}+|\mathbf{p}_1|\right)^2
-\end{align}
-\begin{align}
-   \sqrt{s}=&\sqrt{\mathbf{p}^2_1+m_e^2}+|\mathbf{p}_1|
-\end{align}
-\begin{align}
-\left(\sqrt{s}-|\mathbf{p}_1|\right)^2=&\mathbf{p}^2_1+m_e^2\nonumber\\
-s-2\sqrt{s}\mathbf{p}_1+\mathbf{p}^2_1=&\mathbf{p}^2_1+m_e^2\nonumber\\
-s-2\sqrt{s}\mathbf{p}_1=&m_e^2
-\end{align}
-\begin{align}
+  \label{eq:158}
   |\mathbf{p}_1|=\frac{s-m_e^2}{2\sqrt{s}}
 \end{align}
-From Eq.~\eqref{eq:105} we have
+
+From \eqref{eq:105}
 \begin{align}
   \sqrt{s}=&E_1+E_2\nonumber\\
   =&E_1+|\mathbf{p}_1|
 \end{align}
 \begin{align}
+  \label{eq:106}
   E_1=&\sqrt{s}-|\mathbf{p}_1|\nonumber\\
   =&\sqrt{s}+\frac{-s+m_e^2}{2\sqrt{s}}\nonumber\\
   =&\frac{2s-s+m_e^2}{2\sqrt{s}}\nonumber\\
   =&\frac{s+m_e^2}{2\sqrt{s}}
 \end{align}
-Then, by using again eq.~\eqref{eq:105}:
+Then, by using Eqs.~\eqref{eq:157}, \eqref{eq:105} and \eqref{eq:158}, and~\eqref{eq:106},  we have
 \begin{align}
   p_1\cdot p_2=&E_1E_2-\mathbf{p}_1\cdot\mathbf{p}_2\nonumber\\
   =&E_1|\mathbf{p}_1|+\mathbf{p}_1^2\nonumber\\
