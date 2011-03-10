@@ -1,6 +1,30 @@
 The master file is:
 $ pdflatex beyond
 
+There is another master file to generate selected parts of the book in
+presentation mode:
+
+$ pdflatex beyond.beamer
+
+
+the parts are the ones inside the beamer enviorement
+
+ \begin{frame}[fragile,allowframebreaks]
+  ...
+ \end{frame}
+
+We have used the a trick with the coment package, in order that the
+original master file ignores the frame enviroment. beyond.tex includes
+the following lines:
+
+ \usepackage{comment}
+ ...
+ \includecomment{frame}
+ \specialcomment{frame}
+ {\begingroup}{\endgroup}
+ %\excludecomment{frame}
+
 The figures/ dir contains the figures in pdf with some sources in svg.
 
-Standard Model by Diego Restrepo is licensed under a Creative Commons Attribution-Share Alike 3.0 United States License.
+Standard Model by Diego Restrepo is licensed under a Creative Commons
+Attribution-Share Alike 3.0 United States License.

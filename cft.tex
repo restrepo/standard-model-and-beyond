@@ -3548,6 +3548,7 @@ De otro lado, si una determinada interacci\'on, como es el caso de la interacci\
 que de acuerdo a la asignaci\'on en la Tabla corresponde a una corriente V--A. 
 
 \section{Spontaneous symmetry breaking}
+\begin{frame}[fragile,allowframebreaks]
 Escribamos el Lagrangiano para una part\'\i cula escalar real de masa $m$ como
 \begin{equation}
 \label{eq:83}
@@ -3670,7 +3671,42 @@ Consideremos ahora un campo escalar complejo sin t\'ermino de masa, pero con pot
   \qquad 
   \mu^2\lt 0,\ \lambda\gt 0 
 \end{equation}
-La simetr\'\i a del Lagrangiano corresponde a $U(1)$ global. Este potencial corresponde al ``sombrero mexicano''. Para una energ\'\i a suficientemente baja de manera que el campo deba oscilar alrededor del m\'\i nimo aparecen dos tipos de excitaciones. Una sobre las paredes  que cuestan energ\'\i a y corresponden a un campo escalar cargado como en el caso anterior, y otra a lo largo de la circunferencia de m\'\i nimo, que corresponde a una part\'\i cula escalar sin masa.
+La simetr\'\i a del Lagrangiano corresponde a $U(1)$ global. Este potencial corresponde al ``sombrero mexicano'', como se ilustra en la Figura \ref{fig:mexicanhat}. Para una energ\'\i a suficientemente baja de manera que el campo deba oscilar alrededor del m\'\i nimo aparecen dos tipos de excitaciones. Una sobre las paredes  que cuestan energ\'\i a y corresponden a un campo escalar masivo como en el caso anterior, y otra a lo largo de la circunferencia de m\'\i nimo, que corresponde a una part\'\i cula escalar sin masa, y es llamada bos\'on del Golstone. 
+
+
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{mexicanhat}
+  \caption{Potential for complex scalar field}
+  \label{fig:mexicanhat}
+\end{figure}
+
+
+
+El Lagrangiano escalar complejo es equivalente al Lagragiano de dos campos escalares reales con los mismos param\'etros. Para un conjunto de $N$ campos reales tenedremos (suma sobre $i$) \cite{Peskin}\footnote{\S{} 11.1}: 
+\begin{align}
+  \mathcal{L}=\frac{1}{2}\partial_\mu\phi^i\partial_\mu\phi_i-\frac{1}{2}\mu^2\phi_i\phi^i-\frac{1}{2}\mu^2\left(\phi_i\phi^i\right)^2\,,
+\end{align}
+que es invariante bajo una simetr\'\i a $O(N)$
+\begin{align}
+  \phi^i\to{\phi'}^i=R^{ij}\phi^j\,,
+\end{align}
+para cualquier matriz $N\times N$ ortogonal $R$. El an\'alisis para $N=2$ da lugar a un bos\'on de Goldstone. El an\'alis para $N>2$ es el mismo y por cada campo real que se introduzca aparece un nuevo bos\'on de Goldstone \cite{Peskin}:
+\begin{quote}
+  [\ldots] there are not continuous symmetries for $N=1$, while for $N=2$ there is a single direction of rotation. A rotation in $N$ dimensions can be in any one of $N(N-1)$ planes, so the $O(N)$--symmetric theory has $N(N-1)/2$ continuous symmetries. After spontaneous symmetry breaking there are $(N-1)(N-2)/2$  remaining symmetries corresponding to rotations of the $(N-1)$ [non massive] fields. The number of \emph{broken} symmetries is the difference, $N-1$.
+\end{quote}
+Entonces tenemos el siguiente teorema \cite{Peskin}
+\begin{quote}
+\emph{Goldstone's theorem states that for every spontaneously broken continuous symmetry, the theory must contain a massless particle.}
+\end{quote}
+
+Also from \cite{Peskin}\footnote{Introduction to Chapter 20}
+\begin{quote}
+  In a global symmetry  that is spontaneously broken the symmetry currents are still conserved and interactions are similarly restricted [the Lagrangian keeps the symmetry], but the vacuum state does not respect the symmetry and the particles do not form obvious symmetry multiplets. Instead, such a theory contains massless particles, Goldstone bosons, one for each generator of the spontaneously broken symmetry. The third case is that of a local, or gauge, symmetry. [\ldots] such a symmetry requires the existence of a massless vector field for each symmetry generator, and the interactions among these fields are highly restricted.
+
+It is now only natural to consider a fourth possibility: What happens if we include both local gauge invariance  and spontaneous symmetry breaking in the same theory?
+\end{quote}
  
 
 En el caso de la Acci\'on invariante gauge local bajo el Grupo $U(1)$, tenemos el Lagrangiano \eqref{eq:56}:
@@ -3713,10 +3749,12 @@ El mecanismo completo mediante el cual, a partir de un Lagrangiano invariante ga
 
 El n\'umero de grados de libertad independientes en el Lagrangiano original en la ec.~\eqref{eq:89} es cuatro. Correspondientes a los dos grados de libertad del bos\'on gauge no masivo y los dos del campo escalar complejo. En el Lagrangiano final en la ec.~\eqref{eq:94} no aparece el bos\'on de Goldstone. Sin embargo esto no es un problema porque dicho Lagrangiano tambi\'en tiene cuatro grados de libertad correspondientes a  los tres grados de libertad del bos\'on gauge masivo y al grado de libertad del bos\'on de Higgs. 
 
-
+\end{frame}
 
 \section{Standard model Lagrangian}
 \label{sec:stand-model-lagr}
+
+\begin{frame}[fragile,allowframebreaks]
 The known matter is build from the elementary set of particles defined in table
 \begin{table}
   \centering
@@ -3748,9 +3786,9 @@ The free Lagrangian containing this particles can be written as
 \begin{align}
   \mathcal{L}_{\text{free}}=&i\overline{e}\gamma^\mu\partial_\mu e-m_e\overline{e}e+i\overline{\nu}\gamma^\mu\partial_\mu\nu
 +i\overline{u}\gamma^\mu\partial_\mu u-m_u\overline{u}u+i\overline{d}\gamma^\mu\partial_\mu d-m_d\overline{d}d\nonumber\\
-=&i\overline{e_L}\gamma^\mu\partial_\mu e_L+i\overline{e_R}\gamma^\mu\partial_\mu e_R-m_e(\overline{e_R}e_L+\overline{e_L}e_R)+i\overline{\nu_L}\gamma^\mu\partial_\mu\nu_L
-+i\overline{\nu_R}\gamma^\mu\partial_\mu\nu_R\nonumber\\
-&+i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu\partial_\mu u_R-m_e(\overline{u_R}u_L+\overline{u_L}u_R)
+=&i\overline{e_L}\gamma^\mu\partial_\mu e_L+i\overline{e_R}\gamma^\mu\partial_\mu e_R-m_e(\overline{e_R}e_L+\overline{e_L}e_R)+i\overline{\nu_L}\gamma^\mu\partial_\mu\nu_L\nonumber\\
+&+i\overline{\nu_R}\gamma^\mu\partial_\mu\nu_R+i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu\partial_\mu u_R\nonumber\\
+&-m_e(\overline{u_R}u_L+\overline{u_L}u_R)
 i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu\partial_\mu d_R-m_e(\overline{d_R}d_L+\overline{d_L}d_R)\,.
 \end{align}
 donde,
@@ -3766,7 +3804,8 @@ En las interacciones d\'ebiles s\'olo participan las partes izquierdas de los ca
   \mathcal{L}_{\text{free}}
 =&i\overline{e_L}\gamma^\mu\partial_\mu e_L+i\overline{e_R}\gamma^\mu\partial_\mu e_R-m_e(\overline{e_R}e_L+\overline{e_L}e_R)+
 i\overline{\nu_L}\gamma^\mu\partial_\mu\nu_L\nonumber\\
-&+i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu\partial_\mu u_R-m_e(\overline{u_R}u_L+\overline{u_L}u_R)
+&+i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu\partial_\mu u_R\nonumber\\
+&-m_e(\overline{u_R}u_L+\overline{u_L}u_R)
 i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu\partial_\mu d_R-m_e(\overline{d_R}d_L+\overline{d_L}d_R)\,.
 \end{align}
 
@@ -3941,9 +3980,10 @@ se reduce a
   V(H)=\frac{1}{2}\mu^2H^2+\frac{1}{4}\lambda H^4\,.
 \end{align}
 
-
+\end{frame}
 \subsection{Spontaneous symmetry breaking in $SU(3)_c\times SU(2)_L\times U(1)_Y$}
 
+\begin{frame}[fragile,allowframebreaks]
 Retornando al doblete de Higgs del modelo est\'andar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar pero con la parte real neutra desplazada para generar la ruptura espont\'anea de la simetr\'\i a $SU(2)_L\times U(1)_Y$
 \begin{align}
 \label{eq:92}
@@ -3986,7 +4026,7 @@ Para $\alpha=0$, podemos hacer una transformaci\'on gauge usando la ec.~\eqref{e
 \end{equation}
 que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las primas sobre los campos transformados $\Phi'$ y $W'_{\mu\nu}$.
 
-Comenzaremos analizando la parte scalar del Lagrangiano del Modelo Est\'andar para una generaci\'on dad en la ec.~\eqref{eq:smscalar}
+Comenzaremos analizando la parte escalar del Lagrangiano del Modelo Est\'andar para una generaci\'on dad en la ec.~\eqref{eq:smscalar}
 \begin{equation}
   \mathcal{L}_{WBH}=\frac{1}{2}\left[\mathcal{D}^\mu \begin{pmatrix}
     0\\
@@ -4072,8 +4112,8 @@ De modo que
 Entonces
 \begin{align}
   \label{eq:96}
-  \mathcal{L}_{WBH}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)
-  +\left(\frac{gv}{4}\right)^2{W^\mu}^-W_\mu^++\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H+\mathcal{L}_{Z A H}
+  \mathcal{L}_{WBH}=&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)\nonumber\\
+  &+\left(\frac{gv}{4}\right)^2{W^\mu}^-W_\mu^++\frac{1}{4}g^2{W^\mu}^-W_\mu^+H^2+\frac{1}{2}vg^2{W^\mu}^-W_\mu^+H+\mathcal{L}_{Z A H}\,,
 \end{align}
 donde
 \begin{align}
@@ -4173,7 +4213,8 @@ entonces
   \left(H^2+2vH+v^2\right)\nonumber\\
   &=\frac{1}{2}\left(\frac{g}{2}\right)^2\left(1+\tan^2\theta_W\right)Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
   &=\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu\left(H^2+2vH+v^2\right)\nonumber\\
-  &=\frac{1}{2}\left(\frac{gv}{2\cos\theta_W}\right)^2Z^\mu Z_\mu+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2+\left(\frac{g}{2\cos\theta_W}\right)^2vZ^\mu Z_\mu H
+  &=\frac{1}{2}\left(\frac{gv}{2\cos\theta_W}\right)^2Z^\mu Z_\mu+\frac{1}{2}\left(\frac{g}{2\cos\theta_W}\right)^2Z^\mu Z_\mu H^2\nonumber\\
+  &+\left(\frac{g}{2\cos\theta_W}\right)^2vZ^\mu Z_\mu H
 \end{align}
 Retornando a la ec.~(\ref{eq:96}), tenemos
 tenemos
@@ -4232,7 +4273,10 @@ tal que
 \end{itemize} %noinstiki
 %instiki:
 
+\end{frame}
 \subsection{Yukawa Lagrangian}
+
+\begin{frame}[fragile,allowframebreaks]
 In the Unitary gauge
 \begin{align}
   \mathcal{L}_{\text{Yukawa}}=&h_e\overline{L}\Phi e_R+h_d\overline{Q}\Phi d_R+h_u\overline{Q}\widetilde{\Phi}u_R+\text{h.c}\nonumber\\
@@ -4257,13 +4301,18 @@ tenemos
 +\frac{m_u}{v}\overline{u}u H\,.
 \end{align}
 
+\end{frame}
 \subsection{Fermion-gauge interactions}
+
+\begin{frame}[fragile,allowframebreaks]
 De la ec.~\eqref{eq:smscalar} tenemos
 \begin{align}
   \label{eq:lfermion}
   \mathcal{L}_{\text{fermion}}=&i\overline{Q}\gamma^\mu\mathcal{D}_\mu Q+i\overline{L}\gamma^\mu\mathcal{D}_\mu L+
 i\overline{e_R}\gamma^\mu\mathcal{D}_\mu {e_R}+i\overline{d_R}\gamma^\mu\mathcal{D}_\mu {d_R}+i\overline{u_R}\gamma^\mu\mathcal{D}_\mu {u_R}\,.
 \end{align}
+
+Los t\'erminos de interacci\'on generados por la simetr\'\i a gauge para el campo $L$ son:
 \begin{align}
   i\overline{L}\gamma^\mu\mathcal{D}_\mu L-i\overline{L}\gamma^\mu\partial_\mu L
 =&i\overline{L}\gamma^\mu(-i g T_iW_\mu^i-i g'\,Y_LB_\mu) L\nonumber\\
@@ -4367,25 +4416,28 @@ Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}
 \label{eq:sm1g2}
  \mathcal{L}_{\text{fermion}}=&i\overline{Q}\gamma^\mu\mathcal{D}_\mu Q+i\overline{L}\gamma^\mu\mathcal{D}_\mu L+
 i\overline{e_R}\gamma^\mu\mathcal{D}_\mu {e_R}+i\overline{d_R}\gamma^\mu\mathcal{D}_\mu {d_R}+i\overline{u_R}\gamma^\mu\mathcal{D}_\mu {u_R}\nonumber\\
-  =&i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu{\partial}_\mu {u_R}+i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu{\partial}_\mu {d_R}+i\overline{e_L}\gamma^\mu{\partial}_\mu e_L
-i\overline{e_R}\gamma^\mu{\partial}_\mu {e_R}+i\overline{\nu_L}\gamma^\mu{\partial}_\mu \nu_L\nonumber\\
+  =&i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu{\partial}_\mu {u_R}+i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu{\partial}_\mu {d_R}\nonumber\\
+&+i\overline{e_L}\gamma^\mu{\partial}_\mu e_L
++i\overline{e_R}\gamma^\mu{\partial}_\mu {e_R}+i\overline{\nu_L}\gamma^\mu{\partial}_\mu \nu_L\nonumber\\
 &+g_s \left(\overline{u_L}\gamma_\mu\frac{\lambda^a}{2}u_L+\overline{u_R}\gamma_\mu\frac{\lambda^a}{2}u_R
 +\overline{d_L}\gamma_\mu\frac{\lambda^a}{2}d_L+ \overline{d_R}\gamma_\mu\frac{\lambda^a}{2}d_R\right)G^\mu_a\nonumber\\
 &+\frac{g}{\sqrt{2}}\left[\overline{\nu_L}\gamma^\mu e_LW_\mu^++
 \overline{u_L}\gamma^\mu d_LW_\mu^++\text{h.c}\right]\nonumber\\
 &+\sum_{F=Q,L,e_R,d_R,u_R}\frac{e}{2c_W s_W}\overline{F}\gamma^\mu\left[ \tau_3-2s_W^2\widehat{Q}_L\right]F Z_\mu\nonumber\\
-&+e\left(\overline{e_L}\gamma^\mu \widehat{Q}_e e_L+\overline{e_R}\gamma^\mu \widehat{Q}_e e_R
-+\overline{u_L}\gamma^\mu \widehat{Q}_u u_L+\overline{u_R}\gamma^\mu \widehat{Q}_u u_R
+&+e\left(\overline{e_L}\gamma^\mu \widehat{Q}_e e_L+\overline{e_R}\gamma^\mu \widehat{Q}_e e_R\right.\nonumber\\
+  &\qquad\left.+\overline{u_L}\gamma^\mu \widehat{Q}_u u_L+\overline{u_R}\gamma^\mu \widehat{Q}_u u_R
 +\overline{d_L}\gamma^\mu \widehat{Q}_d d_L+\overline{d_R}\gamma^\mu \widehat{Q}_d d_R\right) A_\mu\,.
 \end{align}
 
-Para escribir este Lagrangiano en terminos de 4 componentes, tomemos algunos casos espec\'\i ficos:
+Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemos algunos casos espec\'\i ficos:
 \begin{itemize}
 \item 
 \begin{align}
 \label{eq:wf4}
-  \overline{\nu_L}\gamma^\mu e_LW_\mu^+=\overline{\nu}P_R\gamma^\mu P_LeW_\mu^+=\overline{\nu}\gamma^\mu P_L^2eW_\mu^+=\overline{\nu}\gamma^\mu P_LeW_\mu^+
-=\frac{1}{2}\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^+\,,
+  \overline{\nu_L}\gamma^\mu e_LW_\mu^+&=\overline{\nu}P_R\gamma^\mu P_LeW_\mu^+\nonumber\\
+&=\overline{\nu}\gamma^\mu P_L^2eW_\mu^+\nonumber\\
+&=\overline{\nu}\gamma^\mu P_LeW_\mu^+\nonumber\\
+&=\frac{1}{2}\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^+\,,
 \end{align}
 
 \item
@@ -4423,7 +4475,7 @@ donde
 \begin{align}
   v_f=&T_3^f-2 \sin^2\theta_WQ_f & a_f=&T_3^f \gamma_5
 \end{align}
-Los valores expl\'\i citos para  $v_f$ y $a_f$ en el modelo est\'andar, est\'an dados en la Tabla, 
+Los valores expl\'\i citos para  $v_f$ y $a_f$ en el modelo est\'andar, est\'an dados en la Tabla~\ref{tab:zcoup}. 
 \end{itemize}
 
 
@@ -4431,7 +4483,7 @@ Los valores expl\'\i citos para  $v_f$ y $a_f$ en el modelo est\'andar, est\'an 
 \begin{table}  %noinstiki
   \centering %noinstiki
   \begin{tabular}{l|c|c|c|c} %noinstiki
-   $f=$ &$u$&$d$&$\nu_e$&$e$\\\hline{}
+   &$u$&$d$&$\nu_e$&$e$\\\hline{}
 $2v_f$&$1-\frac{8}{3}\sin^2\theta_W$&$-1+\frac{4}{3}\sin^2\theta_W$&$1$&$-1+4\sin^2\theta_W$\\
 $2a_f$&$1$&$-1$&$1$&$-1$\\
   \end{tabular} %noinstiki
@@ -4454,16 +4506,17 @@ Usando las expresiones para pasar de fermiones $L,R$ a los fermiones de Dirac de
 &+e\left(\overline{e}\gamma^\mu \widehat{Q}_e e+
 \overline{u}\gamma^\mu {Q}_u u+
 \overline{d}\gamma^\mu {Q}_d d\right) A_\mu\nonumber\\
-    =&\sum_{f=u,d,\nu,e}i\overline{f}\gamma^\mu\partial_\mu f\nonumber\\
-&+\sum_{q=u,d}g_s\overline{q}\gamma_\mu\frac{\lambda^a}{2}qG^\mu_a\nonumber\\
+    =&\sum_{f=u,d,\nu,e}i\overline{f}\gamma^\mu\partial_\mu f+\sum_{q=u,d}g_s\overline{q}\gamma_\mu\frac{\lambda^a}{2}qG^\mu_a\nonumber\\
 &+\frac{g}{2\sqrt{2}}\left[\overline{\nu}\gamma^\mu(1-\gamma_5)eW_\mu^++
-\overline{u}\gamma^\mu(1-\gamma_5)d W_\mu^++\text{h.c}\right]
-+\sum_{f=u,d,\nu,e}\frac{e}{2c_W s_W}\overline{f}\gamma^\mu\left(v_f-a_f\gamma_5\right)f\nonumber\\
-&+e\sum_{f=u,d,\nu,e}\overline{f}\gamma^\mu \widehat{Q}_f f A_\mu\,.
+\overline{u}\gamma^\mu(1-\gamma_5)d W_\mu^++\text{h.c}\right]\nonumber\\
+&+\sum_{f=u,d,\nu,e}\frac{e}{2c_W s_W}\overline{f}\gamma^\mu\left(v_f-a_f\gamma_5\right)f\nonumber\\
+&+e\sum_{f=u,d,\nu,e}\overline{f}\gamma^\mu \widehat{Q}_f f A_\mu\,,
 \end{align}
 donde $Q_f$ est\'an dadas en la Tabla~\ref{tab:ef} y $v_f$, $a_f$ en la Tabla \ref{tab:zcoup}.
+\end{frame}
 \subsection{Self-interactions}
 
+\begin{frame}[fragile,allowframebreaks]
 El Lagrangiano gauge
 \begin{align}
   \mathcal{L}_{\text{gauge}}=& -\tfrac{1}{4}G^{\mu\nu}_a G_{\mu\nu}^a-\tfrac{1}{4}W^{\mu\nu}_i W_{\mu\nu}^i-\tfrac{1}{4}B^{\mu\nu} B_{\mu\nu}\nonumber\\
@@ -4489,36 +4542,52 @@ donde
   \widetilde{G}^{\mu\nu}=&\partial^\mu G^\nu_a-\partial^\nu G^\mu\,.
 \end{align}
 
+\end{frame}
 \subsection{Lagrangiano del modelo est\'andar para la primer generaci\'on}
 
-Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyukfin}, $\mathcal{L}_{\text{fermion}}$ \eqref{eq:lfermionfin}, y $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos  para $f=\nu_e,e,u,d$, $q=u,d$ [con $f'=e$ ($d$) para $f=\nu_e$ ($u$) ]
+\begin{frame}[fragile,allowframebreaks]
+Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyukfin}, $\mathcal{L}_{\text{fermion}}$ \eqref{eq:lfermionfin}, y $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos  para $f=\nu_e,e,u,d$; $q=u,d$ [con $f'=e$ ($d$) para $f=\nu_e$ ($u$) ]
 \begin{align}
-  \mathcal{L}_{\text{1 gen}}=&\sum_f i\bar{f}\left(\gamma^\mu\partial_\mu-m_f\right)f
--\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
+  \mathcal{L}_{\text{1 gen}}=&\sum_f i\bar{f}\left(\gamma^\mu\partial_\mu-m_f\right)f\nonumber\\
+&-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
 - \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
 &+\tfrac{1}{2}\partial^\mu H\partial_\mu H
--\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)
-+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
-&+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
+-\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\nonumber\\
+&+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
+&+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu\nonumber\\
+&+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
 &+\frac{g}{2\sqrt{2}}\left[\sum_{f}\bar{f}\gamma^\mu(1-\gamma_5)f' W_\mu^++\text{h.c}\right]
 +\sum_f \frac{m_f}{v} \bar{f}f H\nonumber\\
+&\phantom{- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
+    +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
+    +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.}\nonumber
+\end{align}
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]{}
+
+
+
+
+\begin{align}
+  \phantom{\mathcal{L}_{\text{1 gen}}=}
 &-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
 &-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
-&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]
--e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
+&-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]\nonumber\\
+&-e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
 &-e^2\cot^2\theta_W\left(2W_\mu^+{W^\mu}^-A_\nu Z^\nu-W_\mu^+A^\mu W_\nu^-Z^\nu-W_\mu^+Z^\mu W_\nu^-A^\nu\right)\nonumber\\
 &-e^2\left(W_\mu^+{W^\mu}^-A_\nu A^\nu-W_\mu^+A^\mu W_\nu^-A^\nu\right)\nonumber\\
 &- \frac{1}{4}\left(g_s\widetilde{G}^{\mu\nu}_af_{a d e}G^d_\mu G^e_\nu
     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
 \end{align}
-
      
      
-
+\end{frame}
 
 \subsection{Din\'amica de sabor}
 \label{sec:dinamica-de-sabor}
+
+\begin{frame}[fragile,allowframebreaks]
 El Modelo Est\'andar esta compuesto de las siguientes tres familias de fermiones $i=1,2,3$. A cada familia se le asigna una carga de \emph{sabor} diferente
 \begin{align}
 L_i=&
@@ -4652,17 +4721,23 @@ Teniendo en cuenta estos resultados podemos escribir finalmente el Lagrangiano c
 \end{align}
 
 \begin{align}
-  \label{eq:234}
-   \mathcal{L}_{\text{SM}}=&\sum_f i\bar{f}\left(\gamma^\mu\partial_\mu-m_f\right)f
--\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
+   \mathcal{L}_{\text{SM}}=&\sum_f i\bar{f}\left(\gamma^\mu\partial_\mu-m_f\right)f\nonumber\\
+&-\tfrac{1}{4}F^{\mu\nu} F_{\mu\nu}-\tfrac{1}{4}Z^{\mu\nu} Z_{\mu\nu}-\tfrac{1}{2}(F_W^\dagger)^{\mu\nu} (F_W)_{\mu\nu}
 - \tfrac{1}{4}\widetilde{G}^{\mu\nu}_a \widetilde{G}_{\mu\nu}^a\nonumber\\
 &+\tfrac{1}{2}\partial^\mu H\partial_\mu H
--\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)
-+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
-&+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
-&+\frac{g}{2\sqrt{2}}\left[\sum_{l=e}^{\tau}\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\sum_{ij}V_{ij}\bar{u}_i\gamma^\mu(1-\gamma_5)d_j W_\mu^++\text{h.c}\right]
-+\sum_f \frac{m_f}{v} \bar{f}f H\nonumber\\
-&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
+-\frac{1}{2}m_H^2H^2\left(1+\frac{H}{v}+\frac{H^2}{4v^2}\right)\nonumber\\
+&+\left(m_W^2{W^\mu}^-W_\mu^++\frac{1}{2}m_Z^2Z^\mu Z_\mu\right)\left(1+2\frac{H}{v}+\frac{H^2}{v^2}\right)\nonumber\\
+&+g_s\sum_q\bar{q}\gamma^\mu\left(\frac{\lambda_a}{2}\right)q\,G_\mu^a+e\sum_f \bar{f}\gamma^\mu Q_f f A_\mu\nonumber\\
+&+\frac{e}{2\cos\theta_W\sin\theta_W}\sum_{f}\bar{f}\gamma^\mu(v_f-a_f\gamma_5)f Z_\mu\nonumber\\
+&+\frac{g}{2\sqrt{2}}\left[\sum_{l=e}^{\tau}\bar{\nu_l}\gamma^\mu(1-\gamma_5)l W_\mu^++\sum_{ij}V_{ij}\bar{u}_i\gamma^\mu(1-\gamma_5)d_j W_\mu^++\text{h.c}\right]\nonumber\\
+&+\sum_f \frac{m_f}{v} \bar{f}f H\nonumber
+\end{align}
+
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]{}
+\begin{align}
+     \label{eq:234}
+\phantom{\mathcal{L}_{\text{SM}}=}&-ie\cot\theta_W\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ Z_\nu-(F_W)^{\mu\nu}W_\mu^- Z_\nu+W_\mu^-W_\nu^+Z^{\mu\nu}\right]\nonumber\\
 &-ie\left[(F_W^\dagger)^{\mu\nu}W_\mu^+ A_\nu-(F_W)^{\mu\nu}W_\mu^- A_\nu+W_\mu^-W_\nu^+F^{\mu\nu}\right]\nonumber\\
 &-\frac{e^2}{2\sin^2\theta_W}\left[\left(W_\mu^+{W^\mu}^-\right)^2-W_\mu^+{W^\mu}^+W_\nu^-{W^\nu}^-\right]
 -e^2\cot^2\theta_W\left(W_\mu^+{W^\mu}^-Z_\nu Z^\nu-W_\mu^+Z^\mu W_\nu^-Z^\nu\right)\nonumber\\
@@ -4672,9 +4747,11 @@ Teniendo en cuenta estos resultados podemos escribir finalmente el Lagrangiano c
     +g_sf^{a b c}G_b^\mu G_c^\nu\widetilde{G}_{\mu\nu}^a
     +g_s^2f^{a b c}f_{a d e}G_b^\mu G_c^\nu G^d_\mu G^e_\nu\right)\,.
 \end{align}
+
+
 donde $m_{\nu_l}=0$.
 
-
+\end{frame}
 
 
 

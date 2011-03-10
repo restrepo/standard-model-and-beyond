@@ -17,7 +17,14 @@
 \specialcomment{inprogress}
 {\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
 \excludecomment{inprogress}
-%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Beamer compability layer
+%to compile beamer use beyond.beamer.tex
+\includecomment{frame}
+\specialcomment{frame}
+{\begingroup}{\endgroup}
+%\excludecomment{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{bbold}
 \setlength{\textwidth}{180mm}
 \setlength{\oddsidemargin}{-1cm}
