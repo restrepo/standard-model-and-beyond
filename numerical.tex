@@ -1,0 +1,46 @@
+
+\chapter{Computational QFT}
+
+\begin{frame}
+There are several tools which allows for the generation of models of particle physics models like LanHEP \cite{Semenov:2008jy} 
+\begin{center}
+  \url{http://theory.sinp.msu.ru/~semenov/lanhep.html},
+\end{center}
+or FeynRules \cite{Christensen:2008py}
+\begin{center}
+  \url{http://feynrules.phys.ucl.ac.be/}\,.
+\end{center}
+
+This kind of programs are able to generate the output required for other programs which make the calculation of Feynman diagrams and integration over multi-particle phase space. CalcHEP:
+\begin{center}
+  \url{http://theory.sinp.msu.ru/~pukhov/calchep.html}
+\end{center}
+for example, is able to calculate cross section and decays widths at tree level.
+
+\end{frame}
+
+In this chapter we will illustrate the use LanHEP+CalcHEP
+
+\section{LanHEP}
+
+\begin{frame}[fragile,allowframebreaks]{}
+After download the source code from \url{http://theory.sinp.msu.ru/~pukhov/calchep.html} to some \lstinline{DIR}, 
+\begin{itemize}
+\item Note that the \lstinline{tar.gz} file name depends on the current version. At the moment of this writing this was \lstinline{lhep311.tar.gz}. To uncompress the file:\\
+  \lstinline{\$ tar -zxvf DIR/lhep311.tar.gz}\\
+where \lstinline{\$} is to indicate that the command is to be written in the shell of your Linux session\footnote{An introduction to scientific computing is at \url{http://gfif.udea.edu.co/cf} }
+\item Go to the created directory
+  \lstinline{\$ cd lanhep311}
+
+\item To compile and create the executable of the program, that will be called \lstinline{lhep}:\\
+\lstinline{\$ make}  
+\end{itemize}
+
+
+\end{frame}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond.beamer.tex"
+%%% End: 
+
