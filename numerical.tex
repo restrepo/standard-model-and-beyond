@@ -58,13 +58,14 @@ Here \lstinline{./lhep} command, search for the file in the defaul directory \ls
  ls *4.mdl
  func4.mdl  lgrng4.mdl  prtcls4.mdl  vars4.mdl
 \end{lstlisting}
-
+\end{frame}
+%%%%%%%%
 
 \section{CalcHEP}
-
+\begin{frame}[fragile,allowframebreaks]{}
 The installation of CalcHEP is similar. In Ubuntu you must be sure to have \lstinline{libx11-dev} package, in addion to the C and Fortran compilers:
 \begin{lstlisting}
-$ sudo apt-get install libx11-dev build-essential gfrotran
+$ sudo apt-get install libx11-dev build-essential gfortran
 \end{lstlisting}
 In the CalcHEP directory:
 \begin{lstlisting}
@@ -73,7 +74,7 @@ $ make
 
 To use CalcHEP you must first create a directory with the required files. This is achieved with the CalcHEP command
 \begin{lstlisting}
-\$ ./mkUsrDir YourModel
+$ ./mkUsrDir YourModel
 \end{lstlisting}
 A directory \lstinline{YourModel} is created with several files and directories inside. By default, a \lstinline{models} directory is created with two set of \lstinline{.mdl} files, corresponding to two versions of the Standard Model:
 \begin{lstlisting}
@@ -87,9 +88,11 @@ From the \lstinline{YourModel} directory in CalcHEP, run the command
 ./calchep
 \end{lstlisting}
 A new window must appear with the info of CalcHEP and the loaded models in \lstinline{YourModel/models}. To navigate through this window, use the arrows keys and the \lstinline{<ESC>} key to navigate back into the menus.  
+\end{frame}
 
 \section{LanHEP/CalcHEP}
 
+\begin{frame}[fragile,allowframebreaks]{}
 The sample \lstinline{.mdl} files in the \lstinline{mdl} directory of LanHEP must be modified in order to generate the proper CalcHEP input files. From the LanHEP directory
 \begin{lstlisting}
 $ mkdir sm
@@ -113,7 +116,7 @@ $ ./mkUsrDir sm
 $ cd sm/models
 $ rm * 
 \end{lstlisting}
-then copy the \lstinline{*1.mdl} files to the \lstinline{sm/models}, and from the $sm$ CalcHEP directory run \lstinline{./calchep}.
+then copy the \lstinline{*1.mdl} files to the \lstinline{sm/models}, and from the \lstinline{sm} CalcHEP directory run \lstinline{./calchep}.
 
 In order to understand the structure of the LanHEP files consider the following skeleton:
 \begin{lstlisting}[numbers=left,xleftmargin=1cm,numberstyle=\tiny,escapeinside={(*}{*)}]
@@ -332,33 +335,9 @@ e.g, for center of mass energy of 14 TeV (7 TeV per beam) we could have:
   \sigma(e^+\,e^-\to \mu^+\mu^-)=5\times 10^{-4}\,\text{pb}\,
 \end{align}
 \begin{itemize}
-\item \mathbf{Exercise}:
-Repeat the prevous calculation but for one center of mass energy of 200 GeV.
+\item \textbf{Exercise}:
+Repeat the previous calculation, but for one center of mass energy of 200 GeV.
 \end{itemize}
-
-
-
-
-% We start with QCD Lagrangian. In the LanHEP notation, the file \lstinline{qcd.mdl} is
-% \begin{lstlisting}
-% model QED/1.
-% parameter ee=0.31333: ’elementary electric charge’.
-% spinor e1/E1:(electron, mass me=0.000511).
-% vector A/A:(photon).
-% let F^mu^nu=deriv^mu*A^nu-deriv^nu*A^mu.
-% lterm -1/4*(F^mu^nu)**2 - 1/2*(deriv^mu*A^mu)**2.
-% lterm E1*(i*gamma*deriv+me)*e1.
-% lterm ee*E1*gamma*A*e1.
-% \end{lstlisting}
-
-% The QED Lagrangian is
-% \begin{align}
-%   \mathcal{L}=-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+\overline{e}\gamma^\mu(i\partial_\mu+e A_\mu)e-m\overline{e}e+\mathcal{L}_{\text{GF}}\,,
-% \end{align}
-% where the gauge fixing term in the Feynman Gauge is
-% \begin{align}
-%   \mathcal{L}_{\text{GF}}=-\frac{1}{2}  \left(\partial_\mu A^\mu  \right)^2\,.
-% \end{align}
 
 
 \end{frame}
