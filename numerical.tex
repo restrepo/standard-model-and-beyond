@@ -1,4 +1,3 @@
-
 \chapter{Computational QFT}
 
 \begin{frame}
@@ -339,7 +338,22 @@ e.g, for center of mass energy of 14 TeV (7 TeV per beam) we could have:
 Repeat the previous calculation, but for one center of mass energy of 200 GeV.
 \end{itemize}
 
-For the Standard Model the Yukawa Lagrangia is written in the interaction basis:
+For the Standard Model the Yukawa Lagrangian that couple the down fermions with the boson scalar is written in the interaction basis:
+\begin{equation}\label{base_in}
+  \mathcal{-L}_Y\sim\overline{D'}M_D P_R D'H + {\rm h.c}\; ,
+\end{equation}
+with $D'=V^{\dagger}D$, we can write the equation \ref{base_in} in the mass eigenstates 
+as $\mathcal{-L}_Y\sim\overline{D}M_D^{dia}P_RDH + {\rm h.c}$ , where
+\begin{equation}\label{masa_matrix}
+  M_D^{dia}=VM_DV^{\dagger}
+\end{equation}
+ Investing the equation \ref{masa_matrix} and replacing in \ref{base_in} we can write in the interaction eigenstates:
+$\mathcal{-L}_Y\sim \overline{D'}V^{\dagger}M_D^{dia}VP_R D'H + {\rm h.c}$, define $M'_D=M_D^{dia}V$ and $q'=VD'$ 
+\footnote{$\overline{D'}V^{\dagger}=D'V^{\dagger}\gamma_0=(\gamma_0VD')^{\dagger}=(\gamma_0q')^{\dagger}=\overline{q'}$.}, therefore, the 
+Yukawa Lagrangian in the interaction basis is:
+\begin{equation}
+  \mathcal{-L}_Y\sim\overline{q'}M_D' P_R D'H + {\rm h.c}\; .
+\end{equation}
 
 
 
