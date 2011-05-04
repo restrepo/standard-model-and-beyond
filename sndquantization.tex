@@ -44,7 +44,7 @@ This happens when the number of quanta of the Fock state is big enough. In fact,
 Eq.~\eqref{eq:1} is the basis for the calculation of cross section and decay widths in quantum field theory. Now we will study how to define a such Fock state for a scalar field.
 
 
-We have already seen in Chapter 1 of \cite{lsm} that a string have a collective wave motion that is described by a continuous field, which satisfies the familiar one-dimensional wave equation
+We have already see in Chapter 1 of \cite{lsm} that a string have a collective wave motion that is described by a continuous field, which satisfies the familiar one-dimensional wave equation
 \begin{align}
 \label{eq:2}
   \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}=0
@@ -366,7 +366,7 @@ In terms of operators $\widehat{a}_{n}$ and $\widehat{a\,}_{n}^\dagger$ the Hami
 \end{align}
 Since
 \begin{align}
-  \sum_{n=-\infty}^{\infty} \frac{1}{2}\to\infty\,,
+  \sum_{n=-\infty}^{\infty}\omega_n \frac{1}{2}\to\infty\,,
 \end{align}
 it is convenient to renormalize the Hamiltonian as
 \begin{align}
@@ -438,7 +438,7 @@ As stablished in \cite{Lahiri:2005sm}
   In other words, the operator $\widehat{a}_{n}$ seems to annihilate a quantum of energy, of amount $\hbar\omega_n$, from the state. On the other hand, 
   $\widehat{a\,}_{n}^\dagger$ creates a quantum of energy $\hbar\omega_n$. In this sense, they are the are the annihilation and the creation operators, respectively. [...]
 
-The ground state can be denoted by $|0\rangle$. Since this is state of lowest energy, the annihilation operator $\widehat{a\,}_{n}^\dagger$,
+The ground state can be denoted by $|0\rangle=|0_n\rangle$. Since this is state of lowest energy, the annihilation operator $\widehat{a\,}_{n}^\dagger$,
 acting on it, cannot produce a state of lower energy. Thus, this state must be totally annihilated by the operation of $\widehat{a}_{n}$:
 \begin{align}
   \widehat{a}_{n}|0\rangle=&0\nonumber\\
@@ -449,24 +449,36 @@ such that
 \begin{align}
   \langle0|0\rangle=1
 \end{align}
-
+The energy if the ground state can be fixed to zero:
 \begin{align}
-  \widehat{a\,}_{n}^\dagger|0\rangle=&|1_n\rangle\nonumber\\
-  \langle0|\widehat{a}_{n}=&\langle1_n|
+  :\widehat{H}:|0\rangle=0\,.
 \end{align}
 
-As $|1_n\rangle$ is an Hamiltonian eigenstate of energy $E_n$, the effect of $\widehat{a\,}_{n}^\dagger$ on the ground state is to create an one-particle eigenstate of energy $E_n$
+We define the state whose energy is larger tha the energy of $|0\rangle$ by one quantum $\hbar\omega_n$ by
+\begin{align}  
+  |1_n\rangle\equiv&\widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\ 
+  \langle1_n|=&\langle0|\widehat{a}_{n}
+\end{align}
+
+$|1_n\rangle$ is an Hamiltonian eigenstate of energy $\omega_n$:
+\begin{align}
+  :\widehat{H}:|1_n\rangle =&\omega_n a_n^\dagger a_n |1_n\rangle \nonumber\\ 
+&=\omega_n|1_n\rangle\nonumber\\
+&=\omega_n\cdot 1|1_n\rangle\,,
+\end{align}
+where we have made explicit that we have a quantum of energy $\hbar\omega$. The normalized state is
 \begin{align}
   \langle1_n|1_n\rangle=&\langle0|\widehat{a}_{n}\widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\
   =&\langle0|\left[\widehat{a}_{n},\widehat{a\,}_{n}^\dagger\right]|0\rangle\nonumber\\
   =&\langle0|0\rangle\nonumber\\
   =&1\,.
 \end{align}
+Similarly, the state with energy $2\hbar\omega$ is
 \begin{align}
 \frac{1}{\sqrt{2}} \left(\widehat{a\,}_{n}^\dagger\right)^2 |0\rangle=&|2_n\rangle\nonumber\\
   \langle0|\frac{1}{\sqrt{2}}\left(\widehat{a}_{n}\right)^2=&\langle2_n|
 \end{align}
-
+with normalization
 \begin{align}
   \langle2_n|2_n\rangle=&\frac{1}{2}\langle0|\widehat{a}_{n}\widehat{a}_{n}\widehat{a\,}_{n}^\dagger\widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\
 =&\frac{1}{2}\langle1_n|\widehat{a}_{n}\widehat{a\,}_{n}^\dagger|1_n\rangle\nonumber\\
@@ -479,7 +491,7 @@ By induction we get
 \label{eq:128}
 \frac{1}{\sqrt{m!}} \left(\widehat{a\,}_{n}^\dagger\right)^m |0\rangle=&|m_n\rangle
 \end{align}
-From here we 
+From here we have 
 
 \begin{align}
 \frac{1}{\sqrt{m!}} \widehat{a\,}_{n}^\dagger\left(\widehat{a\,}_{n}^\dagger\right)^{m-1} |0\rangle=&|m_n\rangle\nonumber\\
@@ -489,16 +501,17 @@ From here we
  \widehat{a\,}_{n}^\dagger|(m-1)_n\rangle=&\sqrt{m}|m_n\rangle\nonumber\\
  \widehat{a\,}_{n}^\dagger|m_n\rangle=&\sqrt{m+1}|(m+1)_n\rangle
 \end{align}
+or,
 \begin{align}
   \langle m_n|\widehat{a\,}_{n}=&\sqrt{m+1}\langle(m+1)_n|
 \end{align}
-normalization
+From this expressions we can check that number operator can be defined from:
 \begin{align}
  \langle m_n|\widehat{a\,}_{n}  \widehat{a\,}_{n}^\dagger|m_n\rangle=&(m+1)\langle(m+1)_n|(m+1)_n\rangle\nonumber\\
  \langle m_n|1+\widehat{a\,}_{n}^\dagger\widehat{a\,}_{n} |m_n\rangle=&(m+1)\nonumber\\
  \langle m_n|1+\widehat{\mathcal{N}}_n |m_n\rangle=&(m+1)
 \end{align}
-where the number operator as
+In this way, the number operator as
 \begin{align}
   \widehat{\mathcal{N}}_n=\widehat{a\,}_{n}^\dagger\widehat{a}_{n}
 \end{align}
@@ -560,13 +573,13 @@ Eq.~\eqref{eq:130} can be rewritten as
 \end{align}
 Noting also that
 \begin{align}
-  \mathcal{N}_n|m_l\rangle=0\,,
+  \mathcal{N}_n|m_l\rangle=0\qquad n\ne l\,, 
 \end{align}
 we have that
 \begin{align}
   \langle m_n|\colon\!\widehat{H}\colon|m_n\rangle=m_n \omega_n=m_n \hbar\omega_n\,.
 \end{align}
-Therefore, once we have proper normalized states and renormalized Hamiltonian, the energy of an state with $m$ fields of frequency $\omega_n$ is just $m$ times the energy of the one quanta of energy $\hbar\omega_n$. Note that
+Therefore, once we have proper normalized states and renormalized Hamiltonian, the energy of an state with $m$ quantum ( of frequency $\omega_n$) is just $m$ times the energy of the one quanta of energy $\hbar\omega_n$. Note that
 \begin{align}
   \langle 0|\colon\!\widehat{H}\colon|0\rangle=0\,.
 \end{align}
@@ -580,7 +593,7 @@ The general procedure to redefine the zero of energy such that the vacuum energy
 
 
 
-From \cite{McMahon:2009zz} (pag. 121)
+From \cite{McMahon:2009zz} (pag. 121):
 \begin{quote}
   These idea carry over to quantum field theory, but with a different interpretation. In quantum mechanics we are talking about a single particle state $|m_n\rangle$ and energy levels $E_n=\omega(n+1/2)$. The creation and annihilation operators move the state of the particle up and down in energy from the ground.
 
@@ -591,64 +604,7 @@ These operators will be functions of momentum. The fields will become operators 
 
 %DEBUG: further development
 
-From eq.
 
-
-The most general Fock state for a system of $N$ simple harmonic oscillators of frequencies $\omega_n$, $n=1,\ldots,N$, with solution
-\begin{align}
-  \widehat{\phi}=\sum_{n=1}^N\frac{v}{\sqrt{2\omega_nL}}
-\left[\widehat{a}_n\,e^{-i(\omega_n t-k_n z)}+\widehat{a\,}_n^\dagger\,e^{i(\omega_n t-k_n z)}\right],
-\end{align}
-
-\begin{align}
-  |m_1,m_2,\cdots,m_N\rangle=\prod_{n=1}^N\frac{\left(\widehat{a\,}_{n}^\dagger\right)^{m_n}}{\sqrt{m_n !}}|0\rangle\,.
-\end{align}
-\begin{align}
-  |1_1,1_2,\cdots,1_N\rangle=\prod_{n=1}^N{\left(\widehat{a\,}_{n}^\dagger\right)}|0\rangle\,.
-\end{align}
-
-\subsection{Backup}
-
-
-\begin{align}
- \widehat{\phi}(x)|0\rangle=&\sum_{n=-\infty}^\infty\frac{v}{\sqrt{2\omega_nL}}\widehat{a\,}^\dagger_n 
- e^{i (\omega_n t-k_n z)}|0\rangle\nonumber\\
-=&\sum_{n=-\infty}^\infty\frac{v}{\sqrt{2\omega_nL}} e^{i (\omega_n t-k_n z)}|1_n\rangle
-\end{align}
-On the other hand
-\begin{align}
- \langle0| \widehat{\phi}(x')
-=&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}} e^{-i (\omega_m t'-k_m z')}\langle1_m|
-\end{align}
-We thus obtain
-\begin{align}
-  \langle0|\widehat{\phi}(x')\widehat{\phi}(x)|0\rangle
-  =&\sum_{n,m=-\infty}^\infty\frac{v^2}{{2L\sqrt{\omega_m\omega_n}}}  
-  e^{i [\omega_n t-\omega_m t'-k_n z+k_m z')]}\langle1_m|1_n\rangle
-\nonumber\\
-  \langle0|\widehat{\phi}(x')\widehat{\phi}(x)|0\rangle
-  =&\sum_{n,=-\infty}^\infty\frac{v^2}{{2L\omega_n}}  e^{i [\omega_n (t-t')-k_n (z-z')]}
-\end{align}
-Note that it is the square of the function, not the function itself.
-
-
-We can now check eq.~\eqref{eq:1}, From eq.~\eqref{eq:18}
-
-% \begin{align}
-%     \widehat{\phi}^+|1_n\rangle=&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}
-%   \widehat{a}_m\,e^{-i(\omega_m t-k_m z)}|1_n\rangle\nonumber\\
-% =&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}\,e^{-i(\omega_m t-k_m z)}
-%   \widehat{a}_m \widehat{a\,}_{n}^\dagger|0\rangle\nonumber\\
-% =&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}\,e^{-i(\omega_m t-k_m z)}
-%   \left[\widehat{a}_m ,\widehat{a\,}_{n}^\dagger\right]|0\rangle\nonumber\\
-% =&\sum_{m=-\infty}^\infty\frac{v}{\sqrt{2\omega_mL}}\,e^{-i(\omega_m t-k_m z)}
-%   \delta_{m n}\right]|0\rangle\nonumber\\
-% =&\frac{v}{\sqrt{2\omega_nL}}\,e^{-i(\omega_n t-k_n z)}|0\rangle
-% \end{align}`
-The effect of $\widehat{\phi}^+$ is to annihilate an state with wave function of frequency $\omega_n$
-
-
-%\left(\right)
 
 
 
@@ -741,13 +697,17 @@ From
 \end{align}
 and taking into account that
 \begin{align}
-  \sum_{\mathbf{p}} \delta_{\mathbf{p}, \mathbf{q}}=\delta_{\mathbf{p}, \mathbf{p}}=&1
+  \sum_{\mathbf{n}} \delta_{\mathbf{n}, \mathbf{m}}=\delta_{\mathbf{n}, \mathbf{m}}=&1\,,
+\end{align}
+where
+\begin{align}
+  p_i=&\frac{2\pi}{L}n_i & q_i=&\frac{2\pi}{L}m_i\,,
 \end{align}
 we have
 \begin{align}
-  \int d^3p \delta^{(3)}(\mathbf{p}-\mathbf{q})=&\sum_n \delta_{nm}\nonumber\\
- \sum_n \left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})=&\sum_n \delta_{\mathbf{p}, \mathbf{q}}\nonumber\\
-  \left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})=& \delta_{\mathbf{p}, \mathbf{q}}\,.
+  \int d^3p \delta^{(3)}(\mathbf{p}-\mathbf{q})=&\sum_{\mathbf{n}} \delta_{\mathbf{n}\mathbf{m}}\nonumber\\
+ \sum_{\mathbf{n}} \left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})=&\sum_{\mathbf{n}} \delta_{\mathbf{n}, \mathbf{m}}\nonumber\\
+  \left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})=& \delta_{\mathbf{n}, \mathbf{m}}\,.
 \end{align}
 In this way
 \begin{align}
@@ -756,7 +716,7 @@ In this way
 and we get that in the continuum limit
 \begin{align}
   \label{eq:24}
-\left(\frac{L}{2\pi}\right)^3\delta_{\mathbf{p},\mathbf{q}}\to  \delta^{(3)}(\mathbf{p}-\mathbf{q})
+\left(\frac{L}{2\pi}\right)^3\delta_{\mathbf{n},\mathbf{m}}\to  \delta^{(3)}(\mathbf{p}-\mathbf{q})
 \end{align}
 In particular, this implies that
 \begin{align}
@@ -939,7 +899,7 @@ Previous equations for the Hamiltonian still holds.
   \left[\widehat{H},\widehat{a\,}_{\mathbf{p}}^\dagger \right]&=+E_{\mathbf{p}}\widehat{a\,}_{\mathbf{p}}^\dagger
 \end{align}
 %\left[\right]
-The analogy between the simple harmonic oscillator and the field is now complete. Therefore $\widehat{a\,}_{\mathbf{p}}^\dagger$ creates the quanta of momentum $p$ of the field $\widehat{\phi}$, while $\widehat{a}_{\mathbf{p}}$ is the annihilation operator for a field quantum with momentum $p$. From \cite{Lahiri:2005sm}
+The analogy between the simple harmonic oscillator and the field is now complete. Therefore $\widehat{a\,}_{\mathbf{p}}^\dagger$ creates the quanta of momentum $p$ of the field $\widehat{\phi}$, while $\widehat{a}_{\mathbf{p}}$ is the annihilation operator for a field quantum with momentum $p$. From \cite{Lahiri:2005sm}:
 \begin{quote}
   What was the positive energy component of the classical field now annihilates the quantum, and the negative energy component now creates the quantum. This quantum is what we call particle of positive energy.
 \end{quote}
@@ -982,7 +942,7 @@ With this normalization, the limit to discrete case is straightforward:
 \end{align}
 
 
-The results are summarized in Table
+The results are summarized in Table \ref{tab:666}.
 \renewcommand{\arraystretch}{1.4}
 \begin{table}[htpb!]
   \centering
@@ -990,7 +950,7 @@ The results are summarized in Table
 %    $$&$$&$$\\
     Discret&Continuum& Continuum $\widehat{a\,}_{\textbf{p}}'$\\\hline
     $\sum_n$&$\left(\frac{L}{2\pi}\right)^3\int d^3p$&$\left(\frac{L}{2\pi}\right)^3\int d^3p$\\
-    $\delta_{\textbf{p},\textbf{q}}$&$\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$&
+    $\delta_{\textbf{n},\textbf{m}}$&$\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$&
     $\left(\frac{2\pi}{L}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$\\
     $\left[\widehat{\phi}(x),\widehat{\Pi}(y)\right]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})$&
     $\left[\widehat{\phi}(x),\widehat{\Pi}(y)\right]=i\delta^{(3)}(\mathbf{x}-\mathbf{y})$&
@@ -1000,18 +960,21 @@ The results are summarized in Table
 $[\widehat{a}_{\textbf{p}},\widehat{a\,}_{\textbf{q}}^\dagger]=(2\pi)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})$\\
     $|1_{\textbf{n}}\rangle= \widehat{a\,}_{\textbf{n}}^\dagger |0\rangle$&$|\textbf{p}\rangle=\widehat{a}^\dagger_{\mathbf{p}}|0\rangle$&
 $|\textbf{p}\rangle=\frac{1}{\sqrt{V}}\widehat{a}^\dagger_{\mathbf{p}}|0\rangle$\\
-    $\langle1_{\textbf{n}}|1_{\textbf{m}}\rangle= \delta_{\textbf{n},\textbf{m}}$&$\langle\textbf{p}|\textbf{p}'\rangle=\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')$&
-    $\langle\textbf{p}|\textbf{p}'\rangle=\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')$\\
+    $\langle1_{\textbf{n}}|1_{\textbf{m}}\rangle= \delta_{\textbf{n},\textbf{m}}$&$\langle\mathbf{p}|\mathbf{q}\rangle=\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{q})$&
+    $\langle\textbf{p}|\textbf{q}\rangle=\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{q})$\\
   \end{tabular}
-  \caption{From discret to continuos}
+  \caption{From discret to continuos, where $p_i={2\pi}n_i/L$, and $q_i={2\pi}m_i/L\,,$}
   \label{tab:666}
 \end{table}
 \renewcommand{\arraystretch}{1}
+
 Similarly we can define many particle states. If a state has $N$ particles with all different momenta $p_1,p_2,\ldots,p_N$, it is defined by
 \begin{align}
   \label{eq:134}
-  |\mathbf{p}_1,\ldots,\mathbf{p}_N\rangle=\frac{1}{V^{N/2}}\widehat{a\,}_{\mathbf{p}_1}^\dagger\cdots
-\widehat{a\,}_{\mathbf{p}_N}^\dagger|0\rangle
+  |\mathbf{p}_1,\ldots,\mathbf{p}_N\rangle=&\frac{1}{V^{N/2}}\widehat{a\,}_{\mathbf{p}_1}^\dagger\cdots
+\widehat{a\,}_{\mathbf{p}_N}^\dagger|0_{\mathbf{p}_1},\ldots,0_{\mathbf{p}_N}\rangle\nonumber\\
+\equiv&\frac{1}{V^{N/2}}\widehat{a\,}_{\mathbf{p}_1}^\dagger\cdots
+\widehat{a\,}_{\mathbf{p}_N}^\dagger|0\rangle\nonumber\\
 \end{align}
 On the other hand, if we want to construct a state with $m$ particles of momentum $p$, we must have a Fock state similar to~\eqref{eq:128}
 \begin{align}
@@ -1044,8 +1007,7 @@ The effect of the operator field, $\widehat{\phi}_\pm(x)$, on the one particle s
 \end{align}
 will be important for the evaluation of $S$--matrix elements in Chapter~\ref{chap:fr}.
 
-Another choice of normalization is the Lorentz invariant one, to be used later. In this case, the generic state of the Fock
-space is obtained acting on the vacuum with the creation operators,
+Another choice of normalization is the Lorentz invariant one, to be used later. In this case, the Fock state of $N$ particles with all different momenta $p_1,p_2,\ldots,p_N$, is obtained acting on the vacuum with the creation operators,
 \begin{align}
   \left|\mathbf{p}_1,\ldots,\mathbf{p}_n\right\rangle\equiv
   \left(2E_\mathbf{p_1}\right)^{1/2}\ldots\left(2E_\mathbf{p_n}\right)^{1/2}
@@ -1062,24 +1024,24 @@ the one-particle states are
 From the commutations relations and eq.~(\ref{eq:32}) we find that
 \begin{align}
 \label{eq:34}
-\langle\mathbf{p}_1 |\mathbf{p}_2\rangle=&
-  \left(2E_\mathbf{p_1}\right)^{1/2}\left(2E_\mathbf{p_2}\right)^{1/2}
- \langle0|\widehat{a}_{\mathbf{p}_1} \widehat{a}_{\mathbf{p}_2}^\dagger|0\rangle\nonumber\\
-=&\left(2E_\mathbf{p_1}\right)^{1/2}\left(2E_\mathbf{p_2}\right)^{1/2}
- \langle0|\left[\widehat{a}_{\mathbf{p}_1}, 
-\widehat{a}_{\mathbf{p}_2}^\dagger\right]|0\rangle\nonumber\\
-=&\left(2E_\mathbf{p_1}\right)^{1/2}\left(2E_\mathbf{p_2}\right)^{1/2}\left({2\pi}\right)^3\delta^{(3)}(\mathbf{p}_1-\mathbf{p}_2)\nonumber\\
-=&2E_\mathbf{p_1}\left({2\pi}\right)^3\delta^{(3)}(\mathbf{p}_1-\mathbf{p}_2)\,.
+\langle\mathbf{p} |\mathbf{q}\rangle=&
+  \left(2E_{\mathbf{p}}\right)^{1/2}\left(2E_{\mathbf{q}}\right)^{1/2}
+ \langle0|\widehat{a}_{\mathbf{p}} \widehat{a}_{\mathbf{q}}^\dagger|0\rangle\nonumber\\
+=&\left(2E_{\mathbf{p}}\right)^{1/2}\left(2E_{\mathbf{q}}\right)^{1/2}
+ \langle0|\left[\widehat{a}_{\mathbf{p}}, 
+\widehat{a}_{\mathbf{q}}^\dagger\right]|0\rangle\nonumber\\
+=&\left(2E_{\mathbf{p}}\right)^{1/2}\left(2E_{\mathbf{q}}\right)^{1/2}\left({2\pi}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})\nonumber\\
+=&2E_{\mathbf{p}}\left({2\pi}\right)^3\delta^{(3)}(\mathbf{p}-\mathbf{q})\,.
 \end{align}
 The factors $\left(2E_\mathbf{p}\right)^{1/2}$ in eq.~(\ref{eq:33}) have been chosen so that in the above product the combination $E_{\mathbf{p}}\delta^{(3)}(\mathbf{p}-\mathbf{q})$ appears, which is Lorentz invariant. To see this perform a boost along $z$--axis. Since the transverse components of the momentum are no affected we must consider only $E_{\mathbf{p}}\delta(p_z-k_z)$. Use the form of the Lorentz transformation of $E_{\mathbf{p}},p_z$, together with the property of the Dirac delta $\delta(f(x))=\delta(x-x_0)/f'(x_0)$ \cite{Maggiore:2005qv}.
 
 Using (\ref{eq:24}) we have in a finite box
 \begin{align}
   \label{eq:35}
-   \langle\mathbf{p}_1 |\mathbf{p}_2\rangle=&2E_\mathbf{p_1}L^3 
-   \delta_{{\mathbf{p}_1},{\mathbf{p}_2}}\nonumber\\
-=&2E_\mathbf{p_1}V
-   \delta_{{\mathbf{p}_1},{\mathbf{p}_2}}
+   \langle\mathbf{p} |\mathbf{q}\rangle=&2E_{\mathbf{n}}L^3 
+   \delta_{{\mathbf{n}},{\mathbf{m}}}\nonumber\\
+=&2E_{\mathbf{n}}V
+   \delta_{{\mathbf{n}},{\mathbf{m}}}\,.
 \end{align}
 \section{Quantization of Fermions}
 \label{sec:quant-ferm}
