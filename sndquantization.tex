@@ -1061,7 +1061,7 @@ where
 and the $\gamma$ matrices satisfy the Dirac algebra
 \begin{align}
 \label{eq:140}
-\left\{\gamma^\mu,\gamma^\nu\right\} = 2g^{\mu\nu}\mathbb{1}
+\left\{\gamma^\mu,\gamma^\nu\right\} = 2g^{\mu\nu}\mathbf{1}
 \end{align}
 See \cite{lsm}.
 If we assume a plane wave solution like the wave function of the Scr\"odinger equation $\psi\propto e^{-i E t}$, after sustition in eq.~\eqref{eq:137}, we have
@@ -1231,7 +1231,7 @@ we obtain
 \begin{align}
   u_s^\dagger(-\mathbf{p})v_{s'}(\mathbf{p})=v_s^\dagger(-\mathbf{p})u_{s'}(\mathbf{p})=0
 \end{align}
-%\left(\right)
+
 In terms of the conjugate spinors
 \begin{align}
   \bar{u}_s(\mathbf{p})u_{s'}(\mathbf{p})=&2m \delta_{s s'}\nonumber\\
@@ -1242,13 +1242,7 @@ In terms of the conjugate spinors
 \end{align}
 
 
-If we sum over spins we obtain
-\begin{align}
-  \sum_s u_s(\mathbf{p})\bar{u}_s(\mathbf{p})=\cancel{p}+m\nonumber\\
-  \sum_s v_s(\mathbf{p})\bar{v}_s(\mathbf{p})=\cancel{p}-m
-\end{align}
-For details see \cite{hep-ph/0703214}.
-The spinors also satisfy some completeness relations
+The spinors also satisfy some completeness relations (For details see \cite{hep-ph/0703214})
 \begin{align}
   \sum_s u_s(\mathbf{p})\bar{u}_s=\cancel{p}+m
 \end{align}
@@ -1261,16 +1255,94 @@ The solutions to the free Dirac equations are
   \psi_{\text{particle}}(x)=&\frac{1}{\sqrt{2E_p V}}u_s(\mathbf{p})e^{-i p\cdot x}\nonumber\\
   \psi_{\text{antiparticle}}(x)=&\frac{1}{\sqrt{2E_p V}}v_s(\mathbf{p})e^{i p\cdot x}
 \end{align}
+\begin{inprogress}
+  Check the normalization factor.
+\end{inprogress}
+
 As with the scalar field, we write the Dirac field as an integral over momentum space of the plane wave solutions, with creation and annihilation operators as coefficients,
 \begin{align}
   \psi(x)=\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})u_s(\mathbf{p})e^{-i p\cdot x}
 +b_s^\dagger(\mathbf{p})v_s(\mathbf{p})e^{i p\cdot x}\right]
 \end{align}
+\begin{align}
+  H=&\int d^3x \mathcal{H}\nonumber\\
+=&\int d^3x\left(\frac{\partial \mathcal{L}}{\partial\dot\psi}\dot\psi -\mathcal{L}\right)\nonumber\\
+  =&\int d^3x\left(i\overline{\psi}\gamma^0\partial_0\psi
+-i\overline{\psi}\gamma^0\partial_0\psi-i\overline{\psi}\gamma^i\partial_i\psi+m\overline{\psi}\psi\right)\nonumber\\
+ =&\int d^3x\left(-i\overline{\psi}\gamma^i\partial_i\psi+m\overline{\psi}\psi\right)\nonumber\\
+ =&\int d^3x\overline{\psi}\left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)\psi\,.
+\end{align}
+Since that
+\begin{align}
+\label{eq:180}
+  \left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)\psi=&
+\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})\left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)u_s(\mathbf{p})e^{-i p\cdot x}\right.\nonumber\\
+&\qquad\left.+b_s^\dagger(\mathbf{p})\left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)v_s(\mathbf{p})e^{i p\cdot x}\right]\nonumber\\
+=c&\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})\left(\boldsymbol{\gamma}\cdot\mathbf{p}+m\right)u_s(\mathbf{p})e^{-i p\cdot x}\right.\nonumber\\
+&\qquad\left.+b_s^\dagger(\mathbf{p})\left(-\boldsymbol{\gamma}\cdot\mathbf{p}+m\right)v_s(\mathbf{p})e^{i p\cdot x}\right].  
+\end{align}
+From eqs.~\eqref{eq:144}, and \eqref{eq:142} we have
+\begin{align}
+  \left(\gamma_0 p^0+\gamma_i p^i-m\right)u_s(\mathbf{p})=&0\nonumber\\
+  \left(\gamma_0 p^0+\gamma_i p^i+m\right)v_s(\mathbf{p})=&0\,,
+\end{align}
+\begin{align}
+  \left(\gamma_0 E_{\mathbf{p}}-\sum_i\gamma^i p^i-m\right)u_s(\mathbf{p})=&0\nonumber\\
+  \left(\gamma_0 E_{\mathbf{p}}-\sum_i\gamma^i p^i+m\right)v_s(\mathbf{p})=&0\,,
+\end{align}
+\begin{align}
+  \left(-\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}-m\right)u_s(\mathbf{p})=&-\gamma_0 E_{\mathbf{p}}u_s(\mathbf{p})\nonumber\\
+  \left(-\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)v_s(\mathbf{p})=&-\gamma_0 E_{\mathbf{p}}v_s(\mathbf{p})\,,
+\end{align}
+\begin{align}
+  \left(\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)u_s(\mathbf{p})=&\gamma_0 E_{\mathbf{p}}u_s(\mathbf{p})\nonumber\\
+  \left(\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}-m\right)v_s(\mathbf{p})=&\gamma_0 E_{\mathbf{p}}v_s(\mathbf{p})\,.
+\end{align}
+Replacing back in eq.~\eqref{eq:180}, we have
+\begin{align}
+ \left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)\psi=&\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})\gamma_0 E_{\mathbf{p}}u_s(\mathbf{p})e^{-i p\cdot x}
+-b_s^\dagger(\mathbf{p})\gamma_0 E_{\mathbf{p}}v_s(\mathbf{p})e^{i p\cdot x}\right]\,.
+\end{align}
+Therefore
+\begin{align}
+  H=&\int d^3x\overline{\psi}\left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)\psi\nonumber\\
+=&\int d^3x\int d^3p'\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}'}}}\sum_{s'=1,2}\left[a_{s'}^\dagger(\mathbf{p}')u^\dagger_{s'}(\mathbf{p}')e^{i p'\cdot x}
++b_{s'}(\mathbf{p}')v^\dagger_{s'}(\mathbf{p}')e^{-i p'\cdot x}\right]\gamma^0
+\left(-i\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}+m\right)\psi\nonumber\\
+=&\int d^3x\int d^3p'\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}'}}}\sum_{s'=1,2}\left[a_{s'}^\dagger(\mathbf{p}')u^\dagger_{s'}(\mathbf{p}')e^{i p'\cdot x}
++b_{s'}(\mathbf{p}')v^\dagger_{s'}(\mathbf{p}')e^{-i p'\cdot x}\right]\gamma^0\nonumber\\
+&\times\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})\gamma_0 E_{\mathbf{p}}u_s(\mathbf{p})e^{-i p\cdot x}
+-b_s^\dagger(\mathbf{p})\gamma_0 E_{\mathbf{p}}v_s(\mathbf{p})e^{i p\cdot x}\right]\nonumber\\
+ =&\int \frac{d^3x}{2(2\pi)^6}\int d^3p'\int d^3p\sqrt{\frac{E_{\mathbf{p}}}{E_{\mathbf{p}'}}}\sum_{s,s'=1,2}\left[a_{s'}^\dagger(\mathbf{p}')u_{s'}^\dagger(\mathbf{p}')e^{i p'\cdot x}
++b_{s'}(\mathbf{p}')v_{s'}^\dagger(\mathbf{p}')e^{-i p'\cdot x}\right]\nonumber\\
+&\times\left[a_s(\mathbf{p}) u_s(\mathbf{p})e^{-i p\cdot x}
+-b_s^\dagger(\mathbf{p}) v_s(\mathbf{p})e^{i p\cdot x}\right]\nonumber\\
+ =&\int \frac{d^3x}{2(2\pi)^6}\int d^3p'\int d^3p\sqrt{\frac{E_{\mathbf{p}}}{E_{\mathbf{p}'}}}\sum_{s,s'=1,2}\nonumber\\
+&\times\left[a_{s'}^\dagger(\mathbf{p}')a_{s}(\mathbf{p})u_{s'}^\dagger(\mathbf{p}') u_s(\mathbf{p})e^{i(p'-p)\cdot x}
+-b_{s'}(\mathbf{p}')b_{s}^\dagger(\mathbf{p})v_{s'}^\dagger(\mathbf{p}') v_{s}(\mathbf{p})e^{i (p-p')\cdot x}\right]\nonumber\\
+ =&\int d^3p'\int \frac{d^3p}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}}}{E_{\mathbf{p}'}}}\sum_{s,s'=1,2}\nonumber\\
+&\times\left[a_{s'}^\dagger(\mathbf{p}')a_{s}(\mathbf{p})u_{s'}^\dagger(\mathbf{p}') u_s(\mathbf{p})\int \frac{d^3x}{(2\pi)^3}e^{i(p'-p)\cdot x}
+-b_{s'}(\mathbf{p}')b_{s}^\dagger(\mathbf{p})v_{s'}^\dagger(\mathbf{p}') v_{s}(\mathbf{p})\int \frac{d^3x}{(2\pi)^3}e^{i (p-p')\cdot x}\right]\nonumber\\
+ =&\int d^3p'\int \frac{d^3p}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}}}{E_{\mathbf{p}'}}}\sum_{s,s'=1,2}\nonumber\\
+&\times\left[a_{s'}^\dagger(\mathbf{p}')a_{s}(\mathbf{p})u_{s'}^\dagger(\mathbf{p}') u_s(\mathbf{p})e^{i(E_{\mathbf{p}'}-E_{\mathbf{p}})t}\delta^{(3)}(\mathbf{p}-\mathbf{p}')
+-b_{s'}(\mathbf{p}')b_{s}^\dagger(\mathbf{p})v_{s'}^\dagger(\mathbf{p}') v_{s}(\mathbf{p})e^{i(E_{\mathbf{p}}-E_{\mathbf{p}'})t}\delta^{(3)}(\mathbf{p}-\mathbf{p}')\right]\nonumber\\
+ =&\int \frac{d^3p}{2(2\pi)^3}\sum_{s,s'=1,2}\left[a_{s'}^\dagger(\mathbf{p})a_{s}(\mathbf{p})u_{s'}^\dagger(\mathbf{p}) u_s(\mathbf{p})
+-b_{s'}(\mathbf{p})b_{s}^\dagger(\mathbf{p})v_{s'}^\dagger(\mathbf{p}) v_{s}(\mathbf{p})\right]\nonumber\\
+ =&\int \frac{d^3p}E_{\mathbf{p}}{(2\pi)^3}\sum_{s=1,2}\left[a_{s'}^\dagger(\mathbf{p})a_{s}(\mathbf{p})
+-b_{s'}(\mathbf{p})b_{s}^\dagger(\mathbf{p})\right]\,.
+\end{align}
+
+
+%\left(\right)
 In order to obtain the quantization relations could see that if commutation relations are used we could get
 \begin{align}
   \colon\!H\colon=\int\frac{d^3p}{(2\pi)^3}\sum_{s=1,2}E_{\mathbf{p}}\left[a^\dagger_s(\mathbf{p})a_s(\mathbf{p})-b^\dagger_s(\mathbf{p})b_s(\mathbf{p})\right]
 \end{align}
-Even after normal ordering, this Hamiltonian can give negative energy eigenvalues, which is a serious problem. If instead we assume that the creation and annihilation operators satisfy anticommutation relations
+The minus sign arise from the anticommutation relations, so that a real spinor field, where $b_s(\mathbf{p})=a_s(\mathbf{p})$ is automatically zero.
+\begin{inprogress}
+  Check the minus sign in previous equation.
+\end{inprogress}
+Even after normal ordering, this Hamiltonian could give to arise negative energy eigenvalues, which is a serious problem. If instead we assume that the creation and annihilation operators satisfy anticommutation relations
 \begin{align}
   \left\{a_r(\mathbf{p}),a_s^\dagger(\mathbf{q})\right\}=\left\{b_r(\mathbf{p}),b_s^\dagger(\mathbf{q})\right\}=(2\pi)^3\delta_{r s}\delta^{(3)}(\mathbf{p}-\mathbf{q})
 \end{align}
