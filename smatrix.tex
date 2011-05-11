@@ -22,7 +22,30 @@ We will use the $S$--matrix formulation to obtain the decay rates and cross sect
 
 \section{The $S$--matrix}
 \label{sec:s-matrix}
-In the Scr\"odinger picture, the state of a system evolves with time
+The Scr\"odinger equation for the wave function of some state $a$
+\begin{align}
+  |a,t\rangle\equiv\psi_a(t)\,,
+\end{align}
+is
+\begin{align}
+i\frac{\partial}{\partial t}|a,t\rangle=H|a,t\rangle\,.
+\end{align}
+The solution to this equation is
+\begin{align}
+  \label{eq:schpicw}
+   |a,t\rangle=&e^{-i H(t-t_i)}|a,t_i\rangle\,,
+\end{align}
+since
+\begin{align}
+  i\frac{\partial}{\partial t}|a,t\rangle=&i(-i)H e^{H(t-t_i)}|a,t_i\rangle\nonumber\\
+=&H |a,t\rangle\,.
+\end{align}
+Defining the time-evolution operator as
+\begin{align}
+  U(t,t_i)=e^{-i H(t-t_i)}\,,
+\end{align}
+we have that in In the Scr\"odinger picture defined by
+eq.\eqref{eq:schpicw}, the state of a system evolves with time
 \begin{align}
 \label{eq:39}
   |a,t\rangle=&U(t,t_i)|a,t_i\rangle\nonumber\\
@@ -51,7 +74,7 @@ an the scattering amplitudes are given by its matrix elements, $\langle b|S|a\ra
 \end{align}
 so that $S S^\dagger=S^\dagger S =1$.
 
-More rigorously,if $\langle a|a\rangle=1$, and $|n\rangle$ is a complete set of states, the probability that $|a\rangle$ evolves into $|n\rangle$, summed over all $|n\rangle$, must be 1,
+More rigorously, if $\langle a|a\rangle=1$, and $|n\rangle$ is a complete set of states, the probability that $|a\rangle$ evolves into $|n\rangle$, summed over all $|n\rangle$, must be 1,
 \begin{align}
   \sum_n\left|\langle n|S|a\rangle\right|^2=1.
 \end{align}
@@ -71,12 +94,12 @@ Consider a generic $S$--matrix element
 \begin{align}
 \langle\mathbf{p}_1\ldots\mathbf{p}_n|S|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
 \end{align}
-For notational simplicity the states are just labeled by their momenta, but all our considerations can be generalized to the case in which the spin is taken into account. We have also defined the operator $T$ from $S=1+i T$. We assume that none of the initial momenta $\mathbf{p}_j$ coincides a final momentum $\mathbf{k}_i$. This eliminates processes in which one of the particles behaves as a ``spectator'' and does not interact with the other particles. In the language of Feynman diagrams to will be explained later, this means that we can restrict to connected diagrams. Therefore, if we restrict to the situation in which no initial and final momenta coincide, the matrix element of the identity operator between these states vanishes, and we need  actually to compute the matrix element of $i T$
+For notational simplicity the states are just labeled by their momenta, but all our considerations can be generalized to the case in which the spin is taken into account. We have also defined the operator $T$ from $S=1+i T$. We assume that none of the initial momenta $\mathbf{p}_j$ coincides a final momentum $\mathbf{k}_i$. This eliminates processes in which one of the particles behaves as a ``spectator'' and does not interact with the other particles. In the language of Feynman diagrams to be explained later, this means that we will consider only connected diagrams. Therefore, if we restrict to the situation in which no initial and final momenta coincide, the matrix element of the identity operator between these states vanishes, and we need  actually to compute the matrix element of $i T$
 \begin{align}
 \langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
 \end{align}
-In explicit calculations there will be an overall factor Dirac delta imposing energy--momentum conservation. In order not to write explicitly the Dirac delta each time we compute a matrix element of $i T$, it is convenient to define a matrix element $M_{fi}$ from 
-The matrix element,
+In explicit calculations there will be an overall  Dirac delta factor imposing energy--momentum conservation. In order not to write explicitly the Dirac delta each time we compute a matrix element of $i T$, it is convenient to define a matrix element $M_{fi}$ from 
+the matrix element,
 \begin{align}
   \label{eq:41}
   \langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
@@ -135,7 +158,7 @@ Writing $\psi_{\mathbf{p}}(\mathbf{x})=\langle\mathbf{x}|\mathbf{p}\rangle$ and 
 \langle\mathbf{p}_1|\int_Vd^3x|\mathbf{x}\rangle\langle\mathbf{x}|\mathbf{p}_2\rangle\nonumber\\
 =&\int_Vd^3x\langle\mathbf{p}_1|\mathbf{x}\rangle\langle\mathbf{x}|\mathbf{p}_2\rangle\nonumber\\
 =&\int_V d^3x\,\psi_{\mathbf{p}_1}^*(\mathbf{x})\psi_{\mathbf{p}_2}(\mathbf{x})\nonumber\\
-  &=\delta_{\mathbf{p}_1,\mathbf{p}_2}\,.
+  =&\delta_{\mathbf{p}_1,\mathbf{p}_2}\,.
 \end{align}
 
 The superscript NR reminds us that the states have been normalized
