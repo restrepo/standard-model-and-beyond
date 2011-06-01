@@ -12,12 +12,24 @@
 \usepackage[toc,page]{appendix}
 \graphicspath{{figures/}}
 \usepackage{listings}
+\usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 %%%%%%%%%
 \usepackage{comment}
 \includecomment{inprogress}
 \specialcomment{inprogress}
 {\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
 \excludecomment{inprogress}
+
+\includecomment{borrar}
+\specialcomment{borrar}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{borrar}
+
+\includecomment{details}
+\specialcomment{details}
+{\begingroup}{\endgroup}
+%\excludecomment{details}
+\PreviewEnvironment{details}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Beamer compability layer
 %to compile beamer use beyond.beamer.tex
@@ -26,6 +38,8 @@
 {\begingroup}{\endgroup}
 %\excludecomment{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %\usepackage{bbold}
 \setlength{\textwidth}{180mm}
 \setlength{\oddsidemargin}{-1cm}
@@ -80,17 +94,17 @@
 \setcounter{page}{1}
 
 %$x^2$
-%\include{introduction}
+\include{introduction}
 \include{cft}
-% \include{numerical}
-% \include{particlesltns}
-% \include{sndquantization}
-% \include{emquantization}
-% \include{smatrix}
-% \include{twobody-decays}
-% \include{feynman}
-% \include{threebody-decays}
-% \include{renormalization}
+\include{numerical}
+\include{particlesltns}
+\include{sndquantization}
+\include{emquantization}
+\include{smatrix}
+\include{twobody-decays}
+\include{feynman}
+\include{threebody-decays}
+\include{renormalization}
 \include{bibliography}
 
 \end{document}

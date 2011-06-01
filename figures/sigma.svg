@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="224.48997"
-   height="187.00668"
+   width="214"
+   height="214"
    id="svg2"
    version="1.1"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="sigma.svg">
+   sodipodi:docname="sigma.pdf">
   <defs
      id="defs4">
     <inkscape:perspective
@@ -32,9 +32,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.4009837"
-     inkscape:cx="89.545958"
-     inkscape:cy="93.503342"
+     inkscape:zoom="2.1457794"
+     inkscape:cx="99.209544"
+     inkscape:cy="104.62399"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -59,14 +59,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-234.19452,-476.20483)">
-    <rect
-       style="opacity:0.69874477;fill:none;stroke:#000000;stroke-width:4;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:1.02"
-       id="rect2816"
-       width="220.48997"
-       height="183.00668"
-       x="236.19452"
-       y="478.20483" />
+     transform="translate(-238.85743,-450.70128)">
     <path
        sodipodi:type="arc"
        style="opacity:0.69874477;fill:#000000;fill-opacity:1;stroke:none"
@@ -80,14 +73,14 @@
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:Andale Mono Italic"
-       x="256.14502"
-       y="521.32983"
+       x="269.65991"
+       y="536.24286"
        id="text3592"
        sodipodi:linespacing="100%"><tspan
          sodipodi:role="line"
          id="tspan3594"
-         x="256.14502"
-         y="521.32983">A</tspan></text>
+         x="269.65991"
+         y="536.24286">A</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Times New Roman;-inkscape-font-specification:'Times New Roman,'"
@@ -99,5 +92,15 @@
          id="tspan3598"
          x="328.22339"
          y="578.13824">σ</tspan></text>
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.69874477;fill:none;stroke:#000000;stroke-opacity:1"
+       id="path3644"
+       sodipodi:cx="123.6993"
+       sodipodi:cy="91.837357"
+       sodipodi:rx="14.160862"
+       sodipodi:ry="16.868086"
+       d="m 137.86016,91.837357 c 0,9.315983 -6.34003,16.868083 -14.16086,16.868083 -7.82083,0 -14.16086,-7.5521 -14.16086,-16.868083 0,-9.315987 6.34003,-16.868086 14.16086,-16.868086 7.82083,0 14.16086,7.552099 14.16086,16.868086 z"
+       transform="matrix(7.3192496,0,0,6.1445552,-559.52864,-6.5984236)" />
   </g>
 </svg>

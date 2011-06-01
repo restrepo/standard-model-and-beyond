@@ -286,7 +286,7 @@ The probability for the process of an initial particle decaying into $n$ final p
 \end{align}
 On the other hand the probability for a process with two initial particles colliding into $n$ final particles is
 \begin{align}
-\label{eq:147}
+\label{eq:w2}
  \omega_2 =&\int\ldots\int 
 (2\pi)^4\delta^{(4)}\left(p_1+p_2-\sum_i k_j\right)VT 
 \left|\mathcal{M}_{fi}\right|^2
@@ -297,6 +297,127 @@ On the other hand the probability for a process with two initial particles colli
 
 \section{Cross Section}
 \label{sec:cross-section}
+
+Consider a large number point-like projectiles directed to an area $A$ that includes a solid target of area $\sigma$, as displayed in Fig. \label{fig:sigma}, such that alll the fill the area $A$ randomly
+\begin{figure}
+  \centering
+  \includegraphics{sigma}
+  \caption{Cross section probability}
+  \label{fig:sigma}
+\end{figure}
+Assuming that an interaction will occur (with 100\% probability) if the projectile hits the solid, and not at all (0\% probability) if it misses, the total interaction probability for the single projectile will be
+\begin{align}
+  \label{eq:pssigma}
+  P_S=\frac{\sigma}{A}\,.
+\end{align}
+Now suppose we have a parallel beam with density of particles $n$ and velocity $v$ towards the target. In time $t$, this beam fills a volume 
+\begin{align}
+  V=A v t\,.
+\end{align}
+Choosing $t$ such that the volume contains just one particle, we can write
+\begin{align}
+  n=1/V\,,
+\end{align}
+or
+\begin{align}
+  1=n v t A\,.
+\end{align}
+replacing back in \eqref{eq:pssigma} we have
+\begin{align}
+\sigma=\frac{P_s}{n v t}\,.  
+\end{align}
+$P_s$ is just the decay probability in eq.~\eqref{eq:w2}. Therefore
+\begin{align}
+  \sigma=\frac{\omega_2}{n v T}=&
+\frac{1}{n v T}\int\ldots\int 
+(2\pi)^4\delta^{(4)}\left(p_1+p_2-\sum_i k_j\right)VT 
+\left|\mathcal{M}_{fi}\right|^2
+\frac{1}{2E_{\mathbf{p}_1}V}\frac{1}{2E_{\mathbf{p}_2}V}
+\prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}
+\nonumber\\
+=&\frac{1}{n v V}\int\ldots\int 
+(2\pi)^4\delta^{(4)}\left(p_1+p_2-\sum_i k_j\right)
+\left|\mathcal{M}_{fi}\right|^2
+\frac{1}{2E_{\mathbf{p}_1}}\frac{1}{2E_{\mathbf{p}_2}}
+\prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}\,.
+\end{align}
+The density of particles of the incident state is normalized to one particle  in the entire volume, so that $n=1/V$. Therefore
+\begin{align}
+   \sigma=&\frac{1}{v}\int\ldots\int 
+(2\pi)^4\delta^{(4)}\left(p_1+p_2-\sum_i k_j\right)
+\left|\mathcal{M}_{fi}\right|^2
+\frac{1}{2E_{\mathbf{p}_1}}\frac{1}{2E_{\mathbf{p}_2}}
+\prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}\,.
+\end{align}
+In general, as both particles may be moving we could use the relative velocity between them, $v_{\text{rel}}$,
+\begin{align}
+   \sigma=&\frac{1}{v_{\text{rel}}}\int\ldots\int 
+(2\pi)^4\delta^{(4)}\left(p_1+p_2-\sum_i k_j\right)
+\left|\mathcal{M}_{fi}\right|^2
+\frac{1}{2E_{\mathbf{p}_1}}\frac{1}{2E_{\mathbf{p}_2}}
+\prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}\,.
+\end{align}
+In a frame where $\mathbf{p}_1$ and $\mathbf{p}_2$ are along the same line, this reduces to
+\begin{align}
+  v_{\text{rel}}=\left|
+    \frac{\mathbf{p}_1}{E_1}-\frac{\mathbf{p}_2}{E_2}
+  \right|\,.
+\end{align}
+In fact, for not relativistic particles, where $E_i=m_i$, this coincides with the usual relative velocity
+\begin{align}
+   v_{\text{rel}}=&\left|
+    \frac{m_1\mathbf{v}_1}{E_1}-\frac{m_2\mathbf{v}_2}{E_2}
+  \right|\nonumber\\
+=&\left|
+    \mathbf{v}_1-\mathbf{v}_2
+  \right|\,.
+\end{align}
+The most general formula for the relative velocity is 
+\begin{align}
+  v_{\text{rel}}=\frac{I}{E_1E_2}
+\end{align}
+where
+\begin{align}
+  I=&\sqrt{(p_1\cdot p_2)^2-m_1^2m_2^2}  
+\end{align}
+
+In general
+\begin{align}
+  I=&\sqrt{(E_1 E_2-\mathbf{p}_1\cdot\mathbf{p}_2)^2-m_1^2m_2^2}\nonumber\\
+  =&\sqrt{E_1^2E_2^2+(\mathbf{p}_1\cdot\mathbf{p}_2)^2-2E_1 E_2\mathbf{p}_1.\mathbf{p}_2 -m_1^2m_2^2}
+\end{align}
+
+Since
+\begin{align}
+  m_1^2m_2^2=&(E_1^2-\mathbf{p}_1^2)(E_2^2-\mathbf{p}_2^2)\nonumber\\
+=&(E_1^2E_2^2-\mathbf{p}_1^2E_2^2-E_1^2\mathbf{p}_2^2+\mathbf{p}_1^2\mathbf{p}_2^2)
+\end{align}
+\begin{align}
+  I=\sqrt{\mathbf{p}_1^2E_2^2-2E_1 E_2\mathbf{p}_1\cdot\mathbf{p}_2+E_1^2\mathbf{p}_2^2
++(\mathbf{p}_1\cdot\mathbf{p}_2)^2-
+\mathbf{p}_1^2\mathbf{p}_2^2}
+\end{align}
+If
+\begin{align}
+  (\mathbf{p}_1\cdot\mathbf{p}_2)^2-
+\mathbf{p}_1^2\mathbf{p}_2^2=0
+\end{align}
+that implies that $\mathbf{p}_1$ and $\mathbf{p}_2$ are colineals,
+\begin{align}
+  I=&\sqrt{\mathbf{p}_1^2E_2^2-2E_1 E_2\mathbf{p}_1\cdot\mathbf{p}_2+E_1^2\mathbf{p}_2^2}
+  \nonumber\\
+  =&\sqrt{(\mathbf{p}_1E_2-\mathbf{p}_2E_1)^2}\nonumber\\
+  =&|\mathbf{p}_1E_2-\mathbf{p}_2E_1|
+\end{align}
+\begin{align}
+\label{eq:53}
+v_{\text{rel}}=  \frac{I}{E_1E_2}=\left|
+    \frac{\mathbf{p}_1}{E_1}-\frac{\mathbf{p}_2}{E_2}
+  \right|
+\end{align}
+
+
+\begin{borrar}
 Consider the collission of a cloud of particles of density $n_1^0$ moving to the right with velocity $v_1^0$ toward another cloud of particles in rest of density $n_2^0$. The differential of number of collisions is
 \begin{align}
   d N\propto&|\mathbf{v}_1^0| n_1^0 n_2^0 \,d V\, dt\nonumber\\
@@ -402,10 +523,12 @@ v_{\text{rel}}=  \frac{I}{E_1E_2}=\left|
     \frac{\mathbf{p}_1}{E_1}-\frac{\mathbf{p}_2}{E_2}
   \right|
 \end{align}
+\end{borrar}
+To simplify the notation we set $E_i=E_{\mathbf{p}_i}=$, and $E_f=E_{\mathbf{p}_f}$. Moreover, the differential cross section is
 \begin{align}
-    d\sigma=&(2\pi)^4\delta^{(4)}\left(\sum_{i}p_i-\sum_{f} p_f\right)
+    d\sigma=&(2\pi)^4\delta^{(4)}\left(\sum_{i=1}^2p_i-\sum_{f} p_f\right)
 \frac{1}{4v_{\text{rel}}E_1E_2}\left|\mathcal{M}_{fi}\right|^2
-\prod_{f}\frac{d^3p_f}{(2\pi)^32E_{f}}\nonumber\\
+\prod_{f}\frac{d^3k_f}{(2\pi)^32E_{f}}\nonumber\\
 &=(2\pi)^4\frac{1}{4v_{\text{rel}}E_1E_2}\left|\mathcal{M}_{fi}\right|^2
 d\Phi^{n}(p_1,p_2;k_1,\ldots,k_n)
 \end{align}
@@ -414,7 +537,7 @@ where
   \label{eq:50}
     d \Phi^{(n)} (p_1,p_2; k_1, k_2,\dots, k_n) = \delta^{(4)}\left(p-\sum_j k_j\right)  \prod_{j=1}^n \frac{d^3 k_j}{(2\pi)^3 2 E_{\mathbf{k}_j}} \,.
 \end{align}
-
+We keep the diferential notation both for $d\sigma$, and $d\Phi$ until the last integration have been made.
 
 \subsection{2--to--2 cross section}
 \label{sec:2-2-cross}
@@ -535,7 +658,7 @@ The integral is easily performed using the identity
 \begin{align}
   \delta\left(f(z)\right)=\sum_n\frac{\delta(z-z_n)}{|f'(z_n)|}
 \end{align}
-where $z_n$ are the zeroes of $f(z)$. In this case, this $\delta$--function is a function of the integration variable $E_1'$, with only one zerp
+where $z_n$ are the zeroes of $f(z)$. In this case, this $\delta$--function is a function of the integration variable $E_1'$, with only one zero
 \begin{align}
    \delta\left(f(x)\right)=\frac{\delta(x-x_0)}{|f'(x_0)|}
 \end{align}
