@@ -24,33 +24,33 @@ In the Heisenberg picture, which we have so far been using, this program is stil
 This part is based in \cite{Mandl:1985bg}. 
 In the Schr\"odinger Picture (SP) the time dependence is carried by the states according to the Scr\"odinger equation 
 \begin{align}
-\label{eq:84}
+\label{eq:84f}
   i\frac{\partial}{\partial t}|a,t\rangle_{\text{S}}=  i\frac{d}{dt}|a,t\rangle_{\text{S}}=  {H}|a,t\rangle_{\text{S}}
 \end{align}
-With the solution given in Eq.~\eqref{eq:39}
+With the solution given in Eq.~\eqref{eq:39f}
 \begin{align}
-\label{eq:85}
+\label{eq:85f}
     |a,t\rangle_{\text{S}}=U(t,t_i)|a\rangle_{\text{S}}\,.
 \end{align}
-where $U$ is the unitary operator [see Eq.~\eqref{eq:40}]
+where $U$ is the unitary operator [see Eq.~\eqref{eq:40f}]
 \begin{align}
  U\equiv U(t,t_i)= e^{-i H(t-t_i)}\,.
 \end{align}
 Given the state $|a,t\rangle_{\text{S}}$ in the SP, in the Heisenberg picture (HP) we defined the state
 \begin{align}
-\label{eq:86}
+\label{eq:86f}
   |a\rangle_H=U^\dagger|a,t\rangle_{\text{S}}=|a\rangle_{\text{S}}
 \end{align}
 Si $O^{\text{S}}$ in an operator in the SP, the corresponding Heisenberg operator is defined as
 \begin{align}
-\label{eq:87}
+\label{eq:87f}
   O^{\text{H}}(t)=U^\dagger O^{\text{S}}U
 \end{align}
-Hence, the transformation from HP to SP is unitary. At $t=t_i$, states and operators in the two pictures are the same. We see from Eq.~\eqref{eq:86} that in the HP state vectors are constant in time, while from Eq.~\eqref{eq:87} the Heisenberg operators evolve with time. Is convenient to keep the temporal label in the Heisenberg states
+Hence, the transformation from HP to SP is unitary. At $t=t_i$, states and operators in the two pictures are the same. We see from Eq.~\eqref{eq:86f} that in the HP state vectors are constant in time, while from Eq.~\eqref{eq:87f} the Heisenberg operators evolve with time. Is convenient to keep the temporal label in the Heisenberg states
 \begin{align}
   |a\rangle_H=|a,t_i\rangle_H
 \end{align}
-Eq.~\eqref{eq:87} ensures the invariance of matrix elements and commutation relations:
+Eq.~\eqref{eq:87f} ensures the invariance of matrix elements and commutation relations:
 \begin{align}
   {}_{\text{S}}\langle b,t|\,O^{\text{S}}\,|a,t\rangle_{\text{S}}=  {}_{\text{S}}\langle b,t|\,U O^{\text{H}}(t) U^\dagger\,|a,t\rangle_{\text{S}}=
 {}_{\text{H}}\langle b,t_i|O^{\text{H}}(t)|a,t_i\rangle_{\text{H}}
@@ -60,7 +60,7 @@ Eq.~\eqref{eq:87} ensures the invariance of matrix elements and commutation rela
 \end{align}
 where $c$ is a constant.
 
-Differentiation of Eq. \eqref{eq:87} 
+Differentiation of Eq. \eqref{eq:87f} 
 \begin{align}
   \frac{d}{dt}O^{\text{H}}(t)=&\left(\frac{d}{dt}U^\dagger\right)O^{\text{S}}U+
 U^\dagger O^{\text{S}}\frac{d}{dt}U\nonumber\\
@@ -81,27 +81,27 @@ In quantum field theory $H_I$ will describe the interaction between two fields, 
 
 IP is related to the SP by the unitary transformation
 \begin{align}
-\label{eq:88}
+\label{eq:88f}
   U_i\equiv U_i(t,t_i)=e^{-i H_i(t-t_i)}\,,
 \end{align}
 in this way,
 \begin{align}
-\label{eq:89}
+\label{eq:89f}
   |a,t\rangle_{\text{I}}=U_0^\dagger|a,t\rangle_{\text{S}}\,,
 \end{align}
 and
 \begin{align}
-\label{eq:90}
+\label{eq:90f}
   O^{\text{I}}(t)=U^\dagger_0 O^{\text{S}}U_0\,.
 \end{align}
 Thus the relation between IP and SP is similar to that between HP and SP, but with the unitary transformation $U_0$ involving only the non--interacting Hamiltonian $H_0$. Note that both the vector states as the operators in the IP are time-dependent.
 
-Differentiating Eq.~\eqref{eq:90} gives the differential equation of motion operators in the IP:
+Differentiating Eq.~\eqref{eq:90f} gives the differential equation of motion operators in the IP:
 \begin{align}
   i\frac{d}{dt}O^{\text{I}}(t)=\left[O^{\text{I}}(t),H_0\right]
 \end{align}
 
-Substituting Eq.~\eqref{eq:89} into the Scr\"odinger Eq.~\eqref{eq:84}, one obtains the equation of motion of state vectors in the IP, If the system is described by a time-dependent state vector $|\Phi(t)\rangle$
+Substituting Eq.~\eqref{eq:89f} into the Scr\"odinger Eq.~\eqref{eq:84f}, one obtains the equation of motion of state vectors in the IP, If the system is described by a time-dependent state vector $|\Phi(t)\rangle$
 \begin{align}
   i\frac{d}{dt}|a,t\rangle_{\text{S}}=&  H^{\text{S}}|a,t\rangle_{\text{S}}\nonumber\\
   i\frac{d}{dt}\left(U_0|\Phi(t)\rangle\right)=&  H^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
@@ -112,28 +112,28 @@ Substituting Eq.~\eqref{eq:89} into the Scr\"odinger Eq.~\eqref{eq:84}, one obta
   i\frac{d}{dt}|\Phi(t)\rangle=& U_0 H_I^{\text{S}}U_0|\Phi(t)\rangle
 \end{align}
 \begin{align}
-\label{eq:91}
+\label{eq:91f}
   i\frac{d}{d t}|\Phi(t)\rangle_{\text{I}}=H^{\text{I}}_I\,|\Phi(t)\rangle_{\text{I}}\,,
 \end{align}
-where, as in Eq.~\eqref{eq:90}
+where, as in Eq.~\eqref{eq:90f}
 \begin{align}
-  \label{eq:92}
+  \label{eq:92f}
   H^{\text{I}}_I=e^{i H_0^{{\text{S}}}(t-t_i)}H^{\text{S}}_I e^{-i H_0^{{\text{S}}}(t-t_i)}
 \end{align}
 is the interaction Hamiltonian in the IP, with $H^{\text{S}}_I$ and $H^{\text{S}}_0$ being the interaction and free-field Hamiltonian in the SP. From now on we shall omit the labels I, used in the equations to distinguish the IP, as we shall be working exclusively in the IP in what follows.
 
-Eq. \eqref{eq:91} is a Scr\"odinger-like equation with the time dependent Hamiltonian $H_I(t)$. With the interaction switched off (i.e.  we put $H_I=0$), the state vector is constant in time. The interaction leads to the state $|\Phi(t)\rangle$ changing with time. Given that the system is in a state  $|i\rangle$ at an initial time $t=t_i$, i.e.
+Eq. \eqref{eq:91f} is a Scr\"odinger-like equation with the time dependent Hamiltonian $H_I(t)$. With the interaction switched off (i.e.  we put $H_I=0$), the state vector is constant in time. The interaction leads to the state $|\Phi(t)\rangle$ changing with time. Given that the system is in a state  $|i\rangle$ at an initial time $t=t_i$, i.e.
 \begin{align}
-\label{eq:93}
+\label{eq:93f}
   |\Phi(t_i)\rangle=|i\rangle\,,
 \end{align}
-the solution of Eq.~\eqref{eq:91} with this initial condition gives the state $|\Phi(t)\rangle$ of the system at any other time $t$. It follows from the Hermicity of the operator $H_I(t)$ that the time development of the state $|\Phi(t)\rangle$ according to Eq.~\eqref{eq:91} is a unitary transformation. Accordingly it preserves the normalization of states
+the solution of Eq.~\eqref{eq:91f} with this initial condition gives the state $|\Phi(t)\rangle$ of the system at any other time $t$. It follows from the Hermicity of the operator $H_I(t)$ that the time development of the state $|\Phi(t)\rangle$ according to Eq.~\eqref{eq:91f} is a unitary transformation. Accordingly it preserves the normalization of states
 \begin{align}
   \langle\Phi(t)|\Phi(t)\rangle=\text{const}.
 \end{align}
 and, more generally, the scalar product.
 
-Clearly the formalism which we are here developing is not appropriate for the description of bound states but it is particularly suitable for scattering processes. In a collision processes the state vector $|i\rangle$ will define an initial state, long before the scattering occurs ($t_i=-\infty$), by specifying a definite number of particles, with definite properties and far apart from each other so that they do not interact. (For example $|i\rangle$ would specify a definite number of electrons, and positrons with given momenta and spins). In the scattering process, the particles will come close together, collide (i.e interact) and fly apart gain. Eq.~\eqref{eq:91} determines the state $|\Phi(t)\rangle$ into which the initial state
+Clearly the formalism which we are here developing is not appropriate for the description of bound states but it is particularly suitable for scattering processes. In a collision processes the state vector $|i\rangle$ will define an initial state, long before the scattering occurs ($t_i=-\infty$), by specifying a definite number of particles, with definite properties and far apart from each other so that they do not interact. (For example $|i\rangle$ would specify a definite number of electrons, and positrons with given momenta and spins). In the scattering process, the particles will come close together, collide (i.e interact) and fly apart gain. Eq.~\eqref{eq:91f} determines the state $|\Phi(t)\rangle$ into which the initial state
 \begin{align}
   |\Phi(-\infty)\rangle=|i\rangle\,,
 \end{align}
@@ -150,7 +150,7 @@ The transition probability is given by
 \end{align}
 where $S_{f i}$ is the corresponding probability amplitude.
 
-In order to calculate the $S$--matrix we must solve Eq.~\eqref{eq:91} for the initial condition \eqref{eq:93}. These equations can be combined into the integral equation
+In order to calculate the $S$--matrix we must solve Eq.~\eqref{eq:91f} for the initial condition \eqref{eq:93f}. These equations can be combined into the integral equation
 \begin{align}
  d |\Phi(t)\rangle=&-i d t\,H_I(t)|\Phi(t)\rangle\nonumber\\
 \int_{|\Phi(-\infty)\rangle}^{|\Phi(t)\rangle} d |\Phi(t)\rangle=&-i \int_\infty^t d t_1\,H_I(t_1)|\Phi(t_1)\rangle\nonumber\\
@@ -158,7 +158,7 @@ In order to calculate the $S$--matrix we must solve Eq.~\eqref{eq:91} for the in
 \end{align}
 
 \begin{align}
-\label{eq:94}
+\label{eq:94f}
   |\Phi(t)\rangle=|i\rangle-i\int_{-\infty}^t d t_1\,H_I(t_1)|\Phi(t_1)\rangle\,.
 \end{align}
 In the limit $t\to\infty$
@@ -169,7 +169,7 @@ where
 \begin{align}
   S^{(0)}=1\,.
 \end{align}
-From Eq.~\eqref{eq:94} we can obtain $|\Phi(t_1)\rangle$ at next order:
+From Eq.~\eqref{eq:94f} we can obtain $|\Phi(t_1)\rangle$ at next order:
 \begin{align}
   |\Phi(t_1)\rangle=&|i\rangle-i\int_{-\infty}^{t_1} d t_2\,H_I(t_2)|\Phi(t_2)\rangle\,.
 \end{align}
@@ -177,7 +177,7 @@ From Eq.~\eqref{eq:94} we can obtain $|\Phi(t_1)\rangle$ at next order:
 
 This equation then can  be solved iteratively. If $H_I$ is small we can solve this equation by iteration
 \begin{align}
-\label{eq:95}
+\label{eq:95f}
   |\Phi(t)\rangle=|i\rangle+(-i)\int_{-\infty}^t d t_1 H_I(t_1)|i\rangle+(-i)^2\int_{-\infty}^t d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)|\Phi(t_2)\rangle\,.
 \end{align}
 In the limit $t\to\infty$
@@ -189,7 +189,7 @@ where
 \begin{align}
   S^{(1)}=(-i)\int_{-\infty}^\infty d t_1 H_I(t_1)\,.
 \end{align}
-The next order of Eq.~\eqref{eq:95} is
+The next order of Eq.~\eqref{eq:95f} is
 \begin{align}
   |\Phi(t)\rangle=&|i\rangle+(-i)\int_{-\infty}^t d t_1 H_I(t_1)|i\rangle+(-i)^2\int_{-\infty}^t d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)\nonumber\\
   &\times\left[|i\rangle+(-i)\int_{-\infty}^{t_2} d t_3 H_I(t_3)|i\rangle+(-i)^2\int_{-\infty}^{t_2} d t_3\int_{-\infty}^{t_3} d t_4\,H_I(t_3)H_I(t_4)|\Phi(t_4)\rangle\right]
@@ -258,7 +258,7 @@ The states as defined as
 \end{align}
 The scalar product of the atomic states requires an integration over the coordinate $r_e$
 \begin{align}
-  \label{eq:163}
+  \label{eq:163f}
    \langle a',n'|a,n\rangle=\int d^3r\,\psi_{a'}^*(r_e)\psi_a(r_e)\langle n'|n\rangle.
 \end{align}
 
@@ -289,7 +289,7 @@ where $\boldsymbol{\nabla}\cdot\mathbf{A}=0$ was used.
 
 With all of this we have a simplified formula
 \begin{align}
-\label{eq:164}
+\label{eq:164f}
   S_{ba}=&-i\int_{-\infty}^\infty dt\langle b,1_{n\lambda}|U_A^{-1}\left(-\frac{ie}{m}\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)
   U_A|a,0\rangle\nonumber\\
   S_{ba}=&-i\int_{-\infty}^\infty dt\langle b,1_{n\lambda}|U_A^{-1}\left(-\frac{ie}{m}\mathbf{A}(r_e,t)\cdot\boldsymbol{\nabla}_e\right)
@@ -312,7 +312,7 @@ Since
 =&\frac{1}{\sqrt{2\omega_{n}L^3}}\boldsymbol{\epsilon}^{\lambda}_{n}
   e^{i \omega_n t-\mathbf{k}_n\cdot\mathbf{r}_e}\,.
 \end{align}
-Inserting this expression into (\ref{eq:164}) gives
+Inserting this expression into (\ref{eq:164f}) gives
 %%% faltan detalles
 \begin{align}
   S_{ba}=-i2\pi \delta(E_b+\omega_n-E_a)\frac{1}{\sqrt{L^3}}M_{ba}\,, 
@@ -467,7 +467,7 @@ De desarrollo del langrangiano en las componentes de los campos, vemaos qu\'e t\
 
 The only term that contributes to the matrix element of the process is
 \begin{align}
-  \label{eq:97}
+  \label{eq:97f}
   -i h \int d^4x\overline{\psi}_-\psi_-\phi_+\,.
 \end{align}
 
@@ -477,14 +477,14 @@ The only term that contributes to the matrix element of the process is
   \caption{Feynman diagrams for $B\to e^+ e^-$} %noinstiki
   \label{fig:btoee} %noinstiki
 \end{figure} %noinstiki
-Let us define the one--particle states as in eq.~\eqref{eq:38}
+Let us define the one--particle states as in eq.~\eqref{eq:38f}
 
 \begin{align}
   | B(\mathbf{p})\rangle\equiv\sqrt{\frac{1}{V}}a^\dagger_{\mathbf{p}}|0\rangle 
 \end{align}
-From eq.~\eqref{eq:79} 
+From eq.~\eqref{eq:79f} 
 \begin{align}
-  \label{eq:77}
+  \label{eq:77f}
    | e^-(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
    | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,, 
 \end{align}
@@ -494,16 +494,16 @@ Using the commutation relations, our states are then normalized as
 \langle e^-(\mathbf{p},s)| e^-(\mathbf{p}',s')\rangle=&\frac{(2\pi)^3}{V}\delta_{s s'}\delta^3(\mathbf{p}-\mathbf{p}')\nonumber\\
 \langle e^+(\mathbf{p},s)| e^+(\mathbf{p}',s')\rangle=&\frac{(2\pi)^3}{V}\delta_{s s'}\delta^3(\mathbf{p}-\mathbf{p}')
 \end{align}
-As established in Sec.~\ref{sec:fock-space-real}, it is convenient to work in the discrete limit where \eqref{eq:26}
+As established in Sec.~\ref{sec:fock-space-real}, it is convenient to work in the discrete limit where \eqref{eq:26f}
 \begin{align}
    \delta^3(\mathbf{0})=\frac{V}{(2\pi)^3}\,.
 \end{align}
 
 Now we can write down the action of various field operators on different one particles states. 
-Using the Fourier decomposition  of the scalar field in eq.~\eqref{eq:37}, and taking into account that 
+Using the Fourier decomposition  of the scalar field in eq.~\eqref{eq:37f}, and taking into account that 
 $a_{\mathbf{p}}|0\rangle=0$, we have
 \begin{align}
-\label{eq:98}
+\label{eq:98f}
    \phi_+(x)|B(\mathbf{k})\rangle=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{p} }}
 \widehat{a}_{p} e^{-i p\cdot x }
 |B(\mathbf{k})\rangle\nonumber\\
@@ -514,7 +514,7 @@ $a_{\mathbf{p}}|0\rangle=0$, we have
 \, [\widehat{a}_{\mathbf{p}},\widehat{a}^\dagger_{\mathbf{k}}]|0\rangle\,.
 \end{align}
 %check normalization!
-By usinbg the commutation relations in eq.~\eqref{eq:32} we have
+By usinbg the commutation relations in eq.~\eqref{eq:32f} we have
 
 \begin{align}
 \phi_+(x)|B(\mathbf{k})\rangle  
@@ -529,7 +529,7 @@ Similarly, we have
 
 
 \begin{align}
-  \label{eq:99}
+  \label{eq:99f}
   \phi_+(x)|B(\mathbf{k})\rangle=&\frac{1}{\sqrt{2 \omega_k V}}e^{-i k\cdot x}|0\rangle\nonumber\\
   \psi_+(x)|e^-(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_p V}}u_s(\mathbf{p})e^{-i p\cdot x}|0\rangle\nonumber\\
   \overline{\psi}_+(x)|e^+(\mathbf{p}',s')\rangle=&\frac{1}{\sqrt{2 E_{p'} V}}\bar{v}_{s'}(\mathbf{p}')e^{-i p'\cdot x}|0\rangle\,,
@@ -539,17 +539,17 @@ where $\omega_k$ and $E_p$ represent the energies of the scalar and the electron
 
 Similarly, for the adjoint operators
 \begin{align}
-  \label{eq:100}
+  \label{eq:100f}
    \langle B(\mathbf{k})|\phi_-(x)=&\langle0|\frac{1}{\sqrt{2 \omega_k V}}e^{i k\cdot x}\nonumber\\
   \langle e^-(\mathbf{p},s)|\overline{\psi}_-(x)=&\langle0|\frac{1}{\sqrt{2 E_p V}}\bar{u}_s(\mathbf{p})e^{i p\cdot x}\nonumber\\
   \langle e^+(\mathbf{p}',s')|\psi_-(x)=&\langle0|\frac{1}{\sqrt{2 E_{p'} V}}v_{s'}(\mathbf{p}')e^{i p'\cdot x}\,,
 \end{align}
-In the lowest order the only term which contributes to the matrix element is the term shown in Eq.~\eqref{eq:97}
-The matrix element at first order in Eq.~\eqref{eq:96}, between the initial and the final state is then
+In the lowest order the only term which contributes to the matrix element is the term shown in Eq.~\eqref{eq:97f}
+The matrix element at first order in Eq.~\eqref{eq:96f}, between the initial and the final state is then
 \begin{align}
   S_{fi}^{(1)}=-i h \int d^4x\left\langle e^-(p)e^+(p')\left|\overline{\psi}_-\psi_-\phi_+\right|B(k)\right\rangle\,.
 \end{align}
-Using Eqs.~\eqref{eq:99}\eqref{eq:100}, we obtain
+Using Eqs.~\eqref{eq:99f}\eqref{eq:100f}, we obtain
 \begin{align}
   S_{fi}^{(1)}=&(-i h)\bar{u}_s(\mathbf{p}) v_{s'}(\mathbf{p}')
 \int d^4x\,e^{i(p+p'-k)\cdot x}\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\,.
@@ -563,7 +563,7 @@ we obtain
   S_{fi}^{(1)}=&\left[\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\right]
 (2\pi)^4\delta^4(k-p-p')\left[(-i h)\bar{u}_s(\mathbf{p}) v_{s'}(\mathbf{p}')\right]
 \end{align}
-Comparing with Eq.~\eqref{eq:46} we have therefore that the relativistic matrix element is
+Comparing with Eq.~\eqref{eq:46f} we have therefore that the relativistic matrix element is
 \begin{align}
   i\mathcal{M}_{fi}=(-i h)\bar{u}_s(\mathbf{p}) v_{s'}(\mathbf{p}')\,,
 \end{align}
@@ -603,7 +603,7 @@ In the above perturbation formalism the states $|i\rangle$ and $|f\rangle$ are, 
 \end{align}
 For example, at first order
 \begin{align}
-  \label{eq:96}
+  \label{eq:96f}
   S_{fi}^{(1)}=&\langle f|S^{(1)}|i\rangle\nonumber\\
   =&\langle f|-i\int d^4x_1\,\operatorname{T}\{\mathcal{H}_I(x_1)\}|i\rangle\nonumber\\
   =&-i\int d^4x_1\,\langle f|:\mathcal{H}_I(x_1):|i\rangle\,.
@@ -660,11 +660,11 @@ The Wick contraction can be written as:
 \end{align}
 while 
 \begin{align}
-\label{eq:156}
+\label{eq:156f}
   :(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:=&
 :\overline{\psi}^\alpha(x_1)\psi^\alpha(x_1)\overline{\psi}^\beta(x_2)\psi^\beta(x_2):
 \end{align}
-From the Fourier expansions in eqs.~\eqref{eq:83}, \eqref{eq:78} we have that $a_s^\dagger$ and $a_s$ are the creation and annihilation operators for particles. As we have only particles (and not antiparticles) in the initial and final states, the only non-zero contribution of the ordered product in eq.~\eqref{eq:156} must have the order $a^\dagger a^\dagger a\, a$. As $\psi_+$ and $\overline{\psi}_-$ are associated to $a$ and $a^\dagger$ respectively, the only non-zero contribution from the ordered fermion product is
+From the Fourier expansions in eqs.~\eqref{eq:83f}, \eqref{eq:78f} we have that $a_s^\dagger$ and $a_s$ are the creation and annihilation operators for particles. As we have only particles (and not antiparticles) in the initial and final states, the only non-zero contribution of the ordered product in eq.~\eqref{eq:156f} must have the order $a^\dagger a^\dagger a\, a$. As $\psi_+$ and $\overline{\psi}_-$ are associated to $a$ and $a^\dagger$ respectively, the only non-zero contribution from the ordered fermion product is
 %\left(\right)
 
 \begin{align}
@@ -780,7 +780,7 @@ the global coupling for $p\ll M_W^2$ is
 
 After the replacement $G_F/\sqrt{2}\equiv h^2/m^2$, we have
 \begin{align}
-  \label{eq:101}
+  \label{eq:101f}
   S^{(2)}_{fi}=i(2\pi)^4\delta^{4}\left(p_1+p_2-p'_1-p'_2\right)
   \frac{1}{\sqrt{2E_1 V}}\frac{1}{\sqrt{2E_2 V}}
   \frac{1}{\sqrt{2E_1' V}}\frac{1}{\sqrt{2E_2' V}}
@@ -805,23 +805,23 @@ Therefore we have
 \bar{u}_{\nu_e}(\mathbf{p}_2')\gamma^\mu(1-\gamma_5)u_e(\mathbf{p_1})
 \bar{u}_\mu(\mathbf{p}_1')\gamma_\mu(1-\gamma_5)u_{\nu_\mu}(\mathbf{p_2})
 \end{align}
-We now must sqaure the scattering amplitude, $\mathcal{M}$, and summing up over final spin states, and averaging over the intial spin states, as we did in Eq.~\eqref{eq:81}. The result that will be obtained in detail in Chapter~\ref{cha:three-body-decays} for the muon--decay is
+We now must sqaure the scattering amplitude, $\mathcal{M}$, and summing up over final spin states, and averaging over the intial spin states, as we did in Eq.~\eqref{eq:81f}. The result that will be obtained in detail in Chapter~\ref{cha:three-body-decays} for the muon--decay is
 \begin{align}
-  \label{eq:102}
+  \label{eq:102f}
   \overline{|\mathcal{M}|^2}=64\,G_F^2\,(p_1\cdot p_2)(p_1'\cdot p_2')
 \end{align}
 
-From Eq.~\eqref{eq:74}
+From Eq.~\eqref{eq:74f}
 \begin{align}
-  \label{eq:103}
+  \label{eq:103f}
   \frac{d\sigma}{d\Omega}=\frac{1}{64\pi^2s}\left(\frac{s-m_\mu^2}{s-m_e^2}\right)\overline{|\mathcal{M}|^2}
 \end{align}
 
-The center of mass (CM) frame is defined by the condition in Eq.~\eqref{eq:55}:
+The center of mass (CM) frame is defined by the condition in Eq.~\eqref{eq:55f}:
 \begin{align}
   \mathbf{p}_1+\mathbf{p}_2=0
 \end{align}
-The $\delta$--function in Eq.~\eqref{eq:101}
+The $\delta$--function in Eq.~\eqref{eq:101f}
 \begin{align}
   \delta^{(4)}(p_1+p_2-p_1'-p_2')=\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2-\mathbf{p}_1'-\mathbf{p}_2')
 \delta(E_1+E_2-E_1'-E_2')
@@ -829,7 +829,7 @@ The $\delta$--function in Eq.~\eqref{eq:101}
 
 implies
 \begin{align}
-  \label{eq:157}
+  \label{eq:157f}
   \mathbf{p}_1+\mathbf{p}_2-\mathbf{p}_1'-\mathbf{p}_2'=0 \overset{\text{CM}}{\Rightarrow}
   \begin{cases}
     \mathbf{p}_1=-\mathbf{p}_2\\
@@ -842,35 +842,35 @@ Moreover
 \end{align}
 In the CM frame
 \begin{align}
-\label{eq:104}
+\label{eq:104f}
 s=&\left(E_1+E_2\right)^2\nonumber\\
 =&\left(\sqrt{\mathbf{p}_1^2+m_1^2}+\sqrt{\mathbf{p}_2^2+m_2^2}\right)^2\nonumber\\
 =&\left(\sqrt{\mathbf{p}_1^2+m_e^2}+\sqrt{\mathbf{p}_1^2+m_{\nu_e}^2}\right)^2
 \end{align}
 Therefore
 \begin{align}
-  \label{eq:105}
+  \label{eq:105f}
   E_2=|\mathbf{p}_1|
 \end{align}
-We already have the expression for $|\mathbf{p}_1|$ as given in eq.~\eqref{eq:71}. In this case $m_2=0$, and $m_1=m_e$, so that
+We already have the expression for $|\mathbf{p}_1|$ as given in eq.~\eqref{eq:71f}. In this case $m_2=0$, and $m_1=m_e$, so that
 \begin{align}
-  \label{eq:158}
+  \label{eq:158f}
   |\mathbf{p}_1|=\frac{s-m_e^2}{2\sqrt{s}}
 \end{align}
 
-From \eqref{eq:105}
+From \eqref{eq:105f}
 \begin{align}
   \sqrt{s}=&E_1+E_2\nonumber\\
   =&E_1+|\mathbf{p}_1|
 \end{align}
 \begin{align}
-  \label{eq:106}
+  \label{eq:106f}
   E_1=&\sqrt{s}-|\mathbf{p}_1|\nonumber\\
   =&\sqrt{s}+\frac{-s+m_e^2}{2\sqrt{s}}\nonumber\\
   =&\frac{2s-s+m_e^2}{2\sqrt{s}}\nonumber\\
   =&\frac{s+m_e^2}{2\sqrt{s}}
 \end{align}
-Then, by using Eqs.~\eqref{eq:157}, \eqref{eq:105} and \eqref{eq:158}, and~\eqref{eq:106},  we have
+Then, by using Eqs.~\eqref{eq:157f}, \eqref{eq:105f} and \eqref{eq:158f}, and~\eqref{eq:106f},  we have
 \begin{align}
   p_1\cdot p_2=&E_1E_2-\mathbf{p}_1\cdot\mathbf{p}_2\nonumber\\
   =&E_1|\mathbf{p}_1|+\mathbf{p}_1^2\nonumber\\
@@ -892,7 +892,7 @@ As $p_2^2={p_2'}^2=0$, we have from $\delta$--function
 \begin{align}
   p_1'\cdot p_2'=\frac{1}{2}(s-m_\mu^2) 
 \end{align}
-Replacing back in Eq.~\eqref{eq:102} and then in Eq.~\eqref{eq:103} we have
+Replacing back in Eq.~\eqref{eq:102f} and then in Eq.~\eqref{eq:103f} we have
 \begin{align}
   \frac{d\sigma}{d\Omega}=\frac{1}{64\pi^2s}\left(\frac{s-m_\mu^2}{s-m_e^2}\right)
 64G_F^2\frac{1}{2}(s-m_e^2)\frac{1}{2}(s-m_\mu^2)
