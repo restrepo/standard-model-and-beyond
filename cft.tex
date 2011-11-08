@@ -733,7 +733,11 @@ or
 \begin{align}
   {\Lambda_\alpha}^\mu{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,.
 \end{align}
-So the inverse of $\Lambda$ is
+Since
+\begin{align}
+  {\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,
+\end{align}
+the inverse of $\Lambda$ is
 \begin{align}
   {\left(\Lambda^{-1}\right)^\mu}_\alpha={\Lambda_\alpha}^\mu\,,
 \end{align}
@@ -983,12 +987,12 @@ which is just the transformation obtained in eq.~\eqref{eq:167qft}.
 
 \subsection{Lorentz tranformation for fields}
 
-
 The scalar field is defined by their properties under Lorentz transformation. In section \ref{sec:teorema-de-noether} we study the behavior of one scalar field under a space--time translation. Under a general Lorentz transformation
 \begin{align}
 \label{eq:179qft}
   x^\mu\to {x'}^\mu={\Lambda^\mu}_\nu x^\nu\,,
 \end{align}
+Now we will study the effect of a Lorentz tranformation on the field $\phi(x)$, for example under a boost. By definition the scalar field does not change by the Lorentz transformation, the functional form is unaltered
 the scalar field still satisfy
 \begin{align}
   \phi(x)\to \phi'(x')=\phi(x)\,.
@@ -1175,13 +1179,13 @@ F^{ml}  &=\partial^m A^l-\partial^l A^m\nonumber\\
   &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi}){\partial_iA^j}\nonumber\\
   &=(\delta_{li}\delta_{mj}-\delta_{lj}\delta_{mi})\frac{\partial A^j}{\partial x^{i}}\nonumber\\
     &=\epsilon_{lmk}\epsilon_{ijk}\frac{\partial A^j}{\partial x^{i}}\nonumber\\
-&=\epsilon_{lmk}\left(\boldsymbol{\nabla}× \mathbf{A}\right)^k\nonumber\\
+&=\epsilon_{lmk}\left(\boldsymbol{\nabla}\timesm  \mathbf{A}\right)^k\nonumber\\
 &=\epsilon_{lmk}B^k\,,
 \end{align}
 where
 \begin{align}
 \label{eq:174qft}
-  \mathbf{B}&=\boldsymbol{\nabla}×\mathbf{A}\,.
+  \mathbf{B}&=\boldsymbol{\nabla}\timesm \mathbf{A}\,.
 \end{align}
 Then we have
 \begin{align}
@@ -1205,12 +1209,12 @@ Then we have
 
 From eqs.~\eqref{eq:173qft}, and \eqref{eq:174qft}
 \begin{align*}
-  \boldsymbol{\nabla}×\mathbf{E}&=-\boldsymbol{\nabla}×\boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}×\mathbf{A}\\
+  \boldsymbol{\nabla}\timesm \mathbf{E}&=-\boldsymbol{\nabla}\timesm \boldsymbol{\nabla}\phi-\frac{\partial}{\partial t}\boldsymbol{\nabla}\timesm \mathbf{A}\\
   &=-\frac{\partial\mathbf{B}}{\partial t},
 \end{align*}
 and
 \begin{align*}
-  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}×\mathbf{A})\\
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=\boldsymbol{\nabla}\cdot(\boldsymbol{\nabla}\timesm \mathbf{A})\\
   &=0
 \end{align*}
 which are just the homogeneous Maxwell equations. Therefore the expression
@@ -1301,11 +1305,11 @@ while for $\nu=k$ we have
 -\partial_iF^{ki}-\partial_0F^{k0}&=J^k\nonumber\\
   -\frac{\partial (\epsilon_{ikj}B^j)}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
 \epsilon_{ijk}\frac{\partial B^j}{\partial x^{i}}-\frac{\partial E^k}{\partial t}&=J^k\nonumber\\
-(\boldsymbol{\nabla}×\mathbf{B})^k-\frac{\partial E^k}{\partial t}&=J^k.\,.
+(\boldsymbol{\nabla}\timesm \mathbf{B})^k-\frac{\partial E^k}{\partial t}&=J^k.\,.
 \end{align}
 and therefore
 \begin{align}
-  \boldsymbol{\nabla}×\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
+  \boldsymbol{\nabla}\timesm \mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
 \end{align}
 In this way the expression
 \begin{align}
@@ -1314,9 +1318,9 @@ In this way the expression
 is completely equivalent to the full set of Maxwell equations:
 \begin{align}
   \label{eq:hom_m_eq}
-  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}×\mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0\\
+  \boldsymbol{\nabla}\cdot\mathbf{B}&=0,&\boldsymbol{\nabla}\timesm \mathbf{E}+\frac{\partial\mathbf{B}}{\partial t}&=0\\
   \label{eq:inhom_m_eq}
-  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}×\mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
+  \boldsymbol{\nabla}\cdot\mathbf{E}&=\rho,&\boldsymbol{\nabla}\timesm \mathbf{B}-\frac{\partial\mathbf{E}}{\partial t}&=\mathbf{J}\,.
 \end{align}
 
 \subsection{Energía del campo electromagnético}
@@ -1400,14 +1404,14 @@ campo, en ausencia de corrientes, corresponde al vector de Pointing:
   =&-F^{0j}F_{ij}-F^{0j}\partial_j A_i\nonumber\\
   =&-F^{0j}F^{ij}-\partial_j (F^{0j}A_i)+(\partial_jF^{0j}) A_i\nonumber\\
   =&E^{j}\epsilon_{jik}B^k+\partial_j (E^jA_i)+(J^0) A_i\nonumber\\
-  =&-(\mathbf{E}×\mathbf{B})^i-\boldsymbol{\nabla}\cdot(A^i\mathbf{E})-\rho A^i\,
+  =&-(\mathbf{E}\timesm \mathbf{B})^i-\boldsymbol{\nabla}\cdot(A^i\mathbf{E})-\rho A^i\,
 \end{align}
 En ausencia de cargas y corrientes
 
 \begin{align}
- P^i=-\int_Vd^3x\,T_{i}^0&=\int_Vd^3x\,(\mathbf{E}×\mathbf{B})^i+\int_Vd^3x\,\boldsymbol{\nabla}\cdot(A^i\mathbf{E})\nonumber\\
+ P^i=-\int_Vd^3x\,T_{i}^0&=\int_Vd^3x\,(\mathbf{E}\timesm \mathbf{B})^i+\int_Vd^3x\,\boldsymbol{\nabla}\cdot(A^i\mathbf{E})\nonumber\\
  \label{eq:19qft}
- \mathbf{P}&=\int_Vd^3x\,(\mathbf{E}×\mathbf{B})\,.
+ \mathbf{P}&=\int_Vd^3x\,(\mathbf{E}\timesm \mathbf{B})\,.
 \end{align}
 
 \section{Scrödinger Equation in presence of the electromagnetic field}
@@ -1670,8 +1674,8 @@ Ya que
 \end{equation}
 \begin{equation}
   \label{eq:btransf}
-  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}×\mathbf{A}+
-  \underbrace{\boldsymbol{\nabla}×\boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
+  \mathbf{B}\to\mathbf{B}'= \boldsymbol{\nabla}\timesm \mathbf{A}+
+  \underbrace{\boldsymbol{\nabla}\timesm \boldsymbol{\nabla}\chi}_{\displaystyle =0}=\mathbf{B}
 \end{equation}
 %to_en:This imply that different observers in different space points, using different calibrations for their measures, get the same fields. 
 Esto implica que diferentes observadores en diferentes puntos del espacio, usando diferentes calibraciones para sus medidas, obtienen los mismos campos. Las  ecs.~\eqref{eq:phia_transf}, corresponden a \emph{transformaciones gauge locales}
@@ -1824,7 +1828,7 @@ Aunque hemos hecho el análisis de la ecuación de Proca permitiendo un
 término de masa para el fotón, las implicaciones experimentales de una
 teoría de este tipo dan lugar a restricciones muy fuertes sobre la
 masa del fotón\cite{Goldhaber:1971mr}. El límite actual sobre la masa
-del fotón es $m\lt 6×10^{-17}\,$eV ($1.1×10^{-52}\,$Kg)
+del fotón es $m\lt 6\timesm 10^{-17}\,$eV ($1.1\timesm 10^{-52}\,$Kg)
 \cite{Yao:2006px}. Debido al principio gauge local, desde el punto
 teórico se espera que la masa del fotón sea exactamente cero. En
 general, los campos vectoriales puede ser generados a partir de otras
@@ -2496,13 +2500,13 @@ In \cite{Peskin}:
 
 For our present problem, we need to know the commutation relations of the generators of the group of Lorentz transformations. For the rotation group, one can work the commutation relations by writing the generators as differential operators; from the expression
 \begin{align}
-  \mathbf{J}=\mathbf{x}×\mathbf{p}=\mathbf{x}×(-i\boldsymbol{\nabla})\,,
+  \mathbf{J}=\mathbf{x}\timesm \mathbf{p}=\mathbf{x}\timesm (-i\boldsymbol{\nabla})\,,
 \end{align}
 the angular momentum commutation relations \eqref{eq:rotgr} follow straightforwardly. 
 \end{quote}
 The last equation can be written as (summation of repeated indices)
 \begin{align}
-  J^k=\left[\mathbf{x}×(-i\boldsymbol{\nabla})\right]^k=&
+  J^k=\left[\mathbf{x}\timesm (-i\boldsymbol{\nabla})\right]^k=&
 -i\epsilon_{ijk}x^i\partial_j=i\epsilon_{ijk}x^i\partial^j
 \end{align}
 \begin{align}
@@ -2595,7 +2599,7 @@ In general we define the six independent Lorentz--Group parameters:
   \omega_{0i}=-\omega_{i0}\equiv&\xi_i \nonumber\\
   \omega_{12}=-\omega_{21}\equiv&\theta_3 &   \omega_{32}=-\omega_{23}\equiv&-\theta_2 &   \omega_{13}=-\omega_{31}\equiv&\theta_1\,.
 \end{align}
-The $4×4$ matrices
+The $4\timesm 4$ matrices
 \begin{align}
   \left(J^{\mu\nu}\right)_{\alpha\beta}=i\left({\delta^\mu}_\alpha{\delta^\nu}_\beta-{\delta^\nu}_\beta{\delta^\mu}_\alpha\right)\,,
 \end{align}
@@ -2733,11 +2737,11 @@ para alguna matriz unitaria $U$, entonces $\tilde{\gamma_\mu}$ corresponde a otr
   &=2g^{\mu\nu}UU^\dagger\nonumber\\
   &=2g^{\mu\nu}.
 \end{align}
-Claramente, la condición en ec.~(\ref{eq:112qft}) se mantiene para la nueva representación. Como $\gamma_0$ es hermítica, siempre es posible escoger una representación tal que $\tilde{\gamma_0}\equiv U\gamma_0U^\dagger$ sea diagonal. Como $\gamma_0^2=1$, sus entradas en la diagonal deben ser $±1$, y como $\operatorname{Tr}\tilde\gamma_0=0$, debe existir igual número de $+1$ que de $-1$. Por lo tanto la dimensión de $\gamma_0$ (y de $\gamma_\mu$) debe ser par: $2,4,\ldots$. Para un fermion sin masa
+Claramente, la condición en ec.~(\ref{eq:112qft}) se mantiene para la nueva representación. Como $\gamma_0$ es hermítica, siempre es posible escoger una representación tal que $\tilde{\gamma_0}\equiv U\gamma_0U^\dagger$ sea diagonal. Como $\gamma_0^2=1$, sus entradas en la diagonal deben ser $\pmm1$, y como $\operatorname{Tr}\tilde\gamma_0=0$, debe existir igual número de $+1$ que de $-1$. Por lo tanto la dimensión de $\gamma_0$ (y de $\gamma_\mu$) debe ser par: $2,4,\ldots$. Para un fermion sin masa
 \begin{align}
   \mathcal{L}=i\psi^\dagger\gamma^0\gamma^0\partial_0\psi+i\psi^\dagger\gamma^0\gamma^i\partial_i\psi=i\psi^\dagger\partial_0\psi+i\psi^\dagger\alpha^i\partial_i\psi\,,
 \end{align}
-solo se requieren tres matrices $2×2$ que satisfacen
+solo se requieren tres matrices $2\timesm 2$ que satisfacen
 \begin{align}
   \left\{\alpha^i,\alpha^j\right\} =2\delta^{ij}\,,
 \end{align}
@@ -2755,7 +2759,7 @@ Como $\tilde\gamma^i=\gamma^0\gamma^i\gamma^0={\gamma^i}^\dagger=-\gamma^i$, pod
 
 \begin{inprogress}
   \subsection{Dirac representation}
-The set of $4×4$ matrices
+The set of $4\timesm 4$ matrices
 \begin{align}
   S^{\mu\nu}=\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]\,,
 \end{align}
@@ -2784,7 +2788,7 @@ so that
 \subsection{Dirac's Lagrangian}
 \label{sec:diracs-lagrangian}
 
-Para una matriz de $n$ dimensiones existen $n^2$ matrices hermíticas (o anti--hermíticas) independientes. Si se sustrae la identidad quedan $n^2-1$ matrices hermíticas (o anti--hermíticas) independientes de traza nula. En el caso $n=2$ corresponden a las 3 matrices de Pauli. En el caso de la ecuación de Dirac se requieren 4 matrices independientes, por lo tanto deben ser matrices $4×4$. En efecto para $n=4$ existen 15 matrices independientes de traza nula dentro de las cuales podemos acomodar sin problemas las 4 $\gamma^\mu$. 
+Para una matriz de $n$ dimensiones existen $n^2$ matrices hermíticas (o anti--hermíticas) independientes. Si se sustrae la identidad quedan $n^2-1$ matrices hermíticas (o anti--hermíticas) independientes de traza nula. En el caso $n=2$ corresponden a las 3 matrices de Pauli. En el caso de la ecuación de Dirac se requieren 4 matrices independientes, por lo tanto deben ser matrices $4\timesm 4$. En efecto para $n=4$ existen 15 matrices independientes de traza nula dentro de las cuales podemos acomodar sin problemas las 4 $\gamma^\mu$. 
 
 De \cite{Gross:1993}:
 \begin{quote}
@@ -2792,7 +2796,7 @@ De \cite{Gross:1993}:
   \begin{align}
     \overline{\psi}(x)\Gamma\psi(x)\,,
   \end{align}
-where $\Gamma$ is a $4×4$ complex matrix. The most general such matrix can always be expanded in terms of 16 independent $4×4$ matrices multiplied by complex coefficients. In short the matrices $\Gamma$ can be regarded as a \emph{16--dimensional complex vector space} spanned by 16 matrices.
+where $\Gamma$ is a $4\timesm 4$ complex matrix. The most general such matrix can always be expanded in terms of 16 independent $4\timesm 4$ matrices multiplied by complex coefficients. In short the matrices $\Gamma$ can be regarded as a \emph{16--dimensional complex vector space} spanned by 16 matrices.
 
 It is convenient to choose the 16 matrices, $\Gamma_i$, so that they have well defined transformation properties under the Lorentz Transformations. Since the $\gamma^\mu$'s have such properties, we are lead to choose the following 16 matrices for this basis:
 \end{quote}
@@ -3027,7 +3031,7 @@ donde
   \mathcal{D}_\mu\Psi\to \left(\mathcal{D}_\mu\Psi\right)'&
   =U(x)\mathcal{D}_\mu\Psi,
 \end{align}
-con la matriz $3×3$
+con la matriz $3\timesm 3$
 \begin{align}
   U(x)=\exp\left[i\theta_a(x)\frac{\lambda^a}{2}\right]\,,
 \end{align}
@@ -3035,7 +3039,7 @@ y
 \begin{equation}
   \mathcal{D}_\mu=\partial_\mu-i g_s\frac{\lambda_a}{2}G_\mu^a\equiv\partial_\mu-i g_s {G}_\mu
 \end{equation}
-donde hemos definido la matriz $3×3$  $G_\mu$, como
+donde hemos definido la matriz $3\timesm 3$  $G_\mu$, como
 \begin{equation}
   \left({G}_\mu\right)_{\alpha\beta}=\left(\frac{\lambda_a}{2}\right)_{\alpha\beta}G_\mu^a
 \end{equation}
@@ -3097,7 +3101,7 @@ que se reduce al caso Abeliano cuando las constates de estructura son cero. Como
 
 
 
-Similarmente, definiendo la matriz $3×3$, 
+Similarmente, definiendo la matriz $3\timesm 3$, 
 \begin{align}
   \label{eq:gmunu}
   {{G}}^{\mu\nu}&=\frac{i}{g_s}[\mathcal{D}^\mu,\mathcal{D}^\nu]\equiv\frac{\lambda_a}{2}G^{\mu\nu}_a,
@@ -3384,16 +3388,16 @@ Toda el algebra de $SU(3)$ se puede escribir en notación vectorial en términos
 
 Definiendo el producto vectorial de $SU(3)$ como
 \begin{align}
-  \left(\mathbf{A}×\mathbf{B}\right)_a=f_{abc}A^b B^c\,,
+  \left(\mathbf{A}\timesm \mathbf{B}\right)_a=f_{abc}A^b B^c\,,
 \end{align}
 si $\mathbf{G}^\mu$ es un vector en el espacio $SU(3)$ con las 8 componentes $G^\mu_a$, entonces podemos escribir \eqref{eq:gmutrinf} como
 \begin{align}
-  \mathbf{G}_\mu\to\mathbf{G}'_\mu=\mathbf{G}_\mu+\frac{1}{g_s}\partial_\mu\boldsymbol{\theta}+\mathbf{G}_\mu×\boldsymbol{\theta}\,.
+  \mathbf{G}_\mu\to\mathbf{G}'_\mu=\mathbf{G}_\mu+\frac{1}{g_s}\partial_\mu\boldsymbol{\theta}+\mathbf{G}_\mu\timesm \boldsymbol{\theta}\,.
 \end{align}
 
 Podemos escribir también la ec.~\eqref{eq:258qft} en términos de vectores en el espacio $SU(3)$ como:
 \begin{align}
-  \mathbf{G}^{\mu\nu}=\partial^\mu \mathbf{G}^\nu-\partial^\nu \mathbf{G}^\mu+g_s \mathbf{G}^\mu× \mathbf{G}^\nu\,,
+  \mathbf{G}^{\mu\nu}=\partial^\mu \mathbf{G}^\nu-\partial^\nu \mathbf{G}^\mu+g_s \mathbf{G}^\mu\timesm  \mathbf{G}^\nu\,,
 \end{align}
 donde $\mathbf{G}^{\mu\nu}$ es el vector en el espacio $SU(3)$ con las 8 componentes $G^{\mu\nu}_a$.
 
@@ -3401,14 +3405,14 @@ donde $\mathbf{G}^{\mu\nu}$ es el vector en el espacio $SU(3)$ con las 8 compone
 
 De igual forma, podemos escribir \eqref{eq:Gmuael} en forma vectorial como
 \begin{align}
-  \partial_\mu\mathbf{G}^{\mu\nu}+g_s \mathbf{G}_\mu×\mathbf{G}^{\mu\nu}=\mathbf{J}^\nu
+  \partial_\mu\mathbf{G}^{\mu\nu}+g_s \mathbf{G}_\mu\timesm \mathbf{G}^{\mu\nu}=\mathbf{J}^\nu
 \end{align}
 y la corriente conservada como
 \begin{align}
- \mathbf{j}^\nu =&-g_s\left[-\mathbf{G}^{\mu\nu}×\mathbf{G}_\nu^b+\bar{\Psi}\gamma^\nu\frac{\boldsymbol{\lambda}}{2}\Psi  \right]\,.
+ \mathbf{j}^\nu =&-g_s\left[-\mathbf{G}^{\mu\nu}\timesm \mathbf{G}_\nu^b+\bar{\Psi}\gamma^\nu\frac{\boldsymbol{\lambda}}{2}\Psi  \right]\,.
 \end{align}
 
-Como ${G}^{\mu\nu}$ es una matrix $8×8$, su derivada covariante debe estar en la representación adjunta de $SU(3)$
+Como ${G}^{\mu\nu}$ es una matrix $8\timesm 8$, su derivada covariante debe estar en la representación adjunta de $SU(3)$
 \begin{align}
   \left(\Lambda^a\right)_{bc}=-i\left(f^a\right)_{bc}\,,
 \end{align}
@@ -3430,12 +3434,12 @@ En componentes
 Aplicada sobre la componente $G^{\mu\nu}_b$, queda
 \begin{align}
  \left(\mathcal{D}_\mu\right)_{ab}G^{\mu\nu}_b  =&\delta_{ab}\partial_\mu G^{\mu\nu}_b+g_s f_{acb}G_\mu^cG^{\mu\nu}_b\nonumber\\
- \left(\mathcal{D}_\mu\right)_{ab}G^{\mu\nu}_b  =&\partial_\mu G^{\mu\nu}_a+g_s \left(\mathbf{G}_\mu×\mathbf{G}^{\mu\nu}\right)_a\nonumber\\
- \left(\mathcal{D}_\mu\mathbf{G}^{\mu\nu}\right)_a  =&\partial_\mu\mathbf{G}^{\mu\nu}_a+g_s \left(\mathbf{G}_\mu×\mathbf{G}^{\mu\nu}\right)_a\,,
+ \left(\mathcal{D}_\mu\right)_{ab}G^{\mu\nu}_b  =&\partial_\mu G^{\mu\nu}_a+g_s \left(\mathbf{G}_\mu\timesm \mathbf{G}^{\mu\nu}\right)_a\nonumber\\
+ \left(\mathcal{D}_\mu\mathbf{G}^{\mu\nu}\right)_a  =&\partial_\mu\mathbf{G}^{\mu\nu}_a+g_s \left(\mathbf{G}_\mu\timesm \mathbf{G}^{\mu\nu}\right)_a\,,
 \end{align}
 podemos escribir la derivada covariante de $\mathbf{G}^{\mu\nu}=\left(G^{\mu\nu}_1,\cdots,G^{\mu\nu}_8\right)$ como
 \begin{align}
-  \mathcal{D}_\mu \mathbf{G}^{\mu\nu}=&\partial_\mu\mathbf{G}^{\mu\nu}+g_s \mathbf{G}_\mu×\mathbf{G}^{\mu\nu}\,.
+  \mathcal{D}_\mu \mathbf{G}^{\mu\nu}=&\partial_\mu\mathbf{G}^{\mu\nu}+g_s \mathbf{G}_\mu\timesm \mathbf{G}^{\mu\nu}\,.
 \end{align}
 
 
@@ -3459,22 +3463,22 @@ podemos realizar los mismos pasos que en \eqref{eq:Gmuinv}. El resultado es
 \end{align}
 Note que en el caso Abeliano $f_{abc}=0$, el tensor correspondiente es invariante gauge, como ocurre el caso electromagnético. En notación de vectores de $SU(3)$:
 \begin{align}
-  \mathbf{G}_{\mu\nu}\to\mathbf{G}'_{\mu\nu}\approx\mathbf{G}_{\mu\nu}+\mathbf{G}_{\mu\nu}×\boldsymbol{\theta}\,.
+  \mathbf{G}_{\mu\nu}\to\mathbf{G}'_{\mu\nu}\approx\mathbf{G}_{\mu\nu}+\mathbf{G}_{\mu\nu}\timesm \boldsymbol{\theta}\,.
 \end{align}
 Utilizando la propiedad cíclica del triple producto escalar
 \begin{align}
-  \mathbf{A}\cdot(\mathbf{B}×\mathbf{C})=\mathbf{B}\cdot(\mathbf{C}×\mathbf{A})=\mathbf{C}\cdot(\mathbf{A}×\mathbf{B})\,,
+  \mathbf{A}\cdot(\mathbf{B}\timesm \mathbf{C})=\mathbf{B}\cdot(\mathbf{C}\timesm \mathbf{A})=\mathbf{C}\cdot(\mathbf{A}\timesm \mathbf{B})\,,
 \end{align}
 podemos construir el invariante
 
 \begin{align}
   G^{\mu\nu}_aG^a_{\mu\nu}=\mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}\to{\mathbf{G}'}^{\mu\nu}\cdot\mathbf{G}'_{\mu\nu}\approx&
-  \mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}+\mathbf{G}^{\mu\nu}\cdot\left(\mathbf{G}_{\mu\nu}×\boldsymbol{\theta}\right)
-+\left(\mathbf{G}^{\mu\nu}×\boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}\nonumber\\
-=&\mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}+\mathbf{G}_{\mu\nu}\cdot\left(\boldsymbol{\theta}×\mathbf{G}^{\mu\nu}\right)
-+\left(\mathbf{G}^{\mu\nu}×\boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}\nonumber\\
-=& \mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}-\left(\mathbf{G}^{\mu\nu}×\boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}
-+\left(\mathbf{G}^{\mu\nu}×\boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}\nonumber\\
+  \mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}+\mathbf{G}^{\mu\nu}\cdot\left(\mathbf{G}_{\mu\nu}\timesm \boldsymbol{\theta}\right)
++\left(\mathbf{G}^{\mu\nu}\timesm \boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}\nonumber\\
+=&\mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}+\mathbf{G}_{\mu\nu}\cdot\left(\boldsymbol{\theta}\timesm \mathbf{G}^{\mu\nu}\right)
++\left(\mathbf{G}^{\mu\nu}\timesm \boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}\nonumber\\
+=& \mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}-\left(\mathbf{G}^{\mu\nu}\timesm \boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}
++\left(\mathbf{G}^{\mu\nu}\timesm \boldsymbol{\theta}\right)\cdot\mathbf{G}_{\mu\nu}\nonumber\\
 =&\mathbf{G}^{\mu\nu}\cdot\mathbf{G}_{\mu\nu}\,.
 \end{align}
 
@@ -3493,7 +3497,7 @@ Da lugar la ecuaciones de Maxwell pero con la derivada normal reemplzada por la 
 \end{align}
 donde
 \begin{align}
-    \mathcal{D}_\mu \mathbf{G}^{\mu\nu}=&\partial_\mu\mathbf{G}^{\mu\nu}+g_s \mathbf{G}_\mu×\mathbf{G}^{\mu\nu}\,.
+    \mathcal{D}_\mu \mathbf{G}^{\mu\nu}=&\partial_\mu\mathbf{G}^{\mu\nu}+g_s \mathbf{G}_\mu\timesm \mathbf{G}^{\mu\nu}\,.
 \end{align}
 Note que en el caso Abeliano, $U(1)$, la derivada covariante del tensor de campo se reduce a la derivada normal de dicho tensor. El término extra en la derivada covariante da lugar a las autointeracciones de los campos gauge.
 
@@ -3534,7 +3538,7 @@ Las matrices $P_{L,R}$ tienen las propiedades
 \end{align}
 Usando la ec.~(\ref{eq:218qft})
 \begin{align}
-  P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1±\gamma_5}{2}=\gamma^\mu P_{R,L}
+  P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1\pmm\gamma_5}{2}=\gamma^\mu P_{R,L}
 \end{align}
 Para escribir el Lagrangiano en término de los nuevos $\psi_{L,R}$ debemos tener en cuenta que
 \begin{align}
@@ -3555,7 +3559,7 @@ En términos de espinores de izquierdos y derechos de cuatro componentes la tran
   t&\to t&\mathbf{x}&\to -\mathbf{x}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\nonumber\\
   \partial_0&\to \partial_0&\boldsymbol{\nabla}&\to -\boldsymbol{\nabla}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\,.
 \end{align}
-Además $\mathbf{L}=\mathbf{r}×\mathbf{p}\to(-\mathbf{r})×(-\mathbf{p})=\mathbf{L}$, y como $\gamma^\mu$ esta asociado al momento angular intrínsico, entonces también $\gamma^\mu\to\gamma^\mu$
+Además $\mathbf{L}=\mathbf{r}\timesm \mathbf{p}\to(-\mathbf{r})\timesm (-\mathbf{p})=\mathbf{L}$, y como $\gamma^\mu$ esta asociado al momento angular intrínsico, entonces también $\gamma^\mu\to\gamma^\mu$
 
 
 Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio de argumento en los campos que desaparece en la integral de la Acción) y la representación de paridad \eqref{eq:parityrep}:
@@ -3658,13 +3662,13 @@ Para analizar cuantitativamente el espectro de partículas es necesario expandir
 con extremos $\phi_{\text{max}}=0$, y 
 \begin{equation}
   \label{eq:90qft}
-  \phi_{\text{min}}\equiv\langle\phi\rangle\equiv v=±\sqrt{\frac{-\mu^2}{\lambda}}.
+  \phi_{\text{min}}\equiv\langle\phi\rangle\equiv v=\pmm\sqrt{\frac{-\mu^2}{\lambda}}.
 \end{equation}
 De hecho 
 \begin{equation}
   \frac{\partial^2V}{\partial\phi^2}=\mu^2+3\lambda\phi^2.
 \end{equation}
-$\phi=0$ corresponde a un máximo, mientras que la segunda derivada para $\phi=±\sqrt{-\mu^2/\lambda}$ es $-2\mu^2\gt 0$ y corresponden a los mínimos. Expandiendo el campo alrededor del mínimo
+$\phi=0$ corresponde a un máximo, mientras que la segunda derivada para $\phi=\pmm\sqrt{-\mu^2/\lambda}$ es $-2\mu^2\gt 0$ y corresponden a los mínimos. Expandiendo el campo alrededor del mínimo
 \begin{equation}
   \phi(x)=H(x)+v
 \end{equation}
@@ -3735,7 +3739,7 @@ que es invariante bajo una simetría $O(N)$
 \begin{align}
   \phi^i\to{\phi'}^i=R^{ij}\phi^j\,,
 \end{align}
-para cualquier matriz $N× N$ ortogonal $R$. El análisis para $N=2$ da lugar a un bosón de Goldstone. El anális para $N>2$ es el mismo y por cada campo real que se introduzca aparece un nuevo bosón de Goldstone \cite{Peskin}:
+para cualquier matriz $N\timesm  N$ ortogonal $R$. El análisis para $N=2$ da lugar a un bosón de Goldstone. El anális para $N>2$ es el mismo y por cada campo real que se introduzca aparece un nuevo bosón de Goldstone \cite{Peskin}:
 \begin{quote}
   [\ldots] there are not continuous symmetries for $N=1$, while for $N=2$ there is a single direction of rotation. A rotation in $N$ dimensions can be in any one of $N(N-1)$ planes, so the $O(N)$--symmetric theory has $N(N-1)/2$ continuous symmetries. After spontaneous symmetry breaking there are $(N-1)(N-2)/2$  remaining symmetries corresponding to rotations of the $(N-1)$ [non massive] fields. The number of \emph{broken} symmetries is the difference, $N-1$.
 \end{quote}
@@ -3853,10 +3857,10 @@ i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu\partial_\mu 
 \end{align}
 
 
-\subsection*{Simetría global $SU(3)_c× SU(2)_L× U(1)_Y$}
+\subsection*{Simetría global $SU(3)_c\timesm  SU(2)_L\timesm  U(1)_Y$}
 \label{sec:simetr-glob-su2_l}
 
-En el contexto de las interacciones débiles un $e_L$ es completamente equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser invariante bajo una transformación $SU(2)_L$ de esos campos. La diferencia entre ellos son sus respectivas cargas electricas y sus masas. Asumiendo que ambos campos tienen una misma hipercarga, asociada a una nueva simetría Abeliana $U(1)_Y$, podríamos esperar que la corriente electromagnética apropiada pueda obtenerse a partir del Grupo semisimple $SU(2)_L× U(1)_Y$. Además las respectivas masas se podrían obtener a partir del mecanismo de Higgs. 
+En el contexto de las interacciones débiles un $e_L$ es completamente equivalente a un campo $\nu_L$. Es decir, el Lagrangiano debe ser invariante bajo una transformación $SU(2)_L$ de esos campos. La diferencia entre ellos son sus respectivas cargas electricas y sus masas. Asumiendo que ambos campos tienen una misma hipercarga, asociada a una nueva simetría Abeliana $U(1)_Y$, podríamos esperar que la corriente electromagnética apropiada pueda obtenerse a partir del Grupo semisimple $SU(2)_L\timesm  U(1)_Y$. Además las respectivas masas se podrían obtener a partir del mecanismo de Higgs. 
 
 La simetría $SU(2)_L$ entre las partes izquierdas del neutrino y el electrón, y entre las partes izquierdas de los quarks up y down, se establece  definiendo los dobletes:
   \begin{align}
@@ -3901,7 +3905,7 @@ Claramente el término de masa $m_e$ en la ec.~(\ref{eq:261qft}) no es invariant
 \end{align}
 
 
-\subsection*{Simetría gauge local $SU(3)_c× SU(2)_L× U(1)_Y$}
+\subsection*{Simetría gauge local $SU(3)_c\timesm  SU(2)_L\timesm  U(1)_Y$}
 
 Para obtener la interacciones del modelo estándar, reemplazamos las derivadas normales por derivadas covariantes.
 
@@ -3968,7 +3972,7 @@ Bajo una transformación gauge local las derivadas covariantes de los campos (y 
 \end{align}
 donde $Q_{e_R}=-1$, etc, son las cargas eléctricas asociadas a los campos.
 
-Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $\overline{L}\Phi e_R$ y $\overline{Q}\Phi d_R$ son invariantes bajo transformaciones $SU(3)_c× SU(2)_L× U(1)_Y$ si
+Para los campos del Lagrangiano, debemos asegurarnos de que todos los términos invariantes gauge locales y renormalizables sean considerados. De hecho un término de interacción entre fermiones y el campo escalar, correspondiente a una interacción de Yukawa: $\overline{L}\Phi e_R$ y $\overline{Q}\Phi d_R$ son invariantes bajo transformaciones $SU(3)_c\timesm  SU(2)_L\timesm  U(1)_Y$ si
 \begin{align*}
   -Y_L+Y_\Phi+Q_{e_R}=&0\\
   -Y_Q+Y_\Phi+Q_{d_R}=&0\\
@@ -4024,10 +4028,10 @@ se reduce a
 \end{align}
 
 \end{frame}
-\subsection{Spontaneous symmetry breaking in $SU(3)_c× SU(2)_L× U(1)_Y$}
+\subsection{Spontaneous symmetry breaking in $SU(3)_c\timesm  SU(2)_L\timesm  U(1)_Y$}
 
 \begin{frame}[fragile,allowframebreaks]
-Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar pero con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L× U(1)_Y$
+Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar pero con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\timesm  U(1)_Y$
 \begin{align}
 \label{eq:92qft}
   \Phi=&e^{i\eta_jT^j}
@@ -4052,9 +4056,9 @@ Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhig
     \frac{1}{\sqrt{2}}(H(x)+v-iG^0)
   \end{pmatrix}.\nonumber
 \end{align}
-Para $SU(2)_L× U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
+Para $SU(2)_L\timesm  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
 \begin{equation}
-  SU(2)× U(1)_Y\overset{\langle\Phi\rangle}{\longrightarrow}U(1)_Q.
+  SU(2)\timesm  U(1)_Y\overset{\langle\Phi\rangle}{\longrightarrow}U(1)_Q.
 \end{equation}
 Se espera entonces que el espectro consista de un bosón de Higgs, tres bosones gauge masivos, y un bosón gauge sin masa.
 
@@ -4113,7 +4117,7 @@ Como
     \frac{1}{\sqrt{2}}W^-_\mu&-\frac{1}{2}W^3_\mu
   \end{pmatrix}.
 \end{align}
-$\mathcal{D}_\mu$ corresponde a la matrix $2× 2$
+$\mathcal{D}_\mu$ corresponde a la matrix $2\timesm  2$
 \begin{align}
  \mathcal{D}_\mu &=  \begin{pmatrix}
     \partial_\mu-i\left(\frac{1}{2}g W^3_\mu+g' Y B_\mu\right)&-\frac{i}{\sqrt{2}}g W^+_\mu\\
@@ -4436,7 +4440,7 @@ de modo que
   \end{pmatrix}L
 \,.
 \end{align}
-La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se deje satisface para obtener apropiadamente la QED a partir de la interaccioón electrodébil asociada al grupo semisimple $SU(2)_L× U(1)_Y$.
+La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se deje satisface para obtener apropiadamente la QED a partir de la interaccioón electrodébil asociada al grupo semisimple $SU(2)_L\timesm  U(1)_Y$.
 De esta forma
 \begin{align}
     \mathcal{L}_{A Z L}
@@ -4454,7 +4458,7 @@ Generalizando para los otros campos, tenemos
        +e\overline{F}\gamma^\mu \widehat{Q}_L F A_\mu\,.
 \end{align}
 
-Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^±$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
+Usando los acoplamientos gauge de los quarks con los gluones \eqref{eq:qcdgauge}, de los fermiones con el $W_\mu^\pmm$  \eqref{eq:wl} y  con $Z_\mu$ y $A_\mu$ \eqref{eq:azl} para expandir $\mathcal{L}_{\text{fermion}}$ en \eqref{eq:lfermion}, tenemos
 \begin{align}
 \label{eq:sm1g2}
  \mathcal{L}_{\text{fermion}}=&i\overline{Q}\gamma^\mu\mathcal{D}_\mu Q+i\overline{L}\gamma^\mu\mathcal{D}_\mu L+
@@ -4680,7 +4684,7 @@ De los procesos entre familias, es decir de cambio de sabor, sabemos que
 %noinstiki 
 \begin{itemize} %noinstiki 
 \item No se han observado procesos de corrientes neutras que cambian sabor.
-\item Los bosones gauge cargados $W_\mu^±$ decaen siempre a leptones de la misma generación y con la misma intensidad.
+\item Los bosones gauge cargados $W_\mu^\pmm$ decaen siempre a leptones de la misma generación y con la misma intensidad.
 \end{itemize} %noinstiki 
 %noinstiki 
 
@@ -4802,7 +4806,7 @@ donde $m_{\nu_l}=0$.
 El Lagrangiano del Modelo contiene los parámetros $g_s,g,\sin\theta_W,v,m_H$. Alternativamente uno puede escoger como parámetros, en lugar de $g,\sin\theta_W,v$ \cite{a}
 \begin{align}
   \label{eq:233qft}
-  G_F&=1.166\,371(6)×10^{-5}\,\text{GeV}^{-2}\nonumber\\
+  G_F&=1.166\,371(6)\timesm 10^{-5}\,\text{GeV}^{-2}\nonumber\\
   \alpha^{-1}&=137.035\,999\,679(94)\nonumber\\
   m_Z&=91.1876(20)\,\text{GeV}\nonumber\\
   \alpha_s(m_Z)&=0.1176(20)\,.
@@ -4834,7 +4838,7 @@ La universalidad de los decaimientos del $Z$ está soportada por los resultados 
   \operatorname{Br}(Z\to e^+e^-)&=3.363(4)\%, &\operatorname{Br}(Z\to\mu^+\mu^-)&=3.366(7)\%,  &
   \operatorname{Br}(Z\to\tau^+\tau^-)&=3.370(8)\% 
 \end{align}
-Mientras que para el $W^±$, en \%,
+Mientras que para el $W^\pmm$, en \%,
 \begin{align}
 \label{eq:231qft}
   \operatorname{Br}(W^-\to\bar{\nu}_e e^-)&=10.65(17), &
@@ -4879,7 +4883,7 @@ Los Branchings de decaimiento en la ec.~\eqref{eq:231qft} y ec.~\eqref{eq:232qft
   &\qquad=\frac{2-8s^2\theta_W+16s^4\theta_W}{42-80s^2\theta_W+\frac{320}{3}s^4\theta_W}\nonumber\\
 &\qquad\approx3.43\%
 \end{align}
-Para $W^±$ tenemos por ejemplo
+Para $W^\pmm$ tenemos por ejemplo
 \begin{align}
 \operatorname{Br}(W^-\to\bar{\nu}_e e^-)=\frac{\Gamma(W^-\to\bar{\nu}_e e^-)}{\Gamma_{\text{total}}}
 \end{align}
@@ -4969,7 +4973,7 @@ De otro lado, para el  decaimiento $\beta$, $n\to p e^- \bar{\nu}_e$, de acuerdo
   \caption{Decaimiento del neutrón.}
   \label{fig:neutrondecay}
 \end{figure}
-con $G_F$ dado en la ec.~\eqref{eq:233qft} y $G_\beta=1.10×10^{-5}\,\text{GeV}^2$. La corriente hadrónica tiene la forma V--1.26A. El factor 1.26  puede entenderse como debido a las correcciones a nivel hadrónico de una corriente que es de la forma V--A a nivel del quarks, como en la ec.~\eqref{eq:234qft}. A nivel de quarks el decaimiento del neutrón ($udd$) al protón ($uud$) corresponde al decaimiento de uno de los quarks down del neutrón $d\to u e^- \bar{\nu}_e$
+con $G_F$ dado en la ec.~\eqref{eq:233qft} y $G_\beta=1.10\timesm 10^{-5}\,\text{GeV}^2$. La corriente hadrónica tiene la forma V--1.26A. El factor 1.26  puede entenderse como debido a las correcciones a nivel hadrónico de una corriente que es de la forma V--A a nivel del quarks, como en la ec.~\eqref{eq:234qft}. A nivel de quarks el decaimiento del neutrón ($udd$) al protón ($uud$) corresponde al decaimiento de uno de los quarks down del neutrón $d\to u e^- \bar{\nu}_e$
 \begin{align}
     \mathcal{L}=\frac{G_F}{\sqrt{2}}V_{11}\left[\bar{u}\gamma^\mu(1-\gamma_5)d\right]\left[\bar{e}\gamma_\mu(1-\gamma_5)\nu_e\right]\,.
 \end{align}
