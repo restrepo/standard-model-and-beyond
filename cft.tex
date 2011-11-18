@@ -630,8 +630,9 @@ such that the covariant derivative can be conveniently written as
 \end{align}
 The transformation properties of $A_\mu$ can be obtained from the $X_\mu$ transformation in eq.~\eqref{eq:169qft}: 
 \begin{align}
+\label{eq:159qft}
  i q A_\mu\to& i q A_\mu'=i q A_\mu-i \partial_\mu\theta(x)\nonumber\\
-  A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\nonumber\\
+  A_\mu\to&  A_\mu'= A_\mu-\frac{1}{q} \partial_\mu\theta(x)\,.
 \end{align}
 
 
@@ -1530,7 +1531,7 @@ De la ecuación (\ref{eq:175qft}) podemos obtener la ecuación de Schödinger en
    i{\mathcal{D}'}^0\psi'&=-\frac{1}{2m}{\boldsymbol{\mathcal{D}}'}^2\psi'\nonumber\\
  i\frac{\partial}{\partial t}\psi'&=\left[\frac{1}{2m}(-i\mathbf{\nabla}-q\mathbf{A}')^2+q{A'}_0\right]\psi'\,.
 \end{align}
-Como la forma de la ecuación (\ref{eq:160qft}) es exactamente la misma que la forma de (\ref{eq:161qft}) entonces ambas describen la misma física. Se dice que  la ec.~(\ref{eq:161qft}) es covariante gauge, lo que significa que mantiene la misma forma bajo una transformación gauge. 
+Como la forma de la ecuación (\ref{eq:160qft}) es exactamente la misma que la forma de~\eqref{eq:176qft} entonces ambas describen la misma física. Se dice que  la ec.~\eqref{eq:176qft} es covariante gauge, lo que significa que mantiene la misma forma bajo una transformación gauge. 
 
 \begin{itemize}
 \item \textbf{Ejemplo:}\\ 
@@ -1623,17 +1624,18 @@ Entonces
 \partial_\mu F^{\mu\nu}=j^\nu
 \end{align*}
 con
-\begin{align*}
+\begin{align}
+  \label{eq:85qft}
   j^\nu=&
   \begin{cases}
     -q \psi^*\psi &\nu=0\\
     \frac{i q}{2m}[ (\mathcal{D}^i\psi)^*\psi -\psi^*\mathcal{D}^i\psi ]&\nu=i
   \end{cases}
-\end{align*}
-Que incluye el término corriente para una partícula cargada y es diferente de la corriente de probabilidad en ec.\eqref{eq:135qft}. En otras palabras es la carga eléctrica la que se converva localmente. Note que para el Lagrangiano de Klein-Gordon de un campo escalar complejo a nivel clásico no esta definida la probabilidad. 
+\end{align}
+Que incluye el término corriente para una partícula cargada y es diferente de la corriente de probabilidad en ec.~\eqref{eq:135qft}. En otras palabras es la carga eléctrica la que se converva localmente. 
 
 \subsection{Conserved currents}
-
+The 4-current can be obtained directly from the Noether's Theorem:
 
 \begin{align}
   J^\mu=&\frac{\partial\mathcal{L}}{\partial_\mu\psi}\delta\psi+\delta\psi^*\frac{\partial\mathcal{L}}{\partial_\mu\psi^*}\nonumber\\
@@ -1644,13 +1646,16 @@ Que incluye el término corriente para una partícula cargada y es diferente de 
 \end{align}
 
 \begin{align}
-  J^0=&-\frac{i}{2}\psi^*(i\theta)\psi-i\theta\psi^*\frac{i}{2}\psi\nonumber\\
-  =&\theta\psi^*\psi\,,
+  J^0=&-\frac{i}{2}\psi^*(iq\theta)\psi-iq\theta\psi^*\frac{i}{2}\psi\nonumber\\
+  =&q\theta\psi^*\psi\,,
 \end{align}
 \begin{align}
-  J^i=&\frac{1}{2m}\left[\left(\partial_i-iqA_i\right)\psi^*i\theta\psi-i\theta\psi^*\left(\partial_i+iqA_i\right)\psi\right]\nonumber\\
-  J^i=&\frac{i\theta}{2m}\left[\left(\mathcal{D}_i\psi\right)^*\psi-\psi^*\left(\mathcal{D}_i\psi\right)\right]\,.
+  J^i=&\frac{1}{2m}\left[\left(\partial_i-iqA_i\right)\psi^*iq\theta\psi-iq\theta\psi^*\left(\partial_i+iqA_i\right)\psi\right]\nonumber\\
+  J^i=&\frac{iq\theta}{2m}\left[\left(\mathcal{D}_i\psi\right)^*\psi-\psi^*\left(\mathcal{D}_i\psi\right)\right]\,.
   \end{align}
+
+When $\theta$ is fixed to 1 as in ec.~\eqref{eq:135qft} to define the probability, we get eq.~\eqref{eq:85qft}.
+
 It is worth to notice that for $T^0_0$, and $T^0_i$ we should obtain
 \begin{align}
   \widehat{H}=& i\frac{\partial}{\partial t}-q\phi & \widehat{\mathbf{p}}=&-i\boldsymbol{\nabla}-q\mathbf{A}\,.
@@ -1714,10 +1719,10 @@ El Grupo está definido por el conjunto infinito de elementos $U_i=e^{i\theta(x_
 Note que si
 \begin{equation}
   \label{eq:amutransf}
-  A^\mu\to{A'}^\mu=A^\mu-\frac{i}{q}(\partial^\mu U)U^{-1}
+  A^\mu\to{A'}^\mu=U\,A^\mu\,U^{-1}+\frac{i}{q}(\partial^\mu U)U^{-1}
 \end{equation}
 %to_en:(If $\theta(x)=$cte, $ A^\mu={A^\mu}'$, phase invariance). If $\theta$ is sufficiently small
-(Si $\theta=$cte, $ A^\mu={A'}^\mu$, invarianza de fase). Si $\theta$ es suficientemente pequeño
+y si $\theta$ es suficientemente pequeño
 \begin{align}
   \label{eq:Uinf}
   U=e^{i\theta(x)}&\approx1+i\theta(x)+\mathcal{O}(\theta^2)&U^{-1}=e^{-i\theta(x)}&\approx1-i\theta(x)+\mathcal{O}(\theta^2)
@@ -1725,11 +1730,10 @@ Note que si
 Entonces
 \begin{align}
   \label{eq:checkinft}
-  {A^\mu}'=&-\frac{1}{q}(i\partial^\mu\theta(8x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]
-  +A^\mu[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
-  =&A^\mu+\frac{1}{q}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
+  {A^\mu}'=&[1+i\theta(x)+\mathcal{O}(\theta^2)]A^\mu[1-i\theta(x)+\mathcal{O}(\theta^2)]+\frac{i}{q}(i\partial^\mu\theta(x))[1+i\theta(x)+\mathcal{O}(\theta^2)][1-i\theta(x)+\mathcal{O}(\theta^2)]\nonumber\\
+    =&A^\mu-\frac{1}{q}\partial^\mu\theta(x)+\mathcal{O}(\theta^2)
 \end{align}
-
+which is just the eq.~(\ref{eq:159qft})
 
 
 \section{Proca Equation}
