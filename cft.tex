@@ -1780,22 +1780,28 @@ condición de Lorentz, ec.~(\ref{eq:20qft}), emerge como una restricción
 adicional que debe ser siempre tomada en cuenta. De este modo la
 libertad gauge de las ecuaciones de Maxwell se pierde completamente en
 la ecuaciones de Proca, que sin perdida de generalidad se pueden
-reescribir, usando $\partial_\mu A^\mu=0$ y las ecs.~(\ref{eq:21qft}),~(\ref{eq:24qft}),  como:
-\begin{equation}
+reescribir, usando $\partial_\mu A^\mu=0$ y las ec. (\ref{eq:24qft}),  como:
+\begin{align}
   \label{eq:26qft}
-   (\Box+m^2)A^\nu=J^\nu
-\end{equation}
-En ausencia de corrientes, cada una de las componentes del campo
+\partial_\mu F^{\mu\nu}+m^2A^\nu&=J^\nu\nonumber\\
+\partial_\mu\partial^\mu A^\nu-\partial_\mu\partial^\nu A^\mu+m^2A^\nu&=J^\nu\nonumber\\
+   (\Box+m^2)A^\nu=&J^\nu
+\end{align}
+donde $\Box$ esta definido en la ec.~(\ref{eq:dalambertian}). En ausencia de corrientes, cada una de las componentes del campo
 vectorial satisface la ecuación de Klein-Gordon~(\ref{eq:kg}). Por
 consiguiente $m$ corresponde a la masa del campo vectorial
 $A^\mu$. 
 
 Aplicando la condición de Lorentz a la ec.~(\ref{eq:23qft}), obtenemos el
 Lagrangiano de la Ecuación de Proca (\ref{eq:26qft})
-\begin{equation}
+\begin{align}
   \label{eq:27qft}
-  \mathcal{L}=\frac{1}{2}\partial^\mu A^\nu\partial_\mu A_\nu-\frac{1}{2} m^2A^\nu A_\nu+J^\nu A_\nu,
-\end{equation}
+  \mathcal{L}=&-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}+\frac{1}{2}m^2A^\mu A_\mu-J^\mu A_\mu\nonumber\\
+=&-\frac{1}{4}(\partial^\mu A^\nu\partial_\mu A_\nu
++\partial^\nu A^\mu\partial_\nu A_\mu-\partial^\mu A^\nu\partial_\nu A_\mu
+-\partial^\nu A^\mu\partial_\mu A_\nu)+\frac{1}{2}m^2A^\mu A_\mu-J^\mu A_\mu\nonumber\\
+  =&\frac{1}{2}\partial^\mu A^\nu\partial_\mu A_\nu-\frac{1}{2} m^2A^\nu A_\nu+J^\nu A_\nu,
+\end{align}
 donde hemos reabsorbido un signo global que no afecta las ecuaciones
 de movimiento. El primer término que incluye sólo derivadas de los
 campos es llamado \emph{término cinético} y dependen sólo del espín de
@@ -1929,7 +1935,6 @@ De acuerdo a la ec.~\eqref{eq:28qft}, tenemos
     T^0_0=&\partial^0\phi\partial_0\phi-\mathcal{L}\nonumber\\
     =&\pi(x)\partial_0\phi(x)-\mathcal{L}\nonumber\\
 =&\partial^0\phi\partial_0\phi-\frac{1}{2}\partial_0\phi\partial^0\phi-\frac{1}{2}\partial_i\phi\partial^i\phi+\frac{1}{2}m^2\phi^2\nonumber\\
-    =&\partial^0\phi\partial_0\phi-\frac{1}{2}\partial_0\phi\partial^0\phi-\frac{1}{2}\partial_i\phi\partial^i\phi+\frac{1}{2}m^2\phi^2\nonumber\\
     =&\frac{1}{2}\left(\partial_0\phi\partial^0\phi+\sum_i\partial_i\phi\partial_i\phi\right)+\frac{1}{2}m^2\phi^2\nonumber\\
    \mathcal{H} =&\frac{1}{2}\left[\left(\frac{\partial\phi}{\partial t}\right)^2+
       \left(\boldsymbol{\nabla\phi}\right)^2\right]+\frac{1}{2}m^2\phi^2\,.
@@ -2079,6 +2084,15 @@ In summary we have the following Lorentz's transformation properties for the fie
 
 \section{Dirac's Action}
 \label{sec:dirac-equation}
+The Scrodinger equation can be written as
+\begin{align}
+    i\frac{\partial}{\partial t}\psi=\hat{H}_{S} \psi\,,  
+\end{align}
+where
+\begin{align}
+  \hat{H}_{S}=
+\end{align}
+
 
 In order to have a well defined probabilty in relativistic quantum mechanics it is necessary that Lagrangian be linear in the time derivative, in order to obtain the general Sccödinger equation:
 \begin{align}
@@ -2139,9 +2153,10 @@ A Action with a Lagrangian term linear in the derivatives, could be Lorentz inva
    \overline{\psi}(x)\gamma^\mu\partial_\mu\psi(x)\to  \overline{\psi'}(x)\gamma^\mu\partial_\mu\psi'(x)&=
  \overline{\psi}_a\left(\Lambda^{-1}x\right)S^{-1}_{ab}(\Lambda)\gamma^\mu_{bc}{\left(\Lambda^{-1}\right)^\rho}_\mu\partial_\rho S_{cd}(\Lambda)\psi_d\left(\Lambda^{-1}x\right)\nonumber\\
    &=
- \psi^\dagger\left(\Lambda^{-1}x\right){\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^{-1}(\Lambda)\gamma^\mu S(\Lambda)\right)\partial_\rho\psi\left(\Lambda^{-1}x\right)\,,
+\overline{\psi} \psi\left(\Lambda^{-1}x\right){\left(\Lambda^{-1}\right)^\rho}_\mu \left(S^{-1}(\Lambda)\gamma^\mu S(\Lambda)\right)\partial_\rho\psi\left(\Lambda^{-1}x\right)\nonumber\\
+&=\overline{\psi}(x)\gamma^\mu\partial_\mu\psi(x)\,,
  \end{align}
-we could have
+if the following condition is satisfied:
 \begin{align}
 \label{eq:ltrincond}
   S^{-1}(\Lambda)\gamma^\mu S(\Lambda)={\Lambda^\mu}_\sigma\gamma^\sigma\,.
@@ -2221,6 +2236,7 @@ $\overline{\psi}$ se define como la \emph{adjunta} de $\psi$:
 
 It is convenient at this point to summarize the properties for $\gamma^0$:
 \begin{align}
+  \label{eq:cft77}
   {\gamma^0}^\dagger=&\gamma^0 & \left(\gamma^0\right)^2=&1 & \gamma^0{\gamma^\mu}^\dagger\gamma^0=&\gamma^\mu\nonumber\\
  &&   S^\dagger(\Lambda)\gamma^0S(\Lambda)=&\gamma^0\,. &&
 \end{align}
@@ -2399,21 +2415,21 @@ En términos de las matrices $\gamma^\mu$ las condiciones en ec.~\eqref{eq:107qf
 De modo que
 \begin{align}
   \label{eq:198qft}
-\left\{\alpha^i,\alpha^j\right\}=\gamma^0\gamma^i \gamma^0\gamma^j+\gamma^0\gamma^j \gamma^0\gamma^j&=0\qquad i\neq j\nonumber\\
--\gamma^0\gamma^0\gamma^i \gamma^j-\gamma^0\gamma^0\gamma^j \gamma^j&=0\qquad i\neq j\nonumber\\
-\gamma^i \gamma^j+\gamma^j \gamma^j&=0\qquad i\neq j\nonumber\\
+\left\{\alpha^i,\alpha^j\right\}=\gamma^0\gamma^i \gamma^0\gamma^j+\gamma^0\gamma^j \gamma^0\gamma^i&=0\qquad i\neq j\nonumber\\
+-\gamma^0\gamma^0\gamma^i \gamma^j-\gamma^0\gamma^0\gamma^j \gamma^i&=0\qquad i\neq j\nonumber\\
+\gamma^i \gamma^j+\gamma^j \gamma^i&=0\qquad i\neq j\nonumber\\
 \left\{\gamma^i,\gamma^j\right\}&=0\qquad i\neq j
 \end{align}
 Las ecuaciones \eqref{eq:108qft}\eqref{eq:198qft} pueden escribirse como
 \begin{equation}
   \label{eq:109qft}
-  \left\{\gamma^\mu,\gamma^\nu\right\}\equiv\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2g^{\mu\nu}.
+  \left\{\gamma^\mu,\gamma^\nu\right\}\equiv\gamma^\mu\gamma^\nu+\gamma^\nu\gamma^\mu=2g^{\mu\nu}\mathbf{1}
 \end{equation}
 donde
 \begin{align}
   \gamma^\mu=(\gamma^0,\gamma^i)
 \end{align}
-Además, de la ec.~\eqref{eq:111qft},
+Además, de la ec.~\eqref{eq:cft77}
 \begin{equation}
   \label{eq:112qft}
    \gamma^0{\gamma^\mu}^\dagger \gamma^0=\gamma^\mu.
@@ -2435,6 +2451,121 @@ donde
 \end{equation}
 
 
+
+
+
+\subsection{Propiedades de las matrices de Dirac}
+\label{sec:propiedades-de-las}
+De la ec.~(\ref{eq:112qft})
+\begin{equation}
+  {\gamma^\mu}^\dagger=\gamma^0\gamma^\mu\gamma^0\Rightarrow  
+  \begin{cases}
+    {\gamma^0}^\dagger=\gamma^0&\mu=0\\
+    {\gamma^i}^\dagger=-{\gamma^0}^2\gamma^i=-\gamma^i&\mu=i
+  \end{cases}.
+\end{equation}
+Definiendo
+\begin{equation}
+\label{eq:117qft}
+  \gamma_5=i\gamma_0\gamma_1\gamma_2\gamma_3,
+\end{equation}
+entonces,
+\begin{align}
+  \gamma_5^2=&-\gamma_0\gamma_1\gamma_2\gamma_3\gamma_0\gamma_1\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&+\gamma_0^2\gamma_1\gamma_2\gamma_3\gamma_1\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&+\gamma_1\gamma_2\gamma_3\gamma_1\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&-\gamma_2\gamma_3\gamma_2\gamma_3\nonumber\\
+  \gamma_5^2=&\gamma_2\gamma_2\gamma_3\gamma_3\nonumber\\
+  \gamma_5^2=&\mathbf{1}\,.
+\end{align}
+
+\begin{equation}
+  \gamma_5^2=\mathbf{1},
+\end{equation}
+Teniendo en cuenta que $\gamma_\mu^2\propto\mathbf{1}$ y conmuta con las demás matrices, tenemos por ejemplo
+\begin{align}
+  \gamma_5\gamma_3=&i\gamma_0\gamma_1\gamma_2\gamma_3^2=\gamma_3^2i\gamma_0\gamma_1\gamma_2=-\gamma_3i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_3\gamma_5\nonumber\\
+  \gamma_5\gamma_2=&-i\gamma_0\gamma_1\gamma_2^2\gamma_3=-\gamma_2^2i\gamma_0\gamma_1\gamma_3=-\gamma_2i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_2\gamma_5\nonumber\\
+  \gamma_5\gamma_1=&i\gamma_0\gamma_1^2\gamma_2\gamma_3=\gamma_1^2i\gamma_0\gamma_2\gamma_3=-\gamma_1i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_1\gamma_5\nonumber\\
+  \gamma_5\gamma_0=&i\gamma_0\gamma_1\gamma_2\gamma_3\gamma_0=-\gamma_0^2i\gamma_1\gamma_2\gamma_3=-\gamma_0\gamma_5\,.
+\end{align}
+De modo que
+\begin{equation}
+  \label{eq:218qft}
+  \left\{\gamma_\mu,\gamma_5\right\}=0. 
+\end{equation}
+Expandiendo el anticonmutador tenemos
+\begin{align}
+  \gamma_\mu\gamma_5=-\gamma_5\gamma_\mu\nonumber\\
+  \gamma_5\gamma_\mu\gamma_5=-\gamma_\mu\nonumber\\
+\operatorname{Tr}\left(\gamma_5\gamma_\mu\gamma_5\right)=-\operatorname{Tr}\gamma_\mu\nonumber\\
+\operatorname{Tr}\left(\gamma_5\gamma_5\gamma_\mu\right)=-\operatorname{Tr}\gamma_\mu\nonumber\\
+\operatorname{Tr}\gamma_\mu=-\operatorname{Tr}\gamma_\mu,
+\end{align}
+y por consiguiente
+\begin{equation}
+  \operatorname{Tr}\gamma_\mu=0.
+\end{equation}
+
+
+De otro lado, si
+\begin{equation}
+  \tilde{\gamma_\mu}\equiv U\gamma_\mu U^\dagger,
+\end{equation}
+para alguna matriz unitaria $U$, entonces $\tilde{\gamma_\mu}$ corresponde a otra representación de álgebra de Dirac en ec.~(\ref{eq:109qft}), ya que
+\begin{align}
+  \left\{\tilde\gamma^\mu,\tilde\gamma^\nu\right\}&=\left\{U\gamma^\mu U^\dagger,U\gamma^\nu U^\dagger\right\}\nonumber\\
+  &=U\left\{\gamma^\mu,\gamma^\nu\right\}U^\dagger\nonumber\\
+  &=2g^{\mu\nu}UU^\dagger\nonumber\\
+  &=2g^{\mu\nu}\mathbf{1}.
+\end{align}
+Claramente, la condición en ec.~(\ref{eq:112qft}) se mantiene para la nueva representación. Como $\gamma_0$ es hermítica, siempre es posible escoger una representación tal que $\tilde{\gamma_0}\equiv U\gamma_0U^\dagger$ sea diagonal. Como $\gamma_0^2=1$, sus entradas en la diagonal deben ser $\pmm1$, y como $\operatorname{Tr}\tilde\gamma_0=0$, debe existir igual número de $+1$ que de $-1$. Por lo tanto la dimensión de $\gamma_0$ (y de $\gamma_\mu$) debe ser par: $2,4,\ldots$. Para un fermion sin masa
+\begin{align}
+  \mathcal{L}=i\psi^\dagger\gamma^0\gamma^0\partial_0\psi+i\psi^\dagger\gamma^0\gamma^i\partial_i\psi=i\psi^\dagger\partial_0\psi+i\psi^\dagger\alpha^i\partial_i\psi\,,
+\end{align}
+solo se requieren tres matrices $2\timesm 2$ que satisfacen
+\begin{align}
+  \left\{\alpha^i,\alpha^j\right\} =2\delta^{ij}\,,
+\end{align}
+y por lo tanto pueden identificarse con las tres matrices de Pauli. 
+Como en general tenemos 4 matrices independientes, su dimensión mínima debe ser 4.
+
+Como $\tilde\gamma^i=\gamma^0\gamma^i\gamma^0={\gamma^i}^\dagger=-\gamma^i$, podemos definir la \emph{representación de paridad}
+\begin{align}
+\label{eq:parityrep}
+\tilde\gamma^0=&\gamma^0,\qquad\tilde\gamma^i=-\gamma^i\,,&\text{para}\qquad U=&\gamma^0   
+\end{align}
+
+
+
+
+\begin{inprogress}
+  \subsection{Dirac representation}
+The set of $4\timesm 4$ matrices
+\begin{align}
+  S^{\mu\nu}=\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]\,,
+\end{align}
+also satisfy the commutations relations \eqref{eq:lrtalg}, and constitute a new matrix representation of the Lorentz Group. The subgroup of rotation group has the generators $S^{ij}$. We define the spin matrices:
+\begin{align}
+  \Sigma^i=\epsilon^{ijk}S_{jk}\,,
+\end{align}
+taking into account that
+\begin{align}
+  \gamma_0\gamma_i\gamma_5=-\epsilon_{0ijk}S^{jk}\,,
+\end{align}
+Taking th convention $\epsilon_{0ijk}=\epsilon_{ijk}$, we have
+\begin{align}
+  \Sigma_{i}=-\gamma_0\gamma_i\gamma_5\,.
+\end{align}
+With this form, it is easy to show that
+\begin{align}
+  \left\{\Sigma_i,\Sigma_j\right\}=2\delta_{ij}\,, 
+\end{align}
+so that 
+\begin{align}
+  \left[\frac{\Sigma^i}{2},\frac{\Sigma^j}{2} \right]=i\,\epsilon_{ijk}\frac{\Sigma^k}{2}
+\end{align}
+\end{inprogress}
 
 
 \subsection{Lorentz Group}
@@ -2647,7 +2778,7 @@ which can be written in covariant form if we define
 \end{align}
 In fact, the six set of non-zero independently generators are
 \begin{align}
-  \mathcal{S}^{0i}=&\frac{i}{4}\left(\gamma^0\gamma^i-\gamma^0\gamma^i\right)=\frac{i}{2}\gamma^0\gamma^i= i B^i\nonumber\\
+  \mathcal{S}^{0i}=&\frac{i}{4}\left(\gamma^0\gamma^i-\gamma^i\gamma^0\right)=\frac{i}{2}\gamma^0\gamma^i= i B^i\nonumber\\
   \mathcal{S}^{i j}=&\frac{i}{4}\left(\gamma^i\gamma^j-\gamma^j\gamma^i\right)=\frac{i}{2}\gamma^i\gamma^j= i R^{i j}\,.
 \end{align}
 It is worth notices that in fact $\mathcal{S}^{\mu\nu}$ satisfy the Lorentz algebra, and therefore are the generators of the Lorentz group elements:
@@ -2662,7 +2793,7 @@ Another consistency check is
 or equivalently
 \begin{align}
 S^\dagger(\Lambda)\gamma^0=&\gamma^0S^{-1}(\Lambda)\nonumber\\
-\left(1+\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}^\dagger \right)c\gamma^0=&\gamma^0\left(1+\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}\right)\nonumber\\
+\left(1+\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}^\dagger \right)\gamma^0=&\gamma^0\left(1+\frac{i}{2} \omega_{\mu\nu}{\mathcal{S}^{\mu\nu}}\right)\nonumber\\
 {\mathcal{S}^{\mu\nu}}^\dagger \gamma^0=&\gamma^0{\mathcal{S}^{\mu\nu}}\,.
 \end{align}
 Taking into account that
@@ -2674,120 +2805,10 @@ we have
   {\mathcal{S}^{\mu\nu}}^\dagger \gamma^0=&-\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]^\dagger\gamma^0\nonumber\\
 =&-\frac{i}{4}\left[{\gamma^\nu}^\dagger,{\gamma^\mu}^\dagger\right]\gamma^0\nonumber\\
 =&\frac{i}{4}\left[{\gamma^\mu}^\dagger,{\gamma^\nu}^\dagger\right]\gamma^0\nonumber\\
+=&\frac{i}{4}\left[{\gamma^\mu},{\gamma^\nu}\right]\gamma^0\nonumber\\
 =&\gamma^0\mathcal{S}^{\mu\nu}\nonumber\\
 \end{align}
 
-
-\subsection{Propiedades de las matrices de Dirac}
-\label{sec:propiedades-de-las}
-De la ec.~(\ref{eq:112qft})
-\begin{equation}
-  {\gamma^\mu}^\dagger=\gamma^0\gamma^\mu\gamma^0\Rightarrow  
-  \begin{cases}
-    {\gamma^0}^\dagger=\gamma^0&\mu=0\\
-    {\gamma^i}^\dagger=-{\gamma^0}^2\gamma^i=-\gamma^i&\mu=i
-  \end{cases}.
-\end{equation}
-Definiendo
-\begin{equation}
-\label{eq:117qft}
-  \gamma_5=i\gamma_0\gamma_1\gamma_2\gamma_3,
-\end{equation}
-entonces,
-\begin{align}
-  \gamma_5^2=&-\gamma_0\gamma_1\gamma_2\gamma_3\gamma_0\gamma_1\gamma_2\gamma_3\nonumber\\
-  \gamma_5^2=&+\gamma_0^2\gamma_1\gamma_2\gamma_3\gamma_1\gamma_2\gamma_3\nonumber\\
-  \gamma_5^2=&+\gamma_1\gamma_2\gamma_3\gamma_1\gamma_2\gamma_3\nonumber\\
-  \gamma_5^2=&-\gamma_2\gamma_3\gamma_2\gamma_3\nonumber\\
-  \gamma_5^2=&\gamma_2\gamma_2\gamma_3\gamma_3\nonumber\\
-  \gamma_5^2=&1\,.
-\end{align}
-
-\begin{equation}
-  \gamma_5^2=\mathbf{1},
-\end{equation}
-Teniendo en cuenta que $\gamma_\mu^2\propto\mathbf{1}$ y conmuta con las demás matrices, tenemos por ejemplo
-\begin{align}
-  \gamma_5\gamma_3=&i\gamma_0\gamma_1\gamma_2\gamma_3^2=\gamma_3^2i\gamma_0\gamma_1\gamma_2=-\gamma_3i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_3\gamma_5\nonumber\\
-  \gamma_5\gamma_2=&-i\gamma_0\gamma_1\gamma_2^2\gamma_3=-\gamma_2^2i\gamma_0\gamma_1\gamma_3=-\gamma_2i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_2\gamma_5\nonumber\\
-  \gamma_5\gamma_1=&i\gamma_0\gamma_1^2\gamma_2\gamma_3=\gamma_1^2i\gamma_0\gamma_2\gamma_3=-\gamma_1i\gamma_0\gamma_1\gamma_2\gamma_3=-\gamma_1\gamma_5\nonumber\\
-  \gamma_5\gamma_0=&i\gamma_0\gamma_1\gamma_2\gamma_3\gamma_0=-\gamma_0^2i\gamma_1\gamma_2\gamma_3=-\gamma_0\gamma_5\,.
-\end{align}
-De modo que
-\begin{equation}
-  \label{eq:218qft}
-  \left\{\gamma_\mu,\gamma_5\right\}=0. 
-\end{equation}
-Expandiendo el anticonmutador tenemos
-\begin{align}
-  \gamma_\mu\gamma_5=-\gamma_5\gamma_\mu\nonumber\\
-  \gamma_5\gamma_\mu\gamma_5=-\gamma_\mu\nonumber\\
-\operatorname{Tr}\left(\gamma_5\gamma_\mu\gamma_5\right)=-\operatorname{Tr}\gamma_\mu\nonumber\\
-\operatorname{Tr}\left(\gamma_5\gamma_5\gamma_\mu\right)=-\operatorname{Tr}\gamma_\mu\nonumber\\
-\operatorname{Tr}\gamma_\mu=-\operatorname{Tr}\gamma_\mu,
-\end{align}
-y por consiguiente
-\begin{equation}
-  \operatorname{Tr}\gamma_\mu=0.
-\end{equation}
-Si
-\begin{equation}
-  \tilde{\gamma_\mu}\equiv U\gamma_\mu U^\dagger,
-\end{equation}
-para alguna matriz unitaria $U$, entonces $\tilde{\gamma_\mu}$ corresponde a otra representación de álgebra de Dirac en ec.~(\ref{eq:109qft}), ya que
-\begin{align}
-  \left\{\tilde\gamma^\mu,\tilde\gamma^\nu\right\}&=\left\{U\gamma^\mu U^\dagger,U\gamma^\nu U^\dagger\right\}\nonumber\\
-  &=U\left\{\gamma^\mu,\gamma^\nu\right\}U^\dagger\nonumber\\
-  &=2g^{\mu\nu}UU^\dagger\nonumber\\
-  &=2g^{\mu\nu}.
-\end{align}
-Claramente, la condición en ec.~(\ref{eq:112qft}) se mantiene para la nueva representación. Como $\gamma_0$ es hermítica, siempre es posible escoger una representación tal que $\tilde{\gamma_0}\equiv U\gamma_0U^\dagger$ sea diagonal. Como $\gamma_0^2=1$, sus entradas en la diagonal deben ser $\pmm1$, y como $\operatorname{Tr}\tilde\gamma_0=0$, debe existir igual número de $+1$ que de $-1$. Por lo tanto la dimensión de $\gamma_0$ (y de $\gamma_\mu$) debe ser par: $2,4,\ldots$. Para un fermion sin masa
-\begin{align}
-  \mathcal{L}=i\psi^\dagger\gamma^0\gamma^0\partial_0\psi+i\psi^\dagger\gamma^0\gamma^i\partial_i\psi=i\psi^\dagger\partial_0\psi+i\psi^\dagger\alpha^i\partial_i\psi\,,
-\end{align}
-solo se requieren tres matrices $2\timesm 2$ que satisfacen
-\begin{align}
-  \left\{\alpha^i,\alpha^j\right\} =2\delta^{ij}\,,
-\end{align}
-y por lo tanto pueden identificarse con las tres matrices de Pauli. 
-Como en general tenemos 4 matrices independientes, su dimensión mínima debe ser 4.
-
-Como $\tilde\gamma^i=\gamma^0\gamma^i\gamma^0={\gamma^i}^\dagger=-\gamma^i$, podemos definir la \emph{representación de paridad}
-\begin{align}
-\label{eq:parityrep}
-\tilde\gamma^0=&\gamma^0,\qquad\tilde\gamma^i=-\gamma^i\,,&\text{para}\qquad U=&\gamma^0   
-\end{align}
-
-
-
-
-\begin{inprogress}
-  \subsection{Dirac representation}
-The set of $4\timesm 4$ matrices
-\begin{align}
-  S^{\mu\nu}=\frac{i}{4}\left[\gamma^\mu,\gamma^\nu\right]\,,
-\end{align}
-also satisfy the commutations relations \eqref{eq:lrtalg}, and constitute a new matrix representation of the Lorentz Group. The subgroup of rotation group has the generators $S^{ij}$. We define the spin matrices:
-\begin{align}
-  \Sigma^i=\epsilon^{ijk}S_{jk}\,,
-\end{align}
-taking into account that
-\begin{align}
-  \gamma_0\gamma_i\gamma_5=-\epsilon_{0ijk}S^{jk}\,,
-\end{align}
-Taking th convention $\epsilon_{0ijk}=\epsilon_{ijk}$, we have
-\begin{align}
-  \Sigma_{i}=-\gamma_0\gamma_i\gamma_5\,.
-\end{align}
-With this form, it is easy to show that
-\begin{align}
-  \left\{\Sigma_i,\Sigma_j\right\}=2\delta_{ij}\,, 
-\end{align}
-so that 
-\begin{align}
-  \left[\frac{\Sigma^i}{2},\frac{\Sigma^j}{2} \right]=i\,\epsilon_{ijk}\frac{\Sigma^k}{2}
-\end{align}
-\end{inprogress}
 
 \subsection{Dirac's Lagrangian}
 \label{sec:diracs-lagrangian}
@@ -2835,9 +2856,17 @@ J^\mu(x)\equiv  \bar\psi(x)\gamma^\mu\psi(x)\to&\bar\psi(\Lambda^{-1}x)S^{-1}(\L
 =&{\Lambda^\mu}_\nu\bar\psi(\Lambda^{-1}x) \gamma^\nu\psi(\Lambda^{-1}x) \nonumber\\
 =&{\Lambda^\mu}_\nu J^\nu(\Lambda^{-1}x)\,.
 \end{align}
-In \cite{Gross:1993}: Problem 5.4:
+In \cite{Gross:1993}: Problem 5.4: 
 \begin{align}
   \overline{\psi}\gamma_5\psi\to\overline{\psi}S^{-1}(\Lambda)\gamma^5S(\Lambda)\psi =(\det\Lambda)\overline{\psi}\gamma_5\psi
+\end{align}
+The solution is in Appendix C. of Burgess book, by using
+\begin{align}
+  \gamma^5=\frac{i}{24}\epsilon_{\mu\nu\alpha\beta}\gamma^\mu\gamma^\nu\gamma^\alpha\gamma^\beta
+\end{align}
+and
+\begin{align}
+  \det \Lambda=\epsilon_{\mu\nu\alpha\beta}{\Lambda^\mu}_1{\Lambda^\nu}_2{\Lambda^\alpha}_3{\Lambda^\beta}_4\,.
 \end{align}
 
 
@@ -3517,86 +3546,6 @@ Muestre que la derivada covariante de $\mathbf{G}^{\mu\nu}$, transforma como $\m
 %   =&\Lambda^a\partial_\mu G^{\mu\nu}_a-i g_s \Lambda_b\Lambda^cG_\mu^bG^{\mu\nu}_c
 % \end{align}
 
-\section{Fermiones quirales de cuatro componentes}
-\label{sec:ferm-quir-de}
-
-Sea
-\begin{align}
-  P_L\equiv&\frac{1-\gamma_5}{2}\nonumber\\
-  P_R\equiv&\frac{1+\gamma_5}{2}\,.
-\end{align}
-Además
-\begin{align}
-  \psi_L\equiv P_L\psi\nonumber\\
-  \psi_R\equiv P_R\psi\,.
-\end{align}
-Entonces
-\begin{align}
-  \psi=\psi_L+\psi_R\,.
-\end{align}
-
-Las matrices $P_{L,R}$ tienen las propiedades
-\begin{align}
-  P_L+P_R&=1 & P_{L,R}^2&=P_{L,R}P_{L,R}=P_{L,R}\nonumber\\
-  P_L P_R&=0& P_{L,R}^\dagger&=P_{L,R}\,.
-\end{align}
-Usando la ec.~(\ref{eq:218qft})
-\begin{align}
-  P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1\pmm\gamma_5}{2}=\gamma^\mu P_{R,L}
-\end{align}
-Para escribir el Lagrangiano en término de los nuevos $\psi_{L,R}$ debemos tener en cuenta que
-\begin{align}
-  \overline{\psi_{L,R}}=(P_{L,R}\psi)^\dagger\gamma^0=\psi^\dagger P_{L,R}\gamma^0=\psi^\dagger\gamma^0P_{R,L}=\overline{\psi}P_{R,L}
-\end{align}
-\begin{align}
-  \label{eq:221qft}
-  \mathcal{L}=&i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi\nonumber\\
-  =&i\overline{\psi}(P_L+P_R)\gamma^\mu\partial_\mu\psi-m\overline{\psi}(P_L+P_R)\psi\nonumber\\
-  =&i\overline{\psi}P_L\gamma^\mu\partial_\mu\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu\psi-m\overline{\psi}P_L\psi-m\overline{\psi}P_R\psi\nonumber\\
-  =&i\overline{\psi}P_L P_L\gamma^\mu\partial_\mu\psi+i\overline{\psi}P_R P_R\gamma^\mu\partial_\mu\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
-  =&i\overline{\psi}P_L\gamma^\mu\partial_\mu P_R\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu P_L\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
-  =&i\overline{\psi_R}\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,.
-\end{align}
-En términos de espinores de izquierdos y derechos de cuatro componentes la transformación de paridad 
-\begin{align}
-  \label{eq:220qft}
-  t&\to t&\mathbf{x}&\to -\mathbf{x}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\nonumber\\
-  \partial_0&\to \partial_0&\boldsymbol{\nabla}&\to -\boldsymbol{\nabla}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\,.
-\end{align}
-Además $\mathbf{L}=\mathbf{r}\timesm \mathbf{p}\to(-\mathbf{r})\timesm (-\mathbf{p})=\mathbf{L}$, y como $\gamma^\mu$ esta asociado al momento angular intrínsico, entonces también $\gamma^\mu\to\gamma^\mu$
-
-
-Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio de argumento en los campos que desaparece en la integral de la Acción) y la representación de paridad \eqref{eq:parityrep}:
-\begin{align}
-  \overline{\psi_R}\gamma^\mu\partial_\mu\psi_R=\overline{\psi_R}\gamma^0\partial_0\psi_R+\overline{\psi_R}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_R 
-\to&\overline{\psi_L}\gamma^0\partial_0\psi_L-\overline{\psi_L}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\gamma^0\partial_0\psi_L+\overline{\psi_L}\boldsymbol{\gamma}^\dagger\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\gamma^0\gamma^0\gamma^0\partial_0\psi_L+\overline{\psi_L}\gamma^0\boldsymbol{\gamma}\gamma^0\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_L}\tilde\gamma^0\partial_0\psi_L+\overline{\psi_L}\tilde{\boldsymbol{\gamma}}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_R}\tilde\gamma^\mu\partial_\mu\psi_R\,.
-\end{align}
-Entonces
-\begin{align}
-   \mathcal{L}\to\mathcal{L}'=&i\overline{\psi_R}\tilde\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\tilde\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,,
-\end{align}
-donde $\tilde\gamma^\mu=U\gamma^\mu U^\dagger$, con $U=\gamma^0$. Como las dos representaciones dan lugar a la misma física, podemos decir que la Acción en términos de espinores $L,R$ de cuatro componentes es invariante bajo la transformación de paridad.
-
-La existencia de ambos espinores $\psi_{L,R}$ garantizan que el Lagrangiano de Dirac es invariante bajo la transformación de paridad. 
-
-La corriente de la electrodinámica cuántica en ec.~\eqref{eq:222qft} (o la de la cromodinámica cuántica, ec.~\eqref{eq:223qft}) conservan paridad ya que, siguiendo los mismos pasos que en la ec.~\eqref{eq:221qft}
-\begin{align}
-  \label{eq:224qft}
-  \overline{\psi}\gamma^\mu\psi=\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\to\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\,.
-\end{align}
-Si para alguna partícula, como es el caso del neutrino, no existe la componente derecha, entonces la correspondiente interacción vectorial viola paridad y no puede tener interacciones electromagnéticas ni fuertes, es decir, no se acopla con el ftón o los gluones. Además dicha partícula no puede tener masa de Dirac. En el caso del neutrino esto se entiende pues al no tenr carga eléctrica sólo reuiere dos grados de libertad independientes.
-
-De otro lado, si una determinada interacción, como es el caso de la interacción débil, solo participa la componente izquierda de la ec.~\eqref{eq:224qft}, está corresponde a una interacción del tipo
-\begin{align}
-  \overline{\psi}_L\gamma^\mu\psi_L&=\overline{\psi}P_R\gamma^\mu P_L\psi=\overline{\psi}\gamma^\mu P_L\psi\nonumber\\
-  &=\overline{\psi}\gamma^\mu\left(\frac{1-\gamma_5}{2}\right)\psi\nonumber\\
-  &=\tfrac{1}{2}\overline{\psi}\left(\gamma^\mu-\gamma^\mu\gamma_5\right)\psi\,,
-\end{align}
-que de acuerdo a la asignación en la Tabla corresponde a una corriente V--A. 
 
 \section{Spontaneous symmetry breaking}
 \begin{frame}[fragile,allowframebreaks]
@@ -3801,6 +3750,88 @@ El mecanismo completo mediante el cual, a partir de un Lagrangiano invariante ga
 El número de grados de libertad independientes en el Lagrangiano original en la ec.~\eqref{eq:89qft} es cuatro. Correspondientes a los dos grados de libertad del bosón gauge no masivo y los dos del campo escalar complejo. En el Lagrangiano final en la ec.~\eqref{eq:94qft} no aparece el bosón de Goldstone. Sin embargo esto no es un problema porque dicho Lagrangiano también tiene cuatro grados de libertad correspondientes a  los tres grados de libertad del bosón gauge masivo y al grado de libertad del bosón de Higgs. 
 
 \end{frame}
+
+
+\section{Fermiones quirales de cuatro componentes}
+\label{sec:ferm-quir-de}
+
+Sea
+\begin{align}
+  P_L\equiv&\frac{1-\gamma_5}{2}\nonumber\\
+  P_R\equiv&\frac{1+\gamma_5}{2}\,.
+\end{align}
+Además
+\begin{align}
+  \psi_L\equiv P_L\psi\nonumber\\
+  \psi_R\equiv P_R\psi\,.
+\end{align}
+Entonces
+\begin{align}
+  \psi=\psi_L+\psi_R\,.
+\end{align}
+
+Las matrices $P_{L,R}$ tienen las propiedades
+\begin{align}
+  P_L+P_R&=1 & P_{L,R}^2&=P_{L,R}P_{L,R}=P_{L,R}\nonumber\\
+  P_L P_R&=0& P_{L,R}^\dagger&=P_{L,R}\,.
+\end{align}
+Usando la ec.~(\ref{eq:218qft})
+\begin{align}
+  P_{L,R}\gamma^\mu=\frac{1\mp\gamma_5}{2}\gamma^\mu=\gamma^\mu\frac{1\pmm\gamma_5}{2}=\gamma^\mu P_{R,L}
+\end{align}
+Para escribir el Lagrangiano en término de los nuevos $\psi_{L,R}$ debemos tener en cuenta que
+\begin{align}
+  \overline{\psi_{L,R}}=(P_{L,R}\psi)^\dagger\gamma^0=\psi^\dagger P_{L,R}\gamma^0=\psi^\dagger\gamma^0P_{R,L}=\overline{\psi}P_{R,L}
+\end{align}
+\begin{align}
+  \label{eq:221qft}
+  \mathcal{L}=&i\overline{\psi}\gamma^\mu\partial_\mu\psi-m\overline{\psi}\psi\nonumber\\
+  =&i\overline{\psi}(P_L+P_R)\gamma^\mu\partial_\mu\psi-m\overline{\psi}(P_L+P_R)\psi\nonumber\\
+  =&i\overline{\psi}P_L\gamma^\mu\partial_\mu\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu\psi-m\overline{\psi}P_L\psi-m\overline{\psi}P_R\psi\nonumber\\
+  =&i\overline{\psi}P_L P_L\gamma^\mu\partial_\mu\psi+i\overline{\psi}P_R P_R\gamma^\mu\partial_\mu\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
+  =&i\overline{\psi}P_L\gamma^\mu\partial_\mu P_R\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu P_L\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
+  =&i\overline{\psi_R}\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,.
+\end{align}
+En términos de espinores de izquierdos y derechos de cuatro componentes la transformación de paridad 
+\begin{align}
+  \label{eq:220qft}
+  t&\to t&\mathbf{x}&\to -\mathbf{x}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\nonumber\\
+  \partial_0&\to \partial_0&\boldsymbol{\nabla}&\to -\boldsymbol{\nabla}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\,.
+\end{align}
+Además $\mathbf{L}=\mathbf{r}\timesm \mathbf{p}\to(-\mathbf{r})\timesm (-\mathbf{p})=\mathbf{L}$, y como $\gamma^\mu$ esta asociado al momento angular intrínsico, entonces también $\gamma^\mu\to\gamma^\mu$
+
+
+Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio de argumento en los campos que desaparece en la integral de la Acción) y la representación de paridad \eqref{eq:parityrep}:
+\begin{align}
+  \overline{\psi_R}\gamma^\mu\partial_\mu\psi_R=\overline{\psi_R}\gamma^0\partial_0\psi_R+\overline{\psi_R}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_R 
+\to&\overline{\psi_L}\gamma^0\partial_0\psi_L-\overline{\psi_L}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
+=&\overline{\psi_L}\gamma^0\partial_0\psi_L+\overline{\psi_L}\boldsymbol{\gamma}^\dagger\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
+=&\overline{\psi_L}\gamma^0\gamma^0\gamma^0\partial_0\psi_L+\overline{\psi_L}\gamma^0\boldsymbol{\gamma}\gamma^0\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
+=&\overline{\psi_L}\tilde\gamma^0\partial_0\psi_L+\overline{\psi_L}\tilde{\boldsymbol{\gamma}}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
+=&\overline{\psi_R}\tilde\gamma^\mu\partial_\mu\psi_R\,.
+\end{align}
+Entonces
+\begin{align}
+   \mathcal{L}\to\mathcal{L}'=&i\overline{\psi_R}\tilde\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\tilde\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,,
+\end{align}
+donde $\tilde\gamma^\mu=U\gamma^\mu U^\dagger$, con $U=\gamma^0$. Como las dos representaciones dan lugar a la misma física, podemos decir que la Acción en términos de espinores $L,R$ de cuatro componentes es invariante bajo la transformación de paridad.
+
+La existencia de ambos espinores $\psi_{L,R}$ garantizan que el Lagrangiano de Dirac es invariante bajo la transformación de paridad. 
+
+La corriente de la electrodinámica cuántica en ec.~\eqref{eq:222qft} (o la de la cromodinámica cuántica, ec.~\eqref{eq:223qft}) conservan paridad ya que, siguiendo los mismos pasos que en la ec.~\eqref{eq:221qft}
+\begin{align}
+  \label{eq:224qft}
+  \overline{\psi}\gamma^\mu\psi=\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\to\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\,.
+\end{align}
+Si para alguna partícula, como es el caso del neutrino, no existe la componente derecha, entonces la correspondiente interacción vectorial viola paridad y no puede tener interacciones electromagnéticas ni fuertes, es decir, no se acopla con el ftón o los gluones. Además dicha partícula no puede tener masa de Dirac. En el caso del neutrino esto se entiende pues al no tenr carga eléctrica sólo reuiere dos grados de libertad independientes.
+
+De otro lado, si una determinada interacción, como es el caso de la interacción débil, solo participa la componente izquierda de la ec.~\eqref{eq:224qft}, está corresponde a una interacción del tipo
+\begin{align}
+  \overline{\psi}_L\gamma^\mu\psi_L&=\overline{\psi}P_R\gamma^\mu P_L\psi=\overline{\psi}\gamma^\mu P_L\psi\nonumber\\
+  &=\overline{\psi}\gamma^\mu\left(\frac{1-\gamma_5}{2}\right)\psi\nonumber\\
+  &=\tfrac{1}{2}\overline{\psi}\left(\gamma^\mu-\gamma^\mu\gamma_5\right)\psi\,,
+\end{align}
+que de acuerdo a la asignación en la Tabla corresponde a una corriente V--A. 
 
 \section{Standard model Lagrangian}
 \label{sec:stand-model-lagr}
