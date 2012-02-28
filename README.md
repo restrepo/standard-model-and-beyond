@@ -40,3 +40,10 @@ the following lines:
 
 The figures/ dir contains the figures in pdf with some sources in svg.
 
+This file was written in Markdown wiki format: 
+
+* [Help](http://daringfireball.net/projects/markdown/syntax)
+* [Example in GithHub](https://raw.github.com/github/gollum/master/README.md)
+
+
+
