@@ -2,8 +2,11 @@ Detailed notes in Quantum Field Theory
 ======================================
 
 > Diego Restrepo
+
 > Instituto de Física
+
 > Universidad de Antioquia
+
 > diego.restrepo _AT_ fisica.udea.edu.co
 
 The updated PDF generated from this document is at:
