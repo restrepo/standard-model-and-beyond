@@ -3272,15 +3272,15 @@ El Lagrangiano de interacción es:
 
 From \cite{Feynman:1986er} (pag 136):
 \begin{quote}
-  The quarks have an additional type of polarization that is not related to geometry. The idiot physicists, unable to come up with any wonderful Greek words anymore, call this type of polarization by the unfortunate name of ``color'', which has nothing to do with color in the nornal sense. At a particular time, a quark can be in one of three conditions, or ``colors''--R, G, or B (can you guess what they stand for?). A quark's ``color'' can be changed when the quarl emits or absorbs a gluon. The gluons comw in eigth diffent types, according to the ``colors'' they can couple with. For example, if a red quark changes to green, it emits a red-antigreen gluon--a gluon that takes the red from quark and gives it green (``antigreen'' means the gluon is carrying green in the opposite direction). This gluon could be absorved by a grren quark, which changes to red (see Fig.~\ref{fig:qcd}). There are eigth different possible gluons, such as red-antired, red-antiblue, red-antigrren, and so on (you'd think there'd be nine, but for technical reasons, onw is missing)\footnote{
+  The quarks have an additional type of polarization that is not related to geometry. The idiot physicists, unable to come up with any wonderful Greek words anymore, call this type of polarization by the unfortunate name of ``color'', which has nothing to do with color in the nornal sense. At a particular time, a quark can be in one of three conditions, or ``colors''--R, G, or B (can you guess what they stand for?). A quark's ``color'' can be changed when the quark emits or absorbs a gluon. The gluons come in eigth diffent types, according to the ``colors'' they can couple with. For example, if a red quark changes to green, it emits a red-antigreen gluon--a gluon that takes the red from quark and gives it green (``antigreen'' means the gluon is carrying green in the opposite direction). This gluon could be absorved by a green quark, which changes to red (see Fig.~\ref{fig:qcd}). There are eigth different possible gluons, such as red-antired, red-antiblue, red-antigreen, and so on (you'd think there'd be nine, but for technical reasons, onw is missing)\footnote{
     \begin{align*}
       \begin{pmatrix}
-        r\bar{r} & r\bar{b} r\bar{g}\\ 
-        b\bar{r} & b\bar{b} b\bar{g}\\ 
-        g\bar{r} & g\bar{b} g\bar{g}\\ 
+        r\bar{r} & r\bar{b} &r\bar{g}\\ 
+        b\bar{r} & b\bar{b} &b\bar{g}\\ 
+        g\bar{r} & g\bar{b} &g\bar{g}\\ 
       \end{pmatrix},\qquad\text{with}\quad r\bar{r}+b\bar{b}+g\bar{g}=0
     \end{align*}
-}. The theory is not very complicated.  The complete rule of gluons is: gluons couople with things having ``color''--it just requires a little bookkeeping to keep track of where the ``colors go''.  There is, however, an interesesting possibility created by this rule: gluons can couple with other gluons (see Fig.~\ref{fig:qcd3gluon}).
+}. The theory is not very complicated.  The complete rule of gluons is: gluons couple with things having ``color''--it just requires a little bookkeeping to keep track of where the ``colors go''.  There is, however, an interesesting possibility created by this rule: gluons can couple with other gluons (see Fig.~\ref{fig:qcd3gluon}).
 \end{quote}
 
 %11 12 13
@@ -3296,7 +3296,7 @@ El primer término da lugar a interacciones de cambio de color de quarks como la
   \label{fig:qcd}
 \end{figure}
 
-Mientras que el segundo término da lugar a autointeracciones de los gluones como se muestra en la Figura \ref{fig:qcd3gluon}
+Mientras que el segundo y tercer término dan lugar a autointeracciones de los gluones como se muestra en la Figura \ref{fig:qcd3gluon}
 \begin{figure}
   \centering
   \includegraphics{qcd3gluon}% In qcd.svg as a layer
@@ -3556,11 +3556,11 @@ Escribamos el Lagrangiano para una partícula escalar real de masa $m$ como
 \end{equation}
 con
 \begin{equation}
-  V(\phi)=\tfrac{1}{2}\mu^2.
+  V(\phi)=\tfrac{1}{2}\mu^2\phi^2.
 \end{equation}
 Este Lagrangiano es simétrico bajo la transformación discreta $\phi\to-\phi$. 
 
-Si $\mu^2\gt 0$ el campo tiene excitaciones alrededor del mínimo del potencial que cuestan energía y dicho término se interpreta como la masa de la partícula. Ver figura \ref{fig:x2}. En Teoría Cuántica de Campos al estado de mínima energía se le llama el vacío y las excitaciones alrededor del vació corresponden a las partículas.
+Cuando $\mu^2\gt 0$, el campo tiene excitaciones alrededor del mínimo del potencial que cuestan energía y dicho término se interpreta como la masa de la partícula. Ver figura \ref{fig:x2}. En Teoría Cuántica de Campos al estado de mínima energía se le llama el vacío y las excitaciones alrededor del vació corresponden a las partículas.
 %noinstiki
 \begin{figure} %noinstiki
   \centering %noinstiki
@@ -3792,7 +3792,7 @@ Para escribir el Lagrangiano en término de los nuevos $\psi_{L,R}$ debemos tene
   =&i\overline{\psi}P_L\gamma^\mu\partial_\mu P_R\psi+i\overline{\psi}P_R\gamma^\mu\partial_\mu P_L\psi-m\overline{\psi}P_L P_L\psi-m\overline{\psi}P_R P_R\psi\nonumber\\
   =&i\overline{\psi_R}\gamma^\mu\partial_\mu\psi_R+i\overline{\psi_L}\gamma^\mu\partial_\mu\psi_L-m(\overline{\psi_R}\psi_L+\overline{\psi_L}\psi_R)\,.
 \end{align}
-En términos de espinores de izquierdos y derechos de cuatro componentes la transformación de paridad 
+En términos de espinores izquierdos y derechos de cuatro componentes la transformación de paridad 
 \begin{align}
   \label{eq:220qft}
   t&\to t&\mathbf{x}&\to -\mathbf{x}&\psi_L(t,\mathbf{x})\to&\psi_R(t,-\mathbf{x}),& \psi_R(t,\mathbf{x})&\to\psi_L(t,-\mathbf{x})\nonumber\\
@@ -3801,7 +3801,7 @@ En términos de espinores de izquierdos y derechos de cuatro componentes la tran
 Además $\mathbf{L}=\mathbf{r}\timesm \mathbf{p}\to(-\mathbf{r})\timesm (-\mathbf{p})=\mathbf{L}$, y como $\gamma^\mu$ esta asociado al momento angular intrínsico, entonces también $\gamma^\mu\to\gamma^\mu$
 
 
-Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio de argumento en los campos que desaparece en la integral de la Acción) y la representación de paridad \eqref{eq:parityrep}:
+Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio de argumento en los campos que desaparece en la integral de la Acción)
 \begin{align}
   \overline{\psi_R}\gamma^\mu\partial_\mu\psi_R=\overline{\psi_R}\gamma^0\partial_0\psi_R+\overline{\psi_R}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_R 
 \to&\overline{\psi_L}\gamma^0\partial_0\psi_L-\overline{\psi_L}\boldsymbol{\gamma}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
@@ -3821,9 +3821,9 @@ La existencia de ambos espinores $\psi_{L,R}$ garantizan que el Lagrangiano de D
 La corriente de la electrodinámica cuántica en ec.~\eqref{eq:222qft} (o la de la cromodinámica cuántica, ec.~\eqref{eq:223qft}) conservan paridad ya que, siguiendo los mismos pasos que en la ec.~\eqref{eq:221qft}
 \begin{align}
   \label{eq:224qft}
-  \overline{\psi}\gamma^\mu\psi=\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\to\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\,.
+  \overline{\psi}\gamma^\mu\psi=\overline{\psi_L}\gamma^\mu\psi_L+\overline{\psi_R}\gamma^\mu\psi_R\to\overline{\psi_L}\tilde{\gamma}^\mu\psi_L+\overline{\psi_R}\tilde{\gamma}^\mu\psi_R\,.
 \end{align}
-Si para alguna partícula, como es el caso del neutrino, no existe la componente derecha, entonces la correspondiente interacción vectorial viola paridad y no puede tener interacciones electromagnéticas ni fuertes, es decir, no se acopla con el ftón o los gluones. Además dicha partícula no puede tener masa de Dirac. En el caso del neutrino esto se entiende pues al no tenr carga eléctrica sólo reuiere dos grados de libertad independientes.
+Si para alguna partícula, como es el caso del neutrino, no existe la componente derecha, entonces la correspondiente interacción vectorial viola paridad y no puede tener ni interacciones electromagnéticas ni fuertes, es decir, no se acopla con el fotón o los gluones. Además dicha partícula no puede tener masa de Dirac. En el caso del neutrino esto se entiende pues al no tener carga eléctrica sólo requiere dos grados de libertad independientes.
 
 De otro lado, si una determinada interacción, como es el caso de la interacción débil, solo participa la componente izquierda de la ec.~\eqref{eq:224qft}, está corresponde a una interacción del tipo
 \begin{align}
@@ -3887,8 +3887,8 @@ En las interacciones débiles sólo participan las partes izquierdas de los camp
 =&i\overline{e_L}\gamma^\mu\partial_\mu e_L+i\overline{e_R}\gamma^\mu\partial_\mu e_R-m_e(\overline{e_R}e_L+\overline{e_L}e_R)+
 i\overline{\nu_L}\gamma^\mu\partial_\mu\nu_L\nonumber\\
 &+i\overline{u_L}\gamma^\mu\partial_\mu u_L+i\overline{u_R}\gamma^\mu\partial_\mu u_R\nonumber\\
-&-m_e(\overline{u_R}u_L+\overline{u_L}u_R)
-i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu\partial_\mu d_R-m_e(\overline{d_R}d_L+\overline{d_L}d_R)\,.
+&-mue(\overline{u_R}u_L+\overline{u_L}u_R)+
+i\overline{d_L}\gamma^\mu\partial_\mu d_L+i\overline{d_R}\gamma^\mu\partial_\mu d_R-m_d(\overline{d_R}d_L+\overline{d_L}d_R)\,.
 \end{align}
 
 
@@ -3968,8 +3968,13 @@ All the particles in this Lagrangian are massless. It is only good for the gluon
   \begin{pmatrix}
     \phi^+\\
     \phi^0
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \phi_1+i\phi_2\\
+\phi_3+i\phi_4
   \end{pmatrix}\,.
-\end{equation} 
+\end{equation}
+The ``+'' and 0 superindexes for just for later convenience.
 The full Lagrangian involving those fields are 
 \begin{align}
      \mathcal{L}=&i\overline{Q}\gamma^\mu\mathcal{D}_\mu Q+i\overline{L}\gamma^\mu\mathcal{D}_\mu L+
@@ -4050,7 +4055,7 @@ Sin perdida de generalidad los cuatro grados de libertad de $\Phi$, pueden escri
   \Phi=&e^{i\eta_j(x)T^j}
   \begin{pmatrix}
     0\\
-    \frac{1}{\sqrt{2}}H(x)
+    \frac{1}{\sqrt{2}}[H(x)+v]
   \end{pmatrix}.
 \end{align}
 El potencial escalar, definido por
@@ -4059,14 +4064,14 @@ El potencial escalar, definido por
 \end{align}
 se reduce a
 \begin{align}
-  V(H)=\frac{1}{2}\mu^2H^2+\frac{1}{4}\lambda H^4\,.
+  V(H)=\frac{1}{2}\mu^2(H+v)^2+\frac{1}{4}\lambda (H+v)^4\,.
 \end{align}
 
 \end{frame}
 \subsection{Spontaneous symmetry breaking in $SU(3)_c\timesm  SU(2)_L\timesm  U(1)_Y$}
 
 \begin{frame}[fragile,allowframebreaks]
-Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar pero con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\timesm  U(1)_Y$
+Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhiggs}, los cuatro grados de libertad de $\Phi$, pueden escribirse en forma polar con la parte real neutra desplazada para generar la ruptura espontánea de la simetría $SU(2)_L\timesm  U(1)_Y$
 \begin{align}
 \label{eq:92qft}
   \Phi=&e^{i\eta_jT^j}
@@ -4091,13 +4096,16 @@ Retornando al doblete de Higgs del modelo estándar en la ec.~\eqref{eq:polarhig
     \frac{1}{\sqrt{2}}(H(x)+v-iG^0)
   \end{pmatrix}.\nonumber
 \end{align}
-Para $SU(2)_L\timesm  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
+Para $SU(2)_L\timesm  U(1)_Y$ tenemos cuatro generadores y cuatro bosones gauge. De acuerdo a la parametrización en ec.~\eqref{eq:92qft} esperamos que aparezcan tres bosones de Goldstone y un campo de Higgs con masa, de manera que quedará un generador no roto correspondiente a una simetría remanente del vacío $U(1)_Q$
 \begin{equation}
-  SU(2)\timesm  U(1)_Y\overset{\langle\Phi\rangle}{\longrightarrow}U(1)_Q.
+  SU(2)_L\timesm  U(1)_Y\overset{\langle\Phi\rangle}{\longrightarrow}U(1)_Q.
 \end{equation}
+
 Se espera entonces que el espectro consista de un bosón de Higgs, tres bosones gauge masivos, y un bosón gauge sin masa.
 
-Para $\alpha=0$, podemos hacer una transformación gauge usando la ec.~\eqref{eq:93qft} sobre el campo $\Phi$, tal que
+Podemos hacer una transformación gauge similar a la de la 
+%DEBUG: corregir
+ec.~\eqref{eq:93qft} sobre el campo $\Phi$, tal que
 \begin{equation}
   \label{eq:123qft}
     \Phi\to\Phi'=
@@ -4108,7 +4116,7 @@ Para $\alpha=0$, podemos hacer una transformación gauge usando la ec.~\eqref{eq
 \end{equation}
 que define el \emph{gauge unitario}. En adelante sin embargo omitiremos las primas sobre los campos transformados $\Phi'$ y $W'_{\mu\nu}$.
 
-Comenzaremos analizando la parte escalar del Lagrangiano del Modelo Estándar para una generación dad en la ec.~\eqref{eq:smscalar}
+Comenzaremos analizando la parte escalar del Lagrangiano del Modelo dada en la ec.~\eqref{eq:smscalar}
 \begin{equation}
   \mathcal{L}_{WBH}=\frac{1}{2}\left[\mathcal{D}^\mu \begin{pmatrix}
     0\\
@@ -4159,6 +4167,7 @@ $\mathcal{D}_\mu$ corresponde a la matrix $2\timesm  2$
     -\frac{i}{\sqrt{2}}g W^-_\mu&\partial_\mu-i\left(-\frac{1}{2}g W^3_\mu+g'Y B_\mu\right)
   \end{pmatrix}.
 \end{align}
+
 Entonces
 \begin{align}
 \mathcal{D}_\mu\Phi=\begin{pmatrix}
@@ -4173,11 +4182,11 @@ De modo que
   \mathcal{L}_{WBH}=&\frac{1}{2}\left[\begin{pmatrix}
     -\frac{i}{\sqrt{2}}g{W^\mu}^+(H+v)\\
     \partial^\mu H-i\left(-\frac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)
-  \end{pmatrix}\right]^\dagger\begin{pmatrix}
+  \end{pmatrix}\right]^\dagger\cdot\nonumber\\
+   &\begin{pmatrix}
     -\frac{i}{\sqrt{2}}gW_\mu^+(H+v)\\
     \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)
-  \end{pmatrix}\nonumber\\
-  &-V(H)\nonumber\\
+  \end{pmatrix}-V(H)\nonumber\\
 =&\frac{1}{2}\begin{pmatrix}
     \frac{i}{\sqrt{2}}g{W^\mu}^-(H+v)&
     \partial^\mu H+i\left(-\frac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)
@@ -4187,10 +4196,21 @@ De modo que
     \partial_\mu H-i\left(-\frac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)
   \end{pmatrix}-V(H)\nonumber\\
   =&\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2-V(H)\nonumber\\
-  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)\right]\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)\right]\nonumber\\
- =&\frac{1}{2}\partial^\mu H\partial_\mu H-V(H)
-  +\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)^2(H+v)^2
+  &+\frac{1}{2}\left[\partial^\mu H+i\left(-\tfrac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)(H+v)\right]
+  \timesm\nonumber\\
+  &\qquad\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)\right]\nonumber\\
+ =&-V(H)
+  +\frac{1}{4}g^2{W^\mu}^-W_\mu^+(H+v)^2+\nonumber\\
+  &+\frac{1}{2}\partial^\mu H\partial_\mu H+\frac{1}{2}\left(-\tfrac{1}{2}gW_3^\mu+g'Y_\Phi B^\mu\right)^2(H+v)^2
 \end{align}
+donde la última línea corresponde a la magnitud del ``número'' complejo: 
+\begin{align}
+\left[\partial_\mu H-i\left(-\tfrac{1}{2}gW^3_\mu+g'Y_\Phi B_\mu\right)(H+v)\right]
+\end{align}
+
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
+
 Entonces
 \begin{align}
   \label{eq:96qft}
@@ -4199,7 +4219,8 @@ Entonces
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{2}\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu+{g'}^2Y_\Phi ^2B^\mu B_\mu\right)^2\left(H^2+2vH+v^2\right)
+  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu+{g'}^2Y_\Phi ^2B^\mu B_\mu\right)^2\timesm\nonumber\\
+&\left(H^2+2vH+v^2\right)
 \end{align}
 Haciendo $Y_\Phi =1/2$ como en la ec.~\eqref{eq:lhyp},
 \begin{align}
@@ -4364,8 +4385,8 @@ In the Unitary gauge
   \mathcal{L}_{\text{Yukawa}}=&h_e\overline{L}\Phi e_R+h_d\overline{Q}\Phi d_R+h_u\overline{Q}\widetilde{\Phi}u_R+\text{h.c}\nonumber\\
 =&\frac{1}{\sqrt{2}}\left[h_e(\overline{e_L}e_R+\overline{e_R}e_L)+
 h_d(\overline{d_L}d_R+\overline{d_R}d_L)
-+h_u(\overline{u_L}u_R+\overline{u_R}u_L)\right]
-\left[H(x)+v\right]\nonumber\\
++h_u(\overline{u_L}u_R+\overline{u_R}u_L)\right]\timesm\nonumber\\
+&\qquad\left[H(x)+v\right]\nonumber\\
 =&\frac{v}{\sqrt{2}}\left(h_e\overline{e}e+h_d\overline{d}d
 +h_u\overline{u}u\right)
 \left[\frac{H(x)}{v}+1\right]\,,
@@ -4527,7 +4548,7 @@ Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemo
 \label{eq:zf4}
     &\left[\overline{Q}\gamma^\mu\left( \tau_3-2s_W^2\widehat{Q}_Q\right)Q
       -2s_W^2\overline{u_R}\gamma^\mu\widehat{Q}_u u_R-2s_W^2\overline{d_R}\gamma^\mu\widehat{Q}_d d_R\right]Z_\mu\nonumber\\
-&=\left[\begin{pmatrix}
+=&\left[\begin{pmatrix}
       \overline{u_L} &\overline{d_L}
     \end{pmatrix}\gamma^\mu
     \begin{pmatrix}
@@ -4537,21 +4558,21 @@ Para escribir este Lagrangiano en terminos de espinores de 4 componentes, tomemo
     \begin{pmatrix}
       u_L\\
       d_L\\
-    \end{pmatrix}
-    -2s_W^2\overline{u_R}\gamma^\mu\widehat{Q}_u u_R-2s_W^2\overline{d_R}\gamma^\mu\widehat{Q}_d d_R
+    \end{pmatrix}\right.\nonumber\\
+    &\left.-2s_W^2\overline{u_R}\gamma^\mu\widehat{Q}_u u_R-2s_W^2\overline{d_R}\gamma^\mu\widehat{Q}_d d_R
   \right]Z_\mu\nonumber\\
-    &=\left\{\overline{u_L}\gamma^\mu u_L-\overline{d_L}\gamma^\mu d_L
+    =&\left\{\overline{u_L}\gamma^\mu u_L-\overline{d_L}\gamma^\mu d_L
 -2s_W^2\left[\left(\overline{u_L}+\overline{u_R}\right)\gamma^\mu Q_u\left(u_L+u_R\right)
 +\left(\overline{d_L}+\overline{d_R}\right)\gamma^\mu Q_d\left(d_L+d_R\right)
 \right]\right\}Z_\mu \nonumber\\
-        &=\left[\frac{1}{2}\overline{u}\gamma^\mu(1-\gamma_5)u-\frac{1}{2}\overline{d}\gamma^\mu(1-\gamma_5)d
+        =&\left[\frac{1}{2}\overline{u}\gamma^\mu(1-\gamma_5)u-\frac{1}{2}\overline{d}\gamma^\mu(1-\gamma_5)d
 -2s_W^2\left(\overline{u}\gamma^\mu Q_u u
 +\overline{d}\gamma^\mu Q_d d
 \right)\right]Z_\mu\nonumber\\
-        &=\left\{\overline{u}\gamma^\mu\left[\left(\frac{1}{2}-2s_W^2Q_u\right)-\frac{1}{2}\gamma_5\right]u+
+        =&\left\{\overline{u}\gamma^\mu\left[\left(\frac{1}{2}-2s_W^2Q_u\right)-\frac{1}{2}\gamma_5\right]u+
 \overline{d}\gamma^\mu\left[\left(-\frac{1}{2}-2s_W^2Q_d\right)+\frac{1}{2}\gamma_5\right]d
 \right\}Z_\mu\nonumber\\
-  &=\left[\overline{u}\gamma^\mu\left(v_u-a_u\gamma_5\right)u+\overline{d}\gamma^\mu\left(v_d-a_d\gamma_5\right)d\right]Z_\mu\,,
+  =&\left[\overline{u}\gamma^\mu\left(v_u-a_u\gamma_5\right)u+\overline{d}\gamma^\mu\left(v_d-a_d\gamma_5\right)d\right]Z_\mu\,,
   \end{align}
 donde
 \begin{align}
@@ -4625,7 +4646,7 @@ donde
 \end{align}
 
 \end{frame}
-\subsection{Lagrangiano del modelo estándar para la primer generación}
+\subsection{Lagrangiano del modelo estándar para la primera generación}
 
 \begin{frame}[fragile,allowframebreaks]
 Recopilando los resultados para $\mathcal{L}_{WBH}$ \eqref{eq:lwbhfin}, $\mathcal{L}_{\text{Yukawa}}$ \eqref{eq:lyukfin}, $\mathcal{L}_{\text{fermion}}$ \eqref{eq:lfermionfin}, y $\mathcal{L}_{\text{gauge}}$ \eqref{eq:lgaguefin}, tenemos  para $f=\nu_e,e,u,d$; $q=u,d$ [con $f'=e$ ($d$) para $f=\nu_e$ ($u$) ]
