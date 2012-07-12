@@ -1,5 +1,5 @@
 Detailed lecture notes in Quantum Field Theory
-======================================
+=============================================
 
 > Diego Restrepo
 

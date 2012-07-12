@@ -3723,7 +3723,7 @@ Para obtener directamente el espectro después de la ruptura espontánea de sime
 \end{equation}
 \begin{align}
   \mathcal{L}\to\mathcal{L}' &=\left[\left(\mathcal{D}^\mu\right)'\phi'\right]^*\left(\mathcal{D}_\mu\right)'\phi'-\mu^2\left(\phi^*\right)'\phi'-\lambda\left[\left(\phi^*\right)'\phi'\right]^2-\tfrac{1}{4}\left(F^{\mu\nu}F_{\mu\nu}\right)'\nonumber\\
- &=\tfrac{1}{2}\left[\partial^\mu H+ig{A'}^\mu(H+v)\right]\left[\partial_\mu H-ig{A'}_\mu(H+v)\right]-\tfrac{1}{2}\mu^2(H+v)^2-\tfrac{1}{4}\lambda(H+v)^4-\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}
+ &=\tfrac{1}{2}\left[\partial^\mu H+ig{A'}^\mu(H+v)\right]\left[\partial_\mu H-ig{A'}_\mu(H+v)\right]-\tfrac{1}{2}\mu^2(H+v)^2-\tfrac{1}{4}\lambda(H+v)^4-\tfrac{1}{4}\left(F^{\mu\nu}F_{\mu\nu}\right)'\,.
 \end{align}
 En adelante omitiremos las primas, aunque debe estar claro que se esta trabajando en el gauge específico de la ec.~\eqref{eq:87qft}. Entonces
 \begin{align}
@@ -4219,7 +4219,7 @@ Entonces
 \end{align}
 donde
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu+{g'}^2Y_\Phi ^2B^\mu B_\mu\right)^2\timesm\nonumber\\
+  \mathcal{L}_{ZAH}=\frac{1}{2}&\left(\tfrac{1}{4}g^2W_3^\mu W^3_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu-\tfrac{1}{2}gg'Y_\Phi W_3^\mu B_\mu+{g'}^2Y_\Phi ^2B^\mu B_\mu\right)\timesm\nonumber\\
 &\left(H^2+2vH+v^2\right)
 \end{align}
 Haciendo $Y_\Phi =1/2$ como en la ec.~\eqref{eq:lhyp},
@@ -4249,20 +4249,41 @@ Sea
     -g' & g
   \end{pmatrix},
 \end{equation}
-con $\tan\theta_W=g'/g$, tal que $g\sin\theta_W=g'\cos\theta_W$, como en la ec.~\eqref{eq:82qft}. Si (ver ec.~\eqref{eq:81qft}),
-\begin{equation}
+con $\tan\theta_W=g'/g$, tal que $g\sin\theta_W=g'\cos\theta_W$, como en la ec.~\eqref{eq:82qft}. Note que $V$ es una matrix ortogonal que satisface $VV^T=V^TV=\mathbf{1}$. Si (ver ec.~\eqref{eq:81qft}),
+\begin{align}
   \begin{pmatrix}
     W^3_\mu\\
     B_\mu
-  \end{pmatrix}=V
+  \end{pmatrix}=&V
   \begin{pmatrix}
     Z_\mu\\
     A_\mu
+  \end{pmatrix}&\text{ó}\qquad
+  \begin{pmatrix}
+    Z_\mu\\
+    A_\mu
+  \end{pmatrix}=&V^T
+  \begin{pmatrix}
+    W^3_\mu\\
+    B_\mu
   \end{pmatrix}
-\end{equation}
+\end{align}
 entonces
 \begin{align}
-  \mathcal{L}_{ZAH}=\frac{1}{8}
+  \mathcal{L}_{ZAH}=&\frac{1}{8}
+  \begin{pmatrix}
+    W^{3\mu} & B^\mu
+  \end{pmatrix}VV^T
+  \begin{pmatrix}
+    g^2&-gg'\\
+    -gg'&{g'}^2
+  \end{pmatrix}VV^T
+  \begin{pmatrix}
+    W^3_\mu\\
+    B_\mu
+  \end{pmatrix}
+\left(H^2+2vH+v^2\right)\nonumber\\
+=&\frac{1}{8}
   \begin{pmatrix}
     Z^\mu & A^\mu
   \end{pmatrix}\left[V^T
@@ -4496,7 +4517,7 @@ de modo que
   \end{pmatrix}L
 \,.
 \end{align}
-La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se deje satisface para obtener apropiadamente la QED a partir de la interaccioón electrodébil asociada al grupo semisimple $SU(2)_L\timesm  U(1)_Y$.
+La ec. \eqref{eq:gn}, se conoce como la relación Gell-Mann--Nishijima, y establece la condición que se debe satisfacer para obtener apropiadamente la QED a partir de la interacción electrodébil asociada al grupo semisimple $SU(2)_L\timesm  U(1)_Y$.
 De esta forma
 \begin{align}
     \mathcal{L}_{A Z L}
@@ -4767,10 +4788,31 @@ donde $i,a,\alpha,\eta$ son índices en los espacios de familia, $SU(2)_L$, $SU(
 \mathcal{L}\supset&h^D_{11}{(d_{R\eta}^\dagger)}_1^1\gamma_0^{\eta\rho}\widetilde{\Phi}^1Q_{11\rho}^2+\ldots\nonumber\\
 \supset&h^D_{11}\overline{d_R}^r\phi^{0*}d_{L}^r+\ldots\,
 \end{align}
-corresponde a la interacción de Yukawa del quark down rojo ($r$) con un campo escalar complejo neutro en carga eléctrica pero de isospín débil $1/2$. En forma compacta la primera expresión en la ec.~(\ref{eq:264qft}) puede escribirse como
+%DEBUG;definir isopin debil
+corresponde a la interacción de Yukawa del quark down rojo ($r$) con un campo escalar complejo neutro en carga eléctrica pero de isospín débil $1/2$. En forma compacta la primera expresión en la ec.~(\ref{eq:264qft}) puede escribirse como (en el gauge unitario)
 \begin{align}
-  \mathcal{L}\supset\overline{\mathbf{d}_R} \mathbf{h}^D \Phi^\dagger \mathbf{Q}+\overline{\mathbf{Q}_L}\Phi{\mathbf{h}^{D}}^\dagger  \mathbf{d}_R
+  \mathcal{L}\supset&\overline{\mathbf{d}_R} \mathbf{h}^D \Phi^\dagger \mathbf{Q}+\overline{\mathbf{Q}_L}\Phi{\mathbf{h}^{D}}^\dagger  \mathbf{d}_R\nonumber\\
+  &\supset\overline{\mathbf{d}_R} \mathbf{h}^D
+  \begin{pmatrix}
+    0 &
+    \frac{H(x)+v}{\sqrt{2}}
+  \end{pmatrix}
+  \begin{pmatrix}
+    \mathbf{u}_L\\
+    \mathbf{d}_L\\
+  \end{pmatrix}
+  +\text{h.c}\nonumber\\
+  &\supset\overline{\mathbf{d}_R} \mathbf{h}^D
+  \left(\frac{H(x)+v}{\sqrt{2}}\right)\mathbf{d}_L
+  +\text{h.c}\nonumber\\
+  &\supset\overline{\mathbf{d}_R} \frac{\mathbf{h}^D}{\sqrt{2}}H(x)\mathbf{d}_L
+  +\overline{\mathbf{d}_R} \frac{\mathbf{h}^Dv}{\sqrt{2}}\mathbf{d}_L
+      +\text{h.c}\nonumber\\
+  &\supset\overline{\mathbf{d}_R} \frac{\mathbf{h}^D}{\sqrt{2}}H(x)\mathbf{d}_L
+  +\overline{\mathbf{d}_R} \mathbf{M}^D\mathbf{d}_L
+      +\text{h.c}\,.
 \end{align}
+La matrix $3\times 3$ $\mathbf{M}^3$ es en general una matriz compleja no diagonal, la cual se debe diagonalizar con una transformación biunitaria (de similaridad).
 Retornado a la ec.~(\ref{eq:265qft}), tenemos que para definir apropiadamente la masa de los quarks, rotamos de los autoestados de interacción a los autoestados de masa con la matrices unitarias
 \begin{align}
   \label{eq:229qft}
@@ -4955,6 +4997,8 @@ entonces
 \end{align}
 Una mejor predicción de dichos resultados en el contexto del Modelo Estándar requiere tener en cuenta las correcciones radiativas.
 
+
+El ME también tiene una predicción concreta para la amplitud del $Z$ a neutrinos, $\Gamma_{\text{inv}}$:
 \begin{align}
   \frac{\Gamma_{\text{inv}}}{\Gamma_l}=&\frac{\sum_l\Gamma(Z\to\bar{\nu}_l\nu_l)}{\Gamma(Z\to e^+ e^-)}\nonumber\\
   &=\frac{N_\nu\Gamma(Z\to\bar{\nu}_e\nu_e)}{\Gamma(Z\to e^+ e^-)}\nonumber\\
@@ -4992,7 +5036,7 @@ El propagador para el bosón $W$ de momentum $q$ resulta ser
 \begin{align}
   \widetilde{D}_{\mu\nu}=\frac{1}{q^2-m_W^2}\left(g_{\mu\nu}-\frac{q_\mu q_\nu}{m_W^2}\right)\,.
 \end{align}
-Para los propósitos actuales la obtención de este resultado no es necesaria, el punto importante es que cuando las masas de las partículas iniciales y finales son mucho más pequeñas que $m_W$, esto se reduce a
+Para los propósitos actuales la obtención de este resultado no es necesaria, el punto importante es que cuando los momentum de las partículas iniciales y finales son mucho más pequeñas que $m_W$, esto se reduce a
 \begin{align}
   \widetilde{D}_{\mu\nu}=-\frac{g_{\mu\nu}}{m_W^2}\,.
 \end{align}
