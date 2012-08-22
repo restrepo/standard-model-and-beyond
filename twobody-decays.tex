@@ -38,9 +38,10 @@ We will keep the $d\Gamma$ notation until all the integrals get evaluated.
 
 The two-body decays in eq.~\eqref{eq:152} is 
 \begin{align}
-\label{eq:154}
+\label{eq:154pd}
 \frac{d\Gamma}{d\Omega}=
-&\frac{1}{64 \pi^2M^3}\left|\mathcal{M}_{fi}\right|^2\lambda^{1/2}(M^2,m_2^2,m_1^2)\end{align}
+&\frac{1}{64 \pi^2M^3}\left|\mathcal{M}_{fi}\right|^2\lambda^{1/2}(M^2,m_2^2,m_1^2)
+\end{align}
 
 
 
@@ -64,7 +65,7 @@ We consider now a general Yukawa interaction term
 For the $H\to \overline{f}_1f_2$ decay.
 The interaction between the Higgs boson with fermions\footnote{In this case we consider only electrons, by the formula is easy generalizable to other fermions} is given by the Yukawa interaction term \cite{lsm}
 \begin{align}
-\label{eq:155}
+\label{eq:155l}
 \mathcal{L}_{\text{Higgs}}&=-G_{f}\frac{(v+H)}{\sqrt{2}}(\overline{f}_{R}f_{L}+\overline{f}_{L}f_{R})\nonumber\\
 &=-\frac{G_{f}v}{\sqrt{2}}\overline{f}f-\frac{G_{f}H}{\sqrt{2}}\overline{f}f\nonumber\\
 &=-m_f\overline{f}f-m_f\left(G_{F}\sqrt{2}\right)^{1/2}\overline{f}f
@@ -133,7 +134,7 @@ The several sums in Ec.~(\ref{eq:80}) can be calculated by expressing the produc
 \end{align}
 Taking into account that  $\operatorname{Tr}[\gamma_{\nu}]=0$, and from the commutation relations for $\gamma_\mu$ matrices
 \begin{align*}
-\operatorname{Tr}[\gamma_{\mu}\gamma_{\nu}]&=tr[-\gamma_{\nu}\gamma_{\mu}+2g^{\mu\nu}]\\
+\operatorname{Tr}[\gamma_{\mu}\gamma_{\nu}]&=\operatorname{Tr}[-\gamma_{\nu}\gamma_{\mu}+2g^{\mu\nu}]\\
 &=\operatorname{Tr}[-\gamma_{\nu}\gamma_{\mu}]+2g^{\mu\nu}\operatorname{Tr}[\mathbf{1}]\\
 &=\operatorname{Tr}[-\gamma_{\mu}\gamma_{\nu}]+2g^{\mu\nu}4 \qquad (\operatorname{Tr}[AB]=\operatorname{Tr}[BA])\\
 \operatorname{Tr}[\gamma_{\mu}\gamma_{\nu}]&=4g^{\mu\nu}.
@@ -144,7 +145,7 @@ In this way
 &\operatorname{Tr}[(\cancel{p}_{1}+m_{1})(\cancel{p}_{2}-m_{2})]\\
 &=\operatorname{Tr}[(\gamma_{\mu}p^{\mu}_{1}+m_{1})(\gamma_{\nu}p^{\nu}_{2}-m_{1})]\\
 &=\operatorname{Tr}[\gamma_{\mu}\gamma_{\nu}p^{\mu}_{1}p^{\nu}_{2}-m_{2}\gamma_{\mu}p^{\mu}_{1}+m_{1}\gamma_{\nu}p^{\nu}_{2}-m_{1}m_2]\\
-&=p^{\mu}_{1}p^{\nu}_{2}tr[\gamma_{\mu}\gamma_{\nu}]-4m_1 m_2\\
+&=p^{\mu}_{1}p^{\nu}_{2}\operatorname{Tr}[\gamma_{\mu}\gamma_{\nu}]-4m_1 m_2\\
 &=4g_{\mu\nu}p^{\mu}_{1}p^{\nu}_{2}-4m_1m_2\\
 &=4(p_{1}\cdot p_{2}-m_1m_2). 
 \end{align*}
@@ -175,12 +176,12 @@ Therefore, the scattering  amplitude is
 \sum_{s_1,s_2}|\mathcal{M}|^{2}=2h^2\left[M^2-(m_1+m_2)^2\right]
 \label{eq:82}
 \end{equation}
-Replacing back in eq.~\eqref{eq:155}
+Replacing back in eq.~\eqref{eq:154pd}
 \begin{align}
 \frac{d\Gamma}{d\Omega}=
 &\frac{h^2}{32 \pi^2M^3}\lambda^{1/2}(M^2,m_2^2,m_1^2)\left[M^2-(m_1+m_2)^2\right]
 \end{align}
-After the integration in $d\Omega_{\text{CM}}=4\pi$ we have
+After the integration $\int d\Omega_{\text{CM}}=4\pi$\footnote{$\int_0^{2\pi}d\phi\int_0^\pi\sin\theta d\theta=4\pi $} we have
 \begin{align}
 \Gamma=&\frac{h^2}{8 \pi M^3}\lambda^{1/2}(M^2,m_2^2,m_1^2)\left[M^2-(m_1+m_2)^2\right]
 \end{align}
@@ -191,9 +192,9 @@ For $m_1=m_2=m_f$
 \end{align}
 and therefore
 \begin{align}
-\Gamma=&\frac{h^2}{8 \pi}M\left(1-\frac{4m_f^2}{M^2}\right)^{3/2}
+\Gamma(H\to f\overline{f})=&\frac{h^2}{8 \pi}M\left(1-\frac{4m_f^2}{M^2}\right)^{3/2}
 \end{align}
-In the case of the standard model Higgs with mass $M_H$ decaying to fermion pai, according to the Lagrangian in eq.~\eqref{eq:155}
+In the case of the standard model Higgs with mass $M_H$ decaying to fermion pair, according to the Lagrangian in eq.~\eqref{eq:155l}
 
 \begin{equation}
 \Gamma(H\to f\overline{f})=\frac{M_{H}m_{f}^{2}G_{F}}{4\pi\sqrt{2}}
