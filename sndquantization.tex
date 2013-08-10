@@ -1043,6 +1043,22 @@ Using (\ref{eq:24}) we have in a finite box
 =&2E_{\mathbf{n}}V
    \delta_{{\mathbf{n}},{\mathbf{m}}}\,.
 \end{align}
+
+\section{Propagator}
+%copy from Alvaro Notes:
+With conventions
+\begin{align}
+  \widehat{\phi}(x)=\widehat{\phi}_+(x)+\widehat{\phi}_-(x)
+\end{align}
+where
+\begin{align}
+  \widehat{\phi}_+(x)=&\int d^3p \frac{1}{\sqrt{(2\pi)^32E_\mathbf{p} }}
+  \widehat{a}_\mathbf{p} e^{-i p\cdot x }\nonumber\\
+  \widehat{\phi}_-(x)=&\int d^3p \frac{1}{\sqrt{(2\pi)^32E_\mathbf{p} }}\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x }\,.
+\end{align}
+\begin{align*}
+  \left( \partial^{\mu}\partial_{\mu}+m^2 \right)\phi(x)=J(x)
+\end{align*}
 \section{Quantization of Fermions}
 \label{sec:quant-ferm}
 We consider now the Dirac equation
@@ -1268,6 +1284,73 @@ The solutions to the free Dirac equations are
 \begin{inprogress}
   Check the normalization factor.
 \end{inprogress}
+
+We define the projection operators as
+\begin{align*}
+  \Lambda_{\pm}(p)=\frac{\pm \cancel{p}+m}{2m}\,,
+\end{align*}
+with properties
+\begin{itemize}
+\item 
+\begin{align*}
+  \left[ \Lambda_{\pm}(p) \right]^2=\Lambda_{\pm}(p)\,.
+\end{align*}
+\item
+  \begin{align*}
+    \Lambda_-\Lambda_+=\Lambda_+\Lambda_-=&0 \nonumber\\
+    \Lambda_-+\Lambda_+=&1\,.
+  \end{align*}
+\item
+  \begin{align*}
+    \Lambda_+ u_s(p)=&u_s(p)\nonumber\\
+    \Lambda_+ v_s(p)=&0\nonumber\\
+  \end{align*}
+\end{itemize}
+
+We define
+\begin{align*}
+  \boldsymbol{\Sigma}=&
+  \begin{pmatrix}
+   \sigma^{23}&\sigma^{31}&\sigma^{12} 
+  \end{pmatrix}\nonumber\\
+  \Sigma_p=&\frac{\Sigma\cdot\mathbf{p}}{|\mathbf{p}|}\nonumber\\
+\Pi_{\pm}(p)=&\frac{1\pm\Sigma_{p}}{2}\,,
+\end{align*}
+where
+\begin{align*}
+  \left[ \Pi_{\pm}(p) \right]^2=\Pi_{\pm}(p)\,.
+\end{align*}
+Moreover
+\begin{align*}
+  \left[ \Lambda_{\pm},\Pi_{\pm} \right]=&0\,,
+\end{align*}
+and
+\begin{align*}
+  \Sigma_p u_s(p)=&s u_s(p) \nonumber\\
+   \Sigma_p v_s(p)=&-s v_s(p)\,.
+\end{align*}
+
+We define also the \emph{chiral operator}
+\begin{align*}
+  L_{\pm}=&\frac{1\pm {\gamma^{5}}^{2}}{2}\nonumber\\
+  \left(L_{\pm}\right)^2=&L_{\pm}\nonumber\\
+  L_{\pm}+L_{\mp}=&1 \nonumber\\
+  L_{\pm}L_{\mp}=&0\,.
+\end{align*}
+
+To build the \emph{spin projector} is a generalization applicable to a
+particle of $\mathbf{p}=0$
+\begin{align*}
+  n^0       =&\frac{\mathbf{p}\cdot\hat{s}}{m}\nonumber\\
+  \mathbf{n}=&\hat{s}+\frac{n^0\mathbf{p}}{E+m}\,.
+\end{align*}
+With them we can define
+\begin{align*}
+  p_{\uparrow}=&\frac{1}{2} \left(1+\gamma^5\cancel{n}  \right)\nonumber\\
+  p_{\downarrow}=&\frac{1}{2} \left(1+\gamma^5\cancel{n}  \right)\,.
+\end{align*}
+
+
 
 As with the scalar field, we write the Dirac field as an integral over momentum space of the plane wave solutions, with creation and annihilation operators as coefficients,
 \begin{align}
