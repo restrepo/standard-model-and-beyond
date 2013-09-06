@@ -1,0 +1,142 @@
+
+\chapter{Neutrinos}
+
+\section{Weinberg operator}
+
+
+Based on Akhmedov, hep-ph/0001264; Langacker, arXiv:1112.5992
+
+With the definition
+\begin{align*}
+  \psi^c=&C\bar{\psi}^T &\psi^c_L=&C\overline{\psi_L}^T\,.
+\end{align*}
+
+The Majorana mass term should be  of the form $\overline{\nu^{c}_L}\nu_L$. Since
+$\nu_L$ has $I_3=1/2$, the Majorana mass term
+has $I_3=1$\footnote{Any $SU(2)$ spinor $\chi$, $\chi^T i\tau_2$ satisfy that
+  \begin{itemize}
+  \item both $\chi_1^{\dagger}\chi_2$ and $\chi_1^T i\tau \chi_2$ are invariant.
+  \item both $\chi_1^{\dagger}\boldsymbol{\tau}\chi_2$ and $\chi_1^T
+    i\tau \boldsymbol{\tau}\chi_2$ transform as vectors.
+  \end{itemize}
+}. With $L=\begin{pmatrix}\nu_L&e_L\end{pmatrix}^T$
+\begin{align*}
+\overline{L^c}\boldsymbol{\tau}i\tau_2L&\sim \left( 3,-2 \right)\,.
+\end{align*}
+One would need an isotriplet scalar field $\Delta\sim (3,2)$, which
+either elemental or composite. The term
+\begin{align*}
+  H^T \boldsymbol{\tau} i\tau_2H&\sim \left( 3,-2 \right),
+\end{align*}
+can play the role of the composite triplet, where $H=\begin{pmatrix}
+H^+ & H^0\end{pmatrix}^T$
+
+Can the operator
+\begin{align*}
+  \frac{f}{M}\left(\overline{L^c}\boldsymbol{\tau}i\tau_2L\right)\cdot
+  \left( H^T \boldsymbol{\tau} i\tau_2H\right)
+\end{align*}
+be generated as an effective operator at some loop level?
+
+
+Explicitly we have
+\begin{align*}
+  \overline{L^c}\boldsymbol{\tau}i\tau_2L=
+  &\begin{pmatrix}
+    \overline{\nu^c_L} & \overline{e^c_L}
+  \end{pmatrix}\left[ 
+  \begin{pmatrix}
+    0 &1\\
+    1 & 0\\    
+  \end{pmatrix},
+  \begin{pmatrix}
+    0 &-i\\
+    i & 0\\    
+  \end{pmatrix},
+  \begin{pmatrix}
+    1 &0\\
+    0 & -1\\    
+  \end{pmatrix}
+ \right]
+ \begin{pmatrix}
+   e_L\\
+  -\nu_L\\
+ \end{pmatrix}\nonumber\\
+ =&\begin{pmatrix}
+    \overline{\nu^c_L} & \overline{e^c_L}
+  \end{pmatrix}\left[ 
+  \begin{pmatrix}
+    -\nu_L\\
+    e_L\\
+  \end{pmatrix},
+  i\begin{pmatrix}
+    \nu_L\\
+    e_L\\
+  \end{pmatrix},
+  \begin{pmatrix}
+    e_L\\
+    \nu_L\\
+  \end{pmatrix}
+ \right]\nonumber\\
+  =&\left(\overline{e^c_L}e_L-\overline{\nu^c_L}\nu_L,
+    i\left(\overline{\nu^c_L}\nu_L+\overline{e^c_L}e_L\right),
+   \overline{\nu^c_L}e_L+\overline{e^c_L}\nu_L
+   \right)
+\end{align*}
+Replacing back $\overline{\nu^c_L}\to H^+$, $\overline{e^c_L}\to H^0$, $\nu_L\to H^+$, and $e_L\to H^0$, we have
+\begin{align*}
+H^T \boldsymbol{\tau} i\tau_2H=&
+  \left(H^0H^0-H^+H^+,
+    i\left( H^0H^0+H^+H^+ \right),
+   H^+H^0+H^+H^+
+   \right).
+\end{align*}
+\begin{align}
+\label{eq:details}
+&\left(\overline{L^c}\boldsymbol{\tau}i\tau_2L\right)\cdot
+  \left( H^T \boldsymbol{\tau} i\tau_2H\right)\nonumber\\
+&=2 \left( 
+-\overline{e^c_L}e_LH^+H^+-\overline{\nu^c_L}\nu_LH^0H^0
+ +\overline{\nu^c_L}e_LH^+H^0
++\overline{e^c_L}\nu_LH^+H^0\right)\nonumber\\
+&=-2\left( \overline{\nu^c_L}H^0-\overline{e^c_L}H^+ \right)
+\left( H^0\nu_L-H^+e_L \right)\\
+&=-2\left[
+  \begin{pmatrix}
+    \overline{\nu^c_L}& \overline{e^c_L}
+  \end{pmatrix}
+  \begin{pmatrix}  
+    H^0\\
+   -H^+    
+  \end{pmatrix}
+\right]\left[ 
+  \begin{pmatrix}
+    H^0 & -H^+
+  \end{pmatrix}
+  \begin{pmatrix}
+   \nu_L\\
+   e_L\\    
+  \end{pmatrix}
+ \right]\nonumber
+\end{align}
+
+
+  We have the Weinberg operator
+  \begin{align*}
+    \mathcal{L}=&  -\frac{f}{2M}\left(\overline{L^c}\boldsymbol{\tau}i\tau_2L\right)\cdot
+  \left( H^T \boldsymbol{\tau} i\tau_2H\right)+\text{h.c}\nonumber\\
+=&\frac{f}{M}\left( \overline{L^c}\widetilde{H}^{*} \right)
+\left( \widetilde{H}^{\dagger}L \right)+\text{h.c}\nonumber\\
+=&\frac{f}{M}\left( \overline{\nu^c_L}H^0-\overline{e^c_L}H^+ \right)
+\left( H^0\nu_L-H^+e_L \right)+\text{h.c}\nonumber\\
+=&\frac{f}{M}\left(\epsilon_{12}\overline{L^c_1}H_2+\epsilon_{21}\overline{L^c_2}H_1  \right)\left( \epsilon_{12}L_1H_2+\epsilon_{21}L_2H_1 \right)++\text{h.c}\nonumber\\
+=&\frac{f}{M}\overline{L^c_a}H_cL_bH_d\epsilon_{ac}\epsilon_{bd}+\text{h.c}\,.
+\end{align*}
+
+See Weinberg,  PRL43(1979)1566.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond"
+%%% End: 
