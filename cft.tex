@@ -452,7 +452,12 @@ da lugar a las ecuaciones de continuidad (\ref{eq:122qft})(\ref{eq:235qft})
   \partial_\mu T^\mu_0&=0,\nonumber\\
 \partial_\mu{T}^\mu_i&=0
 \end{align}
-Las cargas conservadas corresponden entonces a $T^0_0$ y $T^0_i$.
+Las cargas conservadas se pueden obtener de las densidades de carga
+$T^0_0$ y $T^0_i$. 
+
+\subsection{Conservación del moméntum}
+Comencemos con las densidades de carga asociadas a
+la conservación del moméntum lineal.
 Usando  las ecs.~(\ref{eq:136qft}) en la ec.~(\ref{eq:138qft})
 \begin{align}
   T^0_i=&\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}(\partial_i\psi)
@@ -466,7 +471,8 @@ Entonces, definiendo
     \psi\boldsymbol{\nabla}\psi^*-\psi^*\boldsymbol{\nabla}\psi
   \right)
 \end{equation}
-Además
+Procedemos ahora a reemplazar $\psi\boldsymbol{\nabla}\psi^*$ por la
+derivada total
 \begin{align}
  \mathbf{T}^0&=\frac{i}{2}
   \left(
@@ -488,6 +494,15 @@ De modo que $\langle\widehat{\mathbf{p}}\rangle$ son las cargas conservadas asoc
 \begin{equation}
   \widehat{\mathbf{p}}=-i\boldsymbol{\nabla}\,.
 \end{equation}
+
+En general, el valor esperado de un operador $ \widehat{\cal O}$, se define en mecánica cuántica como
+\begin{align*}
+  \langle\widehat{\cal O}\rangle=\int_V d^3x\,\psi^{*}\widehat{\cal O}\psi\,.
+\end{align*}
+
+\subsection{Conservación de la energía}
+
+
 De otro lado
 \begin{align}
   T^0_0&=\frac{\partial\mathcal{L}}{\partial(\partial_0\psi)}{\partial_0\psi}+{\partial_0\psi^*}\frac{\partial\mathcal{L}}{\partial(\partial_0\psi^*)}-\mathcal{L}\nonumber\\
@@ -725,30 +740,62 @@ En notación matricial
 \begin{align}
  g=\Lambda^T g \Lambda\,. 
 \end{align}
-From eq.~\eqref{eq:lrinv} we also have
+\begin{english}
+From eq.~\eqref{eq:lrinv} we also have  
+\end{english}
+\begin{spanish}
+De la ec.~\eqref{eq:lrinv} tenemos que
+\end{spanish}
+
 \begin{align}
   g^{\rho\mu}g_{\mu\nu}=&g^{\rho\mu}{\Lambda^\alpha}_{\mu}g_{\alpha\beta}{\Lambda^\beta}_{\nu}\nonumber\\
   \delta^\rho_\nu=&{\Lambda_\beta}^\rho{\Lambda^\beta}_{\nu}\,,
 \end{align}
-or
+\begin{english}
+or  
+\end{english}
+\begin{spanish}
+o
+\end{spanish}
 \begin{align}
   {\Lambda_\alpha}^\mu{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,.
 \end{align}
+\begin{english}
 Since
+\end{english}
+\begin{spanish}
+Ya que
+\end{spanish}
 \begin{align}
   {\left(\Lambda^{-1}\right)^\mu}_\alpha{\Lambda^\alpha}_{\nu}=\delta^\mu_\nu\,
 \end{align}
+\begin{english}
 the inverse of $\Lambda$ is
+\end{english}
+\begin{spanish}
+el inverso de $\Lambda$ es
+\end{spanish}
 \begin{align}
   {\left(\Lambda^{-1}\right)^\mu}_\alpha={\Lambda_\alpha}^\mu\,,
 \end{align}
-or
+\begin{english}
+or  
+\end{english}
+\begin{spanish}
+o
+\end{spanish}
 \begin{align}
 \label{eq:lambdainv}
   {\left(\Lambda^{-1}\right)^\mu}_\nu={\Lambda_\nu}^\mu\,,
 \end{align}
 \begin{itemize}
-\item \textbf{Example:} Lorentz invariance
+\item
+\begin{english}
+\textbf{Example:} Lorentz invariance    
+\end{english}
+\begin{spanish}
+\textbf{Ejemplo:} Invarianza de Lorentz
+\end{spanish}
   \begin{align}
     a_\mu b^\mu\to a'_\mu{b'}^\mu=&{\Lambda_\mu}^\nu a_\nu{\Lambda^\mu}_\rho b^p \nonumber\\
     =&{\Lambda_\mu}^\nu a_\nu{\Lambda^\mu}_\rho b^p \nonumber\\
@@ -979,12 +1026,23 @@ En notación de cuadrivectores
   \right)\nonumber\\
   A^\mu\to {A'}^\mu=&A^\mu-\partial^\mu\chi\,.
 \end{align}
-Note that the eq.~\eqref{eq:166qft} can be written as
+\begin{english}
+Note that the eq.~\eqref{eq:166qft} can be written as  
+\end{english}
+\begin{spanish}
+Note que la ec.~\eqref{eq:166qft} se puede escribir como
+\end{spanish}
 \begin{align}
 \label{eq:168qft}
   A_\mu\to A'_\mu=A_\mu-\partial_\mu\chi(x)
 \end{align}
-which is just the transformation obtained in eq.~\eqref{eq:167qft}.
+\begin{english}
+which is just the transformation obtained in eq.~\eqref{eq:167qft}.  
+\end{english}
+\begin{spanish}
+qué es justamente la ecuación de transformación obtenida en la ec.~\eqref{eq:167qft}.  
+\end{spanish}
+
 
 \subsection{Lorentz tranformation for fields}
 
@@ -1455,9 +1513,12 @@ The expansion of the Lagrangian in terms of the field $\psi$, $\psi^*$, and $A_\
 
 By using the sum convention upon repeated indices we have
 \begin{align}
-  \mathcal{L}=&-\frac{1}{2m}\left(\partial_i\psi^*\partial^i\psi-i q \psi^*A^i\partial_i\psi+i q \partial_i\psi^*A^i\psi+q^2A_i A^i \psi^*\psi\right)\nonumber\\
- &-\frac{i}{2}
-  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi+2 i q \psi^*A_0\psi\right]-\frac{1}{4}F^{\mu\nu}F_{\mu\nu}\,.
+  \mathcal{L}=&\frac{1}{2m}\sum_i\partial_i\psi^*\partial_i\psi
+-\frac{i}{2}
+  \left[\psi^*\partial_0\psi-(\partial_0\psi^*)\psi\right] \nonumber\\
+&+\frac{1}{2m}\sum_i\left[ -i q \psi^*A_i\partial_i\psi+i q \left(\partial_i\psi^*\right) A^i\psi+q^2A_i A_i \psi^*\psi\right]\nonumber\\
+ &+ q \psi^*A_0\psi \nonumber\\
+ & -\frac{1}{4}F^{\mu\nu}F_{\mu\nu}\,.
  \end{align}
 
 From this we can obtain the Euler-Lagrange equation for each field.
@@ -1588,7 +1649,11 @@ y reemplazando $\theta\to q\theta$ tenemos
   \mathcal{D}^\mu\psi&\to {\mathcal{D}'}^\mu\psi'=e^{iq\theta(x)}(\mathcal{D}^\mu\psi)\,.
 \end{align}
 En esta convención $q$ corresponde al \emph{generador} de la transformación y $\theta$ al parámetro de la transformación.
-%\left(\right)
+
+The approach to change the Action for a new one invariant under local phase  transformations, is that the electron cannot be longer considered as an isolated \emph{naked} particle. The electron must be always surrounded by some cloud of virtual particles associated with the electromagnetic field in order to guarantee the conservation of the energy and momentum of the system. In general the wave function of the electron can be represented as the exponential of $iEt$ and $i \mathbf{p}\cdot \mathbf{x}$, so that a local phase transformation will change the energy $E$ and the momentum $\mathbf{p}$ of the electron. This changes must be compensated with the corresponding changes in $A_{\mu}$.
+
+Moreover, to be consistent, we could start with the free Lagrangian before the change of the normal derivative by the covariant derivative. The interactions are not longer imposed by hand but a consequence of the improved Action. 
+
 
 \subsection{Euler-Lagrange equation for $A^\mu$}
 %examen:
@@ -3664,6 +3729,26 @@ donde
   m_H^2=2\left|\mu^2\right|=2\lambda v^2
 \end{equation}
 
+\subsection{Ausencia de taquiones}
+
+Uno se podría preocupar por la presencia de un término de masa
+imaginaria en el Lagrangiano, pero como estamos hablando de
+transiciones de fase, estos porcesos deben suceder en presencia de
+temperatura, por ejemplo la temperatura asociada al universo primitivo
+durante las fases tempranas del Big Bang. En presencia de temperatura,
+todas las partículas adquieren una masa térmica proporcional a la
+temperatura como resultado de su interacción con el plasma. De este
+modo, a altas temperaturas la masa de la partícula escalar esta
+dominada por la temperatura y al ser positiva el potencial escalar
+tiene un único mínimo simétrico. Cuando la temperatura baja lo
+suficiente para que la masa al cuadrado negativa domine, el mínimo se
+convierte en un máximo local altamente inestable y ocurre muy
+rapidamente la transición de fase al nuevo mínimo no simétrico donde
+la masa del escalar esta bien definida.
+
+\subsection{Caso complejo}
+
+
 Consideremos ahora un campo escalar complejo sin término de masa, pero con potencial:
 \begin{equation}
   \label{eq:85qft}
@@ -3689,7 +3774,7 @@ La simetría del Lagrangiano corresponde a $U(1)$ global. Este potencial corresp
 
 El Lagrangiano escalar complejo es equivalente al Lagragiano de dos campos escalares reales con los mismos paramétros. Para un conjunto de $N$ campos reales tenedremos (suma sobre $i$) \cite{Peskin}\footnote{§ 11.1}: 
 \begin{align}
-  \mathcal{L}=\frac{1}{2}\partial_\mu\phi^i\partial_\mu\phi_i-\frac{1}{2}\mu^2\phi_i\phi^i-\frac{1}{2}\mu^2\left(\phi_i\phi^i\right)^2\,,
+  \mathcal{L}=\frac{1}{2}\partial^\mu\phi^i\partial_\mu\phi_i-\frac{1}{2}\mu^2\phi_i\phi^i-\frac{1}{2}\mu^2\left(\phi_i\phi^i\right)^2\,,
 \end{align}
 que es invariante bajo una simetría $O(N)$
 \begin{align}
@@ -3712,17 +3797,40 @@ It is now only natural to consider a fourth possibility: What happens if we incl
 \end{quote}
  
 
-En el caso de la Acción invariante gauge local bajo el Grupo $U(1)$, tenemos el Lagrangiano \eqref{eq:56qft}:
+En el caso de la Acción invariante gauge local bajo el Grupo $U(1)$, tenemos el Lagrangiano 
 \begin{equation}
   \label{eq:89qft}
   \mathcal{L}=\left(\mathcal{D}^\mu\phi\right)^*\mathcal{D}_\mu\phi-\mu^2\phi^*\phi-\lambda\left(\phi^*\phi\right)^2-\tfrac{1}{4}F^{\mu\nu}F_{\mu\nu}
   \qquad 
-  \mu^2\lt 0\text{ and } \lambda\gt 0
+  \mu^2\lt 0\text{ and } \lambda\gt 0\,.
 \end{equation}
-Para obtener directamente el espectro después de la ruptura espontánea de simetría es conveniente usar la transformación gauge de la ec.~\eqref{eq:86qft}. Haciendo $\theta(x)=-\eta(x)$:
+Este es el Lagrangiano más general posible para un campo escalar complejo y el campo $A_\mu$ que deja la Acción invariante de Lorentz e invariante bajo la transformación gauge $U(1)$
+\begin{align}
+\label{eq:sqedgu}
+  \phi(x)\to \phi'(x)=e^{i\theta(x)} \phi(x)\,,
+\end{align}
+y da lugar a la electrodinámica cuántica escalar.
+
+
+\subsection{Gauge unitario}
+Como $\phi$ es un campo complejo, podemos escribirlo en coordenadas polares con un campo real asociado a la magnitud del campo complejo y otro a la fase
+\begin{align*}
+  \phi(x)=\varphi(x)e^{i\eta(x)}
+\end{align*}
+Expandiendo el campo $\varphi(x)$ alrededor del mínimo: $\varphi(x)=(H(x)+v)/\sqrt{2}$, tenemos
+\begin{align*}
+    \phi(x)=e^{i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)\,.
+\end{align*}
+
+
+La libertad gauge nos permite en un momento determinado escoger la fase $\theta(x)$ de la ec.~\eqref{eq:sqedgu} sin que ese alteren los observables de la teoría. Para el campo en coordenadas polares tenemos que
+\begin{align*}
+     \phi\to\phi'=e^{i\theta(x)}e^{i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)
+\end{align*}
+Haciendo $\theta(x)=-\eta(x)$,
 \begin{equation}
 \label{eq:87qft}
-   \phi\to\phi'=e^{i\theta(x)}e^{i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)=\frac{H(x)+v}{\sqrt{2}}
+   \phi\to\phi'=e^{-i\eta(x)+i\eta(x)}\left(\frac{H(x)+v}{\sqrt{2}}\right)=\frac{H(x)+v}{\sqrt{2}}
 \end{equation}
 \begin{align}
   \mathcal{L}\to\mathcal{L}' &=\left[\left(\mathcal{D}^\mu\right)'\phi'\right]^*\left(\mathcal{D}_\mu\right)'\phi'-\mu^2\left(\phi^*\right)'\phi'-\lambda\left[\left(\phi^*\right)'\phi'\right]^2-\tfrac{1}{4}\left(F^{\mu\nu}F_{\mu\nu}\right)'\nonumber\\
@@ -3758,7 +3866,7 @@ El número de grados de libertad independientes en el Lagrangiano original en la
 
 A review ot the use of the Proca Equations for a massive photon in superconductivity is given in~\cite{massivephoton}. A popularization review along this lines is in the book of Frank Wilczek ``The Lightness of Being'' (see Additional references).
 
-The photon mass inside a superconductor is $10^{-11}\,$GeV (or 1/1000 of the electron mass accordin to~\cite{massivephoton}). Also from the article in Beamline $\lambda\sim 10\ \mu\text{m}$ y $M_\gamma=\hbar/\lambda c$ %check numbers
+The photon mass inside a superconductor is $10^{-11}\,$GeV (or 1/1000 of the electron mass according to~\cite{massivephoton}). Also from the article in Beamline $\lambda\sim 10\ \mu\text{m}$ y $M_\gamma=\hbar/\lambda c$ %check numbers
 
 There are two important length scales in a superconductor. The first measures how efficientrly the condensate expels a magnetic field. In fact, the expulsion is not 
 
@@ -3834,7 +3942,7 @@ Entonces la transformación de paridad da lugar a (sin tener en cuenta el cambio
 =&\overline{\psi_L}\gamma^0\partial_0\psi_L+\overline{\psi_L}\boldsymbol{\gamma}^\dagger\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
 =&\overline{\psi_L}\gamma^0\gamma^0\gamma^0\partial_0\psi_L+\overline{\psi_L}\gamma^0\boldsymbol{\gamma}\gamma^0\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
 =&\overline{\psi_L}\tilde\gamma^0\partial_0\psi_L+\overline{\psi_L}\tilde{\boldsymbol{\gamma}}\cdot\boldsymbol{\nabla}\psi_L\nonumber\\
-=&\overline{\psi_R}\tilde\gamma^\mu\partial_\mu\psi_R\,.
+=&\overline{\psi_L}\tilde\gamma^\mu\partial_\mu\psi_L\,.
 \end{align}
 Entonces
 \begin{align}
