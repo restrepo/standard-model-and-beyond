@@ -6,6 +6,7 @@
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{graphicx}
 \usepackage{cancel}
+\usepackage[svgnames]{xcolor}
 \graphicspath{{figures/}}
 \usepackage[spanish]{babel}
 \spanishdecimal{.}
@@ -15,6 +16,11 @@
 \usepackage{siunitx} 
 \sisetup{group-minimum-digits=4} %compatibility with PDG
 \usepackage{bm}
+\usepackage[toc,page]{appendix}
+\usepackage{simplewick}
+\usepackage{listings}
+\usepackage[displaymath,textmath,sections,graphics,floats]{preview}
+
 \usepackage{comment}
 \includecomment{inprogress}
 \specialcomment{inprogress}
@@ -71,6 +77,27 @@
 \newcommand{\tofc}[1]{#1} % if full
 %\renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
 %\includeonly{chapter6}
+ \lstset{language=python
+%,inputencoding=utf8
+%,showspaces=false
+%{\small Hola} {\footnotesize Hola} {\scriptsize Hola} {\tiny Hola}
+,basicstyle=\small\ttfamily
+%,basicstyle=\small\sffamily,
+,keywordstyle=\color{blue}
+,commentstyle=\normalfont\ttfamily\color{red}
+,stringstyle=\color{Green}
+%,numbers=left
+%,numberstyle=\tiny
+,frame=b
+,inputencoding=utf8
+,extendedchars=true
+,columns=fullflexible
+,showstringspaces=false
+%,backgroundcolor=\color{lightgray}
+,texcl=true
+}
+
+
 \begin{document}
 
 
