@@ -1,0 +1,161 @@
+\documentclass[12pt,letterpaper]{book}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Force pdflatex processing even with "$ latex" (required by arXiv)
+\pdfoutput=1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage[svgnames]{xcolor}
+\usepackage[english]{babel}
+\usepackage{bm}
+\usepackage{simplewick}
+\usepackage[toc,page]{appendix}
+\graphicspath{{figures/}}
+\usepackage{listings}
+\usepackage[displaymath,textmath,sections,graphics,floats]{preview}
+%%%%%%%%%
+\usepackage{comment}
+\includecomment{inprogress}
+\specialcomment{inprogress}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{inprogress}
+
+\includecomment{borrar}
+\specialcomment{borrar}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+\excludecomment{borrar}
+
+\includecomment{details}
+\specialcomment{details}
+{\begingroup}{\endgroup}
+%\excludecomment{details}
+\PreviewEnvironment{details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Beamer compability layer
+%to compile beamer use beyond.beamer.tex
+%\includecomment{frame}
+%\specialcomment{frame}
+%{\begingroup}{\endgroup}
+%\excludecomment{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\includecomment{english}
+\specialcomment{english}
+{\begingroup}{\endgroup}
+%\excludecomment{english}
+%%%%%%%%%%%%%%%%%%%%%%%%
+\includecomment{spanish}
+\specialcomment{spanish}
+{\begingroup}{\endgroup}
+\excludecomment{spanish}
+%%%%%%
+\renewenvironment{frame}{}{}
+
+
+%\usepackage{bbold}
+\setlength{\textwidth}{180mm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-1cm}
+%\setlength{\topmargin}{-40pt}
+\def\lt{<} % compatibility with instiki
+\def\gt{>} % compatibility with instiki
+\newtheoremstyle{example}{\topsep}{\topsep}%
+     {}%         Body font
+     {}%         Indent amount (empty = no indent, \parindent = para indent)
+     {\bfseries}% Thm head font
+     {}%        Punctuation after thm head
+     {\newline}%     Space after thm head (\newline = linebreak)
+     {\thmname{#1}\thmnumber{ #2}\thmnote{ #3}}%         Thm head spec
+
+   \theoremstyle{example}
+   \newtheorem{example}{Example}[subsection]
+%%comment the aproppiate line
+\newcommand{\tofc}[1]{#1} % if full
+%\renewcommand{\tofc}[1]{} %if  \includeonly{chapter1}
+%\includeonly{feynman}
+
+ \lstset{language=python
+%,inputencoding=utf8
+%,showspaces=false
+%{\small Hola} {\footnotesize Hola} {\scriptsize Hola} {\tiny Hola}
+,basicstyle=\small\ttfamily
+%,basicstyle=\small\sffamily,
+,keywordstyle=\color{blue}
+,commentstyle=\normalfont\ttfamily\color{red}
+,stringstyle=\color{Green}
+%,numbers=left
+%,numberstyle=\tiny
+,frame=b
+,inputencoding=utf8
+,extendedchars=true
+,columns=fullflexible
+,showstringspaces=false
+%,backgroundcolor=\color{lightgray}
+,texcl=true
+}
+%%%%%%%%%%%%%%%%%%%
+%\includeonly{sndquantization}
+%\includeonly{renormalization}
+\begin{document}
+\renewcommand{\thepage}{\roman{page}}
+\begin{titlepage}
+  \begin{center}
+
+    
+\textbf{\huge    Detailed lecture notes on Quantum Field Theory}
+
+    
+
+\vspace{4cm}
+ Diego Restrepo\\
+Instituto de Física\\
+Universidad de Antioquia\\
+2012
+    
+  \end{center}
+\end{titlepage}
+
+\include{license}
+
+
+
+\tofc{
+\renewcommand{\thepage}{\roman{page}}
+\tableofcontents{}
+
+\newpage{}
+}
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}
+
+
+
+%$x^2$
+\include{introduction}
+% \include{cft}
+% \include{numerical}
+% \include{particlesltns}
+% \include{sndquantization}
+% \include{emquantization}
+% \include{propagators}
+% \include{smatrix}
+% \include{twobody-decays}
+% \include{feynman}
+% \include{neutrinos}
+% \include{threebody-decays}
+% \include{renormalization}
+% \include{radiativeneutrinos}
+% \include{bibliography}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond"
+%%% End: 
