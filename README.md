@@ -1,6 +1,8 @@
 Detailed lecture notes in Quantum Field Theory
 =============================================
 
+
+
 > Diego Restrepo
 
 > Instituto de Física
@@ -12,6 +14,8 @@ Detailed lecture notes in Quantum Field Theory
 The updated PDF generated from this document is at:
 
 http://goo.gl/ozsl3
+
+or (partially) [![PDF Status](https://www.sharelatex.com/github/repos/rescolo/beyond-the-standard-model/builds/latest/badge.svg)](https://www.sharelatex.com/github/repos/rescolo/beyond-the-standard-model/builds/latest/output.pdf)
 
 LICENSE: All materials are licensed under the [Creative Commons Attribution-Share Alike 3.0 United States License.](http://creativecommons.org/licenses/by-sa/3.0/us/)
 
