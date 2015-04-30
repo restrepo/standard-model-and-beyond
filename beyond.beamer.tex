@@ -1,0 +1,216 @@
+\documentclass[ignorenonframetext,xcolor=pdftex,dvipsnames,table]{beamer}
+\mode<article>{\usepackage[svgnames]{xcolor}
+\usepackage[colorlinks=true]{hyperref}
+\setlength{\textwidth}{180mm}
+\setlength{\oddsidemargin}{-1cm}
+\setlength{\evensidemargin}{-1cm}
+%\setlength{\topmargin}{-40pt}
+}
+\mode<presentation>{
+\usetheme{Madrid}
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+%\AtBeginSubsection[]
+%{
+%  \begin{frame}<beamer>{Outline}
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+%%%Configure section names to appear in beamer
+\setbeamertemplate{headline}
+{%
+\begin{beamercolorbox}{section in head/foot}
+\vskip2pt\insertsection$\to$\insertsubsection\vskip2pt
+\end{beamercolorbox}%
+}
+%\usepackage[svgnames]{xcolor}
+%%paginacion
+\usefoottemplate{\hfill \insertframenumber{}}% /\inserttotalframenumber}
+%delete the navigation buttons
+\setbeamertemplate{navigation symbols}{}
+}
+% everyone:
+
+\usepackage[utf8]{inputenc}
+%\usepackage{textcomp}
+\usepackage[spanish]{babel}
+\spanishdecimal{.}
+\addto\captionsspanish{%
+\def\tablename{Tabla}%
+}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+%%%%%%%%%%from beyond.tex
+\usepackage{cancel}
+\usepackage{simplewick}
+\usepackage[toc,page]{appendix}
+%%%%%%%%%
+\newcommand{\times}{\times}
+\newcommand{\pm}{\pm}
+\newcommand{\mp}{\mp}
+
+\usepackage{comment}
+\includecomment{inprogress}
+\specialcomment{inprogress}
+{\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
+%\excludecomment{inprogress}
+
+\def\lt{<} % compatibility with instiki
+\def\gt{>} % compatibility with instiki
+%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[colorlinks=true]{hyperref}
+\usepackage{graphicx}
+%\usepackage{color}
+\usepackage{bm}
+\usepackage{framed}
+\definecolor{shadecolor}{named}{gray}
+\newcommand{\filetitle}[1]{
+\begin{shaded}
+\noindent{\color{white}#1}
+\end{shaded}}
+
+
+\graphicspath{{figures/}}
+%%%%%%%%%%%%%%%%%%%%listings%%%%%%%%%%%%%%%
+\usepackage{listings}
+%\usepackage{listingsutf8}
+
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listingm}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\DeclareCaptionFormat{listingmm}{\colorbox{gray}{\parbox{\textwidth}{Hola #3}}}
+\DeclareCaptionFormat{ipython}{\colorbox{lightgray}{\parbox{\textwidth}{\centering IPython}}}
+\DeclareCaptionFormat{terminal}{\parbox[t]{\textwidth}{\centering \fbox{Terminal}}}
+\captionsetup[lstlisting]{format=listingm,labelfont=white,textfont=white}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{bbold}
+\newenvironment{pyprogram}{\captionsetup[lstlisting]{format=listingm,labelfont=white,textfont=white}
+\lstset{frame=bl}}
+{}
+\newenvironment{pysnippet}{\captionsetup[lstlisting]{format=listingm,labelfont=white,textfont=white}}{}
+\newenvironment{ipython}{\captionsetup[lstlisting]{format=ipython}
+\lstset{columns=fixed}}{}
+\newenvironment{pysample}{\captionsetup[lstlisting]{format=ipython}
+\lstset{frame=tb}
+}{}
+\newenvironment{terminal}{\captionsetup[lstlisting]{format=terminal}
+\lstset{language=bash,backgroundcolor=\color{lightgray},belowcaptionskip=-0pt,columns=fixed}
+}{}
+%\newenvironment{ejemplo}{}{}
+
+ \lstset{language=python
+%,inputencoding=utf8
+%,showspaces=false
+%{\small Hola} {\footnotesize Hola} {\scriptsize Hola} {\tiny Hola}
+,basicstyle=\small\ttfamily
+%,basicstyle=\small\sffamily,
+,keywordstyle=\color{blue}
+,commentstyle=\normalfont\ttfamily\color{red}
+,stringstyle=\color{Green}
+%,numbers=left
+%,numberstyle=\tiny
+,frame=b
+,inputencoding=utf8
+,extendedchars=true
+,columns=fullflexible
+,showstringspaces=false
+%,backgroundcolor=\color{lightgray}
+,texcl=true
+}
+
+\newtheorem{ejemplo}[theorem]{Ejemplo}
+
+\newcommand{\chapter}{}
+\newcommand{\ignore}[1]{}
+\begin{document}
+%%Comment the following two lines for full processing
+%\mode<presentation>{\input{cf_tmp}}
+%\end{document}
+
+\mode<presentation>{\input{cft}}
+\mode<presentation>{\input{numerical}}
+\mode<presentation>{\input{bibliography}}
+
+\end{document}
+
+%TEMPLATES:
+
+\chapter{Hola}
+\section{Introduction}
+This is the introduction text. This text is not shown in the
+presentation, but will be part of the article.
+\begin{frame}
+Hola mundo
+\end{frame}
+This text is once more not shown in the presentation.
+\section{Main Part}
+While this text is not shown in the presentation, the section command
+also applies to the presentation.
+We can add a subsection that is only part of the article like this:
+\subsection<article>{Article-Only Section}
+With some more text.
+\begin{frame}
+This text is part both of the article and of the presentation.
+\begin{itemize}
+\item This stuff is also shown in both version.
+\item This too.
+\only<article>{\item This particular item is only part
+of the article version.}
+\item<presentation:only@0> This text is also only part of the article.
+\end{itemize}
+
+\end{frame}
+
+Templates:
+%%%tablas de colores
+\mode<presentation>{\rowcolors{1}{RoyalBlue!20}{}}
+
+\begin{frame}[fragile,allowframebreaks]
+\end{frame}
+
+%numbers in beamer
+\begin{lstlisting}[numbers=left,xleftmargin=1cm,numberstyle=\tiny,escapeinside={(*}{*)}]
+\end{lstlisting}
+
+
+\begin{pyprogram}
+\lstset{numbers=left}
+\begin{lstlisting}[label=XXX,caption=XXX]
+\end{lstlisting}
+\end{pyprogram}
+
+\begin{pyprogram}
+\mode<presentation>{\lstset{basicstyle=\tiny\ttfamily}}
+\filetitle{cinematica.py}
+\lstinputlisting{python/programas/cinematica/cinematica.py}
+\end{pyprogram}
+
+
+
+\begin{ipython}
+\begin{lstlisting}[title=]
+In [1]:
+\end{lstlisting}
+\end{ipython}
+
+\begin{terminal}
+\begin{lstlisting}[title=1]
+
+\end{lstlisting}
+\end{terminal}
+
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+    
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    
+  \end{column}
+\end{columns}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond.beamer.tex"
+%%% End:

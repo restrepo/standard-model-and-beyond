@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0_20" class="java.beans.XMLDecoder">
+ <object class="net.sf.jaxodraw.graph.JaxoSaveGraph">
+  <void property="jaxoDrawVersion">
+   <string>2.0-1</string>
+  </void>
+  <void property="objectList">
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.line.JaxoPLine">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrow">
+      <void id="Color0" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color0"/>
+     </void>
+     <void id="PointArray0" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>63</int>
+        <int>65</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>257</int>
+        <int>65</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray0"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>10</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.line.JaxoGlLine">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrow">
+      <void id="Color1" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color1"/>
+     </void>
+     <void id="PointArray1" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>63</int>
+        <int>139</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>257</int>
+        <int>139</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray1"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>16</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.loop.JaxoPLoop">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrow">
+      <void id="Color2" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color2"/>
+     </void>
+     <void id="PointArray2" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>412</int>
+        <int>132</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>358</int>
+        <int>92</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray2"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>21</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.loop.JaxoGlLoop">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrow">
+      <void id="Color3" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color3"/>
+     </void>
+     <void id="PointArray3" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>576</int>
+        <int>113</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>615</int>
+        <int>167</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray3"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>33</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.arc.JaxoPArc">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrowPosition">
+      <float>0.5</float>
+     </void>
+     <void property="arrow">
+      <void id="Color4" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color4"/>
+     </void>
+     <void property="paintArrow">
+      <boolean>true</boolean>
+     </void>
+     <void id="PointArray4" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>63</int>
+        <int>257</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>155</int>
+        <int>182</int>
+       </object>
+      </void>
+      <void index="2">
+       <object class="java.awt.Point">
+        <int>257</int>
+        <int>257</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray4"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>13</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.arc.JaxoGlArc">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrowPosition">
+      <float>0.5</float>
+     </void>
+     <void property="arrow">
+      <void id="Color5" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color5"/>
+     </void>
+     <void property="paintArrow">
+      <boolean>true</boolean>
+     </void>
+     <void id="PointArray5" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>63</int>
+        <int>355</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>163</int>
+        <int>274</int>
+       </object>
+      </void>
+      <void index="2">
+       <object class="java.awt.Point">
+        <int>257</int>
+        <int>355</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray5"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>22</int>
+     </void>
+    </object>
+   </void>
+   <void method="add">
+    <object class="net.sf.jaxodraw.object.line.JaxoZigZagLine">
+     <void property="DLSeparation">
+      <float>2.0</float>
+     </void>
+     <void property="amp">
+      <int>15</int>
+     </void>
+     <void property="arrowPosition">
+      <float>0.5</float>
+     </void>
+     <void property="arrow">
+      <void id="Color6" property="color"/>
+     </void>
+     <void property="color">
+      <object idref="Color6"/>
+     </void>
+     <void id="PointArray6" property="points">
+      <void index="0">
+       <object class="java.awt.Point">
+        <int>63</int>
+        <int>32</int>
+       </object>
+      </void>
+      <void index="1">
+       <object class="java.awt.Point">
+        <int>257</int>
+        <int>32</int>
+       </object>
+      </void>
+     </void>
+     <void property="points">
+      <object idref="PointArray6"/>
+     </void>
+     <void property="strokeWidth">
+      <float>1.0</float>
+     </void>
+     <void property="wiggles">
+      <int>10</int>
+     </void>
+    </object>
+   </void>
+  </void>
+ </object>
+</java>
