@@ -19,6 +19,8 @@ Two key ingredients to formulate the Quantum Field Theory (QFT) are the quantiza
 Some parts of the discussion were based in some topics of chapters 4-6 of \cite{Maggiore:2005qv}.
 
 
+In general, the formalism of second quantization is usefull to describe the states of an undetermined number of particles and interactions which do not conserve particle number. In addition to high-energy physics where any number of particles may be created or annihilated during a collision process, in statistitical physics it becomes useful to describe a macroscopic body using the grand-canonical statistical ensemble, in which the number of particles is allowed to fluctuate. In condensed-matter states the interactions may modify also the number of various excitation quanta, such as phonons. A more general formalism to discuss this systems is developed in Appendix~\ref{cha:green-functions}.
+
 \section{Quantization of the nonrelativistic string}
 \label{sec:fock-space-real}
 
@@ -905,6 +907,39 @@ The analogy between the simple harmonic oscillator and the field is now complete
 \end{quote}
 
 
+\section{Fock space}
+
+Given the Hilbert space of single-particles $\mathcal{H}$, to construct the space of states of variable particle number, consider the collection of all possible spaces of $n$ identical particles for either bosons ($\nu=1$ or fermions $\nu=-1$, $\mathcal{H}^n_{\nu}$. In particular the one-dimensional $\mathcal{H}^0$ space is defined by
+\begin{align}
+  \mathcal{H}^0=\left\{ \lambda|0\rangle;\lambda\in \mathbb{C} \right\}
+\end{align}
+where   $|0\rangle$ is called the \emph{vacuum state}.
+%details in Martin
+A state in which the number of particles is not fixed, e.g $n\to\infty$, is given by the sequences ($|0\rangle=|\Phi(0)\rangle$)
+\begin{align}
+\label{eq:fffs}
+  |\Phi\rangle=&\left\{ |\Phi(n)\rangle \right\}_n\,,&  |\Psi\rangle=&\left\{ |\Psi(n)\rangle \right\}_n\,,
+\end{align}
+with properties
+\begin{align}
+  |\Phi\rangle+|\Psi\rangle=&\left\{ |\Phi(n)\rangle+|\Psi(n)\rangle \right\}_n \nonumber\\
+\lambda  |\Phi\rangle=& \left\{\lambda |\Phi(n)\rangle \right\}_n \nonumber\\
+\langle\Phi|\Psi\rangle=&\sum_{n=0}^{\infty}\langle\Phi(n)|\Psi(n)\rangle\,.
+\end{align}
+
+The collection of all vector of the form \eqref{eq:fffs} which are of finite norm
+\begin{align}
+  \langle\Phi|\Phi\rangle=&\sum_{n=0}^{\infty}\langle\Phi(n)|\Phi(n)\rangle<\infty\,,
+\end{align}
+forms a Hilbert space $\mathcal{F}_{\nu}(\mathcal{H})$ called Fock space.
+
+The operator  $\widehat{A}$ acting on Fock space is defined by
+\begin{align}
+\label{eq:Afi}
+  \widehat{A}|\Phi\rangle=\sum_{n=0}^{\infty} \widehat{A}(n)|\Phi(n)\rangle\,.
+\end{align}
+
+\section{Fock space for the harmonic oscillator}
 We can now construct the Fock space following the standard procedure
 for the harmonic oscillator: we interpret $\widehat{a}_\mathbf{p}$ as destruction operators and $\widehat{a}_\mathbf{p}^\dagger$
 as creation operators, and we define a vacuum state $|0\rangle$ as the state
