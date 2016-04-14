@@ -582,6 +582,17 @@ and everything else is the history presented in Chapter~\ref{cha:two-body-decays
 
 \section{Wick Theorem}
 \label{sec:wick-theorem}
+
+\subsection{Basics concepts}
+Return back to  the interpretation of interaction in terms of one exchanged particle, as illustrated again in Fig.~\ref{fig:qedrepulsionx1x2}
+\begin{figure}
+  \centering
+  \includegraphics{qedrepulsionx1x2}
+  \caption{Electromagnetic repulsion. The diagrams (a) and (b) are summarized in the diagram (c)}
+  \label{fig:qedrepulsionx1x2}
+\end{figure}
+
+
 From \cite{Lahiri:2005sm}. The normal ordering procedure involved putting all the annihilation operators to the right of all creation operators so that it annihilates the vacuum. But the time ordering raises complications because in it all operators at earlier times must be further to the right. So creation operators at later times would be to the right of annihilation operators at later times, contrary to what we need for normal ordering. The advantage of normal ordered products is that their expectation values vanish in the vacuum. 
 
 If $H_I$ contains an even number of fermion factors, we can use the time--ordered product $\operatorname{T}\{\ldots\}$ of $n$ factors to write this expression in the equivalent form. For $S^{(2)}$ we have for example
@@ -590,25 +601,25 @@ If $H_I$ contains an even number of fermion factors, we can use the time--ordere
 \int_{-\infty}^\infty dt_1\int_{-\infty}^{\infty}d t_2 \theta(t_2-t_1)H_I(t_2)H_I(t_1) \nonumber\\
 &+\int_{-\infty}^\infty dt_1\int_{-\infty}^{\infty}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2)
  \end{align}
-where,
+where, for $t_2$ and $t_1$ fixed respectively
  \begin{align}
-   \theta(t-t')=&
+   \theta(t_2-t_1)=&
    \begin{cases}
-    0\, &    t< t'\\
-    1\, &    t> t'\\
-   \end{cases}&   \theta(t'-t)=&
+    0\, &    t_1> t_2\\
+    1\, &    t_1< t_2\\
+   \end{cases},&   \theta(t_1-t_2)=&
    \begin{cases}
-    0\, &    t> t'\\
-    1\, &    t< t'\\
+    0\, &    t_2> t_1\\
+    1\, &    t_2< t_1\\
    \end{cases}\,.
  \end{align}
 In this way.
 \begin{align}
  \int_{-\infty}^\infty dt_1 \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_1)H_I(t_2)\}=&
 \int_{-\infty}^\infty dt_2\int_{-\infty}^{t_2}d t_1 \theta(t_2-t_1)H_I(t_2)H_I(t_1)\nonumber\\
-&+\cancel{\int_{-\infty}^\infty dt_2\int_{t_2}^{t_1}d t_1' \theta(t_2-t_1')H_I(t_2)H_I(t_1')} \nonumber\\
+&+\cancel{\int_{-\infty}^\infty dt_2\int_{t_2}^{t_1}d t_1 \theta(t_2-t_1)H_I(t_2)H_I(t_1)} \nonumber\\
 &+\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_{1}}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2) \nonumber\\
-&+\cancel{\int_{-\infty}^\infty dt_1\int_{t_1}^{t_2}d t_2' \theta(t_1-t_2')H_I(t_1)H_I(t_2')}\,.
+&+\cancel{\int_{-\infty}^\infty dt_1\int_{t_1}^{t_2}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2)}\,.
 \end{align}
 The integral in $dt_1'$ is for $t_1>t_2$, with $t_2$ fixed, so that $\theta(t_2-t_1')=0$ for $t_1'>t_2$. Similarly,
 The integral in $dt_2'$ is for $t_2>t_1$, with $t_1$ fixed, so that $\theta(t_1-t_2')=0$ for $t_2'>t_1$. Therefore,
@@ -635,6 +646,8 @@ In the above perturbation formalism the states $|i\rangle$ and $|f\rangle$ are, 
   S_{f i}=&\langle f|S|i\rangle\nonumber\\
   =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\langle f|\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}|i\rangle\,.
 \end{align}
+
+
 For example, at first order
 \begin{align}
   \label{eq:96f}
@@ -645,50 +658,18 @@ For example, at first order
 In order to evaluate this integrals we need to write the time ordered product in terms of the fields. This can done by induction. We start by considering the simple no trivial case with two scalar fields
 %ver cuaderno de perrito
 
-El teorema de Noether establece que:
 
+\subsection{Scalar propagator}
+
+With
 \begin{align}
-  T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2)
+  \bcontraction{\,}{\phi}{(x_1)}{\phi}
+\,\phi(x_1)\phi(x_2)\equiv \left\langle 0 |   T\{\phi(x_1)\phi(x_2)\} | 0 \right\rangle
 \end{align}
-The same expression can be obtained for fermions. Generalizing  the results for $n$ scalar or fermion fields, but with an even number of fermions fields, we have the Wick theorem
-\begin{align}
-  T\{\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n) \}
-=&:\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\nonumber\\
-&+\bcontraction{\,}{\Phi}{(x_1)}{\Phi}\,\Phi(x_1)\Phi(x_2):\Phi(x_3)\cdots\Phi(x_n):\nonumber\\
-&+:\Phi(x_1)\bcontraction{\,}{\Phi}{(x_2)}{\Phi}\,\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\cdots 
-\end{align}
-For details of the full result see for example \cite{Lahiri:2005sm}.
 
 
-\section{Scattering}
-\label{sec:scattering}
-From the previous calculation we have
-\begin{align}
-S^{(n)}=  \frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,.
-\end{align}
-The relevant term for the scattering
-\begin{align}
-  e^{-}(p_1)+e^{-}(p_2)\to   e^{-}(p_1')+e^{-}(p_2')
-\end{align}
-is
-\begin{align}
-S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\}\nonumber\\
-=&  \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi)_{x_2}\}\nonumber\\
-=& 
- \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi
-)_{x_2}:+
- \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}
-\bcontraction{\psi}{\phi}{)_{x_1}(\overline{\psi}\psi}{\phi}
-\psi\phi)_{x_1}(\overline{\psi}\psi\phi
-)_{x_2}:+\cdots
-\end{align}
-The first term corresponds to two  disconnected Feynman diagrams that does not contribute to the $S$--matrix. For the process at hand, we want terms where four fermionic operators are not contracted, corresponding to the particles in the initial and final states. The second term in the previous expansion of the Wick theorem is the only satisfying this requirement. In this way
-\begin{align}
-  S^{(2)}(e^+ e^-\to e^+e^-)=&\frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2
-\bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2):(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:
-\end{align}
+
+
 The Wick contraction can be written as:
 \begin{align}
 \label{eq:77f}
@@ -734,6 +715,57 @@ we have
 \langle0|\hat{a}_{p_1}\hat{a}_{p_2}^\dagger|0\rangle\nonumber\\
 &+\theta(t_2-t_1)\int\int\frac{d^3p_2d^3p_1}{(2\pi)^6\sqrt{2E_{p_2}}\sqrt{2E_{p_1}}}e^{-i p_2\cdot x_2}e^{-i p_1\cdot x_1}
 \langle0|\hat{a}_{p_2}\hat{a}_{p_1}^\dagger|0\rangle\nonumber\\
+\end{align}
+
+\includepdf[pages=-]{propagator.pdf}  
+
+\subsection{Wick theorem}
+\begin{align}
+  T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+\,\phi(x_1)\phi(x_2)
+\end{align}
+The same expression can be obtained for fermions.
+
+\includepdf[pages=-]{wick.pdf}  
+
+
+ Generalizing  the results for $n$ scalar or fermion fields, but with an even number of fermions fields, we have the Wick theorem
+\begin{align}
+  T\{\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n) \}
+=&:\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\nonumber\\
+&+\bcontraction{\,}{\Phi}{(x_1)}{\Phi}\,\Phi(x_1)\Phi(x_2):\Phi(x_3)\cdots\Phi(x_n):\nonumber\\
+&+:\Phi(x_1)\bcontraction{\,}{\Phi}{(x_2)}{\Phi}\,\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\cdots 
+\end{align}
+For details of the full result see for example \cite{Lahiri:2005sm}.
+
+
+\section{Scattering}
+\label{sec:scattering}
+From the previous calculation we have
+\begin{align}
+S^{(n)}=  \frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,.
+\end{align}
+The relevant term for the scattering
+\begin{align}
+  e^{-}(p_1)+e^{-}(p_2)\to   e^{-}(p_1')+e^{-}(p_2')
+\end{align}
+is
+\begin{align}
+S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\}\nonumber\\
+=&  \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi)_{x_2}\}\nonumber\\
+=& 
+ \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi
+)_{x_2}:+
+ \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}
+\bcontraction{\psi}{\phi}{)_{x_1}(\overline{\psi}\psi}{\phi}
+\psi\phi)_{x_1}(\overline{\psi}\psi\phi
+)_{x_2}:+\cdots
+\end{align}
+The first term corresponds to two  disconnected Feynman diagrams that does not contribute to the $S$--matrix. For the process at hand, we want terms where four fermionic operators are not contracted, corresponding to the particles in the initial and final states. The second term in the previous expansion of the Wick theorem is the only satisfying this requirement. In this way
+\begin{align}
+  S^{(2)}(e^+ e^-\to e^+e^-)=&\frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2
+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+\,\phi(x_1)\phi(x_2):(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:
 \end{align}
 
 On the other hand 
