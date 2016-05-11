@@ -1,0 +1,738 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.2'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     17661,        601]*)
+(*NotebookOutlinePosition[     18636,        631]*)
+(*  CellTagsIndexPosition[     18592,        627]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["2-2 cross section", "Title"],
+
+Cell["\<\
+We evaluate the 2-2  cross section in the Center of Mass frame. The \
+general 2-2 cross section is\
+\>", "Text"],
+
+Cell[TextData[{
+  "\n",
+  Cell[BoxData[
+      FormBox[
+        RowBox[{"d\[Sigma]", "=", 
+          RowBox[{\(1\/\(64 \( \[Pi]\^2\) \(E\_1\) \(E\_2\) v\_rel\)\), "|", 
+            StyleBox["M",
+              FontFamily->"Gothic"], 
+            SuperscriptBox[
+              StyleBox["|",
+                FontFamily->"Gothic"], 
+              "2"], \(\((4 \(\((2  \[Pi])\)\^6\) 
+                  d\[CapitalPhi]\^\((2)\))\)\
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\
+(1)\)\)}]}], TraditionalForm]]]
+}], "Text",
+  TextAlignment->Center],
+
+Cell[BoxData[{
+    FormBox[\(d\[CapitalPhi]\^\((2)\) = \(1\/\(4 \((2  \[Pi])\)\^6\)\) \(\(\
+\[Delta]\^\((4)\)\)(
+            p\_1 + p\_2 - \(p'\)\_1 - \(p'\)\_2)\) \(\(\(d\^3\) \(p'\)\_1\)\/\
+\(E'\)\_1\) \(\(d\^3\) \(p'\)\_2\)\/\(E'\)\_2\ \ \ \ \ \ \ \ \ \ \ \((2)\)\), 
+      TraditionalForm], "\[IndentingNewLine]", 
+    FormBox[
+      RowBox[{"=", 
+        RowBox[{\(1\/\(4 \((2  \[Pi])\)\^6\)\), \(\[Delta](f(x))\), 
+          FractionBox[
+            RowBox[{"|", 
+              RowBox[{
+                SubscriptBox[
+                  RowBox[{
+                    StyleBox["p",
+                      FontWeight->"Bold"], "'"}], "1"], \((x)\)}], 
+              "|"}], \(\(\(E'\)\_2\) \((x)\)\)], "dx", " ", 
+          "d\[CapitalOmega]", 
+          "                                         ", \((3)\)}]}], 
+      TraditionalForm]}], "Text",
+  TextAlignment->Center],
+
+Cell["Therefore", "Text"],
+
+Cell[BoxData[{
+    FormBox[
+      RowBox[{\(d\[CapitalPhi]\^\((2)\)\), "=", 
+        RowBox[{\(1\/\(4 \((2  \[Pi])\)\^2\)\), "d\[CapitalOmega]", " ", 
+          RowBox[{"\[Integral]", 
+            
+            RowBox[{\(\(\[Delta](
+                    x - x\_0)\)\/\(\(|\)\(f' \((x\_0)\)\)\(|\)\)\), 
+              FractionBox[
+                RowBox[{"|", 
+                  RowBox[{
+                    SubscriptBox[
+                      RowBox[{
+                        StyleBox["p",
+                          FontWeight->"Bold"], "'"}], "1"], \((x)\)}], 
+                  "|"}], \(\(\(E'\)\_2\) \((x)\)\)], \
+\(\[DifferentialD]x\)}]}]}]}], TraditionalForm], "\[IndentingNewLine]", 
+    FormBox[
+      RowBox[{"             ", 
+        RowBox[{"=", " ", 
+          
+          RowBox[{\(1\/\(4 \((2  \[Pi])\)\^2\)\), "d\[CapitalOmega]", 
+            " ", \(1\/\(\(|\)\(f' \((x\_0)\)\)\(|\)\)\), 
+            FractionBox[
+              RowBox[{"|", 
+                RowBox[{
+                  SubscriptBox[
+                    RowBox[{
+                      StyleBox["p",
+                        FontWeight->"Bold"], "'"}], "1"], \((x\_0)\)}], 
+                "|"}], \(\(\(E'\)\_2\) \((x\_0)\)\)], \(\[DifferentialD]x\), 
+            "                   ", \((4)\), "     "}]}]}], 
+      TraditionalForm]}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+  
+  CounterBox["Section"],
+  ". ",
+  Cell[BoxData[
+      \(TraditionalForm\`\[Delta](f(x))\)]]
+}], "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(f[x_] := \@s - 
+          x - \@\(x\^2 - m\_1\^2 + m\_2\^2\);\)\), "\[IndentingNewLine]", 
+    \(Print["\<f(x)=\>", f[x]]\), "\[IndentingNewLine]", 
+    \(\)}], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("f(x)="\[InvisibleSpace]\(\@s - 
+          x - \@\(x\^2 - m\_1\%2 + m\_2\%2\)\)\),
+      SequenceForm[ "f(x)=", 
+        Plus[ 
+          Power[ s, 
+            Rational[ 1, 2]], 
+          Times[ -1, x], 
+          Times[ -1, 
+            Power[ 
+              Plus[ 
+                Power[ x, 2], 
+                Times[ -1, 
+                  Power[ 
+                    Subscript[ m, 1], 2]], 
+                Power[ 
+                  Subscript[ m, 2], 2]], 
+              Rational[ 1, 2]]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell[TextData[{
+  "and ",
+  Cell[BoxData[
+      \(TraditionalForm\`\[Delta](
+          f(x)) = \(\[Delta](x - x\_0)\)\/\(\(|\)\(f' \
+\((x\_0)\)\)\(|\)\)\)]],
+  ", where ",
+  Cell[BoxData[
+      \(TraditionalForm\`x\_0\)]],
+  " is the zero of ",
+  Cell[BoxData[
+      \(TraditionalForm\`f(x)\)]],
+  ", that in this case is"
+}], "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(\(Solve[f[x] \[Equal] 0, x];\)\), "\[IndentingNewLine]", 
+    \(\({x\_0} = x /. %;\)\), "\[IndentingNewLine]", 
+    \(Print[\*"\"\<\!\(x\_0\)=\>\"", x\_0]\)}], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("\!\(x\_0\)="\[InvisibleSpace]\(s + m\_1\%2 - m\_2\%2\
+\)\/\(2\ \@s\)\),
+      SequenceForm[ "\!\(x\_0\)=", 
+        Times[ 
+          Rational[ 1, 2], 
+          Power[ s, 
+            Rational[ -1, 2]], 
+          Plus[ s, 
+            Power[ 
+              Subscript[ m, 1], 2], 
+            Times[ -1, 
+              Power[ 
+                Subscript[ m, 2], 2]]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell["Moreover,", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Print["\<f'(x)=\>", dfx0 = Simplify[\[PartialD]\_x\ f[x]]]\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("f'(x)="\[InvisibleSpace]\(\(-1\) - 
+          x\/\@\(x\^2 - m\_1\%2 + m\_2\%2\)\)\),
+      SequenceForm[ "f'(x)=", 
+        Plus[ -1, 
+          Times[ -1, x, 
+            Power[ 
+              Plus[ 
+                Power[ x, 2], 
+                Times[ -1, 
+                  Power[ 
+                    Subscript[ m, 1], 2]], 
+                Power[ 
+                  Subscript[ m, 2], 2]], 
+              Rational[ -1, 2]]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell["and", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Print[\*"\"\<f'(\!\(x\_0\))=\>\"", 
+      fin = Simplify[
+          PowerExpand[FullSimplify[dfx0 /. x \[Rule] x\_0]]]]\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("f'(\!\(x\_0\))="\[InvisibleSpace]\(-\(\(2\ s\)\/\(s \
+- m\_1\%2 + m\_2\%2\)\)\)\),
+      SequenceForm[ "f'(\!\(x\_0\))=", 
+        Times[ -2, s, 
+          Power[ 
+            Plus[ s, 
+              Times[ -1, 
+                Power[ 
+                  Subscript[ m, 1], 2]], 
+              Power[ 
+                Subscript[ m, 2], 2]], -1]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell[TextData[{
+  "In this way\n",
+  Cell[BoxData[
+      \(TraditionalForm\`\[Delta](
+          f(x)) = \(\(\[Delta](x - x\_0)\)\/\(\(|\)\(f' \((x\_0)\)\)\(|\)\) = \
+\(\(\[Delta](x - x\_0)\)\/\(2  
+                  s\)\) \((s - \(m'\)\_1\^2 + \(m'\)\_2\^2)\)\
+\ \ \ \ \ \ \ \ \ \((4)\)\)\)], "DisplayFormula",
+    TextAlignment->Center]
+}], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+  
+  CounterBox["Section"],
+  ". |",
+  Cell[BoxData[
+      \(TraditionalForm\`\(\(\(\(\(p'\)\_1\) \((x\_0)\)\)\(|\)\)\(:\)\)\)]]
+}], "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Print[\*"\"\<|p\!\(\('\_1\)\)(\!\(x\_0\))\!\(\( | \
+\^2\)\)=\!\(x\_0\^2\)-\!\(m\_1\^2\)\>\""]\), "\[IndentingNewLine]", 
+    \(Print["\<=\>", p1x02 = Factor[x\_0\^2 - m\_1\^2]]\)}], "Input"],
+
+Cell[BoxData[
+    \("|p\!\(\('\_1\)\)(\!\(x\_0\))\!\(\( | \^2\)\)=\!\(x\_0\^2\)-\!\(m\_1\^2\
+\)"\)], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("="\[InvisibleSpace]\(\((\(-s\) + m\_1\%2 - 2\ m\_1\ \
+m\_2 + m\_2\%2)\)\ \((\(-s\) + m\_1\%2 + 2\ m\_1\ m\_2 + m\_2\%2)\)\)\/\(4\ s\
+\)\),
+      SequenceForm[ "=", 
+        Times[ 
+          Rational[ 1, 4], 
+          Power[ s, -1], 
+          Plus[ 
+            Times[ -1, s], 
+            Power[ 
+              Subscript[ m, 1], 2], 
+            Times[ -2, 
+              Subscript[ m, 1], 
+              Subscript[ m, 2]], 
+            Power[ 
+              Subscript[ m, 2], 2]], 
+          Plus[ 
+            Times[ -1, s], 
+            Power[ 
+              Subscript[ m, 1], 2], 
+            Times[ 2, 
+              Subscript[ m, 1], 
+              Subscript[ m, 2]], 
+            Power[ 
+              Subscript[ m, 2], 2]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell["So that", "Text"],
+
+Cell[TextData[Cell[BoxData[
+    FormBox[
+      StyleBox[
+        RowBox[{
+          RowBox[{"|", 
+            RowBox[{
+              SubscriptBox[
+                RowBox[{
+                  StyleBox["p",
+                    FontWeight->"Bold"], "'"}], "1"], \((x\_0)\)}], "|"}], 
+          "=", \(\((\((s - \((\(m'\)\_1 - \(m'\)\_2)\)\^2)\) \((s - \((\(m'\)\
+\_1 + \(m'\)\_2)\)\^2)\))\)\^\(1/2\)\/\(2 \@ s\)\)}],
+        "DisplayFormula"], TraditionalForm]], "Text"]], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+  
+  CounterBox["Section"],
+  ". ",
+  Cell[BoxData[
+      \(TraditionalForm\`\(\(E'\)\_2\) \((x\_0)\)\)]],
+  ":"
+}], "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+    \(Print[\*"\"\<E\!\(\('\_2\)\)(\!\(x\_0\)\!\(\()\^2\)\)=\!\(x\_0\^2\)-\!\(\
+m\_1\^2\)+\!\(m\_2\^2\)\>\""]\), "\[IndentingNewLine]", 
+    \(Print["\<=\>", Ex02 = Factor[x\_0\^2 - m\_1\^2 + m\_2\^2]]\)}], "Input"],
+
+Cell[BoxData[
+    \("E\!\(\('\_2\)\)(\!\(x\_0\)\!\(\()\^2\)\)=\!\(x\_0\^2\)-\!\(m\_1\^2\)+\!\
+\(m\_2\^2\)"\)], "Print"],
+
+Cell[BoxData[
+    InterpretationBox[\("="\[InvisibleSpace]\((\(-s\) + m\_1\%2 - \
+m\_2\%2)\)\^2\/\(4\ s\)\),
+      SequenceForm[ "=", 
+        Times[ 
+          Rational[ 1, 4], 
+          Power[ s, -1], 
+          Power[ 
+            Plus[ 
+              Times[ -1, s], 
+              Power[ 
+                Subscript[ m, 1], 2], 
+              Times[ -1, 
+                Power[ 
+                  Subscript[ m, 2], 2]]], 2]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell["So that", "Text"],
+
+Cell[TextData[Cell[BoxData[
+    FormBox[
+      StyleBox[\(\(\(E'\)\_2\) \((x\_0)\) = \((s - \(m'\)\_1\^2 + \
+\(m'\)\_2\^2)\)\^\(1/2\)\/\(2 \@ s\)\),
+        "DisplayFormula"], TraditionalForm]]]], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+  
+  CounterBox["Section"],
+  ". Final result for ",
+  Cell[BoxData[
+      \(TraditionalForm\`d\[CapitalPhi]\^\((2)\)\)], "Text"],
+  " ",
+  Cell[BoxData[
+      \(TraditionalForm\`\((m\_i \[Rule] \(m'\)\_i)\)\)]]
+}], "Section"],
+
+Cell[TextData[Cell[BoxData[
+    FormBox[
+      StyleBox[\(d\[CapitalPhi]\^\((2)\) = \(1\/\(4 \((2  \[Pi])\)\^2\)\) 
+            d\[CapitalOmega]\ \@\(\((s - \((\(m'\)\_1\^2 - \
+\(m'\)\_2\^2)\)\^2)\) \((s - \((\(m'\)\_1\^2 + \(m'\)\_2\^2)\)\^2)\)\)\/\(2  \
+s\)\),
+        "DisplayFormula"], TraditionalForm]]]], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+  
+  CounterBox["Section"],
+  ". Evalation of ",
+  Cell[BoxData[
+      \(TraditionalForm\`\(E\_1\) \(E\_2\) v\_rel\)]]
+}], "Section"],
+
+Cell[TextData[Cell[BoxData[
+    FormBox[
+      RowBox[{
+        StyleBox[\(\(E\_1\) E\_2\ v\_rel\),
+          "DisplayFormula"], 
+        StyleBox["=",
+          "DisplayFormula"], 
+        RowBox[{
+          StyleBox["|",
+            "DisplayFormula"], 
+          SubscriptBox[
+            StyleBox["p",
+              "DisplayFormula",
+              FontWeight->"Bold"], "1"], "|", \(\@s\)}]}], 
+      TraditionalForm]]]], "Text"],
+
+Cell["In the CM frame", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Print[\*"\"\<\!\(\@s\)=\>\"", 
+      eqn = \@\(p\_1\^2 + m\_1\^2\) + \@\(p\_1\^2 + m\_2\^2\)]\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("\!\(\@s\)="\[InvisibleSpace]\(\@\(m\_1\%2 + \
+p\_1\%2\) + \@\(m\_2\%2 + p\_1\%2\)\)\),
+      SequenceForm[ "\!\(\@s\)=", 
+        Plus[ 
+          Power[ 
+            Plus[ 
+              Power[ 
+                Subscript[ m, 1], 2], 
+              Power[ 
+                Subscript[ p, 1], 2]], 
+            Rational[ 1, 2]], 
+          Power[ 
+            Plus[ 
+              Power[ 
+                Subscript[ m, 2], 2], 
+              Power[ 
+                Subscript[ p, 1], 2]], 
+            Rational[ 1, 2]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell["With solutions:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Solve[eqn == \@s, p\_1]\)], "Input"],
+
+Cell[BoxData[
+    \({{p\_1 \[Rule] \(-\(\@\(s\^2 - 2\ s\ m\_1\%2 + m\_1\%4 - 2\ s\ m\_2\%2 \
+- 2\ m\_1\%2\ m\_2\%2 + m\_2\%4\)\/\(2\ \@s\)\)\)}, {p\_1 \[Rule] \@\(s\^2 - \
+2\ s\ m\_1\%2 + m\_1\%4 - 2\ s\ m\_2\%2 - 2\ m\_1\%2\ m\_2\%2 + \
+m\_2\%4\)\/\(2\ \@s\)}}\)], "Output"]
+}, Open  ]],
+
+Cell["Since:", "Text"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Print[\*"\"\<\!\(s\^2\)-2 s \!\(m\_1\%2\)+\!\(m\_1\%4\)-2 s \!\(m\_2\%2\
+\)-2 \!\(m\_1\%2\) \!\(m\_2\%2\)+\!\(m\_2\%4\)=\>\"", 
+      Factor[s\^2 - 2\ s\ m\_1\%2 + m\_1\%4 - 2\ s\ m\_2\%2 - 
+          2\ m\_1\%2\ m\_2\%2 + m\_2\%4]]\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("\!\(s\^2\)-2 s \!\(m\_1\%2\)+\!\(m\_1\%4\)-2 s \!\(m\
+\_2\%2\)-2 \!\(m\_1\%2\) \!\(m\_2\%2\)+\!\(m\_2\%4\)="\[InvisibleSpace]\(\((s \
+- m\_1\%2 - 2\ m\_1\ m\_2 - m\_2\%2)\)\ \((s - m\_1\%2 + 2\ m\_1\ m\_2 - 
+              m\_2\%2)\)\)\),
+      SequenceForm[ 
+      "\!\(s\^2\)-2 s \!\(m\_1\%2\)+\!\(m\_1\%4\)-2 s \!\(m\_2\%2\)-2 \
+\!\(m\_1\%2\) \!\(m\_2\%2\)+\!\(m\_2\%4\)=", 
+        Times[ 
+          Plus[ s, 
+            Times[ -1, 
+              Power[ 
+                Subscript[ m, 1], 2]], 
+            Times[ -2, 
+              Subscript[ m, 1], 
+              Subscript[ m, 2]], 
+            Times[ -1, 
+              Power[ 
+                Subscript[ m, 2], 2]]], 
+          Plus[ s, 
+            Times[ -1, 
+              Power[ 
+                Subscript[ m, 1], 2]], 
+            Times[ 2, 
+              Subscript[ m, 1], 
+              Subscript[ m, 2]], 
+            Times[ -1, 
+              Power[ 
+                Subscript[ m, 2], 2]]]]],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell["Therefore", "Text"],
+
+Cell[TextData[Cell[BoxData[
+    FormBox[
+      RowBox[{
+        StyleBox[\(\(E\_1\) E\_2\ v\_rel\),
+          "DisplayFormula"], 
+        StyleBox["=",
+          "DisplayFormula"], 
+        RowBox[{
+          RowBox[{
+            StyleBox["|",
+              "DisplayFormula"], 
+            SubscriptBox[
+              StyleBox["p",
+                "DisplayFormula",
+                FontWeight->"Bold"], "1"], "|", \(\@s\)}], 
+          "=", \(\(1\/2\) \@\(\((s - \((\(m'\)\_1 - \(m'\)\_2)\)\^2)\) \((s - \
+\((\(m'\)\_1 + m\_\(\('\) \(2\)\))\)\^2)\)\)\)}]}], 
+      TraditionalForm]], "DisplayFormula"]], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Final Result", "Section"],
+
+Cell[TextData[Cell[BoxData[{
+    FormBox[
+      RowBox[{
+        RowBox[{
+          StyleBox["d\[Sigma]",
+            "DisplayFormula"], 
+          StyleBox["=",
+            "DisplayFormula"], 
+          RowBox[{
+            StyleBox[\(1\/\(64 \( \[Pi]\^2\) \(E\_1\) \(E\_2\) v\_rel\)\),
+              "DisplayFormula"], 
+            StyleBox["|",
+              "DisplayFormula"], 
+            StyleBox["M",
+              FontFamily->"Gothic"], 
+            StyleBox[
+              SuperscriptBox[
+                StyleBox["|",
+                  FontFamily->"Gothic"], "2"],
+              "DisplayFormula"], 
+            StyleBox[\((4 \(\((2  \[Pi])\)\^2\) d\[CapitalPhi]\^\((2)\))\),
+              "DisplayFormula"]}]}], 
+        StyleBox["                                      ",
+          "DisplayFormula"]}], TraditionalForm], "\[IndentingNewLine]", 
+    FormBox[
+      RowBox[{
+        StyleBox["       ",
+          "DisplayFormula"], 
+        RowBox[{
+          StyleBox["=",
+            "DisplayFormula"], 
+          RowBox[{
+            
+            StyleBox[\(\(d\[CapitalOmega]\/\(64 \( \[Pi]\^2\) 
+                      s\)\) \@\(\((s - \((\(m'\)\_1 - \(m'\)\_2)\)\^2)\) \((s \
+- \((\(m'\)\_1 + \(m'\)\_2)\)\^2)\)\)\/\@\(\((s - \((m\_1 - m\_2)\)\^2)\) \
+\((s - \((m\_1 + m\_2)\)\^2)\)\)\),
+              "DisplayFormula"], 
+            StyleBox["|",
+              "DisplayFormula"], 
+            StyleBox["M",
+              FontFamily->"Gothic"], 
+            StyleBox[
+              SuperscriptBox[
+                StyleBox["|",
+                  FontFamily->"Gothic"], "2"],
+              "DisplayFormula"]}]}]}], TraditionalForm]}]]], "Text"]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"5.2 for X",
+ScreenRectangle->{{0, 1680}, {0, 1050}},
+WindowSize->{800, 949},
+WindowMargins->{{434, Automatic}, {Automatic, 25}},
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"PaperSize"->{612, 792},
+"PaperOrientation"->"Portrait",
+"PostScriptOutputFile":>FrontEnd`FileName[{$RootDirectory, "home", \
+"restrepo", "texfile", "cursos", "beyond_the_standard_model"}, \
+"deltax.nb.ps", CharacterEncoding -> "iso8859-1"],
+"Magnification"->1},
+Magnification->1.5
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 34, 0, 143, "Title"],
+Cell[1813, 55, 122, 3, 75, "Text"],
+Cell[1938, 60, 572, 16, 90, "Text"],
+Cell[2513, 78, 871, 20, 126, "Text"],
+Cell[3387, 100, 25, 0, 48, "Text"],
+Cell[3415, 102, 1319, 32, 122, "Text"],
+
+Cell[CellGroupData[{
+Cell[4759, 138, 126, 6, 111, "Section"],
+
+Cell[CellGroupData[{
+Cell[4910, 148, 192, 4, 102, "Input"],
+Cell[5105, 154, 570, 18, 45, "Print"]
+}, Open  ]],
+Cell[5690, 175, 334, 13, 58, "Text"],
+
+Cell[CellGroupData[{
+Cell[6049, 192, 189, 3, 85, "Input"],
+Cell[6241, 197, 442, 14, 65, "Print"]
+}, Open  ]],
+Cell[6698, 214, 25, 0, 48, "Text"],
+
+Cell[CellGroupData[{
+Cell[6748, 218, 91, 1, 39, "Input"],
+Cell[6842, 221, 504, 15, 64, "Print"]
+}, Open  ]],
+Cell[7361, 239, 19, 0, 48, "Text"],
+
+Cell[CellGroupData[{
+Cell[7405, 243, 152, 3, 62, "Input"],
+Cell[7560, 248, 418, 12, 61, "Print"]
+}, Open  ]],
+Cell[7993, 263, 349, 9, 85, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8379, 277, 159, 6, 111, "Section"],
+
+Cell[CellGroupData[{
+Cell[8563, 287, 211, 3, 78, "Input"],
+Cell[8777, 292, 109, 2, 37, "Print"],
+Cell[8889, 296, 809, 26, 61, "Print"]
+}, Open  ]],
+Cell[9713, 325, 23, 0, 48, "Text"],
+Cell[9739, 327, 476, 12, 71, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[10252, 344, 143, 7, 111, "Section"],
+
+Cell[CellGroupData[{
+Cell[10420, 355, 230, 3, 78, "Input"],
+Cell[10653, 360, 119, 2, 37, "Print"],
+Cell[10775, 364, 464, 15, 62, "Print"]
+}, Open  ]],
+Cell[11254, 382, 23, 0, 48, "Text"],
+Cell[11280, 384, 204, 4, 71, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11521, 393, 242, 9, 111, "Section"],
+Cell[11766, 404, 318, 6, 76, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[12121, 415, 149, 6, 111, "Section"],
+Cell[12273, 423, 431, 14, 46, "Text"],
+Cell[12707, 439, 31, 0, 48, "Text"],
+
+Cell[CellGroupData[{
+Cell[12763, 443, 126, 2, 55, "Input"],
+Cell[12892, 447, 592, 19, 45, "Print"]
+}, Open  ]],
+Cell[13499, 469, 31, 0, 48, "Text"],
+
+Cell[CellGroupData[{
+Cell[13555, 473, 56, 1, 54, "Input"],
+Cell[13614, 476, 275, 4, 149, "Output"]
+}, Open  ]],
+Cell[13904, 483, 22, 0, 48, "Text"],
+
+Cell[CellGroupData[{
+Cell[13951, 487, 265, 4, 78, "Input"],
+Cell[14219, 493, 1033, 29, 68, "Print"]
+}, Open  ]],
+Cell[15267, 525, 25, 0, 48, "Text"],
+Cell[15295, 527, 611, 17, 51, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[15943, 549, 31, 0, 111, "Section"],
+Cell[15977, 551, 1656, 46, 130, "Text"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
