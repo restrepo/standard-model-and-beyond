@@ -4,9 +4,15 @@ Here we calculate the one-loop neutrino mases in the mass-basis
 \section{Extra particles}
 We assume to have $\alpha$-scalar and $n$-fermions with the mass-eigenstate couplings (Weyl spinors)
 \begin{align}
-  \mathcal{L}=\left(y_{in\alpha}\nu_{i}\chi_n S_{\alpha}+\text{h.c}+m_a \psi_a\psi_a  \right)+m_{\alpha}^2\,S_{\alpha}^2+
+  \mathcal{L}=\left(y_{in\alpha}\nu_{i}\chi_n S_{\alpha}+y'_{mi\alpha}\chi_n\nu_{i} S_{\alpha}^{*}+\text{h.c}+m_a \psi_a\psi_a  \right)+m_{\alpha}^2\,S_{\alpha}^2+
 \end{align}
-From left to right in the diagrama
+From left to right in Figure~\ref{fig:1lnu}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{onelooopneutrino}
+  \caption{Generic one-loop neutrino mass contribution}
+  \label{fig:1lnu}
+\end{figure}
 \begin{align}
 -i\Sigma^{\nu}_{ij}(p)=&\int \frac{d4k}{\left( 2\pi \right)^{4}}\left(y_{in\alpha}  \right)iS_F(k) \left(y_{jn\alpha}\right)i\Delta_F(p+k) \nonumber\\
 =&\frac{y_{i n\alpha}y_{j n\alpha}}{16\pi^2}\int \frac{d^4k}{i\pi^2}\frac{\cancel{k}+m_{\chi_n}}{\left(k^2-m_{\chi_n}^2  \right)\left[\left(p+k\right)^2-m_{S_\alpha}^2\right]}
@@ -68,6 +74,9 @@ and
 \end{align}
 
 \subsection{Zee}
+
+In the Zee model we can work in the Higgs-basis with $\left\langle H_1 \right\rangle=v/\sqrt{2}$,  $\left\langle H_1 \right\rangle=v/\sqrt{2}=0$ \cite{AristizabalSierra:2006ri}. In that basis the Lagrangian is
+
 
 In that case $n$ corresponds to the usual leptons labeled with $i,j,k,\ldots$, and $\alpha=1,2$
 
