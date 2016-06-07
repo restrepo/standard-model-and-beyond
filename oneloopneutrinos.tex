@@ -4,7 +4,7 @@ Here we calculate the one-loop neutrino mases in the mass-basis
 \section{Extra particles}
 We assume to have $\alpha$-scalar and $n$-fermions with the mass-eigenstate couplings (Weyl spinors)
 \begin{align}
-  \mathcal{L}=\left(y_{in\alpha}\nu_{i}\chi_n S_{\alpha}+y'_{mi\alpha}\chi_n\nu_{i} S_{\alpha}^{*}+\text{h.c}+m_a \psi_a\psi_a  \right)+m_{\alpha}^2\,S_{\alpha}^2+
+  \mathcal{L}=\left(y_{in\alpha}\nu_{i}\chi_n S_{\alpha}+y'_{mi\alpha}\chi_n\nu_{i} S_{\alpha}^{\dagger}+\text{h.c}+m_n \chi_n\chi_n  \right)+m_{\alpha}^2\,S_{\alpha}^2+
 \end{align}
 From left to right in Figure~\ref{fig:1lnu}
 \begin{figure}
@@ -75,7 +75,139 @@ and
 
 \subsection{Zee}
 
-In the Zee model we can work in the Higgs-basis with $\left\langle H_1 \right\rangle=v/\sqrt{2}$,  $\left\langle H_1 \right\rangle=v/\sqrt{2}=0$ \cite{AristizabalSierra:2006ri}. In that basis the Lagrangian is
+In the Zee model we can work in the Higgs-basis with $\left\langle H_1 \right\rangle=v/\sqrt{2}$,  $\left\langle H_2 \right\rangle=0$ \cite{AristizabalSierra:2006ri}. In that basis the scalar potential is
+\begin{align}
+  \label{eq:scalarpotentialinhiggsbas}
+  V  = & \mu^{2}_{1}H_{1}^{\dagger}H_{1}
+  + \mu^{2}_{2}H_{2}^{\dagger}H_{2}
+  - [\mu^{2}_{3}H_{1}^{\dagger}H_{2} + \mbox{H.c.}]
+  + \frac{1}{2}\lambda_{1}(H_{1}^{\dagger}H_{1})^{2}
+  \nonumber\\
+  & + \frac{1}{2}\lambda_{2}(H_{2}^{\dagger}H_{2})^{2}
+  + \lambda_{3}(H_{1}^{\dagger}
+  H_{1})(H_{2}^{\dagger}H_{2})
+  + \lambda_{4}(H_{1}^{\dagger}
+  H_{2})(H_{2}^{\dagger}H_{1})
+  \nonumber\\
+  & + \left\{
+    \frac{1}{2}\lambda_{5}(H_{1}^{\dagger}H_{2})^{2}
+    + [\lambda_{6}(H_{1}^{\dagger}H_{1})
+    + \lambda_{7}(H_{2}^{\dagger}H_{2})]
+    H_{1}^{\dagger}H_{2}
+    +\mbox{H.c.}
+  \right\}
+  \nonumber\\
+  & + \mu_{h}^{2}|h^{+}|^{2} + \lambda_{h}|h^{+}|^{4}
+  + \lambda_{8}|h^{+}|^{2}H_{1}^{\dagger}H_{1} 
+  + \lambda_{9}|h^{+}|^{2}H_{2}^{\dagger}H_{2}
+  \nonumber\\
+  & + \lambda_{10}|h^{+}|^{2}(H_{1}^\dagger H_{2}
+  + \mbox{H.c.})
+  + \mu\epsilon_{\alpha\beta}H_{1}^{\alpha}
+  H_{2}^{\beta}h^{-}.
+\end{align}
+
+We define
+\begin{align}
+  H_1=&
+  \begin{pmatrix}
+    G^{+}\\
+    \operatorname{Re}\left( H_1^{0} \right)+i G^{0}/\sqrt{2}\\
+  \end{pmatrix}&
+  H_2=&
+  \begin{pmatrix}
+    H^{+}\\
+    \operatorname{Re}\left( H_2^{0} \right)+i A^{0}/\sqrt{2}\\
+  \end{pmatrix}
+\end{align}
+The minimum equations come from
+\begin{align}
+  \frac{\partial V}{\partial \operatorname{Re}\left( H_1^{0} \right)}=&
+\frac{\partial }{\partial \operatorname{Re}\left( H_1^{0} \right)} \left[ 
+\mu^{2}_{1}\left(\operatorname{Re}H_{1}^{0}  \right)^2
++\frac{1}{2}\lambda_1 \left(\operatorname{Re}H_{1}^{0}  \right)^4+\cdots  \right]\nonumber\\
+=&2\mu^{2}_{1}\operatorname{Re}H_{1}^{0}  
++\frac{1}{2}\lambda_1 4 \left(\operatorname{Re}H_{1}^{0}  \right)^3+\cdots
+\end{align}
+
+\begin{align}
+  \frac{\partial V}{\partial \operatorname{Re}\left( H_2^{0} \right)}=&
+-\mu^2_32\operatorname{Re}H_1^0+\lambda_6 2  \left(\operatorname{Re}H_1^0 \right)^3+\cdots
+\end{align}
+
+From the conditions
+\begin{align}
+  \left.   \frac{\partial V}{\partial \operatorname{Re}\left( H_{1,2}^{0} \right)} \right|_{\left\langle H_1  \right\rangle \to v/\sqrt{2},\left\langle H_2  \right\rangle \to 0}=&0\,,
+\end{align}
+we have
+\begin{align}
+  \mu_1^2+\frac{1}{2} \lambda_1 =&0 &-\mu_3+\frac{1}{2}\lambda_6=&0
+\end{align}
+or
+\begin{align}
+   \mu_1^2=&-\frac{1}{2} \lambda_1  &\mu_3=&\frac{1}{2}\lambda_6\,.
+\end{align}
+Replacing back in the potential, we have for the charged scalars that
+In the basis $\mathbf{\Phi}^{\dagger}=(G^{-}, 
+H^{-}, h^{-})$ 
+the squared-mass matrix for the charged Higgs states is given by
+\begin{align}
+  \label{eq:scalarM}
+\mathcal{L}_{\text{charged}}= \boldsymbol{\Phi}^{\dagger} {\cal M}_{C}^{2}\boldsymbol{\Phi}+\cdots\;,
+\end{align}
+where 
+\begin{align}
+  {\cal M}_{C}^{2}=&
+  \begin{pmatrix}
+    0   &          0         &  0                   \\
+    0   &  M_{H^{\pm}}^{2}   &  -\mu v/\sqrt{2}     \\
+    0       &  -\mu v/\sqrt{2} &  {\cal M}_{33}^{2}   
+  \end{pmatrix},
+and
+\end{align}
+\begin{align}
+  \label{eq:entriesofmassmatrix}
+  M_{H^{\pm}}^{2} =& \mu_{2}^{2} +\frac{1}{2}v^{2}\lambda_{3}
+  \nonumber\\
+  {\cal M}_{33}^{2} =& \mu_{h}^{2} + v^{2}\lambda_{8}\,.
+\end{align}
+By defining the mass basis state as $\mathbf{S}=\left( G^-,h_1^.,h_2^- \right)$, then after the rotation
+\begin{align}
+\mathbf{S}=R \boldsymbol{\Phi}\,,
+\end{align}
+where
+\begin{align}
+    \label{eq:rotationM}
+  R =& 
+  \begin{pmatrix}
+    1 &      0       &     0       \\
+    0 & \cos\varphi  &  \sin\varphi\\
+    0 & -\sin\varphi &  \cos\varphi
+  \end{pmatrix}&\,.
+\end{align}
+Then,
+\begin{align}
+  \mathcal{L}_{\text{charged}}=M_1^2 h_1^+ h_1^-
++M_2^2 h_2^+ h_2^-+\cdots
+\end{align}
+The relevant terms for neutrino masses in the mass eigenstate basis reads
+\begin{align}
+  \mathcal{L}_{\nu}=&
+\Pi'_2\cos\varphi \left( e_R \right)^{\dagger}\nu_L h_1^-
+-\Pi'_2\sin\varphi \left( e_R \right)^{\dagger}\nu_L h_2^-
++f_{ji} \left( e_L \right)_j\left(\nu_L  \right)_i  \sin\varphi h_1^{+}
++f_{ji} \left( e_L \right)_j\left(\nu_L  \right)_i  \cos\varphi h_2^{+} \nonumber\\
+&+\widehat{M}_l \left( e_R \right)^{\dagger}e_L+\text{h.c}
++M_1^2 h_1^+ h_1^-
++M_2^2 h_2^+ h_2^-
+\end{align}
+Therefore
+\begin{align}
+  M_{ij}^{\nu}\propto 
+\left( \Pi'_2 \right)_{ik}\cos\varphi \widehat{M}_{kk} f_{jk}\sin\varphi
+\end{align}
+
+
 
 
 In that case $n$ corresponds to the usual leptons labeled with $i,j,k,\ldots$, and $\alpha=1,2$
