@@ -16,7 +16,7 @@ language: r
 #in the before_install step.
 
 before_install:
-  - tlmgr install index
+  - tlmgr install index simplewick
 
 # we can install additional software
 apt_packages:
