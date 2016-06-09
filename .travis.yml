@@ -1,0 +1,13 @@
+#https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents/blob/master/.travis.yml
+os: linux
+# we use the R VM because it contains LaTeX and pandoc
+language: r
+# we can install additional software
+apt_packages:
+# we download pdf2djvu to also generate a djvu f i l e of our LaTeX source
+  - pdf2djvu
+
+# in the next step we use pdflatex to convert .tex to .pdf
+# of course we could use pandoc for this also, but pdflatex generates nicer PDFs
+  - pdflatex -interaction=nonstopmode beyond.tex
+  
