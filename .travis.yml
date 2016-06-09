@@ -1,16 +1,47 @@
+#https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents -> .travis.yml
+
 os: linux
 sudo: required
+
+# we use the R VM because it contains LaTeX and pandoc
+# https://docs.travis-ci.com/user/languages/r
+#Requieres DESCRIPTION file
+
 language: r
+
+#LaTeX/TexLive Packages #
+#The included TexLive distribution contains only a limited
+#set of default packages. If your vignettes require additional
+#TexLive packages you can install them using tlmgr install
+#in the before_install step.
+
 before_install:
-- tlmgr install index simplewick
+  - tlmgr install index simplewick
+
+# we can install additional software
 apt_packages:
-- pdf2djvu
+# we download pdf2djvu to also generate a djvu f i l e of our LaTeX source
+  - pdf2djvu
+
 script:
-- pdflatex -interaction=nonstopmode beyond.tex
+# in the next step we use pdflatex to convert .tex to .pdf
+# of course we could use pandoc for this also, but pdflatex generates nicer PDFs
+  - pdflatex -interaction=nonstopmode beyond.tex
+  - pdflatex -interaction=nonstopmode beyond.tex
+
+#The following lines where automaticaly generated after
+# cd into my local repo with the old version of .travis.yml
+# install travis cli from: https://github.com/travis-ci/travis.rb
+#  $ sudo apt-get install ruby2.1-dev
+#  $ sudo gem install travis -v 1.8.2 --no-rdoc --no-ri
+#  $ travis setup releases
+# Add:   skip_cleanup: true (see below)
+
 deploy:
   provider: releases
   api_key:
     secure: oNJUkDRl3fTQgk8/j3PlwH7srGQYjW0ng9ZU/sSmZo9E9jhBEF6FR0ky9kREQMmu/bbHWPfZLKqMtIuGl/wW71q/gAV0AKT/sH+DZ269VJtmjR1KEj8VNEJ0RE+rBGQ/CD36MkXtwipCxuUg14U7PrOIapVPkUPpyr1gx0ozQIkbE3b+K468yIVHkR9pfiYkuJWvr7ezunkM6RltnJA13733FUj/4U+qaNEWcKD8FGh5E8l68Zz/hzzEMm4aFkPn4XEqaJuaMN/Kqm82O9LwALYN7pTvCj6par4OQ1Z+dx/sujKRjRyhFMIcv14QpxYA4FBoH06bxk+Y8x3hP/X1+aqfY6b9C4Z6m1IRSLObXwC/Nu3gsG+OnNsCCwzpwdjQYk8mgnXe+QR903jq03w3UveYPkR1hPGNMrMDsAO8oOcr98S0wpIzcxshVzBO2EQzDE7gidA3C9wjZprzW5PBc7hEtPWkv0Kh0hl1cGvQ7dYqn+uYPEJgvA8XsMyF3yEUYutSIGVcWTK2rDodPqNE6fdiLQUfUyoc3XAQhf4hh8k4b6wpSOrBqKiTrjSchdHAT+GalSfXP4RwKE3SjXIl5K2ir62XU+CmRxq1jg7zqNW5gNiHjqzQqarxjIRmriPm3Em2nySHWRFgM+Nsy4680NXf5EhX9HheIOFwdsczBeI=
   file: beyond.pdf
+  skip_cleanup: true
   on:
     repo: restrepo/beyond-the-standard-model
