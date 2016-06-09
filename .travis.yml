@@ -1,7 +1,23 @@
-#https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents/blob/master/.travis.yml
+#https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents -> .travis.yml
+
 os: linux
+sudo: required
+
 # we use the R VM because it contains LaTeX and pandoc
+# https://docs.travis-ci.com/user/languages/r
+#Requieres DESCRIPTION file
+
 language: r
+
+#LaTeX/TexLive Packages #
+#The included TexLive distribution contains only a limited
+#set of default packages. If your vignettes require additional
+#TexLive packages you can install them using tlmgr install
+#in the before_install step.
+
+before_install:
+  - tlmgr install index
+
 # we can install additional software
 apt_packages:
 # we download pdf2djvu to also generate a djvu f i l e of our LaTeX source
