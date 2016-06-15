@@ -63,6 +63,7 @@ f \left( m_{\chi_n},m_{S_{\alpha}} \right)=&
 Following Romao notes: \url{http://porthos.tecnico.ulisboa.pt/Public/textos/one-loop.pdf}\footnote{Old, now part now part of "Advanced Quantum Field Theory" \url{http://porthos.ist.utl.pt/Public/textos/tca.pdf}} We define $A_0, B_0$ as
 
 \includegraphics[scale=0.6]{romao1}
+
 If we write
 
 \includegraphics[scale=0.6]{romao9}
@@ -70,32 +71,58 @@ If we write
 The generic integral is 
 
 \includegraphics[scale=0.6]{romao2}
-with result
 
-\includegraphics[scale=0.6]{romao3}
+This gives
+
+\includegraphics[scale=0.5]{romao3}
+
 In particular
 
 \includegraphics[scale=0.6]{romao4}
+
 where for the tadpole integrals $C=m^2$
+
+With the notation
+
+\includegraphics[scale=0.5]{romao10}
+
+
 
 After factoring out the $i/\left( 16\pi^2 \right)$ in (A.51)
 
 \includegraphics[scale=0.6]{romao5}
+
 For the integrals with two denominators we get,
 
-\includegraphics[scale=0.6]{romao6}
+\includegraphics[scale=0.5]{romao6}
+
 
 We obtain
 
-\includegraphics[scale=0.6]{romao7}
+\includegraphics[scale=0.5]{romao7}
 
+\begin{verbatim}
+In[1]:= Integrate[Log[a x], x]
+Out[1]= -x + x Log[a x]
+
+
+In[2]:= Dt[-x + x Log[a x], x, Constants -> a]
+Out[3]= Log[a x]
+\end{verbatim}
 From this expression one can easily obtain the following results
 
 \includegraphics[scale=0.6]{romao8}
 
 %\includegraphics[scale=0.6]{romao1}
 
+To obtain in detail could be useful the Feynman parameters for the one-loop neutrino integral in Fig.~\ref{fig:fp}
 
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.8]{parfeyn}
+  \caption{Feynman parameters}
+  \label{fig:fp}
+\end{figure}
 
 
 
