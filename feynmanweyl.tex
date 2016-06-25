@@ -628,16 +628,26 @@ S^{(n)}=  \frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorn
 \end{align}
 The relevant term for the scattering
 \begin{align}
-  e^{-}(p_1)+e^{-}(p_2)\to   e^{-}(p_1')+e^{-}(p_2')
+  e^{-}_L(p_1)+e_L^{-}(p_2)\to   e_R^{-}(p_1')+e_R^{-}(p_2')
 \end{align}
+As alwayas we use the left-handed Weyl spinors
+\begin{align}
+  e_L\to &\xi_{\alpha} &   \left( e_R \right)^{\dagger}\to &\eta^{\alpha}\,,
+\end{align}
+with Yukawa Lagrangian
+\begin{align}
+  \mathcal{L}_y=& y \left(e_R\right)^{\dagger} e_L h^0 +y \left(e_L\right)^{\dagger} e_R h^0 \nonumber\\
+               =& y \eta^{\alpha} \xi_{\alpha}h^0 + y \eta^{\dagger\dot{\alpha}} \xi_{\dot{\alpha}}^{\dagger}h^0\,. 
+\end{align}
+
+
 is
 \begin{align}
 S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\}\nonumber\\
-=&  \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi)_{x_2}\}\nonumber\\
+=&  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}\}\nonumber\\
 =& 
- \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}\psi\phi)_{x_1}(\overline{\psi}\psi\phi
-)_{x_2}:+
- \frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}
+ \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}:
+ \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}
 \bcontraction{\psi}{\phi}{)_{x_1}(\overline{\psi}\psi}{\phi}
 \psi\phi)_{x_1}(\overline{\psi}\psi\phi
 )_{x_2}:+\cdots
