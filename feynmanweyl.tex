@@ -647,80 +647,261 @@ S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H
 =&  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}\}\nonumber\\
 =& 
  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}:
- \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:(\overline{\psi}
-\bcontraction{\psi}{\phi}{)_{x_1}(\overline{\psi}\psi}{\phi}
-\psi\phi)_{x_1}(\overline{\psi}\psi\phi
+ \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:( \eta^{\alpha} 
+\bcontraction{\xi_{\alpha}}{\phi}{)_{x_1}(\eta^{\alpha} \xi_{\alpha}}{h^0}
+\xi_{\alpha} h^0)_{x_1}(\eta^{\alpha} \xi_{\alpha}h^0 
 )_{x_2}:+\cdots
 \end{align}
 The first term corresponds to two  disconnected Feynman diagrams that does not contribute to the $S$--matrix. For the process at hand, we want terms where four fermionic operators are not contracted, corresponding to the particles in the initial and final states. The second term in the previous expansion of the Wick theorem is the only satisfying this requirement. In this way
 \begin{align}
-  S^{(2)}(e^+ e^-\to e^+e^-)=&\frac{(-ih)^2}{2!}\int\int d^4x_1 d^4x_2
+  S^{(2)}(e^+ e^-\to e^+e^-)=&\frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2
 \bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2):(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:
+\,\phi(x_1)\phi(x_2):(\eta^{\alpha} \xi_{\alpha})_{x_1}(\eta^{\beta} \xi_{\beta})_{x_2}:
 \end{align}
 
 On the other hand 
 \begin{align}
 \label{eq:156f}
-  :(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:=&
-:\overline{\psi}^\alpha(x_1)\psi^\alpha(x_1)\overline{\psi}^\beta(x_2)\psi^\beta(x_2):\,.
+  :(\eta^{\alpha} \xi_{\alpha})_{x_1}(\eta^{\beta} \xi_{\beta})_{x_2}:=&
+:\eta^{\alpha}(x_1) \xi_{\alpha}(x_1) \eta^{\beta}(x_2) \xi_{\beta}(x_2):\,.
 \end{align}
 
 %\left[\right]
 %\left(\right)
 
-From the Fourier expansions in eqs.~\eqref{eq:83f}, \eqref{eq:78f} we have that $a_s^\dagger$ and $a_s$ are the creation and annihilation operators for particles. As we have only particles (and not antiparticles) in the initial and final states, the only non-zero contribution of the ordered product in eq.~\eqref{eq:156f} must have the order $a^\dagger a^\dagger a\, a$. As $\psi_+$ and $\overline{\psi}_-$ are associated to $a$ and $a^\dagger$ respectively, the only non-zero contribution from the ordered fermion product is
-%\left(\right)
+
 
 The specific calculation by the scattering mediated by the Higgs is 
 \begin{align}
-  S_{fi}=\frac{\left( -ih \right)^{2}}{2!}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-\bcontraction{\,}{\phi}{(x_1)}{\phi}\,\phi(x_1)\phi(x_2)
-\left[ \left\langle e_L \left(\mathbf{p}'_1\right), e_L\left(\mathbf{p}'_2\right) \right|\xi_{-\dot{\alpha}}^{\dagger} \xi_{-}^{\dagger\dot{\alpha}}\eta_+^{\alpha}\eta_{+\alpha}
- \left| e_R\left(\mathbf{p}_1\right), e_R \left(\mathbf{p}_1\right)\right\rangle \right. \nonumber\\
+  S_{fi}=&\frac{\left( -iy \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\bcontraction{\,}{\phi}{(x_1)}{\phi}\,\phi(x_1)\phi(x_2) \nonumber\\
+&\left\langle e_R\left(\mathbf{p}'_1\right), e_R \left(\mathbf{p}'_2\right) \right|
+  :\eta^{\alpha}(x_1) \eta^{\beta}(x_2)\xi_{\beta}(x_2) \xi_{\alpha}(x_1):
+ \left| e_L \left(\mathbf{p}_1\right), e_L\left(\mathbf{p}_2\right) \right\rangle. \nonumber\\
+  =&\frac{\left( -iy \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\,i\Delta_F(x_1-x_2) \nonumber\\
+&\left\langle e_R\left(\mathbf{p}'_1\right), e_R \left(\mathbf{p}'_2\right) \right|
+  \eta^{\alpha}_{-}(x_1) \eta^{\beta}_{-}(x_2)\xi_{\beta +}(x_2) \xi_{\alpha +}(x_1)
+ \left| e_L \left(\mathbf{p}_1\right), e_L\left(\mathbf{p}_2\right) \right\rangle. \nonumber\\
+  =&\frac{\left( -iy \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&\left\langle e_R\left(\mathbf{p}'_1\right), e_R \left(\mathbf{p}'_2\right) \right|
+  \eta^{\alpha}_{-}(x_1) \eta^{\beta}_{-}(x_2)\xi_{\beta +}(x_2) \xi_{\alpha +}(x_1)
+ \left| e_L \left(\mathbf{p}_1\right), e_L\left(\mathbf{p}_2\right) \right\rangle. 
 \end{align}
-
-\begin{align}
-:(\overline{\psi}\psi)_{x_1}(\overline{\psi}\psi)_{x_2}:  
-=-&\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)\,.
-\end{align}
-The relevant $S$--matrix element then reads
-\begin{align}
-  S^{(2)}_{fi}=&-\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\nonumber\\
-&\times\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
-i\Delta_F(x_1-x_2)\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle\nonumber\\
-=&-\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\,i\Delta_F(x_1-x_2)\nonumber\\
-&\times\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
-\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle\nonumber\\
-=&-\frac{(-ih)^2}{2}\int\int d^4x_1 d^4x_2\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)e^{i q\cdot(x_1-x_2)}\nonumber\\
-&\times\langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
-\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)\psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle
-\end{align}
+In the following, to avoid clutter in the expressions we ignore the spin part during the intemediate calculations. 
 The two particle Fock state is, after proper normalization
 \begin{align}
-  |e_L(\mathbf{p}_1)e_L(\mathbf{p}_2)\rangle=&\frac{1}{\sqrt{V}}a_s^\dagger(\mathbf{p}_2)a_s^\dagger(\mathbf{p}_1)|0\rangle
+  |e_L(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
 \end{align}
-Therefore
+Therefore %recalculate
 \begin{align}
-  \xi^\alpha_+(x_1)\xi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle=&
-\int\frac{d^3k}{\sqrt{2E_k V}}\int\frac{d^3k}{\sqrt{2E_{k'}V}}
-x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')e^{-i k\cdot x_1}e^{-i k'\cdot x_2}\nonumber\\
-&\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_s^\dagger(\mathbf{p}_2)a_s^\dagger(\mathbf{p}_1)|0\rangle
+  \xi^\alpha_+(x_1)\xi^\beta_+(x_2)|e_L^-(\mathbf{p}_2)e_L^-(\mathbf{p}_1)\rangle=&
+\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
+=&
+\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) - a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) a_s(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
+=&
+\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
+\end{align}
+By using the identity
+\begin{align}
+  [AB,CD]=A[B,C]D - [A,C]BD
++CA[B, D] - C[A, D]B\,,
+\end{align}
+\begin{align}
+   \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]=&
+ a_s(\mathbf{k})\left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s_2}^\dagger(\mathbf{p}_2)
+-
+ \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) \nonumber\\
+& 
+a_{s_1}^\dagger(\mathbf{p}_1)a_s(\mathbf{k})\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]
+-
+a_{s_1}^\dagger(\mathbf{p}_1) \left[ a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)\right]a_{s'}(\mathbf{k}')
+\end{align}
+Therefore,
+\begin{align}
+   \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right] |0\rangle 
+=&\left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right] \left[a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle \nonumber\\
+ &-
+  \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right] \left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle \nonumber\\
+ =& (2\pi)^6 \left[ \delta^{(3)}(\mathbf{k}'-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}-\mathbf{p}_2) 
+    \delta^{(3)}(\mathbf{k}-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}'-\mathbf{p}_2) \right]|0\rangle
 \end{align}
 
+
 \begin{align}
-  \psi^\alpha_+(x_1)\psi^\beta_+(x_2)|e^-(\mathbf{p}_1)e^-(\mathbf{p}_2)\rangle=&\frac{1}{\sqrt{2E_{p_1} V}}\frac{1}{\sqrt{2E_{p_2}V}}\nonumber\\
-&\times\left[u^\alpha(\mathbf{p}_1)u^\beta(\mathbf{p}_2)e^{-i p_1\cdot x_1}e^{-i p_2\cdot x_2}
--u^\alpha(\mathbf{p}_2)u^\beta(\mathbf{p}_1)e^{-i p_2\cdot x_1}e^{-i p_1\cdot x_2}\right]|0\rangle
+\label{eq:belel}
+  \xi^\alpha_+(x_1)&\xi^\beta_+(x_2)|e_L^-(\mathbf{p}_2)e_L^-(\mathbf{p}_1)\rangle
+ \nonumber\\
+&=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ x^{\alpha}(\mathbf{p}_2)x^{\beta}(\mathbf{p}_1)
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}
+- x^{\alpha}(\mathbf{p}_1)x^{\beta}(\mathbf{p}_2)
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   \right] \left|0\right\rangle.
+\end{align}
+This implies also that
+\begin{align}
+\label{eq:kelel}
+ \langle e_L^-(\mathbf{p}_2)&e_L^-(\mathbf{p}_1) |  \xi^{\dagger\dot{\alpha}}_-  (x_1)\xi^{\dagger\dot{\beta}}_-(x_2) \nonumber\\
+&=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  \left[x^{\dagger\dot{\alpha}}(\mathbf{p}_2)x^{\dagger\dot{\beta}}(\mathbf{p}_1)
+\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}
+- x^{\dagger\dot{\alpha}}(\mathbf{p}_1)x^{\dagger\dot{\beta}}(\mathbf{p}_2)
+\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right] .
+\end{align}
+Since
+\begin{align}
+  |e_R(\mathbf{p}_2)e_R(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
+\end{align}
+we have
+\begin{align}
+   \eta^{\dagger\dot{\alpha}}_+(x_1)\eta^{\dagger\dot{\beta}}_+(x_2)|e_R^-(\mathbf{p}_2)e_R^-(\mathbf{p}_1)\rangle=&
+\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+y^{\dagger\dot{\alpha}}(s,\mathbf{k})y^{\dagger\dot{\beta}}(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \,.
 \end{align}
 Following similar steps, we find
 \begin{align}
-  \langle e^-(\mathbf{p}_1')e^-(\mathbf{p}_2')|
-\overline{\psi}^\alpha_-(x_1)\overline{\psi}^\beta_-(x_2)=&
-\frac{1}{\sqrt{2E_{p_1}' V}}\frac{1}{\sqrt{2E_{p_2}'V}}\nonumber\\
-&\times\langle0|\left[\bar{u}^\alpha(\mathbf{p}_1')\bar{u}^\beta(\mathbf{p}_2')e^{-i p_1'\cdot x_1}e^{-i p_2'\cdot x_2}
--\bar{u}^\alpha(\mathbf{p}_2')u^\beta(\mathbf{p}_1')e^{-i p_2'\cdot x_1}e^{-i p_1'\cdot x_2}\right]
+\eta^{\dagger\dot{\alpha}}_+(x_1)&\eta^{\dagger\dot{\beta}}_+(x_2)|e_R^-(\mathbf{p}_2)e_R^-(\mathbf{p}_1)\rangle
+ \nonumber\\
+\label{eq:berer}
+&=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ y^{\dagger\dot{\alpha}}(\mathbf{p}_2)y^{\dagger\dot{\beta}}(\mathbf{p}_1)
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}
+-y^{\dagger\dot{\alpha}}(\mathbf{p}_1)y^{\dagger\dot{\beta}}(\mathbf{p}_2)
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   \right] \left|0\right\rangle \\
+\langle e_R^-(\mathbf{p}_2)&e_R^-(\mathbf{p}_1)| \eta^{\alpha}_-(x_1)\eta^{\beta}_-(x_2)
+ \nonumber\\
+\label{eq:berer}
+&=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ y^{\alpha}(\mathbf{p}_2)y^{\beta}(\mathbf{p}_1)
+\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}
+- y^{\alpha}(\mathbf{p}_1)y^{\beta}(\mathbf{p}_2)
+\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right].
 \end{align}
+
+Replacing back we have
+\begin{align}
+   S_{fi}
+  =&\frac{\left( -iy \right)^{2}}{2!}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&\times\left\langle e_R\left(\mathbf{p}'_1\right), e_R \left(\mathbf{p}'_2\right) \right|
+  \eta^{\alpha}_{-}(x_1) \eta^{\beta}_{-}(x_2)\xi_{\beta +}(x_2) \xi_{\alpha +}(x_1)
+ \left| e_L \left(\mathbf{p}_1\right), e_L\left(\mathbf{p}_2\right) \right\rangle \nonumber\\
+    =&\frac{\left( iy \right)^{2}}{2}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&
+ \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+- y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}   \right] \nonumber\\
+& \times \left[x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} 
+- x_{\alpha}(\mathbf{p}_2)x_{\beta}(\mathbf{p}_1)
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \right].
+\end{align}
+Expanding all the terms,
+\begin{align}
+   S_{fi}
+    =&\frac{\left( iy \right)^{2}}{2}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&
+ \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}  \right. \nonumber\\
+&\qquad- y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1} 
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}  \nonumber\\
+&\qquad -y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_2)x_{\beta}(\mathbf{p}_1)
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \nonumber\\
+&\qquad\left. + y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')x_{\alpha}(\mathbf{p}_2)x_{\beta}(\mathbf{p}_1)
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}   \right].
+\end{align}
+Interchanging $\alpha\leftrightarrow\beta$ and moving terms around
+\begin{align}
+   S_{fi}
+    =&\frac{\left( iy \right)^{2}}{2}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&
+ \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}  \right. \nonumber\\
+&\qquad+ y^{\beta}(\mathbf{p}_2')y^{\alpha}(\mathbf{p}_1')x_{\beta}(\mathbf{p}_2)x_{\alpha}(\mathbf{p}_1)
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \nonumber\\
+&\qquad- y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1} 
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}  \nonumber\\
+&\qquad\left. -y^{\beta}(\mathbf{p}_1')y^{\alpha}(\mathbf{p}_2')x_{\beta}(\mathbf{p}_2)x_{\alpha}(\mathbf{p}_1)
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}   \right].
+\end{align}
+We can now get the factor $x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)$
+\begin{align}
+   S_{fi}
+    =&\frac{\left( iy \right)^{2}}{2}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&
+ \times \left\{ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') 
+\left[ \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}
++\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \right]
+  \right. \nonumber\\
+&\left.\qquad- y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1') 
+\left[\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}
++\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}  \right]
+   \right\}x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2).
+\end{align}
+For the second term  we have
+\begin{align}
+  \int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2&
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)}
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \nonumber\\
+=
+  \int\int \operatorname{d}^4x_2 \operatorname{d}^4x_1&
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_2-x_1)}
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}\operatorname{e}^{-i p_2\cdot x_2}\operatorname{e}^{-i p_1\cdot x_1} \nonumber\\
+=
+  \int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2&
+\int\frac{d^4(-q)}{(2\pi)^4}\,i\Delta_F(-q)\operatorname{e}^{i q\cdot(x_1-x_2)}
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}\operatorname{e}^{-i p_2\cdot x_2}\operatorname{e}^{-i p_1\cdot x_1} \nonumber\\
+=
+  \int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2&
+\int\frac{d^4(q)}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)}
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}\operatorname{e}^{-i p_2\cdot x_2}\operatorname{e}^{-i p_1\cdot x_1} \,.
+\end{align}
+
+Similarly, for the fourth term
+\begin{align}
+    \int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2&
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)}
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \nonumber\\
+    \int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2&
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)}
+\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\operatorname{e}^{-i p_1\cdot x_1}\,,
+\end{align}
+where we have used
+\begin{align}
+  \int\operatorname{d}^4(-q)=\int\operatorname{d}(-q_0)\int\operatorname{d}(-q_1)\int\operatorname{d}(-q_2)\int\operatorname{d}(-q_3)=\int \operatorname{d}^4q\,,
+\end{align}
+and $\Delta_F(-q)=\Delta_F(q)$.
+
+In this way
+
+\begin{align}
+   S_{fi}
+    =&\frac{(iy)^2 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
+&
+ \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+         - y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1} 
+  \right]x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}.
+\end{align}
+
+
 As expected, the final result can be written in term of three different factors: the momentum conservation, normalization, and the relativistic amplitude
 \begin{align}
   S^{(2)}_{fi}=i(2\pi)^4\delta^{4}\left(\sum_{i=1,2} p_i-\sum_{f=1,2}p'_f\right)
@@ -728,7 +909,7 @@ As expected, the final result can be written in term of three different factors:
 \end{align}
 where
 \begin{align}
-  \mathcal{M}_{fi}=(ih)^2\left[
+  \mathcal{M}_{fi}=(iy)^2\left[
 \bar{u}^\alpha(\mathbf{p}_2')\bar{u}^\beta(\mathbf{p}_1')\Delta_F(p_1-p_2')u^\alpha(\mathbf{p}_1)u^\beta(\mathbf{p}_2)
 -\bar{u}^\alpha(\mathbf{p}_1')\bar{u}^\beta(\mathbf{p}_2')\Delta_F(p_1-p_1')u^\alpha(\mathbf{p}_1)u^\beta(\mathbf{p}_2)
 \right]
