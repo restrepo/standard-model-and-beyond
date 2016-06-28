@@ -890,7 +890,6 @@ where we have used
 and $\Delta_F(-q)=\Delta_F(q)$.
 
 In this way
-
 \begin{align}
    S_{fi}
     =&\frac{(iy)^2 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
@@ -901,6 +900,45 @@ In this way
   \right]x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}.
 \end{align}
 
+Performing the integrations in $x_1$ and $x_2$
+
+\begin{align}
+   S_{fi}
+    =&\frac{(2\pi)^8(iy)^2 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)
+%\operatorname{e}^{i q\cdot(x_1-x_2)} 
+\nonumber\\
+&
+ \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')\delta^{(4)}\left(-q-p_1'+p_1  \right)\delta^{(4)}\left(q-p_2'+p_2  \right)   \right. \nonumber\\
+&\left. 
+\quad    - y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')\delta^{(4)}\left(-q-p_2'+p_1  \right)\delta^{(4)}\left(q-p_1'+p_2  \right)
+  \right]x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\end{align}
+After the final integration we have
+\begin{align}
+     S_{fi}
+    =&\frac{(2\pi)^4(iy)^2 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+\nonumber\\
+&
+ \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')i\Delta_F(p_1-p_1')\delta^{(4)}\left(-q-p_1'+p_1  \right)\delta^{(4)}\left(q-p_2'+p_2  \right)   \right. \nonumber\\
+&\left. 
+\quad    - y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')i\Delta_F(p_1-p_2')\delta^{(4)}\left(-q-p_2'+p_1  \right)\delta^{(4)}\left(q-p_1'+p_2  \right)
+  \right]x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)\,.
+\end{align}
+We can simplify the $\delta$-functions by eliminating $q$:
+\begin{align}
+  \delta^{(4)}\left(-q-p_1'+p_1  \right)\delta^{(4)}\left(q-p_2'+p_2  \right)=&\delta^{(4)}\left(-p_2'+p_2-p_1'+p_1\right)=\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) \nonumber\\
+  \delta^{(4)}\left(-q-p_2'+p_1  \right)\delta^{(4)}\left(q-p_1'+p_2  \right)=&\delta^{(4)}\left(-p_1'+p_2-p_2'+p_1\right)==\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right). 
+\end{align}
+In this way
+
+\begin{align}
+     S_{fi}
+    =\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+  &\left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')i\Delta_F(p_1-p_1')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)   \right. \nonumber\\
+&\left. 
+  - y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')i\Delta_F(p_1-p_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+  \right]\,.
+\end{align}
 
 As expected, the final result can be written in term of three different factors: the momentum conservation, normalization, and the relativistic amplitude
 \begin{align}
@@ -910,8 +948,8 @@ As expected, the final result can be written in term of three different factors:
 where
 \begin{align}
   \mathcal{M}_{fi}=(iy)^2\left[
-\bar{u}^\alpha(\mathbf{p}_2')\bar{u}^\beta(\mathbf{p}_1')\Delta_F(p_1-p_2')u^\alpha(\mathbf{p}_1)u^\beta(\mathbf{p}_2)
--\bar{u}^\alpha(\mathbf{p}_1')\bar{u}^\beta(\mathbf{p}_2')\Delta_F(p_1-p_1')u^\alpha(\mathbf{p}_1)u^\beta(\mathbf{p}_2)
+y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')i\Delta_F(p_1-p_1')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)   
+  - y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')i\Delta_F(p_1-p_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
 \right]
 \end{align}
 The two contributions are displayed in Fig.~\ref{fig:sct}
@@ -922,6 +960,9 @@ The two contributions are displayed in Fig.~\ref{fig:sct}
   \caption{fermion scattering} %noinstiki
   \label{fig:sct} %noinstiki
 \end{figure} %noinstiki
+
+%Calculates now the cross section
+
 Since
 \begin{align}
   \Delta_F(q)=\frac{1}{q^2-m^2}
