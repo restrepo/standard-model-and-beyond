@@ -227,6 +227,18 @@ and so on we obtain the $S$--matrix
   =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{t_1} d t_2\ldots\int_{-\infty}^{t_{n-1}}d t_n\,{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\,.
 \end{align}
 
+\section{Useful identities}
+we use the notation
+\begin{align}
+  a\cdot b=a_{\mu}b^{\mu}\,.
+\end{align}
+
+\begin{align}
+\label{eq:xxd}
+  \sum_s x_{\alpha}(\mathbf{p},s)x^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}} \nonumber\\
+  % \label{eq:yyd}
+   \sum_s y^{\dagger \dot{\alpha}}(\mathbf{p},s) y^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta} \nonumber\\
+\end{align}
 
 
 \section{Yukawa interaction}
@@ -927,7 +939,7 @@ After the final integration we have
 We can simplify the $\delta$-functions by eliminating $q$:
 \begin{align}
   \delta^{(4)}\left(-q-p_1'+p_1  \right)\delta^{(4)}\left(q-p_2'+p_2  \right)=&\delta^{(4)}\left(-p_2'+p_2-p_1'+p_1\right)=\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) \nonumber\\
-  \delta^{(4)}\left(-q-p_2'+p_1  \right)\delta^{(4)}\left(q-p_1'+p_2  \right)=&\delta^{(4)}\left(-p_1'+p_2-p_2'+p_1\right)==\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right). 
+  \delta^{(4)}\left(-q-p_2'+p_1  \right)\delta^{(4)}\left(q-p_1'+p_2  \right)=&\delta^{(4)}\left(-p_1'+p_2-p_2'+p_1\right)=\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right). 
 \end{align}
 In this way
 
@@ -955,14 +967,48 @@ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')i\Delta_F(p_1-p_1')x_{\alpha}(\
 The two contributions are displayed in Fig.~\ref{fig:sct}
 \begin{figure} %noinstiki
   \centering %noinstiki
-\includegraphics{scattering} %noinstiki
- \includegraphics{scattering2} %noinstiki
-  \caption{fermion scattering} %noinstiki
+\includegraphics[scale=0.62]{scattering} %noinstiki
+ \includegraphics[scale=0.62]{scattering2} %noinstiki
+  \caption{fermion scattering (Not Weyl fermion notation yet)} %noinstiki
   \label{fig:sct} %noinstiki
 \end{figure} %noinstiki
 
 %Calculates now the cross section
 
+To calculate the corresponding cross section, we must start by calculating
+\begin{align}
+  \mathcal{M}\mathcal{M}^{\dagger}=&
+y^4\left[
+y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')\Delta_F(p_1-p_1')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)   
+  - y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')\Delta_F(p_1-p_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
+\right] \nonumber\\
+&\times\left[
+x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)\Delta_F(p_1-p_1')y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1')
+  - x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)\Delta_F(p_1-p_2')y^{\dagger\dot{\beta}}(\mathbf{p}_1')y^{\dagger\dot{\alpha}}(\mathbf{p}_2')
+\right]
+\end{align}
+\begin{align}
+  =&y^4 \Delta_F^2(p_1-p_1')\left[y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2) 
+x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1')  \right] \nonumber\\
+&+y^4 \Delta_F^2(p_1-p_2') \left[
+  \right] \nonumber\\
+&-y^4\Delta_F(p_1-p_1')\Delta_F(p_1-p_2') \left[ \right. \nonumber\\
+    &\left.  \right].
+\end{align}
+
+For the first term in the expansion and taking into account summming over spins, we have
+\begin{align}
+ \left| \mathcal{M}_1 \right| = &y^4 \Delta_F^2(p_1-p_2')\, \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2) 
+x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') 
+\end{align}
+Using \eqref{eq:xxd}
+\begin{align}
+  \left| \mathcal{M}_1 \right| = &y^4 \Delta_F^2(p_1-p_2')\,p_2\cdot \sigma_{\beta\dot{\beta}} x_{\dot{\alpha}}^{\dagger}  \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') x_{\alpha}(\mathbf{p}_1)(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
+= &y^4 \Delta_F^2(p_1-p_2')\, p_2\cdot \sigma_{\beta\dot{\beta}} p_1\cdot \sigma_{\alpha\dot{\alpha}}   \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
+\end{align}
+\begin{align}
+  = &y^4 \Delta_F^2(p_1-p_2')\, p_2\cdot \sigma_{\beta\dot{\beta}} p_1\cdot \sigma_{\alpha\dot{\alpha}} y^{\dagger\dot{\beta}}  \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')  (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
+\end{align}
 Since
 \begin{align}
   \Delta_F(q)=\frac{1}{q^2-m^2}
