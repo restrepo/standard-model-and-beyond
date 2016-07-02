@@ -577,7 +577,7 @@ We now will find an expression for cross section in the center of mass frame (CM
 
 The center of mass (CM) frame is defined by the condition
 \begin{align}
-  \label{eq:55}
+  \label{eq:cm}
   \mathbf{p}_1+\mathbf{p}_2=0
 \end{align}
 
@@ -656,6 +656,29 @@ we have
 \end{align}
 In this way we can express $E_2'$ in terms of $E_1'$ in Eq.~\eqref{eq:57}.
 Moreover, we can define the center of mass energy as
+\begin{align}
+\label{eq:smv}
+  s=&\left( p_1+p_2 \right)^2\,.
+\end{align}
+
+By using the center of mass condition \eqref{eq:cm}
+\begin{align}
+  \mathbf{p}=\mathbf{p}_1=-\mathbf{p}_2\,,
+\end{align}
+then
+\begin{align}
+   s=& p_1^2+p_2^2+2 p_1\cdot p_2 \nonumber\\
+=&  p_1^2+p_2^2+2  \left( E_1 E_2-\mathbf{p}_1\cdot\mathbf{p}_2 \right)\nonumber\\
+=& p_1^2+p_2^2+2\left( E_1 E_2+\mathbf{p}_1^2 \right) \nonumber\\
+=& p_1^2+p_2^2+2\left( E_1 E_2+ E_1^2-p_1^2 \right) \nonumber\\
+=& p_1^2+p_2^2+2\left( E_1 E_2+ E_1^2-p_1^2 \right) \nonumber\\
+=& p_2^2-p_1^2+2\left( E_1 E_2+ E_1^2 \right) \nonumber\\
+=& E_2^2-\mathbf{p}_1^2-E_2^2+\mathbf{p}_2^2+2\left( E_1 E_2+ E_1^2 \right) \nonumber\\
+=& E_2^2-E_1^2+2\left( E_1 E_2+ E_1^2 \right) \nonumber\\
+=& E_1^2 +2E_1 E_2+ E_2^2 \nonumber\\
+=& \left( E_1+E_2 \right)^2\,.
+\end{align}
+So that
 \begin{align}
   \label{eq:60}
   \sqrt{s}=E_1+E_2
@@ -830,14 +853,13 @@ Replacing Eqs.~\eqref{eq:72}, and \eqref{eq:67} in Eq.~\eqref{eq:54}
 \end{align}
 and, finally
 \begin{align}
-  \label{eq:74}
   \frac{d\sigma}{d\Omega}=\frac{1}{64\pi^2s}\left\{
 \frac{[s-(m_1'+m_2')^2][s-(m_1'-m_2')^2]}{[s-(m_1+m_2)^2][s-(m_1-m_2)^2]}\right\}^{1/2}
 \overline{|\mathcal{M}|^2}
 \end{align}
 or, in terms of the kinematic function defined in eq.~\eqref{eq:46}
 \begin{align}
-  \label{eq:74}
+  \label{eq:2bcs}
   \frac{d\sigma}{d\Omega}=\frac{1}{64\pi^2s}
 \frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
 \overline{|\mathcal{M}|^2}
