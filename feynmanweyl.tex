@@ -230,7 +230,9 @@ and so on we obtain the $S$--matrix
 \section{Useful identities}
 \begin{align} %2.55
   \label{eq:trss}
-  \operatorname{Tr}\left[ \sigma^{\mu},\sigma^{\nu} \right]=&2 g^{\mu\nu}\,,
+  \operatorname{Tr}\left[ \sigma^{\mu},\sigma^{\nu} \right]=&2 g^{\mu\nu}\,, \\
+  \operatorname{Tr}\left[ \sigma^{\mu},\overline{\sigma}^{\nu}\sigma^{\rho}\sigma^{\kappa} \right]=&
+   2 \left(g^{\mu\nu}g^{\rho\kappa}-g^{\mu\rho}g^{\nu\kappa}+g^{\mu\kappa}g^{\nu\rho} +i\epsilon^{\mu\nu\rho\kappa} \right).
 \end{align}
 
 
@@ -1220,35 +1222,41 @@ D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
 By using~\eqref{eq:belel}, \eqref{eq:kelel}, we have an expression similar to \eqref{eq:hdee}
 \begin{align}
       S_{fi}
-    =&\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
- \left[ x^{\dagger\dot{\alpha}}_e(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  i D_{\mu\nu}x^{\dagger\dot{\beta}}_q(\mathbf{p}_2') \left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2)\right] \nonumber\\
-=&\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
-  \left[ x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\mu} x_q(\mathbf{p}_2)\right].
+    =&\frac{(2\pi)^4(ia_L)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[ x^{\dagger\dot{\alpha}}_e(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  i D_{\mu\nu}x^{\dagger\dot{\beta}}_q(\mathbf{p}_2') \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2)\right] \nonumber\\
+=&\frac{(2\pi)^4(ia_L)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+  \left[ x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2)\right].
 \end{align}
-
-
+In this way
 \begin{align}
-\label{eq:belel}
-  \xi^\alpha_+(x_1)&\xi^\beta_+(x_2)|e_L^-(\mathbf{p}_2)e_L^-(\mathbf{p}_1)\rangle
- \nonumber\\
-&=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ x^{\alpha}(\mathbf{p}_2)x^{\beta}(\mathbf{p}_1)
-\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}
-- x^{\alpha}(\mathbf{p}_1)x^{\beta}(\mathbf{p}_2)
-\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   \right] \left|0\right\rangle.
+  \mathcal{M}=&(ia_L)^2 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2)
 \end{align}
-This implies also that
 \begin{align}
-\label{eq:kelel}
- \langle e_L^-(\mathbf{p}_2)&e_L^-(\mathbf{p}_1) |  \xi^{\dagger\dot{\alpha}}_-  (x_1)\xi^{\dagger\dot{\beta}}_-(x_2) \nonumber\\
-&=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  \left[x^{\dagger\dot{\alpha}}(\mathbf{p}_2)x^{\dagger\dot{\beta}}(\mathbf{p}_1)
-\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}
-- x^{\dagger\dot{\alpha}}(\mathbf{p}_1)x^{\dagger\dot{\beta}}(\mathbf{p}_2)
-\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right] .
+  \mathcal{M}\mathcal{M}^{\dagger}=&\sum_{\text{spins}}
+a_L^4 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)   D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2) 
+x_q^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\rho} x_q(\mathbf{p}_2') D_{\rho\sigma}
+x_e^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\sigma}x_e(\mathbf{p}_1')
 \end{align}
-
-
-
-
+\begin{align}
+  \mathcal{M}\mathcal{M}^{\dagger} =&\sum_{\text{spins}}
+a_L^4 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)   D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} 
+p_{2\delta}\sigma^{\delta} \overline{\sigma}^{\rho} x_q(\mathbf{p}_2') D_{\rho\sigma}
+x_e^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\sigma}x_e(\mathbf{p}_1') \nonumber\\
+=&\sum_{\text{spins}}a_L^4D_{\mu\nu} D_{\rho\sigma}  x_e^{\dagger\dot{\alpha}}(\mathbf{p}_1') \overline{\sigma}^{\mu}_{\dot{\alpha}\alpha}x_e^{\alpha}(\mathbf{p}_1)   x_q^{\dagger\dot{\beta}}(\mathbf{p}_2') \overline{\sigma}^{\nu}_{\dot{\beta}\beta} 
+p_2 \cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma} x_q^{\gamma}(\mathbf{p}_2')
+x_e^{\dagger\dot{\delta}}(\mathbf{p}_1) \overline{\sigma}^{\sigma}_{\dot{\delta}\delta}x_e^{\delta}(\mathbf{p}_1') \nonumber\\
+=&\sum_{\text{spins}}a_L^4D_{\mu\nu} D_{\rho\sigma} x_e^{\delta}(\mathbf{p}_1') x_e^{\dagger\dot{\alpha}}(\mathbf{p}_1') \overline{\sigma}^{\mu}_{\dot{\alpha}\alpha}x_e^{\alpha}(\mathbf{p}_1) x_e^{\dagger\dot{\delta}}(\mathbf{p}_1) \overline{\sigma}^{\sigma}_{\dot{\delta}\delta} x_q^{\gamma}(\mathbf{p}_2') x_q^{\dagger\dot{\beta}}(\mathbf{p}_2') \overline{\sigma}^{\nu}_{\dot{\beta}\beta} 
+p_2\cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma}  \nonumber\\
+=&a_L^4D_{\mu\nu} D_{\rho\sigma} p_1'\cdot{\sigma}^{\delta\dot{\alpha}}   \overline{\sigma}^{\mu}_{\dot{\alpha}\alpha} p_1\cdot \sigma^{\alpha\dot{\delta}} \overline{\sigma}^{\sigma}_{\dot{\delta}\delta} p_2'\cdot {\sigma}^{\gamma\dot{\beta}}  \overline{\sigma}^{\nu}_{\dot{\beta}\beta} 
+p_2\cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma} 
+\nonumber\\
+=&a_L^4D_{\mu\nu} D_{\rho\sigma} \operatorname{Tr}\left[p_1'\cdot\sigma \overline{\sigma}^{\mu} p_1\cdot \sigma \overline{\sigma}^{\sigma}\right] 
+               \operatorname{Tr}\left[p_2'\cdot \sigma \overline{\sigma}^{\nu} p_2\cdot \sigma \overline{\sigma}^{\rho}\right] 
+\end{align}
+\begin{align}
+ \mathcal{M}\mathcal{M}^{\dagger}  =&a_L^4D_{\mu\nu} D_{\rho\sigma} {p_1'}_{\eta}{p_1}_{\lambda}{p_2'}_{\theta}{p_2}_{\tau}\operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] 
+               \operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] 
+\end{align}
 For the interaction of a fermion pair with $W_\mu^\pm$, we know from
 the standard model Lagrangian \cite{lsm}, that
 \begin{align}
