@@ -739,18 +739,28 @@ By using the identity
 -
  \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) \nonumber\\
 & 
-a_{s_1}^\dagger(\mathbf{p}_1)a_s(\mathbf{k})\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]
++a_{s_1}^\dagger(\mathbf{p}_1)a_s(\mathbf{k})\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]
 -
-a_{s_1}^\dagger(\mathbf{p}_1) \left[ a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)\right]a_{s'}(\mathbf{k}')
+a_{s_1}^\dagger(\mathbf{p}_1) \left[ a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)\right]a_{s'}(\mathbf{k}') \nonumber\\
+=&
+ \left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_s(\mathbf{k})a_{s_2}^\dagger(\mathbf{p}_2)
+-
+ \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) \nonumber\\
+& 
++\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]a_{s_1}^\dagger(\mathbf{p}_1)a_s(\mathbf{k})
+-
+ \left[ a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)\right]a_{s_1}^\dagger(\mathbf{p}_1)a_{s'}(\mathbf{k}')
 \end{align}
 Therefore,
 \begin{align}
-   \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right] |0\rangle 
-=&\left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right] \left[a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle \nonumber\\
- &-
+&\left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right] |0\rangle \nonumber\\
+&\qquad=\left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_s(\mathbf{k})a_{s_2}^\dagger(\mathbf{p}_2) |0\rangle
+-
+ \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) |0\rangle \nonumber\\
+&\qquad=\left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right] \left[a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle-
   \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right] \left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle \nonumber\\
- =& (2\pi)^6 \left[ \delta^{(3)}(\mathbf{k}'-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}-\mathbf{p}_2) 
-    \delta^{(3)}(\mathbf{k}-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}'-\mathbf{p}_2) \right]|0\rangle
+&\qquad= (2\pi)^6 \left[ \delta^{(3)}(\mathbf{k}'-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}-\mathbf{p}_2) 
+    -\delta^{(3)}(\mathbf{k}-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}'-\mathbf{p}_2) \right]|0\rangle
 \end{align}
 
 
@@ -772,6 +782,7 @@ This implies also that
 - x^{\dagger\dot{\alpha}}(\mathbf{p}_1)x^{\dagger\dot{\beta}}(\mathbf{p}_2)
 \operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right] .
 \end{align}
+
 Since
 \begin{align}
   |e_R(\mathbf{p}_2)e_R(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
@@ -800,6 +811,37 @@ Following similar steps, we find
 - y^{\alpha}(\mathbf{p}_1)y^{\beta}(\mathbf{p}_2)
 \operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right].
 \end{align}
+
+Others possibilities for two intial particle states includes
+\begin{align}
+  |e_R(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
+\end{align}
+
+Following similar steps, we find for
+\begin{align}
+\eta^{\dagger\dot{\alpha}}_+(x_1)&\xi^{\alpha}_+(x_2)|e_R(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle
+ \nonumber\\
+\label{eq:berer}
+&=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ y^{\dagger\dot{\alpha}}(\mathbf{p}_2)x^{\alpha}(\mathbf{p}_1)
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}
+-y^{\dagger\dot{\alpha}}(\mathbf{p}_1)x^{\alpha}(\mathbf{p}_2)
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   \right] \left|0\right\rangle \\
+\langle e_L(\mathbf{p}_2)&e_R(\mathbf{p}_1)| \xi^{\dagger\dot{\alpha}}_-(x_1)\eta^{\alpha}_-(x_2)
+ \nonumber\\
+\label{eq:berer}
+&=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ x^{\dagger\dot{\alpha}}(\mathbf{p}_2)y^{\beta}(\mathbf{p}_1)
+\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}
+- x^{\dagger\dot{\alpha}}(\mathbf{p}_1)y^{\alpha}(\mathbf{p}_2)
+\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right].
+\end{align}
+
+
+
+
+
+
+
+
 
 Replacing back we have
 \begin{align}
@@ -1082,35 +1124,131 @@ In the low energy limit we have
 \end{align}
 Therefore
 \begin{align}
-  \frac{d\sigma}{d\Omega}=&\frac{y^4}{128 \pi^2 \left(m_1+m_2 \right)^2}\frac{\left( 2m_1^2 \right)\left( 2m_2^2 \right)}{
+  \frac{d\sigma}{d\Omega}=&\frac{y^4}{128 \pi^2 \left[ \left(m_1+m_2 \right)^2+\left( \mathbf{p}_1+\mathbf{p_2} \right)^2 \right]}\frac{\left( 2m_1^2 \right)\left( 2m_2^2 \right)}{
 \left[ m_h^2-\left(m_1-m_2  \right)^2 \right]^2} \nonumber\\
   \frac{d\sigma}{d\Omega}=&\frac{y^4}{128 \pi^2 }\frac{4m_1^2m_2^2}{\left(m_1+m_2 \right)^2}\frac{1}{
  m_h^4-2m_h^{2}\left(m_1-m_2  \right)^2+\left(m_1-m_2  \right)^4 } \nonumber\\
 \end{align}
 
+When the two particles are distinguishable, the only contribution is
+
+Therefore, the spin of $q_L$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
+\begin{align}
+  \xi^\alpha_{e+}(x_1)\xi^\beta_{q+}(x_2)|e_L(\mathbf{p}_2)q_L(\mathbf{p}_1)\rangle=&
+\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
+=&
+\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) - a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) a_s(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
+=&
+\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
+\end{align}
+By using the identity
+\begin{align}
+  [AB,CD]=A[B,C]D - [A,C]BD
++CA[B, D] - C[A, D]B\,,
+\end{align}
+\begin{align}
+   \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]=&
+ a_s(\mathbf{k})\cancel{\left[ a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)\right]}a_{s_2}^\dagger(\mathbf{p}_2)
+-
+ \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) \nonumber\\
+& 
++a_{s_1}^\dagger(\mathbf{p}_1)a_s(\mathbf{k})\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]
+-
+a_{s_1}^\dagger(\mathbf{p}_1) \cancel{\left[ a_s(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)\right]}a_{s'}(\mathbf{k}') \nonumber\\
+=&
+-
+ \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2)  
++\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]a_{s_1}^\dagger(\mathbf{p}_1)a_s(\mathbf{k})
+\end{align}
+Therefore,
+\begin{align}
+&\left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right] |0\rangle \nonumber\\
+&\qquad=
+-
+ \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) |0\rangle \nonumber\\
+&\qquad=-
+  \left[ a_s(\mathbf{k}),a_{s_1}^\dagger(\mathbf{p}_1)\right] \left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle \nonumber\\
+&\qquad= -(2\pi)^6  
+    \delta^{(3)}(\mathbf{k}-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}'-\mathbf{p}_2)|0\rangle
+\end{align}
+The final result following the same steps is
+\begin{align}
+\label{eq:hdee}
+     S_{fi}
+    =\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+  &\left[ y^{\alpha}_e(\mathbf{p}_1')y^{\beta}_q(\mathbf{p}_2')i\Delta_F(p_1-p_1')x_{e \alpha}(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2)\right].
+\end{align}
 
 
-In the limit $q^2\ll m^2$
+
+
+
+
+\subsection{$Z$-interaction}
+
+We now consider the interaction
 \begin{align}
-  \Delta_F=-\frac{1}{m^2}
+  e_L+q_L \to e_L+q_L
 \end{align}
+mediated by $Z^{\mu}$, with couplings
 \begin{align}
-  \mathcal{M}_{fi}=&\frac{h^2}{m^2}\left[
-\bar{u}^\alpha(\mathbf{p}_2')u^\alpha(\mathbf{p}_1)\bar{u}^\beta(\mathbf{p}_1')u^\beta(\mathbf{p}_2)
--\bar{u}^\alpha(\mathbf{p}_1')u^\alpha(\mathbf{p}_1)\bar{u}^\beta(\mathbf{p}_2')u^\beta(\mathbf{p}_2)
-\right]\nonumber\\
-=&\frac{h^2}{m^2}\left[
-\bar{u}(\mathbf{p}_2')u(\mathbf{p}_1)\bar{u}(\mathbf{p}_1')u(\mathbf{p}_2)
--\bar{u}(\mathbf{p}_1')u(\mathbf{p}_1)\bar{u}(\mathbf{p}_2')u(\mathbf{p}_2)
-\right]
+\label{eq:38}
+\mathcal{L}=a_L \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} Z_{\mu}
++b_L \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} Z_{\mu}
 \end{align}
-For one interaction of type $\overline{\psi}\Gamma\psi$ we should have
+We have then the two particle state but with distinguishable particles 
+
+The specific calculation by the scattering mediated by the $Z^{\mu}$ is 
 \begin{align}
-  \mathcal{M}_{fi}=\frac{h^2}{m^2}\left[
-\bar{u}(\mathbf{p}_2')\Gamma u(\mathbf{p}_1)\bar{u}(\mathbf{p}_1')\Gamma u(\mathbf{p}_2)
--\bar{u}(\mathbf{p}_1')\Gamma u(\mathbf{p}_1)\bar{u}(\mathbf{p}_2')\Gamma u(\mathbf{p}_2)
-\right]
+  S_{fi}=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\bcontraction{\,}{Z_{\mu}}{(x_1)}{Z_{\nu}}\,Z_{\mu}(x_1)Z_{\nu}(x_2) \nonumber\\
+&\left\langle e_L\left(\mathbf{p}'_1\right), q_L \left(\mathbf{p}'_2\right) \right|
+  : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
+ \left| e_L \left(\mathbf{p}_1\right), q_L\left(\mathbf{p}_2\right) \right\rangle \nonumber\\
+=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
+&\left\langle e_L\left(\mathbf{p}'_1\right), q_L \left(\mathbf{p}'_2\right) \right|
+   \xi^{\dagger}_{\dot{\alpha} -}(x_1)\xi^{\dagger}_{\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi_{\beta +}(x_2)
+ \left| e_L \left(\mathbf{p}_1\right), q_L\left(\mathbf{p}_2\right) \right\rangle. 
 \end{align}
+By using~\eqref{eq:belel}, \eqref{eq:kelel}, we have an expression similar to \eqref{eq:hdee}
+\begin{align}
+      S_{fi}
+    =&\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[ x^{\dagger\dot{\alpha}}_e(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  i D_{\mu\nu}x^{\dagger\dot{\beta}}_q(\mathbf{p}_2') \left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2)\right] \nonumber\\
+=&\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+  \left[ x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\mu} x_q(\mathbf{p}_2)\right].
+\end{align}
+
+
+\begin{align}
+\label{eq:belel}
+  \xi^\alpha_+(x_1)&\xi^\beta_+(x_2)|e_L^-(\mathbf{p}_2)e_L^-(\mathbf{p}_1)\rangle
+ \nonumber\\
+&=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ x^{\alpha}(\mathbf{p}_2)x^{\beta}(\mathbf{p}_1)
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}
+- x^{\alpha}(\mathbf{p}_1)x^{\beta}(\mathbf{p}_2)
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   \right] \left|0\right\rangle.
+\end{align}
+This implies also that
+\begin{align}
+\label{eq:kelel}
+ \langle e_L^-(\mathbf{p}_2)&e_L^-(\mathbf{p}_1) |  \xi^{\dagger\dot{\alpha}}_-  (x_1)\xi^{\dagger\dot{\beta}}_-(x_2) \nonumber\\
+&=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  \left[x^{\dagger\dot{\alpha}}(\mathbf{p}_2)x^{\dagger\dot{\beta}}(\mathbf{p}_1)
+\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}
+- x^{\dagger\dot{\alpha}}(\mathbf{p}_1)x^{\dagger\dot{\beta}}(\mathbf{p}_2)
+\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right] .
+\end{align}
+
+
+
+
 For the interaction of a fermion pair with $W_\mu^\pm$, we know from
 the standard model Lagrangian \cite{lsm}, that
 \begin{align}
