@@ -1254,8 +1254,35 @@ p_2\cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma
                \operatorname{Tr}\left[p_2'\cdot \sigma \overline{\sigma}^{\nu} p_2\cdot \sigma \overline{\sigma}^{\rho}\right] 
 \end{align}
 \begin{align}
- \mathcal{M}\mathcal{M}^{\dagger}  =&a_L^4D_{\mu\nu} D_{\rho\sigma} {p_1'}_{\eta}{p_1}_{\lambda}{p_2'}_{\theta}{p_2}_{\tau}\operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] 
+ \mathcal{M}\mathcal{M}^{\dagger}  =&a_L^4D_{\mu\nu} D_{\rho\sigma} {p_1}_{\lambda}{p_1'}_{\eta}{p_2}_{\tau}{p_2'}_{\theta}\operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] 
                \operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] 
+\end{align}
+\begin{align}
+  \operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] &
+               \operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] \nonumber\\
+=& 4 \left(g^{\eta\mu}g^{\lambda\sigma}-g^{\eta\lambda}g^{\mu\sigma}+g^{\eta\sigma}g^{\mu\lambda} +i\epsilon^{\eta\mu\lambda\sigma} \right)
+   \left(g^{\theta\nu}g^{\tau\rho}-g^{\theta\tau}g^{\nu\rho}+g^{\theta\rho}g^{\nu\tau} +i\epsilon^{\theta\nu\tau\rho} \right).
+\end{align}
+\begin{align}
+\tfrac{1}{4} \operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] 
+\operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] 
+  =&\phantom{-}g^{\eta\mu}g^{\lambda\sigma}g^{\theta\nu}g^{\tau\rho}-g^{\eta\mu}g^{\lambda\sigma}g^{\theta\tau}g^{\nu\rho}+g^{\eta\mu}g^{\lambda\sigma}g^{\theta\rho}g^{\nu\tau} \nonumber\\
+  &-g^{\eta\lambda}g^{\mu\sigma}g^{\theta\nu}g^{\tau\rho}+g^{\eta\lambda}g^{\mu\sigma}g^{\theta\tau}g^{\nu\rho}-g^{\eta\lambda}g^{\mu\sigma}g^{\theta\rho}g^{\nu\tau} \nonumber\\
+  &+g^{\eta\sigma}g^{\mu\lambda}g^{\theta\nu}g^{\tau\rho}-g^{\eta\sigma}g^{\mu\lambda}g^{\theta\tau}g^{\nu\rho}+g^{\eta\sigma}g^{\mu\lambda}g^{\theta\rho}g^{\nu\tau} 
+%  =& 4 \left(g^{\eta\mu}g^{\lambda\sigma}-g^{\eta\lambda}g^{\mu\sigma}+g^{\eta\sigma}g^{\mu\lambda} +i\epsilon^{\eta\mu\lambda\sigma} \right)
+%   \left(g^{\theta\nu}g^{\tau\rho}-g^{\theta\tau}g^{\nu\rho}+g^{\theta\rho}g^{\nu\tau} +i\epsilon^{\theta\nu\tau\rho} \right).
+\end{align}
+The $\epsilon$'s always appears along symmetric product and add 0.
+
+Therefore, eliminating $\eta,\theta$, we have \begin{align}{p_1}_{\lambda}{p_1'}_{\eta}{p_2}_{\tau}{p_2'}_{\theta}\end{align}
+\begin{align} %Inconsistent!
+   \mathcal{M}\mathcal{M}^{\dagger} =&a_L^4 [
+ D_{\mu\nu} {p_1}^{\sigma}{p_1'}^{\mu}D_{\rho\sigma}{p_2}^{\rho}{p__2'}^{\nu}
+-{p_1}^{\sigma}{p_1'}^{\mu}{p_2}^{\theta}{p__2'}^{\nu}
++{p_1}^{\sigma}{p_1'}^{\mu}{p_2}^{\nu}{p__2'}^{\rho}
+-{p_1}^{\lambda}{p_1'}^{}{p_2}^{}{p__2'}^{}
++{p_1}^{}{p_1'}^{}{p_2}^{}{p__2'}^{}
+]
 \end{align}
 For the interaction of a fermion pair with $W_\mu^\pm$, we know from
 the standard model Lagrangian \cite{lsm}, that
