@@ -1109,11 +1109,9 @@ Therefore
  m_h^4-2m_h^{2}\left(m_1-m_2  \right)^2+\left(m_1-m_2  \right)^4 } \nonumber\\
 \end{align}
 
-When the two particles are distinguishable, the only contribution is
-
-Therefore, the spin of $q_L$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
+When the two particles are distinguishable: For example if the spin of $q_L$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
 \begin{align}
-  \xi^\alpha_{e+}(x_1)\xi^\beta_{q+}(x_2)|e_L(\mathbf{p}_2)q_L(\mathbf{p}_1)\rangle=&
+  \xi^\alpha_{e+}(x_1)\xi^\beta_{q+}(x_2)|q_L(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
 \int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
@@ -1166,11 +1164,6 @@ The final result following the same steps is
 
 
 
-
-
-
-\subsection{$Z$-interaction}
-
 Others possibilities for two intial particle states includes
 \begin{align}
   |e_R(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
@@ -1185,7 +1178,7 @@ Following similar steps, we find for
 \operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}
 -y^{\dagger\dot{\alpha}}(\mathbf{p}_1)x^{\alpha}(\mathbf{p}_2)
 \operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   \right] \left|0\right\rangle \\
-\langle e_L(\mathbf{p}_2)&e_R(\mathbf{p}_1)| \xi^{\dagger\dot{\alpha}}_-(x_1)\eta^{\alpha}_-(x_2)
+\langle e_R(\mathbf{p}_2)&e_L(\mathbf{p}_1)| \xi^{\dagger\dot{\alpha}}_-(x_1)\eta^{\alpha}_-(x_2)
  \nonumber\\
 \label{eq:berer}
 &=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}} \left[ x^{\dagger\dot{\alpha}}(\mathbf{p}_2)y^{\beta}(\mathbf{p}_1)
@@ -1194,19 +1187,19 @@ Following similar steps, we find for
 \operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right].
 \end{align}
 
-Similarly
+
+Consider now
+
+
 
 \begin{align}
-  |e_L(\mathbf{p}_2)\left( e_L \right)^{\dagger}(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
+  |\left( e_L \right)^{\dagger}(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
 \end{align}
-
-\subsection{Explicit case for distinguishable particles}
-
 
 
 Therefore, the spin of $\left(e_L\right)^{\dagger}$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
 \begin{align}
-  \xi^\alpha_{+}(x_1)\xi^{\dagger\dot{\alpha}}_{+}x(x_2)|e_L(\mathbf{p}_2)\left(e_L\right)^{\dagger}(\mathbf{p}_1)\rangle=&
+  \xi^\alpha_{+}(x_1)\xi^{\dagger\dot{\alpha}}_{+}x(x_2)|\left(e_L\right)^{\dagger}(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
 \int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})y^{\dagger\dot{\alpha}}(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')b_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
@@ -1251,11 +1244,14 @@ Therefore,
 \end{align}
 Therefore
 \begin{align}
-    \xi^\alpha_{+}(x_1)\xi^{\dagger\dot{\alpha}}_{+}x(x_2)|e_L(\mathbf{p}_2)\left(e_L\right)^{\dagger}(\mathbf{p}_1)\rangle=&
+\label{eq:bkeldel}
+    \xi^\alpha_{+}(x_1)\xi^{\dagger\dot{\alpha}}_{+}(x_2)|\left(e_L\right)^{\dagger}(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
 -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^\alpha(s,\mathbf{p}_1)y^{\dagger\dot{\alpha}}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} \nonumber\\
-   \left\langle e_L(\mathbf{p}_2)\left(e_L\right)^{\dagger}(\mathbf{p}_1) \right|\xi^{\alpha}_-(x_1)\xi^{\dagger\dot{\alpha}}_-=&
--\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^\alpha(s,\mathbf{p}_1)y^{\dagger\dot{\alpha}}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}
+   \left\langle\left(e_L\right)^{\dagger}(\mathbf{p}_2) e_L(\mathbf{p}_1) \right|\xi^{\alpha}_-(x_2)\xi^{\dagger\dot{\alpha}}_-\left( x_1 \right)=&
+-\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,y^{\alpha}(s',\mathbf{p}_2) x^{\dagger\dot{\alpha}}(s,\mathbf{p}_1)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
 \end{align}
+
+\subsection{Vector interactions}
 
 
 
@@ -1265,54 +1261,85 @@ We consider the $t$-channel interaction
 \begin{align}
   e_L+\left( e_L \right)^{\dagger} \to   e_L+\left( e_L \right)^{\dagger}
 \end{align}
+mediated by $A^{\mu}$, with couplings
+\begin{align}
+\label{eq:xietaz}
+\mathcal{L}=e \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} A_{\mu}
++e \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} A_{\mu}
+\end{align}
+
+This is an explicit case for distinguishable particles
+
+
+The specific calculation by the scattering mediated by the $A^{\mu}$ is 
+\begin{align}
+  S_{fi}=&\frac{\left( -ie \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\bcontraction{\,}{A_{\mu}}{(x_1)}{A_{\nu}}\,A_{\mu}(x_1)A_{\nu}(x_2) \nonumber\\
+&\left\langle \left(e_L\right)^{\dagger} \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right) \right|
+  : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
+ \left| \left(e_L\right)^{\dagger}\left(\mathbf{p}_2\right) ,e_L \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
+\end{align}
+\begin{align}
+  =&\frac{\left( -ie \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
+&\left\langle \left(e_L\right)^{\dagger} \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right)\right|
+   \xi_{\beta -}(x_2)\xi^{\dagger}_{\dot{\alpha} -}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi^{\dagger}_{\dot{\beta}+}(x_2)
+ \left| \left(e_L\right)^{\dagger}\left(\mathbf{p}_2\right), e_L \left(\mathbf{p}_1\right)\right\rangle. 
+\end{align}
+
+
+\begin{align}
+  S_{fi}
+=&\frac{\left( -ie \right)^{2}}{2!}\frac{1}{\sqrt{2E_1' V}\sqrt{2E_2' V}\sqrt{2E_1 V}\sqrt{2E_2 V}}
+\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
+&y_{\beta}\left(s'_2,\mathbf{p}_2'\right)x^{\dagger}_{\dot{\alpha}}\left( s'_1,\mathbf{p}_1' \right)
+\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}
+x_{\alpha}\left(s_1,\mathbf{p}_1\right)y^{\dagger}_{\dot{\beta}}\left( s_2,\mathbf{p}_2 \right)
+\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\,.
+\end{align}
+
+
+By using \eqref{eq:bkeldel}, we have an expression similar to \eqref{eq:hdee}, and following the same steps
+\begin{align}
+      S_{fi}
+    =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[ x^{\dagger}_{\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{\alpha}(\mathbf{p}_1)  i D_{\mu\nu}y^{\dagger}_{\dot{\beta}}(\mathbf{p}_2) \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}y_{\beta}(\mathbf{p}_2')\right] \nonumber\\
+    =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[ x^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x(\mathbf{p}_1)  i D_{\mu\nu}y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right] \nonumber\\
+    =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right],
+\end{align}
+where we use the identity for commuting spinors.
+
+In this way %eq. 6.3.6  pag. 51
+\begin{align}
+  i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right]
+\end{align}
+If in addtion we include the other three possibilites in the $t$-channel, by defining
+\begin{align}
+ \overline{e}=&\left( e_R \right)^{\dagger}\,, & \overline{e}^{\dagger}=&e_R\,,
+\end{align}
+then, we have the full contributions
+\begin{align}
+ e_L+\left( e_L \right)^{\dagger} \to &  e_L+\left( e_L \right)^{\dagger}\,, & e_R+\left( e_R \right)^{\dagger} \to &  e_R+\left( e_R \right)^{\dagger}\,, \nonumber\\
+  e_L+\left( e_R \right)^{\dagger}\to &  e_L+\left( e_R \right)^{\dagger}\,, &  e_R+\left( e_L \right)^{\dagger}\to & e_R+\left( e_L \right)^{\dagger} \,,
+\end{align}
+which give the full $t$-channel amplitude \cite{Dreiner:2008tw} eq.~(6.3.6), pag. 51:
+\begin{align}
+   i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1') + y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\nu} y(\mathbf{p}_1')\right]i D_{\mu\nu}\left[ x(\mathbf{p}_2) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_2') + y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')  \right]\,.
+\end{align}
+
+
+\subsubsection{Lepton quark scattering}
+
 mediated by $Z^{\mu}$, with couplings
 \begin{align}
 \label{eq:xietaz}
 \mathcal{L}=a_L \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} Z_{\mu}
 +b_L \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} Z_{\mu}
 \end{align}
-
-
-
-
-
-The final result following the same steps is
-
-\begin{align}
-   S_{fi}
-  =&\frac{\left( -iy \right)^{2}}{2!}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
-&\times\left\langle e_R\left(\mathbf{p}'_1\right), e_R \left(\mathbf{p}'_2\right) \right|
-  \eta^{\alpha}_{-}(x_1) \eta^{\beta}_{-}(x_2)\xi_{\beta +}(x_2) \xi_{\alpha +}(x_1)
- \left| e_L \left(\mathbf{p}_1\right), e_L\left(\mathbf{p}_2\right) \right\rangle \nonumber\\
-    =&\frac{\left( iy \right)^{2}}{2}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-\int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
-&
- \times \left[ y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')
-\operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
-- y^{\alpha}(\mathbf{p}_2')y^{\beta}(\mathbf{p}_1')
-\operatorname{e}^{i p_1'\cdot x_2}\operatorname{e}^{i p_2'\cdot x_1}   \right] \nonumber\\
-& \times \left[x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2)
-\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} 
-- x_{\alpha}(\mathbf{p}_2)x_{\beta}(\mathbf{p}_1)
-\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2} \right].
-\end{align}
-
-
-\begin{align}
-\label{eq:hdee}
-     S_{fi}
-    =\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
-  &\left[ y^{\alpha}_e(\mathbf{p}_1')y^{\beta}_q(\mathbf{p}_2')i\Delta_F(p_1-p_1')x_{e \alpha}(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2)\right].
-\end{align}
-
-
-\begin{align}
-  a
-\end{align}
-
-\subsubsection{Lepton quark scattering}
-
 
 We now consider the interaction
 \begin{align}
@@ -1324,31 +1351,18 @@ The specific calculation by the scattering mediated by the $Z^{\mu}$ is
 \begin{align}
   S_{fi}=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{Z_{\mu}}{(x_1)}{Z_{\nu}}\,Z_{\mu}(x_1)Z_{\nu}(x_2) \nonumber\\
-&\left\langle e_L\left(\mathbf{p}'_1\right),  q_L \left(\mathbf{p}'_2\right) \right|
+&\left\langle q_L \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right) \right|
   : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
- \left| e_L \left(\mathbf{p}_1\right),  q_L\left(\mathbf{p}_2\right) \right\rangle \nonumber\\
+ \left| q_L\left(\mathbf{p}_2\right) ,e_L \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
 =&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
-&\left\langle e_L\left(\mathbf{p}'_1\right), q_L \left(\mathbf{p}'_2\right) \right|
+&\left\langle q_L \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right)\right|
    \xi^{\dagger}_{\dot{\alpha} -}(x_1)\xi^{\dagger}_{\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi_{\beta +}(x_2)
- \left| e_L \left(\mathbf{p}_1\right), q_L\left(\mathbf{p}_2\right) \right\rangle. 
+ \left| q_L\left(\mathbf{p}_2\right), e_L \left(\mathbf{p}_1\right)\right\rangle. 
 \end{align}
 
 
 
-The specific calculation by the scattering mediated by the $Z^{\mu}$ is 
-\begin{align}
-  S_{fi}=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-\bcontraction{\,}{Z_{\mu}}{(x_1)}{Z_{\nu}}\,Z_{\mu}(x_1)Z_{\nu}(x_2) \nonumber\\
-&\left\langle e_L\left(\mathbf{p}'_1\right), q_L \left(\mathbf{p}'_2\right) \right|
-  : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
- \left| e_L \left(\mathbf{p}_1\right), q_L\left(\mathbf{p}_2\right) \right\rangle \nonumber\\
-=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
-&\left\langle e_L\left(\mathbf{p}'_1\right), q_L \left(\mathbf{p}'_2\right) \right|
-   \xi^{\dagger}_{\dot{\alpha} -}(x_1)\xi^{\dagger}_{\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi_{\beta +}(x_2)
- \left| e_L \left(\mathbf{p}_1\right), q_L\left(\mathbf{p}_2\right) \right\rangle. 
-\end{align}
 By using~\eqref{eq:belel}, \eqref{eq:kelel}, we have an expression similar to \eqref{eq:hdee}
 \begin{align}
       S_{fi}
