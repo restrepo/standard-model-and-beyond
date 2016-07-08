@@ -1109,6 +1109,8 @@ Therefore
  m_h^4-2m_h^{2}\left(m_1-m_2  \right)^2+\left(m_1-m_2  \right)^4 } \nonumber\\
 \end{align}
 
+\subsection{Other two-particle states}
+
 When the two particles are distinguishable: For example if the spin of $q_L$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
 \begin{align}
   \xi^\alpha_{e+}(x_1)\xi^\beta_{q+}(x_2)|q_L(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
@@ -1154,13 +1156,16 @@ Therefore,
 &\qquad= -(2\pi)^6  
     \delta^{(3)}(\mathbf{k}-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}'-\mathbf{p}_2)|0\rangle
 \end{align}
-The final result following the same steps is
+and
 \begin{align}
-\label{eq:hdee}
-     S_{fi}
-    =\frac{(2\pi)^4(iy)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
-  &\left[ y^{\alpha}_e(\mathbf{p}_1')y^{\beta}_q(\mathbf{p}_2')i\Delta_F(p_1-p_1')x_{e \alpha}(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2)\right].
+\label{eq:bkqlel}
+    \xi^\alpha_{e+}(x_1)\xi^{\beta}_{q+}(x_2)|q_L(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
+-\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^\alpha(s,\mathbf{p}_1)x^{\beta}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} \nonumber\\
+   \langle q_L(\mathbf{p}_2) e_L(\mathbf{p}_1) |\xi^{\dagger\dot{\beta}}(x_2)\xi^{\dagger\dot{\alpha}}_-\left( x_1 \right)=&
+-\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\dagger\dot{\beta}}(s',\mathbf{p}_2) x^{\dagger\dot{\alpha}}(s,\mathbf{p}_1)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
 \end{align}
+
+
 
 
 
@@ -1363,7 +1368,7 @@ D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
 
 
 
-By using~\eqref{eq:belel}, \eqref{eq:kelel}, we have an expression similar to \eqref{eq:hdee}
+By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4(ia_L)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
