@@ -938,6 +938,7 @@ and $\Delta_F(-q)=\Delta_F(q)$.
 
 In this way
 \begin{align}
+\label{eq:intermediate}
    S_{fi}
     =&\frac{(iy)^2 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \int\frac{d^4q}{(2\pi)^4}\,i\Delta_F(q)\operatorname{e}^{i q\cdot(x_1-x_2)} \nonumber\\
@@ -1285,25 +1286,25 @@ This is an explicit case for distinguishable particles
 
 The specific calculation by the scattering mediated by the $A^{\mu}$ is 
 \begin{align}
-  S_{fi}=&\frac{\left( -ie \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+  S_{fi}=&\frac{\left( -ie \right)^{2}}{2!}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{A_{\mu}}{(x_1)}{A_{\nu}}\,A_{\mu}(x_1)A_{\nu}(x_2) \nonumber\\
 &\left\langle \left(e_L\right)^{\dagger} \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right) \right|
   : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
  \left| \left(e_L\right)^{\dagger}\left(\mathbf{p}_2\right) ,e_L \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
 \end{align}
 \begin{align}
-  =&\frac{\left( -ie \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+  =&\frac{\left( -ie \right)^{2}}{2!}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
 &\left\langle \left(e_L\right)^{\dagger} \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right)\right|
    \xi_{\beta -}(x_2)\xi^{\dagger}_{\dot{\alpha} -}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi^{\dagger}_{\dot{\beta}+}(x_2)
  \left| \left(e_L\right)^{\dagger}\left(\mathbf{p}_2\right), e_L \left(\mathbf{p}_1\right)\right\rangle. 
 \end{align}
 
-
+By using \eqref{eq:bkeldel}, we have an expression similar to \eqref{eq:intermediate}
 \begin{align}
   S_{fi}
 =&\frac{\left( -ie \right)^{2}}{2!}\frac{1}{\sqrt{2E_1' V}\sqrt{2E_2' V}\sqrt{2E_1 V}\sqrt{2E_2 V}}
-\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
 &y_{\beta}\left(s'_2,\mathbf{p}_2'\right)x^{\dagger}_{\dot{\alpha}}\left( s'_1,\mathbf{p}_1' \right)
 \left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}
@@ -1311,9 +1312,7 @@ x_{\alpha}\left(s_1,\mathbf{p}_1\right)y^{\dagger}_{\dot{\beta}}\left( s_2,\math
 \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
 \operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\,.
 \end{align}
-
-
-By using \eqref{eq:bkeldel}, we have an expression similar to \eqref{eq:hdee}, and following the same steps
+and following the same steps
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
@@ -1329,7 +1328,7 @@ In this way %eq. 6.3.6  pag. 51
 \begin{align}
   i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}\left( p_1-p_1' \right)y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right]
 \end{align}
-If in addtion we include the other three possibilites in the $t$-channel, by defining
+If in addition we include the other three possibilites in the $t$-channel, by defining
 \begin{align}
  \overline{e}=&\left( e_R \right)^{\dagger}\,, & \overline{e}^{\dagger}=&e_R\,,
 \end{align}
@@ -1372,12 +1371,21 @@ In the same way
 \begin{align}
   x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')x(\mathbf{p}_2) {\sigma}_{\mu}x^{\dagger}(\mathbf{p}_2')
   =&2x^{\alpha}(\mathbf{p}_1) x^{\dagger\dot{\alpha}}(\mathbf{p}_1')x^{\beta}(\mathbf{p}_2) x^{\dagger\dot{\beta}}(\mathbf{p}_2')\epsilon_{\alpha\beta}\epsilon_{\dot{\alpha}\dot{\beta}} \nonumber\\
-  =&2x^{\alpha}(\mathbf{p}_1)x_{\alpha}(\mathbf{p}_2)x^{\dagger}_{\dot{\alpha}}(\mathbf{p}_2') x^{\dagger\dot{\alpha}}(\mathbf{p}_1')  \nonumber\\
-  =&2x(\mathbf{p}_1)x(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_2')x^{\dagger}(\mathbf{p}_1')
+  =&2x^{\alpha}(\mathbf{p}_1)\epsilon_{\alpha\beta}x^{\beta}(\mathbf{p}_2) \epsilon_{\dot{\alpha}\dot{\beta}}x^{\dagger\dot{\alpha}}(\mathbf{p}_1') x^{\dagger\dot{\beta}}(\mathbf{p}_2') \nonumber\\
+  =&-2x^{\alpha}(\mathbf{p}_1)\epsilon_{\alpha\beta}x^{\beta}(\mathbf{p}_2) \epsilon_{\dot{\beta}\dot{\alpha}}x^{\dagger\dot{\alpha}}(\mathbf{p}_1') x^{\dagger\dot{\beta}}(\mathbf{p}_2') \nonumber\\
+  =&-2x^{\alpha}(\mathbf{p}_1)x_{\alpha}(\mathbf{p}_2)x^{\dagger}_{\dot{\beta}}(\mathbf{p}_1') x^{\dagger\dot{\beta}}(\mathbf{p}_2') \nonumber\\
+  =&-2x(\mathbf{p}_1)x(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_1')x^{\dagger}(\mathbf{p}_2')
 \end{align}
 \begin{align}
   y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')y^{\dagger}(\mathbf{p}_2) \overline{\sigma}_{\mu} y(\mathbf{p}_2')
-=& 2 y^{\dagger}(\mathbf{p}_1)y^{\dagger}(\mathbf{p}_2)y(\mathbf{p}_1')y(\mathbf{p}_2')
+=& -2 y^{\dagger}(\mathbf{p}_1)y^{\dagger}(\mathbf{p}_2)y(\mathbf{p}_1')y(\mathbf{p}_2')
+\end{align}
+Therefore %eq. 6.3.7 pag. 51.
+\begin{align}
+  i\mathcal{M}=&\frac{-i2e^2}{t}\left[y^{\dagger}(\mathbf{p}_1)x^{\dagger}(\mathbf{p}_2')x(\mathbf{p}_2)y(\mathbf{p}_1')
++x(\mathbf{p}_1)y(\mathbf{p}_2') y^{\dagger}(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_1') \right. \nonumber\\
+&\qquad\quad \left.  -x(\mathbf{p}_1)x(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_1')x^{\dagger}(\mathbf{p}_2')
+-y^{\dagger}(\mathbf{p}_1)y^{\dagger}(\mathbf{p}_2)y(\mathbf{p}_1')y(\mathbf{p}_2') \right]
 \end{align}
 
 
