@@ -228,6 +228,13 @@ and so on we obtain the $S$--matrix
 \end{align}
 
 \section{Useful identities}
+The following identitities can be used to simplify products of $\sigma$, $\overline{\sigma}$ matrices %eq. 2.48 pag. 10
+\begin{align}
+  \label{eq:sos}
+  \sigma^{\mu}_{\alpha\dot{\alpha}}\overline{\sigma}_{\mu}^{\dot{\beta}\beta}=&2{\delta_{\alpha}}^{\beta}{\delta^{\dot{\beta}}}_{\beta}\,,
+\end{align}
+
+
 \begin{align} %2.55
   \label{eq:trss}
   \operatorname{Tr}\left[ \sigma^{\mu},\sigma^{\nu} \right]=&2 g^{\mu\nu}\,, \\
@@ -1310,17 +1317,17 @@ By using \eqref{eq:bkeldel}, we have an expression similar to \eqref{eq:hdee}, a
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
- \left[ x^{\dagger}_{\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{\alpha}(\mathbf{p}_1)  i D_{\mu\nu}y^{\dagger}_{\dot{\beta}}(\mathbf{p}_2) \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}y_{\beta}(\mathbf{p}_2')\right] \nonumber\\
+ \left[ x^{\dagger}_{\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{\alpha}(\mathbf{p}_1)  i D_{\mu\nu}\left( p_1-p_1' \right)y^{\dagger}_{\dot{\beta}}(\mathbf{p}_2) \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}y_{\beta}(\mathbf{p}_2')\right] \nonumber\\
     =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
- \left[ x^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x(\mathbf{p}_1)  i D_{\mu\nu}y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right] \nonumber\\
+ \left[ x^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x(\mathbf{p}_1)  i D_{\mu\nu}\left( p_1-p_1' \right)y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right] \nonumber\\
     =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
- \left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right],
+ \left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}\left( p_1-p_1' \right)y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right],
 \end{align}
 where we use the identity for commuting spinors.
 
 In this way %eq. 6.3.6  pag. 51
 \begin{align}
-  i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right]
+  i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')  i D_{\mu\nu}\left( p_1-p_1' \right)y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right]
 \end{align}
 If in addtion we include the other three possibilites in the $t$-channel, by defining
 \begin{align}
@@ -1333,10 +1340,45 @@ then, we have the full contributions
 \end{align}
 which give the full $t$-channel amplitude \cite{Dreiner:2008tw} eq.~(6.3.6), pag. 51:
 \begin{align}
-   i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1') + y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\nu} y(\mathbf{p}_1')\right]i D_{\mu\nu}\left[ x(\mathbf{p}_2) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_2') + y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')  \right]\,.
+   i\mathcal{M}=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1') + y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')\right]i D_{\mu\nu}\left( p_1-p_1' \right)\left[ x(\mathbf{p}_2) {\sigma}^{\nu}x^{\dagger}(\mathbf{p}_2') + y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')  \right]\nonumber\\
+=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1') + y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')\right]i D_{\mu\nu}(t)\left[ x(\mathbf{p}_2) {\sigma}^{\nu}x^{\dagger}(\mathbf{p}_2') + y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')  \right]\nonumber\\
+=&e^2\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')i D_{\mu\nu}(t)x(\mathbf{p}_2) {\sigma}^{\nu}x^{\dagger}(\mathbf{p}_2')+x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')i D_{\mu\nu}(t)y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2') \right.   \nonumber\\
+&\quad \left.+ y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')i D_{\mu\nu}(t)x(\mathbf{p}_2) {\sigma}^{\nu}x^{\dagger}(\mathbf{p}_2') +
+y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')i D_{\mu\nu}(t)y^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\nu} y(\mathbf{p}_2')\right].
 \end{align}
-
-
+By using
+\begin{align}
+  D_{\mu\nu}=\frac{-ig_{\mu\nu}}{t}\,,
+\end{align}
+we have that
+\begin{align}
+    i\mathcal{M}=&\frac{-ie^2}{t}\left[ x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')x(\mathbf{p}_2) {\sigma}_{\mu}x^{\dagger}(\mathbf{p}_2')+x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')y^{\dagger}(\mathbf{p}_2) \overline{\sigma}_{\mu} y(\mathbf{p}_2') \right.   \nonumber\\
+&\qquad \left.+ y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')x(\mathbf{p}_2) {\sigma}_{\mu}x^{\dagger}(\mathbf{p}_2') +
+y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')y^{\dagger}(\mathbf{p}_2) \overline{\sigma}_{\mu} y(\mathbf{p}_2')\right].
+\end{align}
+By using \eqref{eq:sos} we have for example
+\begin{align}
+x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')y^{\dagger}(\mathbf{p}_2) \overline{\sigma}_{\mu} y(\mathbf{p}_2')=&  x(\mathbf{p}_1)^{\alpha} {\sigma}^{\mu}_{\alpha\dot{\alpha}}x^{\dagger\dot{\alpha}}(\mathbf{p}_1')y^{\dagger}_{\dot{\beta}}(\mathbf{p}_2) \overline{\sigma}_{\mu}^{\dot{\beta}\beta} y_{\beta}(\mathbf{p}_2') \nonumber\\
+ =&  2x(\mathbf{p}_1)^{\alpha}{\delta_{\alpha}}^{\beta}{\delta^{\dot{\beta}}}_{\dot{\alpha}} x^{\dagger\dot{\alpha}}(\mathbf{p}_1')y^{\dagger}_{\dot{\beta}}(\mathbf{p}_2)  y_{\beta}(\mathbf{p}_2') \nonumber\\
+ =&  2x(\mathbf{p}_1)^{\alpha} x^{\dagger\dot{\alpha}}(\mathbf{p}_1')y^{\dagger}_{\dot{\alpha}}(\mathbf{p}_2)  y_{\alpha}(\mathbf{p}_2') \nonumber\\
+ =&  2x(\mathbf{p}_1)y(\mathbf{p}_2') x^{\dagger}(\mathbf{p}_1')y^{\dagger}(\mathbf{p}_2)\nonumber\\
+ =&  2x(\mathbf{p}_1)y(\mathbf{p}_2') y^{\dagger}(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_1')\,.
+\end{align}
+In the same way
+\begin{align}
+  y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')x(\mathbf{p}_2) {\sigma}_{\mu}x^{\dagger}(\mathbf{p}_2')=&
+2y^{\dagger}(\mathbf{p}_1)x^{\dagger}(\mathbf{p}_2')x(\mathbf{p}_2)y(\mathbf{p}_1') \;,
+\end{align}
+\begin{align}
+  x(\mathbf{p}_1) {\sigma}^{\mu}x^{\dagger}(\mathbf{p}_1')x(\mathbf{p}_2) {\sigma}_{\mu}x^{\dagger}(\mathbf{p}_2')
+  =&2x^{\alpha}(\mathbf{p}_1) x^{\dagger\dot{\alpha}}(\mathbf{p}_1')x^{\beta}(\mathbf{p}_2) x^{\dagger\dot{\beta}}(\mathbf{p}_2')\epsilon_{\alpha\beta}\epsilon_{\dot{\alpha}\dot{\beta}} \nonumber\\
+  =&2x^{\alpha}(\mathbf{p}_1)x_{\alpha}(\mathbf{p}_2)x^{\dagger}_{\dot{\alpha}}(\mathbf{p}_2') x^{\dagger\dot{\alpha}}(\mathbf{p}_1')  \nonumber\\
+  =&2x(\mathbf{p}_1)x(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_2')x^{\dagger}(\mathbf{p}_1')
+\end{align}
+\begin{align}
+  y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')y^{\dagger}(\mathbf{p}_2) \overline{\sigma}_{\mu} y(\mathbf{p}_2')
+=& 2 y^{\dagger}(\mathbf{p}_1)y^{\dagger}(\mathbf{p}_2)y(\mathbf{p}_1')y(\mathbf{p}_2')
+\end{align}
 \subsubsection{Lepton quark scattering}
 
 mediated by $Z^{\mu}$, with couplings
