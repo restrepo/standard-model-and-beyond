@@ -1395,7 +1395,7 @@ Therefore %eq. 6.3.7 pag. 51.
 -y^{\dagger}_1y^{\dagger}_2y'_1y'_2 \right] \nonumber\\
 \times&\left[y^{\prime\dagger}_1x_2^{\dagger} x^{\prime}_2y_1
 +x^{\prime}_1y_2 y^{\prime\dagger}_2x_1^{\dagger}  -x^{\prime}_2 x^{\prime}_1 x_2^{\dagger} x_1^{\dagger}
--y_2^{\dagger} y_1^{\dagger} y_2 y_1 \right]
+-y_2^{\prime\dagger} y_1^{\prime\dagger} y_2 y_1 \right]
 \end{align}
 We have for example
 \begin{align}
@@ -1418,7 +1418,33 @@ for the crossed terms
 =&\sum_{\text{spins}}  y^{\dagger}_1x^{\prime\dagger}_2x_2^{\alpha} \left( -m_e \delta_{\alpha}^{\beta}  \right)y_{2\beta} y^{\prime\dagger}_2x_1^{\dagger} \nonumber\\
 \to&0\qquad,\ \text{when $m_e\to 0$}\,. 
 \end{align}
-In this way all the crossed products disappear are only the squared of each term remains. The result is
+In this way all the crossed products disappear and only the squared of each term remains. The full contributions are
+\begin{align}
+ \sum_{\text{spins}}& \left[y^{\dagger}_1x^{\prime\dagger}_2x_2y'_1y^{\prime\dagger}_1x_2^{\dagger} x^{\prime}_2y_1
++x_1y'_2 y^{\dagger}_2x^{\prime\dagger}_1x^{\prime}_1y_2 y^{\prime\dagger}_2x_1^{\dagger} +x_1x_2x^{\prime\dagger}_1x^{\prime\dagger}_2x^{\prime}_2 x^{\prime}_1 x_2^{\dagger} x_1^{\dagger}
++y^{\dagger}_1y^{\dagger}_2y'_1y'_2y_2^{\prime\dagger} y_1^{\prime\dagger} y_2 y_1 \right] \nonumber\\
+  &= 4 \left[  \left( p'_1\cdot p_2 \right)\left(p_1\cdot p'_2  \right) + \left( p_1\cdot p_2' \right)\left( p_2\cdot p_1' \right) +2\left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right)
+  \right] \nonumber\\
+  &= 8 \left[ \left(p_1\cdot p'_2  \right) \left( p_2\cdot p_1' \right) +\left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right)  \right],
+\end{align}
+and we get
+\begin{align}
+   \sum_{\text{spins}}|\mathcal{M}|^2=&
+\frac{32e^4}{t^2}\left[ \left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right) + \left(p_1\cdot p'_2  \right) \left( p_2\cdot p_1' \right)  \right] \nonumber\\
+=& \frac{32e^4}{4t^2} \left[ s^2+u^2 \right] \nonumber\\
+=& 8e^4 \frac{\left( s^2+u^2 \right)}{t^2}\,.
+\end{align}
+Therefore
+\begin{align}
+   \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
+\frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
+\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{e^4}{8\pi^2s}\frac{\left( s^2+u^2 \right)}{t^2}\,. \nonumber\\
+=&\frac{2}{s}\left( \frac{e^2}{4\pi} \right)^2\frac{\left( s^2+u^2 \right)}{t^2}\nonumber\\
+=&\frac{2\alpha^2}{s}\frac{\left( s^2+u^2 \right)}{t^2}\,.
+\end{align}
+
 
 
 \subsubsection{Lepton quark scattering}
