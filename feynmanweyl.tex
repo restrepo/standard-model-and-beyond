@@ -237,8 +237,8 @@ The following identitities can be used to simplify products of $\sigma$, $\overl
 
 \begin{align} %2.55
   \label{eq:trss}
-  \operatorname{Tr}\left[ \sigma^{\mu},\sigma^{\nu} \right]=&2 g^{\mu\nu}\,, \\
-  \operatorname{Tr}\left[ \sigma^{\mu},\overline{\sigma}^{\nu}\sigma^{\rho}\sigma^{\kappa} \right]=&
+  \operatorname{Tr}\left[ \sigma^{\mu}\overline{\sigma}^{\nu} \right]=&2 g^{\mu\nu}\,, \\
+  \operatorname{Tr}\left[ \sigma^{\mu}\overline{\sigma}^{\nu}\sigma^{\rho}\sigma^{\kappa} \right]=&
    2 \left(g^{\mu\nu}g^{\rho\kappa}-g^{\mu\rho}g^{\nu\kappa}+g^{\mu\kappa}g^{\nu\rho} +i\epsilon^{\mu\nu\rho\kappa} \right).
 \end{align}
 
@@ -1387,6 +1387,38 @@ Therefore %eq. 6.3.7 pag. 51.
 &\qquad\quad \left.  -x(\mathbf{p}_1)x(\mathbf{p}_2)x^{\dagger}(\mathbf{p}_1')x^{\dagger}(\mathbf{p}_2')
 -y^{\dagger}(\mathbf{p}_1)y^{\dagger}(\mathbf{p}_2)y(\mathbf{p}_1')y(\mathbf{p}_2') \right]
 \end{align}
+\begin{align}
+  \sum_{\text{spins}}|\mathcal{M}|^2=i\mathcal{M}\left(i \mathcal{M} \right)^{\dagger}=
+\frac{4e^4}{t^2}\sum_{\text{spins}}
+&\left[y^{\dagger}_1x^{\prime\dagger}_2x_2y'_1
++x_1y'_2 y^{\dagger}_2x^{\prime\dagger}_1 -x_1x_2x^{\prime\dagger}_1x^{\prime\dagger}_2
+-y^{\dagger}_1y^{\dagger}_2y'_1y'_2 \right] \nonumber\\
+\times&\left[y^{\prime\dagger}_1x_2^{\dagger} x^{\prime}_2y_1
++x^{\prime}_1y_2 y^{\prime\dagger}_2x_1^{\dagger}  -x^{\prime}_2 x^{\prime}_1 x_2^{\dagger} x_1^{\dagger}
+-y_2^{\dagger} y_1^{\dagger} y_2 y_1 \right]
+\end{align}
+We have for example
+\begin{align}
+\sum_{\text{spins}}y^{\dagger}_1x^{\prime\dagger}_2x_2y'_1y^{\prime\dagger}_1x_2^{\dagger} x^{\prime}_2y_1
+=&  \sum_{\text{spins}}y^{\dagger}_{1\dot{\alpha}}x^{\prime\dagger\dot{\alpha}}_2x_2^{\alpha}y'_{1\alpha} y^{\prime\dagger}_{1\dot{\beta}}x_2^{\dagger\dot{\beta}} x^{\prime \beta}_2y_{1\beta} \nonumber\\
+=&p_1'\cdot\sigma_{\alpha\dot{\beta}} \sum_{\text{spins}}y^{\dagger}_{1\dot{\alpha}}x^{\prime\dagger\dot{\alpha}}_2x_2^{\alpha}x_2^{\dagger\dot{\beta}} x^{\prime \beta}_2y_{1\beta} \nonumber\\
+=&p_1'\cdot\sigma_{\alpha\dot{\beta}} \sum_{\text{spins}}y^{\dagger}_{1\dot{\alpha}}x^{\prime\dagger\dot{\alpha}}_2x_2^{\dagger\dot{\beta}}x_2^{\alpha} x^{\prime \beta}_2y_{1\beta} \nonumber\\
+=&p_1'\cdot\sigma_{\alpha\dot{\beta}} p_2\cdot\overline{\sigma}^{\dot{\beta}\alpha} \sum_{\text{spins}}y^{\dagger}_{1\dot{\alpha}}x^{\prime\dagger\dot{\alpha}}_2 x^{\prime \beta}_2y_{1\beta} \nonumber\\
+=&p_1'\cdot\sigma_{\alpha\dot{\beta}} p_2\cdot\overline{\sigma}^{\dot{\beta}\alpha} p_2'\cdot\overline{\sigma}^{\dot{\alpha}\beta}\sum_{\text{spins}}y^{\dagger}_{1\dot{\alpha}}y_{1\beta} \nonumber\\
+=&p_1'\cdot\sigma_{\alpha\dot{\beta}} p_2\cdot\overline{\sigma}^{\dot{\beta}\alpha} p_2'\cdot\overline{\sigma}^{\dot{\alpha}\beta}\sum_{\text{spins}}y_{1\beta}y^{\dagger}_{1\dot{\alpha}} \nonumber\\
+=&p_1'\cdot\sigma_{\alpha\dot{\beta}} p_2\cdot\overline{\sigma}^{\dot{\beta}\alpha} p_2'\cdot\overline{\sigma}^{\dot{\alpha}\beta}p_1\cdot\sigma_{\beta\dot{\alpha}} \nonumber\\
+=&\operatorname{Tr}\left[ p_1'\cdot\sigma p_2\cdot\overline{\sigma}\right]\operatorname{Tr}\left[p_1\cdot\sigma p_2'\cdot\overline{\sigma}  \right] \nonumber\\
+=&p'_{1\mu}p_{2\nu}\operatorname{Tr}\left[ \sigma^{\mu} \overline{\sigma}^{\nu}\right]p_{1\rho}p'_{2\eta}\operatorname{Tr}\left[\sigma^{\rho} \overline{\sigma}^{\eta}  \right] \nonumber\\
+=&4\left( p'_1\cdot p_2 \right)\left(p_1\cdot p'_2  \right) \,.
+\end{align}
+for the crossed terms
+\begin{align}
+ \sum_{\text{spins}}  y^{\dagger}_1x^{\prime\dagger}_2x_2y'_1x^{\prime}_1y_2 y^{\prime\dagger}_2x_1^{\dagger}
+=&\sum_{\text{spins}}  y^{\dagger}_1x^{\prime\dagger}_2x_2^{\alpha}y'_{1\alpha}x^{\prime \beta}_1y_{2\beta} y^{\prime\dagger}_2x_1^{\dagger} \nonumber\\
+=&\sum_{\text{spins}}  y^{\dagger}_1x^{\prime\dagger}_2x_2^{\alpha} \left( -m_e \delta_{\alpha}^{\beta}  \right)y_{2\beta} y^{\prime\dagger}_2x_1^{\dagger} \nonumber\\
+\to&0\qquad,\ \text{when $m_e\to 0$}\,. 
+\end{align}
+In this way all the crossed products disappear are only the squared of each term remains. The result is
 
 
 \subsubsection{Lepton quark scattering}
