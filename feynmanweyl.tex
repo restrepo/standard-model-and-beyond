@@ -1081,6 +1081,14 @@ Moreover,
   s+t+u=m_1^2+m_2^2+{m_1'}^2+{m_2'}^2\,.
 \end{align}
 
+In the non-relativistic limit
+\begin{align}
+  s&=m_1^2+m_2^2   +2 p_1\cdot p_2 \approx (m_1+m_2)^2  + m_1m_2 (\mathbf{v}_1-\mathbf{v}_2)>0\,, \nonumber\\
+  t&=m_1^2+{m_1'}^2-2 p_1\cdot p_1'\approx (m_1-m_1')^2 - m_1m_1' (\mathbf{v}_1-\mathbf{v}_1')>0\,,\nonumber\\
+  u&=m_1^2+{m_2'}^2-2 p_1\cdot p_2'\approx (m_1-m_2')^2 - m_1m_2'  (\mathbf{v}_1-\mathbf{v}_2')>0\,.
+\end{align}
+
+
 Then, we can get the product of crossed momentum in terms of $t$
 \begin{align}
   \left| \mathcal{M}_1 \right|^2 = & \frac{y^4}{2}  \frac{ \left(m_1^2+{m_1'}^2-t  \right)\left( m_2^2+{m_2'}^2-t \right)}{\left[ u-m^2_h \right]^2}
@@ -1105,7 +1113,14 @@ therefore
 =&\frac{y^4}{128\pi^2s}
   \frac{ \left(2m_1^2-t  \right)\left( 2m_2^2-t \right)}{\left[m^2_h -u\right]^2}
 \end{align}
-In the low energy limit we have
+In the non-relativistic limit we have $t\approx 0$
+\begin{align}
+    \frac{d\sigma}{d\Omega}
+=&\frac{y^4}{128\pi^2 \left(m_1+m_2\right)^2}
+  \frac{ \left(2m_1^2  \right)\left( 2m_2^2 \right)}{\left[m^2_h -\left(m_1-m_2  \right)^2\right]^2} \nonumber\\
+=&\frac{y^4}{32\pi^2}\left(\frac{m_1m_2}{m_1+m_2}  \right)^2\frac{1}{\left(m_h^2-m_1^2-m_2^2+2m_1m_2  \right)^2}
+\end{align}
+
 \begin{align}
   p_i=\left(m_i,\mathbf{p}_i  \right)
 \end{align}
@@ -1347,7 +1362,7 @@ y^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\mu} y(\mathbf{p}_1')i D_{\mu\nu}(t
 \end{align}
 By using
 \begin{align}
-  D_{\mu\nu}=\frac{-ig_{\mu\nu}}{t}\,,
+  iD_{\mu\nu}=\frac{-ig_{\mu\nu}}{t}\,,
 \end{align}
 we have that
 \begin{align}
@@ -1467,12 +1482,12 @@ The specific calculation by the scattering mediated by the $Z^{\mu}$ is
   S_{fi}=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{Z_{\mu}}{(x_1)}{Z_{\nu}}\,Z_{\mu}(x_1)Z_{\nu}(x_2) \nonumber\\
 &\left\langle q_L \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right) \right|
-  : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
+  : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
  \left| q_L\left(\mathbf{p}_2\right) ,e_L \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
 =&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
 &\left\langle q_L \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right)\right|
-   \xi^{\dagger}_{\dot{\alpha} -}(x_1)\xi^{\dagger}_{\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\mu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi_{\beta +}(x_2)
+   \xi^{\dagger}_{\dot{\alpha} -}(x_1)\xi^{\dagger}_{\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi_{\beta +}(x_2)
  \left| q_L\left(\mathbf{p}_2\right), e_L \left(\mathbf{p}_1\right)\right\rangle. 
 \end{align}
 
@@ -1482,67 +1497,143 @@ By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4(ia_L)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
- \left[ x^{\dagger\dot{\alpha}}_e(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  i D_{\mu\nu}x^{\dagger\dot{\beta}}_q(\mathbf{p}_2') \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2)\right] \nonumber\\
+ \left[ x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  i D_{\mu\nu}\left(p_1-p_1'\right)x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2') \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2)\right] \nonumber\\
 =&\frac{(2\pi)^4(ia_L)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
-  \left[ x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2)\right].
+  \left[ x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}\left(p_1-p_1'\right)x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2)\right].
 \end{align}
 In this way
 \begin{align}
-  \mathcal{M}=&(ia_L)^2 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2)
+  \mathcal{M}=&(ia_L)^2 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)  i D_{\mu\nu}(t)x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2)
+\end{align}
+By using
+\begin{align}
+  iD_{\mu\nu}=\frac{-ig_{\mu\nu}}{t-m_Z^2}
 \end{align}
 \begin{align}
-  \mathcal{M}\mathcal{M}^{\dagger}=&\sum_{\text{spins}}
-a_L^4 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)   D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} x_q(\mathbf{p}_2) 
-x_q^{\dagger}(\mathbf{p}_2) \overline{\sigma}^{\rho} x_q(\mathbf{p}_2') D_{\rho\sigma}
-x_e^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\sigma}x_e(\mathbf{p}_1')
+\mathcal{M}=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2') \left( \overline{\sigma}_{\mu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2) \nonumber\\
+=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2')x_{q \beta}(\mathbf{p}_2) \nonumber\\
+=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}\epsilon^{\beta\alpha}x_{e \alpha}(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2) x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')  x^{\dagger\dot{\alpha}}_{q}(\mathbf{p}_2') \nonumber\\
+=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}x^{\beta}_e(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2) x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')  x^{\dagger\dot{\alpha}}_{q}(\mathbf{p}_2') \nonumber\\
+=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2) x^{\dagger}_e(\mathbf{p}_1')  x^{\dagger}_q(\mathbf{p}_2') \,.
 \end{align}
 \begin{align}
-  \mathcal{M}\mathcal{M}^{\dagger} =&\sum_{\text{spins}}
-a_L^4 x_e^{\dagger}(\mathbf{p}_1') \overline{\sigma}^{\mu}x_e(\mathbf{p}_1)   D_{\mu\nu}x_q^{\dagger}(\mathbf{p}_2') \overline{\sigma}^{\nu} 
-p_{2\delta}\sigma^{\delta} \overline{\sigma}^{\rho} x_q(\mathbf{p}_2') D_{\rho\sigma}
-x_e^{\dagger}(\mathbf{p}_1) \overline{\sigma}^{\sigma}x_e(\mathbf{p}_1') \nonumber\\
-=&\sum_{\text{spins}}a_L^4D_{\mu\nu} D_{\rho\sigma}  x_e^{\dagger\dot{\alpha}}(\mathbf{p}_1') \overline{\sigma}^{\mu}_{\dot{\alpha}\alpha}x_e^{\alpha}(\mathbf{p}_1)   x_q^{\dagger\dot{\beta}}(\mathbf{p}_2') \overline{\sigma}^{\nu}_{\dot{\beta}\beta} 
-p_2 \cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma} x_q^{\gamma}(\mathbf{p}_2')
-x_e^{\dagger\dot{\delta}}(\mathbf{p}_1) \overline{\sigma}^{\sigma}_{\dot{\delta}\delta}x_e^{\delta}(\mathbf{p}_1') \nonumber\\
-=&\sum_{\text{spins}}a_L^4D_{\mu\nu} D_{\rho\sigma} x_e^{\delta}(\mathbf{p}_1') x_e^{\dagger\dot{\alpha}}(\mathbf{p}_1') \overline{\sigma}^{\mu}_{\dot{\alpha}\alpha}x_e^{\alpha}(\mathbf{p}_1) x_e^{\dagger\dot{\delta}}(\mathbf{p}_1) \overline{\sigma}^{\sigma}_{\dot{\delta}\delta} x_q^{\gamma}(\mathbf{p}_2') x_q^{\dagger\dot{\beta}}(\mathbf{p}_2') \overline{\sigma}^{\nu}_{\dot{\beta}\beta} 
-p_2\cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma}  \nonumber\\
-=&a_L^4D_{\mu\nu} D_{\rho\sigma} p_1'\cdot{\sigma}^{\delta\dot{\alpha}}   \overline{\sigma}^{\mu}_{\dot{\alpha}\alpha} p_1\cdot \sigma^{\alpha\dot{\delta}} \overline{\sigma}^{\sigma}_{\dot{\delta}\delta} p_2'\cdot {\sigma}^{\gamma\dot{\beta}}  \overline{\sigma}^{\nu}_{\dot{\beta}\beta} 
-p_2\cdot \sigma^{\beta\dot{\gamma}} \overline{\sigma}^{\rho}_{\dot{\gamma}\gamma} 
-\nonumber\\
-=&a_L^4D_{\mu\nu} D_{\rho\sigma} \operatorname{Tr}\left[p_1'\cdot\sigma \overline{\sigma}^{\mu} p_1\cdot \sigma \overline{\sigma}^{\sigma}\right] 
-               \operatorname{Tr}\left[p_2'\cdot \sigma \overline{\sigma}^{\nu} p_2\cdot \sigma \overline{\sigma}^{\rho}\right] 
+  \sum_{\text{spins}} |\mathcal{M}|^2=&
+  \frac{a_L^4}{\left( t-m_Z^2 \right)^2}
+  \sum_{\text{spins}}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2) x^{\dagger}_e(\mathbf{p}_1')  x^{\dagger}_q(\mathbf{p}_2') 
+ x_q(\mathbf{p}_2') x_e(\mathbf{p}_1')  x_q^{\dagger}(\mathbf{p}_2)  x_e^{\dagger}(\mathbf{p}_1) \nonumber\\
+  =& \frac{a_L^4}{\left( t-m_Z^2 \right)^2} \operatorname{Tr}\left[p_2'\cdot\overline{\sigma} p_1'\cdot\sigma  \right]
+  \sum_{\text{spins}}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2)  x_q^{\dagger}(\mathbf{p}_2)  x_e^{\dagger}(\mathbf{p}_1) \nonumber\\
+  =& \frac{a_L^4}{\left( t-m_Z^2 \right)^2} \operatorname{Tr}\left[p_2'\cdot\overline{\sigma} p_1'\cdot\sigma  \right]
+ \operatorname{Tr}\left[p_2\cdot\sigma  p_1\cdot\overline{\sigma}  \right] \nonumber\\
+  =& \frac{4a_L^4}{\left( t-m_Z^2 \right)^2}\left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right).
 \end{align}
 \begin{align}
- \mathcal{M}\mathcal{M}^{\dagger}  =&a_L^4D_{\mu\nu} D_{\rho\sigma} {p_1}_{\lambda}{p_1'}_{\eta}{p_2}_{\tau}{p_2'}_{\theta}\operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] 
-               \operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] 
+   \sum_{\text{spins}} |\mathcal{M}|^2=& \frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2.
 \end{align}
 \begin{align}
-  \operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] &
-               \operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] \nonumber\\
-=& 4 \left(g^{\eta\mu}g^{\lambda\sigma}-g^{\eta\lambda}g^{\mu\sigma}+g^{\eta\sigma}g^{\mu\lambda} +i\epsilon^{\eta\mu\lambda\sigma} \right)
-   \left(g^{\theta\nu}g^{\tau\rho}-g^{\theta\tau}g^{\nu\rho}+g^{\theta\rho}g^{\nu\tau} +i\epsilon^{\theta\nu\tau\rho} \right).
+     \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
+\frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
+\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2 \,.
+\end{align}
+In the non-relativistic limit
+\begin{align}
+  t\approx& (m_e-m_e)^2\approx 0\,,& 
+  s\approx& (m_e+m_q)^2\,,
 \end{align}
 \begin{align}
-\tfrac{1}{4} \operatorname{Tr}\left[\sigma^{\eta} \overline{\sigma}^{\mu}  \sigma^{\lambda} \overline{\sigma}^{\sigma}\right] 
-\operatorname{Tr}\left[\sigma^{\theta} \overline{\sigma}^{\nu} \sigma^{\tau} \overline{\sigma}^{\rho}\right] 
-  =&\phantom{-}g^{\eta\mu}g^{\lambda\sigma}g^{\theta\nu}g^{\tau\rho}-g^{\eta\mu}g^{\lambda\sigma}g^{\theta\tau}g^{\nu\rho}+g^{\eta\mu}g^{\lambda\sigma}g^{\theta\rho}g^{\nu\tau} \nonumber\\
-  &-g^{\eta\lambda}g^{\mu\sigma}g^{\theta\nu}g^{\tau\rho}+g^{\eta\lambda}g^{\mu\sigma}g^{\theta\tau}g^{\nu\rho}-g^{\eta\lambda}g^{\mu\sigma}g^{\theta\rho}g^{\nu\tau} \nonumber\\
-  &+g^{\eta\sigma}g^{\mu\lambda}g^{\theta\nu}g^{\tau\rho}-g^{\eta\sigma}g^{\mu\lambda}g^{\theta\tau}g^{\nu\rho}+g^{\eta\sigma}g^{\mu\lambda}g^{\theta\rho}g^{\nu\tau} 
-%  =& 4 \left(g^{\eta\mu}g^{\lambda\sigma}-g^{\eta\lambda}g^{\mu\sigma}+g^{\eta\sigma}g^{\mu\lambda} +i\epsilon^{\eta\mu\lambda\sigma} \right)
-%   \left(g^{\theta\nu}g^{\tau\rho}-g^{\theta\tau}g^{\nu\rho}+g^{\theta\rho}g^{\nu\tau} +i\epsilon^{\theta\nu\tau\rho} \right).
+       \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2}\frac{a_L^4}{m_Z^4}\frac{\left( m_e^2+m_q^2+2m_em_q-m_e^2-m_q^2 \right)^2}{(m_e+m_q)^2} \nonumber\\
+                    =&\frac{a_L^4}{16\pi^2m_Z^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
 \end{align}
-The $\epsilon$'s always appears along symmetric product and add 0.
 
-Therefore, eliminating $\eta,\theta$, we have \begin{align}{p_1}_{\lambda}{p_1'}_{\eta}{p_2}_{\tau}{p_2'}_{\theta}\end{align}
-% \begin{align} %Inconsistent!
-%    \mathcal{M}\mathcal{M}^{\dagger} =&a_L^4 [
-%  D_{\mu\nu} {p_1}^{\sigma}{p_1'}^{\mu}D_{\rho\sigma}{p_2}^{\rho}{p__2'}^{\nu}
-% -{p_1}^{\sigma}{p_1'}^{\mu}{p_2}^{\theta}{p__2'}^{\nu}
-% +{p_1}^{\sigma}{p_1'}^{\mu}{p_2}^{\nu}{p__2'}^{\rho}
-% -{p_1}^{\lambda}{p_1'}^{a}{p_2}^{a}{p__2'}^{a}
-% +{p_1}^{a}{p_1'}^{a}{p_2}^{a}{p__2'}^{a}
-% ]
-% \end{align}
+
+
+\subsubsection{Scalar mediated Lepton quark scattering}
+
+mediated by $h$, with couplings
+\begin{align}
+\label{eq:xietaz}
+\mathcal{L}= y_e \left(e_R\right)^{\dagger} e_L h^0 +y \left(e_L\right)^{\dagger} e_R h^0 
++y_q \left(q_R\right)^{\dagger} q_L h^0 +y \left(q_L\right)^{\dagger} q_R h^0 
+\end{align}
+
+We now consider the interaction
+\begin{align}
+  e_L+q_L \to e_R+q_R
+\end{align}
+
+The specific calculation by the scattering mediated by the $h$ is 
+\begin{align}
+  S_{fi}=&\frac{\left(y_ey_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\bcontraction{\,}{h}{(x_1)}{h}\,h(x_1)h(x_2) \nonumber\\
+&\left\langle q_R \left(\mathbf{p}'_2\right),e_R\left(\mathbf{p}'_1\right) \right|
+  : \xi^{\alpha}_{e}(x_1)\eta_{e\alpha}(x_1)
+    \xi^{\beta}_{q}(x_2)\eta_{q\beta}(x_2):
+ \left| q_L\left(\mathbf{p}_2\right) ,e_L \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
+=&\frac{\left( y_ey_d \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+i\Delta_F \left( x_1-x_2 \right)\nonumber\\
+&\left\langle q_R \left(\mathbf{p}'_2\right),e_R\left(\mathbf{p}'_1\right)\right|
+   \eta_{e\alpha-}(x_1)\eta_{q\beta-}(x_2) \xi^{\alpha}_{e+}(x_1)\xi^{\beta}_{q+}(x_2)
+ \left| q_L\left(\mathbf{p}_2\right), e_L \left(\mathbf{p}_1\right)\right\rangle. 
+\end{align}
+
+
+
+By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
+\begin{align}
+      S_{fi}
+    =&\frac{(2\pi)^4y_e y_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[y'_{1\alpha}y'_{2\beta}i\Delta_F(p_1-p_1')x_1^{\alpha}x_2^{\beta}\right] \nonumber\\
+\end{align}
+
+By using
+\begin{align}
+  i\Delta_F(t)=\frac{-i}{t-m_h^2}
+\end{align}
+and
+\begin{align}
+  \sum_{\text{spins}}y'_{1\alpha}y'_{2\beta}x_1^{\alpha}x_2^{\beta} x_2^{\dagger\dot{\beta}} x_1^{\dagger\dot{\alpha}} y^{\prime\dagger}_{2\dot{\beta}} y^{\prime\dagger}_{1\dot{\alpha}}
+\end{align}
+
+\begin{align}
+\mathcal{M}=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2') \left( \overline{\sigma}_{\mu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2) \nonumber\\
+=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2')x_{q \beta}(\mathbf{p}_2) \nonumber\\
+=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}\epsilon^{\beta\alpha}x_{e \alpha}(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2) x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')  x^{\dagger\dot{\alpha}}_{q}(\mathbf{p}_2') \nonumber\\
+=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}x^{\beta}_e(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2) x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')  x^{\dagger\dot{\alpha}}_{q}(\mathbf{p}_2') \nonumber\\
+=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2) x^{\dagger}_e(\mathbf{p}_1')  x^{\dagger}_q(\mathbf{p}_2') \,.
+\end{align}
+\begin{align}
+  \sum_{\text{spins}} |\mathcal{M}|^2=&
+  \frac{a_L^4}{\left( t-m_Z^2 \right)^2}
+  \sum_{\text{spins}}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2) x^{\dagger}_e(\mathbf{p}_1')  x^{\dagger}_q(\mathbf{p}_2') 
+ x_q(\mathbf{p}_2') x_e(\mathbf{p}_1')  x_q^{\dagger}(\mathbf{p}_2)  x_e^{\dagger}(\mathbf{p}_1) \nonumber\\
+  =& \frac{a_L^4}{\left( t-m_Z^2 \right)^2} \operatorname{Tr}\left[p_2'\cdot\overline{\sigma} p_1'\cdot\sigma  \right]
+  \sum_{\text{spins}}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2)  x_q^{\dagger}(\mathbf{p}_2)  x_e^{\dagger}(\mathbf{p}_1) \nonumber\\
+  =& \frac{a_L^4}{\left( t-m_Z^2 \right)^2} \operatorname{Tr}\left[p_2'\cdot\overline{\sigma} p_1'\cdot\sigma  \right]
+ \operatorname{Tr}\left[p_2\cdot\sigma  p_1\cdot\overline{\sigma}  \right] \nonumber\\
+  =& \frac{4a_L^4}{\left( t-m_Z^2 \right)^2}\left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right).
+\end{align}
+\begin{align}
+   \sum_{\text{spins}} |\mathcal{M}|^2=& \frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2.
+\end{align}
+\begin{align}
+     \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
+\frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
+\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2 \,.
+\end{align}
+In the non-relativistic limit
+\begin{align}
+  t\approx& (m_e-m_e)^2\approx 0\,,& 
+  s\approx& (m_e+m_q)^2\,,
+\end{align}
+\begin{align}
+       \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2}\frac{a_L^4}{m_Z^4}\frac{\left( m_e^2+m_q^2+2m_em_q-m_e^2-m_q^2 \right)^2}{(m_e+m_q)^2} \nonumber\\
+                    =&\frac{a_L^4}{16\pi^2m_Z^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
+\end{align}
+
 For the interaction of a fermion pair with $W_\mu^\pm$, we know from
 the standard model Lagrangian \cite{lsm}, that
 \begin{align}
