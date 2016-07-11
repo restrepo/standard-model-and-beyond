@@ -1189,9 +1189,9 @@ and
 \begin{align}
 \label{eq:bkqlel}
     \xi^\alpha_{e+}(x_1)\xi^{\beta}_{q+}(x_2)|q_L(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
--\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^\alpha(s,\mathbf{p}_1)x^{\beta}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} \nonumber\\
+-\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^\alpha_e(s,\mathbf{p}_1)x^{\beta}_q(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} \nonumber\\
    \langle q_L(\mathbf{p}_2) e_L(\mathbf{p}_1) |\xi^{\dagger\dot{\beta}}(x_2)\xi^{\dagger\dot{\alpha}}_-\left( x_1 \right)=&
--\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\dagger\dot{\beta}}(s',\mathbf{p}_2) x^{\dagger\dot{\alpha}}(s,\mathbf{p}_1)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
+-\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\dagger\dot{\beta}}_q(s',\mathbf{p}_2) x^{\dagger\dot{\alpha}}_e(s,\mathbf{p}_1)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
 \end{align}
 
 
@@ -1481,6 +1481,13 @@ We now consider the $t$-channel interaction
   e_L+q_L \to e_L+q_L
 \end{align}
 as displayed in figure~\ref{fig:ddex}.
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{dd}
+  \caption{$t$-channel scattering of Weyl fermions}
+  \label{fig:ddex}
+\end{figure}
+
 We have then the two particle states \eqref{eq:bkqlel}  with distinguishable particles:
 \begin{align}
   e_L\to& \xi_e\,& q_L\to \xi_q\,.
@@ -1568,7 +1575,7 @@ In the non-relativistic limit
 
 \subsubsection{Dark-matter like calculation}
 
-To have the Higgs portal direct dark matter detection we consider the interaction of a singlet scalar
+To have the Higgs portal direct dark matter detection cross section, we consider the interaction of a singlet scalar with the standard model Higgs, $h(x)$
 \begin{align}
  \mathcal{L}=\lambda v S^2 h(x) 
 \end{align}
@@ -1577,7 +1584,7 @@ We now consider the interaction
   S+q_L \to S+q_R
 \end{align}
 
-The specific calculation by the scattering mediated by the $h$ is 
+The specific calculation by the scattering mediated by the Higgs is 
 \begin{align}
   S_{fi}=&\frac{\left(\lambda  v y_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{h}{(x_1)}{h}\,h(x_1)h(x_2) \nonumber\\
@@ -1594,7 +1601,7 @@ i\Delta_F \left( x_1-x_2 \right)\nonumber\\
 
 
 
-By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
+By using the standard procedure
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4 \lambda m_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
@@ -1649,7 +1656,7 @@ mediated by $h(x)$, with couplings
 \end{align}
 
 
-The specific calculation by the scattering mediated by the $h$ is 
+The specific calculation by the scattering mediated by the Higgs, $h(x)$, is 
 \begin{align}
   S_{fi}=&\frac{\left(y_ey_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{h}{(x_1)}{h}\,h(x_1)h(x_2) \nonumber\\
@@ -1666,7 +1673,7 @@ i\Delta_F \left( x_1-x_2 \right)\nonumber\\
 
 
 
-By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
+By using the standard procedure
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4y_e y_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
