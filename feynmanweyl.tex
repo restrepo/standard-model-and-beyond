@@ -231,7 +231,8 @@ and so on we obtain the $S$--matrix
 The following identitities can be used to simplify products of $\sigma$, $\overline{\sigma}$ matrices %eq. 2.48 pag. 10
 \begin{align}
   \label{eq:sos}
-  \sigma^{\mu}_{\alpha\dot{\alpha}}\overline{\sigma}_{\mu}^{\dot{\beta}\beta}=&2{\delta_{\alpha}}^{\beta}{\delta^{\dot{\beta}}}_{\beta}\,,
+  \sigma^{\mu}_{\alpha\dot{\alpha}}\overline{\sigma}_{\mu}^{\dot{\beta}\beta}=&2{\delta_{\alpha}}^{\beta}{\delta^{\dot{\beta}}}_{\beta}\,,\nonumber\\
+  \left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha} \left( \overline{\sigma}_{\mu} \right)^{\dot{\beta}\beta}=&\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}
 \end{align}
 
 
@@ -254,6 +255,45 @@ We use the notation
   % \label{eq:yyd}
    \sum_s y^{\dagger \dot{\alpha}}(\mathbf{p},s) y^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta} \nonumber\\
 \end{align}
+
+\section{Mandelstam variables}
+
+We can generalize the defintion of $s$ in eq.\eqref{eq:smv} to the full
+Mandelstam variables \url{http://bolvan.ph.utexas.edu/~vadim/Classes/2011f/STU.pdf}, (See also \cite{Peskin})
+\begin{align}
+\label{eq:mvstu}
+  s=&\left( p_1+p_2 \right)^2=\left( p_1'+p_2' \right)^2 \nonumber\\
+  t=&\left( p_1-p_1' \right)^2=\left( p_2-p_2' \right)^2 \nonumber\\
+  u=&\left( p_1-p_2' \right)^2=\left( p_1'-p_2 \right)^2 \,.
+\end{align}
+The explicit form for $s$ is
+\begin{align}
+  s=&\left( p_1+p_2 \right)^2 \nonumber\\
+ =& p_1^2+p_2^2+2 p_1\cdot p_2 \nonumber\\
+=& m_1^2+m_2^2+2 p_1\cdot p_2\,,
+\end{align}
+from which the product $p_1\cdot p_2$ can be obtained.  By following similar steps for $t$ and $u$, we have
+\begin{align}
+\label{eq:stucs}
+  2 p_1\cdot p_2=&s- m_1^2-m_2^2 \nonumber\\
+  2 p_1'\cdot p_2'=&s- {m_1'}^2-{m_2'}^2 \nonumber\\
+  2 p_1\cdot p_1'=&m_1^2+{m_1'}^2 -t \nonumber\\
+  2 p_2\cdot p_2'=&m_2^2+{m_2'}^2 -t \nonumber\\
+  2 p_1\cdot p_2'=&m_1^2+{m_2'}^2 -u \nonumber\\
+  2 p_2\cdot p_1'=&m_2^2+{m_1'}^2 -u \,.
+\end{align}
+Moreover,
+\begin{align}
+  s+t+u=m_1^2+m_2^2+{m_1'}^2+{m_2'}^2\,.
+\end{align}
+
+In the non-relativistic limit
+\begin{align}
+  s&=m_1^2+m_2^2   +2 p_1\cdot p_2 \approx (m_1+m_2)^2  + m_1m_2 (\mathbf{v}_1-\mathbf{v}_2)>0\,, \nonumber\\
+  t&=m_1^2+{m_1'}^2-2 p_1\cdot p_1'\approx (m_1-m_1')^2 - m_1m_1' (\mathbf{v}_1-\mathbf{v}_1')>0\,,\nonumber\\
+  u&=m_1^2+{m_2'}^2-2 p_1\cdot p_2'\approx (m_1-m_2')^2 - m_1m_2'  (\mathbf{v}_1-\mathbf{v}_2')>0\,.
+\end{align}
+
 
 
 
@@ -656,11 +696,14 @@ From the previous calculation we have
 \begin{align}
 S^{(n)}=  \frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,.
 \end{align}
-The relevant term for the scattering
+
+\subsection{Higgs mediated scattering}
+
+The relevant term for the scattering that we consider now is the $t$-channel
 \begin{align}
   e^{-}_L(p_1)+e_L^{-}(p_2)\to   e_R^{-}(p_1')+e_R^{-}(p_2')
 \end{align}
-As alwayas we use the left-handed Weyl spinors
+As always, we use the left-handed Weyl spinors
 \begin{align}
   e_L\to &\xi_{\alpha} &   \left( e_R \right)^{\dagger}\to &\eta^{\alpha}\,,
 \end{align}
@@ -669,7 +712,7 @@ with Yukawa Lagrangian
   \mathcal{L}_y=& y \left(e_R\right)^{\dagger} e_L h^0 +y \left(e_L\right)^{\dagger} e_R h^0 \nonumber\\
                =& y \eta^{\alpha} \xi_{\alpha}h^0 + y \eta^{\dagger\dot{\alpha}} \xi_{\dot{\alpha}}^{\dagger}h^0\,. 
 \end{align}
-
+We will make the calculation for any Standard Model fermion, but keep the notation just for the electron with mass $m_1$. To keep the calculation in general, we left open the possibility that the second vertex involves a different fermion of mass $m_2$. The Feynman diagrams for the electronic case is displayed in figure~\ref{fig:sct}.
 
 is
 \begin{align}
@@ -823,8 +866,6 @@ Following similar steps, we find
 \operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}   \right].
 \end{align}
 
-
-\subsection{Matrix element calculation example}
 
 
 
@@ -1023,114 +1064,79 @@ x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)\
   - x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)\Delta_F(p_1-p_2')y^{\dagger\dot{\beta}}(\mathbf{p}_1')y^{\dagger\dot{\alpha}}(\mathbf{p}_2')
 \right]
 \end{align}
-\begin{align}
-  =&y^4 \Delta_F^2(p_1-p_1')\left[y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2) 
-x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1')  \right] \nonumber\\
-&+y^4 \Delta_F^2(p_1-p_2') \left[
-  \right] \nonumber\\
-&-y^4\Delta_F(p_1-p_1')\Delta_F(p_1-p_2') \left[ \right. \nonumber\\
-    &\left.  \right].
-\end{align}
-
 For the first term in the expansion and taking into account summming over spins, we have
 \begin{align}
- \left| \mathcal{M}_1 \right| = &y^4 \Delta_F^2(p_1-p_2')\, \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2) 
+\sum_{\text{spins}} \left| \mathcal{M}_1 \right| \supset &y^4 \Delta_F^2(p_1-p_1')\, \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2')x_{\alpha}(\mathbf{p}_1)x_{\beta}(\mathbf{p}_2) 
 x_{\dot{\beta}}^{\dagger}(\mathbf{p}_2)x_{\dot{\alpha}}^{\dagger}(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') 
 \end{align}
 Using \eqref{eq:xxd}
 \begin{align}
-  \left| \mathcal{M}_1 \right|^2 = &y^4 \Delta_F^2(p_1-p_2')\,p_2\cdot \sigma_{\beta\dot{\beta}} x_{\dot{\alpha}}^{\dagger}  \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') x_{\alpha}(\mathbf{p}_1)(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
-= &y^4 \Delta_F^2(p_1-p_2')\, p_2\cdot \sigma_{\beta\dot{\beta}}\, p_1\cdot \sigma_{\alpha\dot{\alpha}}   \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
- = &y^4 \Delta_F^2(p_1-p_2')\, p_2\cdot \sigma_{\beta\dot{\beta}}\,p_2'\cdot \overline{\sigma}^{\dot{\beta}\beta}\, p_1\cdot \sigma_{\alpha\dot{\alpha}}\,   \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
-= &y^4 \Delta_F^2(p_1-p_2')\, p_2\cdot \sigma_{\beta\dot{\beta}}\,p_2'\cdot \overline{\sigma}^{\dot{\beta}\beta}\, p_1\cdot \sigma_{\alpha\dot{\alpha}}   \,p_1'\cdot \overline{\sigma}^{\dot{\alpha}\alpha}    \nonumber\\
-= &y^4 \Delta_F^2(p_1-p_2')\,\operatorname{Tr} \left[ p_1\cdot \sigma   \,p_1'\cdot \overline{\sigma} \right]  \operatorname{Tr}\left[p_2\cdot\sigma\,p_2'\cdot \overline{\sigma}  \right],
+\sum_{\text{spins}}   \left| \mathcal{M}_1 \right|^2 \supset  &y^4 \Delta_F^2(p_1-p_1')\,p_2\cdot \sigma_{\beta\dot{\beta}} x_{\dot{\alpha}}^{\dagger}  \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') x_{\alpha}(\mathbf{p}_1)(\mathbf{p}_1)y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
+= &y^4 \Delta_F^2(p_1-p_1')\, p_2\cdot \sigma_{\beta\dot{\beta}}\, p_1\cdot \sigma_{\alpha\dot{\alpha}}   \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1')y^{\beta}(\mathbf{p}_2') y^{\dagger\dot{\beta}} (\mathbf{p}_2') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
+ = &y^4 \Delta_F^2(p_1-p_1')\, p_2\cdot \sigma_{\beta\dot{\beta}}\,p_2'\cdot \overline{\sigma}^{\dot{\beta}\beta}\, p_1\cdot \sigma_{\alpha\dot{\alpha}}\,   \sum_{\text{spins}}y^{\alpha}(\mathbf{p}_1') y^{\dagger\dot{\alpha}}(\mathbf{p}_1') \nonumber\\
+= &y^4 \Delta_F^2(p_1-p_1')\, p_2\cdot \sigma_{\beta\dot{\beta}}\,p_2'\cdot \overline{\sigma}^{\dot{\beta}\beta}\, p_1\cdot \sigma_{\alpha\dot{\alpha}}   \,p_1'\cdot \overline{\sigma}^{\dot{\alpha}\alpha}    \nonumber\\
+= &y^4 \Delta_F^2(p_1-p_1')\,\operatorname{Tr} \left[ p_1\cdot \sigma   \,p_1'\cdot \overline{\sigma} \right]  \operatorname{Tr}\left[p_2\cdot\sigma\,p_2'\cdot \overline{\sigma}  \right],
 \end{align}
+
+
+
 By using \eqref{eq:trss}
 \begin{align}
-  \left| \mathcal{M}_1 \right|^2 = & y^4  \Delta_F^2(p_1-p_2')\,p_1^{\mu}{p_1'}^{\nu}\operatorname{Tr} \left[  \sigma^{\mu}  \overline{\sigma}^{\nu} \right] p_2^{\mu}{p_2'}^{\nu} \operatorname{Tr}\left[\sigma^{\mu} \overline{\sigma}^{\nu} \right]\nonumber\\
-= & 2y^4  \frac{\left( p_1\cdot p_1' \right) \left( p_2\cdot{p_2'} \right).}{\left[ \left(p_1-p_2'\right)^2-m^2_h \right]^2}\,
+  \left| \mathcal{M}_1 \right|^2 \supset & y^4  \Delta_F^2(p_1-p_1')\,p_1^{\mu}{p_1'}^{\nu}\operatorname{Tr} \left[  \sigma^{\mu}  \overline{\sigma}^{\nu} \right] p_2^{\mu}{p_2'}^{\nu} \operatorname{Tr}\left[\sigma^{\mu} \overline{\sigma}^{\nu} \right]\nonumber\\
+= & 2y^4  \frac{\left( p_1\cdot p_1' \right) \left( p_2\cdot{p_2'} \right).}{\left[ \left(p_1-p_1'\right)^2-m^2_h \right]^2}\,
 \end{align}
 where we also have used
 \begin{align}
   \Delta_F(q)=\frac{1}{q^2-m^2}
 \end{align}
-We can generalize the defintion of $s$ in eq.\eqref{eq:smv} to the full
-Mandelstam variables \url{http://bolvan.ph.utexas.edu/~vadim/Classes/2011f/STU.pdf},
-\begin{align}
-  s=&\left( p_1+p_2 \right)^2=\left( p_1'+p_2' \right)^2 \nonumber\\
-  t=&\left( p_1-p_1' \right)^2=\left( p_2-p_2' \right)^2 \nonumber\\
-  u=&\left( p_1-p_2' \right)^2=\left( p_1'-p_2 \right)^2 \,.
-\end{align}
-The explicit form for $s$ is
-\begin{align}
-  s=&\left( p_1+p_2 \right)^2 \nonumber\\
- =& p_1^2+p_2^2+2 p_1\cdot p_2 \nonumber\\
-=& m_1^2+m_2^2+2 p_1\cdot p_2\,,
-\end{align}
-from which the product $p_1\cdot p_2$ can be obtained.  By following similar steps for $t$ and $u$, we have
-\begin{align}
-  2 p_1\cdot p_2=&s- m_1^2-m_2^2 \nonumber\\
-  2 p_1'\cdot p_2'=&s- {m_1'}^2-{m_2'}^2 \nonumber\\
-  2 p_1\cdot p_1'=&m_1^2+{m_1'}^2 -t \nonumber\\
-  2 p_2\cdot p_2'=&m_2^2+{m_2'}^2 -t \nonumber\\
-  2 p_1\cdot p_2'=&m_1^2+{m_2'}^2 -u \nonumber\\
-  2 p_2\cdot p_1'=&m_2^2+{m_1'}^2 -u \,.
-\end{align}
-Moreover,
-\begin{align}
-  s+t+u=m_1^2+m_2^2+{m_1'}^2+{m_2'}^2\,.
-\end{align}
 
-In the non-relativistic limit
+The partial amplitude can be written in terms of the Mandelstam variables~\eqref{eq:mvstu} and \eqref{eq:stucs}
 \begin{align}
-  s&=m_1^2+m_2^2   +2 p_1\cdot p_2 \approx (m_1+m_2)^2  + m_1m_2 (\mathbf{v}_1-\mathbf{v}_2)>0\,, \nonumber\\
-  t&=m_1^2+{m_1'}^2-2 p_1\cdot p_1'\approx (m_1-m_1')^2 - m_1m_1' (\mathbf{v}_1-\mathbf{v}_1')>0\,,\nonumber\\
-  u&=m_1^2+{m_2'}^2-2 p_1\cdot p_2'\approx (m_1-m_2')^2 - m_1m_2'  (\mathbf{v}_1-\mathbf{v}_2')>0\,.
+  \left| \mathcal{M}_1 \right|^2  \supset & \frac{y^4}{2}  \frac{ \left(m_1^2+{m_1'}^2-t  \right)\left( m_2^2+{m_2'}^2-t \right)}{\left[ t-m^2_h \right]^2}
 \end{align}
-
-
-Then, we can get the product of crossed momentum in terms of $t$
+For generic standard model Higgs couplings we have at least (in the specific case in consideration all the fermionic masses are the same) 
 \begin{align}
-  \left| \mathcal{M}_1 \right|^2 = & \frac{y^4}{2}  \frac{ \left(m_1^2+{m_1'}^2-t  \right)\left( m_2^2+{m_2'}^2-t \right)}{\left[ u-m^2_h \right]^2}
+  m_1=&m_1'\,,&m_2=&m_2'\,,
 \end{align}
+therefore
+
 By using the general formula for the $2\to 2$ cross section in eq.~\eqref{eq:}
 \begin{align}
   \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
 \frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
 \overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}
+\overline{|\mathcal{M}|^2} \nonumber\\
 =&\frac{y^4}{128\pi^2s}
-\frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
- \frac{ \left(m_1^2+{m_1'}^2-t  \right)\left( m_2^2+{m_2'}^2-t \right)}{\left[ u-m^2_h \right]^2}
-\end{align}
-
-We have that for Higgs couplings
-\begin{align}
-  m_1=&m_1'\,,&m_2=&m_2'\,,
-\end{align}
-therefore
-\begin{align}
-    \frac{d\sigma}{d\Omega}
-=&\frac{y^4}{128\pi^2s}
-  \frac{ \left(2m_1^2-t  \right)\left( 2m_2^2-t \right)}{\left[m^2_h -u\right]^2}
-\end{align}
-In the non-relativistic limit we have $t\approx 0$
-\begin{align}
-    \frac{d\sigma}{d\Omega}
-=&\frac{y^4}{128\pi^2 \left(m_1+m_2\right)^2}
-  \frac{ \left(2m_1^2  \right)\left( 2m_2^2 \right)}{\left[m^2_h -\left(m_1-m_2  \right)^2\right]^2} \nonumber\\
-=&\frac{y^4}{32\pi^2}\left(\frac{m_1m_2}{m_1+m_2}  \right)^2\frac{1}{\left(m_h^2-m_1^2-m_2^2+2m_1m_2  \right)^2}
+ \frac{ \left(m_1^2+{m_1'}^2-t  \right)\left( m_2^2+{m_2'}^2-t \right)}{\left[ t-m^2_h \right]^2}
 \end{align}
 
 \begin{align}
-  p_i=\left(m_i,\mathbf{p}_i  \right)
+    \frac{d\sigma}{d\Omega}
+=&\frac{y^4}{128\pi^2s}
+  \frac{ \left(2m_1^2-t  \right)\left( 2m_2^2-t \right)}{\left(t-m^2_h\right)^2}
 \end{align}
-Therefore
+
+We consider two limits here for the partial contribution to the differential cross section:
+
+\begin{itemize}
+\item For massless intial an final fermions we have
 \begin{align}
-  \frac{d\sigma}{d\Omega}=&\frac{y^4}{128 \pi^2 \left[ \left(m_1+m_2 \right)^2+\left( \mathbf{p}_1+\mathbf{p_2} \right)^2 \right]}\frac{\left( 2m_1^2 \right)\left( 2m_2^2 \right)}{
-\left[ m_h^2-\left(m_1-m_2  \right)^2 \right]^2} \nonumber\\
-  \frac{d\sigma}{d\Omega}=&\frac{y^4}{128 \pi^2 }\frac{4m_1^2m_2^2}{\left(m_1+m_2 \right)^2}\frac{1}{
- m_h^4-2m_h^{2}\left(m_1-m_2  \right)^2+\left(m_1-m_2  \right)^4 } \nonumber\\
+    \frac{d\sigma}{d\Omega}
+=&\frac{y^4}{128\pi^2}\frac{t^2}{s\left(t-m^2_h\right)^2}
 \end{align}
+\item For some heavy fermion in the non-relativistic limit we have
+\begin{align}
+  t\approx& (m_1-m_1)^2=0\,,& 
+  s\approx& (m_1+m_2)^2\,,
+\end{align}
+and therefore
+\begin{align}
+      \frac{d\sigma}{d\Omega}
+=&\frac{y^4}{32\pi^2m_h^4}\left(\frac{m_1m_2}{m_1+m_2}\right)^2\,.
+\end{align}
+
+\end{itemize}
 
 \subsection{Other two-particle states}
 
@@ -1296,8 +1302,6 @@ mediated by $A^{\mu}$, with couplings
 +e \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} A_{\mu}
 \end{align}
 
-This is an explicit case for distinguishable particles
-
 
 The specific calculation by the scattering mediated by the $A^{\mu}$ is 
 \begin{align}
@@ -1329,6 +1333,7 @@ x_{\alpha}\left(s_1,\mathbf{p}_1\right)y^{\dagger}_{\dot{\beta}}\left( s_2,\math
 \end{align}
 and following the same steps
 \begin{align}
+\label{eq:finalsfi}
       S_{fi}
     =&\frac{(2\pi)^4(ie)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
  \left[ x^{\dagger}_{\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{\alpha}(\mathbf{p}_1)  i D_{\mu\nu}\left( p_1-p_1' \right)y^{\dagger}_{\dot{\beta}}(\mathbf{p}_2) \left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}y_{\beta}(\mathbf{p}_2')\right] \nonumber\\
@@ -1464,36 +1469,45 @@ Therefore
 
 \subsubsection{Lepton quark scattering}
 
-mediated by $Z^{\mu}$, with couplings
+We consider the current of a Weyl fermions mediated by $Z^{\mu}$, with a coupling given by the Lagrangian
 \begin{align}
 \label{eq:xietaz}
-\mathcal{L}=a_L \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} Z_{\mu}
-+b_L \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} Z_{\mu}
+\mathcal{L}=a_L \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} Z_{\mu}\,.
+%+b_L \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} Z_{\mu}
 \end{align}
 
-We now consider the interaction
+We now consider the $t$-channel interaction
 \begin{align}
   e_L+q_L \to e_L+q_L
 \end{align}
-We have then the two particle state but with distinguishable particles 
+as displayed in figure~\ref{fig:ddex}.
+We have then the two particle states \eqref{eq:bkqlel}  with distinguishable particles:
+\begin{align}
+  e_L\to& \xi_e\,& q_L\to \xi_q\,.
+\end{align}
+We label the initial (final) momentum as $p_1$, $p_2$ ($p_1'$, $p_2'$) such that
+\begin{align}
+  m_e=&m_1=m_1'\,,&m_q=&m_2=m_2'\,.
+\end{align}
+
 
 The specific calculation by the scattering mediated by the $Z^{\mu}$ is 
 \begin{align}
   S_{fi}=&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{Z_{\mu}}{(x_1)}{Z_{\nu}}\,Z_{\mu}(x_1)Z_{\nu}(x_2) \nonumber\\
 &\left\langle q_L \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right) \right|
-  : \xi^{\dagger}_{\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha}(x_1)\xi^{\dagger}_{\dot{\beta}}(x_2)\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\beta}(x_2):
+  : \xi^{\dagger}_{e\dot{\alpha}}(x_1)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{e\alpha}(x_1)\xi^{\dagger}_{q\dot{\beta}}(x_2)\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{q\beta}(x_2):
  \left| q_L\left(\mathbf{p}_2\right) ,e_L \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
 =&\frac{\left( -ia_L \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 D_{\mu\nu} \left( x_1-x_2 \right)\nonumber\\
 &\left\langle q_L \left(\mathbf{p}'_2\right),e_L\left(\mathbf{p}'_1\right)\right|
-   \xi^{\dagger}_{\dot{\alpha} -}(x_1)\xi^{\dagger}_{\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{\alpha +}(x_1)\xi_{\beta +}(x_2)
+   \xi^{\dagger}_{e\dot{\alpha} -}(x_1)\xi^{\dagger}_{q\dot{\beta}-}(x_2)\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\left( \overline{\sigma}^{\nu} \right)^{\dot{\beta}\beta}\xi_{e\alpha +}(x_1)\xi_{q\beta +}(x_2)
  \left| q_L\left(\mathbf{p}_2\right), e_L \left(\mathbf{p}_1\right)\right\rangle. 
 \end{align}
 
 
 
-By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
+By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:finalsfi}
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4(ia_L)^2\delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
@@ -1509,6 +1523,7 @@ By using
 \begin{align}
   iD_{\mu\nu}=\frac{-ig_{\mu\nu}}{t-m_Z^2}
 \end{align}
+and the identity \eqref{eq:sos}
 \begin{align}
 \mathcal{M}=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2') \left( \overline{\sigma}_{\mu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2) \nonumber\\
 =&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2')x_{q \beta}(\mathbf{p}_2) \nonumber\\
@@ -1527,9 +1542,11 @@ By using
  \operatorname{Tr}\left[p_2\cdot\sigma  p_1\cdot\overline{\sigma}  \right] \nonumber\\
   =& \frac{4a_L^4}{\left( t-m_Z^2 \right)^2}\left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right).
 \end{align}
+The products of momentum can be written in terms of the Mandelstam variables~ \eqref{eq:stucs}
 \begin{align}
    \sum_{\text{spins}} |\mathcal{M}|^2=& \frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2.
 \end{align}
+The cross section is 
 \begin{align}
      \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
 \frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
@@ -1549,19 +1566,88 @@ In the non-relativistic limit
 
 
 
-\subsubsection{Scalar mediated Lepton quark scattering}
+\subsubsection{Dark-matter like calculation}
 
-mediated by $h$, with couplings
+To have the Higgs portal direct dark matter detection we consider the interaction of a singlet scalar
+\begin{align}
+ \mathcal{L}=\lambda v S^2 h(x) 
+\end{align}
+We now consider the interaction
+\begin{align}
+  S+q_L \to S+q_R
+\end{align}
+
+The specific calculation by the scattering mediated by the $h$ is 
+\begin{align}
+  S_{fi}=&\frac{\left(\lambda  v y_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\bcontraction{\,}{h}{(x_1)}{h}\,h(x_1)h(x_2) \nonumber\\
+&\left\langle q_R \left(\mathbf{p}'_2\right),S\left(\mathbf{p}'_1\right) \right|
+  : S(x_1)S(x_1)
+    \xi^{\beta}(x_2)\eta_{\beta}(x_2):
+ \left| q_L\left(\mathbf{p}_2\right) ,S \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
+=&\frac{\left( \lambda  v y_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+i\Delta_F \left( x_1-x_2 \right)\nonumber\\
+&\left\langle q_R \left(\mathbf{p}'_2\right),S\left(\mathbf{p}'_1\right)\right|
+   S_-(x_1)\eta_{\beta-}(x_2) S_+(x_1)\xi^{\beta}_{+}(x_2)
+ \left| q_L\left(\mathbf{p}_2\right), S \left(\mathbf{p}_1\right)\right\rangle. 
+\end{align}
+
+
+
+By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
+\begin{align}
+      S_{fi}
+    =&\frac{(2\pi)^4 \lambda m_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
+ \left[y'_{2\beta}i\Delta_F(p_1-p_1')x_2^{\beta}\right] \nonumber\\
+\end{align}
+where $m_q=y_d v$.
+\begin{align}
+ i\mathcal{M}=\lambda  m_q\Delta_F(t) x_2y'_2 
+\end{align}
+\begin{align}
+\sum_{\text{spins}} |\mathcal{M}|^2=&\lambda^2   m_q^2\Delta_F(t) \sum_{\text{spins}}  x_2y'_2  y^{\prime\dagger}_2x_2^{\dagger} \nonumber\\
+=& 2 \lambda^2 m_q^2\Delta_F(t) \left( p_2\cdot p_2' \right) 
+\end{align}
+By using
+\begin{align}
+  i\Delta_F(t)=\frac{-i}{t-m_h^2}
+\end{align}
+Since $m_S=m_1=m_1'$, $m_q=m_2=m_2'$
+\begin{align}
+   \sum_{\text{spins}} |\mathcal{M}|^2=&\frac{\lambda^2 m_q^2}{\left( t-m_h^2 \right)^2} \left(2m_q^2-t\right)
+\end{align}
+\begin{align}
+     \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
+\frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
+\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\frac{\lambda^2 m_q^2}{\left( t-m_h^2 \right)^2}\left(2m_q^2-t\right) .
+\end{align}
+In the non-relativistic limit
+\begin{align}
+  t\approx& (m_S-m_S)^2\approx 0\,,& 
+  s\approx& (m_S+m_q)^2\,,
+\end{align}
+\begin{align}
+   \frac{d\sigma}{d\Omega}=&
+\frac{\lambda^2 m_q^4}{32\pi^2 \left(m_S+m_q\right)^2m_h^4}\nonumber\\
+       \frac{d\sigma}{d\Omega}
+                    =&\frac{\lambda^2m_q^2}{32\pi^2m_h^4m_S^2}\left( \frac{m_Sm_q}{m_S+m_q} \right)^2\,.
+\end{align}
+
+\subsection{Example}
+We repeat here the calculation of the Higgs mediated scattering in sec.~\ref{} but for the explicit case of distinguishable particles. To be more specific, 
+we now consider the $t$-channel interaction
+\begin{align}
+  e_L+q_L \to e_R+q_R\,,
+\end{align}
+mediated by $h(x)$, with couplings
 \begin{align}
 \label{eq:xietaz}
 \mathcal{L}= y_e \left(e_R\right)^{\dagger} e_L h^0 +y \left(e_L\right)^{\dagger} e_R h^0 
-+y_q \left(q_R\right)^{\dagger} q_L h^0 +y \left(q_L\right)^{\dagger} q_R h^0 
++y_q \left(q_R\right)^{\dagger} q_L h^0 +y \left(q_L\right)^{\dagger} q_R h^0 \,.
 \end{align}
 
-We now consider the interaction
-\begin{align}
-  e_L+q_L \to e_R+q_R
-\end{align}
 
 The specific calculation by the scattering mediated by the $h$ is 
 \begin{align}
@@ -1615,8 +1701,14 @@ In the non-relativistic limit
 \end{align}
 \begin{align}
        \frac{d\sigma}{d\Omega}
-                    =&\frac{y_e^2y_q^2}{16\pi^2m_h^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
+                    =&\frac{y_e^2y_q^2}{16\pi^2m_h^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2 \nonumber\\
+=&\frac{m_e^2m_q^2}{16\pi^2v^4 m_h^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,,
 \end{align}
+where $m_f=y_f v$.
+
+
+\section{Dirac fermion case}
+
 
 For the interaction of a fermion pair with $W_\mu^\pm$, we know from
 the standard model Lagrangian \cite{lsm}, that
