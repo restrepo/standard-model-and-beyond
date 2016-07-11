@@ -1586,43 +1586,27 @@ By using~\eqref{eq:bkqlel} we have an expression similar to \eqref{eq:hdee}
     =&\frac{(2\pi)^4y_e y_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
  \left[y'_{1\alpha}y'_{2\beta}i\Delta_F(p_1-p_1')x_1^{\alpha}x_2^{\beta}\right] \nonumber\\
 \end{align}
-
+\begin{align}
+ i\mathcal{M}=y_e y_q\Delta_F(t) x_1y'_1x_2y'_2 
+\end{align}
+\begin{align}
+\sum_{\text{spins}} |\mathcal{M}|^2=&y_e y_q\Delta_F(t) \sum_{\text{spins}}  x_1y'_1x_2y'_2  y^{\prime\dagger}_2x_2^{\dagger} y^{\prime\dagger}_1x^{\dagger}_1 \nonumber\\
+=& 4 y_e y_q\Delta_F(t) \left( p_2\cdot p_2' \right) \left(p_1\cdot p_1'  \right)
+\end{align}
 By using
 \begin{align}
   i\Delta_F(t)=\frac{-i}{t-m_h^2}
 \end{align}
-and
+Since $m_e=m_1=m_1'$, $m_q=m_2=m_2'$
 \begin{align}
-  \sum_{\text{spins}}y'_{1\alpha}y'_{2\beta}x_1^{\alpha}x_2^{\beta} x_2^{\dagger\dot{\beta}} x_1^{\dagger\dot{\alpha}} y^{\prime\dagger}_{2\dot{\beta}} y^{\prime\dagger}_{1\dot{\alpha}}
-\end{align}
-
-\begin{align}
-\mathcal{M}=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2') \left( \overline{\sigma}_{\mu} \right)^{\dot{\beta}\beta}x_{q \beta}(\mathbf{p}_2) \nonumber\\
-=&(ia_L)^2 \frac{(-i)}{t-m_Z^2} x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')\epsilon^{\alpha\beta}\epsilon^{\dot{\alpha}\dot{\beta}}x_{e \alpha}(\mathbf{p}_1)  x^{\dagger}_{q\dot{\beta}}(\mathbf{p}_2')x_{q \beta}(\mathbf{p}_2) \nonumber\\
-=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}\epsilon^{\beta\alpha}x_{e \alpha}(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2) x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')  x^{\dagger\dot{\alpha}}_{q}(\mathbf{p}_2') \nonumber\\
-=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}x^{\beta}_e(\mathbf{p}_1)x_{q \beta}(\mathbf{p}_2) x^{\dagger}_{e\dot{\alpha}}(\mathbf{p}_1')  x^{\dagger\dot{\alpha}}_{q}(\mathbf{p}_2') \nonumber\\
-=&-(ia_L)^2 \frac{(-i)}{t-m_Z^2}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2) x^{\dagger}_e(\mathbf{p}_1')  x^{\dagger}_q(\mathbf{p}_2') \,.
-\end{align}
-\begin{align}
-  \sum_{\text{spins}} |\mathcal{M}|^2=&
-  \frac{a_L^4}{\left( t-m_Z^2 \right)^2}
-  \sum_{\text{spins}}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2) x^{\dagger}_e(\mathbf{p}_1')  x^{\dagger}_q(\mathbf{p}_2') 
- x_q(\mathbf{p}_2') x_e(\mathbf{p}_1')  x_q^{\dagger}(\mathbf{p}_2)  x_e^{\dagger}(\mathbf{p}_1) \nonumber\\
-  =& \frac{a_L^4}{\left( t-m_Z^2 \right)^2} \operatorname{Tr}\left[p_2'\cdot\overline{\sigma} p_1'\cdot\sigma  \right]
-  \sum_{\text{spins}}x_e(\mathbf{p}_1)x_q(\mathbf{p}_2)  x_q^{\dagger}(\mathbf{p}_2)  x_e^{\dagger}(\mathbf{p}_1) \nonumber\\
-  =& \frac{a_L^4}{\left( t-m_Z^2 \right)^2} \operatorname{Tr}\left[p_2'\cdot\overline{\sigma} p_1'\cdot\sigma  \right]
- \operatorname{Tr}\left[p_2\cdot\sigma  p_1\cdot\overline{\sigma}  \right] \nonumber\\
-  =& \frac{4a_L^4}{\left( t-m_Z^2 \right)^2}\left( p_1\cdot p_2 \right)\left( p_1'\cdot p_2' \right).
-\end{align}
-\begin{align}
-   \sum_{\text{spins}} |\mathcal{M}|^2=& \frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2.
+   \sum_{\text{spins}} |\mathcal{M}|^2=&\frac{y_ey_q}{\left( t-m_h^2 \right)^2} \left(2m_e^2-t\right)\left(2m_q^2-t\right)
 \end{align}
 \begin{align}
      \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
 \frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
 \overline{|\mathcal{M}|^2} \nonumber\\
 =&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
-=&\frac{1}{64\pi^2s}\frac{a_L^4}{\left( t-m_Z^2 \right)^2}\left( s-m_e^2-m_q^2 \right)^2 \,.
+=&\frac{1}{64\pi^2s}\frac{y_e^2y_q^2}{\left( t-m_h^2 \right)^2}\left(2m_e^2-t\right)\left(2m_q^2-t\right) .
 \end{align}
 In the non-relativistic limit
 \begin{align}
@@ -1630,8 +1614,8 @@ In the non-relativistic limit
   s\approx& (m_e+m_q)^2\,,
 \end{align}
 \begin{align}
-       \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2}\frac{a_L^4}{m_Z^4}\frac{\left( m_e^2+m_q^2+2m_em_q-m_e^2-m_q^2 \right)^2}{(m_e+m_q)^2} \nonumber\\
-                    =&\frac{a_L^4}{16\pi^2m_Z^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
+       \frac{d\sigma}{d\Omega}
+                    =&\frac{y_e^2y_q^2}{16\pi^2m_h^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
 \end{align}
 
 For the interaction of a fermion pair with $W_\mu^\pm$, we know from
