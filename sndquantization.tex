@@ -26,7 +26,7 @@ In general, the formalism of second quantization is usefull to describe the stat
 
 \subsection{The clasical string}
 \label{sec:clasical-string}
-
+\begin{frame}[fragile,allowframebreaks]
 In conventional quantization the energy of one state is interpreted as the possible eigenstates of an Hamiltonian operator acting on the states of the system. 
 \begin{align}
   \widehat{H}|\text{State}\rangle=E|\text{State}\rangle
@@ -196,6 +196,7 @@ We have then,
   \frac{1}{2}\int_0^Ldz\,\frac{\partial\phi}{\partial z}\frac{\partial\phi}{\partial z}\nonumber\\
 &=\sum_{n=-\infty}^\infty\omega_n\,a_n^*a_n
 \end{align}
+Demostration:
 \begin{align}
   \frac{\partial\phi}{\partial t}=&\sum_{n=-\infty}^\infty \frac{v}{\sqrt{2\omega_n}}
   \left[-i\omega_n a_n\,\phi_n(z,t)+i\omega_n a_n^*\,\phi_n^*(z,t)\right],\nonumber\\
@@ -249,6 +250,9 @@ Using eqs.~\eqref{eq:7}, and \eqref{eq:8}
   \left[\frac{-v^2 k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n e^{-2i\omega_n t}
 +\frac{ k_nk_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*e^{2i\omega_n t}\right]
 \end{align}
+
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Since $\omega_n=\omega_{-n}$ and $k_n=-k_{-n}$
 \begin{align}
  H =  &\frac12
@@ -271,10 +275,10 @@ Since $a_n$ and $a_n^*$ are classical quantities that commutates, the Hamiltonia
 In this way, the factor $\sqrt{2\omega_{n}}$ in eq.~\eqref{eq:6}, is a convenient choice of normalization for the coefficients $a_n$ which guarantees the Hamiltonian.
 
 To quantize the string, we need to promote $H$ to an operator. In canonical quantization we need to identify the proper conjugates variables. For this purpose it is convenient to write eq.~\eqref{eq:14} as the Hamiltonian of an harmonic oscillator.
-
+\end{frame}
 \subsection{Quantization of the string}
 \label{sec:quantization-string}
-
+\begin{frame}[fragile,allowframebreaks]
 
 This Hamiltonian can be rewritten as a sum of independent  oscillators Hamiltonians. Consider an harmonic oscillator of frequency $\omega$. The equation of motion for $F=-k q$ is
 \begin{align}
@@ -490,7 +494,7 @@ with normalization
 \end{align}
 By induction we get
 \begin{align}
-\label{eq:128}
+\label{eq:sp}
 \frac{1}{\sqrt{m!}} \left(\widehat{a\,}_{n}^\dagger\right)^m |0\rangle=&|m_n\rangle
 \end{align}
 From here we have 
@@ -607,11 +611,13 @@ These operators will be functions of momentum. The fields will become operators 
 %DEBUG: further development
 
 
+\end{frame}
 
 
 
 \subsection{Generalization to three dimensions}
 \label{sec:gener-three-dimens}
+\begin{frame}[fragile,allowframebreaks]
 Taking into account that $E_n=\hbar\omega_n=\omega_n$, when $\hbar=1$, the most general solution to the generalization to three dimensions  of the wave equation with velocity of propagation $c=1$
 \begin{align}
   \partial^\mu\partial_\mu\phi=0\,,
@@ -664,9 +670,10 @@ The canonical quantization in eqs.~\eqref{eq:17}  can be  generalized to
 &\left[\widehat{a}_\mathbf{n},\widehat{a}_\mathbf{m}\right]=
 \left[\widehat{a}_\mathbf{n}^\dagger,\widehat{a}_\mathbf{m}^\dagger\right]=0\,,
 \end{align}
+\end{frame}
 \section{Quantization of the Klein-Gordon field}
 \label{sec:quant-klein-gord}
-
+\begin{frame}[fragile,allowframebreaks]
 It is convenient to put the system into a box of size $L$, so that the total volume is finite. According eq.~\eqref{eq:5}, in this case the frequency is discret. However particles like the photon or electron have frequencies in a continuum range. Therefore we need to establish relations that allows extrapolate the discrete results into the continuum, and also we will need to take the limit of  infinite volume. The Klein-Gordon equation for a real scalar field $\phi$ (Chapter~3.~\cite{lsm})
 \begin{align}
   (\partial^\mu\partial_\mu+m^2)\phi=0\,,
@@ -905,10 +912,11 @@ The analogy between the simple harmonic oscillator and the field is now complete
 \begin{quote}
   What was the positive energy component of the classical field now annihilates the quantum, and the negative energy component now creates the quantum. This quantum is what we call particle of positive energy.
 \end{quote}
-
+\end{frame}
 
 \section{Fock space}
 
+\begin{frame}[fragile,allowframebreaks]
 Given the Hilbert space of single-particles $\mathcal{H}$, to construct the space of states of variable particle number, consider the collection of all possible spaces of $n$ identical particles for either bosons ($\nu=1$ or fermions $\nu=-1$, $\mathcal{H}^n_{\nu}$. In particular the one-dimensional $\mathcal{H}^0$ space is defined by
 \begin{align}
   \mathcal{H}^0=\left\{ \lambda|0\rangle;\lambda\in \mathbb{C} \right\}
@@ -939,6 +947,43 @@ The operator  $\widehat{A}$ acting on Fock space is defined by
   \widehat{A}|\Phi\rangle=\sum_{n=0}^{\infty} \widehat{A}(n)|\Phi(n)\rangle\,.
 \end{align}
 
+%from https://physics.stackexchange.com/questions/296391/meaning-of-fock-space/296429
+Suppose you have a system described by a Hilbert space $H$, for example a single particle. The Hilbert space of two non-interacting particles associated to the same field $\phi$ as that described by $H$ is simply the tensor (aka direct) product
+\begin{align}
+  H^2 = H \otimes H
+\end{align}
+
+More generally, for a system of $m$ particles as above, the Hilbert space for the $m$-excitations of the field $\psi$ is
+\begin{align}
+  H^m := \underbrace{H\otimes\cdots\otimes H}_{m\text{ times}}
+\end{align}
+
+In QFT there are operators that intertwine the different $H^m$, that is, create and annihilate particles. Typical examples are the creation and annihilation operators. Instead of defining them in terms of their action on each pair of $H^n$ and $H^m$, one is allowed to give a comprehensive definition on the larger Hilbert space
+\begin{align}
+  \Gamma(H):=C\oplus H\oplus H^2\oplus\cdots\oplus H^N\oplus\cdots
+\end{align}
+known as the Fock Hilbert space of $H$.
+
+From a physical point of view, the general definition above of Fock space is immaterial. Identical particles are known to observe a definite (para)statistics that will reduce the actual Hilbert space (by symmetrisation/antisymmetrisation for the bosonic/fermionic case etc...).
+
+
+In eq.~\eqref{eq:sp} we write out the $i^{\text{th}}$ bosonic state occupied by $m_{i}$ particles. Written as a Focj state we have
+\begin{align}
+\frac{1}{\sqrt{m!}} \left(\widehat{a\,}_{i}^\dagger\right)^m |\ldots,0_i,\ldots\rangle
+=&|\ldots,m_i,\ldots\rangle\,.
+\end{align}
+The complete Fock space for a system
+\begin{align}
+  |m_1,\ldots,m_i,\ldots,m_k \rangle =\prod_{j=1}^k \frac{1}{\sqrt{m_j}!}\left( \hat{a}_j^{m_j} \right)
+|0,\ldots,0_k \rangle
+\end{align}
+
+
+As an example,  
+
+Further: %http://hitoshi.berkeley.edu/221b/QFT.pdf
+%http://www.arthurjaffe.com/Assets/pdf/IntroQFT.pdf
+
 \section{Fock space for the harmonic oscillator}
 We can now construct the Fock space following the standard procedure
 for the harmonic oscillator: we interpret $\widehat{a}_\mathbf{p}$ as destruction operators and $\widehat{a}_\mathbf{p}^\dagger$
@@ -968,8 +1013,7 @@ This state contains one quantum of the field $\widehat{\phi}$ with momenta $p^\m
     \langle \mathbf{p}|\mathbf{p}'\rangle=&\frac{1}{V} \langle0|\widehat{a}_{\mathbf{p}}\widehat{a}^\dagger_{\mathbf{p}'}|0\rangle\nonumber\\
 =&\frac{1}{V} \langle0|\widehat{a}_{\mathbf{p}}\widehat{a}^\dagger_{\mathbf{p}'}-\widehat{a}^\dagger_{\mathbf{p}'}\widehat{a}_{\mathbf{p}}|0\rangle\nonumber\\
 =&\frac{1}{V} \langle0|[\widehat{a}_{\mathbf{p}},\widehat{a}^\dagger_{\mathbf{p}'}]|0\rangle\nonumber\\
-=&\frac{(2\pi)^3}{V} \delta^{(3)}(\mathbf{p}-\mathbf{p}')\nonumber\\
-=&\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')
+=&\frac{(2\pi)^3}{V} \delta^{(3)}(\mathbf{p}-\mathbf{p}')\nonumber\\=&\left(\frac{2\pi}{L}\right)^3 \delta^{(3)}(\mathbf{p}-\mathbf{p}')
 \end{align}
 With this normalization, the limit to discrete case is straightforward:
 \begin{align}
@@ -1040,7 +1084,46 @@ The effect of the operator field, $\widehat{\phi}_\pm(x)$, on the one particle s
 \begin{align}
   \phi_\pm(x)|\mathbf{p}\rangle
 \end{align}
-will be important for the evaluation of $S$--matrix elements in Chapter~\ref{chap:fr}.
+will be important for the evaluation of $S$--matrix elements in Chapter~\ref{chap:fr}. In fact,
+as established in Sec.~\ref{sec:fock-space-real}, it is convenient to work in the discrete limit where \eqref{eq:26f}
+\begin{align}
+   \delta^3(\mathbf{0})=\frac{V}{(2\pi)^3}\,.
+\end{align}
+
+Now we can write down the action of various field operators on different one particles states. 
+Using the Fourier decomposition  of the scalar field in eq.~\eqref{eq:37f}, and taking into account that 
+$a_{\mathbf{p}}|0\rangle=0$, we have
+\begin{align}
+   \phi_+(x)|H(\mathbf{k})\rangle=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{p} }}
+\widehat{a}_{p} e^{-i p\cdot x }
+|H(\mathbf{k})\rangle\nonumber\\
+=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{p}}}
+\widehat{a}_\mathbf{p} e^{-i p\cdot x }
+\frac{1}{\sqrt{V}}\, \widehat{a}^\dagger_{\mathbf{k}}|0\rangle\nonumber\\
+  =&\int d^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{p}V}} e^{-i p\cdot x }
+\, [\widehat{a}_{\mathbf{p}},\widehat{a}^\dagger_{\mathbf{k}}]|0\rangle\,.
+\end{align}
+%check normalization!
+By using the commutation relations in eq.~\eqref{eq:32f} we have
+
+\begin{align}
+\phi_+(x)|H(\mathbf{k})\rangle  
+=&\int d^3p \frac{\delta^{(3)}(\mathbf{p}-\mathbf{k})}{\sqrt{2\omega_{p}V}}
+ e^{-i p\cdot x }|0\rangle
+\end{align}
+\begin{align}
+\phi_+(x)|H(\mathbf{k})\rangle  
+=&\frac{1}{\sqrt{2\omega_{k}V}}e^{-i k\cdot x }|0\rangle
+\end{align}
+Similarly, we have  \emph{initial one-particles states} on left and \emph{initial one-particles states} on right
+\begin{align}
+  \label{eq:99f}
+  \phi_+(x)|H(\mathbf{k})\rangle=&\frac{1}{\sqrt{2 \omega_k V}}e^{-i k\cdot x}|0\rangle,&
+ \langle H(\mathbf{k})|\phi_-(x)=&\langle0|\frac{1}{\sqrt{2 \omega_k V}}e^{i k\cdot x} \,.
+\end{align}
+
+
+
 
 Another choice of normalization is the Lorentz invariant one, to be used later. In this case, the Fock state of $N$ particles with all different momenta $p_1,p_2,\ldots,p_N$, is obtained acting on the vacuum with the creation operators,
 \begin{align}
@@ -1078,7 +1161,7 @@ Using (\ref{eq:24}) we have in a finite box
 =&2E_{\mathbf{n}}V
    \delta_{{\mathbf{n}},{\mathbf{m}}}\,.
 \end{align}
-
+\end{frame}
 \section{Propagator}
 %copy from Alvaro Notes:
 With conventions
@@ -1096,6 +1179,7 @@ where
 \end{align*}
 \section{Quantization of Fermions}
 \label{sec:quant-ferm}
+\begin{frame}[fragile,allowframebreaks]
 We consider now the Dirac equation
 \begin{align}
 \label{eq:137}
@@ -1523,6 +1607,7 @@ while the one antiparticle state is
      | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,.
 \end{align}
 
+\end{frame}
 %\left(\right)
 
 %\left(\right)
