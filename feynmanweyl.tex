@@ -143,7 +143,7 @@ the solution of Eq.~\eqref{eq:91f} with this initial condition gives the state $
 \end{align}
 and, more generally, the scalar product.
 
-Clearly the formalism which we are here developing is not appropriate for the description of bound states but it is particularly suitable for scattering processes. In a collision processes the state vector $|i\rangle$ will define an initial state, long before the scattering occurs ($t_i=-\infty$), by specifying a definite number of particles, with definite properties and far apart from each other so that they do not interact. (For example $|i\rangle$ would specify a definite number of electrons, and positrons with given momenta and spins). In the scattering process, the particles will come close together, collide (i.e interact) and fly apart gain. Eq.~\eqref{eq:91f} determines the state $|\Phi(t)\rangle$ into which the initial state
+Clearly the formalism which we are developing here is not appropriate for the description of bound states but it is particularly suitable for scattering processes. In a collision processes the state vector $|i\rangle$ will define an initial state, long before the scattering occurs ($t_i=-\infty$), by specifying a definite number of particles, with definite properties and far apart from each other so that they do not interact. (For example $|i\rangle$ would specify a definite number of electrons, and positrons with given momenta and spins). In the scattering process, the particles will come close together, collide (i.e interact) and fly apart gain. Eq.~\eqref{eq:91f} determines the state $|\Phi(t)\rangle$ into which the initial state
 \begin{align}
   |\Phi(-\infty)\rangle=|i\rangle\,,
 \end{align}
@@ -224,7 +224,7 @@ where
 and so on we obtain the $S$--matrix
 \begin{align}
   S=&\sum_{n=0}^\infty S^{(n)}\nonumber\\
-  =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{t_1} d t_2\ldots\int_{-\infty}^{t_{n-1}}d t_n\,{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\,.
+  =&1+\sum_{n=1}^\infty(-i)^n\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{t_1} d t_2\ldots\int_{-\infty}^{t_{n-1}}d t_n\,{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\,.
 \end{align}
 
 \section{Useful identities}
@@ -374,7 +374,7 @@ Evaluating the expectation values for each term in eq.~\eqref{eq:fullhppp} for t
 In this way, we have
 
 \begin{align}
-:\overline{\Psi}\Psi\phi: =&\bar{\Psi}_{-}\Psi_{-}\phi_{+}+\,.
+:\overline{\Psi}\Psi\phi: =&\bar{\Psi}_{-}\Psi_{-}\phi_{+}\,.
 \end{align}
 In general, we have the following result: The ordered product of a set of operators is such that all the creation operators are on the left and destruction operators are in the right while keeping the original order consistent with the initial and final states.
 \begin{align}
@@ -499,35 +499,35 @@ Comparing with Eq.~\eqref{eq:RMfi} we have therefore that the relativistic matri
 \end{align}
 Check the specific calculation in~\ref{Dreiner:2008tw}
 
-\subsection{Yukawa interaction for Weyl fermions}
-Left-handed fermion:
-\begin{align}
-%e_L -> e_L^- + (e_R^+)^{\dagger}
-e_L\to  \xi_{\alpha}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x_{\alpha}(\mathbf{p},s)a(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+y_{\alpha}(\mathbf{p},s)a^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x} \right] \nonumber\\
-%(e_L)^{\dagger} -> e_R^+ + (e_L^-)^{\dagger}
-\left( e_L \right)^{\dagger}\to  \xi_{\dot{\alpha}}^{\dagger}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[y_{\dot{\alpha}}^{\dagger}(\mathbf{p},s)a(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+ x_{\dot{\alpha}}^{\dagger}(\mathbf{p},s)a^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x}\right] .
-\end{align}
+% \subsection{Yukawa interaction for Weyl fermions}
+% Left-handed fermion:
+% \begin{align}
+% %e_L -> e_L^- + (e_R^+)^{\dagger}
+% e_L\to  \xi_{\alpha}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x_{\alpha}(\mathbf{p},s)a(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+y_{\alpha}(\mathbf{p},s)a^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x} \right] \nonumber\\
+% %(e_L)^{\dagger} -> e_R^+ + (e_L^-)^{\dagger}
+% \left( e_L \right)^{\dagger}\to  \xi_{\dot{\alpha}}^{\dagger}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[y_{\dot{\alpha}}^{\dagger}(\mathbf{p},s)a(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+ x_{\dot{\alpha}}^{\dagger}(\mathbf{p},s)a^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x}\right] .
+% \end{align}
 
-Right-handed fermion 
-\begin{align}
-%e_R -> e_R^- + (e_L^+)^{\dagger}
-e_R\to  \eta^{\dagger\dot{\alpha}}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[y^{\prime\dot{\alpha}\dagger}(\mathbf{p},s)b(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+ x^{\prime\dot{\alpha}\dagger}(\mathbf{p},s)b^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x} \right] .
- \nonumber\\
-%(e_R)^{\dagger} -> e_L^+ + (e_R^-)^{\dagger}
-\left( e_R \right)^{\dagger}\to  \eta^{\alpha}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x^{\prime\alpha}(\mathbf{p},s)b(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+y^{\prime\,\alpha}(\mathbf{p},s)b^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x} \right]
-\end{align}
-\begin{align}
- \xi_{+} | e^{-}_{L}\rangle =& x a a^{\dagger} |0\rangle \nonumber\\
- \eta_{+} | \left( e^{-}_{R} \right)^{\dagger}\rangle =& x' b b^{\dagger} |0\rangle \nonumber\\
- \xi_{+} |  \left( e^{-}_{L} \right)^{\dagger} \rangle =& y^{\dagger} a a^{\dagger} |0\rangle \nonumber\\
- \eta_{+} | e^{-}_{R} \rangle =& y^{\prime \dagger} b b^{\dagger} |0\rangle
-\end{align}
-After some calcultations ...
+% Right-handed fermion 
+% \begin{align}
+% %e_R -> e_R^- + (e_L^+)^{\dagger}
+% e_R\to  \eta^{\dagger\dot{\alpha}}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[y^{\prime\dot{\alpha}\dagger}(\mathbf{p},s)b(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+ x^{\prime\dot{\alpha}\dagger}(\mathbf{p},s)b^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x} \right] .
+%  \nonumber\\
+% %(e_R)^{\dagger} -> e_L^+ + (e_R^-)^{\dagger}
+% \left( e_R \right)^{\dagger}\to  \eta^{\alpha}=&\int \frac{d^3 p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x^{\prime\alpha}(\mathbf{p},s)b(\mathbf{p},s)\operatorname{e}^{-i p\cdot x}+y^{\prime\,\alpha}(\mathbf{p},s)b^{\dagger}(\mathbf{p},s)\operatorname{e}^{i p\cdot x} \right]
+% \end{align}
+% \begin{align}
+%  \xi_{+} | e^{-}_{L}\rangle =& x a a^{\dagger} |0\rangle \nonumber\\
+%  \eta_{+} | \left( e^{-}_{R} \right)^{\dagger}\rangle =& x' b b^{\dagger} |0\rangle \nonumber\\
+%  \xi_{+} |  \left( e^{-}_{L} \right)^{\dagger} \rangle =& y^{\dagger} a a^{\dagger} |0\rangle \nonumber\\
+%  \eta_{+} | e^{-}_{R} \rangle =& y^{\prime \dagger} b b^{\dagger} |0\rangle
+% \end{align}
+% After some calcultations ...
 
-From the cojugate relations, e.g $\langle e_L^- |\xi_-=\langle 0|x^{\dagger}...$, etc
-\begin{align}
-  \mathcal{M}_1 =& x^{\dagger} x^{\prime \dagger} &\mathcal{M}_2=& y y'
-\end{align}
+% From the cojugate relations, e.g $\langle e_L^- |\xi_-=\langle 0|x^{\dagger}...$, etc
+% \begin{align}
+%   \mathcal{M}_1 =& x^{\dagger} x^{\prime \dagger} &\mathcal{M}_2=& y y'
+% \end{align}
 \section{Wick Theorem}
 \label{sec:wick-theorem}
 
@@ -569,8 +569,8 @@ In this way.
 &+\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_{1}}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2) \nonumber\\
 &+\cancel{\int_{-\infty}^\infty dt_1\int_{t_1}^{t_2}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2)}\,.
 \end{align}
-The integral in $dt_1'$ is for $t_1>t_2$, with $t_2$ fixed, so that $\theta(t_2-t_1')=0$ for $t_1'>t_2$. Similarly,
-The integral in $dt_2'$ is for $t_2>t_1$, with $t_1$ fixed, so that $\theta(t_1-t_2')=0$ for $t_2'>t_1$. Therefore,
+The integral in $dt_1$ is for $t_1>t_2$, with $t_2$ fixed, so that $\theta(t_2-t_1)=0$ for $t_1>t_2$. Similarly,
+The integral in $dt_2$ is for $t_2>t_1$, with $t_1$ fixed, so that $\theta(t_1-t_2)=0$ for $t_2>t_1$. Therefore,
 \begin{align}
    \int_{-\infty}^\infty dt_1 \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_1)H_I(t_2)\}=&
 \int_{-\infty}^\infty dt_2\int_{-\infty}^{t_2}d t_1 H_I(t_2)H_I(t_1)
@@ -609,6 +609,7 @@ In order to evaluate this integrals we need to write the time ordered product in
 
 \subsection{Scalar propagator}
 
+%copy and paste from scanned pages below
 With
 \begin{align}
   \bcontraction{\,}{\phi}{(x_1)}{\phi}
@@ -640,30 +641,35 @@ T\left[\phi(x_1),\phi(x_2)\right]=\theta(t_1-t_2)\phi(x_1)\phi(x_2)+\theta(t_2-t
 
 with
 \begin{align}
-    \phi_+(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{p} }}
-\widehat{a}_{p} e^{-i p\cdot x }&
-    \phi_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{p} }}
-\widehat{a}_{p}^\dagger e^{i p\cdot x }\,,
+    \phi_+(x)=&\int \operatorname{d}^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{\boldsymbol{p}} }}
+\widehat{a}_{\boldsymbol{p}} e^{-i p\cdot x }&
+    \phi_-(x)=&\int \operatorname{d}^3p \frac{1}{(2\pi)^3\sqrt{2\omega_{\boldsymbol{p}} }}
+\widehat{a}_{\boldsymbol{p}}^\dagger e^{i p\cdot x }\,,
 \end{align}
 we have
 \begin{align}
   \langle0|T(\phi(x_1)\phi(x_2))|0\rangle
-=&\theta(t_1-t_2)\langle0|\int\frac{d^3p_1}{(2\pi)^3\sqrt{2E_{p_1}}}\hat{a}_{p_1}e^{-i p_1\cdot x_1}
-\int\frac{d^3p_2}{(2\pi)^3\sqrt{2E_{p_2}}}\hat{a}_{p_2}^\dagger e^{-i p_2\cdot x_2}|0\rangle\nonumber\\
-&+\theta(t_2-t_1)\langle0|\int\frac{d^3p_2}{(2\pi)^3\sqrt{2E_{p_2}}}\hat{a}_{p_2}e^{-i p_2\cdot x_2}
-\int\frac{d^3p_1}{(2\pi)^3\sqrt{2E_{p_1}}}\hat{a}_{p_1}^\dagger e^{-i p_1\cdot x_1}|0\rangle\nonumber\\
-=&\theta(t_1-t_2)\int\int\frac{d^3p_1d^3p_2}{(2\pi)^6\sqrt{2E_{p_1}}\sqrt{2E_{p_2}}}e^{-i p_1\cdot x_1}e^{-i p_2\cdot x_2}
-\langle0|\hat{a}_{p_1}\hat{a}_{p_2}^\dagger|0\rangle\nonumber\\
-&+\theta(t_2-t_1)\int\int\frac{d^3p_2d^3p_1}{(2\pi)^6\sqrt{2E_{p_2}}\sqrt{2E_{p_1}}}e^{-i p_2\cdot x_2}e^{-i p_1\cdot x_1}
-\langle0|\hat{a}_{p_2}\hat{a}_{p_1}^\dagger|0\rangle\nonumber\\
+=&\langle0|\int\frac{\operatorname{d}^3p_1}{(2\pi)^3\sqrt{2E_{\boldsymbol{p}_1}}}\theta(t_1-t_2)\hat{a}_{\boldsymbol{p}_1}e^{-i p_1\cdot x_1}
+\int\frac{\operatorname{d}^3p_2}{(2\pi)^3\sqrt{2E_{\boldsymbol{p}_2}}}\hat{a}_{\boldsymbol{p}_2}^\dagger e^{-i p_2\cdot x_2}|0\rangle\nonumber\\
+&+\langle0|\int\frac{\operatorname{d}^3p_2}{(2\pi)^3\sqrt{2E_{\boldsymbol{p}_2}}}\theta(t_2-t_1)\hat{a}_{\boldsymbol{p}_2}e^{-i p_2\cdot x_2}
+\int\frac{\operatorname{d}^3p_1}{(2\pi)^3\sqrt{2E_{\boldsymbol{p}_1}}}\hat{a}_{\boldsymbol{p}_1}^\dagger e^{-i p_1\cdot x_1}|0\rangle\nonumber\\
+=&\int\int\frac{\operatorname{d}^3p_1\operatorname{d}^3p_2}{(2\pi)^6\sqrt{2E_{\boldsymbol{p}_1}}\sqrt{2E_{\boldsymbol{p}_2}}}\theta(t_1-t_2)e^{-i p_1\cdot x_1}e^{-i p_2\cdot x_2}
+\langle0|\hat{a}_{\boldsymbol{p}_1}\hat{a}_{\boldsymbol{p}_2}^\dagger|0\rangle\nonumber\\
+&+\int\int\frac{\operatorname{d}^3p_2\operatorname{d}^3p_1}{(2\pi)^6\sqrt{2E_{\boldsymbol{p}_2}}\sqrt{2E_{\boldsymbol{p}_1}}}\theta(t_2-t_1)e^{-i p_2\cdot x_2}e^{-i p_1\cdot x_1}
+\langle0|\hat{a}_{\boldsymbol{p}_2}\hat{a}_{\boldsymbol{p}_1}^\dagger|0\rangle\,,
+\end{align}
+In this way
+\begin{align}
+ \langle0|T(\phi(x_1)\phi(x_2))|0\rangle
+  =\int\int\frac{\operatorname{d}^3p_1\operatorname{d}^3p_2}{(2\pi)^6\sqrt{2E_{\boldsymbol{p}_1}2E_{\boldsymbol{p}_2}}}
+&\left[\theta(t_1-t_2)e^{-i p_1\cdot x_1}e^{-i p_2\cdot x_2}
+\langle0|\hat{a}_{\boldsymbol{p}_1}\hat{a}_{\boldsymbol{p}_2}^\dagger|0\rangle \right. \nonumber\\
+&\left.  + \theta(t_2-t_1)e^{-i p_2\cdot x_2}e^{-i p_1\cdot x_1}
+\langle0|\hat{a}_{\boldsymbol{p}_2}\hat{a}_{\boldsymbol{p}_1}^\dagger|0\rangle \right]
 \end{align}
 
-\begin{align}
-=&\theta(t_1-t_2)\int\int\frac{d^3p_1d^3p_2}{(2\pi)^6\sqrt{2E_{p_1}}\sqrt{2E_{p_2}}}e^{-i p_1\cdot x_1}e^{-i p_2\cdot x_2}
-\langle0|\hat{a}_{p_1}\hat{a}_{p_2}^\dagger|0\rangle\nonumber\\
-&+\theta(t_2-t_1)\int\int\frac{d^3p_2d^3p_1}{(2\pi)^6\sqrt{2E_{p_2}}\sqrt{2E_{p_1}}}e^{-i p_2\cdot x_2}e^{-i p_1\cdot x_1}
-\langle0|\hat{a}_{p_2}\hat{a}_{p_1}^\dagger|0\rangle\nonumber\\
-\end{align}
+
+
 
 \includepdf[pages=-]{propagator.pdf}  
 
@@ -772,15 +778,15 @@ The two particle Fock state is, after proper normalization
 Therefore %recalculate
 \begin{align}
   \xi^\alpha_+(x_1)\xi^\beta_+(x_2)|e_L^-(\mathbf{p}_2)e_L^-(\mathbf{p}_1)\rangle=&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
 =&
-\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) - a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) a_s(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
 =&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
 \end{align}
@@ -846,7 +852,7 @@ Since
 we have
 \begin{align}
    \eta^{\dagger\dot{\alpha}}_+(x_1)\eta^{\dagger\dot{\beta}}_+(x_2)|e_R^-(\mathbf{p}_2)e_R^-(\mathbf{p}_1)\rangle=&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 y^{\dagger\dot{\alpha}}(s,\mathbf{k})y^{\dagger\dot{\beta}}(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \,.
 \end{align}
@@ -1145,15 +1151,15 @@ and therefore
 When the two particles are distinguishable: For example if the spin of $q_L$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
 \begin{align}
   \xi^\alpha_{e+}(x_1)\xi^\beta_{q+}(x_2)|q_L(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
 =&
-\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) - a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) a_s(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
 =&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha_e(s,\mathbf{k})x^\beta_q(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a_s(\mathbf{k})a_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
 \end{align}
@@ -1236,15 +1242,15 @@ Consider now
 Therefore, the spin of $\left(e_L\right)^{\dagger}$ is $s_2$ and $s'$ and the spin of $e_L$ is $s_{1}$ and $s$, then %recalculate
 \begin{align}
   \xi^\alpha_{+}(x_1)\xi^{\dagger\dot{\alpha}}_{+}x(x_2)|\left(e_L\right)^{\dagger}(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})y^{\dagger\dot{\alpha}}(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a_s(\mathbf{k})a_{s'}(\mathbf{k}')b_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
 =&
-\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})y^{\dagger\dot{\alpha}}(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a_s(\mathbf{k})b_{s'}(\mathbf{k}')a_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2) - a_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2) b_s(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
 =&
-\int\frac{d^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{d^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
 x^\alpha(s,\mathbf{k})y^{\dagger\dot{\alpha}}(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a_s(\mathbf{k})b_{s'}(\mathbf{k}'),a_{s_1}^\dagger(\mathbf{p}_1)b_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
 \end{align}
@@ -1870,8 +1876,11 @@ Replacing back in Eq.~\eqref{eq:102f} and then in Eq.~\eqref{eq:103f} we have
 \sigma  =\frac{G_F^2}{\pi}\frac{(s-m_\mu^2)^2}{s}
 \end{align}
 Note that $\sigma\propto s$.
-%\left(\right)
-%\left[\right]
+
+\section{Exercises}
+Display possible diagrams that correct the mass of the scalar in a theory with $\lambda \phi^4$, with and without a $\phi^3$-term.
+
+
 
 
 %%% Local Variables: 
