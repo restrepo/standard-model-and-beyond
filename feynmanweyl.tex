@@ -249,12 +249,64 @@ We use the notation
   a\cdot b=a_{\mu}b^{\mu}\,.
 \end{align}
 
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
 \label{eq:xxd}
   \sum_s x_{\alpha}(\mathbf{p},s)x^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}}\,, &    \sum_s x^{\dagger \dot{\alpha}}(\mathbf{p},s) x^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta}\nonumber\\
   % \label{eq:yyd}
-  \sum_s y_{\alpha}(\mathbf{p},s)y^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}}\,, &   \sum_s y^{\dagger \dot{\alpha}}(\mathbf{p},s) y^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta} \nonumber\\
+  \sum_s y_{\alpha}(\mathbf{p},s)y^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}}\,, &   \sum_s y^{\dagger \dot{\alpha}}(\mathbf{p},s) y^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta} 
 \end{align}
+
+\includegraphics[scale=0.45]{tmp12} 
+
+
+For the demonstration of the last identity we follow the steps in ~\cite{Dreiner:2008tw}. We start from the Euler-Lagrange equation for a left-spinor:
+
+\includegraphics[scale=0.45]{tmp01} 
+
+The proposed solution is:
+
+\includegraphics[scale=0.4]{tmp02} 
+
+From which we obtains 
+
+\begin{align}
+  \includegraphics[scale=0.45]{tmp03} 
+\end{align}
+
+These results are applicable both to spin sums and helicity sums, and hold for both massive and massless spin-1/2 fermions
+
+This results can be combined as 
+
+\includegraphics[scale=0.45]{tmp04}
+
+The relevant basis of two-component spinors $\chi_s$ are eigenstates of $(1/2)\boldsymbol{\sigma}\cdot \boldsymbol{s}$
+
+\includegraphics[scale=0.45]{tmp08}  
+
+and therefore
+
+\includegraphics[scale=0.45]{tmp09}  
+
+
+%\includegraphics[scale=0.45]{tmp05}  
+
+In the following we need an explicit form for the internal Lorentz transformations
+
+\includegraphics[scale=0.45]{tmp06} 
+
+where:
+
+\includegraphics[scale=0.45]{tmp07} 
+
+After some calculations 
+
+\includegraphics[scale=0.45]{tmp10} 
+
+\includegraphics[scale=0.45]{tmp11} 
+
+
+\end{frame}
 
 \section{Mandelstam variables}
 
@@ -293,8 +345,6 @@ In the non-relativistic limit
   t&=m_1^2+{m_1'}^2-2 p_1\cdot p_1'\approx (m_1-m_1')^2 - m_1m_1' (\mathbf{v}_1-\mathbf{v}_1')>0\,,\nonumber\\
   u&=m_1^2+{m_2'}^2-2 p_1\cdot p_2'\approx (m_1-m_2')^2 - m_1m_2'  (\mathbf{v}_1-\mathbf{v}_2')>0\,.
 \end{align}
-
-
 
 
 \section{Yukawa interaction}
@@ -463,7 +513,7 @@ Similarly, we have  \emph{initial one-particles states} on left and \emph{initia
   \xi_+(x)|e_{L}(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_p V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
   \langle e_{L}(\mathbf{p},s)|\xi_-^{\dagger}(x)=&\langle 0|\frac{1}{\sqrt{2 E_p V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x}\nonumber\\
   \eta_+(x)|\left( e_R \right)^{\dagger}(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
-  \langle \left( e_R \right)^{\dagger}(\mathbf{p},s)|\eta^{\dagger}_-(x)=&\langle 0|\frac{1}{\sqrt{2 E_{p} V}}x(s,\mathbf{p})e^{i p\cdot x} \nonumber\\
+  \langle \left( e_R \right)^{\dagger}(\mathbf{p},s)|\eta^{\dagger}_-(x)=&\langle 0|\frac{1}{\sqrt{2 E_{p} V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x} \nonumber\\
   \xi_+^{\dagger}(x)|\left( e_{L} \right)^{\dagger}(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_p V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
   \langle\left( e_{L} \right)^{\dagger}(\mathbf{p},s)|\xi_-(x)=&\langle 0| \frac{1}{\sqrt{2 E_p V}}y(s,\mathbf{p})e^{i p\cdot x}\nonumber\\
   \eta_+^{\dagger}(x)|e_R (\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
@@ -475,14 +525,14 @@ where $\omega_k$ and $E_p$ represent the energies of the scalar and the electron
 In the lowest order the only term which contributes to the matrix element is the term shown in Eq.~\eqref{eq:97f}.
 The matrix element at first order in eq.~\eqref{eq:S1}, between the initial and the final state is then
 \begin{align}
-  S_{fi}^{(1)}=-i y \int \operatorname{d}^4x &\left[ \left\langle 0, e_L(p),\left( e_R \right)^{\dagger}(p') \left|\xi_-^{\dagger}\eta_-^{\dagger} \phi_{+}  \right|H(\mathbf{k}),0,0 \right\rangle
+  S_{fi}^{(1)}=-i y \sum_{s,s'} \int \operatorname{d}^4x &\left[ \left\langle 0, e_L(p),\left( e_R \right)^{\dagger}(p') \left|\xi_-^{\dagger}\eta_-^{\dagger} \phi_{+}  \right|H(\mathbf{k}),0,0 \right\rangle
    \right. +\nonumber\\
 &\left.\left\langle 0,\left( e_L \right)^{\dagger}(p), e_R (p') \right|\xi_-\eta_- \phi_{+}  \left|H(\mathbf{k}),0,0 \right\rangle \right] 
 \end{align}
 Using Eqs.~\eqref{eq:99f}  we obtain
 \begin{align}
-  S_{fi}^{(1)}=&(-i y) \left[ x^{\dagger}_{\dot{\alpha}}{x^{\dagger}}^{\dot{\alpha}}+y^{\alpha}y_{\alpha} \right]
-\int d^4x\,e^{i(p+p'-k)\cdot x}\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\,.
+  S_{fi}^{(1)}=&(-i y)  \sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right] \nonumber\\
+&\times\int d^4x\,e^{i(p+p'-k)\cdot x}\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\,.
 \end{align}
 Since
 \begin{align}
@@ -491,13 +541,47 @@ Since
 we obtain
 \begin{align}
   S_{fi}^{(1)}=&\left[\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\right]
-(2\pi)^4\delta^4(k-p-p')(-i y)\left[ x^{\dagger}_{\dot{\alpha}}{x^{\dagger}}^{\dot{\alpha}}+y^{\alpha}y_{\alpha} \right].
+(2\pi)^4\delta^4(k-p-p') \nonumber\\
+&\times(-i y)\sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right].
 \end{align}
-Comparing with Eq.~\eqref{eq:RMfi} we have therefore that the relativistic matrix element is
+Comparing with Eq.~\eqref{eq:RMfi} we have therefore that the relativistic \emph{amplitude} is
 \begin{align}
-  i\mathcal{M}_{fi}=-i y\left[ x^{\dagger}_{\dot{\alpha}}{x^{\dagger}}^{\dot{\alpha}}+y^{\alpha}y_{\alpha} \right].
+\label{eq:calm}
+  i\mathcal{M}_{fi}=-i y\sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right].
 \end{align}
 Check the specific calculation in~\ref{Dreiner:2008tw}
+
+The equation for a two body decays, assuming that the amplitude \eqref{eq:calm} does not depends in the final momentum,  is given in eq.~\eqref{eq:152} is 
+\begin{align}
+\label{eq:154pdn}
+\frac{d\Gamma}{d\Omega}=
+&\frac{1}{64 \pi^2M^3}\left|\mathcal{M}_{fi}\right|^2\lambda^{1/2}(M^2,m_2^2,m_1^2)
+\end{align}
+where, from \eqref{eq:46}
+\begin{align}
+\label{eq:46n}
+  \lambda(a,b,c)=(a-b+c)^2-4ac\,.
+\end{align}
+
+The missing part is to calculate the square of the amplitude which includes
+\begin{align}
+&  \sum_{s,s'}x^{\alpha}(s',\boldsymbol{p}') x_{\alpha}(s,\boldsymbol{p})
+x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  \nonumber\\
+&= \sum_{s'}x^{\alpha}(s',\boldsymbol{p}')  \left[ 
+\sum_{s} x_{\alpha}(s,\boldsymbol{p})x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p})\right]
+{x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  \nonumber\\
+&= \sum_{s'}x^{\alpha}(s',\boldsymbol{p}') \left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right)
+{x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  \nonumber\\
+&=\left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right) \sum_{s'} {x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}') x^{\alpha}(s',\boldsymbol{p}')  \nonumber\\
+&=\left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right) \left( p'\cdot \overline{\sigma}_{\dot{\alpha}\alpha} \right) \nonumber\\
+&=\operatorname{Tr}\left[ \left( p\cdot \sigma \right)\left( p'\cdot \overline{\sigma} \right)  \right] \nonumber\\
+&=p_{\mu}p'_{\nu}\operatorname{Tr}\left[ \sigma^{\mu} \overline{\sigma}^{\nu}  \right] \nonumber\\ 
+&=2 g^{\mu\nu}p_{\mu}p'_{\nu} \nonumber\\
+&=2 p\cdot p'\,.
+\end{align}
+
+
+
 
 % \subsection{Yukawa interaction for Weyl fermions}
 % Left-handed fermion:
