@@ -187,11 +187,11 @@ and of course for a multiparticle state
   \left|\mathbf{p}_1,\ldots,\mathbf{p}_n\right\rangle^{\text{NR}}
 \end{align}
 We denote by $M_{fi}$, defined in eq.~(\ref{eq:41}), the scattering amplitude between the initial state with
-momenta $\mathbf{q}_1,\ldots,\mathbf{q}_n$ and the final state with momenta $\mathbf{p}_1,\ldots,\mathbf{p}_n$, with non-relativistic normalization of the states, and by $\mathcal{M}_{fi}$ the same matrix element with relativistic normalization of the states. Then from  eq.~(\ref{eq:41})
+momenta $\mathbf{p}_1,\ldots,\mathbf{p}_n$ and the final state with momenta $\mathbf{k}_1,\ldots,\mathbf{k}_n$, with non-relativistic normalization of the states, and by $\mathcal{M}_{fi}$ the same matrix element with relativistic normalization of the states. Then from  eq.~(\ref{eq:41})
 \begin{align}
-(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i \mathcal{M}_{fi}=&\langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle^{\text{R}}\nonumber\\
+(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i \mathcal{M}_{fi}=&\langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{R}}\nonumber\\
 =&\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{1/2}
-\prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{1/2}\langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle^{\text{NR}}\nonumber\\
+\prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{1/2}\langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}\nonumber\\
 =&\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{1/2}
 \prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{1/2}(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i {M}_{fi}
 \end{align}
@@ -205,7 +205,7 @@ Therefore
 the matrix element,
 \begin{align}
   \label{eq:RMfi}
-  \langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
+  \langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle
 =\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{-1/2}
 \prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{-1/2}(2\pi)^4\delta^{(4)}\left(\sum_j p_j-\sum_j k_j\right)i \mathcal{M}_{fi}\,.
 \end{align}
@@ -216,11 +216,11 @@ the matrix element,
 Consider the matrix element of $i T$ in (\ref{eq:41})
 \begin{align}
   \label{eq:45}
-  \langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_m\rangle^{\text{NR}}=(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_j k_j\right)i{M}_{fi}
+  \langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}=(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_j k_j\right)i{M}_{fi}
 \end{align}
 Assume for the moment that all particles are indistinguishable. The rules of quantum mechanics  tell us that the probability of this process is obtained by taking the square module of the amplitude 
 \begin{align}
-   \left|\langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_m\rangle^{\text{NR}}\right|^2=
+   \left|  \langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}\right|^2=
 \left|(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_j k_j\right)i {M}_{fi}\right|^2
 \end{align}
 and we are confronted with the square of the delta function. To compute it, we recall that we are working in a finite spatial volume and, from eq.~(\ref{eq:25})
@@ -234,7 +234,7 @@ Similarly we regularize also the time interval, saying that the time runs from $
 Then
 \begin{align}
 \label{eq:47}
-     \left|\langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_m\rangle^{\text{NR}}\right|^2
+     \left|  \langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}\right|^2
      =&\left|(2\pi)^4\delta^{(4)}\left(p-\sum_j k_i\right)i {M}_{fi}\right|^2\nonumber\\
 =&(2\pi)^4\delta^{(4)}\left(p-\sum_i k_j\right)V T  {M}_{fi}
 \end{align}
@@ -263,7 +263,7 @@ The decay probability in~(\ref{eq:47}) can be written as
 \begin{align}
   \label{eq:48}
 \omega=&\sum_{\mathbf{k}_1}\ldots\sum_{\mathbf{k}_m}\left|
-    \langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_m\rangle^{\text{NR}}\right|^2\nonumber\\
+           \langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}\right|^2\nonumber\\
   =&\sum_{\mathbf{k}_1}\ldots\sum_{\mathbf{k}_m}(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_j\right)V T  
   \left|{M}_{fi}\right|^2\nonumber\\
   =&\int\ldots\int \frac{Vd^3k_1}{(2\pi)^3}\ldots\frac{Vd^3k_m}{(2\pi)^3} 
@@ -272,6 +272,8 @@ The decay probability in~(\ref{eq:47}) can be written as
 (2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_j\right)V T \left|{M}_{fi}\right|^2
  \prod_{j=1}^m\frac{Vd^3k_j}{(2\pi)^3}\,.
 \end{align}
+
+
 By using eq.~(\ref{eq:44}) we have
 \begin{align}
   \omega=&\int\ldots\int 
@@ -751,7 +753,7 @@ Replacing the expression for $x_0$ in \eqref{eq:63} into Eq.~\eqref{eq:62} we ha
 for additional details)
 \begin{align}
   \label{eq:66}
-   \mathbf{p}_1'(x_0)=&\frac{\sqrt{[s-({m_1'}-{m_2'})^2][s-({m_1'}+{m_2'})^2]}}{2\sqrt{s}}\nonumber\\
+   |\mathbf{p}_1'(x_0)|=&\frac{\sqrt{[s-({m_1'}-{m_2'})^2][s-({m_1'}+{m_2'})^2]}}{2\sqrt{s}}\nonumber\\
 E_2'(x_0)=&  \frac{s-{m_1'}^2+{m_2'}^2}{2\sqrt{s}}
 \end{align}
 
@@ -871,7 +873,7 @@ or, in terms of the kinematic function defined in eq.~\eqref{eq:46}
 Consider the matrix element of $i T$ in (\ref{eq:41})
 \begin{align}
   \label{eq:45}
-  \langle\mathbf{p}|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle^{\text{NR}}=(2\pi)^4\delta^{(4)}\left(p-\sum_i k_i\right)i{M}_{fi}
+  \langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}\rangle^{\text{NR}}=(2\pi)^4\delta^{(4)}\left(p-\sum_i k_i\right)i{M}_{fi}
 \end{align}
 
 where the initial state is a single particle of momentum $p$ and mass $M$, while the final state is given by $n$ particles of momenta $k_i$ and masses $m_i$, $i=1,\ldots,n$. 
@@ -888,7 +890,7 @@ By using eq.~\eqref{eq:146} we have
 \end{align}
 Therefore the differential probability is
 \begin{align}
-  d\omega=&\int\ldots\int 
+  d\omega=&
 (2\pi)^4\delta^{(4)}\left(p-\sum_i k_j\right)
 \frac{1}{2E_{\mathbf{p}}}\left|\mathcal{M}_{fi}\right|^2
 dt\prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}
@@ -916,6 +918,7 @@ and the differential decay width in the center of mass frame
 d \Phi^{(n)} (p; k_1, k_2,\dots, k_n)
 \end{align}
 
+
 \subsection{Two body decays}
 We now consider the decay of particle of mass $M$ decaying into two particles of 4--momenta $p_1$, $p_2$ and masses $m_1$, $m_2$. In the CM frame the initial momentum satisfy
 \begin{align}
@@ -923,7 +926,7 @@ We now consider the decay of particle of mass $M$ decaying into two particles of
 \end{align}
 Therefore 
 \begin{align}
-  \label{eq:51}
+  \label{eq:51nn}
   d\Gamma=&\frac{(2\pi)^4}{2M[4(2\pi)^6]}\left|\mathcal{M}_{fi}\right|^2
 4(2\pi)^6d \Phi^{(2)} (p; p_1, p_2)\nonumber\\
 =&\frac{1}{2^3M(2\pi)^2}\left|\mathcal{M}_{fi}\right|^2
@@ -945,17 +948,159 @@ and,
 \begin{align}
    4(2\pi)^6d \Phi^{(2)} (p; p_1, p_2)=&\delta(M-E_1-E_2)\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2)\frac{d^3p_1}{E_{1}}\frac{d^3p_2}{E_{2}}
 \end{align}
-Comparing with eq.~\eqref{eq:149} we see that the two quantities are the same after the replacing $\sqrt{s}\to M$, $p_1'\to p_1$ and $p_2'\to p_2$. Therefore we have from eq.~\eqref{eq:150}
+We now proceed  with a calculation similat to the one leading to eq.~\eqref{eq:149} \footnote{ we see that the two quantities are the same after the replacing $\sqrt{s}\to M$, $p_1'\to p_1$ and $p_2'\to p_2$.} 
+\begin{align}
+\label{eq:149nn}
+  4(2\pi)^6d\Phi^{(2)}=&\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2)\delta(M-E_1-E_2)
+\frac{d^3p_1}{E_{1}}\frac{d^3p_2}{E_{2}}\nonumber\\
+ =&\delta(M-E_1-E_2)
+\frac{d^3p_1}{E_{1}}\int\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2)\frac{d^3p_2}{E_{2}}\nonumber\\
+=&\delta(M-E_1-E_2)
+\frac{d^3p_1}{E_{1}E_{2}}
+\end{align}
+
+\begin{align}
+  4(2\pi)^6d\Phi^{(2)}=\delta(M-E_1-E_2)
+  \frac{{\mathbf{p}_1}^2d|\mathbf{p}_1|d\Omega}{E_{1}E_{2}}
+\end{align}
+
+As
+\begin{align}
+  |\mathbf{p}_1|=\sqrt{{E_1}^2-{m_1}^2}
+\end{align}
+
+\begin{align}
+  \frac{d|\mathbf{p}_1|}{dE_1}=&\frac{2E_1}{2\sqrt{{E_1}^2-{m_1}^2}}\nonumber\\
+  =&\frac{E_1}{|\mathbf{p}_1|}
+\end{align}
+In this way, we can write, in general
+\begin{align}
+ |\mathbf{p}|\, d|\mathbf{p}|=E\,dE
+\end{align}
+and
+\begin{align}
+ 4(2\pi)^6 d\Phi^{(2)}&=\delta(M-E_1-E_2)
+\frac{|\mathbf{p}_1|E_1dE_1}{E_{1}E_{2}}d\Omega\nonumber\\
+  &=\delta(M-E_1-E_2)
+\frac{|\mathbf{p}_1|dE_1}{E_{2}}d\Omega
+\end{align}
+From the $\delta$--function in Eq.~\eqref{eq:56} we have that in the CM frame
+\begin{align}
+ \mathbf{p}_1-\mathbf{p}_2=0 \overset{\text{CM}}{\Rightarrow}
+    \mathbf{p}_1=-\mathbf{p}_2
+\end{align}
+
+Squaring the first expression, and taking into account that
+\begin{align}
+  {\mathbf{p}_1}= \sqrt{{E_1}^2-{m_1}^2}
+\end{align}
+we have
+\begin{align}
+  {\mathbf{p}_1}^2=&{\mathbf{p}_2}^2\nonumber\\
+  {E_1}^2-{m_1}^2=&  {E_2}^2-{m_2}^2\,,
+\end{align}
+\begin{align}
+  E_2=\sqrt{{E_1}^2-{m_1}^2+{m_2}^2}
+\end{align}
+In this way we can express $E_2$ in terms of $E_1$ in Eq.~\eqref{eq:57}.
+
+Using The energy part of $\delta$--function in Eq.~\eqref{eq:56} can be written as
+\begin{align}
+  \delta\left(M-E_1-\sqrt{{E_1}^2-{m_1}^2+{m_2}^2}\right)
+\end{align}
+As established before,  $\mathcal{M}_{fi}$ in this case in independent of $|\mathbf{p}_1|$, and the integration on $E_1$ can be done directly only for $d\Phi^{(2)}$.
+
+The integral is easily performed using the identity
+\begin{align}
+   \delta\left(f(x)\right)=\frac{\delta(x-x_0)}{|f'(x_0)|}
+\end{align}
+where
+\begin{align}
+  f(x)=M-x-\sqrt{x^2-{m_1}^2+{m_2}^2}
+\end{align}
+and the root is given by~\eqref{eq:63}
+\begin{align}
+  x_0=\frac{M^2+{m_1}^2-{m_2}^2}{2M}
+\end{align}
+
+Therefore
+\begin{align}
+  \label{eq:61nn}
+   4(2\pi)^6d\Phi^{(2)}=&d\Omega\int\frac{\delta(x-x_0)}{|f'(x_0)|}\frac{
+     |\mathbf{p}_1(x)|}{E_2(x)}dx\nonumber\\
+   =&d\Omega\frac{1}{|f'(x_0)|}\frac{
+     |\mathbf{p}_1(x_0)|}{E_2(x_0)}\,,
+\end{align}
+where 
+\begin{align}
+  \label{eq:62nn}
+  \mathbf{p}_1(x_0)=&\sqrt{x_0^2-{m_1}^2}&
+  E_2(x_0)=&\sqrt{x_0^2-{m_1}^2+{m_2}^2}
+\end{align}
+
+As (See 
+\texttt{deltaxn.nb} %noinstiki [deltax.nb](Appendix)
+for additional details)
+\begin{align}
+  f'(x)=-\frac{x}{\sqrt{x^2-{m_1}^2+{m_2}^2}}-1
+\end{align}
+we have as in~\eqref{eq:64}
+\begin{align}
+  \label{eq:64nn}
+  f'(x_0)=&\frac{-2M^2}{M^2+{m_2}^2-{m_1}^2}\,,
+\end{align}
+and
+\begin{align}
+  \label{eq:65nn}
+  \delta(f(E_1))=\delta(E_1-x_0)\left(\frac{M^2+{m_2}^2-{m_1}^2}{2M^2}\right)
+\end{align}
+
+Replacing the expression for $x_0$ in into Eq.~\eqref{eq:62nn} we have (See 
+\texttt{deltaxn.nb}  %noinstiki [deltax.nb](Appendix)
+for additional details)
+\begin{align}
+  \label{eq:66nn}
+  |\mathbf{p}_1(x_0)|=&\frac{\sqrt{[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]}}{2M}\nonumber\\
+E_2(x_0)=&  \frac{M^2-{m_1}^2+{m_2}^2}{2M}
+\end{align}
+
+Replacing Eqs.~\eqref{eq:64nn}, and \eqref{eq:66nn} in Eq.~\eqref{eq:61nn}
+we have
+\begin{align}
+  \label{eq:67nn}
+4(2\pi)^6d\Phi^{(2)}&=d\Omega\frac{1}{|f'(x_0)|}
+\frac{\sqrt{x_0^2-{m_1}^2}}{\sqrt{x_0^2-{m_1}^2+{m_2}^2}}\nonumber\\
+  &=d\Omega\left(\frac{M^2-{m_1}^2+{m_2}^2}{2M^2}\right)
+\frac{\sqrt{[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]}}{M^2-{m_1}^2+{m_2}^2}\nonumber\\
+&=d\Omega\frac{\sqrt{[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]}}{2M^2}
+\end{align}
+Defining the kinematic two particle function
+\begin{align}
+  \label{eq:46}
+  \lambda(a,b,c)\equiv(a-b+c)^2-4ac
+\end{align}
+and taking into account that
+\begin{align}
+  \left(M^2-{m_2}^2+{m_1}^2\right)^2-4M^2{m_1}^2=[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]
+\end{align}
+we have
+\begin{align}
+\label{eq:150nn}
+4(2\pi)^6d\Phi^{(2)}=d\Omega\frac{\lambda^{1/2}(M^2,{m_2}^2,{m_1}^2)}{2M^2}
+\end{align}
+
+
+Finally  we get a similar result than in eq.~\eqref{eq:150}
 \begin{align}
     4(2\pi)^6d\Phi^{(2)}=d\Omega\frac{\lambda^{1/2}(M^2,m_2^2,m_1^2)}{2M^2}
 \end{align}
-Replacing back in eq.~\eqref{eq:51}
+Replacing back in eq.~\eqref{eq:51nn}
 \begin{align}
 \label{eq:152}
 \frac{d\Gamma}{d\Omega}=&\frac{1}{32 \pi^2M}\left|\mathcal{M}_{fi}\right|^2\frac{\lambda^{1/2}(M^2,m_2^2,m_1^2)}{2M^2}\nonumber\\
 =&\frac{1}{64 \pi^2M^3}\left|\mathcal{M}_{fi}\right|^2\lambda^{1/2}(M^2,m_2^2,m_1^2) 
 \end{align}
-By using eq.~\eqref{eq:151} we can write this expression also as
+By using eq.~\eqref{eq:66nn} we can write this expression also as
 \begin{align}
 \frac{d\Gamma}{d\Omega}
 =&\frac{1}{64 \pi^2M^3}\left|\mathcal{M}_{fi}\right|^22M|\mathbf{p}_1|\nonumber\\
@@ -963,6 +1108,73 @@ By using eq.~\eqref{eq:151} we can write this expression also as
 \end{align}
 as usually written in several texts.
 
+\subsection{Example}
+Energy violation of the neutron decay in the rest frame. In absence of neutrino we can calculate the energy of the final estate electron. From \eqref{eq:66nn} we have
+
+\begin{align}
+ |\mathbf{p}_e(x_0)|= |\mathbf{p}_p(x_0)|=&\frac{\sqrt{[M^2-({m_p}-{m_e})^2][M^2-({m_p}+{m_e})^2]}}{2M}\nonumber\\
+E_e(x_0)=&  \frac{M^2-{m_p}^2+{m_e}^2}{2M}
+\end{align}
+where ${p}_p$ ($p_e$) is the proton (electron) momentum. Moreover
+
+\begin{align*}
+p_e=&\gamma m_e v\\
+p_e^2 =&\frac{ m_e^2 v^2}{1-v^2}\\
+p_e^2(1-v^2) =&m_e^2 v^2\\
+p_e^2 -p_e^2v^2 =& m_e^2 v^2
+\end{align*}
+Therefore
+\begin{align*}
+  (p_e^2+ m^2 )v^2=&p_e^2\\
+  v=&\frac{p_e}{\sqrt{p_e^2+ m_e^2 }}
+\end{align*}
+
+
+\begin{verbatim}
+import math as np
+
+M=939.57 #MeV
+mp=938.28 #MeV
+me=0.511 #MeV
+
+pe=np.sqrt( (M**2-  (mp-me)**2    )*(M**2  -   (mp+me)**2  )    )/(2.*M)
+print('p_e=',pe)
+
+Ee=(M**2-mp**2+me**2)/(2.*M)
+print('E_e=',Ee)
+
+print('m_e=',np.sqrt(Ee**2-pe**2))
+
+ve=pe/(np.sqrt(pe**2+ me**2 ) )
+print('v_e=',ve)
+\end{verbatim}
+
+\begin{verbatim}
+p_e= 1.183660978265827
+E_e= 1.2892533930415913
+m_e= 0.5110000000000403
+v_e=0.92 #c
+\end{verbatim}
+
+\begin{align}
+ |\mathbf{p}_e(x_0)|=& 1.184\ \text{MeV} \nonumber\\
+E_e(x_0)=& 1.289\ \text{MeV}
+\end{align}
+so that $m_e=0.511\ \text{MeV}$ as a crosschek. In this way, the speed of the electron is $v=0.92c$. 
+
+What is measured is the knetic energy of the electron\footnote{The non-relativistic limit is $K\approx m(1+v^2/2)-m=mv^2/2.$}
+\begin{align}
+  K_e=\frac{m_e}{1-v_e^2}-m_e=0.78\ \text{MeV}\,.
+\end{align}
+
+What is observed however is that the kinetic energy of the electron from neutron decay is a distribution with a tail at $0.78\text{MeV}$ as in Fig.~\ref{fig:nd}, taken from \url{http://hyperphysics.phy-astr.gsu.edu/hbase/Particles/proton.html}. This imply that decay must involve an additional particle: the electronic-antineutrino.
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.7]{nd}
+  \caption{Electron properties in neutron decay in the rest frame. From \url{http://hyperphysics.phy-astr.gsu.edu/hbase/Particles/proton.html}}
+  \label{fig:nd}
+\end{figure}
 
 
 \section{Backup}
