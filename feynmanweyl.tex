@@ -352,7 +352,7 @@ In the non-relativistic limit
 As a concrete example, we take a theory with a fermion field and scalar field, which interact via the Standard Model Yukawa interaction \cite{Lahiri:2005sm}. 
 \begin{align}
 \label{eq:lppp}
-  \mathcal{L}_{\text{int}}=&-y\phi\overline{\Psi}\Psi \nonumber\\
+  \mathcal{L}_{\text{int}}=&-\frac{h}{\sqrt{2}}\phi\overline{\Psi}\Psi \nonumber\\
 &=-y \phi \left[\left( \psi_R \right)^{\dagger}\psi_L+\left(\psi_L \right)^{\dagger}\psi_R  \right].
 \end{align}
 Let the quantum of the field $\phi$ be denoted by $H$, since the particle is a Higgs. The quanta of the fermionic field $f$ will be called electrons. The mass of $H$ is $M$, and the mass of the electron by $m$. Suppose $M\gt 2m$,  so that kinematically it is possible to have the $H$ particle decay into an electron-positron pair. The process is denoted by
@@ -364,17 +364,17 @@ where $k$, $p$, $p'$ are the 4--momenta of the particles.
 For the interaction Hamiltonian we have
 \begin{align}
 \label{eq:hppp}
-  \mathcal{H}_I=h:\overline{\Psi}\Psi\phi:
+  \mathcal{H}_I=\frac{h}{\sqrt{2}}:\overline{\Psi}\Psi\phi:
 \end{align}
 where the required ordered product will be explained in next section.
 The term linear in the interaction Hamiltonian in the $S$--matrix.  It is
 \begin{align}
   S^{(1)}=\nonumber\\
-=&-i h \int d^4x:\overline{\Psi}\Psi\phi:\,.
+=&-i \frac{h}{\sqrt{2}} \int d^4x:\overline{\Psi}\Psi\phi:\,.
 \end{align}
 
 \begin{align}
-  S^{(1)}=-i h \int d^4x:(\overline{\Psi}_++\overline{\Psi}_-)(\Psi_++\Psi_-)(\phi_++\phi_-):\,.
+  S^{(1)}=-i \frac{h}{\sqrt{2}} \int d^4x:(\overline{\Psi}_++\overline{\Psi}_-)(\Psi_++\Psi_-)(\phi_++\phi_-):\,.
 \end{align}
 where $+$ or $-$ denote the annihilation or creation operators respectively
 
@@ -436,7 +436,7 @@ In general, we have the following result: The ordered product of a set of operat
 The only term that contributes to the matrix element of these process is therefore
 \begin{align}
   \label{eq:97f}
-  -i h \int d^4x\overline{\Psi}_-\Psi_-\phi_+\,.
+  -i \frac{h}{\sqrt{2}} \int d^4x\overline{\Psi}_-\Psi_-\phi_+\,.
 \end{align}
 
 \begin{figure} %noinstiki
@@ -525,13 +525,13 @@ where $\omega_k$ and $E_p$ represent the energies of the scalar and the electron
 In the lowest order the only term which contributes to the matrix element is the term shown in Eq.~\eqref{eq:97f}.
 The matrix element at first order in eq.~\eqref{eq:S1}, between the initial and the final state is then
 \begin{align}
-  S_{fi}^{(1)}=-i y \sum_{s,s'} \int \operatorname{d}^4x &\left[ \left\langle 0, e_L(p),\left( e_R \right)^{\dagger}(p') \left|\xi_-^{\dagger}\eta_-^{\dagger} \phi_{+}  \right|H(\mathbf{k}),0,0 \right\rangle
+  S_{fi}^{(1)}=-i \frac{h}{\sqrt{2}} \sum_{s,s'} \int \operatorname{d}^4x &\left[ \left\langle 0, e_L(p),\left( e_R \right)^{\dagger}(p') \left|\xi_-^{\dagger}\eta_-^{\dagger} \phi_{+}  \right|H(\mathbf{k}),0,0 \right\rangle
    \right. +\nonumber\\
 &\left.\left\langle 0,\left( e_L \right)^{\dagger}(p), e_R (p') \right|\xi_-\eta_- \phi_{+}  \left|H(\mathbf{k}),0,0 \right\rangle \right] 
 \end{align}
 Using Eqs.~\eqref{eq:99f}  we obtain
 \begin{align}
-  S_{fi}^{(1)}=&(-i y)  \sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right] \nonumber\\
+  S_{fi}^{(1)}=&(-i )\frac{h}{\sqrt{2}}  \sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right] \nonumber\\
 &\times\int d^4x\,e^{i(p+p'-k)\cdot x}\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\,.
 \end{align}
 Since
@@ -542,12 +542,12 @@ we obtain
 \begin{align}
   S_{fi}^{(1)}=&\left[\frac{1}{\sqrt{2\omega_k V}}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\right]
 (2\pi)^4\delta^4(k-p-p') \nonumber\\
-&\times(-i y)\sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right].
+&\times(-i )\frac{h}{\sqrt{2}}\sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right].
 \end{align}
 Comparing with Eq.~\eqref{eq:RMfi} we have therefore that the relativistic \emph{amplitude} is
 \begin{align}
 \label{eq:calm}
-  i\mathcal{M}_{fi}=-i y\sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\alpha}(s,\boldsymbol{p})y_{\alpha}(s',\boldsymbol{p}') \right].
+  i\mathcal{M}_{fi}=-i \frac{h}{\sqrt{2}}\sum_{s,s'}\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') \right].
 \end{align}
 Check the specific calculation in~\ref{Dreiner:2008tw}
 
@@ -560,13 +560,27 @@ The equation for a two body decays, assuming that the amplitude \eqref{eq:calm} 
 where, from \eqref{eq:46}
 \begin{align}
 \label{eq:46n}
-  \lambda(a,b,c)=(a-b+c)^2-4ac\,.
+  \lambda(a,b,c)=\left[ a-(b-c) \right]^2-4ac\,.
 \end{align}
 
-The missing part is to calculate the square of the amplitude which includes
+For our specific problem, the final state masses of electron and positron is the same, however, we will obtain the results for the most general case of different masses. In this way, let $m$ ($m'=m$) the mass of $e_L$ ($e_R$).
+
+The missing part is to calculate the square of the amplitude
 \begin{align}
-&  \sum_{s,s'}x^{\alpha}(s',\boldsymbol{p}') x_{\alpha}(s,\boldsymbol{p})
-x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  \nonumber\\
+  \left| \mathcal{M} \right|^2=&\mathcal{M}^{\dagger}M= \nonumber\\
+=&\frac{h^{2}}{2}\sum_{s,s'}
+ \left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') \right]^{\dagger}
+\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') \right].
+\end{align}
+\begin{align}
+  =&\frac{h^2}{2} \left[x^{\alpha}(s',\boldsymbol{p}') x_{\alpha}(s,\boldsymbol{p})+y^{\dagger}_{\dot{\beta}}(s',\boldsymbol{p}')y^{\dagger\dot{\beta}}(s,\boldsymbol{p}) \right]
+\left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') \right],
+\end{align}
+
+ which includes (using anticommuting spinors)
+\begin{align}
+\sum_{s,s'}x^{\alpha}(s',\boldsymbol{p}') x_{\alpha}(s,\boldsymbol{p})
+x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}') 
 &= \sum_{s'}x^{\alpha}(s',\boldsymbol{p}')  \left[ 
 \sum_{s} x_{\alpha}(s,\boldsymbol{p})x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p})\right]
 {x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  \nonumber\\
@@ -578,6 +592,103 @@ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\bol
 &=p_{\mu}p'_{\nu}\operatorname{Tr}\left[ \sigma^{\mu} \overline{\sigma}^{\nu}  \right] \nonumber\\ 
 &=2 g^{\mu\nu}p_{\mu}p'_{\nu} \nonumber\\
 &=2 p\cdot p'\,.
+\end{align}
+
+\begin{align}
+\sum_{s,s'}y^{\dagger}_{\dot{\beta}}(s',\boldsymbol{p}')y^{\dagger\dot{\beta}}(s,\boldsymbol{p})y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}')
+=&  \left( p\cdot \overline{\sigma}^{\dot{\beta}\beta} \right)\sum_{s,s'}y^{\dagger}_{\dot{\beta}}(s',\boldsymbol{p}')y_{\beta}(s',\boldsymbol{p}') \nonumber\\
+=&  \left( p\cdot \overline{\sigma}^{\dot{\beta}\beta} \right) \sum_{s,s'}y_{\beta}(s',\boldsymbol{p}')y^{\dagger}_{\dot{\beta}}(s',\boldsymbol{p}') \nonumber\\
+=&  \left( p\cdot \overline{\sigma}^{\dot{\beta}\beta} \right) \left( p'\cdot \sigma_{\beta \dot{\beta}} \right) \nonumber\\
+=& 2 p \cdot p'\,.
+\end{align}
+
+\begin{align}
+  \sum_{s,s'}x^{\alpha}(s',\boldsymbol{p}') x_{\alpha}(s,\boldsymbol{p})y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') =& 
+  \sum_{s'}x^{\alpha}(s',\boldsymbol{p}') \left[ \sum_{s} x_{\alpha}(s,\boldsymbol{p})y^{\beta}(s,\boldsymbol{p}) \right]y_{\beta}(s',\boldsymbol{p}') \nonumber\\
+ =& \left(m{\delta_{\alpha}}^{\beta}  \right) \sum_{s'}  y_{\beta}(s',\boldsymbol{p}')x^{\alpha}(s',\boldsymbol{p}') \nonumber\\
+ =& \left(m{\delta_{\alpha}}^{\beta}  \right)  \left(- m'{{\delta_{\beta}}^{\alpha}}  \right) \nonumber\\
+ =& \operatorname{Tr} \left[ -m m'  \boldsymbol{1} \boldsymbol{1} \right] \nonumber\\
+ =& mm'\operatorname{Tr} \left[  \boldsymbol{1} \right] \nonumber\\
+ =& -2 mm'\,.
+\end{align}
+
+\begin{align}
+  \sum_{s,s'}y^{\dagger}_{\dot{\beta}}(s',\boldsymbol{p}')y^{\dagger\dot{\beta}}(s,\boldsymbol{p})x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  
+=&   \left( m {\delta^{\dot{\beta}}}_{\dot{\alpha}} \right) \left( -m' {\delta}^{\dot{\alpha}}_{\dot{\beta}} \right) \nonumber\\
+=& -2m m'\,.
+\end{align}
+Therefore
+\begin{align}
+   \left| \mathcal{M} \right|^2=4 \left( p\cdot p' - mm' \right)
+\end{align}
+
+From eq.~\eqref{eq:153}
+\begin{align}
+  M=&E+{E'}\nonumber\\
+|\mathbf{p}|&=|\mathbf{p}'|
+\end{align}
+Therefore
+\begin{align}
+  E{E'}=\frac{M^2-E^2-{E'}^2}{2}
+\end{align}
+\begin{align*}
+  p\cdot p'-m {m'}&=EE'-\mathbf{p}_{1}\cdot\mathbf{p}_{2}-m {m'}\\
+&=EE'+\mathbf{p}^2-m {m'}\\
+&=\frac{M^2-E^2-{E'}^2}{2}+\mathbf{p}^2-m {m'}\nonumber\\
+&=\frac12\left(M^2-m^2-\mathbf{p}^2-{m'}^2-\mathbf{p}^2\right)+\mathbf{p}^2-m {m'}\\
+&=\frac12\left(M^2-m^2-{m'}^2-2m{m'}\right)\\
+&=\frac12\left[M^2-(m-{m'})^2\right]
+\end{align*}
+%\left(\right)
+Therefore, the scattering  amplitude is
+\begin{equation}
+\sum_{s_1,s_2}|\mathcal{M}|^{2}=h^2\left[M^2-(m+{m'})^2\right]
+\end{equation}
+Since this does not depends explicitly on the final state tri-momentum, is was consistent to already make the tri-momentum integrals. Moreower, Replacing back in eq.~\eqref{eq:154pdn}
+\begin{align}
+\frac{d\Gamma}{d\Omega}=
+&\frac{h^2}{64 \pi^2M^3}\lambda^{1/2}(M^2,{m'}^2,m^2)\left[M^2-(m+{m'})^2\right]
+\end{align}
+After the integration $\int d\Omega_{\text{CM}}=4\pi$\footnote{$\int_0^{2\pi}d\phi\int_0^\pi\sin\theta d\theta=4\pi $} we have
+\begin{align}
+\Gamma=&\frac{h^2}{16 \pi M^3}\lambda^{1/2}(M^2,{m'}^2,m^2)\left[M^2-(m+{m'})^2\right]
+\end{align}
+For $m={m'}=m_f$, and using eq.~\eqref{eq:46n}
+
+
+\begin{align}
+  \lambda^{1/2}(M^2,m^2_f,m_f^2)=&
+  \left[ \left( M^2-m^2_f+m^2_f  \right)^2-4 M^2m_f^2  \right]^{1/2}\nonumber\\
+  =&\left( M^4-4 M^2m_f^2  \right)^{1/2}\nonumber\\
+  =&\left[M^4 \left( 1-4 \frac{m_f^2}{M^2} \right) \right]^{1/2}\nonumber\\
+  =&M^2 \left( 1-4 \frac{m_f^2}{M^2} \right)^{1/2}\,,
+\end{align}
+and therefore
+\begin{align}
+\Gamma(H\to f\overline{f})=&\frac{h^2}{16 \pi M^3}M^2 \left( 1-4 \frac{m_f^2}{M^2} \right)^{1/2}
+ \left[M^2-4m_f^2\right] \nonumber\\
+=&\frac{h^2}{16 \pi M^3}M^4 \left( 1-4 \frac{m_f^2}{M^2} \right)^{1/2}
+ \left[1-4 \frac{m_f^2}{M^2}\right] \nonumber\\
+=&\frac{h^2}{16 \pi}M\left(1-\frac{4m_f^2}{M^2}\right)^{3/2}
+\end{align}
+In the case of the standard model Higgs with mass $M_H=M$ decaying to fermion pair, and using $m_f=yv/\sqrt{2}$,  $v=\left( \sqrt{2}G_F \right)^{-1/2}$
+
+\begin{align}
+\Gamma(H\to f\overline{f})=&\frac{h^2v^2}{16 v^2 \pi}M_H\left(1-\frac{4m_f^2}{M_H^2}\right)^{3/2} \nonumber\\
+=&\frac{h^2v^2}{2}\frac{1}{8 v^2 \pi}M_H\left(1-\frac{4m_f^2}{M_H^2}\right)^{3/2} \nonumber\\
+=&m_f^2\frac{\sqrt{2}G_F}{8\pi}M_H\left(1-\frac{4m_f^2}{M_H^2}\right)^{3/2} \nonumber\\
+&=\frac{M_{H}m_{f}^{2}G_{F}}{4\pi\sqrt{2}}
+\left(1-4\frac{m^2_{f}}{M^2_{H}}\right)^{3/2}, 
+\end{align}
+
+In the limit $m_{f}\ll M_{H}$ this expression reduces to 
+\begin{equation}
+\Gamma(H\to
+f\overline{f})=\frac{M_{H}m_{f}^{2}G_{F}}{4\pi\sqrt{2}}. 
+\end{equation}
+For the top quark\footnote{to the top quarks is kinematically forbidden, to the bottom quark a further factor $N_c=3$ must be considered}, taking into account that $1.166 \times 10^{-5}\ \text{GeV}^{-2}$, $M_H=125\ \text{GeV}$, and $m_\tau=1.777\ \text{GeV}$,
+\begin{align}
+  \Gamma(H\to t\overline{t})=0.26\ \text{MeV}\to \tau= \frac{\hbar}{\Gamma}=2.53\times 10^{-21}\ \text{seconds}\,.
 \end{align}
 
 
@@ -804,7 +915,7 @@ with Yukawa Lagrangian
   \mathcal{L}_y=& y \left(e_R\right)^{\dagger} e_L h^0 +y \left(e_L\right)^{\dagger} e_R h^0 \nonumber\\
                =& y \eta^{\alpha} \xi_{\alpha}h^0 + y \eta^{\dagger\dot{\alpha}} \xi_{\dot{\alpha}}^{\dagger}h^0\,. 
 \end{align}
-We will make the calculation for any Standard Model fermion, but keep the notation just for the electron with mass $m_1$. To keep the calculation in general, we left open the possibility that the second vertex involves a different fermion of mass $m_2$. The Feynman diagrams for the electronic case is displayed in figure~\ref{fig:sct}.
+We will make the calculation for any Standard Model fermion, but keep the notation just for the electron with mass $m_1$. To keep the calculation in general, we left open the possibility that the second vertex involves a different fermion of mass $m_2a$. The Feynman diagrams for the electronic case is displayed in figure~\ref{fig:sct}.
 
 is
 \begin{align}

@@ -1074,16 +1074,23 @@ we have
 \frac{\sqrt{[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]}}{M^2-{m_1}^2+{m_2}^2}\nonumber\\
 &=d\Omega\frac{\sqrt{[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]}}{2M^2}
 \end{align}
-Defining the kinematic two particle function
+Since
+\begin{align}
+&\left[ M^2-\left( m_1-m_2 \right)^2 \right]\left[ M^2-\left( m_1+m_2 \right)^2 \right] \nonumber\\
+&=  M^4-M^2 \left( m_1^2+2m_1m_2+m_2^2 \right)-M^2 \left( m_1^2-2m_1m_2+m_2^2 \right) +\left[ \left( m_1-m_2 \right)\left( m_1+m_2 \right) \right]^2 \nonumber\\
+&=  M^4-M^2m_1^2-2M^2m_1m_2-M^2m_2^2-M^2m_1^2+2M^2m_1m_2-M^2m_2^2+\left( m_1^2-m_2^2 \right)^2 \nonumber\\
+&=  M^4-2M^2m_1^2-2M^2m_2^2+m_1^4-2m_1^2m_2^2+m_2^4 \nonumber\\
+&=  M^4 -2M^2m_1^2+2M^2m_2^2+m_1^4+m_2^4-2m_1^2m_2^2 -4M^2m_2^2 \nonumber\\
+&=  M^4 -2M^2 \left( m_1^2-m_2^2 \right)+\left( m_1^2-m_2^2 \right)^2 -4M^2m_2^2 \nonumber\\
+&=  \left[ M^2 -\left( m_1^2-m_2^2 \right) \right]^2-4M^2m_2^2 \nonumber\\
+&=  \left( M^2 -m_1^2+m_2^2 \right)^2-4M^2m_2^2\,.
+\end{align}
+we can define the kinematic two particle function
 \begin{align}
   \label{eq:46}
-  \lambda(a,b,c)\equiv(a-b+c)^2-4ac
+ \lambda(a,b,c)\equiv( a-b+c)^2-4ac\,.
 \end{align}
-and taking into account that
-\begin{align}
-  \left(M^2-{m_2}^2+{m_1}^2\right)^2-4M^2{m_1}^2=[M^2-({m_1}-{m_2})^2][M^2-({m_1}+{m_2})^2]
-\end{align}
-we have
+Then we have
 \begin{align}
 \label{eq:150nn}
 4(2\pi)^6d\Phi^{(2)}=d\Omega\frac{\lambda^{1/2}(M^2,{m_2}^2,{m_1}^2)}{2M^2}
