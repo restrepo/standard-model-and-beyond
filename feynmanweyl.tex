@@ -368,17 +368,16 @@ where $k$, $p$, $p'$ are the 4--momenta of the particles.
 For the interaction Hamiltonian we have
 \begin{align}
 \label{eq:hppp}
-  \mathcal{H}_I=\frac{h}{\sqrt{2}}:\overline{\Psi}\Psi\phi:
+  \mathcal{H}_I=\frac{h}{\sqrt{2}}:(\psi_R)^{\dagger}{\psi_L}\phi:
 \end{align}
 where the required ordered product will be explained in next section.
 The term linear in the interaction Hamiltonian in the $S$--matrix.  It is
 \begin{align}
-  S^{(1)}=\nonumber\\
-=&-i \frac{h}{\sqrt{2}} \int d^4x:\overline{\Psi}\Psi\phi:\,.
+  S^{(1)}=&-i \frac{h}{\sqrt{2}} \int d^4x:(\psi_R)^{\dagger}{\psi_L}\phi:\,.
 \end{align}
 
 \begin{align}
-  S^{(1)}=-i \frac{h}{\sqrt{2}} \int d^4x:(\overline{\Psi}_++\overline{\Psi}_-)(\Psi_++\Psi_-)(\phi_++\phi_-):\,.
+  S^{(1)}=-i \frac{h}{\sqrt{2}} \int d^4x:[(\psi_R)^{\dagger}_++(\psi_R)^{\dagger}_-]({\psi_L}_++{\psi_L}_-)(\phi_++\phi_-):\,.
 \end{align}
 where $+$ or $-$ denote the annihilation or creation operators respectively
 
@@ -398,37 +397,37 @@ with similar expressions for fermion or vector fields.
 Expanding the ordered product in the interaction Hamiltonian-densyty in eq.~\eqref{eq:hppp} in terms of the  $+$ and $-$ components of the several scalar and fermions fields, we have
 \begin{align}
 \label{eq:fullhppp}
- \mathcal{H}_{int}=&h:\left( \bar{\Psi}_{+}+\bar{\Psi}_{-}\right) \left( \Psi_{+}+\Psi_{-}\right) \left( \phi_{+}+\phi_{-}\right):\nonumber\\
+ \mathcal{H}_{int}=&h:\left( (\psi_R)^{\dagger}_{+}+(\psi_R)^{\dagger}_{-}\right) \left( {\psi_L}_{+}+{\psi_L}_{-}\right) \left( \phi_{+}+\phi_{-}\right):\nonumber\\
 =&h:
-\bar{\Psi}_{+}\Psi_{+}\phi_{+}+ 
-\bar{\Psi}_{+}\Psi_{+}\phi_{-}+ 
-\bar{\Psi}_{+}\Psi_{-}\phi_{+}+ 
-\bar{\Psi}_{+}\Psi_{-}\phi_{-}+ 
-\bar{\Psi}_{-}\Psi_{+}\phi_{+}\nonumber\\ 
-&+\bar{\Psi}_{-}\Psi_{+}\phi_{-}+ 
-\bar{\Psi}_{-}\Psi_{-}\phi_{+}+ 
-\bar{\Psi}_{-}\Psi_{-}\phi_{-} 
+(\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{+}+ 
+(\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{-}+ 
+(\psi_R)^{\dagger}_{+}{\psi_L}_{-}\phi_{+}+ 
+(\psi_R)^{\dagger}_{+}{\psi_L}_{-}\phi_{-}+ 
+(\psi_R)^{\dagger}_{-}{\psi_L}_{+}\phi_{+}\nonumber\\ 
+&+(\psi_R)^{\dagger}_{-}{\psi_L}_{+}\phi_{-}+ 
+(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{+}+ 
+(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{-} 
 :\,.
 \end{align}
 The ordered product refers to the different from zero terms when the interaction Hamiltonian density is operated between the initial and final states, which for the decay processes under study correspond to
 \begin{align}
-  |i\rangle=&|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle & \text{and,} && \langle f|=&\langle 1_{\bar{\Psi}},1_{\Psi},0_\phi|
+  |i\rangle=&|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle & \text{and,} && \langle f|=&\langle 1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_\phi|
 \end{align}
 Evaluating the expectation values for each term in eq.~\eqref{eq:fullhppp} for these initial and final states, we have
 \begin{align*}
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{+}\Psi_{+}\phi_{+}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle2_{\bar{\Psi}},2_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},0_{\phi}\rangle =0\\ 
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{+}\Psi_{+}\phi_{-}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle2_{\bar{\Psi}},2_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},2_{\phi}\rangle =0\\ 
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{+}\Psi_{-}\phi_{+}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle2_{\bar{\Psi}},0_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},0_{\phi}\rangle =0\\ 
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{+}\Psi_{-}\phi_{-}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle2_{\bar{\Psi}},0_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},2_{\phi}\rangle =0\\ 
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{-}\Psi_{+}\phi_{+}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle0_{\bar{\Psi}},2_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},0_{\phi}\rangle =0\\ 
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{-}\Psi_{+}\phi_{-}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle0_{\bar{\Psi}},2_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},2_{\phi}\rangle =0\\ 
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{-}\Psi_{-}\phi_{+}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle0_{\bar{\Psi}},0_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},0_{\phi}\rangle \neq 0\\
- \langle1_{\bar{\Psi}},1_{\Psi},0_{\phi}|\bar{\Psi}_{-}\Psi_{-}\phi_{-}|0_{\bar{\Psi}},0_{\Psi},1_{\phi}\rangle  &\propto  \langle0_{\bar{\Psi}},0_{\Psi},0_{\phi}|0_{\bar{\Psi}},0_{\Psi},2_{\phi}\rangle =0
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle2_{(\psi_R)^{\dagger}},2_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle =0\\ 
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{-}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle2_{(\psi_R)^{\dagger}},2_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},2_{\phi}\rangle =0\\ 
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{+}{\psi_L}_{-}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle2_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle =0\\ 
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{+}{\psi_L}_{-}\phi_{-}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle2_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},2_{\phi}\rangle =0\\ 
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{+}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},2_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle =0\\ 
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{+}\phi_{-}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},2_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},2_{\phi}\rangle =0\\ 
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle \neq 0\\
+ \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{-}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},2_{\phi}\rangle =0
 \end{align*}
 In this way, we have
 
 \begin{align}
-:\overline{\Psi}\Psi\phi: =&\bar{\Psi}_{-}\Psi_{-}\phi_{+}\,.
+:(\psi_R)^{\dagger}{\psi_L}\phi: =&(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{+}\,.
 \end{align}
 In general, we have the following result: The ordered product of a set of operators is such that all the creation operators are on the left and destruction operators are in the right while keeping the original order consistent with the initial and final states.
 \begin{align}
@@ -440,7 +439,7 @@ In general, we have the following result: The ordered product of a set of operat
 The only term that contributes to the matrix element of these process is therefore
 \begin{align}
   \label{eq:97f}
-  -i \frac{h}{\sqrt{2}} \int d^4x\overline{\Psi}_-\Psi_-\phi_+\,.
+  -i \frac{h}{\sqrt{2}} \int d^4x(\psi_R)^{\dagger}_-{\psi_L}_-\phi_+\,.
 \end{align}
 
 \begin{figure} %noinstiki
@@ -449,7 +448,7 @@ The only term that contributes to the matrix element of these process is therefo
   \caption{Feynman diagrams for $B\to e^+ e^-$} %noinstiki
   \label{fig:btoee} %noinstiki
 \end{figure} %noinstiki
-In the language of second quantization it is said that at the interaction point in Fig.~\ref{fig:btoee}, the scalar is destroyed by $\phi_+$ and one electron ($\Psi_-$) and a positron ($\bar{\Psi}_{-}$) are created.
+In the language of second quantization it is said that at the interaction point in Fig.~\ref{fig:btoee}, the scalar is destroyed by $\phi_+$ and one electron (${\psi_L}_-$) and a positron ($(\psi_R)^{\dagger}_{-}$) are created.
 
 Let us define the one--particle states as in eq.~\eqref{eq:38f}
 
