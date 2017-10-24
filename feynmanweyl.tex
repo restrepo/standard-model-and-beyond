@@ -308,6 +308,10 @@ After some calculations
 
 \end{frame}
 
+One additional identity is the one relating the two-component spinor momentum space wave function to the four-component spinor wave functions
+
+\includegraphics[scale=0.45]{uvxy}
+
 \section{Mandelstam variables}
 
 We can generalize the defintion of $s$ in eq.\eqref{eq:smv} to the full
@@ -525,9 +529,10 @@ where $\omega_k$ and $E_p$ represent the energies of the scalar and the electron
 In the lowest order the only term which contributes to the matrix element is the term shown in Eq.~\eqref{eq:97f}.
 The matrix element at first order in eq.~\eqref{eq:S1}, between the initial and the final state is then
 \begin{align}
-  S_{fi}^{(1)}=-i \frac{h}{\sqrt{2}} \sum_{s,s'} \int \operatorname{d}^4x &\left[ \left\langle 0, e_L(p),\left( e_R \right)^{\dagger}(p') \left|\xi_-^{\dagger}\eta_-^{\dagger} \phi_{+}  \right|H(\mathbf{k}),0,0 \right\rangle
+  S_{fi}^{(1)}=-i \frac{h}{\sqrt{2}} \sum_{s,s'} \int \operatorname{d}^4x &\left[ \left\langle 0, e_L(\boldsymbol{p}),\left( e_R \right)^{\dagger}(
+\boldsymbol{p}') \left|\xi_-^{\dagger}(x)\eta_-^{\dagger}(x) \phi_{+}(x)  \right|H(\mathbf{k}),0,0 \right\rangle
    \right. +\nonumber\\
-&\left.\left\langle 0,\left( e_L \right)^{\dagger}(p), e_R (p') \right|\xi_-\eta_- \phi_{+}  \left|H(\mathbf{k}),0,0 \right\rangle \right] 
+&\left.\left\langle 0,\left( e_L \right)^{\dagger}(\boldsymbol{p}), e_R (\boldsymbol{p}') \right|\xi_-(x)\eta_-(x) \phi_{+}(x)  \left|H(\mathbf{k}),0,0 \right\rangle \right] 
 \end{align}
 Using Eqs.~\eqref{eq:99f}  we obtain
 \begin{align}
@@ -617,7 +622,7 @@ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\bol
 \end{align}
 Therefore
 \begin{align}
-   \left| \mathcal{M} \right|^2=4 \left( p\cdot p' - mm' \right)
+   \left| \mathcal{M} \right|^2=4 \frac{h^{2}}{2} \left( p\cdot p' - mm' \right)
 \end{align}
 
 From eq.~\eqref{eq:153}
@@ -669,7 +674,7 @@ and therefore
  \left[1-4 \frac{m_f^2}{M^2}\right] \nonumber\\
 =&\frac{h^2}{16 \pi}M\left(1-\frac{4m_f^2}{M^2}\right)^{3/2}
 \end{align}
-In the case of the standard model Higgs with mass $M_H=M$ decaying to fermion pair, and using $m_f=yv/\sqrt{2}$,  $v=\left( \sqrt{2}G_F \right)^{-1/2}$
+In the case of the standard model Higgs with mass $M_H=M$ decaying to fermion pair, and using $m_f=hv/\sqrt{2}$,  $v=\left( \sqrt{2}G_F \right)^{-1/2}$
 
 \begin{align}
 \Gamma(H\to f\overline{f})=&\frac{h^2v^2}{16 v^2 \pi}M_H\left(1-\frac{4m_f^2}{M_H^2}\right)^{3/2} \nonumber\\
