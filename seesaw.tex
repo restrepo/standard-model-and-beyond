@@ -1,0 +1,61 @@
+\chapter{Tree level neutrino masses}
+Here we calculate the tree level neutrino mases for the Type-I seesaw.
+
+\section{One right-handed neutrino}
+We assume to have just one right-handed neutrino $N_R$ 
+\begin{align}
+  \mathcal{L}_{\nu}=y_{i} \left( L \right)^{\dagger}_i H  N_R 
+  +\tfrac{1}{2} M_R\, N_R  N_R + \text{h.c}\,.
+\end{align}
+In addition to the previous Majorana mass contribution $M_R$, after the spontaneous symmetry breaking the neutral states $\nu_{Li}$ and $N_R$  acquire a Dirac mass contribution
+\begin{align}
+  \mathcal{L}_{\nu}\supset & M_D^{i} \left( \nu_{L} \right)^{\dagger} N_R +\frac{1}{2} M_R N_R N_R +\text{h.c} \nonumber\\
+  =&  \frac{1}{2}M_D^{i} \left( \nu_{L} \right)^{\dagger} N_R
+     +\frac{1}{2}M_D^{i} N_R\left( \nu_{L} \right)^{\dagger} +\frac{1}{2} M_R N_R N_R +\text{h.c} \nonumber\\
+  =&\frac{1}{2}\begin{pmatrix} \boldsymbol{\nu}_{L1}^{\operatorname{T}}  & N_R  \end{pmatrix}
+ \begin{pmatrix}
+   \mathbf{0}_{3 \times 3} &            \boldsymbol{M}_D \\
+   \boldsymbol{M}_D^{\operatorname{T}} & M_R \\
+ \end{pmatrix}
+\begin{pmatrix} \boldsymbol{\nu}_{L}  \\
+    N_R  \end{pmatrix}+\text{h.c} \nonumber\\
+  \equiv&\frac{1}{2} \boldsymbol{\chi}^{\operatorname{T}} \boldsymbol{M_{\chi}} \boldsymbol{\chi}+\text{h.c}\,,
+\end{align}
+where the Dirac neutrino mass vector $\boldsymbol{M}_D$ has components
+\begin{align}
+  M_D^i=\frac{y^i v}{\sqrt{2}}\,,
+\end{align}
+ $\boldsymbol{\nu}_{L}^{\operatorname{T}}=
+\begin{pmatrix}\left( \nu_{L1} \right)^{\dagger}& \left(\nu_{L2} \right)^{\dagger} & \left(\nu_{L3} \right)^{\dagger}\end{pmatrix}^{\operatorname{T}}$, $\boldsymbol{\chi}^{\operatorname{T}}=\begin{pmatrix} \boldsymbol{\nu}_{L}^{\operatorname{T}}  & N_R  \end{pmatrix}$, and
+\begin{align}
+  \boldsymbol{M_{\chi}}=& \begin{pmatrix}
+   \mathbf{0}_{3 \times 3} &            \boldsymbol{M}_D \\
+   \boldsymbol{M}_D^{\operatorname{T}} & M_R \\
+ \end{pmatrix}
+\end{align}
+which has eigenvalues
+\begin{align}
+{  \boldsymbol{M_{\chi}}}_\mp=&\frac{1}{2} \left[ M_R \mp \left( M_R^2 + 4   \boldsymbol{M}_D   \boldsymbol{M}_D^{\operatorname{T}}  \right)^{1/2} \right] \nonumber\\
+  =&\frac{1}{2} M_R\left[ 1 \mp  \left( 1 + 4   \boldsymbol{M}_D M_R^{-2}   \boldsymbol{M}_D ^{\operatorname{T}}  \right)^{1/2} \right].
+\end{align}
+When $M_R^2 \gg \boldsymbol{M}_D  \boldsymbol{M}_D ^{\operatorname{T}} $
+\begin{align}
+  { \boldsymbol{M_{\chi}}}_\mp\approx &\frac{1}{2} M_R\left[ 1 \mp  \left( 1 +    \boldsymbol{M}_D M_R^{-2}   \boldsymbol{M}_D^{\operatorname{T}}  \right)
+   \right]
+\end{align}
+Therefore
+\begin{align}
+ M_{\chi^-} =&-   \boldsymbol{M}_D M_R^{-1}   \boldsymbol{M}_D^{\operatorname{T}}  \nonumber\\
+ M_{\chi^+} =&    M_R\,.
+\end{align}
+
+The effective neutrino mass matrix, $M_{\nu}$,  in this case   is just a $1\times 1$ matrix
+\begin{align}
+  M_{\nu}=- \boldsymbol{M}_D M_R^{-1} \boldsymbol{M}_D^{\operatorname{T}}\,.
+\end{align}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "beyond"
+%%% End:
