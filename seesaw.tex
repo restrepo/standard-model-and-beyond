@@ -12,12 +12,12 @@ In addition to the previous Majorana mass contribution $M_R$, after the spontane
   \mathcal{L}_{\nu}\supset & M_D^{i} \left( \nu_{Li} \right)^{\dagger} N_R +\frac{1}{2} M_R N_R N_R +\text{h.c} \nonumber\\
   =&  \frac{1}{2}M_D^{i} \left( \nu_{Li} \right)^{\dagger} N_R
      +\frac{1}{2}M_D^{i} N_R\left( \nu_{Li} \right)^{\dagger} +\frac{1}{2} M_R N_R N_R +\text{h.c} \nonumber\\
-  =&\frac{1}{2}\begin{pmatrix} \boldsymbol{\nu}_{L}^{\operatorname{T}}  & N_R  \end{pmatrix}
+  =&\frac{1}{2}\begin{pmatrix} \left( \boldsymbol{\nu}_{L} \right)^{\dagger}  & N_R  \end{pmatrix}
  \begin{pmatrix}
    \mathbf{0}_{3 \times 3} &            \boldsymbol{M}_D \\
    \boldsymbol{M}_D^{\operatorname{T}} & M_R \\
  \end{pmatrix}
-\begin{pmatrix} \boldsymbol{\nu}_{L}  \\
+\begin{pmatrix} \left( \boldsymbol{\nu}_{L} \right)^{\dagger}  \\
     N_R  \end{pmatrix}+\text{h.c} \nonumber\\
   \equiv&\frac{1}{2} \boldsymbol{\chi}^{\operatorname{T}} \boldsymbol{M_{\chi}} \boldsymbol{\chi}+\text{h.c}\,,
 \end{align}
@@ -25,8 +25,8 @@ where the Dirac neutrino mass vector $\boldsymbol{M}_D$ has components
 \begin{align}
   M_D^i=\frac{y^i v}{\sqrt{2}}\,,
 \end{align}
-$\boldsymbol{\nu}_{L}^{\operatorname{T}}=
-\begin{pmatrix}\nu_{L1} & \nu_{L2} & \nu_{L3} \end{pmatrix}^{\operatorname{T}}$, $\boldsymbol{\chi}^{\operatorname{T}}=\begin{pmatrix} \boldsymbol{\nu}_{L}  & N_R  \end{pmatrix}^{\operatorname{T}}$, and
+$\left( \boldsymbol{\nu}_{L} \right)^{\dagger\operatorname{T}}=
+\begin{pmatrix}\nu_{L1} & \nu_{L2} & \nu_{L3} \end{pmatrix}^{\operatorname{T}}$, $\boldsymbol{\chi}^{\operatorname{T}}=\begin{pmatrix} \left( \boldsymbol{\nu}_L \right)^{\dagger}  & N_R  \end{pmatrix}^{\operatorname{T}}$, and
 \begin{align}
   \boldsymbol{M_{\chi}}=& \begin{pmatrix}
    \mathbf{0}_{3 \times 3} &            \boldsymbol{M}_D \\
@@ -40,24 +40,45 @@ which has eigenvalues
 \end{align}
 When $M_R^2 \gg \boldsymbol{M}_D  \boldsymbol{M}_D ^{\operatorname{T}} $
 \begin{align}
-  { \boldsymbol{M_{\chi}}}_\mp\approx &\frac{1}{2} M_R\left[ 1 \mp  \left( 1 +    \boldsymbol{M}_D M_R^{-2}   \boldsymbol{M}_D^{\operatorname{T}}  \right)
+  { \boldsymbol{M_{\chi}}}_\mp\approx &\frac{1}{2} M_R\left[ 1 \mp  \left( 1 +   2 \boldsymbol{M}_D M_R^{-2}   \boldsymbol{M}_D^{\operatorname{T}}  \right)
    \right]
 \end{align}
 Therefore
 \begin{align}
- M_{\chi^-} \approx&-   \boldsymbol{M}_D M_R^{-1}   \boldsymbol{M}_D^{\operatorname{T}}  \nonumber\\
+ \boldsymbol{M_{\chi^-} }\approx&-   \boldsymbol{M}_D M_R^{-1}   \boldsymbol{M}_D^{\operatorname{T}}  \nonumber\\
  M_{\chi^+} \approx&    M_R\,.
 \end{align}
 
 The effective neutrino mass matrix, $M_{\nu}$,  in this case   is just a $1\times 1$ matrix
 \begin{align}
-  M_{\nu}\approx- \boldsymbol{M}_D M_R^{-1} \boldsymbol{M}_D^{\operatorname{T}}\,.
+  \boldsymbol{M}_{\nu}\approx- \boldsymbol{M}_D M_R^{-1} \boldsymbol{M}_D^{\operatorname{T}}\,.
+\end{align}
+
+It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal basis, denoted with a zero superindex below. We have
+\begin{align}
+  \boldsymbol{\nu}=&
+  \begin{pmatrix}
+    \boldsymbol{\nu}_L^0\\
+    \left( \boldsymbol{\nu}_L^0 \right)^{\dagger}\\
+  \end{pmatrix},&       \boldsymbol{m}_{\nu}=& \begin{pmatrix}
+                                      \boldsymbol{M}_{\nu} & \boldsymbol{0} \\
+                                      \boldsymbol{0} & \boldsymbol{M}_{\nu}  \\
+                                    \end{pmatrix}.
+\end{align}
+Therefore
+\begin{align}
+  \mathcal{L}_{\nu}\supset &\, \tfrac{1}{2}\,\overline{\boldsymbol{\nu}^c}\, \boldsymbol{m}_{\nu} \boldsymbol{\nu}   \nonumber\\
+=& \cdots \nonumber\\
+=&\tfrac{1}{2}\,\boldsymbol{\nu}_L^{0}\, \boldsymbol{M}_{\nu}\,   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
 \end{align}
 
 
 
 \section{One heavy Dirac fermion}
-We need to assume the existence of a heavy Dirac fermion, $F$, and one real scalar singlet $S$
+We need to assume the existence of a heavy Dirac fermion, $F=
+\begin{pmatrix}
+  F_L & F_R
+\end{pmatrix}^{\operatorname{T}}$, where $F_{LR}$ are Weyl fermions, and one real scalar singlet $S$. The most general Lagrangian is
 \begin{align}
   \mathcal{L}_{\nu}=y_i \left( L \right)^{\dagger}_i H  F_R 
   + M_F\, \left( F_L \right)^{\dagger}  F_R + h_i \left( F_L \right)^{\dagger} S \nu_{Ri}+   \text{h.c}\,.
@@ -93,12 +114,44 @@ which has eigenvalues
 \end{align}
 When $M_F^2 \gg \boldsymbol{M}_D  \boldsymbol{M}_S ^{\operatorname{T}} $ we have effective neutrino mass matrix
 \begin{align}
- M_\nu \approx&-   \boldsymbol{M}_D M_F^{-1}   \boldsymbol{M}_S^{\operatorname{T}}  \,,
+ \boldsymbol{M}_\nu \approx&-   \boldsymbol{M}_D M_F^{-1}   \boldsymbol{M}_S^{\operatorname{T}}  \,,
 \end{align}
 with $ M_{\chi^+} \approx M_F$.
 
-Note that the recipe to pass from Majorana to Dirac is just to replace $M_D^{\operatorname{T}}\to M_S^{\operatorname{T}} $ 
+Note that the recipe to pass from Majorana to Dirac is just to replace $M_D^{\operatorname{T}}\to M_S^{\operatorname{T}} $
 
+It is convinient to write the final result in terms of a Dirac fermion defined from the Weyl spinors in the diagonal basis. We have
+\begin{align}
+  \boldsymbol{\nu}=&
+  \begin{pmatrix}
+    \boldsymbol{\nu}_L^0\\
+    \boldsymbol{\nu}_R^0\\
+  \end{pmatrix},&       \boldsymbol{m}_{\nu}=& \begin{pmatrix}
+                                      \boldsymbol{M}_{\nu} & \boldsymbol{0} \\
+                                      \boldsymbol{0} & \boldsymbol{M}_{\nu}  \\
+                                    \end{pmatrix}.
+\end{align}
+Therefore
+\begin{align}
+    \mathcal{L}_{\nu}\supset &\, \overline{\boldsymbol{\nu}}\, \boldsymbol{m}_{\nu} \boldsymbol{\nu}   \nonumber\\
+=&  \begin{pmatrix}
+    \left( \boldsymbol{\nu}_L^0 \right)^{\dagger}&
+    \left(\boldsymbol{\nu}_R^0  \right)^{\dagger}
+  \end{pmatrix}
+                                    \begin{pmatrix}
+                                      \boldsymbol{0} & \boldsymbol{1} \\
+                                      \boldsymbol{1} & \boldsymbol{0} \\
+                                    \end{pmatrix}
+                                    \begin{pmatrix}
+                                      \boldsymbol{M}_{\nu} & \boldsymbol{0} \\
+                                      \boldsymbol{0} & \boldsymbol{M}_{\nu}  \\
+                                    \end{pmatrix}
+\begin{pmatrix}
+    \boldsymbol{\nu}_L^{0} \\
+    \boldsymbol{\nu}_R^{0}
+  \end{pmatrix} \nonumber\\
+=&\left( \boldsymbol{\nu}_R^0 \right)^{\dagger} \boldsymbol{M}_{\nu}   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
+\end{align}
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "beyond"
