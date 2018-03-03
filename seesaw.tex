@@ -49,27 +49,28 @@ Therefore
  M_{\chi^+} \approx&    M_R\,.
 \end{align}
 
-The effective neutrino mass matrix, $M_{\nu}$,  in this case   is just a $1\times 1$ matrix
+The effective neutrino mass matrix, $M_{\nu}$,  in this case   is just a rank one matrix
 \begin{align}
-  \boldsymbol{M}_{\nu}\approx- \boldsymbol{M}_D M_R^{-1} \boldsymbol{M}_D^{\operatorname{T}}\,.
+  \boldsymbol{\mathcal{M}}_{\nu}\approx&- \boldsymbol{M}_D M_R^{-1} \boldsymbol{M}_D^{\operatorname{T}}\nonumber\\
+  \left( {\mathcal{M}}_{\nu} \right)_{ij}\approx&- M_D^i M_R^{-1} M_D^{j}\,.
 \end{align}
 
-It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal basis, denoted with a zero superindex below. We have
+It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal by blocks basis, denoted with a zero superindex below. We have
 \begin{align}
   \boldsymbol{\nu}=&
   \begin{pmatrix}
     \boldsymbol{\nu}_L^0\\
     \left( \boldsymbol{\nu}_L^0 \right)^{\dagger}\\
   \end{pmatrix},&       \boldsymbol{m}_{\nu}=& \begin{pmatrix}
-                                      \boldsymbol{M}_{\nu} & \boldsymbol{0} \\
-                                      \boldsymbol{0} & \boldsymbol{M}_{\nu}  \\
+                                      \boldsymbol{\mathcal{M}}_{\nu} & \boldsymbol{0} \\
+                                      \boldsymbol{0} & \boldsymbol{\mathcal{M}}_{\nu}  \\
                                     \end{pmatrix}.
 \end{align}
 Therefore
 \begin{align}
   \mathcal{L}_{\nu}\supset &\, \tfrac{1}{2}\,\overline{\boldsymbol{\nu}^c}\, \boldsymbol{m}_{\nu} \boldsymbol{\nu}   \nonumber\\
 =& \cdots \nonumber\\
-=&\tfrac{1}{2}\,\boldsymbol{\nu}_L^{0}\, \boldsymbol{M}_{\nu}\,   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
+=&\tfrac{1}{2}\,\boldsymbol{\nu}_L^{0}\, \boldsymbol{\mathcal{M}}_{\nu}\,   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
 \end{align}
 
 
@@ -114,7 +115,7 @@ which has eigenvalues
 \end{align}
 When $M_F^2 \gg \boldsymbol{M}_D  \boldsymbol{M}_S ^{\operatorname{T}} $ we have effective neutrino mass matrix
 \begin{align}
- \boldsymbol{M}_\nu \approx&-   \boldsymbol{M}_D M_F^{-1}   \boldsymbol{M}_S^{\operatorname{T}}  \,,
+ \left( \mathcal{M}_{\nu} \right)_{ij} \approx&-   M_D^i M_F^{-1} M_S^j     \,,
 \end{align}
 with $ M_{\chi^+} \approx M_F$.
 
@@ -127,8 +128,8 @@ It is convinient to write the final result in terms of a Dirac fermion defined f
     \boldsymbol{\nu}_L^0\\
     \boldsymbol{\nu}_R^0\\
   \end{pmatrix},&       \boldsymbol{m}_{\nu}=& \begin{pmatrix}
-                                      \boldsymbol{M}_{\nu} & \boldsymbol{0} \\
-                                      \boldsymbol{0} & \boldsymbol{M}_{\nu}  \\
+                                      \boldsymbol{\mathcal{M}}_{\nu} & \boldsymbol{0} \\
+                                      \boldsymbol{0} & \boldsymbol{\mathcal{M}}_{\nu}  \\
                                     \end{pmatrix}.
 \end{align}
 Therefore
@@ -142,15 +143,15 @@ Therefore
                                       \boldsymbol{0} & \boldsymbol{1} \\
                                       \boldsymbol{1} & \boldsymbol{0} \\
                                     \end{pmatrix}
-                                    \begin{pmatrix}
-                                      \boldsymbol{M}_{\nu} & \boldsymbol{0} \\
-                                      \boldsymbol{0} & \boldsymbol{M}_{\nu}  \\
+  \begin{pmatrix}
+                                      \boldsymbol{\mathcal{M}}_{\nu} & \boldsymbol{0} \\
+                                      \boldsymbol{0} & \boldsymbol{\mathcal{M}}_{\nu}  \\
                                     \end{pmatrix}
 \begin{pmatrix}
     \boldsymbol{\nu}_L^{0} \\
     \boldsymbol{\nu}_R^{0}
   \end{pmatrix} \nonumber\\
-=&\left( \boldsymbol{\nu}_R^0 \right)^{\dagger} \boldsymbol{M}_{\nu}   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
+=&\left( \boldsymbol{\nu}_R^0 \right)^{\dagger} \boldsymbol{\mathcal{M}}_{\nu}\,   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
 \end{align}
 %%% Local Variables: 
 %%% mode: latex
