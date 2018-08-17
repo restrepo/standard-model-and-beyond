@@ -1,0 +1,520 @@
+\section{The model}
+ The particle content consist of two $SU(2)_L$-doublets vector-like
+ Weyl fermions of opposite hypercharges $\eta_u$, $\eta_d$; one singlet
+ Weyl fermion of zero hypercharge $N$, and three of singlet real
+ scalars of zero hypercharges. All of them odd under some $Z_2$
+ symmetry.
+
+\section{Preliminars}
+
+Weyl spinors tranform under Lorentz as shown in Table~\ref{tab:electron}, illustrated for the case of the electron.
+
+\begin{table}
+  \centering
+  \begin{tabular}{llll}
+    Name & Symbol & Lorentz & $U(1)_Q$\\\hline
+   $e_L^-$: left electron & $\xi_{\alpha}$ & ${M_{\alpha}}^{\beta}$ & $e^{i\theta}$\\
+   $\left( e_L^- \right)^{\dagger}$: right positron    & $\left( \xi_{\alpha} \right)^{\dagger}=\xi^{\dagger}_{\dot{\alpha}}$ & ${{M^{*}}_{\dot{\alpha}}}^{\dot{\beta}}$ & $e^{-i\theta}$\\
+   $e_R$: right electron   & $\left( \eta^{\alpha} \right)^{\dagger}=\eta^{\dagger\;\dot{\alpha}}$ & ${\left[ \left( M^{-1} \right)^\dagger \right]^{\dot{\alpha}}}_{\dot{\beta}}$& $e^{i\theta}$\\
+   $\left( e_R^{-} \right)^{\dagger}$: left positron &$\eta^{\alpha}$& ${\left[ \left( M^{-1} \right)^T \right]^{\alpha}}_{\beta}$ & $e^{-i\theta}$\\\hline
+  \end{tabular}
+  \caption{Electron components}
+  \label{tab:electron}
+\end{table}
+
+
+
+\section{Weyl spinors}
+Consider the following set of Weyl spinor
+\begin{align*}
+  L=&
+  \begin{pmatrix}
+  \xi_{1\alpha}\\
+  \xi_{2\alpha}
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+  \nu_L\\
+  e_L    
+  \end{pmatrix}&
+  N=&\eta_1^{\alpha} \nonumber\\
+  R_u=&
+  \begin{pmatrix}
+  \eta_2^{\dagger\dot{\alpha}}\\
+  \eta_3^{\dagger\dot{\alpha}}\\
+  \end{pmatrix}
+  =
+  \begin{pmatrix}
+   \psi_R^0\\
+   \psi_R^-    
+  \end{pmatrix}&R_d=&
+  \begin{pmatrix}
+       \xi_{3\alpha}\\
+       \xi_{4\alpha}
+  \end{pmatrix}=
+  \begin{pmatrix}
+      \psi_L^0\\
+      \psi_L^-    
+  \end{pmatrix}
+.\end{align*}
+In order to have all the new fields in term of Weyl \emph{left}-fermions, it is convinient to define (the $\dagger$ for Weyl spinors just stands for conjugate)  
+\begin{align}
+  \widetilde{R}_u= i\sigma_2 R_u^{\dagger}=&i
+  \begin{pmatrix}
+    0 &-i\\
+    i & 0\\
+  \end{pmatrix}\begin{pmatrix}
+  \eta_2^{\dagger\dot{\alpha}}\\
+  \eta_3^{\dagger\dot{\alpha}}\\
+  \end{pmatrix}^{\dagger}\nonumber\\
+=&
+  \begin{pmatrix}
+    0 &1\\
+    -1 & 0\\
+  \end{pmatrix}  \begin{pmatrix}
+ \left(   \eta_2^{\dagger\dot{\alpha}} \right)^{\dagger}\\
+  \left( \eta_3^{\dagger\dot{\alpha}} \right)^{\dagger}\\
+  \end{pmatrix}\nonumber\\
+=&\begin{pmatrix}
+  \eta_3^{\alpha}\\
+  -\eta_2^\alpha\\
+  \end{pmatrix}.
+ \end{align}
+
+
+A $SU(2)$-doublet of vector-like fermions can be written in terms
+\emph{two} $SU(2)$-doublets of Weyl left-fermions with opposite
+hypercharges, $Y=-1/2$ and $Y=+1/2$, as
+\begin{align*}
+  \widetilde{R}_{u}=&\begin{pmatrix}
+\widetilde{R}_{u}^+\\    
+\widetilde{R}_{u}^0
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \left( \psi_{R}^{-} \right)^{\dagger}\\
+    -{\psi_{R}^{0}}^{\dagger}
+  \end{pmatrix}
+&  R_{d}=&\begin{pmatrix}
+R_{d}^0\\    
+R_{d}^-
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \psi_{L}^{0}\\
+    \psi_{L}^{-}
+  \end{pmatrix}
+\end{align*}
+Following the usual convention to contract the index
+\begin{align}
+  {}_{\alpha}\ {}^{\alpha} \qquad {}^{\dot{\alpha}}\ {}_{\dot{\alpha}}\;,
+\end{align}
+the Lagrangian is
+\begin{align}
+\label{eq:lt13aib}
+  -\mathcal{L}=&M_D \epsilon_{ab}R^a_d \widetilde{R}^b_u+\tfrac{1}{2}M_N NN-h'_{i\alpha} \epsilon_{ab}\widetilde{R}_u^a L_{i}^b S'_{\alpha}-\lambda_d\, \epsilon_{ab}H^a R_d^b N-\lambda_u \epsilon_{ab}\widetilde{H}^a \widetilde{R}_u^b N+\text{h.c}\nonumber\\
+&-\left[ \mu^2 \epsilon_{ab}\widetilde{H}^{a}H^b+\tfrac{1}{2}\lambda_1 \left( \epsilon_{ab} \widetilde{H}^{a}H^b\right)^2+\tfrac{1}{2}\left({M'}_S^2\right)_{\alpha\beta} S'_{\alpha}S'_\beta
+   +\lambda^{\prime SH}_{\alpha\beta} \epsilon_{ab}\widetilde{H}^{a}H^bS'_{\alpha}S'_{\beta}+\lambda^{\prime S}_{\alpha\beta\gamma\delta}S'_{\alpha}S'_{\beta}S'_{\gamma}S'_{\delta}  \right]
+\end{align}
+where
+\begin{align*}
+  {H}=&  \begin{pmatrix}
+    H^+ \\ H^0
+  \end{pmatrix}&
+  \widetilde{H}=&  \begin{pmatrix}
+    {H^0}^{*} \\ -H^-
+  \end{pmatrix}
+\end{align*}
+Note that a term like $\epsilon_{ab}\widetilde{R}_d^a L^b$ have the wrong Lorentz sctructure $\xi_{\dot{\alpha}}^{\dagger}\xi_{\alpha}$. 
+
+For the $Z_2$--odd scalars we have in the basis
+$
+  \mathbf{S}=
+  \begin{pmatrix}
+    S_1&
+    S_2&
+    \cdots&
+    S_{\alpha}
+  \end{pmatrix}^{\operatorname{T}}
+$, where now $\alpha,\beta$ is the number of real scalar fields
+\begin{align*}
+    \mathcal{L}_S=&\frac{1}{2}{\mathbf{S}'}^{\operatorname{T}}{\mathbf{M}'}_S^2\mathbf{S}'
++ \epsilon_{ab}\widetilde{H}^a H^b {\mathbf{S}'}^{\operatorname{T}}\boldsymbol{\lambda}^{\prime SH}\mathbf{S}' 
++ S'_{\gamma}\left( {\mathbf{S}'}^{\operatorname{T}}\boldsymbol{\lambda}^{\prime S}\mathbf{S}' \right)_{\gamma\delta} S'_{\delta} \nonumber\\
+=&\frac{1}{2}{\mathbf{S}'}^{\operatorname{T}}{\mathbf{M}'}_S^2\mathbf{S}'
++ \epsilon_{ab}\widetilde{H}^a H^b {\mathbf{S}'}^{\operatorname{T}}\boldsymbol{\lambda}^{\prime SH}\mathbf{S}' 
++ \mathbf{S'}^{\operatorname{T}}\left( {\mathbf{S}'}^{\operatorname{T}}\boldsymbol{\lambda}^{\prime S}\mathbf{S}' \right)\mathbf{S'} \,,
+\end{align*}
+
+
+After the spontaneous symmetry breaking
+\begin{align}
+  \mathcal{L}_S\supset&\frac{1}{2}{\mathbf{S}'}^{\operatorname{T}}{\boldsymbol{\mathcal{M}}'}_S^2\mathbf{S}' \nonumber\\
+=&\frac{1}{2}{\mathbf{S}}^{\operatorname{T}}\left( \mathbf{R}^T{\boldsymbol{\mathcal{M}}'}_S^2\mathbf{R} \right)\mathbf{S} \nonumber\\
+=&\frac{1}{2}\sum_{\alpha}m^2_{S_{\alpha}}S_{\alpha}^2\,,
+\end{align}
+where
+\begin{align}
+  \left( {\mathcal{M}'}_S ^2\right)_{\alpha\beta}
+=&\left( {M'}_S^2 \right)_{\alpha\beta}+\lambda^{\prime SH}_{\alpha\beta}v^2\,.
+\end{align}
+is diagonilized by the ortogonal matriz $\mathbf{R}$. In what follows, we assume a basis in which $\boldsymbol{\mathcal{M}}_S^2$ is already diagonal with
+\begin{align*}
+ \mathbf{M}_S^2=&\mathbf{R}^{\operatorname{T}} {\mathbf{M}'}_S^2\mathbf{R} \nonumber\\
+\boldsymbol{\lambda}^{SH}=&  \mathbf{R}^{\operatorname{T}}\boldsymbol{\lambda}^{\prime SH} \mathbf{R}
+\end{align*}
+and  the conditions
+\begin{align*}
+  \left( {M}_S^2 \right)_{\alpha\beta}+\lambda^{SH}_{\alpha\beta}v^2=0\qquad \text{for} \qquad \alpha\ne\beta\,.
+\end{align*}
+the corresponding Lagrangian is
+\begin{align}
+\label{eq:lt13a}
+  -\mathcal{L}=&M_D \epsilon_{ab}R^a_d \widetilde{R}^b_u+\tfrac{1}{2}M_N NN-h_{i\alpha} \epsilon_{ab}\widetilde{R}_u^a L_{i}^b S_{\alpha}-\lambda_d\, \epsilon_{ab}H^a R_d^b N-\lambda_u \epsilon_{ab}\widetilde{H}^a \widetilde{R}_u^b N+\text{h.c}\nonumber\\
+&-\left[ \mu^2 \epsilon_{ab}\widetilde{H}^{a}H^b+\tfrac{1}{2}\lambda_1 \left( \epsilon_{ab} \widetilde{H}^{a}H^b\right)^2+\tfrac{1}{2}\left({M}_S^2\right)_{\alpha\beta} S_{\alpha}S_\beta
+   +\lambda^{SH}_{\alpha\beta} \epsilon_{ab}\widetilde{H}^{a}H^bS_{\alpha}S_{\beta}+\lambda^{S}_{\alpha\beta\gamma\delta}S_{\alpha}S_{\beta}S_{\gamma}S_{\delta}  \right]
+\end{align}
+
+
+\section{Dirac and Majorana Fermions}
+
+A fermion is defined to be vector-like if its left- and right-handed chiralities belongs to the same representation of
+$SU(3)_C\times SU(2)_L\times U(1)_Y$. For a vector like singlet see \cite{Aoki:2011yk}. We will follow the notation of \cite{Yoshikawa:1995et}.   We now define the corresponding Dirac fermions denoted with a hat. In terms of its Weyl fermions components (without specify the undotted and dotted indices), we have
+\begin{align*}
+  \widehat{\psi}^-=&
+  \begin{pmatrix}
+   \psi_{L}^{-}\\
+   \psi_{R}^{-}\\
+  \end{pmatrix}
+&
+    \widehat{\psi}^0=&
+  \begin{pmatrix}
+    \psi_{L}^0\\
+    \psi_{R}^0
+  \end{pmatrix}
+\end{align*}
+moreover
+\begin{align*}
+  \widehat{\psi}_{(L,R)}^-=&P_{L,R}\widehat{\psi}^-&
+  \widehat{\psi}_{(L,R)}^0=&P_{L,R}\widehat{\psi}^0
+\end{align*}
+and Dirac $SU(2)$ doublets
+\begin{align*}
+  \widehat{\Psi}_{(L,R)}=&P_{L,R}\widehat{\Psi}=P_{L,R}
+  \begin{pmatrix}
+    \widehat{\psi}^0\\
+        \widehat{\psi}^-\\
+  \end{pmatrix}=
+  \begin{pmatrix}
+    \widehat{\psi}^0_{(L,R)}\\
+        \widehat{\psi}^-_{(L,R)}\\
+  \end{pmatrix},&
+  \overline{\widehat{\Psi}_{(L,R)}}=&  \begin{pmatrix}
+    \overline{\widehat{\psi}^0}&
+        \overline{\widehat{\psi}^-}\\
+  \end{pmatrix}P_{R,L}=  \begin{pmatrix}
+    \overline{\widehat{\psi}^0_{(L,R)}}&
+        \overline{\widehat{\psi}^-_{(L,R)}}\\
+  \end{pmatrix}
+\end{align*}
+
+Following the notation of \cite{Martin:2012us}
+\begin{align*}
+  \overline{\widehat{\psi}^-}=\left( {\widehat{\psi}^-} \right)^{\dagger}
+  \begin{pmatrix}
+    0 & 1\\
+   1 & 0
+  \end{pmatrix}=&
+    \begin{pmatrix}
+      \left( \psi_{R}^- \right)^{\dagger} & \left( \psi_{L}^- \right)^{\dagger}
+    \end{pmatrix}&
+  \overline{\widehat{\psi}^0}=\left( \widehat{\psi}^0 \right)^{\dagger}  \begin{pmatrix}
+    0 & 1\\
+   1 & 0
+  \end{pmatrix}=&\begin{pmatrix}
+{\psi_{R}^0 }^{\dagger} & {\psi_{L}^0 }^{\dagger} 
+\end{pmatrix}
+\end{align*}
+We can now check the $SU(2)$ mass term
+\begin{align}
+\label{eq:mdpsipsi}
+  \left( \overline{\widehat{\Psi}}_{L}\widehat{\Psi}_{R}+\overline{\widehat{\Psi}}_{R}\widehat{\Psi}_{L} \right)=&  \overline{\widehat{\Psi}}\widehat{\Psi} \nonumber\\
+=&   \begin{pmatrix}
+    \overline{\widehat{\psi}^0} &  \overline{\widehat{\psi}^-} 
+  \end{pmatrix}
+  \begin{pmatrix}
+    \widehat{\psi}^0 \\
+    \widehat{\psi}^-
+  \end{pmatrix}\nonumber\\
+= & \left(     \overline{\widehat{\psi}^0}\widehat{\psi}^0 +
+    \overline{\widehat{\psi}^-} \widehat{\psi}^-
+ \right) \nonumber\\
+= & \left[
+\begin{pmatrix}
+{\psi_{R}^0 }^{\dagger} & {\psi_{L}^0 }^{\dagger} 
+\end{pmatrix} \begin{pmatrix}
+    \psi_{L}^0\\
+    \psi_{R}^0
+  \end{pmatrix}
++\begin{pmatrix}
+      \left(\psi_{R}^{-}\right)^\dagger & \left(\psi_{L}^{-}\right)^\dagger
+    \end{pmatrix} \begin{pmatrix}
+   \psi_{L}^{-}\\
+   \psi_{R}^{-}\\
+  \end{pmatrix}
+ \right] \nonumber\\
+= & \left(
+    {\psi_{R}^0 }^{\dagger}\psi_{L}^0+
+   {\psi_{L}^0 }^{\dagger} \psi_{R}^0+
+   \left(\psi_{R}^{-}\right)^\dagger\psi_{L}^{-}+
+   \left(\psi_{L}^{-}\right)^\dagger\psi_{R}^{-}
+ \right) \nonumber\\
+= & \left(
+    {\psi_{R}^0 }^{\dagger}\psi_{L}^0+
+    \left(\psi_{R}^{-}\right)^\dagger\psi_{L}^{-}+
+ \text{h.c}
+ \right)\,.
+\end{align}
+
+
+
+Then
+\begin{align}
+\overline{\widehat{\Psi}}\widehat{\Psi} 
+=& \left(\widetilde{R}_u^0 R_{d}^0-\widetilde{R}_u^{+}R_d^- +\text{h.c}  \right)  \nonumber\\
+=& \left(R_d^1 \widetilde{R}_u^2-R_d^2 \widetilde{R}_u^1 +\text{h.c} \right) \nonumber\\
+=& \left(\epsilon_2R_d^1 \widetilde{R}_u^2+ \epsilon_{21}R_d^2 \widetilde{R}_u^1 +\text{h.c} \right) \nonumber\\
+=& \left(\epsilon_{ab}R_d^a \widetilde{R}_u^b +\text{h.c} \right)\,.
+\end{align}
+
+Since
+\begin{align*}
+  \widehat{e}=&
+  \begin{pmatrix}
+    e_L\\
+    e_R
+  \end{pmatrix}&
+\widehat{\nu}=&
+\begin{pmatrix}
+\nu_L\\
+0\\  
+\end{pmatrix}\nonumber\\
+\widehat{e}_L= P_L\widehat{e}=&
+  \begin{pmatrix}
+    e_L\\
+    0
+  \end{pmatrix}&
+\widehat{\nu}_L=P_L\widehat{\nu}=&
+\begin{pmatrix}
+\nu_L\\
+0\\  
+\end{pmatrix}
+\end{align*}
+\begin{align*}
+    \overline{\widehat{e}}=&
+  \begin{pmatrix}
+  e_R^{\dagger} &   e_L^{\dagger} \\
+  \end{pmatrix}&
+    \overline{\widehat{\nu}}=&
+  \begin{pmatrix}
+  0 &   \nu_L^{\dagger} \\
+  \end{pmatrix}&
+\end{align*}
+\begin{align*}
+  \widehat{L}=
+  \begin{pmatrix}
+  \widehat{\nu}_L\\
+  \widehat{e}_L    
+  \end{pmatrix}
+\end{align*}
+we have
+\begin{align*}
+  \epsilon_{ab}\widetilde{R}_{u}^a L^b S +\text{h.c}=
+&\left[\widetilde{R}_u^1 L^2- \widetilde{R}_u^2 L^1 \right]S+\text{h.c}\nonumber\\
+=&\left[ \widetilde{R}_u^+ e_L -\widetilde{R}_u^0 \nu_L\right]S+\text{h.c}\nonumber\\
+=&-\left[ {\psi_{R}^0}^{\dagger}\nu_L  
++\left(\psi_{R}^-\right)^{\dagger} e_L    
+ \right]S+\text{h.c} \nonumber\\
+=&-\left[   \begin{pmatrix}
+  {\psi_{R}^0}^{\dagger} &0\\
+\end{pmatrix}
+\begin{pmatrix}
+\nu_L\\
+0
+\end{pmatrix}-  \begin{pmatrix}
+   \left( \psi_{R}^- \right)^{\dagger} & 0
+  \end{pmatrix}
+  \begin{pmatrix}
+    e_L\\ 
+    0
+  \end{pmatrix}
+ \right]S +\text{h.c}\nonumber\\
+=&-\overline{\widehat{\psi}^0}P_L\; P_L\widehat{\nu}S 
++\overline{\widehat{\psi}^-}P_L\;P_L\widehat{e}S
++\text{h.c}\nonumber\\
+=&-\overline{\widehat{\psi}_{R}^0}\widehat{\nu}_LS
++\overline{\widehat{\psi}_{R}^-}\widehat{e}_LS
++\text{h.c}\nonumber\\
+=&-\overline{\widehat{\Psi}_{R}} {\widehat{L}} S+\text{h.c}\,.
+\end{align*}
+If we define
+\begin{align}
+\label{eq:NM}
+\widehat{N}=&
+\begin{pmatrix}
+  N & N^{\dagger}
+\end{pmatrix}&
+\overline{\widehat{N}}=
+\begin{pmatrix}
+N & N^{\dagger}   
+\end{pmatrix}
+\end{align}
+
+\begin{align}
+\label{eq:HRdN}
+\epsilon_{ab}H^a R_d^b N+\text{h.c}=&H^1 R_d^2 N-H^2 R_d^1 N+\text{h.c}\nonumber\\
+ =&H^+ R_d^- N-H^0 R_d^0 N+\text{h.c}\nonumber\\
+=&-N H^0 \psi_L^0  +N H^+ \psi_{L}^- +\text{h.c}\nonumber\\
+=&- \begin{pmatrix}
+   N & 0
+ \end{pmatrix}
+H^0 
+\begin{pmatrix}
+  \psi_L^0\\
+   0
+\end{pmatrix}
++
+\begin{pmatrix}
+N & 0  
+\end{pmatrix}
+ H^+ 
+  \begin{pmatrix}
+\psi_{L}^-\\
+   0    
+  \end{pmatrix}
++\text{h.c}\nonumber\\
+=&-\overline{\widehat{N}}P_L H^0 P_L\widehat{\psi}^0+\overline{\widehat{N}}P_L H^+P_L \widehat{\psi}^-+\text{h.c} \nonumber\\
+=&-\overline{\widehat{N}}H^0 P_L\widehat{\psi}^0+\overline{\widehat{N}}H^+P_L \widehat{\psi}^-+\text{h.c} \nonumber\\
+=&-\overline{\widehat{N}} H^0 \widehat{\psi}^0_L+\overline{\widehat{N}} H^+\widehat{\psi}^-_L +\text{h.c}\nonumber\\
+=&-\overline{\widehat{N}}
+\begin{pmatrix}
+  H^0 & -H^{+}
+\end{pmatrix}
+\begin{pmatrix}
+\widehat{\psi}_L^0\\
+\widehat{\psi}_L^-  
+\end{pmatrix}+\text{h.c}\nonumber\\
+=&-\overline{\widehat{N}}\widetilde{H}^{\dagger} \widehat{\Psi}_L-\overline{\widehat{\Psi}_L}\widetilde{H} \widehat{N}\,.
+\end{align}
+
+Finally
+\begin{align}
+\label{eq:HRuN}
+  \epsilon_{ab}\widetilde{H}^a \widetilde{R}_u^b N+\text{h.c}=&\widetilde{H}^1 \widetilde{R}_u^2 N-\widetilde{H}^2 \widetilde{R}_u^1 N +\text{h.c}\nonumber\\
+=&{H^0}^* \widetilde{R}_u^0 N+{H}^-\widetilde{R}_u^+ N +\text{h.c}\nonumber\\
+=&-{H^0}^* {\psi_R^0}^{\dagger} N+{H}^- \left( \psi_R^- \right)^{\dagger} N +\text{h.c}\nonumber\\
+  =&-\begin{pmatrix}
+{\psi_R^0}^{\dagger} & 0    
+  \end{pmatrix}{H^0}^*
+  \begin{pmatrix}
+N\\
+0    
+  \end{pmatrix}
+ +\begin{pmatrix}
+\left( \psi_R^- \right)^{\dagger} & 0\\   
+ \end{pmatrix}{H}^-
+ \begin{pmatrix}
+   N\\
+   0
+ \end{pmatrix}
+ +\text{h.c}\nonumber\\
+  =&-\overline{\widehat{\psi}^0}P_L{H^0}^* P_L \widehat{N} +
+ \overline{\widehat{\psi}^-}P_L{H}^-P_L\widehat{N} +\text{h.c}\nonumber\\
+  =&-\overline{\widehat{\psi}^0}P_L{H^0}^* \widehat{N} +
+ \overline{\widehat{\psi}^-}P_L{H}^-\widehat{N} +\text{h.c}\nonumber\\
+  =&-\overline{\widehat{\psi}^0_R}{H^0}^* \widehat{N} +
+ \overline{\widehat{\psi}^-_{R}}{H}^-\widehat{N} +\text{h.c}\nonumber\\
+  =&  \begin{pmatrix}
+ \overline{\widehat{\psi}^0_R} &  \overline{\widehat{\psi}^-_{R}}
+  \end{pmatrix}
+  \begin{pmatrix}
+{H^0}^*\\
+-{H}^-    
+  \end{pmatrix}
+\widehat{N} +\text{h.c}\nonumber\\
+=&-\overline{\widehat{\Psi}_{R}}\widetilde{H}\widehat{N} -\overline{\widehat{N}}\widetilde{H}^{\dagger}\widehat{\Psi}_R\,.
+\end{align}
+
+
+The Full Lagrangian for Dirac and Majorana Fermions is 
+\begin{align}
+\label{eq:lfull}
+  -\mathcal{L}=&M_D \overline{\widehat{\Psi}}\widehat{\Psi}+\tfrac{1}{2}M_N\overline{\widehat{N}}\widehat{N}
++h_{i\alpha} \overline{\widehat{\Psi}_{R}} \widehat{L}_i S_{\alpha}
++\lambda_d\overline{\widehat{\Psi}_L}\widetilde{H} \widehat{N}
++\lambda_u\overline{\widehat{\Psi}_{R}}\widetilde{H}\widehat{N}+\text{h.c}\nonumber\\
+&-\left[ \mu^2 H^{\dagger}H+\lambda_1 \left(H^{\dagger}H \right)^2+\tfrac{1}{2}\left(M_S^2\right)_{\alpha\beta} S_{\alpha}S_\beta
+   +\lambda^{SH}_{\alpha\beta} H^{\dagger}H S_{\alpha}S_{\beta}+\lambda^{S}_{\alpha\beta\gamma\delta}S_{\alpha}S_{\beta}S_{\gamma}S_{\delta} \right]
+\end{align}
+
+\section{Alternative notation}
+In the Lagrangian implemented in Feynrules the right-handed neutrino have implicitly the proyectors:
+\begin{align}
+    \mathcal{L}_A=&\left[ h_{i\alpha}\overline{\widehat{L}}\widehat{\Psi} S'_{\alpha}+\lambda_d \overline{\widehat{\Psi}^c}\left( i\sigma_2 \right) H {N}^{c}
++\lambda_u \overline{\widehat{\Psi}^c}\left( i\sigma_2 \right) H {N}+\text{h.c} \right]
++M_D\overline{\widehat{\Psi}}\widehat{\Psi}+\tfrac{1}{2}M_N\overline{\widehat{N}}\widehat{N}
+\end{align}
+By writing explicitly the projectors we have
+\begin{align*}
+    \mathcal{L}_A=&\left[ h_{i\alpha}\overline{\widehat{L}}\widehat{\Psi} S'_{\alpha}+\lambda_d \overline{\widehat{\Psi}^c}\left( i\sigma_2 \right) H P_L\widehat{N}^{c}
++\lambda_u \overline{\widehat{\Psi}^c}\left( i\sigma_2 \right) H P_R\widehat{N}+\text{h.c} \right]
++M_D\overline{\widehat{\Psi}}\widehat{\Psi}+\tfrac{1}{2}M_N\overline{\widehat{N}}\widehat{N}\
+\end{align*}
+We now focus in couplings with the Higgs. 
+\begin{align}
+ \mathcal{L}_{H} \equiv& \lambda_d \overline{\widehat{\Psi}^c}\left( -i\sigma_2^{*}  H^{*}\right)^{*} (\widehat{N}^{c})_L
++\lambda_u \overline{\widehat{\Psi}^c}\left( -i\sigma_2^{*}  H^{*}\right)^{*} \widehat{N}_R+\text{h.c} \nonumber\\
+=&\lambda_d \overline{\widehat{\Psi}^c}\left( i\sigma_2  H^{*}\right)^{*} (\widehat{N}_R)^c
++\lambda_u \overline{\widehat{\Psi}^c}\left( i\sigma_2  H^{*}\right)^{*} \widehat{N}_R+\text{h.c}\nonumber\\
+  =&\lambda_d \overline{\widehat{\Psi}^c} \widetilde{H}^{*} (\widehat{N}_R)^c
++\lambda_u \overline{\widehat{\Psi}^c}\widetilde{H}^{*}  \widehat{N}_R+\text{h.c}\,.
+\end{align}
+Taking into account that
+\begin{align*}
+  \overline{\widehat{\Psi}^c} \widetilde{H}^{*} (\widehat{N}_{R})^{c}=&\overline{\left[ (\widehat{N}_R)^c \right]^c} \left( \widetilde{H}^{*}  \right)^{\operatorname{T}}\left( \widehat{\Psi}^c \right)^c \nonumber\\
+  \overline{\widehat{\Psi}^c} \widetilde{H}^{*} (\widehat{N}_{R})=&\overline{ (\widehat{N}_R)^c } \left( \widetilde{H}^{*}  \right)^{\operatorname{T}}\left( \widehat{\Psi}^c \right)^c \,,
+\end{align*}
+we have
+\begin{align*}
+    \mathcal{L}_H=&\lambda_d \overline{\widehat{N}_R} \left( \widetilde{H}^{*} \right)^{\operatorname{T}} \widehat{\Psi}
++\lambda_u \overline{(\widehat{N}_R)^c}\left( \widetilde{H}^{*} \right)^{\operatorname{T}}  \widehat{\Psi}+\text{h.c}\nonumber\\
+  =&\lambda_d \overline{\widehat{N}_R} \widetilde{H}^{\dagger} \widehat{\Psi}
++\lambda_u \overline{(\widehat{N}_R)^c}\widetilde{H}^{\dagger} \widehat{\Psi}+\text{h.c}  \nonumber\\
+  =&\lambda_d \overline{ \widehat{\Psi}} \widetilde{H}\widehat{N}_R
++\lambda_u \overline{\widehat{\Psi}} \widetilde{H} (\widehat{N}_R)^{c}+\text{h.c}  \nonumber\\
+  =&\lambda_d \overline{ \widehat{\Psi}} \widetilde{H}\widehat{N}_R
++\lambda_u \overline{\widehat{\Psi}} \widetilde{H} (\widehat{N}^c)_L+\text{h.c}  \nonumber\\
+  =&\lambda_d \overline{ \widehat{\Psi}} \widetilde{H}P_R\widehat{N}
++\lambda_u \overline{\widehat{\Psi}} \widetilde{H} P_L\widehat{N}^{c}+\text{h.c} \nonumber\\
+  =&\lambda_d \overline{ \widehat{\Psi}_L} \widetilde{H}\widehat{N}
++\lambda_u \overline{\widehat{\Psi}_R} \widetilde{H} \widehat{N}^{c}+\text{h.c}
+\end{align*}
+
+From eq.~\eqref{eq:NM} 
+\begin{align}
+  \widehat{N}^{c}=&
+\begin{pmatrix}
+  \left( N^{\dagger} \right)^{\dagger} \\ 
+  N^{\dagger} 
+\end{pmatrix}+
+\begin{pmatrix}
+  N \\ 
+  N^{\dagger} 
+\end{pmatrix}=\widehat{N}
+\end{align}
+and we have
+\begin{align}
+    \mathcal{L}_A=&M_D \overline{\widehat{\Psi}}\widehat{\Psi}+\tfrac{1}{2}M_N\overline{\widehat{N}}\widehat{N}
++h_{i\alpha} \overline{\widehat{\Psi}_{R}} \widehat{L}_i S_{\alpha}
++ \lambda_d \overline{\widehat{\Psi}_L}\widetilde{H} \widehat{N}
++\lambda_u \overline{\widehat{\Psi}_{R}}\widetilde{H}\widehat{N}+\text{h.c}\,,
+\end{align}
+as expected from eq.~\eqref{eq:lfull}

@@ -1,0 +1,388 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% File: main.tex
+%% Author: John Liaperdos (ioannis.liaperdos@gmail.com)
+%% Last update: April 28, 2015
+%% Description: Provides an example of a PhD Thesis 
+%% using the teipel-thesis-en pdfLaTeX class.
+%%
+%% Character encoding: UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%
+% 1. use the "modern" or "classic" option to switch between 
+% a modern or classic font, respectively.
+%
+% 2. add/remove the "hyperref" option to enable/disable hyperlinks:
+% (remember to remove auxiliary files after adding/removing 
+% the "hyperref" option).
+%
+% 3. add/remove the "printer" option to typeset a printer-friendly 
+% (grayscale)/color version of the thesis.
+%
+% 4. use the "watermark" option to indicate a draft copy of the thesis
+%
+% 5. use the "histinit" option to enable "historiated initials".
+% (If used, all chapter initials declared by the \InitialCharacter{}
+% macro are enlarged. If ommitted, arguments of \InitialCharacter{}
+% are typeset as normal text.)
+%
+% 6. use the "plain" option to disable tikz graphics in title page
+% and part/chapter headers (might help to avoid compilation timeouts).
+% Note that "plain" disables CD label and CD cover creation.
+%
+% 7. use the "noindex" option to (hopefully) avoid compilation timeouts
+% when compiling online (disables index generation - note that "\indexGR",
+% "\index" invocations need not be removed when toggling this option).
+%
+% 8. use the "frontispiece" option to typeset a frontispiece at the back of the cover page
+%
+% 9. use the `letter' option for a US letter page layout, instead of A4
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+	  %\documentclass[modern,hyperref,watermark,histinit,frontispiece,plain]{teipel-thesis-en}
+	   \documentclass[classic, hyperref,watermark,histinit,frontispiece,plain]{teipel-thesis-en} %%moder pone el formato lindo, pero los simbolos griegos no
+%
+\graphicspath{{figures/}}
+%\usepackage[scientific-notation=true]{siunitx}
+%\usepackage[spanish]{babel}
+%\usepackage[spanish]{babel}
+\usepackage{graphicx}%, color}
+\graphicspath{{figures/}}
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage{feynmp}
+\DeclareGraphicsRule{*}{mps}{*}{}
+\usepackage{tikz-feynman}
+\tikzfeynmanset{compat=1.1.0}
+\usepackage{youngtab}
+\usepackage{titlesec}
+%\usepackage[latin1]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{simplewick}
+\usepackage{syntonly}
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{bbm}
+\usepackage{dsfont}
+%
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{cite} % to collet the references
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\usepackage{dsfont}
+\usepackage{float}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\leftmark} % En las p\'{a}ginas impares, parte izquierda del encabezado, aparecer\'{a} el nombre de cap\'{\i}tulo
+\fancyhead[RE]{\rightmark} % En las p\'{a}ginas pares, parte derecha del encabezado, aparecer\'{a} el nombre de secci\'{o}n
+\fancyfoot[C]{\thepage} % N\'{u}meros de p\'{a}gina en el centro
+
+%%size
+\setlength{\oddsidemargin}{-0.2 cm}
+\setlength{\evensidemargin}{-0.2 cm}
+\setlength{\textwidth}{16.2 cm}
+
+%%%%%%%%%%%%%%%%%%%%%
+%% UNIVERSITY INFO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% University Name
+%
+	\UniversityName{Universidad de Antioquia}
+%
+% School Name
+%
+	\SchoolName{Instituto de Física}
+%
+% Department Name
+%
+	\DepartmentName{Facultad de Ciencias Exactas y Naturales \\
+						{\large{Grupo de fenomenología e interacciones fundamentales }} }
+%
+% Location
+%
+	\UniversityLocation{Medellín}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THESIS INFO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% -------------------------------------------------------------------
+% Thesis Type
+%
+	\ThesisType{\\Pregrado}
+%
+%% -------------------------------------------------------------------
+% Thesis Title 
+%
+% To force line breaks in title, use "\\".
+% If different line break locations are to be used for the cover page and the inner title page (page 3) 
+% repeat the cover page title as an optional argument of the \title macro, including line breaks.
+%
+% Examples:
+% 1. Automatic title line breaks in cover page and inner title page: 
+%	    \title{This is my title}
+% 2. Title breaking after ''my'' in both cover page and inner title page:
+%	    \title{This is my \\ title}
+% 3. Title breaking after ''my'' in cover page, and after ''is'' in inner title page:
+%	    \title[This is my \\ title]{This is \\ my title}
+%
+	\title{ Generación de asimetría bariónica a través de la leptogénesis 
+  }
+%%
+%
+%% -------------------------------------------------------------------
+%% Thesis subtitle (optional)
+%
+% If no subtitle is required, set argument to blank, or comment-out the \subtitle macro.
+%
+% Example:
+%%	\subtitle{This is my subtitle}
+%%	\subtitle{with this subtitle}
+%
+%% -------------------------------------------------------------------
+%
+%% Author name
+%
+% For more than one authors, separate with ",".
+% Example:
+%	\authorName{Albert Einstein, George W. Bush} 
+	\authorName{Katherine Builes Londoño} 
+%
+%% -------------------------------------------------------------------
+%
+%% Supervisor's name
+% 
+	\supervisor{Diego A. Restrepo Quintero }
+	%\cosupervisor{Richard Feynman  }
+%
+%% -------------------------------------------------------------------
+%% Supervisor's title
+%
+	\supervisorTitle{}
+%
+%
+%% -------------------------------------------------------------------
+%% Place and date of publication
+%
+	\thesisPlaceDate{Medellín, 2018}
+%
+%% -------------------------------------------------------------------
+%% Place and date in acknowledgements (if applicable).
+%
+	\ackPlaceDate{Medellín, 2018}
+%
+%% -------------------------------------------------------------------
+%% Approval information
+%
+	\examinationDate{ Date:}
+	\approvalStatement{Approved by \hspace{2.0 cm}}
+%
+%% -------------------------------------------------------------------
+%% Copyright Year
+%
+%	\copyrightYear{Creative Commons Wikipedia-like}
+%
+%% -------------------------------------------------------------------
+%% Name of first examiner
+%
+%	\firstExaminer{Professor A}
+	\firstExaminer{\hspace{5.0 cm}}
+%
+%% -------------------------------------------------------------------
+%% Title of first examiner
+%
+	\firstExaminerTitle{}
+%
+%% -------------------------------------------------------------------
+%% Name of second examiner
+%
+	\secondExaminer{\hspace{5.0 cm}}
+%
+%% -------------------------------------------------------------------
+%% Title of second examiner
+%
+	\secondExaminerTitle{}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THESIS COLORS: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Color for cover and chapters
+	\chaptercolor{brown!75!magenta}
+%%
+%% Color for appendices
+	\appendixcolor{brown!80!magenta}
+%%
+%% hyperlink color (ignored if the "hyperref" option is omitted)
+    	\hyperlinkcolor{red!55!brown}
+%%
+%% Thesis title foreground color in cover page (ignored if the "plain" option is used)
+    	\titlecolor{white}
+%%
+%% Thesis title background color in cover page (ignored if the "plain" option is used)
+    	\titlebackgroundcolor{brown!85!magenta}  
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COVER PAGE IMAGE: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Cover page image (optional)
+%% If no cover page image is required, set argument to blank, or comment-out the \coverpageimage macro.
+%%
+%% Syntax:
+%%          \coverpageimage{scale factor}{path to cover page image}
+%%      or
+%%          \coverpageimage[tikz]{scale factor}{TikZ commands}
+%%          (commands may include \usetikzlibrary statements, etc.)
+%%      
+%% Examples:
+%%      - Use the image in "figures/rdf.png" scaled by 0.8 (=80%):
+%%          \coverpageimage{0.8}{figures/rdf.png}
+%%      - Use a TikZ drawing scaled by 0.5 (=50%):
+%%          \coverpageimage[tikz]{0.5}{
+%%              \draw[thick, magenta] \foreach \x in {18,90,...,306} {
+%%                  (\x:4) node{} -- (\x+72:4)
+%%                  (\x:4) -- (\x:3) node{}
+%%                  (\x:3) -- (\x+15:2) node{}
+%%                  (\x:3) -- (\x-15:2) node{}
+%%                  (\x+15:2) -- (\x+144-15:2)
+%%                  (\x-15:2) -- (\x+144+15:2)
+%%              };
+%%          }
+%%
+     %\coverpageimage{0.4}{figures/neutrino_mass_diagram}
+     %\coverpageimage{0.3}{figures/bullet2}  
+     \vspace{2.0 cm}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MISCELLANEOUS SETTINGS: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+% Path to University Logo (all supported formats are allowed)
+	%\UniversityLogoPath{logo/teikal_logo.eps}
+	\UniversityLogoPath{figures/logo-udea}
+%
+% Path to University Logo (grayscale version to be used with the `printer' option)
+	\UniversityBWLogoPath{figures/logo-udea.eps}
+%
+% Scalefactor for University logos (1 for 100%)
+	\LogoScaleFactor{1.1}
+% Draft Indication (watermark text to be used with the `watermark' option)
+	\draftIndication{}%poner algo debajo de superviso en la primera hoja
+%
+% Frontispiece settings (ignored if the `frontispiece' option is omitted)
+%	Syntax: \setFrontispiece[scale factor]{path to frontispiece image}{frontispiece image legend}
+	\setFrontispiece[0.3]{figures/logo-udea}{Universidad de Antioquia} %figura detras de la primera página ---> GUITARRA
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% add custom hyphenation rules here
+%\hyphenation{} 
+%
+%%%%
+%
+%
+%%%%
+\begin{document}
+
+\maketitle
+Generación de asimetría bariónica a través de la leptogénesis
+\beginfrontmatter
+	
+% Abstract (content in `abstract.tex')
+	\include{abstract}
+% Dedication
+	\thesisDedication{``Todos somos muy ignorantes. Lo que ocurre es que no todos ignoramos las mismas cosas''  Albert Einstein}
+% Acknowledgements (content in `acknowledgements.tex')
+	%\include{acknowledgements}
+% Table of Contents
+	\tableofcontents
+% List of Figures
+	%\listoffigures
+% List of Illustrations
+	%\listofillustrations
+% List of Tables
+	%\listoftables
+% Preface (content in `preface.tex') 
+	%\include{preface}
+	
+\beginmainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INCLUDE YOUR CHAPTERS/SECTIONS HERE
+%%
+% Introduction
+	\include{intro}
+% Parts/Chapters
+%	\part{Part A}
+\input{chapter1}
+
+\chapter*{Conclusiones\markboth{Conclusiones}{Conclusiones}}
+\label{sec:Conclusions}
+\addcontentsline{toc}{chapter}{Conclusiones}
+\input{conclusions}
+%
+
+\chapter*{Perspectivas\markboth{Perspectivas}{Perspectivas}}
+\label{sec:Perspectivas}
+\addcontentsline{toc}{chapter}{Perspectivas}
+\input{Perspectivas}
+%
+% Appendices
+	\appendices
+\input{details}
+%
+% Acknowledgements (content in `acknowledgements.tex')
+\include{acknowledgements}
+	
+%
+%%%%% Bibliography/References (BiBTeX items in `references.bib')
+%%%%	\bibliography{IEEEabrv,references}
+%\bibliographystyle{jhep}
+\bibliography{susy}
+% Abbreviations (content in `abbreviations.tex') 
+	\includeabbreviations{abbreviations}
+% Glossary (content in `glossary.tex') 
+	%\includeglossary{glossary}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Index
+	%\printindices
+%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+%% Create CD labels:
+
+	\definecdlabeloffsets{0}{-0.65}{0}{0.55} % upper label x offset [cm] (default=0) /  upper label y offset [cm] (default=0) /  lower label x offset [cm] (default=0) /  lower  label y offset [cm] (default=0) -- For Q-Connect KF01579 labels use the following offset values: {0}{-0.65}{0}{0.55}
+
+	\createcdlabel{Pregrado \\ Generación de asimetría bariónica a través de la leptogenesis
+}{Katherine Builes Londoño}{Mayo}{2018}{1} % thesis title / author name / month / year / title area width in cm (recommended value: 8) 
+
+%%
+%% Create CD case covers:
+
+	\createcdcover{Pregrado\\ Generación de asimetría bariónica a través de la leptogenesis
+}{Katherine Builes Londoño}{Mayo}{2018}{1} % thesis title / author name / month / year / title area width in cm (recommended value: 10) 
+
+%%
+%
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

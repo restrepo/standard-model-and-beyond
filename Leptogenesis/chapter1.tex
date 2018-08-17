@@ -1,0 +1,828 @@
+\chapter{Capitulo principal}
+%
+\InitialCharacter{E}n adicion a los dobletes del modelo estándar $l_i$ y $H$, nosotros introducimos campos de Weyl de derechos, ${N_R}_i$. El lagrangiano es 
+%
+\begin{align}
+-\mathcal{L}=\lambda_{ij}\epsilon_{ab} \left( N_R \right)^\dagger_{j} l^a_iH^{b} +\lambda_{ij}^*\epsilon_{ab}   H^{\dagger b}{l^\dagger}^a_i {N_R}_j
++\frac{1}{2}M_i {N_R}_i {N_R}_i+\frac{1}{2}M_i \left( N_R\right)^\dagger_i 
+\left( N_R\right)^\dagger_i\, .
+\end{align}
+%
+Donde hemos asumido que los neutrinos derechos están en la base diagonal.
+
+Tomando en cuenta que el número fermiónico debe ser conservado, nosotros asumimos $N_R$ como una partícula: un elemento del subgrupo de Lorentz $(0,1/2)$, y $\left( N_R \right)^{\dagger}$ la correspondiente anti-partícula.  Con esta convención, si nosotros comenzamos con el decaimiento de un fermión (anti-fermión) finalizaremos con el número correspondiente a fermiones (anti-fermión) en el estado final.
+ 
+De esta forma, nosotros consideramos los procesos
+\begin{align}
+  N_R \to& l  H^\dagger &  \left( N_R \right)^{\dagger}\to& l^{\dagger} H\, . 
+\end{align}
+
+Nosotros usamos la convención:
+\begin{align}
+ l\to \xi_{\alpha}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x_{\alpha}\left(s,\mathbf{p}\right) a_s e^{-i p\cdot x}+y_{\alpha}\left(s,\mathbf{p}\right) b_s^{\dagger} e^{i p\cdot x}  \right]\nonumber\\
+  l ^{\dagger}\to \xi_{\dot{\alpha}}^{\dagger}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ y_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right) b_s e^{-i p\cdot x}+x_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right) a_s^{\dagger} e^{i p\cdot x}  \right]\nonumber\\
+ \left( N_R \right)^{\dagger}\to \eta^{\alpha}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x^{\alpha}\left(s,\mathbf{p}\right) b_s e^{-i p\cdot x}+y^{\alpha}\left(s,\mathbf{p}\right) a_s^{\dagger} e^{i p\cdot x}  \right] \nonumber\\
+  N_R\to \eta^{\dagger\dot{\alpha}}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ y^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right) a_s e^{-i p\cdot x}+x^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right) b_s^{\dagger} e^{i p\cdot x}  \right]\, ,
+\end{align}
+y la solución a la ecuación de Klein-Gordon 
+\begin{align}
+\phi(x)=&\int\operatorname{d}^3p\frac{1}{\sqrt{2w_{p}(2\pi)^{3}}}(ae^{-ipx}+b^{\dagger}e^{ipx}) \nonumber\\
+\phi^\dagger(x)=&\int\operatorname{d}^3p\frac{1}{\sqrt{2w_{p}(2\pi)^{3}}}(be^{-ipx}+a^{\dagger}e^{ipx}).
+\end{align}
+La asimetria CP corresponde a la siguiente expresión:
+\begin{align}
+\label{asimetria}
+\epsilon=\frac{|M|^2-|\overline{M}|^2}{|M|^2+|\overline{M}|^2}
+\end{align}
+Donde $M$ corresponde a la amplitud de dispersión para procesos que involucran partículas y $\overline{M}$ para procesos que involucran anti-partículas. La matriz de dispersión tiene la siguiente forma:
+\begin{align}
+|M|^2=|M_{t}|^2+|M_{l}|^2+2|M_{t}||M_{l}|
+\end{align}
+Donde $|M_{t}|$ corresponde a la dispersión a nivel árbol y $|M_{l}|$ corresponde a la dispersión nivel loop.
+
+ A fin de calcular la dispersión a nivel árbol, nosotros necesitamos calcular
+\begin{align}
+  S^{(1)}=&-i \lambda^*\int \operatorname{d}^4 x : H^{\dagger} \cdot  l^{\dagger} N_R  : \,
+  -i \lambda\int \operatorname{d}^4 x :\left(N_R\right)^\dagger   H\cdot  l : \nonumber\\
+       =&-i \lambda^*\int \operatorname{d}^4 x :\xi^{\dagger} \eta^{\dagger}  \phi^{\dagger} :
+       -i \lambda\int \operatorname{d}^4 x :\eta\xi  \phi:\,.
+\end{align}
+En orden de evaluar
+\begin{align}
+\label{narbol}
+  S_{fi}=&-i\lambda^*\,\langle 0,l(\boldsymbol{p'}) , H^\dagger(\boldsymbol{q}) | \xi_{-}^{\dagger}(x)   \phi_-^{\dagger}(x)\eta^{\dagger}_+(x) | 0,0, N_R(\boldsymbol{p})\rangle \nonumber\\
+  &-i\lambda\,\langle 0,l^\dagger(\boldsymbol{p'}) , H(\boldsymbol{q})| \xi_{-}(x)   \phi_- (x)\eta_+(x) | 0,0, N_R^\dagger(\boldsymbol{p})\rangle\,.
+\end{align}
+\begin{figure}[H]
+  \centering
+   \begin{tikzpicture}
+  \begin{feynman}   
+    \vertex (a) {\(\eta^{\dagger\dot{\alpha}}\)};
+    \vertex [right=of a] (b);
+    \vertex [above right=of b] (f1) {\(\xi_{{\dot{\alpha}}}^{\dagger}\)};
+    \vertex [below right=of b] (c);
+  
+    \diagram* {
+      (a) -- [anti fermion] (b) -- [fermion] (f1),
+      (b) -- [scalar,edge label'=\(H\)] (c),
+    };  
+  \end{feynman} 
+    \end{tikzpicture}
+   %
+  \begin{tikzpicture}
+    \def\leglength{1}
+    \begin{feynman}
+      \vertex (a) {\(\eta^{{\alpha}}\)} ;
+    \vertex [right=of a] (b);
+    \vertex [above right=of b] (f1) {\(\xi_{\alpha}\)};
+    \vertex [below right=of b] (c);
+  \diagram* {
+      (a) -- [fermion] (b) -- [anti fermion] (f1),
+      (b) -- [scalar,edge label'=\(H^\dagger\)] (c),
+    }; 
+  \end{feynman}   
+  \end{tikzpicture}
+  \caption{Diagramás de Feynman de los elementos de la matriz S Eq . (\ref{narbol}).}
+\end{figure}
+Los operadores escalera cumplen las siguientes propiedades:
+\begin{align}
+a_p^{\dagger}|n_p\rangle=\sqrt{n_p+1}|n_p+1\rangle ,   a_p|n_p\rangle=\sqrt{n_p}|n_p-1\rangle\,,
+\end{align}
+además, se define el estado de una partícula
+\begin{align}
+|H\rangle=&\frac{1}{\sqrt{V}}a_p^{\dagger}|0\rangle\nonumber\\
+|H\rangle^\dagger=&\frac{1}{\sqrt{V}}b_p^{\dagger}|0\rangle .
+\end{align}
+Por tanto, es posible definir:
+\begin{align}
+\phi(x)_+|H(k)\rangle=\int\operatorname{d}^3p\frac{1}{\sqrt{2w_{p}(2\pi)^{3}}}a_pe^{-ipx}\frac{1}{\sqrt{V}}a_k^{\dagger}|0\rangle\\
+\label{p2}
+\phi(x)_+|H(k)\rangle=\int\operatorname{d}^3p\frac{1}{\sqrt{2w_{p}(2\pi)^{3}}}e^{-ipx}\frac{1}{\sqrt{V}}[a_p,a_k^{\dagger}]|0\rangle\\
+\label{3}
+\phi(x)_+|H(k)\rangle=\int\operatorname{d}^3p\frac{1}{\sqrt{2w_p}}e^{-ipx}\frac{1}{\sqrt{V}}\delta^{3}(p-k)|0\rangle\\
+\label{4}
+\phi(x)_+|H(k)\rangle=\frac{1}{\sqrt{2w_{p}{}}}e^{-ikx}\frac{1}{\sqrt{V}}|0\rangle\,.
+\end{align}
+De igual forma se obtiene:
+\begin{align}
+\phi(x)^{\dagger}_+|H^\dagger(k)\rangle=\int\operatorname{d}^3p\frac{1}{\sqrt{2w_{p}(2\pi)^{3}}}b_pe^{-ipx}\frac{1}{\sqrt{V}}a_k^{\dagger}|0\rangle\\
+\phi(x)^{\dagger}_+|H^\dagger(k)\rangle=\int\operatorname{d}^3p\frac{1}{\sqrt{2w_{p}(2\pi)^{3}}}e^{-ipx}\frac{1}{\sqrt{V}}[b_p,b_k^{\dagger}]|0\rangle\\
+\phi(x)^{\dagger}_+|H^\dagger(k)\rangle=\int\operatorname{d}^3p\frac{1}{\sqrt{2w_p}}e^{-ipx}\frac{1}{\sqrt{V}}\delta^{3}(p-k)|0\rangle\\
+\phi(x)^{\dagger}_+|H^\dagger(k)\rangle=\frac{1}{\sqrt{2w_{p}{}}}e^{-ikx}\frac{1}{\sqrt{V}}|0\rangle\,.
+\end{align}
+Teniendo en cuenta los anteriores resultados e implementando las siguientes relaciones
+\begin{align}
+  \eta_+^{\dagger}(x)|N_R (\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&\langle l(\boldsymbol{p},s)|\xi_-^{\dagger}(x)=&\langle 0|\frac{1}{\sqrt{2 E_p V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x}\,,
+\end{align}
+\begin{align}
+\eta_+(x)|N_R ^\dagger(\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&\langle l_+^\dagger(\boldsymbol{p},s|\xi_-(x)=\langle 0|\frac{1}{2E_p V}y(s,\mathbf{p})e^{i p\cdot x}\,,
+\end{align}
+se obtiene:
+\begin{multline}
+S_{fi}^{(1)}=-i\displaystyle\sum_{s,s'}\int \operatorname{d}^{4}x \lambda^* \frac{1}{\sqrt{2E_{p'} V}}x^{\dagger}(s,\mathbf{p'})e^{ip'\cdot x}\frac{1}{\sqrt{2w_{q}V}}e^{iq\cdot x}\frac{1}{\sqrt{2E_{p'}V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}\\
+-i\int \operatorname{d}^{4}x \lambda \frac{1}{\sqrt{2E_p V}}x(s,\mathbf{p})e^{-ip\cdot x}\frac{1}{\sqrt{2w_{q}V}}e^{iq\cdot x}\frac{1}{\sqrt{2E_{p'}V}}y(s,\mathbf{p'})e^{i p'\cdot x}\,.
+\end{multline}
+\begin{align}
+S_{fi}^{(1)}=\frac{1}{\sqrt{2E_{p'}V}}\frac{1}{\sqrt{2w_{k}V}}\frac{1}{\sqrt{2E_p V}}(-i)\displaystyle\sum_{s,s'}(2\pi)^4\delta^4({p-(p'+q)})[\lambda^* x^{\dagger}(s,\mathbf{p'})y^{\dagger}(s,\mathbf{p})+\lambda x(s,\mathbf{p})y(s,\mathbf{p'})]\, .
+\end{align}
+Por tanto, la amplitud de dispersión a nivel árbol adquiere la siguiente forma:
+\begin{align}
+iM_{t}=(-i)\displaystyle\sum_{s}\lambda_{ji}^* x^{\dagger}(s,\mathbf{p-q})y^{\dagger}(s,\mathbf{p})\\ \nonumber
+i\overline{M_{t}}=(-i)\displaystyle\sum_{s}\lambda_{ji} x(s,\mathbf{p})y(s,\mathbf{p-q})\, .
+\end{align}
+Ahora, nosotros nos concentramos en obtener la amplitud de de dispersión a nivel loop,
+En la figura \ref{fig2} se muestra una contribución a la auto-energía donde el estado final son anti-partículas, en este decaimiento el número leptónico  se conserva
+\begin{align}
+(N_{R}^{\dagger}lH)_{x_{1}}
+(H^{\dagger}l^{\dagger} N_{R})_{x_{2}}
+(N_{R}^{\dagger}lH)_{x_{3}}
+\end{align}
+\begin{figure}[H]
+\label{f}
+\centering
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex  (a) {\(\eta_{{i}}\)};
+    \vertex [right=of a,dot, label=0:\(x_{1}\)] (b);
+    \vertex [above right=of b] (f1);
+    \vertex [below right=of b] (c);
+    \vertex [above right=of c,dot, label=180:\(x_{2}\)] (f2);
+    \vertex [right=of f2] (f0);
+    \vertex[right=of f0,dot, label=0:\(x_{3}\)] (f3);
+    \vertex [above right=of f3] (f4);
+    \vertex [below right=of f3] (f5);
+ 
+    \diagram* {
+      (a)-- [fermion] (b) %-- [anti fermion,quarter left,edge label={\(\xi_{{{i}}}\)}] (f1),
+
+      (c) -- [scalar, quarter left, edge label=\(\phi\)] (b),
+      (f2) -- [scalar,quarter left,edge label=\(\phi^\dagger\)] (c),
+     % (f1) -- [quarter left,edge label={\(\xi_{k}\)} ] (f2),
+        (b) -- [anti fermion, half left,edge label={\(\xi_{m}\hspace{4em}\xi_{m}^{\dagger}\)} ] (f2),
+       
+       (f2) -- [with arrow=0.99,edge label={\(\eta^{\dagger}_{{k}}\)} ](f0),
+       (f0) -- [edge label={\(\eta_{k}\)}] (f3),
+       (f4) -- [fermion,edge label={\(\xi_{j}\)}] (f3),
+       (f3) -- [scalar,edge label'=\(\phi\)] (f5),
+    };
+  \end{feynman} 
+ \end{tikzpicture}
+ \caption{Diagrama de Feymann que representa los términos de la ecuación (\ref{1})}
+ \label{fig2}
+\end{figure}
+\begin{align}
+\label{1}
+S=(-i)^{3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} &\,\langle 0,l^\dagger(\boldsymbol{p'}) , H(\boldsymbol{q} )|
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\xi(x_{1})\xi^\dagger(x_{2})
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\phi(x_{1})\phi^\dagger(x_{2})
+\bcontraction{|}{\eta^{{\alpha\dagger}}}{(x_2)}{\eta}
+\eta^{{\alpha\dagger}}(x_{2})\eta^{{\alpha}} (x_{3})\nonumber\\
+&\eta^{{\alpha}}(x_{1})\xi(x_{3})\phi(x_{3})  | 0,0, N_R^{\dagger}(\boldsymbol{p})\rangle\, .
+\end{align}
+\begin{align}
+\eta_+(x_1)|N_R ^\dagger(\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p'} V}}x(s,\mathbf{p})e^{-i p\cdot x_{1}}|0\rangle,&\langle l_+^\dagger(\boldsymbol{q},s|\xi_-(x_{3})=\langle 0|\frac{1}{\sqrt{2E_p V}}y(s,\mathbf{q})e^{i q\cdot x_{3}}\, .
+\end{align}
+\begin{align}
+S=(-i)^3\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\overleftarrow{iS}(x_{1}-x_{2})i\Delta(x_{2}-x_{1})\overrightarrow{iS}(x_{3}-x_{2})\nonumber \\ e^{i p'\cdot x_{3}}e^{i q\cdot x_{3}}e^{-i p\cdot x_{1}}x(s,\boldsymbol{p})y(s,\boldsymbol{p'})\, ,
+\end{align}
+\begin{align}
+S=&(-i)^{3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overleftarrow{iS}(k)i\Delta(q_{2})\overrightarrow{iS}(q_{3})\nonumber\\ 
+&e^{-ik\cdot (x_{1}-x_{2})}e^{-iq_{2}\cdot (x_{2}-x_{2})}e^{-iq_{3}\cdot  (x_{3}-x_{2})}e^{ip'\cdot x_{3}}e^{i q\cdot x_{3}}e^{-i p\cdot x_{1}}x(s,\boldsymbol{p})y(s,\boldsymbol{p'})\, .
+\end{align}
+\begin{align}
+\int\operatorname{d}^{4}x_{1}e^{-ik\cdot (x_{1})}e^{-ip\cdot (x_{1})}e^{-iq_{2}\cdot (x_{1})}=(2\pi)^4\delta(p+k-q_{2})\\ 
+\int\operatorname{d}^{4}x_{2}e^{ik\cdot (x_{2})}e^{-iq_{2}\cdot (x_{2})}e^{iq_{3}\cdot (x_{2})}=(2\pi)^4\delta(q_{2}-k-q_{3})\\
+\int\operatorname{d}^{4}x_{3}e^{iq\cdot (x_{3})}e^{ip'\cdot (x_{3})}e^{-iq_{3}\cdot (x_{3})}=(2\pi)^4\delta(q_{3}-p'-q).
+\end{align}
+\begin{align}
+S={(-i)^3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_q}}\int \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overleftarrow{iS}(k)i\Delta(q_{2})\overrightarrow{iS}(q_{3})\nonumber\\(2\pi)^4\delta(p+k-q_{2})(2\pi)^4\delta(q_{2}-k-q_{3})(2\pi)^4\delta(q_{3}-p'-q)x(s,\boldsymbol{p})y(s,\boldsymbol{p'})\, ,
+\end{align}
+  \begin{align}
+S={(-i)^3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_q V}}\int \frac{dk}{(2\pi)^4}\overleftarrow{iS}(k)i\Delta(p+k)\overrightarrow{iS}(p)\nonumber\\(2\pi)^4\delta(p-(p'+q))
+x(s,\boldsymbol{p})y(s,\boldsymbol{p'})\, ,
+\end{align}
+\begin{align}
+S=(-i)^3\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_qV}}\delta(p-(p'-q))\overrightarrow{iS}(p)\nonumber \\ \int \frac{dk}{(2\pi)^4}(2\pi)^4i\Delta(p+k)\overleftarrow{iS}(k)x(s,\boldsymbol{p})y(s,\boldsymbol{p'})\, .
+\end{align}
+Utilizando las reglas de propagadores de Feynman para fermiones de dos componentes~\cite{Dreiner:2008tw} nosotros obtuvimos:
+\begin{align}
+S={(-i)^3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_q V}}\delta(p-(p'-k))\\
+\frac{ip.\bar{\sigma}}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4} (2\pi)^4\frac{i}{(p+k)^2}\frac{ik.\bar{\sigma}}{k^2}x(s,\boldsymbol{p})y(s,\boldsymbol{p'})\, .
+\end{align}
+Por consiguiente, encontramos que la amplitud 
+\begin{align}
+i\overline{M_{l}}={(-i)^3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}
+\frac{ip.\bar{\sigma}}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4}\frac{i}{(p+k)^2}\frac{ik.\bar{\sigma}}{k^2}x(s,\boldsymbol{p})y(s,\boldsymbol{p-q}).
+\end{align}
+Para obtener un resultado más condensado nosotros usamos la función de Passarino~\cite{romao:2006}:
+\begin{align}
+\label{p1}
+B^{\mu}=\frac{(2\pi\mu)^{4-d}}{i\pi^2}\int d^{d}k^4k^{\mu}\prod_{i=0}^{1}\frac{1}{(k+r_{i})^2-m_{i}^2}\,,
+\end{align}
+estableciendo $r_{0}=0$ $r_{1}=p$
+\begin{align}
+\label{p2}
+B^{\mu}=\frac{(2\pi\mu)^{4-d}}{i\pi^2}\int d^{d}k^{\mu}\frac{1}{k-m_{0}^2}\frac{1}{(k+p)^2-m_{1}^2}\,,
+\end{align}
+utilizando $m_{0}=0$ $m_{1}=0$
+\begin{align}
+\label{p3}
+B^{\mu}=\frac{(2\pi\mu)^{4-d}}{i\pi^2}\int dk^{d}\frac{k^{\mu}}{k^2}\frac{1}{(k+p)^2}\,.
+\end{align}
+Luego, nosotros obtuvimos
+\begin{align}
+i\overline{M_{l}}={(-i)^3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}
+\frac{ip.\bar{\sigma}}{p^2-M_{k}^2}\frac{i^3\pi^2B^\mu}{(2\pi)^4}{\overline{\sigma}}_{\mu} x(s,\boldsymbol{p})y(s,\boldsymbol{p-q}).
+\end{align}
+Utilizando la expresión de la integral en términos de funciones se obtiene~\cite{romao:2006}
+\begin{align}
+\label{p4}
+B^{\mu}=r_{1}^{\mu}B_{1}(p^2,m_{0},m_{1}^2)
+\end{align}
+\begin{align}
+i\overline{M_{l}}={(-i)^3}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}
+\frac{ip.\bar{\sigma}}{p^2-M_{k}^2}\frac{i^3\pi^2p^{\mu}B_{1}(p^2,0,0^2)}{(2\pi)^4}{\overline{\sigma}}_{\mu} x(s,\boldsymbol{p})y(s,\boldsymbol{p-q}),
+\end{align}
+
+\begin{align}
+i\overline{M_{l}}=i\lambda_{jk}\lambda^*_{mk}\lambda_{mi}
+\frac{p^2}{p^2-M_{k}^2}\frac{B_{1}(p^2,0,0)}{16\pi^2} x(s,\boldsymbol{p})y(s,\boldsymbol{p-q})\, . 
+\end{align}
+Debido a que estamos considerando Neutrinos másivos, nosotros relacionamos $p^2=M_i$
+\begin{align}
+i\overline{M_{l}}=i\lambda_{jk}\lambda^*_{mk}\lambda_{mi}
+\frac{M_{i}}{M_{i}-M_{k}^2}\frac{B_{1}(p^2,0,0)}{16\pi^2} x(s,\boldsymbol{p})y(s,\boldsymbol{p-q})\, . 
+\end{align}
+En la figura \ref{fig3} el estado final son anti-partículas. A diferencia de la situación anterior; en esta no se conservar el número leptónico  
+\begin{align}
+(H^{\dagger}l^{\dagger}N_{R})_{X_{1}}
+(N_{R}^{\dagger}lH)_{x_{2}}
+(N_{R}^{\dagger}lH)_{x_{3}}
+\end{align}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex  (a) {\(\eta^{\dagger}_{{i}}\)};
+    \vertex [right=of a,dot, label=0:\(x_{1}\)] (b);
+    \vertex [above right=of b] (f1);
+    \vertex [below right=of b] (c);
+    \vertex [above right=of c,dot, label=180:\(x_{2}\)] (f2);
+    \vertex [right=of f2] (f0);
+    \vertex[right=of f0,dot, label=0:\(x_{3}\)] (f3);
+    \vertex [above right=of f3] (f4);
+    \vertex [below right=of f3] (f5);
+ 
+    \diagram* {
+      (a)-- [anti fermion] (b) -- [with arrow=0.99,quarter left,edge label={\(\xi^{\dagger} _{{{m}}}\)}] (f1),
+
+      (c) -- [scalar, quarter left, edge label=\(\phi^{\dagger}\)] (b),
+      (f2) -- [scalar,quarter left,edge label=\(\phi\)] (c),
+      (f1) -- [quarter left,edge label={\(\xi_{m}\)} ] (f2),
+       
+       (f2) -- [anti fermion,edge label={\(\eta^{\dagger}_{{k}}\)} ](f0),
+       (f3) -- [anti fermion, edge label'={\(\eta^{\dagger}_{k}\)}] (f0),
+       (f4) -- [anti fermion,edge label={\(\xi_{j}\)}] (f3),
+       (f3) -- [scalar,edge label'=\(\phi\)] (f5),
+    };
+  \end{feynman} 
+ \end{tikzpicture}
+ \caption{Diagrama de Feymann que representa los términos de la ecuación (\ref{2})}
+\label{fig3}
+\end{figure}
+
+
+
+\begin{align}
+\label{2}
+S={(-i)^{3}}\lambda_{jk}\lambda_{mk}\lambda^*_{mi}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} &\,\langle 0,l^\dagger(\boldsymbol{p'}) , H(\boldsymbol{q} )|
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\xi^\dagger(x_{1})\xi(x_{2})
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\phi^\dagger(x_{1})\phi(x_{2})
+\bcontraction{|}{\eta^{{\alpha\dagger}}}{(x_2)}{\eta}
+\eta^{{\alpha\dagger}}(x_{2})\eta^{{\alpha\dagger}} (x_{3})\nonumber\\
+&\xi(x_{3})\phi(x_{3}) \eta^{\dagger{{\alpha}}}(x_{1}) | 0,0, N_R(\boldsymbol{p})\rangle.
+\end{align}
+
+\begin{align}
+  \eta{(x)}^{\dagger}|N_R(\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}y^\dagger(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&\langle l(\boldsymbol{p},s)|\xi_-^{\dagger}(x)=&\langle 0|\frac{1}{\sqrt{2 E_p V}}y(s,\mathbf{p})e^{i p\cdot x}|0\rangle.
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda_{jk}\lambda_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}y(s,\boldsymbol{p'})\overrightarrow{iS}(x_{1}-x_{2})i\Delta(x_{2}-x_{1})\overrightarrow{\overleftarrow{iS}}(x_{3}-x_{2})\nonumber \\ e^{i p'\cdot x_{3}}e^{i k\cdot x_{3}}e^{-i p\cdot x_{1}}y^{\dagger}(s,\boldsymbol{p}),
+\end{align}
+
+\begin{align}
+S=\frac{(-i)^{3}}{3}\lambda_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int y(s,\boldsymbol{p'})\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overrightarrow{iS}(k)i\Delta(q_{2})\overrightarrow{\overleftarrow{iS}}(q_{3})\nonumber\\ 
+e^{-iq_{1}\cdot (x_{1}-x_{2})}e^{-iq_{2}\cdot (x_{2}-x_{1})}e^{-iq_{3}\cdot (x_{3}-x_{2})}e^{i p'\cdot x_{3}}e^{i k\cdot x_{3}}e^{-i p\cdot x_{1}}y^{\dagger}(s,\boldsymbol{p}),
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int y(s,\boldsymbol{p'}) \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overrightarrow{iS}(q_{1})i\Delta(q_{2})\overrightarrow{\overleftarrow{iS}}(q_{3})\nonumber\\(2\pi)^4\delta(p+q_{1}-q_{2})(2\pi)^4\delta(q_{2}-k-q_{3})(2\pi)^4\delta(q_{3}-p'-q)y^{\dagger}(s,\boldsymbol{p}),
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\delta(p-(p'+k))\overrightarrow{\overleftarrow{iS}}(p)\nonumber \\ \int \frac{dk}{(2\pi)^4}(2\pi)^4i\Delta(p+k){\overrightarrow{iS}}(k)y(s,\boldsymbol{p'})y^{\dagger}(s,\boldsymbol{p}).
+\end{align}
+\begin{align}
+S={(-i)^{3}}\lambda_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\delta(p-(p'+k))\\
+\frac{iM_{k}}{p^2-M_{k}^2}\int y(s,\boldsymbol{p'}) \frac{dk}{(2\pi)^4}(2\pi)^4\frac{i}{(p+k)^2}\frac{ik.{\sigma}}{k^2}y^{\dagger}(s,\boldsymbol{p})\, . 
+\end{align}
+Luego 
+\begin{align}
+i\overline{M_{l}}={(-i)^{3}}\lambda_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{iM_{k}}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4}\frac{i}{(p+k)^2}\frac{ik.{\sigma}}{k^2}y(s,\boldsymbol{p'})y^{\dagger}(s,\boldsymbol{p})\, . 
+\end{align}
+Usando las ideas desarrolladas entre las Eq.(\ref{p1})-(\ref{p3})y (\ref{p4}) nosotros obtuvimos 
+\begin{align}
+i\overline{M_{l}}=\frac{{(-i)^{3}}}{16\pi^4}\lambda_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{iM_{k}}{p^2-M_{k}^2}(i)^3\pi^2y(s,\boldsymbol{p'})p^{\mu}B_{1}(p^2,0,0){\sigma}_{\mu}y^{\dagger}(s,\boldsymbol{p})\, . 
+\end{align}
+Utilizando las ecuaciones de momentum de Dirac~\cite{Dreiner:2008tw}
+\begin{align}
+i\overline{M_{l}}=\frac{i}{16\pi^2}\lambda^*_{jk}\lambda^*_{mk}\lambda^*_{mi}\frac{M_{k}M_{i}}{M_i^2-M_{k}^2}B_{1}(p^2,0,0)y(s,\boldsymbol{p-q})x(s,\boldsymbol{p})\, . 
+\end{align}
+En la figura \ref{fig4} se muestra una contribución a la auto-energía donde el estado final son partículas, en este decaimiento el número leptónico  se conserva.
+\begin{align}
+(H^{\dagger}l^{\dagger} N_{R})_{x_{1}}
+(N_{R}^{\dagger}lH)_{x_{2}}
+(H^{\dagger}l^{\dagger} N_{R})_{x_{3}}
+\end{align}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex  (a) {\(\eta^{\dagger}_{{i}}\)};
+    \vertex [right=of a,dot, label=0:\(x_{1}\)] (b);
+    \vertex [above right=of b] (f1);
+    \vertex [below right=of b] (c);
+    \vertex [above right=of c,dot, label=180:\(x_{2}\)] (f2);
+    \vertex [right=of f2] (f0);
+    \vertex[right=of f0,dot, label=0:\(x_{3}\)] (f3);
+    \vertex [above right=of f3] (f4);
+    \vertex [below right=of f3] (f5);
+    \diagram* {
+      (a)-- [anti fermion] (b) -- [with arrow=0.99,quarter left,edge label={\(\xi^{\dagger}_{{{m}}}\)}] (f1),
+
+      (c) -- [scalar, quarter left, edge label=\(\phi^{\dagger}\)] (b),
+      (f2) -- [scalar,quarter left,edge label=\(\phi\)] (c),
+      (f1) -- [quarter left,edge label={\(\xi_{m}\)} ] (f2),
+       
+       (f2) -- [edge label={\(\eta_{{k}}\)} ](f0),
+       (f3) -- [with arrow=0.99, edge label'={\(\eta^{\dagger}_{k}\)}] (f0),
+       (f4) -- [anti fermion,edge label={\(\xi^{\dagger}_{j}\)}] (f3),
+       (f3) -- [scalar,edge label'=\(\phi^{\dagger}\)] (f5),
+    };
+  \end{feynman} 
+ \end{tikzpicture}
+ \caption{Diagrama de Feymann que representa los términos de la ecuación (\ref{4})}
+ \label{fig4}
+\end{figure}
+\begin{align}
+\label{4}
+S=(-i)^3\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} &\,\langle 0,l(\boldsymbol{p'}) , H^{\dagger}(\boldsymbol{q} )|
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\xi^{\dagger}(x_{1})\xi(x_{2})
+\bcontraction{|}{\phi}{(x_1)}{\phi}
+\phi^{\dagger}(x_{1})\phi(x_{2})
+\bcontraction{|}{\eta^{{\alpha}}}{(x_2)}{\eta}
+\eta^{{\alpha}}(x_{2})\eta^{{\alpha\dagger}}(x_{3})\nonumber\\
+&\eta^{\alpha\dagger}(x_{1})\xi^{\dagger}(x_{3})\phi^{\dagger}(x_{3})  | 0,0, N_R(\boldsymbol{p})\rangle.
+\end{align}
+\begin{align}
+  \eta_+^{\dagger}(x)|N_R (\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&\langle l(\boldsymbol{p},s)|\xi_-^{\dagger}(x)=&\langle 0|\frac{1}{\sqrt{2 E_p V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x}\,,
+\end{align}
+\begin{align}
+S=(-i)^{3}\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\overrightarrow{iS}(x_{1}-x_{2})i\Delta(x_{1}-x_{2})\overleftarrow{iS}(x_{2}-x_{3})\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\nonumber\\ 
+e^{i p'\cdot x_{3}}e^{i q\cdot x_{3}}e^{-i p\cdot x_{1}}x^\dagger(s,\boldsymbol{p'})y^\dagger(s,\boldsymbol{p}),
+\end{align}
+\begin{align}
+S=(-i)^{3}\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overrightarrow{iS}(q_{1})i\Delta(q_{2})\overleftarrow{iS}(q_{3})\nonumber\\ 
+e^{-iq_{1}\cdot (x_{1}-x_{2})}e^{-iq_{2}\cdot (x_{2}-x_{1})}e^{-iq_{3}\cdot (x_{3}-x_{2})}e^{i p'\cdot x_{3}}e^{i q\cdot x_{3}}e^{-i p\cdot x_{1}}x^\dagger(s,\boldsymbol{p'})y^\dagger(s,\boldsymbol{p}),
+\end{align}
+\begin{align}
+S=(-i)^{3}\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_q V}}\int \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overrightarrow{iS}(q_{1})i\Delta(q_{2})\overleftarrow{iS}(q_{3})\nonumber\\(2\pi)^4\delta(p+k-q_{2})(2\pi)^4\delta(q_{2}-k-q_{3})(2\pi)^4\delta(q_{3}-p'-q)x^\dagger(s,\boldsymbol{p'})y^\dagger(s,\boldsymbol{p}),
+\end{align}
+\begin{align}
+S=(-i)^{3}\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\delta(p-(p'+k))\overleftarrow{iS}(p)\nonumber \\ \int \frac{dk}{(2\pi)^4} (2\pi)^4 i\Delta(p+k)\overrightarrow{iS}(k)x^\dagger(s,\boldsymbol{p'})y^\dagger(s,\boldsymbol{p}),
+\end{align}
+\begin{align}
+S=(-i)^{3}\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\delta(p-(p'+k))\\
+\frac{ip.\sigma}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4}(2\pi)^4\frac{i}{(p+k)^2}\frac{ik.\bar{\sigma}}{k^2}x^\dagger(s,\boldsymbol{p'})y^\dagger(s,\boldsymbol{p})\, . 
+\end{align}
+Luego, nosotros obtuvimos
+\begin{align}
+iM_{l}=(-i)^{3}\lambda^ *_{jk}\lambda_{mk}\lambda^*_{mi}\frac{ip.\bar{\sigma}}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4}\frac{i}{(p+k)^2}\frac{ik.\bar{\sigma}}{k^2}x^\dagger(s,\boldsymbol{p-q})y^\dagger(s,\boldsymbol{p})\, . 
+\end{align}
+Usando las ideas desarrolladas entre las Eq.(\ref{p1})-(\ref{p3})y (\ref{p4}) nosotros obtuvimos 
+\begin{align}
+iM_{l}=\frac{i}{16\pi^2}\lambda^*_{jk}\lambda_{mk}\lambda^*_{mi}
+\frac{M_i^2}{M_i^2-M_{k}^2}B_{1}(p^2,0,0)x^\dagger(s,\boldsymbol{p-q})y^\dagger(s,\boldsymbol{p})\, . 
+\end{align}
+En la figura \ref{fig4} se muestra una contribución a la auto-energía donde el estado final son partículas, en este decaimiento el número leptónico  no se conserva.
+\begin{align}
+(N_{R}^{\dagger}lH)_{X_{1}}
+(H^{\dagger}l^{\dagger}N_{R})_{X_{2}}
+(H^{\dagger}l^{\dagger} N_{R})_{X_{3}}
+\end{align}
+
+\begin{figure}[H]
+\label{fig5}
+\centering
+\begin{tikzpicture}
+  \begin{feynman}
+    \vertex  (a) {\(\eta_{{i}}\)};
+    \vertex [right=of a,dot, label=0:\(x_{1}\)] (b);
+    \vertex [above right=of b] (f1);
+    \vertex [below right=of b] (c);
+    \vertex [above right=of c,dot, label=180:\(x_{2}\)] (f2);
+    \vertex [right=of f2] (f0);
+    \vertex[right=of f0,dot, label=0:\(x_{3}\)] (f3);
+    \vertex [above right=of f3] (f4);
+    \vertex [below right=of f3] (f5);
+ 
+    \diagram* {
+      (a)-- [fermion] (b),
+
+      (c) -- [scalar, quarter left, edge label=\(\phi\)] (b),
+      (f2) -- [scalar,quarter left,edge label=\(\phi^{\dagger}\)] (c),
+%(f1) -- [anti fermion,quarter left,edge label={\(\xi^{\dagger}_{m}\)} ] (f2),
+       (b) -- [anti fermion, half left,edge label={\(\xi_{m}\hspace{4em}\xi_{m}^{\dagger}\)} ] (f2),
+       (f2) -- [fermion,edge label={\(\eta^{\dagger}_{{k}}\)} ](f0),
+       (f3) -- [fermion, edge label'={\(\eta^{\dagger}_{k}\)}] (f0),
+       (f4) -- [anti fermion,edge label={\(\xi^{\dagger}_{j}\)}] (f3),
+       (f3) -- [scalar,edge label'=\(\phi^{\dagger}\)] (f5),
+    };
+  \end{feynman} 
+ \end{tikzpicture}
+ \caption{Diagrama de Feymann que representa los términos de la ecuación (\ref{78})}
+\end{figure}
+
+
+
+\begin{align}
+\label{78}
+S=(-i)^{3}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} &\,\langle 0,l(\boldsymbol{p'}) , H^\dagger(\boldsymbol{q} )|
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\xi(x_{1})\xi^\dagger(x_{2})
+\bcontraction{|}{\xi}{(x_1)}{\xi}
+\phi(x_{1})\phi^\dagger(x_{2})
+\bcontraction{|}{\eta^{{\alpha\dagger}}}{(x_2)}{\eta}
+\eta^{{\alpha\dagger}}(x_{2})\eta^{{\alpha\dagger}} (x_{3})\nonumber\\
+&\xi^{\dagger}(x_{3})\phi^{\dagger}(x_{3}) \eta^{{\alpha}}(x_{1}) | 0,0, N_R^{\dagger}(\boldsymbol{p})\rangle\, ,
+\end{align}
+
+\begin{align}
+  \eta_(x)|N_R^{\dagger} (\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&\langle l(\boldsymbol{p},s)|\xi_-^{\dagger}(x)=&\langle 0|\frac{1}{\sqrt{2 E_p V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x}|0\rangle\, .
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\overleftarrow{iS}(x_{1}-x_{2})i\Delta(x_{2}-x_{1})\overrightarrow{\overleftarrow{iS}}(x_{3}-x_{2})\nonumber \\ e^{i p'\cdot x_{3}}e^{i k\cdot x_{3}}e^{-i p\cdot x_{1}}x^{\dagger}(s,\boldsymbol{p'})x(s,\boldsymbol{p})\, ,
+\end{align}
+
+\begin{align}
+S=\frac{(-i)^{3}}{3}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overleftarrow{iS}(k)i\Delta(q_{2})\overrightarrow{\overleftarrow{iS}}(q_{3})\nonumber\\ 
+e^{-iq_{1}\cdot (x_{1}-x_{2})}e^{-iq_{2}\cdot (x_{2}-x_{1})}e^{-iq_{3}\cdot (x_{3}-x_{2})}e^{i p'\cdot x_{3}}e^{i k\cdot x_{3}}e^{-i p\cdot x_{1}}x^{\dagger}(s,\boldsymbol{p'})x(s,\boldsymbol{p})\, ,
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}\overleftarrow{iS}(q_{1})i\Delta(q_{2})\overrightarrow{\overleftarrow{iS}}(q_{3})\nonumber\\(2\pi)^4\delta(p+q_{1}-q_{2})(2\pi)^4\delta(q_{2}-k-q_{3})(2\pi)^4\delta(q_{3}-p'-q)x^\dagger(s,\boldsymbol{p'})x(s,\boldsymbol{p})\, ,
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\delta(p-(p'+k))\overrightarrow{\overleftarrow{iS}}(p)\nonumber \\ \int \frac{dk}{(2\pi)^4}(2\pi)^4i\Delta(p+k){\overleftarrow{iS}}(k)x^\dagger(s,\boldsymbol{p'})x(s,\boldsymbol{p})\, ,
+\end{align}
+
+\begin{align}
+S={(-i)^{3}}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k 
+V}}\delta(p-(p'+k))\\
+\frac{iM_{k}}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4}(2\pi)^4\frac{i}{(p+k)^2}\frac{ik\overline{\sigma}}{k^2}x^\dagger(s,\boldsymbol{p'})x(s,\boldsymbol{p})\, .
+\end{align} 
+Luego, nosotros obtuvimos
+\begin{align}
+iM_{l}={(-i)^{3}}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{iM_{k}}{p^2-M_{k}^2}\int \frac{dk}{(2\pi)^4}x^\dagger(s,\boldsymbol{p-q})\frac{i}{(p+k)^2}\frac{ik.\overline{\sigma}}{k^2}x(s,\boldsymbol{p}),
+\end{align}
+\begin{align}
+iM_{l}=\frac{(-i)^{3}}{16\pi^2}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{iM_{k}}{p^2-M_{k}^2}(i)^3x^\dagger(s,\boldsymbol{p-q})\pi^2B^{\mu}\overline{\sigma}_{\mu} x(s,\boldsymbol{p})\, ,
+\end{align}
+\begin{align}
+iM_{l}=\frac{(-i)^{3}}{16\pi^2}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{iM_{k}}{p^2-M_{k}^2}(i)^3x^\dagger(s,\boldsymbol{p-q})p^{\mu}B_{1}(p^2,0,0)\overline{\sigma}_{\mu} x(s,\boldsymbol{p})\, .
+\end{align}
+Utilizando las ecuaciones de momentum de Dirac
+\begin{align}
+iM_{l}=\frac{i}{16\pi^2}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{M_{k}}{p^2-M_{k}^2}\pi^2B_{1}(p^2,0,0)x^\dagger(s,\boldsymbol{p-q})y^\dagger(s,\boldsymbol{p})\, .
+\end{align}
+
+Empleando las amplitudes de dispersión, procedimos a la obtención de la asimetría (\ref{asimetria}). La implementación de las siguientes propiedades, permitieron obtener una expresión más compacta para el cálculo de la asimetría.
+Las expresiones para las amplitudes de dispersión, adquieren la siguiente forma
+\begin{align}
+|M|^2=|M_{t}|^2+|M_{l}|^2+2Re(M_{t}M^*_{l})\nonumber \\
+|\overline{M}|^2=|\overline{M_{t}}|^2+|\overline{M_{l}}|^2+2Re(\overline{M_{t}} \overline{M^*_{l}})
+\end{align}
+al considerar
+\begin{align}
+Re(z_{1}z^*_{2})=|z_{1}||z_{2}|\, .
+\end{align}
+\begin{align}
+\label{92}
+|M_{t}|^2&=\lambda^*_{ji}x^{\dagger}(p-q,s)y^{\dagger}(p,s)\lambda_{ji}y(p,s)x(p-q,s)\nonumber\\
+|M_{t}|^2&=\lambda^*_{ji}\lambda_{ji}M_{i}^2\nonumber\\
+|M_{t}|^2&=(\lambda^{\dagger}\lambda)_{ii}M_{i}^2\, . 
+\end{align}
+De igual forma 
+\begin{align}
+|\overline{M_{t}}|^2&=\lambda_{ji}x(p-q,s)y(p,s)\lambda^*_{ji}y^{\dagger}(p,s)x^{\dagger}(p-q,s)\nonumber\\
+|\overline{M_{t}}|^2&=\lambda_{ji}\lambda^*_{ji}M_{i}^2\nonumber\\
+|\overline{M_{t}}|^2&=(\lambda\lambda^{\dagger})_{ii}M_{i}^2
+\end{align}
+Por tanto, 
+\begin{align*}
+|\overline{M_{t}}|^2=M_{t}|^2. 
+\end{align*}
+De igual forma
+\begin{align*}
+|\overline{M_{l}}|^2=M_{l}|^2
+\end{align*}
+por tanto
+\begin{align}
+\epsilon=\frac{Re(M_{t}M^*_{l})-Re(\overline{M_{t}} \overline{M^*_{t}})}{|M_{t}|^2}\, .
+\end{align}
+Luego 
+\begin{align}
+M_{t}M^*_{l}&=M_{t}(M^{*(a)}_{l}+M^{*(b)}_{l})\\
+&=i\lambda^*_{ji}x^{\dagger}(p-q)y^{\dagger}\frac{1}{16\pi^2}
+\frac{M_{i}}{M_{i}-M_{k}^2}B_{1}^*(p^2,0,0)x^\dagger(s,\boldsymbol{p-q})y^\dagger(s,\boldsymbol{p})\\ \nonumber+&
+(\lambda^*_{jk}\lambda_{mk}\lambda^*_{mi}M_{i}+\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}M_{k})^*\\ \nonumber &
+=\frac{1}{16\pi^2}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}B_{1}^*(p^2,0,0)(\lambda^*_{ji}\lambda_{jk}\lambda^*_{mk}\lambda_{mi}M_{i}+\lambda^*_{ji}\lambda_{jk}\lambda_{mk}\lambda^*_{mi}M_{k})
+\end{align}
+\begin{align}
+Re(M_{t}M^*_{l})=\frac{1}{16\pi^2}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}Re(B_{1})Re(\lambda^*_{ji}\lambda_{jk}\lambda^*_{mk}\lambda_{mi})M_{i}-Im(B_{1}^*)Im(\lambda^*_{ji}\lambda_{jk}\lambda^*_{mk}\lambda_{mi})M_{i}\nonumber \\+Re(B_{1}^*)Re(\lambda^*_{ji}\lambda_{jk}\lambda_{mk}\lambda^*_{mi})M_{k}- Im(B_{1}^*)Im(\lambda^*_{ji}\lambda_{jk}\lambda_{mk}\lambda^*_{mi})M_{k}\, . 
+\end{align}
+De igual modo
+\begin{align}
+\overline{M_{t}}\overline{M^*_{l}}&=\overline{M_{t}}(\overline{M^{*(a)}_{l}}+\overline{M^{*(b)}_{l}})\\
+&=i\lambda_{ji}x(p)y(p-q)\frac{1}{16\pi^2}
+\frac{M_{i}}{M_{i}-M_{k}^2}B_{1}^*(p^2,0,0)x(s,\boldsymbol{p})y(s,\boldsymbol{p-q})\\ \nonumber+&
+(\lambda_{jk}\lambda^*_{mk}\lambda_{mi}M_{i}+\lambda_{jk}\lambda_{mk}\lambda^*_{mi}M_{k})^*\\ \nonumber &
+=\frac{1}{16\pi^2}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}B_{1}^*(p^2,0,0)(\lambda_{ji}\lambda^*_{jk}\lambda_{mk}\lambda^*_{mi}M_{i}+\lambda_{ji}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}M_{k})
+\end{align}
+\begin{align}
+Re(\overline{M_{t}}\overline{M^*_{l}})=\frac{1}{16\pi^2}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}Re(B_{1}^*)Re(\lambda_{ji}\lambda^*_{jk}\lambda_{mk}\lambda^*_{mi})M_{i}-Im(B_{1}^*)Im(\lambda_{ji}\lambda^*_{jk}\lambda_{mk}\lambda^*_{mi})M_{i} \nonumber\\+Re(B_{1}^*)Re(\lambda_{ji}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}M_{k})-Im(B_{1}^*)Im(\lambda_{ji}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}M_{k})\, .
+\end{align}
+
+Teniendo en cuenta las siguientes desigualdades 
+\begin{align}
+Re(z_{1}z_{2})=Re(z_{2}^*z_{1})\\
+Im(z_{1}z_{2})=-Im(z_{2}^*z_{1})
+\end{align}
+ por tanto,
+ \begin{align}
+ \label{103}
+ Re(M_{t}M^*_{l})-Re(\overline{M_{t}}\overline{M^*_{l}})=\frac{2}{16\pi^2}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}Im(B_{1}^*)Im(\lambda_{ji}\lambda^*_{jk}\lambda_{mk}\lambda^*_{mi})M_{i}+Im(B_{1}^*)Im(\lambda_{ji}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi})M_{k}\, . 
+ \end{align}
+ Para obtener el valor de $Im(B_{1}^*)$, nosotros utilizamos la expresión de $B_{1}$ en términos de $A_{0}$~\cite{Ellis:2011cr}
+ \begin{align}
+ B_{1}(p^2,0,m_{2}^2)=\frac{1}{2p^2}[A(m_{1})-A(m_{2})-(p^2-m_{2}^2)B_{0}(p^2,0,m_{2}^2)\, . 
+\end{align}
+ Por lo cual,
+  \begin{align}
+ B_{1}(p^2,0,0)=\frac{-1}{2}B_{0}(p^2,0,0)
+ \end{align}
+ Por otro lado utilizando parametrización de feymann~\cite{oleari:2017}
+ \begin{align}
+ B_{0}(p^2,0,0)&=\frac{(2\pi)^4}{i\pi^2}\frac{i}{(4\pi)^2}\Gamma(1+e)\Gamma^2(1-e)\frac{i\pi}{\Gamma(1-2e)}\nonumber \\
+  B_{0}(p^2,0,0)&=i\pi
+ \end{align}
+ \begin{align}
+ \label{107}
+ ImB_{1}(p^2,0,0)=\frac{-\pi}{2}\, . 
+ \end{align}
+ Reemplazando la ecuación (\ref{107}) en (\ref{103}) y usando (\ref{92})\. , la asimetría adquiere la siguiente forma
+ \begin{align}
+ \epsilon_{s}=\frac{1}{16\pi}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}\frac{Im[\lambda_{ji}\lambda^*_{jk}(\lambda^\dagger\lambda)_{ik}]M_{i}+Im[\lambda_{ji}\lambda^*_{jk}(\lambda^\dagger\lambda)_{ki}]M_{k}}{(\lambda^\dagger\lambda)_{ii}}\, . 
+ \end{align}
+El resultado de la ecuación únicamente considera los leptones neutros moviéndose en el loop
+Al considerarse también los leptones cargados en el loop se obtiene
+ \begin{align}
+ \label{asi}
+ \epsilon_{s}=\frac{1}{8\pi}\sum_{k\not=i}
+\frac{M_{i}^3}{M_{i}^2-M_{k}^2}\frac{Im[\lambda_{ji}\lambda^*_{jk}(\lambda^\dagger\lambda)_{ik})]M_{i}+Im[\lambda_{ji}\lambda^*_{jk}(\lambda^\dagger\lambda)_{ki}]M_{k}}{(\lambda^\dagger\Lambda)_{ii})}\, . 
+ \end{align}
+ Asimismo, empleando el mismo análisis utilizado en la asimetría de self-energy, se obtiene una expresión para la asimetría del vértice.
+\begin{align}
+\epsilon=\frac{Re( M_{t}M_{v}^*)-Re(\overline{M_{t}}\overline{M_{v}^*})}{|M_{t}|^2}\, . 
+\end{align}
+En la figura \ref{v} se muestra una contribución a la asimetría del vértice, el estado final son partículas
+\begin{figure}[H]
+  \centering
+   \begin{tikzpicture}
+  \begin{feynman}
+     \vertex (a) {\(\eta^{{\alpha}}\)};
+    \vertex [right=of a] (b);
+    \vertex [above right=of b] (f1);
+    \vertex [below right=of b] (c);
+  \vertex [right=of f1] (f2);
+  \vertex [right=of c] (f3);
+       \diagram* {
+      (a) -- [fermion] (b) -- [anti fermion] (f1),
+      (b) -- [scalar] (c),
+      (f1) -- [] (c),
+      (f1) -- [scalar,edge label=H] (f2),
+      (c) -- [fermion,edge label'={\(\xi^{\dagger}_{\beta}\)}] (f3),
+
+};  
+  \end{feynman} 
+  \end{tikzpicture}
+  \caption{Diagrama de Feymann que representa los términos de la ecuación~(\ref{vertice}})
+  \label{v}
+\end{figure}
+
+\begin{align}
+\label{vertice}
+\eta_+(x)|N_R ^\dagger(\boldsymbol{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&\langle l_+^\dagger(\boldsymbol{p},s|\xi_-(x)=\langle 0|\frac{1}{2E_p V}y(s,\mathbf{p})e^{i p\cdot x}
+\end{align}
+
+\begin{align}
+S=&(-i)^{3}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_k V}}\int\operatorname{d}^{4}x_{1}\operatorname{d}^{4}x_{2}
+\operatorname{d}^{4}x_{3} \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}x^\dagger(s,\boldsymbol{p'})\overleftarrow{iS}(k)i\Delta(q_{1})\overrightarrow{iS}(q_{2})\nonumber\\ 
+&e^{-ik\cdot (x_{1}-x_{2})}e^{-iq_{2}\cdot (x_{2}-x_{3})}e^{-iq_{1}\cdot  (x_{3}-x_{1})}e^{ip'\cdot x_{3}}e^{i q\cdot x_{2}}e^{-i p\cdot x_{1}}x(s,\boldsymbol{p}).
+\end{align}
+\begin{align}
+\int\operatorname{d}^{4}x_{1}e^{-ik\cdot (x_{1})}e^{-ip\cdot (x_{1})}e^{-iq_{1}\cdot (x_{1})}=(2\pi)^4\delta(p+k-q_{1})\\ 
+\int\operatorname{d}^{4}x_{2}e^{iq\cdot (x_{2})}e^{-iq_{2}\cdot (x_{2})}e^{ik\cdot (x_{2})}=(2\pi)^4\delta(q_{2}-k-q)\\
+\int\operatorname{d}^{4}x_{3}e^{iq\cdot (x_{3})}e^{ip'\cdot (x_{3})}e^{-iq_{3}\cdot (x_{3})}=(2\pi)^4\delta(q_{1}-p'-q_{2}).
+\end{align}
+\begin{align}
+S={(-i)^3}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_q}}\int \frac{dk}{(2\pi)^4}\frac{dq_{2}}{(2\pi)^4}\frac{dq_{3}}{(2\pi)^4}x^\dagger(s,\boldsymbol{p'})\overleftarrow{iS}(k)i\Delta(q_{1})\overrightarrow{iS}(q_{2})\nonumber\\(2\pi)^4\delta(p+k-q_{1})(2\pi)^4\delta(q_{2}-k-q)(2\pi)^4\delta(q_{1}-p'-q_{2})x(s,\boldsymbol{p}).
+\end{align}
+  \begin{align}
+S={(-i)^6}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\frac{1}{\sqrt{2E_p V}}\frac{1}{\sqrt{2E_{p'} V}}\frac{1}{\sqrt{2w_q V}}\int \frac{dk}{(2\pi)^4}x^\dagger(s,\boldsymbol{p'})\frac{1}{(p+k)^2}\frac{\sigma_{\mu}k^{\mu}+\sigma_{\mu}q^{\mu}+M_{k}}{(k+p)^2-M_k}\frac{\sigma_{\nu}k^{\nu}}{k^2}\nonumber\\(2\pi)^4\delta(p-(p'+q))
+x(s,\boldsymbol{p}).
+\end{align}
+
+\begin{align}
+iM={(-i)^6}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}\int \frac{dk}{(2\pi)^4}x^\dagger(s,\boldsymbol{p-q})\frac{1}{(p+k)^2}\frac{\sigma_{\mu}k^{\mu}+\sigma_{\mu}q^{\mu}+M_{k}}{(k+p)^2-M_k}\frac{\sigma_{\nu}k^{\nu}}{k^2}
+x(s,\boldsymbol{p}).
+\end{align}
+ 
+\begin{align}
+iM=-\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}x^\dagger(s,\boldsymbol{p-q})I
+x(s,\boldsymbol{p}).
+\end{align} 
+donde
+\begin{align}
+I=\int \frac{dk}{(2\pi)^4}\frac{1}{(p+k)^2}\frac{\sigma_{\mu}k^{\mu}+\sigma_{\mu}q^{\mu}+M_{k}}{(k+p)^2-M_k}\frac{\sigma_{\nu}k^{\nu}}{k^2}
+\end{align}
+La integral puede ser expresada como:
+\begin{align}
+\label{integral}
+I=a_{0}+\gamma_{\mu}a^{\mu}+\gamma_{\mu}\gamma_{\nu}a^{\mu\nu}
+\end{align}
+con
+\begin{align}
+a_{0}&=\frac{2i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \left(\Delta-\frac{1}{2}-ln\frac{\Delta}{\mu^2}-\frac{1}{2\Delta}(px+qy)^2)\right)\nonumber\\
+a^{\mu}&=\frac{i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \frac{(p^{\mu}x+q^{\mu}y)}{\Delta}M_{k}\nonumber\\
+a^{\mu\nu}&=\frac{i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \frac{q^{\mu}p^{\nu}}{\Delta}
+\end{align}
+Con $z=\frac{M^2_{k}}{M^2_{i}}$ y $\Delta=-M_{i}^2x(1-x)+(M_{i}^2x+M_{k}^2y)$
+
+\begin{align}
+iM=-i\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}x^\dagger(s,\boldsymbol{p-q})\frac{i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \frac{(\sigma_{\mu}p^{\mu}x+\sigma_{\mu}q^{\mu}y)
+}{(x+z)y-x(1-x)}M_{k}
+x(s,\boldsymbol{p}).
+\end{align} 
+
+\begin{align}
+iM=-\frac{i}{(4\pi)^2}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}x^\dagger(s,\boldsymbol{p-q})\int_{0}^{1} dx \int_{0}^{1-x} dy\frac{(x+y)}{(x+z)y-x(1-x)} M_{k}M_{i}
+y^\dagger(s,\boldsymbol{p})\, .
+\end{align} 
+
+Ahora 
+\begin{align}
+\label{int}
+f(z)=\int_{0}^{1} dx \int_{0}^{1-x} dy\frac{(x+y)}{(x+z)y-x(1-x)}
+\end{align}
+ 
+ \begin{align}
+ iM=-\frac{i}{(4\pi)^2}\lambda^*_{jk}\lambda^*_{mk}\lambda_{mi}x^\dagger(s,\boldsymbol{p-q})\sqrt{z}f(z)y^\dagger(s,\boldsymbol{p}).
+ \end{align}
+De igual forma 
+  \begin{align}
+ i\overline{M}=-\frac{i}{(4\pi)^2}\lambda_{jk}\lambda_{mk}\lambda^*_{mi}y(s,\boldsymbol{p-q})\sqrt{z}f(z)x(s,\boldsymbol{p}).
+ \end{align}
+ 
+ \begin{align}
+ M_{t}M_{v}^*=\frac{-1}{(4\pi)^2}\lambda^*_{ji}\lambda_{jk}\lambda^*_{mi}\lambda_{mk}M^2_{i}\sqrt{z}|f(z)|^*M_{i}
+ \end{align}
+  \begin{align}
+ \overline{M_{t}}\overline{M_{v}^*}=\frac{-1}{(4\pi)^2}\lambda_{ji}\lambda^*_{jk}\lambda_{mi}\lambda^*_{mk}M^2_{i}\sqrt{z}|f(z)|^*M_{i}\, .
+ \end{align}
+ De igual forma, utilizando las propiedades para números complejos se obtiene
+ \begin{align}
+ Re( M_{t}M_{v}^*)-Re(\overline{M_{t}}\overline{M_{v}^*})=-\frac{\sqrt{z}M_{i}^2}{4\pi^2}M_{i}Re(\lambda^*_{ji}\lambda_{jk}\lambda^*_{mi}\lambda_{mk})Re(|f(z)|^*)-Im(\lambda^*_{ji}\lambda_{jk}\lambda^*_{mi}\lambda_{mk})Im(|f(z)|^*)\nonumber\\-Re(\lambda_{ji}\lambda^*_{jk}\lambda_{mi}\lambda^*_{mk})Re(|f(z)|^*)+Im(\lambda_{ji}\lambda^*_{jk}\lambda_{mi}\lambda^*_{mk})Im(|f(z)|^*)\, . 
+ \end{align}
+  \begin{align}
+  Re( M_{t}M_{v}^*)-Re(\overline{M_{t}}\overline{M_{v}^*})=-\frac{\sqrt{z}M_{i}^2}{(4\pi)^2}M_{i}Im(\lambda_{ji}\lambda^*_{jk}\lambda_{mi}\lambda^*_{mk})Im(|f(z)|^*)\, .
+ \end{align}
+ Resolviendo la integral (\ref{int}) se obtiene
+ \begin{align}
+  Im(|f(z)|^*)=-\pi\left[1-(1+z)log\left(\frac{1+z}{z}\right)\right]\, .	
+ \end{align}
+Luego 
+\begin{align}
+\epsilon_{v}&-\frac{\sqrt{z}M_{i}^2}{8\pi}\frac{(\lambda_{ji}\lambda^*_{jk}\lambda_{mi}\lambda^*_{mk})}{(\lambda^{\dagger}\lambda)_{ii}M_{i}^2}\left[1-(1+z)log\left(\frac{1+z}{z}\right)\right]\, ,
+\end{align}
+%\left[1-(1+z)(\frac{1}{x}+\frac{1}{2x^2}+\frac{1}{3x^3}
+%(\lambda^{\dagger}\lambda)_{ii}M_{i}^2
+%Im({\Lambda\lambda^\dagger})_{1k}^2
+\begin{align}
+\epsilon_{v}=-\frac{M_{i}^2}{8\pi}\frac{Im[({\lambda\lambda^\dagger})_{ki}^2]}{(\lambda^{\dagger}\lambda)_{ii}M_{i}^2}\left[1-z\left(\frac{1}{z}+\frac{1}{2z^2}+\frac{1}{3z^2}\right)\right]\, ,
+\end{align}
+\begin{align}
+\label{aver}
+\epsilon_{v}=\frac{-1}{16\pi}\sum_{k\not=i}\frac{Im[({\lambda\lambda^\dagger})_{ki}^2]}{{(\lambda\lambda^\dagger)}_{ii}}\frac{M_i}{M_k}\, .
+\end{align}
+Valiéndonos de la ecuación (\ref{asi}) y (\ref{aver}) se obtiene la asimetría total
+\begin{align}
+\epsilon&=\epsilon_{v}+\epsilon_{s}\nonumber\\
+&=\frac{-3}{16\pi}\sum_{k\not=i}\frac{Im[({\lambda\lambda^\dagger})_{ki}^2]}{{(\lambda\lambda^\dagger)}_{ii}}\frac{M_i}{M_k}\, . 
+\end{align}
+Cuando se asume jerarquía normal para los neutrinos, es decir, $M_{1}<<M_{2}, M_{3}$, la expresión de la asimetría, adquiere la siguiente forma
+\begin{align}
+\epsilon
+=\frac{-3}{16\pi}\sum_{k=2,3}\frac{Im[({\lambda\lambda^\dagger})_{k1}^2]}{{(\lambda\lambda^\dagger)}_{11}}\frac{M_1}{M_k}\, . 
+\end{align}
+La asimetría generada es ocasionada fundamentalmente por $N_{1}$. En el momento que se alcanza una temperatura por debajo de $M_{1}$, los neutrinos pesados no pueden mantenerse en equilibro termodinámico y terminan por decaer.
+Se han establecidos algunas cotas en la asimetría que permite el estudio de diferentes modelos. Un ejemplo es la cota de Davidson e Ibarra~\cite{Davidson:2002qv}
+En el modelo de See-saw, la matriz de neutrinos ligeros en la base de leptones cargados~\cite{Davidson:2008bu}
+\begin{align}
+m_{v}\sim \frac{\lambda^Tv^2\lambda}{M}
+\end{align}
+\begin{align}
+\epsilon&=\frac{-3}{16\pi}\frac{1}{\lambda\lambda^\dagger}_{11}\sum_{k}Im[{\lambda\lambda^\dagger}_{1k}{(\lambda\lambda^\dagger)}_{k1}^T]\frac{M_{1}}{M_{k}}\nonumber\\
+&=\frac{-3}{16\pi}\frac{1}{\lambda\lambda^\dagger}_{11}\sum_{k}Im[({\lambda\lambda^\dagger})_{1k}{(\lambda^{\dagger T}\lambda^T})_{k1}]\frac{M_{1}}{M_{k}}\nonumber\\
+&=\frac{-3}{16\pi}\frac{1}{\Lambda\lambda^\dagger}_{11}\sum_{k}Im
+\frac{[\lambda M(m_{\nu}^{\dagger})\lambda^{T}]_{11}}{\nu_{2}}\frac{M_{1}}{M_{k}}
+\nonumber\\
+&=\frac{-3}{16\pi}\frac{M}{v^2}\frac{1}{\Lambda\lambda^\dagger}_{11}\sum_{k}Im
+[\lambda(m_{\nu}^{\dagger})\lambda^{T}]_{11}\frac{M_{1}}{M_{k}}\, . 
+\end{align}
+Usando la parametrización de Yukawa~\cite{Casas:2001sr}
+\begin{align}
+\lambda=\frac{1}{v}\sqrt{M}R\sqrt{m}U^{\dagger}
+\end{align}
+$M$ y $m$ son las matrices de auto-valores para los neutrinos pesados ligeros y pesados respectivamente, $R$ es una matriz compleja ortogonal, $U$ la matriz de mezcla de neutrinos y $v$ es el valor de expectación de ruptura de vació para la interacciones electrodébil 
+\begin{align}
+\epsilon\sim\frac{-3}{16\pi}\frac{M_{1}}{v^2}\frac{\sum_{k}m^2_{k}Im(R_{1k}^2)}{\sum_{k}m_{k}|R_{1k}|^2}
+\end{align}
+\begin{align}
+|\epsilon|&\lesssim\frac{3}{16\pi}\frac{M_{1}}{v^2}\frac{m_{1}^2|R_{11}^2|+m_{2}^2|R_{12}^2|+m_{3}^2|R_{13}^2|}{m_{1}|R_{11}|^2+m_{2}|R_{12}|^2+m_{3}|R_{13}|^2}\, . 
+\end{align}
+R es una matriz ortogonal, en consecuencia, $\sum_{k}R_{1k}^{2}=1$. R puede ser escrito como 
+\begin{align}
+R=\hat{R}\ \ \operatorname{diag}(\pm 1,\pm 1,\pm 1)
+\end{align}
+\begin{align}
+\hat{R}=\begin{pmatrix}c_{13}c_{12}&c_{13}s_{12}&s_{13}\\-c_{23}s_{12}-s_{23}s_{13}c_{12}&c_{23}c_{12}-s_{23}s_{13}s_{12}&s_{23}c_{13}\\s_{23}s_{12}-c_{23}s_{13}c_{12}&-s_{23}c_{12}-c_{23}s_{13}s_{12}&c_{23}c_{13}  \end{pmatrix}
+\end{align}
+donde $c_{ij}=\cos{z_{ij}}$ y $s_{ij}=\operatorname{sen}{z_{ij}}$
+\begin{align}
+|\epsilon|&\lesssim\frac{3}{16\pi}\frac{M_{1}}{v^2}\frac{m_{1}^2-m_{1}^2R_{13}^2-m_{1}^2R_{12}^2+m_{2}^2R_{12}^2+m_{3}^2R_{13}^2}{m_{1}-m_{1}R_{13}^2-m_{1}R_{12}^2+m_{2}R_{12}^2+m_{3}R_{13}^2}\nonumber \\
+&\lesssim\frac{3}{16\pi}\frac{M_{1}}{v^2}\frac{m_{1}^2+(m_{3}^2-m_{1}^2)R_{13}^2+(m_{2}^2-m_{1}^2)R_{12}^2}{m_{1}+(m_{3}-m_{1})R_{13}^2+(m_{2}-m_{1})R_{12}^2}\nonumber
+\end{align} 
+Teniendo en cuenta $\Delta m_{31}^{2}\approx 10^{-3}$ y $\Delta m_{31}^{2}\approx 10^{-5}$~\cite{GonzalezGarcia:2012sz} se obtiene
+\begin{align}
+|\epsilon|&\lesssim\frac{3}{16\pi}\frac{M_{1}}{v^2}(m_{3}-m_{1})\, . 
+\end{align}
+Para que la asimetría CP, puede generar asimetría bariónica, debe cumplirse 
+\begin{align}
+\epsilon\lesssim10^{-7} \ \ \text{GeV}\, . 
+\end{align}
+Por otro lado, $v\sim$ $174$ $\text{GeV}$. En consecuencia, la masa del neutrino $M_{1}$ tiene que ser superior a $10^{9}$ $\text{GeV}$. Para que se dé la producción de neutrinos $T_{1}>M_{1}$, en este caso 
+\begin{align}
+\label{bario}
+T\gtrsim10^{8}-10^{9} \ \ \text{GeV}\, . 
+\end{align}
+Este rango de temperatura es de especial interés para establecer la producción de gravatino, si estas partículas son inestables se produce una disociación de elementos ligeros que contradicen los resultados predichos por la nucleosíntesis y un aumento de fotones que terminan por disminuir $\frac{n_{b}}{n_{\gamma}}$~\cite{Davidson:2002qv}. Para contrarrestar, esta situación se establece una cota en la temperatura de recalentamiento
+\begin{align}
+\label{gra}
+T\lesssim10^{9}-10^{12} \ \ \text{GeV}\, . 
+\end{align}
+Se da una contradicción entre (\ref{bario}) y (\ref{gra}). Con el fin de darle solución a esta situación, se han estudiado modelos donde la estabilidad del gravitino se logra para $T\lesssim10^{11}$ $\text{GeV}$ y también se han analizado situaciones donde los neutrinos no sean generados térmicamente
+

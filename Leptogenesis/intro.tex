@@ -1,0 +1,77 @@
+\chapter{Introducción} 
+%
+\InitialCharacter{E}xplicar el origen del universo se ha convertido en una de las tareas más importantes de la comunidad científica, S. Hawking argumentaba: ``mi único objetivo es poder entender las razones por las cuales el universo es tal como es''~\cite{boslough1989stephen}. De los momentos iniciales del universo tenemos poca información, la teoría del Big Bang supone que todo comenzó con una gran explosión, según S. Hawking todo lo que ocurrió antes no tiene importancia~\cite{tyson_hawking_2018}. Una de las incógnitas que nos explica el Big Bang, es el porqué de la homogeneidad e isotropía del universo, La teoría de la inflación da explicación a estas incógnitas suponiendo que el universo sufrió una  expansión acelerada (exponencial)~\cite{Guth:1981}. Más tarde, A. Linde realiza correcciones a la idea inicial de Guth, la teoría está basada en un potencial asociado con un campo escalar (inflaton) a medida que el potencial sufre variaciones el universo se expande y por tanto, se enfría. Luego de las variaciones que sufre el potencial este comienza a oscilar alrededor de su mínimo, la energía producida en las oscilaciones se transforma en la energía necesaria para el surgimiento de materia y anti-materia~\cite{Linde:1981mu}. Se produce el decaimiento de partículas masivas, de igual forma, debido a las altas temperaturas que dominan el universo el proceso inverso también se produce. La expansión del universo trae como consecuencia una baja en la temperatura. A medida que la temperatura disminuye, se produce de forma sistemática, en función de la masa de las partículas, una imposibilidad de producir los procesos inversos. Se empieza a producir la aniquilación entre partículas y anti-partículas. Por lo cual, se esperaría que existiera una simetría entre ellas, es decir:%
+% * <restrepo@udea.edu.co> 2018-05-29T14:30:58.359Z:
+% 
+% Aclarar que no es en un sólo paso
+% 
+% ^.
+\begin{equation}
+n_{B}=	n_{\overline{B}}\, ,
+\end{equation}
+%
+La existencia de universo, planetas y habitantes, no es posible si esta simetría permanece exacta. Las observaciones muestran que en realidad~\cite{PDBook}
+%
+\begin{align}
+\frac{n_{B}-n_{\overline{B}}}{n_{\gamma}}=10^{-10}\, .
+\end{align}
+%
+Lo cual significa, que por cada $10^{10}+1$ barión existen $10^{10}$ anti-bariones. Por tanto, en algún momento se debió generar una asimetría entra bariónes y antibariónes. El proceso mediante el cual se genera esta asimetría, recibe el nombre bariogénesis.
+En 1967 el físico ruso A. Sájarov estableció tres condiciones que debería cumplir una teoría que tratara de explicar la asimetría~\cite{Sakharov:1967dj}: la primera de ellas sostiene que Para producirse una asimetría bariónica  es necesario que en ciertas interacciones el número bariónico no se conserve 
+%
+% * <restrepo@udea.edu.co> 2018-05-29T14:36:31.541Z:
+%
+% ^.
+%
+La segunda se relaciona con el concepto de carga y paridad. El concepto de carga ($C$) está relacionado con el hecho de transformar partículas en anti-partículas. La paridad transforma un electrón derecho en un izquierdo. Para producirse un universo asimétrico era necesario una violación $CP$. La tercera es que se produzca una pérdida de equilibrio termodinámico, esto se sustenta con el hecho de que cuando existe equilibrio termodinámico y se produce una desintegración es totalmente factible que se produzca la desintegración inversa, manteniendo la simetría del universo.
+Existen varios mecanismos que  cumplen con estas condiciones, el modelo de leptogénesis es uno de ellos. Este modelo fue propuesto por M.  Fukugita y T. Yanagida,  en 1986~\cite{Fukugita:1986hr}. La leptognesis se basa en la generación de asimetría, a partir, del decaimiento de neutrinos derechos, los cuales son introducidos a través del mecanismo see-saw. El mecanismo introduce tres nuevas partículas masivas, sus acoples e interacciones de Yukawa proveen las fuentes necesarias para producir la violación CP y el alejamiento del equilibrio térmico.
+Nosotros centraremos nuestro zona de estudio en el momento en el cual existió el desequilibrio termodinámico que permitió a los neutrinos desacoplarse de las demás partículas forman un plasma. Por tal razón, implementamos el uso de doblete leptónico y escalar de Higgs.
+%
+\begin{align}
+-\mathcal{L}=\lambda_{ij}^*\epsilon_{ab}   H^{\dagger b}{l^\dagger}^a_i {N_R}_j+\frac{1}{2}{M_R}_i {N_R}_i {N_R}_i+h.c \, ,
+\end{align}
+donde hemos definido
+\begin{align}
+  H=\begin{pmatrix}
+H^{\dagger}\\
+H^{0}
+\end{pmatrix}\, & L=\begin{pmatrix}
+\nu\\
+e_{l}
+\end{pmatrix}\, . 
+\end{align}
+%
+Además, ${M_R}_i$ corresponde a las masas de Majorana de los neutrinos derechos. Después de producirse la ruptura de simetría, adquieren una masa de Dirac. 
+% * <restrepo@udea.edu.co> 2018-05-29T14:44:40.038Z:
+% 
+% Comprobar notación para M_R
+% 
+% ^.
+%
+\begin{align}
+-\mathcal{L}&=M^{i}_{D}\nu_{li}^{\dagger}N_{R}+\frac{1}{2}{M_R}_{i} {N_R}_i {N_R}_i\nonumber\\
+&=\frac{1}{2}M^{i}_{D}\nu_{li}^{\dagger}N_{R}+\frac{1}{2}M^{i}_{D}\nu_{li}^{\dagger}N_{R}+\frac{1}{2}{M_R}_{i} {N_R}_i {N_R}_i\nonumber\\
+&=\frac{1}{2} \begin{pmatrix} \nu_{l}^{\dagger}&N_{R}  \end{pmatrix} \begin{pmatrix}
+0_{3x3}&M_{D}\\
+M^{T}_{D}&M_{R}
+\end{pmatrix}\begin{pmatrix} \nu_{l}^{\dagger}\\N_{R}  \end{pmatrix}
+\end{align}
+Definiendo 
+$\chi=\begin{pmatrix} \nu_{l}^{\dagger}\\N_{R}  \end{pmatrix}$, y la matriz de masa 
+$M_{\chi}=\begin{pmatrix}0_{3X3}&M_{D}\\M^{T}_{D}&M_{R}  \end{pmatrix}$
+La matriz tiene los siguientes auto-valores
+\begin{align}
+M_{\chi_{\pm}}&=\frac{1}{2}\left[M_{R}\pm(M^{2}_{R}+4M_{D}M^{T}_{D})^{\frac{1}{2}}\right]\nonumber \\
+&=\frac{1}{2}\left[M_{R}\pm M_{R}(1+{4M_{D}M^{-2}_{R}M^{T}_{D}})^{\frac{1}{2}}\right]
+\end{align}
+$M_{R}\gg M_{D}M^{T}_{D}$.
+Por lo cual, se obtiene
+\begin{align}
+M_{\chi_{\pm}}=\frac{M_{R}}{2}[1\pm(2M_{D}M^{-2}_{R}M^{T}_{D})]\, .
+\end{align}
+Entonces
+\begin{align}
+M_{\chi_{-}}&=-M_{D}M^{-1}_{R}M^{T}_{D}\nonumber \\
+M_{\chi_{+}}&=M_{R}\, .
+\end{align}
+La asimetría leptónica pasa a convertirse en asimetría bariónica, mediante un proceso mediado por esfalerones~\cite{Biswas:2017tce}. Estos procesos se caracterizan por la conservación de $B-L$ pero por la violación de $B+L$. Tanto $B$ como $L$ se escriben en términos $B-L$, de modo que, al generarse una asimetría leptónica se transfiere a una asimetría bariónica 

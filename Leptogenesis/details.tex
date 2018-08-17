@@ -1,0 +1,187 @@
+\chapter{Detalles generales}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Four-components}
+Recordar que para un espinor de Dirac como el electrón, $e$
+\begin{align}
+\Psi=\begin{pmatrix}
+e_L\\
+e_R\\
+\end{pmatrix}.
+\end{align}
+Entonces
+\begin{align}
+\Psi_L=&P_L\begin{pmatrix}
+e_L\\
+e_R\\
+\end{pmatrix}=\begin{pmatrix}
+e_L\\
+0\\
+\end{pmatrix},&
+\Psi_R=&P_R\begin{pmatrix}
+e_L\\
+e_R\\
+\end{pmatrix}=\begin{pmatrix}
+0\\
+e_R\\
+\end{pmatrix},
+\end{align}
+o nosotros definimos el fermión de Dirac izquierdo como 
+Para un fermión de Weyl izquierdO, $l_{\alpha}$, nosotros definimos el fermión de Dirac izquierdo como 
+
+\begin{align}
+\label{eq:fc1}
+ P_L L=\begin{pmatrix}
+l\\
+0
+\end{pmatrix}.
+\end{align}
+Nosotros consideramos un fermión de Majorana de 4-componentes definido de un anti-fermión de Weyl izquierdo $\eta^{\alpha}$
+
+\begin{align}
+\Psi_M
+=\begin{pmatrix}
+\eta\\
+\eta^\dagger
+\end{pmatrix}.
+\end{align}
+En efecto, nosotros tenemos el correspondiente fermión de Majorana derecho
+\begin{align}
+\widetilde{N}_R=&P_R \Psi_M=P_R\begin{pmatrix}
+\eta\\
+\eta^{\dagger}\\
+\end{pmatrix}=
+\begin{pmatrix}
+\eta\\
+0
+\end{pmatrix}
+\end{align}
+El correspondiente anti-fermión de Majorana izquierdo es
+\begin{align}
+\label{eq:fc2}
+\overline{\widetilde{N}_R}=&(\widetilde{N}_R)^\dagger\gamma^0=\Psi_M^\dagger P_R \gamma^0
+=\Psi_M^\dagger  \gamma^0 P_L \nonumber\\
+=&\overline{\Psi_M}P_L \nonumber\\
+=&\left(\Psi_M\right)^\dagger \gamma^0 P_L\nonumber\\
+=&\begin{pmatrix}
+\eta^\dagger & \eta
+\end{pmatrix}\begin{pmatrix}
+0 & 1\\
+1& 0\\
+\end{pmatrix}P_L\nonumber\\
+=&\begin{pmatrix}
+\eta & \eta^\dagger
+\end{pmatrix}P_L\nonumber\\
+=&\begin{pmatrix}
+\eta & 0
+\end{pmatrix},
+\end{align}
+y entonces, para un fermión de Majorana, la partícula es la misma que la antipartícula 
+\section{From $2\to 4$}
+usando \eqref{eq:fc1} and \eqref{eq:fc1}, nosotros tenemos 
+\begin{align}
+-\mathcal{L}=&\lambda_{ij}\epsilon_{ab} l^a_i H^b \eta_j+\text{h.c}\nonumber\\
+=&\lambda_{ij}\epsilon_{ab}\eta_j l^a_i H^b +\text{h.c}\nonumber\\
+=&\lambda_{ij}\epsilon_{ab}\begin{pmatrix}
+\eta_j & 0\\
+\end{pmatrix} \begin{pmatrix}
+l^a_i\\
+0
+\end{pmatrix} H^b +\text{h.c}\nonumber\\
+=&\lambda_{ij}\epsilon_{ab} \overline{\widetilde{N}_R}P_LL^a_i H^b +\text{h.c}\,.
+\end{align}
+\section{Formulas útiles}
+Un numero complejo $Z_{1}$ tiene la siguiente forma:
+\begin{align}
+Z_{1}=r_{1}e^{i\theta_{1}}
+\end{align}
+y su conjugado
+\begin{align}
+Z_{1}^{*}=r_{1}e^{-i\theta_{1}}
+\end{align}
+De igual forma, un numero complejo $Z_{2}$
+\begin{align}
+Z_{2}=r_{1}e^{i\theta_{2}}
+\end{align}
+y su conjugado
+\begin{align}
+Z_{2}^{*}=r_{1}e^{i\theta_{2}}
+\end{align}
+\begin{align}
+|Z_{1}|^2|Z_{2}|^2&=r_{1}r_{2}
+&=Re(Z_{1}Z_{2})
+\end{align}
+De igual forma, es posible definir 
+\begin{align}
+Z_{1}=a_{1}+ib_{1}\nonumber\\
+Z_{2}=c_{2}+id_{2}
+\end{align}
+luego
+\begin{align}
+Z_{1}Z_{2}=a_{1}c_{2}+ia_{1}d_{2}+ib_{1}c_{2}-b_{1}d_{2}
+\end{align}
+Por tanto
+\begin{align}
+Im(Z_{1}Z_{2})=(a_{1}d_{2}-b_{1}d_{2})
+\end{align}
+De igual forma
+\begin{align}
+Im(Z_{1}Z_{2}^{*})=(-a_{1}d_{2}+b_{1}d_{2})
+\end{align}
+lo cual conduce
+\begin{align}
+Im(Z_{1}Z_{2})=-Im(Z_{1}Z_{2}^{*})
+\end{align}
+\subsection{Parametrizacion de Feymann}
+El denominador de la integral esta compuesto por propagadores, para resolver este tipo de integral se introduce parametros de Feymann. Por ejemplo, si se tienen dos propagadores.
+\begin{align}
+\frac{1}{AB}=\int_0^1 dx\frac{1}{[xA+(1-x)B]^2}
+\end{align}
+Para resolver la integral
+\begin{align}
+N&=k^2+(\sigma_{\mu}q^{\mu}+M_{k})\sigma_{\nu}k^{\nu}\nonumber\\
+l&=k+px+qy\nonumber\\
+\Delta&=-M_{i}^2x(1-x)+(M_{i}^2x+M_{k}^{2})y
+\end{align}
+luego, la integral adquiere la siguiente forma
+\begin{align}
+I=2\mu\int_0^1dx\int_0^{1-x}dx\int\frac{d^dl}{(2\pi)^d}\frac{N}{(l^2-\Delta)^3}
+\end{align}
+teniendo en cuenta
+\begin{align}
+N&=[l-(px+qy)]^2+(\sigma_{\mu}q^{\mu}+M_{k})\sigma_{\nu}[l^{\nu}-(p^{\nu}x+q^{\nu}y)]\nonumber\\
+&=l^2-2l\cdot(px+qy)+(px+qy)^2+(\sigma_{\mu}q^{\mu}+M_{k})\sigma_{\nu}l^{\nu}-(\sigma_{\mu}q^{\mu}+M_{k})\sigma_{\nu}(p^{\nu}x+q^{\nu}y)
+\end{align}
+el segundo y el cuarto termino se anulan
+\begin{align}
+I=2\mu\int_0^1dx\int_0^{1-x}dx\int\frac{d^dl}{(2\pi)^d}\frac{l^2+(px+qy)^2-(\sigma_{\mu}q^{\mu}+M_{k})\sigma_{\nu}(p^{\nu}x+q^{\nu}y)}{(l^2-\Delta)^3}
+\end{align}
+usando las expresiones generales
+\begin{align}
+\int\frac{d^dl}{(2\pi)^d}\frac{1}{(l^2-\Delta)^n}=\frac{i(-1)^n}{(4\pi)^{\frac{d}{2}}}i\frac{\Gamma(n-\frac{d}{2})}{\Gamma(n)}\left(\frac{1}{\Delta}\right)^{n-\frac{d}{2}}\nonumber\\
+\int\frac{d^dl}{(2\pi)^d}\frac{l^2}{(l^2-\Delta)^n}=\frac{i(-1)^{n-1}}{(4\pi)^{\frac{d}{2}}}d\frac{\Gamma(n-\frac{d}{2}-1)}{\Gamma(n)}\left(\frac{1}{\Delta}\right)^{n-\frac{d}{2}-1}
+\end{align}
+se obtiene
+\begin{align}
+\int\frac{d^dl}{(2\pi)^d}\frac{1}{(l^2-\Delta)^3}=\frac{-i}{2(4\pi)^2}\frac{1}{\Delta}
+\end{align}
+\begin{align}
+\mu^{4-d}\int\frac{d^dl}{(2\pi)^d}\frac{l^2}{(l^2-\Delta)^3}=\frac{i(-1)^{n-1}}{(4\pi)^{\frac{d}{2}}}d\frac{\Gamma(2-\frac{d}{2})}{\Gamma(n)}\left(\frac{\mu^2}{\Delta}\right)^{2-\frac{d}{2}}
+\end{align}
+usando
+\begin{align}
+\frac{\Gamma(2-\frac{d}{2})}{(4\pi)^{\frac{d}{2}}}\left(\frac{1}{\Delta}\right)^{2-\frac{d}{2}}=\frac{1}{(4\pi)^2}\left(\frac{2}{4-d}-ln\Delta-\gamma+ln(4\pi)\right)
+\end{align}
+\begin{align}
+\mu^{4-d}\int\frac{d^dl}{(2\pi)^d}\frac{l^2}{(l^2-\Delta)^3}=\frac{1}{(4\pi)^2}\left(\frac{2}{4-d}-ln\Delta-\gamma+ln(4\pi)+\frac{1}{2}\right)
+\end{align}
+por lo cual, se obtiene
+\begin{align}
+a_{0}&=\frac{2i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \left(\Delta_{e}-\frac{1}{2}-ln\frac{\Delta}{\mu^2}-\frac{1}{2\Delta}(px+qy)^2)\right)\nonumber\\
+a^{\mu}&=\frac{i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \frac{(p^{\mu}x+q^{\mu}y)}{\Delta}M_{k}\nonumber\\
+a^{\mu\nu}&=\frac{i}{(4\pi)^2}\int_{0}^{1} dx \int_{0}^{1-x} dy \frac{q^{\mu}p^{\nu}}{\Delta}
+\end{align}
+con 
+\begin{align}
+\Delta_{e}=\left(\frac{2}{4-d}-\gamma+ln(4\pi)\right)
+\end{align}
