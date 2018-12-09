@@ -133,9 +133,24 @@ M_{\chi^-}\to  \left( \mathcal{M}_{\nu} \right)_{ij} \approx&-   M_D^i M_F^{-1} 
 \end{align}
 and a heavy mass $ M_{\chi^+} \approx M_F$.
 
-Note that the recipe to pass from Majorana to Dirac is just to replace $M_D^{\operatorname{T}}\to M_S^{\operatorname{T}} $
+Note that the recipe to pass from Majorana to Dirac is just to replace $M_D^{\operatorname{T}}\to M_S^{\operatorname{T}} $.
 
-It is convinient to write the final result in terms of a Dirac fermion defined from the Weyl spinors in the diagonal basis. We have
+For go to the diagonal basis, we define
+\begin{align}
+  \boldsymbol{\nu}_R^0=& \boldsymbol{V}_R \boldsymbol{\chi}_R\,, &   \boldsymbol{\nu}_L^0=& \boldsymbol{V}_L \boldsymbol{\chi}_L\,. &
+\end{align}
+Therefore
+\begin{align}
+   \mathcal{L}_{\nu}\supset&\left( \boldsymbol{\chi}_L \right)^\dagger \boldsymbol{M_{\chi}} \boldsymbol{\chi}_R+\text{h.c} \nonumber\\
+  \supset&\left( \boldsymbol{\chi}_L \right)^\dagger \boldsymbol{V}_L^{\dagger} \left( \boldsymbol{V}_L  \boldsymbol{M_{\chi}} \boldsymbol{V}_R^{\dagger} \right) \boldsymbol{V}_R \boldsymbol{\chi}_R+\text{h.c} \nonumber\\
+          \supset&\left( \boldsymbol{\nu}_L^0 \right)^\dagger   \boldsymbol{\mathcal{M}_{\nu}}  \boldsymbol{\nu}_R^{0}+\text{h.c} \,,
+\end{align}
+where
+\begin{align}
+\boldsymbol{ \mathcal{M}}_{\nu}\equiv \boldsymbol{V}_L  \boldsymbol{M_{\chi}} \boldsymbol{V}_R^{\dagger}=\operatorname{diag}(M_{\chi^{-}},M_{\chi^{+}}  ) \,.
+\end{align}
+
+It is convenient to write the final result in terms of a Dirac fermion defined from the Weyl spinors in the diagonal basis. We have
 \begin{align}
   \boldsymbol{\nu}=&
   \begin{pmatrix}
@@ -165,7 +180,27 @@ Therefore
     \boldsymbol{\nu}_L^{0} \\
     \boldsymbol{\nu}_R^{0}
   \end{pmatrix} \nonumber\\
-=&\left( \boldsymbol{\nu}_R^0 \right)^{\dagger} \boldsymbol{\mathcal{M}}_{\nu}\,   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
+=&  \begin{pmatrix}
+    \left( \boldsymbol{\nu}_L^0 \right)^{\dagger}&
+    \left(\boldsymbol{\nu}_R^0  \right)^{\dagger}
+  \end{pmatrix}
+  \begin{pmatrix}
+                                      0 & \boldsymbol{\mathcal{M}}_{\nu} \\
+                                      \boldsymbol{\mathcal{M}}_{\nu} & 0 \\
+                                    \end{pmatrix}
+\begin{pmatrix}
+    \boldsymbol{\nu}_L^{0} \\
+    \boldsymbol{\nu}_R^{0}
+  \end{pmatrix} \nonumber\\
+=&  \begin{pmatrix}
+    \left( \boldsymbol{\nu}_L^0 \right)^{\dagger}&
+    \left(\boldsymbol{\nu}_R^0  \right)^{\dagger}
+  \end{pmatrix}
+  \begin{pmatrix}
+         \boldsymbol{\mathcal{M}}_{\nu}\,\boldsymbol{\nu}_R^{0} \\
+    \boldsymbol{\mathcal{M}}_{\nu}\, \boldsymbol{\nu}_L^{0} \\
+  \end{pmatrix} \nonumber\\
+  =&\left( \boldsymbol{\nu}_L^0 \right)^{\dagger} \boldsymbol{\mathcal{M}}_{\nu}\,   \boldsymbol{\nu}_R^{0} +\text{h.c}\,.
 \end{align}
 %%% Local Variables: 
 %%% mode: latex
