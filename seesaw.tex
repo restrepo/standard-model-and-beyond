@@ -59,7 +59,7 @@ When $M_R^2 \gg \boldsymbol{M}_D  \boldsymbol{M}_D ^{\operatorname{T}} $
 \end{align}
 Therefore
 \begin{align}
- \boldsymbol{\mathcal{M}}_{\nu}\to {M_{\chi^-} }\approx&-   \boldsymbol{M}_D M_R^{-1}   \boldsymbol{M}_D^{\operatorname{T}}  \nonumber\\
+ \boldsymbol{\mathcal{M}}_{\nu}\to {\boldsymbol{M}_{\chi^-} }\approx&-   \boldsymbol{M}_D M_R^{-1}   \boldsymbol{M}_D^{\operatorname{T}}  \nonumber\\
  M_{\chi^+} \approx&    M_R\,.
 \end{align}
 
@@ -69,7 +69,42 @@ The effective neutrino mass matrix, $\boldsymbol{\mathcal{M}}_{\nu}$,  in this c
   \left( {\mathcal{M}}_{\nu} \right)_{ij}\approx&- M_D^i M_R^{-1} M_D^{j}\,.
 \end{align}
 
-It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal by blocks basis, denoted with a zero superindex below. We have
+If
+\begin{align}
+  \begin{pmatrix}
+    \boldsymbol{\mathcal{M}}_{\nu} & \boldsymbol{0} \\
+    \boldsymbol{0} & M_{\chi^{+}}\\
+  \end{pmatrix}
+  = &\boldsymbol{V}\boldsymbol{M_{\chi}}\boldsymbol{V}^{\operatorname{T}}\,,&
+      \boldsymbol{\chi}^{0}=&\boldsymbol{V}   \boldsymbol{\chi}\,.
+\end{align}
+
+\begin{align}
+  \mathcal{L}_{\nu}=&\frac{1}{2} \boldsymbol{\chi}^{\operatorname{T}} \boldsymbol{V}^{\operatorname{T}} \boldsymbol{V}   \boldsymbol{M_{\chi}} \boldsymbol{V}^{\operatorname{T}} \boldsymbol{V}   \boldsymbol{\chi}+\text{h.c}\,, \nonumber\\
+  =&\frac{1}{2} \boldsymbol{\chi}^{0\operatorname{T}}    \begin{pmatrix}
+    \boldsymbol{\mathcal{M}}_{\nu} & \boldsymbol{0} \\
+    \boldsymbol{0} & M_{\chi^{+}}\\
+  \end{pmatrix} \boldsymbol{\chi}^{0}+\text{h.c}\,, \nonumber\\
+  =&\frac{1}{2}
+     \begin{pmatrix}
+       \left( \boldsymbol{\nu}_L \right)^{\dagger}  & N_R 
+     \end{pmatrix}
+    \begin{pmatrix}
+    \boldsymbol{\mathcal{M}}_{\nu} & \boldsymbol{0} \\
+    \boldsymbol{0} & M_{\chi^{+}}\\
+  \end{pmatrix}      \begin{pmatrix}
+    \left( \boldsymbol{\nu}_L \right)^{\dagger} \\
+    N_R 
+     \end{pmatrix}
++\text{h.c}\,, \nonumber\\  
+  =&\tfrac{1}{2}\,\left( \boldsymbol{\nu}_L^{0} \right)^{\dagger}\, \boldsymbol{\mathcal{M}}_{\nu}\,  \left(  \boldsymbol{\nu}_L^{0}  \right)^{\dagger}+ \tfrac{1}{2}\,{N}_R^{0}\, M_{\chi^{+}}\,    N_R^0 +\text{h.c}\nonumber\\
+   =&\tfrac{1}{2}\, \boldsymbol{\nu}_L^{0} \, \boldsymbol{\mathcal{M}}_{\nu}^{\dagger}\, \boldsymbol{\nu}_L^{0} + \tfrac{1}{2}\,{N}_R^{0}\, M_{\chi^{+}}\,    N_R^0 +\text{h.c}\,.
+\end{align}
+
+
+
+It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal by blocks basis, denoted with a zero superindex below. We have (assuming
+$\boldsymbol{\mathcal{M}}_{\nu}^{\dagger}=\boldsymbol{\mathcal{M}}_{\nu}$)
 \begin{align}
   \boldsymbol{\nu}=&
   \begin{pmatrix}
