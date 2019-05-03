@@ -166,12 +166,13 @@ Moreover
   \int_0^Ldz\,\phi_n(z,t)\phi_m(z,t)=\delta_{n,-m}e^{-2i\omega_nt}.
 \end{equation}
 
-En tal caso de 
+
+Since
 \begin{equation}
   \label{eq:9}
-  H=\int_{0}^{L}\mathcal{H}\,dz\,.
+  H=\int_{0}^{L}\mathcal{H}\,dz\,,
 \end{equation}
-From the analysis of the Theorem of Noether in chapter~1 of \cite{lsm} we have, that in a similar way to the usual Lagrangian formulation, where the canonical conjugate  variable is used to define the Legendre transformation
+from the analysis of the Theorem of Noether in chapter~1 of \cite{lsm} we have, that in a similar way to the usual Lagrangian formulation, where the canonical conjugate  variable is used to define the Legendre transformation
 \begin{align}
   \label{eq:10}
   H=p \dot q-L\,,
@@ -529,7 +530,7 @@ If $\widehat{\mathcal{N}}_n|m_n\rangle=c|m_n\rangle$, where $c$ must be real bec
 \end{align}
 and
 \begin{align}
-  \widehat{\mathcal{N}}_n|m_n\rangle=m_n|m_n\rangle
+  \widehat{\mathcal{N}}_n|m_n\rangle=m|m_n\rangle
 \end{align}
 From here, we can calculate the eigenvalues of $\widehat{a}_n$. Since
 \begin{align}
@@ -543,11 +544,11 @@ From here, we can calculate the eigenvalues of $\widehat{a}_n$. Since
 =&\widehat{a}_n\left(\widehat{\mathcal{N}}_n-1\right)
 \end{align}
 \begin{align}
-  \widehat{\mathcal{N}}_n\widehat{a}_n|m_n\rangle=&(m_n-1)\widehat{a}_n|m_n\rangle
+  \widehat{\mathcal{N}}_n\widehat{a}_n|m_n\rangle=&(m-1)\widehat{a}_n|m_n\rangle
 \end{align}
 Since the state
 \begin{align}
-   \widehat{\mathcal{N}}_n|m_n-1\rangle=&(m_n-1)|m_n-1\rangle
+   \widehat{\mathcal{N}}_n|m_n-1\rangle=&(m-1)|m_n-1\rangle
 \end{align}
 has the same eigenvalue, therefore
 \begin{align}
@@ -560,10 +561,10 @@ where $C_-$ is a number to be determined from the normalization condition
 \left|C_-\right|^2\langle m_n-1|m_n-1\rangle\nonumber\\
    \langle m_n|\widehat{\mathcal{N}}_n|m_n\rangle=&
 \left|C_-\right|^2\nonumber\\
-\left|C_-\right|^2=m_n
+\left|C_-\right|^2=m
 \end{align}
 \begin{align}
-  \widehat{a}_n|m_n\rangle=\sqrt{m_n}|m_n-1\rangle
+  \widehat{a}_n|m_n\rangle=\sqrt{m}|m_n-1\rangle
 \end{align}
 
 
@@ -583,7 +584,7 @@ Noting also that
 \end{align}
 we have that
 \begin{align}
-  \langle m_n|\colon\!\widehat{H}\colon|m_n\rangle=m_n \omega_n=m_n \hbar\omega_n\,.
+  \langle m_n|\colon\!\widehat{H}\colon|m\rangle=m_n \omega_n=m \hbar\omega_n\,.
 \end{align}
 Therefore, once we have proper normalized states and renormalized Hamiltonian, the energy of an state with $m$ quantum ( of frequency $\omega_n$) is just $m$ times the energy of the one quanta of energy $\hbar\omega_n$. Note that
 \begin{align}
