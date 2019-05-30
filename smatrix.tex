@@ -133,7 +133,7 @@ vector with integer components. In non-relativistic quantum mechanics
 a one-particle state with momentum $\mathbf{p}$ in the coordinate
 representation is given by a plane wave
 \begin{align}
-  \psi_\mathbf{p}(\mathbf{x})=C e^{i\mathbf{p}\cdot\mathbf{x}}\,,
+  \psi_\mathbf{p}(\mathbf{x})=C e^{ip\cdot x}\,,
 \end{align}
 and the normalization constant is fixed by the condition that there is
 one particle in the volume $V$,
@@ -311,13 +311,15 @@ On the other hand the probability for a process with two initial particles colli
 \section{Cross Section}
 \label{sec:cross-section}
 
-Consider a large number point-like projectiles directed to an area $A$ that includes a solid target of area $\sigma$, as displayed in Fig. \label{fig:sigma}, such that alll the fill the area $A$ randomly
 \begin{figure}
   \centering
-  \includegraphics{sigma}
+  \includegraphics{fig:sigma}
   \caption{Cross section probability}
   \label{fig:sigma}
 \end{figure}
+
+
+Consider a large number point-like projectiles directed to an area $A$ that includes a solid target of area $\sigma$, as displayed in Fig. \label{fig:sigma}, such that all the points the fill the area $A$ randomly.
 Assuming that an interaction will occur (with 100\% probability) if the projectile hits the solid, and not at all (0\% probability) if it misses, the total interaction probability for the single projectile will be
 \begin{align}
   \label{eq:pssigma}
@@ -333,11 +335,11 @@ Choosing $t$ such that the volume contains just one particle, we can write
 \end{align}
 or
 \begin{align}
-  1=n v t A\,.
+  A=\frac{1}{n v t}\,.
 \end{align}
 replacing back in \eqref{eq:pssigma} we have
 \begin{align}
-\sigma=\frac{P_s}{n v t}\,.  
+\sigma=P_SA=\frac{P_s}{n v t}\,.  
 \end{align}
 $P_s$ is just the decay probability in eq.~\eqref{eq:w2}. Therefore
 \begin{align}
@@ -370,6 +372,17 @@ In general, as both particles may be moving we could use the relative velocity b
 \frac{1}{2E_{\mathbf{p}_1}}\frac{1}{2E_{\mathbf{p}_2}}
 \prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}\,.
 \end{align}
+
+Since
+\begin{align}
+  \boldsymbol{p}=&\gamma m \boldsymbol{v} \,,& E=&\gamma m\,,
+\end{align}
+then
+\begin{align}
+  \boldsymbol{v}=\frac{\boldsymbol{p}}{E}\,.
+\end{align}
+
+
 In a frame where $\mathbf{p}_1$ and $\mathbf{p}_2$ are along the same line, this reduces to
 \begin{align}
   v_{\text{rel}}=\left|
@@ -569,6 +582,7 @@ d\Phi^{n}(p_1,p_2;k_1,\ldots,k_n)\nonumber\\
 \end{align}
 where, as in eq.~\eqref{eq:50}
 \begin{align}
+  \label{eq:cs101}
 4(4\pi)^6d\Phi^{(2)}(p_1,p_2;p_1',p_2')&= \frac{4(4\pi)^6}{4(2\pi)^6} \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right)
 \frac{d^3p_1'}{E_{1}'}\frac{d^3p_2'}{E_{2}'}\nonumber\\
 &=  \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right)4(2\pi)^6
@@ -584,7 +598,7 @@ The center of mass (CM) frame is defined by the condition
 \end{align}
 
 
-The $\delta$--function in Eq.~\eqref{eq:101}
+The $\delta$--function in Eq.~\eqref{eq:cs101}
 \begin{align}
 \label{eq:56}
   \delta^{(4)}(p+p_2-p_1'-p_2')=\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2-\mathbf{p}_1'-\mathbf{p}_2')
@@ -635,11 +649,7 @@ and
 \end{align}
 From the $\delta$--function in Eq.~\eqref{eq:56} we have that in the CM frame
 \begin{align}
-  \mathbf{p}_1+\mathbf{p}_2-\mathbf{p}_1'-\mathbf{p}_2'=0 \overset{\text{CM}}{\Rightarrow}
-  \begin{cases}
-    \mathbf{p}_1=-\mathbf{p}_2\\
-    \mathbf{p}_1'=-\mathbf{p}_2'\\
-  \end{cases}
+  \mathbf{p}_1+\mathbf{p}_2=&0\,,&\mathbf{p}_1'+\mathbf{p}_2'=&0\,. 
 \end{align}
 
 Squaring the first expression, and taking into account that
@@ -665,20 +675,21 @@ Moreover, we can define the center of mass energy as
 
 By using the center of mass condition \eqref{eq:cm}
 \begin{align}
-  \mathbf{p}=\mathbf{p}_1=-\mathbf{p}_2\,,
+  \mathbf{p}_1=-\mathbf{p}_2\,,
 \end{align}
 then
 \begin{align}
    s=& p_1^2+p_2^2+2 p_1\cdot p_2 \nonumber\\
 =&  p_1^2+p_2^2+2  \left( E_1 E_2-\mathbf{p}_1\cdot\mathbf{p}_2 \right)\nonumber\\
-=& p_1^2+p_2^2+2\left( E_1 E_2+\mathbf{p}_1^2 \right) \nonumber\\
-=& p_1^2+p_2^2+2\left( E_1 E_2+ E_1^2-p_1^2 \right) \nonumber\\
-=& p_1^2+p_2^2+2\left( E_1 E_2+ E_1^2-p_1^2 \right) \nonumber\\
-=& p_2^2-p_1^2+2\left( E_1 E_2+ E_1^2 \right) \nonumber\\
-=& E_2^2-\mathbf{p}_1^2-E_2^2+\mathbf{p}_2^2+2\left( E_1 E_2+ E_1^2 \right) \nonumber\\
-=& E_2^2-E_1^2+2\left( E_1 E_2+ E_1^2 \right) \nonumber\\
+=&E_1-\mathbf{p}_1^2+E_2-\mathbf{p}_2^2+2 E_1 E_2-2 \mathbf{p}_1\mathbf{p}_2\nonumber\\
+=&E_1-\mathbf{p}_1^2+E_2-\mathbf{p}_1^2+2 E_1 E_2+2 \mathbf{p}_1^2\nonumber\\
 =& E_1^2 +2E_1 E_2+ E_2^2 \nonumber\\
 =& \left( E_1+E_2 \right)^2\,.
+\end{align}
+\begin{align}
+  =&E_1-\mathbf{p}_1^2+E_2-\mathbf{p}_2^2+2 E_1 E_2-2 \mathbf{p}_1\mathbf{p}_2\nonumber\\
+  =&E_1-\mathbf{p}_1^2+E_2-\mathbf{p}_1^2+2 E_1 E_2+2 \mathbf{p}_1^2\nonumber\\
+  
 \end{align}
 So that
 \begin{align}
@@ -687,7 +698,7 @@ So that
 \end{align}
 Using The energy part of $\delta$--function in Eq.~\eqref{eq:56} can be written as
 \begin{align}
-  \delta\left(\sqrt{s}-E_1'-\sqrt{{E_1'}^2-{m_1'}^2+{m_2'}^2}\right)
+  \delta \left( E_1+E_2-E_1'-E_2' \right)=\delta\left(\sqrt{s}-E_1'-\sqrt{{E_1'}^2-{m_1'}^2+{m_2'}^2}\right).
 \end{align}
 As established before,  $\mathcal{M}_{fi}$ in this case in independent of $|\mathbf{p}'_1|$, and the integration on $E_1'$ can be done directly only for $d\Phi^{(2)}$.
 The integral is easily performed using the identity
@@ -702,30 +713,32 @@ where
 \begin{align}
   f(x)=\sqrt{s}-x-\sqrt{x^2-{m_1'}^2+{m_2'}^2}
 \end{align}
+The zero is obtained from
+\begin{align}
+  &\sqrt{s}-x_0-\sqrt{x_0^2-{m_1'}^2+{m_2'}^2}=0\nonumber\\
+  &s-2\sqrt{s}\,x_0+x_0^2=x_0^2-{m_1'}^2+{m_2'}^2\nonumber\\
+  &s-2\sqrt{s}\,x_0=-{m_1'}^2+{m_2'}^2\,,
+\end{align}
+with solution
+\begin{align}
+  \label{eq:63}
+  x_0=\frac{s+{m_1'}^2-{m_2'}^2}{2\sqrt{s}}\,.
+\end{align}
+
+
 Therefore
 \begin{align}
   \label{eq:61}
    4(2\pi)^6d\Phi^{(2)}=&d\Omega\int\frac{\delta(x-x_0)}{|f'(x_0)|}\frac{
      |\mathbf{p}_1'(x)|}{E_2'(x)}dx\nonumber\\
    =&d\Omega\frac{1}{|f'(x_0)|}\frac{
-     |\mathbf{p}_1'(x_0)|}{E_2'(x_0)}\nonumber\\
+     |\mathbf{p}_1'(x_0)|}{E_2'(x_0)}\,,
 \end{align}
 where from Eqs.~\eqref{eq:58}, \eqref{eq:59},
 \begin{align}
   \label{eq:62}
   \mathbf{p}_1'(x_0)=&\sqrt{x_0^2-{m_1'}^2}&
   E_2'(x_0)=&\sqrt{x_0^2-{m_1'}^2+{m_2'}^2}
-\end{align}
-The zero is obtained from
-\begin{align}
-  &\sqrt{s}-x_0-\sqrt{x_0^2-{m_1'}^2+{m_2'}^2}=0\nonumber\\
-  &s-2\sqrt{s}\,x_0+x_0^2=x_0^2-{m_1'}^2+{m_2'}^2\nonumber\\
-  &s-2\sqrt{s}\,x_0=-{m_1'}^2+{m_2'}^2
-\end{align}
-with solution
-\begin{align}
-  \label{eq:63}
-  x_0=\frac{s+{m_1'}^2-{m_2'}^2}{2\sqrt{s}}
 \end{align}
 As (See 
 \texttt{deltaxn.nb} %noinstiki [deltax.nb](Appendix)
