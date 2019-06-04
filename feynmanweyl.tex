@@ -921,14 +921,12 @@ with Yukawa Lagrangian
   \mathcal{L}_y=& y \left(e_R\right)^{\dagger} e_L h^0 +y \left(e_L\right)^{\dagger} e_R h^0 \nonumber\\
                =& y \eta^{\alpha} \xi_{\alpha}h^0 + y \eta^{\dagger\dot{\alpha}} \xi_{\dot{\alpha}}^{\dagger}h^0\,. 
 \end{align}
-We will make the calculation for any Standard Model fermion, but keep the notation just for the electron with mass $m_1$. To keep the calculation in general, we left open the possibility that the second vertex involves a different fermion of mass $m_2a$. The Feynman diagrams for the electronic case is displayed in figure~\ref{fig:sct}.
-
-is
+We will make the calculation for any Standard Model fermion, but keep the notation just for the electron with mass $m_1$. To keep the calculation in general, we left open the possibility that the second vertex involves a different fermion of mass $m_2$. The Feynman diagrams for the electronic case is displayed in figure~\ref{fig:sct}. Therefore
 \begin{align}
 S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\}\nonumber\\
 =&  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}\}\nonumber\\
 =& 
- \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}:
+ \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}:+
  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:( \eta^{\alpha} 
 \bcontraction{\xi_{\alpha}}{\phi}{)_{x_1}(\eta^{\alpha} \xi_{\alpha}}{h^0}
 \xi_{\alpha} h^0)_{x_1}(\eta^{\alpha} \xi_{\alpha}h^0 
@@ -937,8 +935,8 @@ S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H
 The first term corresponds to two  disconnected Feynman diagrams that does not contribute to the $S$--matrix. For the process at hand, we want terms where four fermionic operators are not contracted, corresponding to the particles in the initial and final states. The second term in the previous expansion of the Wick theorem is the only satisfying this requirement. In this way
 \begin{align}
   S^{(2)}(e^+ e^-\to e^+e^-)=&\frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2
-\bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2):(\eta^{\alpha} \xi_{\alpha})_{x_1}(\eta^{\beta} \xi_{\beta})_{x_2}:
+\bcontraction{\,}{h}{(x_1)}{h}
+\,h(x_1)h(x_2):(\eta^{\alpha} \xi_{\alpha})_{x_1}(\eta^{\beta} \xi_{\beta})_{x_2}:
 \end{align}
 
 On the other hand 
@@ -956,7 +954,7 @@ On the other hand
 The specific calculation by the scattering mediated by the Higgs is 
 \begin{align}
   S_{fi}=&\frac{\left( -iy \right)^{2}}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-\bcontraction{\,}{\phi}{(x_1)}{\phi}\,\phi(x_1)\phi(x_2) \nonumber\\
+\bcontraction{\,}{h}{(x_1)}{h}\,h(x_1)h(x_2) \nonumber\\
 &\left\langle e_R\left(\mathbf{p}'_1\right), e_R \left(\mathbf{p}'_2\right) \right|
   :\eta^{\alpha}(x_1) \eta^{\beta}(x_2)\xi_{\beta}(x_2) \xi_{\alpha}(x_1):
  \left| e_L \left(\mathbf{p}_1\right), e_L\left(\mathbf{p}_2\right) \right\rangle. \nonumber\\
@@ -1407,7 +1405,7 @@ and
 
 
 
-Others possibilities for two intial particle states includes
+Others possibilities for two initial particle states includes
 \begin{align}
   |e_R(\mathbf{p}_2)e_L(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a_{s_1}^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle
 \end{align}
@@ -1784,14 +1782,60 @@ and, in this way,
 
 \subsubsection{Dark-matter like calculation}
 
-To have the Higgs portal direct dark matter detection cross section, we consider the interaction of a singlet scalar with the standard model Higgs, $h(x)$
+To have the Higgs portal direct dark matter detection cross section
+The relevant term for the scattering that we consider now is the $t$-channel
 \begin{align}
- \mathcal{L}=\lambda v S^2 h(x) 
+  S(p_1)+q_L^{-}(p_2)\to  S(p_1')+q_R^{-}(p_2')
 \end{align}
-We now consider the interaction
+
+As always, we use the left-handed Weyl spinors
 \begin{align}
-  S+q_L \to S+q_R
+  q_L\to &\xi_{\alpha}\,, &   \left( q_R \right)^{\dagger}\to &\eta^{\alpha}\,,
 \end{align}
+
+
+We need the interaction of a singlet scalar with the standard model Higgs, $h(x)$, and the standard modelo Yukawa
+\begin{align}
+  \mathcal{L}=&\lambda v S^2(x) h(x)+y \left(q_R\right)^{\dagger} q_L(x) h^0 +y \left(q_L\right)^{\dagger} q_R(x) h(x) \nonumber\\
+  =&\lambda v S^2(x) h(x)+y \eta^{\alpha} (x)\xi_{\alpha}(x)h(x) + y \eta^{\dagger\dot{\alpha}}(x) \xi_{\dot{\alpha}}^{\dagger}(x)h(x)\,. 
+\end{align}
+
+hence
+\begin{align}
+  \mathcal{H}_I^{S}=&-\lambda v S^2(x) h(x)\,, &
+   \mathcal{H}_I^{q}=&-y \eta^{\alpha} (x)\xi_{\alpha}(x)h(x)\,,
+\end{align}
+
+The $S$-matrix expansion includes
+\begin{align}
+S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I^S(x_1)\mathcal{H}_I^q(x_2)\}\nonumber\\
+=&  \frac{(-i)^2}{2!}\lambda y v\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\left(S S h \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h \right)_{x_2}\}\nonumber\\
+=& 
+ \frac{(-i)^2}{2!}\lambda y v\int\int d^4x_1 d^4x_2\,:( S
+\bcontraction{S}{h}{)_{x_1}(\eta^{\alpha} \xi_{\alpha}}{h}
+S h)_{x_1}(\eta^{\alpha} \xi_{\alpha}h
+)_{x_2}:+\cdots
+\end{align}
+In this way
+\begin{align}
+  S^{(2)}(S q\to S q)=&\frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2
+\bcontraction{\,}{h}{(x_1)}{h}
+\,h(x_1)h(x_2):(SS)_{x_1}(\eta^{\beta} \xi_{\beta})_{x_2}:
+\end{align}
+On the other hand 
+\begin{align}
+\label{eq:ss156f}
+  :(SS)_{x_1}(\eta^{\beta} \xi_{\beta})_{x_2}:=&
+:S(x_1) S(x_1) \eta^{\beta}(x_2) \xi_{\beta}(x_2):\,.
+\end{align}
+
+
+
+We label the initial (final) momentum as $p_1$, $p_2$ ($p_1'$, $p_2'$) such that
+\begin{align}
+  m_S=&m_1=m_1'\,,&m_q=&m_2=m_2'\,.
+\end{align}
+
 
 The specific calculation by the scattering mediated by the Higgs is 
 \begin{align}
@@ -1808,9 +1852,91 @@ i\Delta_F \left( x_1-x_2 \right)\nonumber\\
  \left| q_L\left(\mathbf{p}_2\right), S \left(\mathbf{p}_1\right)\right\rangle. 
 \end{align}
 
+This means that $S(\mathbf{p}_1)$ ($q_L(\mathbf{p}_2)$) is destroyed in $x_1$ ($x_2$), while
+$S(\mathbf{p}_1')$ ($q_L(\mathbf{p}_2')$) is created in $x_1$ ($x_2$).
 
 
-By using the standard procedure
+When the two particles are distinguishable: For example if the spin of $q_L$ is $s_2$ and $s'$, then %recalculate
+\begin{align}
+  S_{+}(x_1)&\xi^\beta_{+}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle= \nonumber\\
+&\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}a(\mathbf{k})\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}} 
+           x^\beta(s',\mathbf{k}')a_{s'}(\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2} \left| q_L\left(\mathbf{p}_2\right), S \left(\mathbf{p}_1\right)\right\rangle\\ \nonumber
+\end{align}
+In the following, to avoid clutter in the expressions we ignore the spin part during the intemediate calculations. 
+The two particle Fock state is, after proper normalization
+\begin{align}
+  |q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle.
+\end{align}
+Therefore
+\begin{align}
+  S_{+}(x_1)\xi^\beta_{+}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle   =&
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times a(\mathbf{k})a_{s'}(\mathbf{k}')a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
+=&
+\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times \left[ a(\mathbf{k})a_{s'}(\mathbf{k}')a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) - a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) a(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
+=&
+\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
+x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+&\times \left[ a(\mathbf{k})a_{s'}(\mathbf{k}'),a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
+\end{align}
+By using the identity
+\begin{align}
+  [AB,CD]=A[B,C]D - [A,C]BD
++CA[B, D] - C[A, D]B\,,
+\end{align}
+\begin{align}
+   \left[ a(\mathbf{k})a_{s'}(\mathbf{k}'),a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]=&
+ a(\mathbf{k})\cancel{\left[ a_{s'}(\mathbf{k}'),a^\dagger(\mathbf{p}_1)\right]}a_{s_2}^\dagger(\mathbf{p}_2)
+-
+ \left[ a(\mathbf{k}),a^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) \nonumber\\
+& 
++a^\dagger(\mathbf{p}_1)a(\mathbf{k})\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]
+-
+a^\dagger(\mathbf{p}_1) \cancel{\left[ a(\mathbf{k}),a_{s_2}^\dagger(\mathbf{p}_2)\right]}a_{s'}(\mathbf{k}') \nonumber\\
+=&
+-
+ \left[ a(\mathbf{k}),a^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2)  
++\left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)\right]a^\dagger(\mathbf{p}_1)a(\mathbf{k})
+\end{align}
+Therefore,
+\begin{align}
+&\left[ a(\mathbf{k})a_{s'}(\mathbf{k}'),a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right] |0\rangle \nonumber\\
+&\qquad=
+-
+ \left[ a(\mathbf{k}),a^\dagger(\mathbf{p}_1)\right]a_{s'}(\mathbf{k}')a_{s_2}^\dagger(\mathbf{p}_2) |0\rangle \nonumber\\
+&\qquad=-
+  \left[ a(\mathbf{k}),a^\dagger(\mathbf{p}_1)\right] \left[ a_{s'}(\mathbf{k}'),a_{s_2}^\dagger(\mathbf{p}_2)  \right] |0\rangle \nonumber\\
+&\qquad= -(2\pi)^6  
+    \delta^{(3)}(\mathbf{k}-\mathbf{p}_1)\delta^{(3)}(\mathbf{k}'-\mathbf{p}_2)|0\rangle
+\end{align}
+and
+\begin{align}
+\label{eq:ssbkqlel}
+S_{+}(x_1)\xi^\beta_{+}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle  =&
+ -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\beta}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\,.
+% \nonumber\\
+%    \langle q_L(\mathbf{p}_2) S(\mathbf{p}_1) |\xi^{\dagger\dot{\beta}}(x_2)S_{-}\left( x_1 \right)=&
+% -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\dagger\dot{\beta}}_q(s',\mathbf{p}_2)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
+\end{align}
+
+Following similar steps, we find
+\begin{align}
+\label{eq:ssberer}
+  S_{+}(x_1)&\eta^{\dagger\dot{\beta}}_+(x_2)|q_R(\mathbf{p}_2)S(\mathbf{p}_1)\rangle
+=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  y^{\dagger\dot{\alpha}}(\mathbf{p}_2)
+\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}\left|0\right\rangle \\
+\label{eq:ssberer}
+  \langle q_R(\mathbf{p}_2)&S(\mathbf{p}_1)| S_{-}(x_1)\eta^{\beta}_-(x_2)
+=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  y^{\alpha}(\mathbf{p}_2)
+\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}\,.
+\end{align}
+
+
+
+
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4 \lambda m_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
