@@ -352,6 +352,18 @@ In the non-relativistic limit
 In the center of mass frame ($\boldsymbol{p}_1+\boldsymbol{p}_1=0$)
 \begin{align}
   s=\left( E_1+\boldsymbol{p}_1+E_2+\boldsymbol{p}_2 \right)^2=\left( E_1+\boldsymbol{p}_1+E_2-\boldsymbol{p}_1 \right)^2=\left( E_1+E_2 \right)^2.
+\end{align} 
+
+\section{Dirac delta function}
+Consider the next identity, $i,j,l,m=1,2$, and where we will simplify the $\delta$-function by eliminating $q$ 
+\begin{align}
+  \label{eq:deltaidf}
+  \int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\operatorname{e}^{-i (-q-p'_i+p_j) \cdot x_1}
+\operatorname{e}^{-i (q-p'_l+p_m) \cdot x_2}
+=&\delta^4 (-q-p'_i+p_j)\delta^4(q-p'_l+p_m) \nonumber\\
+  =&\delta^4(-p'_i+p_j-p'_l+p_m) \nonumber\\
+  =&\delta^4(p_j+p_m-p'_i-p'_l).
 \end{align}
 
 
@@ -1839,47 +1851,48 @@ We label the initial (final) momentum as $p_1$, $p_2$ ($p_1'$, $p_2'$) such that
 
 The specific calculation by the scattering mediated by the Higgs is 
 \begin{align}
-  S_{fi}=&\frac{\left(\lambda  v y_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+  \label{eq:ss32}
+  S_{fi}=&\frac{\lambda  v y_q }{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
 \bcontraction{\,}{h}{(x_1)}{h}\,h(x_1)h(x_2) \nonumber\\
 &\left\langle q_R \left(\mathbf{p}'_2\right),S\left(\mathbf{p}'_1\right) \right|
   : S(x_1)S(x_1)
-    \xi^{\beta}(x_2)\eta_{\beta}(x_2):
+    \eta^{\beta}\xi_{\beta}(x_2)(x_2):
  \left| q_L\left(\mathbf{p}_2\right) ,S \left(\mathbf{p}_1\right)  \right\rangle \nonumber\\
-=&\frac{\left( \lambda  v y_q \right)}{2!}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
-i\Delta_F \left( x_1-x_2 \right)\nonumber\\
-&\left\langle q_R \left(\mathbf{p}'_2\right),S\left(\mathbf{p}'_1\right)\right|
-   S_-(x_1)\eta_{\beta-}(x_2) S_+(x_1)\xi^{\beta}_{+}(x_2)
+=&\frac{ \lambda  m_q }{\sqrt{2}}\sum_{\text{spins}}\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\,i\Delta_F \left( x_1-x_2 \right)\nonumber\\
+&\qquad\times\left\langle q_R \left(\mathbf{p}'_2\right),S\left(\mathbf{p}'_1\right)\right|
+   S_-(x_1)\eta^{\beta}_{-}(x_2) S_+(x_1)\xi_{\beta +}(x_2)
  \left| q_L\left(\mathbf{p}_2\right), S \left(\mathbf{p}_1\right)\right\rangle. 
 \end{align}
 
-This means that $S(\mathbf{p}_1)$ ($q_L(\mathbf{p}_2)$) is destroyed in $x_1$ ($x_2$), while
+where $m_q=y_d v/\sqrt{2}$. This means that $S(\mathbf{p}_1)$ ($q_L(\mathbf{p}_2)$) is destroyed in $x_1$ ($x_2$), while
 $S(\mathbf{p}_1')$ ($q_L(\mathbf{p}_2')$) is created in $x_1$ ($x_2$).
 
 
 When the two particles are distinguishable: For example if the spin of $q_L$ is $s_2$ and $s'$, then %recalculate
 \begin{align}
-  S_{+}(x_1)&\xi^\beta_{+}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle= \nonumber\\
+  S_{+}(x_1)&\xi_{\beta +}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle= \nonumber\\
 &\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}a(\mathbf{k})\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}} 
-           x^\beta(s',\mathbf{k}')a_{s'}(\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2} \left| q_L\left(\mathbf{p}_2\right), S \left(\mathbf{p}_1\right)\right\rangle\\ \nonumber
+           x_\beta(s',\mathbf{k}')a_{s'}(\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2} \left| q_L\left(\mathbf{p}_2\right), S \left(\mathbf{p}_1\right)\right\rangle\\ \nonumber
 \end{align}
-In the following, to avoid clutter in the expressions we ignore the spin part during the intemediate calculations. 
+
 The two particle Fock state is, after proper normalization
 \begin{align}
   |q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle=&\frac{1}{\sqrt{V^2}}a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle.
 \end{align}
 Therefore
 \begin{align}
-  S_{+}(x_1)\xi^\beta_{+}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle   =&
+  S_{+}(x_1)\xi_{\beta +}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle   =&
 \int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
-x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+x_\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times a(\mathbf{k})a_{s'}(\mathbf{k}')a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)|0\rangle \nonumber\\
 =&
 \int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_{k'}V}}
-x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+x_\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a(\mathbf{k})a_{s'}(\mathbf{k}')a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) - a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2) a(\mathbf{k})a_{s'}(\mathbf{k}') \right]|0\rangle \nonumber\\
 =&
 \int\frac{\operatorname{d}^3k}{(2\pi)^3\sqrt{2E_k V}}\int\frac{\operatorname{d}^3k'}{(2\pi)^3\sqrt{2E_{k'}V}}
-x^\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
+x_\beta(s',\mathbf{k}')\operatorname{e}^{-i k\cdot x_1}\operatorname{e}^{-i k'\cdot x_2}\nonumber\\
 &\times \left[ a(\mathbf{k})a_{s'}(\mathbf{k}'),a^\dagger(\mathbf{p}_1)a_{s_2}^\dagger(\mathbf{p}_2)\right]|0\rangle.
 \end{align}
 By using the identity
@@ -1915,37 +1928,95 @@ Therefore,
 and
 \begin{align}
 \label{eq:ssbkqlel}
-S_{+}(x_1)\xi^\beta_{+}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle  =&
- -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\beta}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\,.
-% \nonumber\\
-%    \langle q_L(\mathbf{p}_2) S(\mathbf{p}_1) |\xi^{\dagger\dot{\beta}}(x_2)S_{-}\left( x_1 \right)=&
-% -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x^{\dagger\dot{\beta}}_q(s',\mathbf{p}_2)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
+S_{+}(x_1)\xi_{\beta +}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle  =&
+ -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x_{\beta}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}|0\rangle\,.
 \end{align}
 
 Following similar steps, we find
 \begin{align}
 \label{eq:ssberer}
-  S_{+}(x_1)&\eta^{\dagger\dot{\beta}}_+(x_2)|q_R(\mathbf{p}_2)S(\mathbf{p}_1)\rangle
-=\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  y^{\dagger\dot{\alpha}}(\mathbf{p}_2)
-\operatorname{e}^{-i p_2\cdot x_1}\operatorname{e}^{-i p_1\cdot x_2}\left|0\right\rangle \\
-\label{eq:ssberer}
-  \langle q_R(\mathbf{p}_2)&S(\mathbf{p}_1)| S_{-}(x_1)\eta^{\beta}_-(x_2)
-=\left\langle 0\right|\frac{1 }{\sqrt{2 E_1V}\sqrt{2 E_2V}}  y^{\alpha}(\mathbf{p}_2)
-\operatorname{e}^{i p_2\cdot x_1}\operatorname{e}^{i p_1\cdot x_2}\,.
+  S_{+}(x_1)& \eta^{\dagger\dot{\beta}}_{+}(x_2)|q_R(\mathbf{p}_2)S(\mathbf{p}_1')\rangle
+ =-\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}  y^{\dagger\dot{\beta}}(s',\mathbf{p}_2')
+ \operatorname{e}^{-i p'_1\cdot x_1}\operatorname{e}^{-i p'_2\cdot x_2}\left|0\right\rangle \\
+  \langle q_R(\mathbf{p}_2')&S(\mathbf{p}_1')| S_{-}(x_1)\eta^{\beta}_{-}(x_2)
+ =-\left\langle 0\right|\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}  y^{\beta}(s',\mathbf{p}_2')
+ \operatorname{e}^{i p'_1\cdot x_1}\operatorname{e}^{i p'_2\cdot x_2}\,.
 \end{align}
 
+Hence
+\begin{align}
+  \langle q_R(\mathbf{p}_2')&S(\mathbf{p}_1')| S_{-}(x_1)\eta^{\beta}_{-}(x_2)
+  S_{+}(x_1)\xi_{\beta +}(x_2)|q_L(\mathbf{p}_2)S(\mathbf{p}_1)\rangle \nonumber\\
+=&\left\langle 0\right|\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}  y^{\beta}(s',\mathbf{p}_2')
+   \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,x_{\beta}(s',\mathbf{p}_2)\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}|0\rangle \nonumber\\
+=&\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}  y^{\beta}(s',\mathbf{p}_2')\,x_{\beta}(s',\mathbf{p}_2)
+   \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\langle 0|0\rangle \nonumber\\
+=&\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}  y^{\beta}(s',\mathbf{p}_2')\,x_{\beta}(s',\mathbf{p}_2)
+   \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\,.
+\end{align}
 
+Checking back eq.~\eqref{eq:ss32}, we see that 
+\begin{align}
+  \label{eq:ss37}
+S_{fi}=&\frac{ \lambda  m_q }{\sqrt{2}}\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\frac{1 }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}}  y^{\beta}(s',\mathbf{p}_2')\,x_{\beta}(s',\mathbf{p}_2)\sum_{\text{spins}} \mathcal{I}\,,
+\end{align}
+where
+\begin{align}
+  \mathcal{I}=\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\,i\Delta_F \left( x_1-x_2 \right)   \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}\,.
+\end{align}
+The integral is easily eavaluated if we use the Fourier expansion
+\begin{align}
+  i\Delta_F \left( x_1-x_2 \right)=
+  \int \frac{\operatorname{d}^4q}{\left( 2\pi \right)^4} i \Delta(q)
+  \operatorname{e}^{iq\cdot(x_1-x_2)}\,,
+\end{align}
+such that
+\begin{align}
+   \mathcal{I}=&\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\,i\Delta_F \left( x_1-x_2 \right)   \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2} \nonumber\\
+=&  \int \frac{\operatorname{d}^4q}{\left( 2\pi \right)^4} i \Delta(q)
+\int\int \operatorname{d}^4x_1 \operatorname{d}^4x_2
+\, \operatorname{e}^{iq\cdot(x_1-x_2)}    \operatorname{e}^{i p_1'\cdot x_1}\operatorname{e}^{i p_2'\cdot x_2}
+\operatorname{e}^{-i p_1\cdot x_1}\operatorname{e}^{-i p_2\cdot x_2}   
+\end{align}
 
-
+\begin{align}
+  =& \left( 2\pi \right)^4 \int {\operatorname{d}^4q}\, i \Delta(q)
+\int\int \frac{\operatorname{d}^4x_1}{\left( 2\pi \right)^4} \frac{\operatorname{d}^4x_2}{\left( 2\pi \right)^4} 
+\, \operatorname{e}^{-i(-q-p_1'+p_1)\cdot x_1}   
+\, \operatorname{e}^{-i(q-p_2'+p_2)\cdot x_2}   \nonumber\\
+ =& \left( 2\pi \right)^4 \int {\operatorname{d}^4q}\, i \Delta(q)
+\, \delta^{4}(-q-p_1'+p_1)   
+\, \delta^4(q-p_2'+p_2).
+\end{align}
+By using the first  $\delta$-function to make the final integration on $q$, we have
+\begin{align}
+  \mathcal{I} =& \left( 2\pi \right)^4 \, i \Delta(p_1-p_1')   
+\, \delta^4(p_1+p_2-p_1'-p_2') \,.
+\end{align}
+Replacing back in eq.~\eqref{eq:ss37}
 \begin{align}
       S_{fi}
     =&\frac{(2\pi)^4 \lambda m_q \delta^{(4)}\left(p_1+p_2-p_1'-p_2'\right) }{\sqrt{2 E_1'V}\sqrt{2 E_2'V}\sqrt{2 E_1V}\sqrt{2 E_2V}}
- \left[y'_{2\beta}i\Delta_F(p_1-p_1')x_2^{\beta}\right] \nonumber\\
+ \left[y^{\prime\beta}_2\,i\Delta_F(p_1-p_1')x_{2\beta}\right] \nonumber\\
 \end{align}
-where $m_q=y_d v$.
+where
+\begin{align}
+  y^{\prime\beta}_2\equiv&   y^{\beta}(s',\mathbf{p}_2'), &
+  x_{2\beta}\equiv&   x_{\beta}(s',\mathbf{p}_2).                           
+\end{align}
+Comparing with the general expression for the $2\to 2$ processes, we get that
+
 \begin{align}
  i\mathcal{M}=\lambda  m_q\Delta_F(t) x_2y'_2 
 \end{align}
+As an initial step to calculate the probability we must squared this amplitude
 \begin{align}
 \sum_{\text{spins}} |\mathcal{M}|^2=&\lambda^2   m_q^2\Delta_F(t) \sum_{\text{spins}}  x_2y'_2  y^{\prime\dagger}_2x_2^{\dagger} \nonumber\\
 =& 2 \lambda^2 m_q^2\Delta_F(t) \left( p_2\cdot p_2' \right) 
