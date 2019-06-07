@@ -1794,6 +1794,8 @@ and, in this way,
 
 \subsubsection{Dark-matter like calculation}
 
+The follwing calculation is expected to be self-contained with every step worked in detail.
+
 To have the Higgs portal direct dark matter detection cross section
 The relevant term for the scattering that we consider now is the $t$-channel
 \begin{align}
@@ -2014,36 +2016,74 @@ where
 Comparing with the general expression for the $2\to 2$ processes, we get that
 
 \begin{align}
- i\mathcal{M}=\lambda  m_q\Delta_F(t) x_2y'_2 
+ i\mathcal{M}=\lambda  m_q\Delta_F(p_1-p_1')y^{\prime \alpha}_2 x_{2\alpha}\,.
 \end{align}
 As an initial step to calculate the probability we must squared this amplitude
 \begin{align}
-\sum_{\text{spins}} |\mathcal{M}|^2=&\lambda^2   m_q^2\Delta_F(t) \sum_{\text{spins}}  x_2y'_2  y^{\prime\dagger}_2x_2^{\dagger} \nonumber\\
-=& 2 \lambda^2 m_q^2\Delta_F(t) \left( p_2\cdot p_2' \right) 
+  \sum_{\text{spins}} |\mathcal{M}|^2=&\lambda^2   m_q^2\Delta_F^2(p_1-p_1')
+     \sum_{\text{spins}} y^{\prime \alpha}_2 x_{2\alpha}x^{\dagger}_{2\dot{\alpha}} y^{\prime\dagger\dot{\alpha}}_2     \nonumber\\
+=&\lambda^2   m_q^2\Delta_F^2(p_1-p_1')
+     \sum_{\text{spins}}  x_{2\alpha}x^{\dagger}_{2\dot{\alpha}} y^{\prime\dagger\dot{\alpha}}_2 y^{\prime \alpha}_2     \nonumber\\
+=&\lambda^2   m_q^2\Delta_F^2(p_1-p_1')
+   \left( p_2\cdot \sigma \right)_{\alpha\dot{\alpha}} \left( p_2'\cdot \overline{\sigma} \right)^{\dot{\alpha}\alpha}      \nonumber\\
+  =& 2 \lambda^2 m_q^2\Delta_F^2(p_1-p_1') \operatorname{Tr}\left( p_2\cdot \sigma p_2'\cdot \overline{\sigma} \right) \nonumber\\
+  =& 2 \lambda^2 m_q^2\Delta_F^2(p_1-p_1') \operatorname{Tr}\left( p_2^{\mu} \sigma_{\mu} p_2^{\prime \nu} \overline{\sigma}_{\nu} \right) \nonumber\\
+  =& 2 \lambda^2 m_q^2\Delta_F^2(p_1-p_1')\operatorname{Tr}\left(  \sigma_{\mu}  \overline{\sigma}_{\nu} \right) p_2^{\mu} p_2^{\prime \nu}\nonumber\\
+  =& 4 \lambda^2 m_q^2\Delta_F^2(p_1-p_1') g_{\mu\nu} p_2^{\mu} p_2^{\prime \nu}\nonumber\\
+  =& 4 \lambda^2 m_q^2\Delta_F^2(p_1-p_1') \left( p_2\cdot p_2' \right) 
 \end{align}
+
+The partial amplitude can be written in terms of the Mandelstam variables~\eqref{eq:mvstu} and \eqref{eq:stucs}
+\begin{align}
+  \sum_{\text{spins}} |\mathcal{M}|^2=
+  =& 4 \lambda^2 m_q^2\Delta_F^2(p_1-p_1') 
+     \left( m_2^2+{m_2'}^2-t \right),
+\end{align}
+where
+\begin{align}
+  t=\left( p_1-p_1' \right)^2=\left( p_2-p_2' \right)^2\,.
+\end{align}
+
 By using
 \begin{align}
-  i\Delta_F(t)=\frac{-i}{t-m_h^2}
+  i\Delta_F( p_1-p_1')=\frac{-i}{(p_1-p_1')^2-m_h^2}
+  =\frac{-i}{t-m_h^2}\,,
 \end{align}
-Since $m_S=m_1=m_1'$, $m_q=m_2=m_2'$
+and, since $m_S=m_1=m_1'$, $m_q=m_2=m_2'$
 \begin{align}
-   \sum_{\text{spins}} |\mathcal{M}|^2=&\frac{\lambda^2 m_q^2}{\left( t-m_h^2 \right)^2} \left(2m_q^2-t\right)
+   \sum_{\text{spins}} |\mathcal{M}|^2=&\frac{\lambda^2 m_q^2}{\left( t-m_h^2 \right)^2} \left(2m_q^2-t\right).
 \end{align}
+Therefore
 \begin{align}
      \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
 \frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
-\overline{|\mathcal{M}|^2} \nonumber\\
-=&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
-=&\frac{1}{64\pi^2s}\frac{\lambda^2 m_q^2}{\left( t-m_h^2 \right)^2}\left(2m_q^2-t\right) .
+                               \overline{|\mathcal{M}|^2} \nonumber\\
+=&\frac{1}{64\pi^2s}\left\{
+\frac{[s-(m_1'+m_2')^2][s-(m_1'-m_2')^2]}{[s-(m_1+m_2)^2][s-(m_1-m_2)^2]}\right\}^{1/2}
+\overline{|\mathcal{M}|^2}  
 \end{align}
+\begin{align}
+  =&\frac{1}{64\pi^2s}\left\{
+\frac{[s-(m_S+m_q)^2][s-(m_S-m_q)^2]}{[s-(m_S+m_q)^2][s-(m_S-m_q)^2]}\right\}^{1/2}
+\overline{|\mathcal{M}|^2}  
+\end{align}
+And we have 
+\begin{align}
+\frac{d\sigma}{d\Omega}  =&\frac{1}{64\pi^2s}\overline{|\mathcal{M}|^2} \nonumber\\
+  =&\frac{1}{64\pi^2s}\frac{\lambda^2 m_q^2}{\left( t-m_h^2 \right)^2}
+     \left(2m_q^2-t\right).
+\end{align}
+
 In the non-relativistic limit
 \begin{align}
   t\approx& (m_S-m_S)^2\approx 0\,,& 
   s\approx& (m_S+m_q)^2\,,
 \end{align}
 \begin{align}
-   \frac{d\sigma}{d\Omega}=&
-\frac{\lambda^2 m_q^4}{32\pi^2 \left(m_S+m_q\right)^2m_h^4}\nonumber\\
+   \frac{d\sigma}{d\Omega}=& \frac{\lambda^2 m_q^4}{32\pi^2 \left(m_S+m_q\right)^2m_h^4}\nonumber\\
+  =&
+     \frac{\lambda^2 m_q^4}{32\pi^2 m_h^4\left(m_S+m_q\right)^2}
+     \frac{m_S^2}{m_S^2}\nonumber\\
        \frac{d\sigma}{d\Omega}
                     =&\frac{\lambda^2m_q^2}{32\pi^2m_h^4m_S^2}\left( \frac{m_Sm_q}{m_S+m_q} \right)^2\,.
 \end{align}
