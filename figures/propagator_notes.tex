@@ -1,0 +1,800 @@
+\input phyzzx
+\input pstricks
+\input pst-plot
+\psset{unit=1cm,linewidth=1pt,linecolor=black,arrowscale=2}
+%\newrgbcolor{purple}{0.6 0 0.6}
+\input hyperbasics
+
+\def\eqdef{\buildrel\rm def\over=}
+%\def\bp{{\bf p}}
+%\def\bq{{\bf q}}
+\def\bk{{\bf k}}
+\def\bx{{\bf x}}
+\def\by{{\bf y}}
+\def\psib{{\smash{\hat{\overline\Psi}}\vphantom{\Psi}}}
+%\def\D{\!\not\!}
+\def\crossout#1{
+    \setbox0=\hbox{$\displaystyle{\strut #1}$}%
+    \psline[linecolor=red](0,\ht0)(\wd0,-\dp0)%
+    \psline[linecolor=red](0,-\dp0)(\wd0,\ht0)%
+    \box0 }
+\def\Re{\mathop{\rm Re}\nolimits }
+\def\Im{\mathop{\rm Im}\nolimits }
+\def\eqdef{\buildrel\rm def\over=}
+\def\QED{\hskip 1em $\cal Q.~E.~D.$}
+\def\bt{{\bf T}}
+\def\comment#1{\langle\!\langle\,\hbox{#1}\,\rangle\!\rangle}
+
+\catcode`\~=12
+\def\class{http://bolvan.ph.utexas.edu/~vadim/Classes/2015f}
+\catcode`\~=13
+
+
+\hsize=6.6in	\hoffset=-0.05in
+\vsize=8.75in	\voffset=0in
+%\overfullrule=0pt
+
+\centerline{\seventeenbf Feynman Propagator of a Scalar Field}
+\smallskip
+Earlier in class, I have defined the Feynman propagator of a free real scalar field as
+a time-ordered correlation function of two scalar fields in the vacuum state,
+$$
+G_F(x-y)\ \eqdef\ \bra0 \bt \hat\Phi(x)\hat\Phi(y) \ket0 .
+\eqn\propdef
+$$
+We saw that
+$$
+G_F(x-y)\ =\ \theta(x^0>y^0)\times D(x-y)\ +\ \theta(x^0<y^0)\times D(y-x)\
+=\,\cases{ D(x-y) & when $x^0>y^0$,\cr D(y-x) & when $x^0<y^0$,\cr }
+\eqn\TwoDs
+$$
+where
+$$
+D(x-y)\ \eqdef \int\!{d^3\bk\over(2\pi)^3}\,{1\over 2\omega_\bk}\times\exp\bigl(-ik(x-y)\bigr)^{k^0=+\omega_\bk}.
+\eqn\Ddef
+$$
+A complex scalar field has a similar propagator, but the correlation function  involves one $\hat\Phi$ field
+and one $\hat\Phi^\dagger$ field,
+$$
+\bra0 \bt \hat\Phi^\dagger(x)\hat\Phi(y) \ket0\
+=\ \bra0 \bt \hat\Phi(x) \hat\Phi^\dagger(y) \ket 0\
+=\ G_F(x-y).\qquad\comment{same $G_F$ as for a real scalar}
+\eqno\eq
+$$
+
+In these notes, I shall show that the propagator~\propdef\ is a Green's function of the
+Klein--Gordon equation, and then I shall explain why there are many different Green's functions
+and which particular Green's function happens to be the Feynman propagator.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip\goodbreak
+\leftline{\fourteencp The Feynman propagator is a Green's function}
+\smallskip
+A free scalar field obeys the Klein--Gordon equation $(\partial^2+m^2)\hat\Phi(x)=0$.
+Consequently, the Feynman propagator~\propdef\ for the $\hat\Phi$ is a Green's function
+of that equation,
+$$
+(\partial^2+m^2)G_F(x-y)\ =\ -i\delta^{(4)}(x-y).
+\eqn\GreenDef
+$$
+Note the delta-function on the RHS is in all four dimensions of the spacetime.
+
+To prove eq.~\GreenDef, we start with a
+{\bf Lemma: \it the time derivative of a time-ordered product of two operators $\hat A(t)$
+and $\hat B(t_0)$ obtains as}
+$$
+\partder{}{t}\bigl(\bt\hat A(t)\hat B(t_0)\bigr)\
+=\ \bt\left(\partder{\hat A(t)}{t}\right)\hat B(t_0)\
++\ \delta(t-t_0)\times\bigl[\hat A(t),\hat B(t_0)\bigr] .
+\eqn\Lemma
+$$
+{\it Proof} (of the lemma):
+$$
+\eqalignno{
+\bt\hat A(t)\hat B(t_0)\
+&\eqdef\ \theta(t>t_0)\times\hat A(t)\hat B(t_0)\
+	+\ \theta(t<t_0)\times\hat B(t_0)\hat A(t),
+&\eq\cr
+\partder{}{t}\,\theta(t>t_0)\
+&=\ +\delta(t-t_0),\qquad
+	\partder{}{t}\,\theta(t<t_0)\ =\ -\delta(t-t_0),
+&\eq\cr
+}$$
+therefore
+$$\eqalign{
+\partder{}{t}\Bigl(\bt\hat A(t)\hat B(t_0)\Bigr)\
+&=\ \partder{}{t}\Bigl(\theta(t>t_0)\times\hat A(t)\hat B(t_0)\Bigr)\
+	+\ \partder{}{t}\Bigl(\theta(t<t_0)\times\hat B(t_0)\hat A(t)\Bigr)\cr
+&=\ \delta(t-t_0)\times\hat A(t)\times\hat B(t_0)\
+	+\ \theta(t>t_0)\times\partder{\hat A(t)}{t}\times\hat B(t_0)\cr
+&\qquad-\ \delta(t-t_0)\times\hat B(t_0)\times\hat A(t)\
+	+\ \theta(t<t_0)\times\hat B(t)\times\partder{\hat A(t)}{t}\cr
+&\qquad\comment{reorganizing terms}\cr
+&=\ \delta(t-t_0)\times\Bigl(\hat A(t)\hat B(t_0)\,-\,\hat B(t_0)\hat A(t)\Bigr)\cr
+&\qquad+\ \left(
+		\theta(t>t_0)\partder{\hat A}{t}\hat B(t_0)\,
+		+\,\theta(t<t_0)\hat B(t_0)\partder{\hat A}{t}
+		\right)\cr
+&=\ \delta(t-t_0)\times\bigl[\hat A(t),\hat B(t_0)\bigr]\
+	+\ \bt\left(\partder{\hat A(t)}{t}\times\hat B(t_0)\right).
+}\eqno\eq
+$$
+\QED
+
+Now let's prove that the propagator~\propdef\ is a Green's function.
+In light of the lemma~\Lemma,
+$$
+\eqalign{
+\partder{}{x^0}G_F(x-y)\
+&=\ \bra0 \partder{}{x^0}\bigl(\bt \hat \Phi(x)\hat\times \Phi(y)\bigr)\ket0\crr
+&=\ \bra0 \bt\bigl(\partial_0\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket 0\
+	+\ \delta(x^0-y^0)\times\bra0\bigl[\hat\Phi(x),\hat\Phi(y)\bigr]\ket0.\cr
+}\eqno\eq
+$$
+In the second term on the bottom line here, the quantum fields $\hat\Phi(x)$ and $\hat\Phi(y)$
+are at equal times $x^0=y^0$, so they commute with each other.
+Consequently, the second term vanishes, and we are left with
+$$
+\partder{}{x^0}G_F(x-y)\
+=\ \bra0 \bt\bigl(\partial_0\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket 0.
+\eqno\eq
+$$
+Now let's take another time derivative.
+Again, using the lemma~\Lemma, we obtain
+$$
+\eqalign{
+\partial_0^2 G_F(x-y)\ &
+=\ \partder{}{x^0}\,\bra0 \bt\bigl(\partial_0\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket 0\crr
+&=\ \bra0 \bt\bigl(\partial_0^2\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket 0\
+	+\ \delta(x^0-y^0)\times\bra0\bigl[\partial_0\hat\Phi(x),\hat\Phi(y)\bigr]\ket 0.
+}\eqn\SecondTD
+$$
+This time, in the second term on the bottom line, $\partial_0\hat\Phi(x)=\hat\Pi(x)$,
+and at equal times $x^0=y^0$, $\hat\Pi(x)$ does {\it not} commute with the $\hat\Phi(y)$.
+Instead,
+$$
+{\rm for}\ x^0=y^0,\quad
+\bigl[\hat\Pi(x),\hat\Phi(y)\bigr]\ =\ -i\delta^{(3)}(\bx-\by),
+\eqno\eq
+$$
+hence
+$$
+\delta(x^0-y^0)\times\bra0\bigl[\partial_0\hat\Phi(x),\hat\Phi(y)\bigr]\ket 0\
+=\ -i\delta^{(3)}(\bx-\by)\times\delta(x^0-y^0)\ =\ -i\delta^{(4)}(x-y).
+\eqno\eq
+$$
+Thus, eq.~\SecondTD\ reduces to
+$$
+\partial_0^2 G_F(x-y)\
+=\ \bra0 \bt\bigl(\partial_0^2\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket 0\
+-\ i\delta^{(4)}(x-y).
+\eqn\TimePart
+$$
+
+Now consider the space-derivative terms in the Klein-Gordon equation.
+Since the space derivatives commute with the time-ordering, we have
+$$
+\nabla^2_x G_F(x-y)\
+=\ \nabla^2_x\bra0 \bigl(\bt\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket0\
+=\ \bra0\ \bt\bigl( \nabla^2\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket0
+\eqno\eq
+$$
+without any extra terms.
+Combining this formula with eq.~\TimePart, we obtain
+$$
+\bigl(\partial_0^2-\nabla^2+m^2\bigr) G_F(x-y)\
+=\ \bra0 \bt\bigl( (\partial_0^2-\nabla^2+m^2)\hat\Phi(x)\times\hat\Phi(y)\bigr)\ket0\
+-\ i\delta^{(4)}(x-y).
+\eqno\eq
+$$
+On the RHS of this formula, the quantum field $\hat\Phi(x)$ satisfies the Klein--Gordon equation
+$(\partial_0^2-\nabla^2+m^2)\hat\Phi(x)=0$, which kills the first term.
+Only the second term --- the delta function --- survives on the RHS, thus
+$$
+\bigl(\partial_0^2-\nabla^2+m^2\bigr) G_F(x-y)\ =\ -i\delta^{(4)}(x-y),
+\eqno\eq
+$$
+which proves that $G_F(x-y)$ is a Green's function of the Klein--Gordon equation.
+\QED
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip\goodbreak
+\leftline{\fourteencp General Green's functions and the Feynman's choice}
+\smallskip
+In general, the same differential equation may have many different Green's functions,
+depending on the boundary conditions, \etc{}
+So let's consider a generic Green's function of the Klein--Gordon equation, that is,
+some function $G(x-y)$ satisfying
+$$
+(\partial^2+m^2)G(x-y)\ =\ -i\delta^{(4)}(x-y).
+\eqn\Greens
+$$
+Let's Fourier transform this function in all four dimensions,
+$$
+G(x-y)\ =\int\!{d^4 k\over(2\pi)^4}\,e^{-ik(x-y)}\times\tilde G(k).
+\eqno\eq
+$$
+In the 4--momentum space, eq.~\Greens\ becomes
+$$
+(-k^2+m^2)\times \tilde G(k)\ =\ -i,
+\eqno\eq
+$$
+hence {\it naively}
+$$
+G(k)\ =\ {i\over k^2-m^2}
+\eqno\eq
+$$
+and therefore
+$$
+G(x-y)\ =\int\!{d^4 k\over(2\pi)^4}\,{i\, e^{-ik(x-y)}\over k^2-m^2}\,.
+\eqn\NaiveG
+$$
+
+The problem with this naive formula is that it integrates over the singularities of the integrand.
+Indeed, the denominator $k^2-m^2=k_0^2-\bk^2-m^0$ vanishes on the mass shells $\bk^0=\pm\sqrt{\bk^2+m^2}$,
+so we have two 3D families of poles.
+In general, an integral of a singular function over its pole is ill-defined, and we must regularize it
+to get a definite answer.
+For the Green's function in question, we must regulate two 3D-families of poles, thus
+$$
+G(x)\ =\int_{\rm reg}\!{d^4 k\over(2\pi)^4}\,{i e^{-ik(x-y)}\over k^2-m^2}\
+=\int\!{d^3\bk\over(2\pi)^3}\,e^{i\bx\cdot\bk}\times
+	\int_{\rm reg}\!{dk_0\over 2\pi}\,{ie^{-itk_0}\over k_0^2-\bk^2-m^2}\,.
+\eqn\GREG
+$$
+In other words, we integrate over the $k^0$ before we integrate over the $\bk$.
+In the $\int\!dk^0$ integral, we encounter two simple poles at $k^0=\pm\omega_\bk$,
+and we must somehow regularize them to get a definite result.
+Only then we integrate that result over $\bk$; hopefully, {\it that} integral
+does not encounter any singularities.
+
+Alas, the devil is in the details: There are many different ways to regularize
+an integral, and regulators yield different regularized integrals --- which eventually yield
+many different Green's functions~\GREG\ of the same Klein--Gordon equation.
+
+In these notes, we are going to use a particularly simple way to regulate an integral
+over a simple pole
+--- shift the pole away from the real axis into the complex plane,
+$$
+\int_{\rm reg}\!dx\,{f(x)\over x-x_0}\
+=\int\!dx\,{f(x)\over x-(x_0\pm i\epsilon)}
+\eqn\Regulator
+$$
+for an infinitesimal $\epsilon\to+0$.
+Equivalently, we may leave the pole real but deform the integration contour slightly away from the real axis
+so that it bypasses the pole,
+$$
+\pspicture(0,-0.5)(13,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](0,0)(1,0)
+\psline[linestyle=dotted](5,0)(6,0)
+\psline[linestyle=dotted](7,0)(8,0)
+\psline[linestyle=dotted](12,0)(13,0)
+\psline(1,0)(2.5,0)
+\psarc(3,0){0.5}{0}{180}
+\psline{->}(3.5,0)(5,0)
+\psline{->}(8,0)(12,0)
+\pscircle*[linecolor=red](3,0){0.1}
+\pscircle*[linecolor=red](10,-0.5){0.1}
+\psset{linecolor=black,linewidth=0.5pt}
+\psline(0,0)(6,0)
+\psline(7,0)(13,0)
+\rput(6.5,0){=}
+\rput[l](10.3,-0.5){$x_0-i\epsilon$}
+\endpspicture
+$$
+or
+$$
+\pspicture(0,-0.5)(13,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](0,0)(1,0)
+\psline[linestyle=dotted](5,0)(6,0)
+\psline[linestyle=dotted](7,0)(8,0)
+\psline[linestyle=dotted](12,0)(13,0)
+\psline(1,0)(2.5,0)
+\psarc(3,0){0.5}{180}{360}
+\psline{->}(3.5,0)(5,0)
+\psline{->}(8,0)(12,0)
+\pscircle*[linecolor=red](3,0){0.1}
+\pscircle*[linecolor=red](10,+0.5){0.1}
+\psset{linecolor=black,linewidth=0.5pt}
+\psline(0,0)(6,0)
+\psline(7,0)(13,0)
+\rput(6.5,0){=}
+\rput[l](10.3,+0.5){$x_0+i\epsilon$}
+\endpspicture
+$$
+Note that the contour above the pole and the contour below the pole make for
+different regulators and yield different regularized integrals.
+Indeed, the two contours differ from each other by a loop around the pole,
+which picks up the pole's resudue.
+Equivalently, comparing integrals over the real axis over poles shifted up vs. down
+in the complex plane, we get results differening by
+$$
+\int\!dx\,{f(x)\over x-(x_0+i\epsilon)}\ -\int\!dx\,{f(x)\over x-(x_0-i\epsilon)}\
+=\ 2\pi i\times f(x_0).
+\eqno\eq
+$$
+
+In the context of the integral~\GREG, there are two poles in the $\int\! dk^0$ for every $\bk$,
+so we must make our choices.
+For the sake of Lorentz invariance, we should use the same regulator for every $\bk$, which leaves
+with $2\times2=4$ choices:
+\item\bullet
+Move the pole at $k^0=+\omega_\bk$ to $+\omega_\bk+i\epsilon$ or to $+\omega_\bk-i\epsilon$.
+\item\bullet
+Move the pole at $k^0=-\omega_\bk$ to $-\omega_\bk+i\epsilon$ or to $-\omega_\bk-i\epsilon$.
+\par\goodbreak\noindent
+The 4 choices give rise to 4 distinct Lorentz-invariant Green's functions, namely:
+\pointbegin %1
+{\it Causal retarded Green's function} $G_R$ for poles at $k_0=\pm\omega_k-i\epsilon$,
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,-0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\endpspicture
+$$
+\point %2
+{\it Causal advanced Green's function} $G_A$ for poles at $k_0=\pm\omega_k+i\epsilon$,
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,+0.5){0.1}
+\endpspicture
+$$
+\point %3
+{\it Time-ordered Green's function} $G_F$ for poles at $k_0=\pm(\omega_k-i\epsilon)$,
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\endpspicture
+$$
+This Green's function is the Feynman's propagator~\propdef.
+\point %4
+{\it Anti-time-ordered Green's function} $G_{AT}$ for poles at $k_0=\pm(\omega_k+i\epsilon)$,
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,-0.5){0.1}
+\pscircle*[linecolor=red](+3,+0.5){0.1}
+\endpspicture
+$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip\goodbreak
+\leftline{\bf Feynman's Choice}
+Let's focus on the Feynman's choice of the poles at $+\omega_\bk-i\epsilon$ and $-\omega_\bk+i\epsilon$.
+Altogether, the denominator of the integrand in eq.~\GREG\ is
+$$
+(k_0-\omega_\bk+i\epsilon)\times(k_0+\omega_\bk-i\epsilon)\
+=\ k_0^2\,-\,(\omega_\bk-i\epsilon)^2\
+\approx\ k_0^2\,-\,\omega_\bk^2\,+\,2i\omega_\bk\epsilon\
+=\ k_0^2\,-\,\bk^2\,-\,m^2\,+\,i\epsilon\times2\omega_\bk.
+\eqno\eq
+$$
+In the last expression, we may replace $\epsilon\times2\omega_\bk$ with simply $\epsilon$,
+since all we care about is is that it's a positive infinitesimal number${}\to+0$.
+Thus
+$$
+{\rm denominator}\ =\ k_0^2\ -\ \bk^2\ -\ m^2\ +\ i\epsilon\ =\ k^2\ -\ m^2\ +\ i\epsilon,
+\eqno\eq
+$$
+hence manifestly Lorentz invariant expression for the Feynman's Green's function as
+$$
+G_F(x-y)\ =\int\!{d^4k\over(2\pi)^4}\,{ie^{-ikx}\over k^2-m^2{\red+i\epsilon}}\,.
+\eqn\InvarInt
+$$
+
+In this section of the notes, we shall see that this Green's function is precisely the
+Feynman propagator~\propdef.
+Without loss of generality, let's set $y=0$.
+In light of eq.~\TwoDs, we expect two different cases according to the sign of the $t=x^0$.
+Let's start with the $t>0$ case and deal with $t<0$ later.
+
+We begin to evaluate the 4D  integral~\InvarInt\ by integrating over the $k_0$ for a fixed $\bk$,
+$$
+\eqalignno{
+I(t,\omega_\bk)\ &
+=\int\!{dk_0\over 2\pi}\,{ie^{-it k_0}\over k_0^2-\omega_\bk^2+i\epsilon}\,,&
+\eqname\Kzero\cr
+\noalign{\vskip 10pt}
+{\rm then}\quad G_F(\bx,t)\ &
+=\int\!{d^3\bk\over(2\pi)^3}\,e^{i\bx\cdot\bk}\times I(t,\omega_\bk) &
+\eqname\ThreeK\cr
+}$$
+In the integral~\Kzero, the integration contour is the real axis, while the two poles lie near the axis
+--- but not quite on it --- as on the following diagram
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\endpspicture
+\eqn\Fline
+$$
+Outside the real axis, the exponential $e^{-itk_0}$ --- with positive $t$ --- rapidly decreases
+for large negative $\Im(k_0)$.
+Consequently, we may close the integration contour by adding to it a large semicircular arc
+in the negative $\Im(k_0)$ half of the complex plane.
+Thus,
+$$
+I(t,\omega_\bk)\ =\ \oint_\Gamma{dk_0\over2\pi}\,
+{ie^{-itk_0}\over(k_0-\omega_\bk+i\epsilon)(k_0+\omega_\bk-i\epsilon)}
+\eqn\Contourint
+$$
+where
+$$
+\Gamma\ =\quad
+\pspicture[shift=-5.9](-6,-6)(+6,+1)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline{->}(-5,0)(+5,0)
+\psarc{<-}(0,0){5}{180}{360}
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\psset{linecolor=black,linewidth=0.5pt,arrowscale=2}
+\psline(-6,0)(+6,0)
+\psline(0,-6)(0,+1)
+\endpspicture
+\eqn\BottomArc
+$$
+The closed-contour integrals like~\Contourint\ may be evaluated in terms of residues
+at the poles {\it surrounded by the contour.}
+For the contour~\BottomArc\ at hand, the pole at $+\omega_\bk-i\epsilon$ lies inside
+the contour while the other pole lies outside the contour.
+Consequently,
+$$
+I(t,\omega_\bk)\ =\ -2\pi i\times{\rm Residue\ at}\ k_0=+\omega_\bk-i\epsilon ,
+\eqno\eq
+$$
+where the overall $-2\pi i$ factor is due to clockwise direction of the contour.
+Specifically,
+$$
+\eqalign{
+I(t,\omega_\bk)\ &
+=\ -2\pi i\times\left(
+	{ie^{-itk_0}\over2\pi\times\crossout{(k_0-\omega_\bk+i\epsilon)}\times(k_0+\omega_\bk-i\epsilon)}
+	\right)_{k_0=+\omega_\bk-i\epsilon}\crr
+&=\ +{\exp(-it(\omega_\bk-i\epsilon))\over2(\omega_\bk-i\epsilon)}\cr
+&\qquad\comment{taking the $\epsilon\to+0$ limit, which is non-singular}\cr
+&=\ +{e^{-it\omega_\bk}\over 2\omega_\bk}\,.\cr
+}\eqno\eq
+$$
+Plugging this result into eq.~\ThreeK, we have
+$$
+G_F(x)\ =\int\!{d^3\bk\over(2\pi)^3}\,e^{i\bx\cdot\bk}\times{e^{-it\omega_\bk}\over 2\omega_\bk}\
+=\int\!{d^3\bk\over(2\pi)^3}\,{1\over2\omega_\bk}\,\exp(i\bx\cdot\bk-it\omega_\bk)\
+=\ D(x),
+\eqn\PositiveT
+$$
+in perfect agreement with the Feynman propagator~\propdef\ for $\red t>0$, \cf~eq.~\TwoDs.
+
+Now let's turn to the $t<0$ case.
+Again, we need to take the integral
+$$
+I(t,\omega_\bk)\ 
+=\int\!{dk_0\over 2\pi}\,{ie^{-it k_0}\over k_0^2-\omega_\bk^2+i\epsilon}
+\eqno\Kzero
+$$
+along the real axis, bypassing the poles according to
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\endpspicture
+\eqno\Fline
+$$
+However, for a negative $t$, the exponential $e^{-itk_0}$ decreases for large positive $\Im(k_0)$
+(rather than large negative $\Im(k_0)$ as we had for positive $t$), so to close the integration contour
+\Fline\ we should add a large semicircular arc in the positive half of the complex plane.
+Thus,
+$$
+I(t,\omega_\bk)\ =\ \oint_{\Gamma'}{dk_0\over2\pi}\,
+{ie^{-itk_0}\over(k_0-\omega_\bk+i\epsilon)(k_0+\omega_\bk-i\epsilon)}
+\eqn\ContourintII
+$$
+where
+$$
+\Gamma'\ =\quad
+\pspicture[shift=-0.9](-6,-1)(+6,+6)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline{->}(-5,0)(+5,0)
+\psarc{->}(0,0){5}{0}{180}
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\psset{linecolor=black,linewidth=0.5pt,arrowscale=2}
+\psline(-6,0)(+6,0)
+\psline(0,-1)(0,+6)
+\endpspicture
+\eqn\TopArc
+$$
+Unlike the contour~\BottomArc\ which we have used for positive $t$, the contour~\TopArc\
+surrounds the negative-frequency pole at $k_0=-\omega_\bk+i\epsilon$.
+It is also counterclockwise, hence
+$$
+\eqalign{
+I(t,\omega_\bk)\ &
+=\ +2\pi i\times{\rm Residue\ at}\ k_0=-\omega_\bk+i\epsilon\cr
+&=\ +2\pi i\times\left(
+	{ie^{-itk_0}\over2\pi\times(k_0-\omega_\bk+i\epsilon)\times\crossout{(k_0+\omega_\bk-i\epsilon)}}
+	\right)_{k_0=-\omega_\bk+i\epsilon}\crr
+&=\ -{\exp(-it(-\omega_\bk+i\epsilon))\over2(-\omega_\bk+i\epsilon)}\cr
+&\qquad\comment{taking the $\epsilon\to+0$ limit, which is non-singular}\cr
+&=\ +{e^{+it\omega_\bk}\over 2\omega_\bk}\,.\cr
+}\eqno\eq
+$$
+Plugging this $k_0$ integral into the $\int\!d^3\bk$ integral~\ThreeK, we obtain
+$$
+G_F(\bx,t)\
+=\int\!{d^3\bk\over(2\pi)^3}\,e^{+i\bx\cdot\bk}\times{e^{+it\omega_\bk}\over 2\omega_\bk}
+=\ D(+\bx,-t).
+$$
+At first blush, this is not quite the answer we want, but fortunately $D$ is invariant under orthochronous
+Lorentz transformation, and in particular under any rotations of the 3D space.
+Consequently
+$$
+D(+\bx,-t)\ =\ D(-\bx,-t),
+\eqno\eq
+$$
+and therefore
+$$
+{\rm for}\ t<0,\quad G_F(x)\ =\ D(-x),
+\eqn\NegativeT
+$$
+in perfect agreement with eq.~\TwoDs.
+
+Altogether, eqs.~\PositiveT\ and \NegativeT\ tell us that the Feynman's Green's function
+$$
+G_F(x-y)\ =\int\!{d^4k\over(2\pi)^4}\,{ie^{-ikx}\over k^2-m^2{\red+i\epsilon}}\
+=\,\left.\cases{D(x-y) & when $x^0>y^0$\cr D(y-x) & when $x^0<y^0$\cr }\right\}\,
+=\ \bra0\bt\hat\Phi(x)\hat\Phi(y)\ket 0
+\eqno\eq
+$$
+is precisely the time-ordered correlation function of two free scalar fields.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip\goodbreak
+\leftline{\bf Other Green's functions}
+Besides the Feynman's time-ordered Green's function, there are other useful Green's functions
+(of the same Klein-Gordon equation) which obtain for other choices of regularizing the poles.
+Of particular interest is the causal retarded Green's function
+$$
+G_R(x-y)\ =\int\!{d^3\bx\over(2\pi)^3}\,e^{i(\bx-\by)\bk}\times
+\int\,{dk_0\over2\pi}\,{i\,e^{-i(x^0-y^0)k_0}\over(k_0-\omega_\bk+i\epsilon)(k_0+\omega_\bk+i\epsilon)}\,,
+\eqno\eq
+$$
+which obtains by shifting both poles below the real axis,
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,-0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\endpspicture
+\eqn\Rline
+$$
+As before, we close this contour by adding a large semicircular arc in the lower or upper half
+of the complex plane, depending on the sign of the time difference $t=x^0-y^0$.
+In particular, for $t<0$ we close the contour above the real axis,
+$$
+\Gamma'\ =\quad
+\pspicture[shift=-0.9](-6,-1)(+6,+6)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline{->}(-5,0)(+5,0)
+\psarc{->}(0,0){5}{0}{180}
+\pscircle*[linecolor=red](-3,-0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\psset{linecolor=black,linewidth=0.5pt,arrowscale=2}
+\psline(-6,0)(+6,0)
+\psline(0,-1)(0,+6)
+\endpspicture
+\eqno\eq
+$$
+which puts both poles outside the contour.
+Consequently, the contour integral vanishes altogether, thus
+$$
+G_R(x-y)\ =\ 0\quad{\rm when}\ x^0-y^0<0.
+\eqno\eq
+$$
+This is why this Green's function is called {\it retarded:}
+time-wise, the point $x$ must follow the point $y$, hence in the context of a source $j(y)$
+and the induced field
+$$
+\phi(x)\ =\int\!d^4y\,G_R(x-y)\times j(y),
+\eqno\eq
+$$
+the source at point $y$ affects the field $\phi(x)$ only at later times $x^0>y^0$ that the field.
+
+Now let's see what $G_R(x-y)$ looks like for $t=x^0-y^0>0$.
+This time, we close the contour~\Rline\ below the real axis,
+$$
+\Gamma\ =\quad
+\pspicture[shift=-5.9](-6,-6)(+6,+1)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline{->}(-5,0)(+5,0)
+\psarc{<-}(0,0){5}{180}{360}
+\pscircle*[linecolor=red](-3,-0.5){0.1}
+\pscircle*[linecolor=red](+3,-0.5){0.1}
+\psset{linecolor=black,linewidth=0.5pt,arrowscale=2}
+\psline(-6,0)(+6,0)
+\psline(0,-6)(0,+1)
+\endpspicture
+\eqno\eq
+$$
+so both poles are inside the contour.
+Consequently,
+$$
+\eqalign{
+I_R(t,\omega)\ &
+=\int_\Gamma\!{dk_0\over2\pi}\,{i\,e^{-itk_0}\over(k_0-\omega+i\epsilon)(k_0+\omega+i\epsilon)}\cr
+&=\ -2\pi i\times{\rm Residue~@}(k_0=+\omega-i\epsilon)\
+   -\ 2\pi i\times{\rm Residue~@}(k_0=-\omega-i\epsilon)\crr
+&=\ {-2\pi i\over2\pi}\times\left(
+		{ie^{-itk_0}\over\crossout{(k_0-\omega+i\epsilon)}\times(k_0+\omega+i\epsilon)}
+		\right)_{k_0=+\omega-i\epsilon}\cr
+&\qquad+\ {-2\pi i\over2\pi}\times\left(
+		{ie^{-itk_0}\over(k_0-\omega+i\epsilon)\times\crossout{(k_0+\omega+i\epsilon)}}
+		\right)_{k_0=-\omega-i\epsilon}\crr
+&=\ +{e^{-it(\omega-i\epsilon)}\over2(\omega-i\epsilon)}\
+	+\ {e^{-it(-\omega-i\epsilon)}\over2(-\omega-i\epsilon}\crr
+&=\ +{e^{-it\omega}\over 2\omega}\ -\ {e^{+it\omega}\over 2\omega}\,.\cr
+}\eqno\eq
+$$
+Plugging this result into the $\int\!d^\bk$ integral, we obtain
+$$
+\eqalign{
+{\rm For}\ x^0>y^0,\quad
+G_R(x-y)\ &
+=\int\!{d^3\bk\over(2\pi)^3}\,e^{i\bk(\bx-\by)}\times {e^{-it\omega_\bk}\,-\,e^{+it\omega_\bk}\over2\omega_\bk}\crr
+&=\ D(\bx-\by;t)\ -\ D(\bx-\by;-t)\cr
+&=\ D(\bx-\by;t)\ -\ D(\by-\bx;-t)\cr
+&=\ D(x-y)\ -\ D(y-x).\cr
+}\eqno\eq
+$$
+Note that the bottom line here vanishes for spacelike $(x-y)$, which makes the Green's function $G_R$
+not only retarded but also causal: it vanishes unless $y$ lies in the future light cone from $x$.
+
+Similar to the causal retarded Green's function $G_R(x-y)$ we can make the causal advanced Green's function
+$G_A(x-y)$ by shifting both poles above the real axis,
+$$
+\eqalignno{
+G_A(x-y)\ &
+=\int\!{d^3\bx\over(2\pi)^3}\,e^{i(\bx-\by)\bk}\times
+\int\,{dk_0\over2\pi}\,{i\,e^{-i(x^0-y^0)k_0}\over(k_0-\omega_\bk-i\epsilon)(k_0+\omega_\bk-i\epsilon)} &
+\eq\cr
+&\pspicture(-6,-0.5)(+6,+1.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,+0.5){0.1}
+\pscircle*[linecolor=red](+3,+0.5){0.1}
+\endpspicture &
+\eq\cr
+}$$
+As its name suggests, this Green's function vanishes unless $y$ is in the {\it past} light cone from $x$.
+
+Finally, the fourth choice of regularized poles
+$$
+\pspicture(-6,-0.5)(+6,+0.5)
+\psset{linecolor=blue,linewidth=2.5pt,arrowscale=1}
+\psline[linestyle=dotted](-6,0)(-5,0)
+\psline[linestyle=dotted](+6,0)(+5,0)
+\psline{->}(-5,0)(+5,0)
+\pscircle*[linecolor=red](-3,-0.5){0.1}
+\pscircle*[linecolor=red](+3,+0.5){0.1}
+\endpspicture
+\eqno\eq
+$$
+produce the anti-time-ordered Green's function
+$$
+G_{AT}(x-y)\ =\int\!{d^4k\over(2\pi)^4}\,{i\,e^{-ik(x-y)}\over k^2-m^2-i\epsilon}\
+=\,\cases{ -D(y-x) & when $x^0>y^0$,\cr -D(x-y) & when $y^0>x^0$.\cr }
+\eqno\eq
+$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip\goodbreak
+\leftline{\fourteencp Propagators for non-scalar fields}
+\smallskip
+Let me conclude these notes with a few words about propagators for the non-scalar relativistic fields
+--- the vector fields, the tensor fields, the spinor fields, \etc, \etc{}
+For all such fields, the Feynman propagator is the time-ordered correlation function of two free
+fields in the vacuum state, for example
+$$
+G_F^{\mu\nu}(x-y)\ =\ \bra0 \bt^* \hat A^\mu(x)\times\hat A^\nu(y) \ket0
+\eqno\eq
+$$
+for the massive vector fields (see \href{\class/hw05.pdf}{\blue homework set\#5} for details), or
+$$
+S_F^{\alpha\beta}(x-y)\ =\ \bra0 \bt \psib^\alpha(x)\times\hat\Psi^\beta(y) \ket0
+\eqno\eq
+$$
+for the Dirac spinor field $\hat\Psi^\beta(x)$ and its conjugate $\psib^\alpha(x)$
+(to be explained in future classes).
+
+All such propagators are Green's functions of the equations of motion for the appropriate fields.
+For example, the free massive vector fields obey
+$$
+\Bigl( g_{\mu\nu}(\partial^2+m^2)\,-\,\partial_\mu\partial_\nu\Bigr) A^\nu\ =\ 0,
+\eqno\eq
+$$
+so the propagator is a Green's function of the differential operator here,
+$$
+\Bigl( g_{\mu\nu}(\partial^2+m^2)\,-\,\partial_\mu\partial_\nu\Bigr) G_F^{\nu\lambda}(x-y)\
+=\ -i\delta_\mu^\lambda\times\delta^{(4)}(x-y).
+\eqno\eq
+$$
+(The proof is part of \href{\class/hw05.pdf}{\blue homework set\#5}.)
+Likewise, the free Dirac spinor fields $\Psi^\alpha(x)$ obey the Dirac equation
+$$
+\bigl(i\gamma^\mu\partial_\mu-m\bigr)_{\alpha\beta}\Psi^\beta(x)\ =\ 0,
+\eqno\eq
+$$
+so the Dirac propagator is a Green's function of the Dirac equation,
+$$
+\bigl(i\gamma^\mu\partial_\mu-m\bigr)_{\alpha\beta} S_F^{\beta\delta}(x-y)\
+=\ -i\delta_\alpha^\delta\times\delta^{(4)}(x-y).
+\eqno\eq
+$$
+(I shall prove this in class in a few weeks.)
+
+Moreover, all such Green's functions involve momentum integrals over poles  along both
+mass shells $k_0=\pm\omega_\bk$, and those poles must be regularized.
+But for all the Feynman propagators, the poles must be regularized just as we did for the scalar field,
+the pole at $k_0=+\omega_\bk$ shifts below the real axis to $+\omega_\bk-i\epsilon$
+while the pole at $k_0=-\omega_\bk$ shifts above the real axis to $-\omega_\bk+i\epsilon$.
+Consequently, all the Feynman propagators have momentum-space form of
+$$
+({\rm propagator})^{\rm indices}(x-y)\
+=\int\!{d^4k\over(2\pi)^4}\,{i\,e^{-ik(x-y)}\over k^2-m^2+i\epsilon}\times F^{\rm indices}(k)
+\eqno\eq
+$$
+for some simple --- and hopefully non-singular --- function $F^{\rm indices}(k)$.
+For example, for the massive vector field
+$$
+G_F^{\mu\nu}(x-y)\
+=\int\!{d^4k\over(2\pi)^4}\,{i\,e^{-ik(x-y)}\over k^2-m^2+i\epsilon}\times
+\left( -g^{\mu\nu}\,-\,{k^\mu k^\nu\over m^2}\right),
+\eqno\eq
+$$
+while for the Dirac spinor field
+$$
+S_F^{\alpha\beta}(x-y)\
+=\int\!{d^4k\over(2\pi)^4}\,{i\,e^{-ik(x-y)}\over k^2-m^2+i\epsilon}\times
+\bigl(k^\mu\gamma_\mu+m\bigr)^{\alpha\beta}.
+\eqno\eq
+$$
+In general, for a massive field the function $F^{\rm indices}(k)$ is simply a polynomial of $k$
+of degree $2\times\rm Spin$.
+%
+For a massless $\rm spin=\half$ field $F^{\rm indices}(k)$ is also a polynomial,
+but for a massless vector field --- or any other kind of a gauge field --- it becomes non-polynomial
+and gauge-dependent.
+I shall explain the Feynman propagator for the EM fields later in class, probably sometimes in November.
+
+\bye
