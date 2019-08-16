@@ -3,6 +3,7 @@
 
 \section{Standard model particle content}
 
+\begin{frame}[fragile,allowframebreaks]
 In the following discussion we use the following doublets
 \begin{align}
   H=&
@@ -16,16 +17,19 @@ In the following discussion we use the following doublets
     e_{Li}^{-}
   \end{pmatrix}.
 \end{align}
-cooresponding to the Higgs doublet and the lepton doublets respectively.
+corresponding to the Higgs doublet and the lepton doublets respectively.
+\end{frame}
 
 \section{Weinberg operator}
 
+\begin{frame}[fragile,allowframebreaks]
 See Weinberg,  PRL43(1979)1566:
 \begin{align*}
   \mathcal{L}
   =&\frac{f}{\Lambda} L\cdot H L\cdot H+\text{h.c}\nonumber\\
   =&\frac{f}{\Lambda}\epsilon_{ab}\epsilon_{cd} L^a H^b L^c H^d+\text{h.c}\,.
 \end{align*}
+\end{frame}
 The treatment in four notation component is given in Sec.~\ref{sec:4weinberg-operator}.
 
 For a discussion around this operator see for example~\url{http://bit.ly/neutrinoreview}
@@ -33,11 +37,13 @@ For a discussion around this operator see for example~\url{http://bit.ly/neutrin
 \section{Dirac operator}
 
 If neutrinos are Dirac particles, the Standard Model (SM) particle content must be extended with right-handed neutrinos, and some symmetry must be imposed to prevent their Majorana mass terms. At least a $Z_3$ symmetry is required to guarantee the neutrino Diracness through
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \label{eq:tld}
 %  \mathcal{L}_{\nu}=&\,y_D\left( \nu_R \right)^{\dagger} \epsilon_{ab}L^a H^b+\text{h.c.} \nonumber\\
   \mathcal{L}_{\nu}=&\,y_D\left( \nu_R \right)^{\dagger} L\cdot H +\text{h.c.} \,,
 \end{align}
+\end{frame}
 with $L\cdot H=\epsilon_{ab}L^a H^b$, where $L$ is the lepton doublet, $H$ is the
 SM Higgs doublet with hypercharge $Y=1$, and $y_D$ is the matrix of neutrino Yukawa couplings.  To be compatible with  neutrino
 oscillation data \cite{deSalas:2017kay}, $y_D$ should be at least of order $2\times 3$.  
@@ -50,7 +56,7 @@ phenomenological issue but a theoretical one, in which it is necessary
 to explain the smallness of the Yukawa couplings in $y_D$, which must be  of order
 $10^{-11}$.
 
-
+\begin{frame}[fragile,allowframebreaks]
 To do so, we assume that the symmetry allows for the 5-dimensional operator with total lepton number conservation~\cite{Gu:2006dc}
 \begin{align}
   \label{eq:blop}
@@ -58,6 +64,7 @@ To do so, we assume that the symmetry allows for the 5-dimensional operator with
   \frac{h}{\Lambda} \left( \nu_R \right)^\dagger  L\cdot H\, S^{*} + 
 \text{h.c.}\,,
 \end{align}
+\end{frame}
 where $\Lambda$ is the new physics scale, and that this operator
 is first realized at one-loop level~\cite{Yao:2018ekp}
 (see~\cite{Roncadelli:1983ty,Roy:1983be,Gu:2007mc,Ma:2014qra,Ma:2016mwh,Yao:2018ekp,CentellesChulia:2018gwr,CentellesChulia:2018bkz,Bernal:2018aon} for the tree-level realizations).  
@@ -68,12 +75,17 @@ Here we calculate the tree level neutrino mases for the Type-I seesaw.
 
 
 \section{One right-handed neutrino}
+
+\begin{frame}[fragile,allowframebreaks]
 We assume to have just one right-handed neutrino $N_R$ 
 \begin{align}
   \mathcal{L}_{\nu}=y_{i} \left( N_R \right)^{\dagger} L\cdot  H   
   +\tfrac{1}{2} M_R\, N_R  N_R + \text{h.c}\,.
 \end{align}
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 In addition to the previous Majorana mass contribution $M_R$, after the spontaneous symmetry breaking the neutral states $\nu_{Li}$ and $N_R$  acquire a Dirac mass contribution
+
 \begin{align}
   \mathcal{L}_{\nu}\supset & M_D^{i} \left( \nu_{Li} \right)^{\dagger} N_R +\frac{1}{2} M_R N_R N_R +\text{h.c} \nonumber\\
   =&  \frac{1}{2}M_D^{i} \left( \nu_{Li} \right)^{\dagger} N_R
@@ -87,6 +99,8 @@ In addition to the previous Majorana mass contribution $M_R$, after the spontane
     N_R  \end{pmatrix}+\text{h.c} \nonumber\\
   \equiv&\frac{1}{2} \boldsymbol{\chi}^{\operatorname{T}} \boldsymbol{M_{\chi}} \boldsymbol{\chi}+\text{h.c}\,,
 \end{align}
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 where the Dirac neutrino mass vector $\boldsymbol{M}_D$ has components
 \begin{align}
   M_D^i=\frac{y^i v}{\sqrt{2}}\,,
@@ -109,6 +123,8 @@ When $M_R^2 \gg \boldsymbol{M}_D  \boldsymbol{M}_D ^{\operatorname{T}} $
   { \boldsymbol{M_{\chi}}}_\mp\approx &\frac{1}{2} M_R\left[ 1 \mp  \left( 1 +   2 \boldsymbol{M}_D M_R^{-2}   \boldsymbol{M}_D^{\operatorname{T}}  \right)
    \right]
 \end{align}
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 Therefore
 \begin{align}
  \boldsymbol{\mathcal{M}}_{\nu}\to {M_{\chi^-} }\approx&-   \boldsymbol{M}_D M_R^{-1}   \boldsymbol{M}_D^{\operatorname{T}}  \nonumber\\
@@ -120,8 +136,11 @@ The effective neutrino mass matrix, $\boldsymbol{\mathcal{M}}_{\nu}$,  in this c
   \boldsymbol{\mathcal{M}}_{\nu}\to&- \boldsymbol{M}_D M_R^{-1} \boldsymbol{M}_D^{\operatorname{T}}\nonumber\\
   \left( {\mathcal{M}}_{\nu} \right)_{ij}\approx&- M_D^i M_R^{-1} M_D^{j}\,.
 \end{align}
-
-It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal by blocks basis, denoted with a zero superindex below. We have
+\end{frame}
+It is possible to write the final result in terms of a Majorana fermion defined from the Weyl spinors in the diagonal by blocks basis, denoted with a zero superindex be
+low.
+\begin{frame}[fragile,allowframebreaks]
+We have
 \begin{align}
   \boldsymbol{\nu}=&
   \begin{pmatrix}
@@ -138,10 +157,12 @@ Therefore
 =& \cdots \nonumber\\
 =&\tfrac{1}{2}\,\boldsymbol{\nu}_L^{0}\, \boldsymbol{\mathcal{M}}_{\nu}\,   \boldsymbol{\nu}_L^{0} +\text{h.c}\,.
 \end{align}
+\end{frame}
 
 Note that Abelian Lepton number is not longer a conserved symmetry of the Lagrangian. For example by assigning Lepton $-1$ for $N_R$, the Majorana term $N_R N_R$ violates Lepton number by two units. However we can identify a remnant $Z_{2}$ symmetry under which the Leptons are odd and all the other SM particles are even, including the Higgs doublet. This symmetry is called Lepton parity.
 
 \section{One heavy Dirac fermion}
+\begin{frame}[fragile,allowframebreaks]
 We need to assume the existence of a heavy Dirac fermion, $F=
 \begin{pmatrix}
   F_L & F_R
@@ -254,6 +275,7 @@ Therefore
   \end{pmatrix} \nonumber\\
   =&\left( \boldsymbol{\nu}_L^0 \right)^{\dagger} \boldsymbol{\mathcal{M}}_{\nu}\,   \boldsymbol{\nu}_R^{0} +\text{h.c}\,.
 \end{align}
+\end{frame}
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "beyond"
