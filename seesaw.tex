@@ -1,15 +1,67 @@
 
 \chapter{Neutrino masses}
 
+\section{Standard model particle content}
+
+In the following discussion we use the following doublets
+\begin{align}
+  H=&
+  \begin{pmatrix}
+    H^+\\
+    H^0
+  \end{pmatrix},&
+  L_i=&
+  \begin{pmatrix}
+    \nu_{Li}\\
+    e_{Li}^{-}
+  \end{pmatrix}.
+\end{align}
+cooresponding to the Higgs doublet and the lepton doublets respectively.
+
 \section{Weinberg operator}
 
 See Weinberg,  PRL43(1979)1566:
 \begin{align*}
-    \mathcal{L} 
-  =&\frac{f}{M}\overline{L_a}H_cL_bH_d\epsilon_{ac}\epsilon_{bd}+\text{h.c}\nonumber\\
-  =&\frac{f}{M}\widetilde{H}^\dagger {L}\widetilde{H}^\dagger {L}+\text{h.c}\,.
+  \mathcal{L}
+  =&\frac{f}{\Lambda} L\cdot H L\cdot H+\text{h.c}\nonumber\\
+  =&\frac{f}{\Lambda}\epsilon_{ab}\epsilon_{cd} L^a H^b L^c H^d+\text{h.c}\,.
 \end{align*}
 The treatment in four notation component is given in Sec.~\ref{sec:4weinberg-operator}.
+
+For a discussion around this operator see for example~\url{http://bit.ly/neutrinoreview}
+
+\section{Dirac operator}
+
+If neutrinos are Dirac particles, the Standard Model (SM) particle content must be extended with right-handed neutrinos, and some symmetry must be imposed to prevent their Majorana mass terms. At least a $Z_3$ symmetry is required to guarantee the neutrino Diracness through
+\begin{align}
+  \label{eq:tld}
+%  \mathcal{L}_{\nu}=&\,y_D\left( \nu_R \right)^{\dagger} \epsilon_{ab}L^a H^b+\text{h.c.} \nonumber\\
+  \mathcal{L}_{\nu}=&\,y_D\left( \nu_R \right)^{\dagger} L\cdot H +\text{h.c.} \,,
+\end{align}
+with $L\cdot H=\epsilon_{ab}L^a H^b$, where $L$ is the lepton doublet, $H$ is the
+SM Higgs doublet with hypercharge $Y=1$, and $y_D$ is the matrix of neutrino Yukawa couplings.  To be compatible with  neutrino
+oscillation data \cite{deSalas:2017kay}, $y_D$ should be at least of order $2\times 3$.  
+A possible assignment for the set of SM fields that transform
+non-trivially under $Z_3$ is: $L\sim \omega$,
+$\left( e_R \right)^{\dagger} \sim \omega^2$ and
+$\left( \nu_R \right)^{\dagger} \sim \omega^2$, with $\omega^3=1$.
+At this level, the neutrino mass problem is not longer a
+phenomenological issue but a theoretical one, in which it is necessary
+to explain the smallness of the Yukawa couplings in $y_D$, which must be  of order
+$10^{-11}$.
+
+
+To do so, we assume that the symmetry allows for the 5-dimensional operator with total lepton number conservation~\cite{Gu:2006dc}
+\begin{align}
+  \label{eq:blop}
+  \mathcal{L}_5=
+  \frac{h}{\Lambda} \left( \nu_R \right)^\dagger  L\cdot H\, S^{*} + 
+\text{h.c.}\,,
+\end{align}
+where $\Lambda$ is the new physics scale, and that this operator
+is first realized at one-loop level~\cite{Yao:2018ekp}
+(see~\cite{Roncadelli:1983ty,Roy:1983be,Gu:2007mc,Ma:2014qra,Ma:2016mwh,Yao:2018ekp,CentellesChulia:2018gwr,CentellesChulia:2018bkz,Bernal:2018aon} for the tree-level realizations).  
+
 \chapter{Tree level neutrino masses}
 Here we calculate the tree level neutrino mases for the Type-I seesaw.
 
@@ -18,7 +70,7 @@ Here we calculate the tree level neutrino mases for the Type-I seesaw.
 \section{One right-handed neutrino}
 We assume to have just one right-handed neutrino $N_R$ 
 \begin{align}
-  \mathcal{L}_{\nu}=y_{i} \left( L \right)^{\dagger}_i\widetilde{H}  N_R 
+  \mathcal{L}_{\nu}=y_{i} \left( N_R \right)^{\dagger} L\cdot  H   
   +\tfrac{1}{2} M_R\, N_R  N_R + \text{h.c}\,.
 \end{align}
 In addition to the previous Majorana mass contribution $M_R$, after the spontaneous symmetry breaking the neutral states $\nu_{Li}$ and $N_R$  acquire a Dirac mass contribution
@@ -95,7 +147,7 @@ We need to assume the existence of a heavy Dirac fermion, $F=
   F_L & F_R
 \end{pmatrix}^{\operatorname{T}}$, where $F_{LR}$ are Weyl fermions, and one real scalar singlet $S$. The most general Lagrangian is~\cite{Roncadelli:1983ty}
 \begin{align}
-  \mathcal{L}_{\nu}=y_i \left( L \right)^{\dagger}_i\widetilde{H}  F_R 
+  \mathcal{L}_{\nu}=y_i \left(  F_R \right)^{\dagger}L_i\cdot H  
   + M_F\, \left( F_L \right)^{\dagger}  F_R + h_i \left( F_L \right)^{\dagger} S \nu_{Ri}+   \text{h.c}\,.
 \end{align}
 In addition to the previous Dirac mass contribution $M_F$, after the full spontaneous symmetry  breaking the neutral states $\nu_{Li}$ and $\nu_{Ri}$  acquire a Dirac mass contributions $M_{Di}$ and $M_{Si}$ respectively
