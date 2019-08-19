@@ -42,10 +42,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%Beamer compability layer
 %to compile beamer use beyond.beamer.tex
-\includecomment{frame}
-\specialcomment{frame}
-{\begingroup}{\endgroup}
+%\includecomment{frame}
+%\specialcomment{frame}
+%{\begingroup}{\endgroup}
 %\excludecomment{frame}
+\renewenvironment{frame}[1][\unskip]{}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %check release
 
