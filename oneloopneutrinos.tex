@@ -32,7 +32,8 @@ where $B_0\left
 \end{align}
 where $\mu$ is the subtraction point of dimensional regularization and $d=4-\epsilon$.
 
-It will be shown below that this can be decomposed as
+By following Romao notes: \url{http://porthos.tecnico.ulisboa.pt/Public/textos/one-loop.pdf}\footnote{Old version, now is a part of "Advanced Quantum Field Theory" \url{http://porthos.ist.utl.pt/Public/textos/tca.pdf}} 
+it will be shown below that this can be decomposed as
 \begin{align}
   \label{eq:mnueig}
   B_0 \left(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)
@@ -72,8 +73,7 @@ where
 \end{align}
 
 
-In general, the integral to be calculated with dimensional regularization had the general
-defined as
+In general, the integral to be calculated with dimensional regularization is
 \begin{align}
   I_{r, m}=\int \frac{d^{d} k}{(2 \pi)^{d}} \frac{k^{2^{r}}}{\left[k^{2}-C+i \epsilon\right]^{m}}\,.
 \end{align}
@@ -127,6 +127,16 @@ Replacing back $C(x)$ from eq~\eqref{eq:cx} in \eqref{eq:pvbo}
   B_{0}\left(p^{2}, m_{0}^{2}, m_{1}^{2}\right)=\Delta_{\epsilon}-\int_{0}^{1} d x \ln \left[\frac{-x(1-x) p^{2}+x m_{1}^{2}+(1-x) m_{0}^{2}}{\mu^{2}}\right]
 \end{align}
 
+\begin{verbatim}
+In[1]:= Integrate[Log[a x], x]
+Out[1]= -x + x Log[a x]
+
+
+In[2]:= Dt[-x + x Log[a x], x, Constants -> a]
+Out[3]= Log[a x]
+\end{verbatim}
+
+
 Taking into account that
 
 \begin{align}
@@ -164,61 +174,25 @@ and replacing back in eq.~\eqref{eq:mnub0}:
 
 \begin{align}
  M^{\nu}_{ij}=&-\frac{y_{i n\alpha}y_{j n\alpha}}{16\pi^2}m_{\chi_n} \left[ \operatorname{cte}(\infty)+
-f \left( m_{\chi_n},m_{S_{\alpha}} \right) \right] \,,
+f \left( m_{\chi_n},m_{S_{\alpha}}^2 \right) \right] \,,
 \end{align}
 where
 \begin{align}
-f \left( m_{\chi_n},m_{S_{\alpha}} \right)=&  
+f \left( m_{\chi_n}^2,m_{S_{\alpha}}^2 \right)=&  
 \frac{m_{S_{\alpha}}^2\ln \left(m_{S_{\alpha}}^2\right)-m_{\chi_n}^2\ln \left(m_{\chi_n}^2  \right)}{m_{\chi_n}^2-m_{S_{\alpha}}^2}
 \end{align}
 
 See \url{./FeynCalc/radiativeseesaw.nb} for an example based in the Radiative seesaw below
 
-\subsection{Passarino-Veltman function}
-Following Romao notes: \url{http://porthos.tecnico.ulisboa.pt/Public/textos/one-loop.pdf}\footnote{Old version, now is a part of "Advanced Quantum Field Theory" \url{http://porthos.ist.utl.pt/Public/textos/tca.pdf}} We define $A_0, B_0$ as
-\begin{align}
-  A_{0}\left(m^{2}\right) &=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \frac{1}{k^{2}-m^{2}} \\
-  B_{0}\left(r_{10}^{2}, m_{0}^{2}, m_{1}^{2}\right) &=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \prod_{i=0}^{1} \frac{1}{\left[\left(k+r_{i}\right)^{2}-m_{i}^{2}\right]} \end{align}
-
-
-In particular
-By using $C=m^2$, and factoring out the $i/\left( 16\pi^2 \right)$ in \eqref{eq:I01}
-\begin{align}
-  A_{0}\left(m^{2}\right)=m^{2}\left(\Delta_{\epsilon}+1-\ln \frac{m^{2}}{\mu^{2}}\right).
-\end{align}
-
-We are really concerned by  the integrals with two denominators of the form \eqref{eq:mnueigi02}
-
-
-\includegraphics[scale=0.5]{romao6}
-
-
-We obtain
-
-\includegraphics[scale=0.5]{romao7}
-
-\begin{verbatim}
-In[1]:= Integrate[Log[a x], x]
-Out[1]= -x + x Log[a x]
-
-
-In[2]:= Dt[-x + x Log[a x], x, Constants -> a]
-Out[3]= Log[a x]
-\end{verbatim}
-From this expression one can easily obtain the following results
-
-\includegraphics[scale=0.6]{romao8}
-
-%\includegraphics[scale=0.6]{romao1}
 
 To obtain in detail could be useful the Feynman parameters for the one-loop neutrino integral in Fig.~\ref{fig:fp}
 
-\begin{figure}
-  \centering
-  \includegraphics[scale=0.8]{parfeyn}
-  \caption{Feynman parameters}
-  \label{fig:fp}
-\end{figure}
+% \begin{figure}
+%   \centering
+%   \includegraphics[scale=0.8]{parfeyn}
+%   \caption{Feynman parameters}
+%   \label{fig:fp}
+% \end{figure}
 
 
 
@@ -318,6 +292,12 @@ which generate the two contribution to the neutrino mass displayed in figure~\re
   \caption{Contribution to neutrino mass in mass basis}
   \label{fig:massbas}
 \end{figure}
+
+\begin{align}
+ M^{\nu}_{ij}=&-\frac{h^2}{16\pi^2}M_R \left[ 
+f \left( M_R^2,m_{\rho}^2 \right)-f \left( M_R^2,m_{A}^2 \right) \right].
+\end{align}
+
 \section{Singlet-doublet fermions with scalar singlets}
 There~\cite{Restrepo:2015ura}
 
@@ -327,7 +307,7 @@ There~\cite{Restrepo:2015ura}
 and 
 \begin{align}
    M^{\nu}_{ij}=&\sum_{\alpha}\frac{h_{i\alpha}h_{j\alpha}}{16\pi^2}\sum_{n=1}^3 \left( N_{3n} \right)^2m_{\chi_n}
-\,f\left( m_{S_\alpha},m_{\chi_n} \right).
+\,f\left( m_{S_\alpha}^2,m_{\chi_n}^2 \right).
 \end{align}
 
 \subsection{Zee}
@@ -491,16 +471,16 @@ where
 \begin{align}
   M^{\nu}_{ij}=&-\sum_k \sum_{\alpha}
 \frac{2O_{ik}R_{1\alpha}f_{jk} R_{2\alpha}}{16\pi^2}m_{k}\left[ \operatorname{cte}(\infty)+
-f \left( m_{\chi_n},m_{S_{\alpha}} \right) \right] \nonumber\\
+f \left( m_{\chi_n}^2,m_{S_{\alpha}}^2 \right) \right] \nonumber\\
 =&-\sum_k 
 \frac{O_{ik}f_{jk} }{8\pi^2}m_{k}\left[ R_{11}R_{21}\operatorname{cte}(\infty)+
-R_{11}R_{21}f \left( m_k,M_1 \right)
+R_{11}R_{21}f \left( m_k^2,M_1^2 \right)
 +R_{12}R_{22}\operatorname{cte}(\infty)+
-R_{12}R_{22}f \left( m_k,M_2 \right) \right] \nonumber\\
+R_{12}R_{22}f \left( m_k^2,M_2^2 \right) \right] \nonumber\\
 =&-\sum_k \frac{O_{ik}f_{jk} }{8\pi^2}m_{k}\cos\varphi\sin\varphi
-\left[f \left( m_k,M_1 \right)-f \left(m_k,M_2 \right) \right] \nonumber\\
+\left[f \left( m_k^2,M_1^2 \right)-f \left(m_k^2,M_2^2 \right) \right] \nonumber\\
 \approx&-\sum_k \frac{O_{ik}f_{jk} }{16\pi^2}m_{k}\sin 2\varphi
-\left[f \left( 0,M_1 \right)-f \left(0,M_2 \right) \right] \nonumber\\
+\left[f \left( 0,M_1^2 \right)-f \left(0,M_2^2 \right) \right] \nonumber\\
 =&-\sum_k \frac{O_{ik}f_{jk} }{16\pi^2}m_{k}\sin2\varphi
 \left[\frac{M_1^2M_2^2\ln \left(M_1^2\right)-M_1^2M_2^2\ln \left(M_2^2\right)}{M_1^2M_2^2} \right] \nonumber\\
 =&\sum_k \frac{f_{jk}m_kO_{ik} \sin2\varphi }{(4\pi)^2}
@@ -509,7 +489,7 @@ R_{12}R_{22}f \left( m_k,M_2 \right) \right] \nonumber\\
 To compare with \cite{AristizabalSierra:2006ri}. There is factor 2?
 \begin{align}
   M^{\nu}_{ij} =&-\frac{\sin2\varphi}{\left(4\pi\right)^2}\sum_k \left( f_{ik}m_kO_{jk} +f_{jk}m_kO_{ik} \right)
-\left[f \left( m_k,M_1 \right)-f \left(m_k,M_2 \right) \right]
+\left[f \left( m_k^2,M_1^2 \right)-f \left(m_k^2,M_2^2 \right) \right]
 \end{align}
 In the generic basis, The important factor is
 \begin{align}
