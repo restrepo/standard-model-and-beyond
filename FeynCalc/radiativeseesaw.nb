@@ -1,0 +1,531 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     19766,        522]
+NotebookOptionsPosition[     18457,        474]
+NotebookOutlinePosition[     18792,        489]
+CellTagsIndexPosition[     18749,        486]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["FeynCalc Initializations and shorthands", "Title",
+ CellChangeTimes->{{3.529884783609433*^9, 3.529884799891041*^9}, 
+   3.52988483135127*^9}],
+
+Cell[BoxData[
+ RowBox[{"<<", "HighEnergyPhysics`FeynCalc`"}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.529884298616256*^9, 3.529884298619298*^9}}],
+
+Cell["\<\
+Loading FeynCalc from \
+/usr/local/Wolfram/Mathematica/8.0/AddOns/Applications/HighEnergyPhysics\
+\>", "Text",
+ CellMargins->{{Inherited, Inherited}, {1, 0}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.531744499493271*^9}],
+
+Cell[TextData[{
+ StyleBox["FeynCalc",
+  FontWeight->"Bold"],
+ " ",
+ "8.0.3",
+ " For help, type ?FeynCalc, open ",
+ ButtonBox["FeynCalcRef8.nb",
+  BaseStyle->"AddOnsLink",
+  ButtonFunction:>NotebookOpen[
+   "/usr/local/Wolfram/Mathematica/8.0/AddOns/Applications/HighEnergyPhysics/\
+Documentation/English/FeynCalcRef8.nb"],
+  ButtonData:>{"Short Overview", "intro"},
+  ButtonNote->"Open FeynCalcRef8.nb"],
+ " or visit ",
+ ButtonBox["www.feyncalc.org",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://www.feyncalc.org/"], None},
+  ButtonNote->"http://www.feyncalc.org/"]
+}], "Text",
+ CellMargins->{{Inherited, Inherited}, {1, 0}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.531744500489904*^9}],
+
+Cell[TextData[{
+ "Loading FeynArts, see ",
+ ButtonBox["www.feynarts.de",
+  BaseStyle->"Hyperlink",
+  ButtonData:>{
+    URL["http://www.feynarts.de/"], None},
+  ButtonNote->"http://www.feynarts.de/"],
+ " for documentation"
+}], "Text",
+ CellMargins->{{Inherited, Inherited}, {1, 0}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.531744500662076*^9}],
+
+Cell["FeynArts 3.4 patched for use with FeynCalc", "Text",
+ CellMargins->{{Inherited, Inherited}, {1, 0}},
+ GeneratedCell->True,
+ CellAutoOverwrite->True,
+ CellChangeTimes->{3.531744500774362*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dm", "[", "mu_", "]"}], ":=", 
+  RowBox[{"DiracMatrix", "[", 
+   RowBox[{"mu", ",", 
+    RowBox[{"Dimension", " ", "\[Rule]", " ", "D"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dm", "[", "5", "]"}], ":=", 
+  RowBox[{"DiracMatrix", "[", "5", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ds", "[", "p_", "]"}], ":=", 
+  RowBox[{"DiracSlash", "[", "p", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mt", "[", 
+   RowBox[{"mu_", ",", "nu_"}], "]"}], ":=", 
+  RowBox[{"MetricTensor", "[", 
+   RowBox[{"mu", ",", "nu"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"fv", "[", 
+   RowBox[{"p_", ",", "mu_"}], "]"}], ":=", 
+  RowBox[{"FourVector", "[", 
+   RowBox[{"p", ",", "mu"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"epsilon", "[", 
+   RowBox[{"a_", ",", "b_", ",", "c_", ",", "d_"}], "]"}], ":=", 
+  RowBox[{"LeviCivita", "[", 
+   RowBox[{"a", ",", "b", ",", "c", ",", "d"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"id", "[", "n_", "]"}], ":=", 
+  RowBox[{"IdentityMatrix", "[", "n", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"sp", "[", 
+   RowBox[{"p_", ",", "q_"}], "]"}], ":=", 
+  RowBox[{"ScalarProduct", "[", 
+   RowBox[{"p", ",", "q"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"li", "[", "mu_", "]"}], ":=", 
+  RowBox[{"LorentzIndex", "[", "mu", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"L", ":=", 
+  RowBox[{"dm", "[", "7", "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"R", ":=", 
+  RowBox[{"dm", "[", "6", "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.529884439466442*^9, 3.529884475597044*^9}, {
+  3.529884528903208*^9, 3.529884771750462*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Radiative see saw con:  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"h", " ", 
+    OverscriptBox["N", "_"], " ", "\[Nu]", " ", 
+    SubscriptBox[
+     SuperscriptBox["\[Eta]", "0"], 
+     RowBox[{"R", ",", "I"}]]}], TraditionalForm]]]
+}], "Title",
+ CellChangeTimes->{{3.529888789183068*^9, 3.529888879494231*^9}, 
+   3.529888937238731*^9, {3.529889103456845*^9, 3.529889125171567*^9}, {
+   3.531138204178217*^9, 3.531138341116159*^9}}],
+
+Cell["\<\
+Basado en 1-loop Romao: http://goo.gl/tsURt sec. 3 
+                   k
+            -  -  - - - - - - 
+         /                        \\
+p___|___________|_____ p
+                p-k\
+\>", "Text",
+ CellChangeTimes->{{3.5311384326756763`*^9, 3.531138436164247*^9}, {
+  3.531138622341136*^9, 3.5311386336362953`*^9}, {3.531138715597704*^9, 
+  3.531138718325325*^9}, {3.5311390436443644`*^9, 3.5311390975425777`*^9}, {
+  3.5311392377234383`*^9, 3.531139279006723*^9}, {3.531139376617375*^9, 
+  3.5311394012886047`*^9}}],
+
+Cell[TextData[{
+ Cell[BoxData["\[IndentingNewLine]"], "Input",
+  CellChangeTimes->{
+   3.531744612014492*^9, {3.5317446958581553`*^9, 3.531744700075486*^9}}],
+ "1. El c\[AAcute]lculo es m\[AAcute]s simple en la base de autoestados de \
+masa\n2. La integral se evalua con momento externo nulo, es decir, p=0.\n3. \
+La estructura de los proyectores en un t\[EAcute]rmino de masa de majorana\n\
+es P_L M P_L. Esto implica que el numerador es h^2 M en lugar de\nh^2(ds[p-k] \
++M). Es decir, los proyectores seleccionan el t\[EAcute]rmino de\nmasa. ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{
+     SubscriptBox["P", "L"], "\[Gamma]", " ", 
+     SubscriptBox["P", "L"]}], "=", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["P", "L"], 
+      SubscriptBox["P", "R"], " ", "\[Gamma]"}], "=", "0."}]}], 
+   TraditionalForm]],
+  FormatType->"TraditionalForm"],
+ " \n4. Para la parte imaginaria sale un imaginario en cada v\[EAcute]rtice, \
+as\[IAcute]\nque a final sale un signo menos.\n"
+}], "Text",
+ CellChangeTimes->{{3.5317447130593224`*^9, 3.531744739010086*^9}, {
+  3.531744965899406*^9, 3.531745103089798*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Convert", " ", "A0", " ", "to", " ", "B0"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"SetOptions", "[", 
+    RowBox[{"A0", ",", 
+     RowBox[{"A0ToB0", "\[Rule]", "True"}]}], "]"}], "\[IndentingNewLine]", 
+   RowBox[{"num", ":=", 
+    RowBox[{
+     RowBox[{"-", "I"}], " ", 
+     SuperscriptBox["h", "2"], 
+     RowBox[{"(", "M", ")"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"Options", "[", "A0", "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.529888171120466*^9, 3.529888260191188*^9}, {
+   3.529889156695413*^9, 3.529889189354523*^9}, {3.529941633874658*^9, 
+   3.529941680617788*^9}, {3.529941736776873*^9, 3.529941924795315*^9}, {
+   3.529941989314276*^9, 3.529941992856711*^9}, {3.529942060028827*^9, 
+   3.529942095561554*^9}, {3.5311348622003937`*^9, 3.531134882387841*^9}, {
+   3.531137559839036*^9, 3.5311375675724154`*^9}, {3.53113819208932*^9, 
+   3.5311381961688128`*^9}, {3.531138616766244*^9, 3.531138617627503*^9}, {
+   3.531138998813274*^9, 3.531139000765498*^9}, {3.5311391055352507`*^9, 
+   3.531139110226407*^9}, {3.5311432946421537`*^9, 3.5311432955272408`*^9}, {
+   3.53114333459879*^9, 3.53114333606777*^9}, 3.531144558576479*^9, {
+   3.5317444362073727`*^9, 3.531744437978942*^9}, {3.5317445149393044`*^9, 
+   3.531744515722828*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"A0ToB0", "\[Rule]", "True"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.529889198828875*^9, 3.529940413867927*^9, 3.529941998713135*^9, {
+   3.529942060840686*^9, 3.52994207377557*^9}, 3.5311348950321007`*^9, 
+   3.531134932810679*^9, 3.531137580923211*^9, 3.531139014507264*^9, 
+   3.5311391582384167`*^9, 3.531143260484708*^9, 3.531143297344232*^9, 
+   3.531143336926265*^9, 3.531143589628791*^9, 3.5311445593627253`*^9, 
+   3.5317444405381927`*^9, {3.531744501444186*^9, 3.531744516390082*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"A0ToB0", "\[Rule]", "True"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.529889198828875*^9, 3.529940413867927*^9, 3.529941998713135*^9, {
+   3.529942060840686*^9, 3.52994207377557*^9}, 3.5311348950321007`*^9, 
+   3.531134932810679*^9, 3.531137580923211*^9, 3.531139014507264*^9, 
+   3.5311391582384167`*^9, 3.531143260484708*^9, 3.531143297344232*^9, 
+   3.531143336926265*^9, 3.531143589628791*^9, 3.5311445593627253`*^9, 
+   3.5317444405381927`*^9, {3.531744501444186*^9, 3.531744516395315*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SetOptions", "[", 
+  RowBox[{"OneLoop", ",", 
+   RowBox[{"Dimension", " ", "\[Rule]", "D"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"amp", ":=", 
+  RowBox[{"num", "*", 
+   RowBox[{"FeynAmpDenominator", "[", 
+    RowBox[{
+     RowBox[{"PropagatorDenominator", "[", 
+      RowBox[{"k", ",", "mR"}], "]"}], ",", 
+     RowBox[{"PropagatorDenominator", "[", 
+      RowBox[{
+       RowBox[{"-", "k"}], ",", "M"}], "]"}]}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"res", ":=", 
+  RowBox[{"OneLoop", "[", 
+   RowBox[{"k", ",", "amp"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ans1", "=", 
+  RowBox[{"Simplify", "[", "res", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.52988831378051*^9, 3.529888506122473*^9}, {
+   3.529888578518667*^9, 3.529888580911543*^9}, 3.529941943359153*^9, {
+   3.5311348853978577`*^9, 3.53113488627206*^9}, {3.5311389098943233`*^9, 
+   3.531138935606454*^9}, {3.531139006998096*^9, 3.531139009960829*^9}, {
+   3.531139113608088*^9, 3.531139145111092*^9}, {3.531142986003806*^9, 
+   3.5311429872138166`*^9}, 3.531143300723362*^9, 3.53114358451619*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Apart2", "\[Rule]", "True"}], ",", 
+    RowBox[{"CancelQP", "\[Rule]", "True"}], ",", 
+    RowBox[{"DenominatorOrder", "\[Rule]", "False"}], ",", 
+    RowBox[{"Dimension", "\[Rule]", "D"}], ",", 
+    RowBox[{"FinalSubstitutions", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"Factoring", "\[Rule]", "False"}], ",", 
+    RowBox[{"FormatType", "\[Rule]", "InputForm"}], ",", 
+    RowBox[{"InitialSubstitutions", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"IntermediateSubstitutions", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"IsolateNames", "\[Rule]", "False"}], ",", 
+    RowBox[{"Mandelstam", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"OneLoopSimplify", "\[Rule]", "False"}], ",", 
+    RowBox[{"Prefactor", "\[Rule]", "1"}], ",", 
+    RowBox[{"ReduceGamma", "\[Rule]", "False"}], ",", 
+    RowBox[{"ReduceToScalars", "\[Rule]", "False"}], ",", 
+    RowBox[{"SmallVariables", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"WriteOut", "\[Rule]", "False"}], ",", 
+    RowBox[{"WriteOutPaVe", "\[Rule]", "False"}], ",", 
+    RowBox[{"Sum", "\[Rule]", "True"}]}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.52988854793711*^9, 3.529888582259168*^9, 3.529889228022276*^9, 
+   3.529940413968237*^9, 3.529942000939575*^9, {3.529942062929363*^9, 
+   3.5299420753879*^9}, 3.531134936737112*^9, 3.53113758369971*^9, {
+   3.5311389297687407`*^9, 3.531138936697547*^9}, 3.5311390163708*^9, 
+   3.531139160363636*^9, 3.531142988140931*^9, {3.531143273532885*^9, 
+   3.531143302304487*^9}, 3.5311433385928783`*^9, {3.531143585311078*^9, 
+   3.531143590603958*^9}, 3.5311445605724916`*^9, 3.531744446558779*^9, {
+   3.5317445042200603`*^9, 3.531744519001136*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["\[Pi]", "2"], " ", 
+   SuperscriptBox["h", "2"], " ", "M", " ", 
+   RowBox[{
+    SubscriptBox["B", "0"], "(", "0", ",", 
+    SuperscriptBox["M", "2"], ",", 
+    SuperscriptBox["mR", "2"], ")"}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.52988854793711*^9, 3.529888582259168*^9, 3.529889228022276*^9, 
+   3.529940413968237*^9, 3.529942000939575*^9, {3.529942062929363*^9, 
+   3.5299420753879*^9}, 3.531134936737112*^9, 3.53113758369971*^9, {
+   3.5311389297687407`*^9, 3.531138936697547*^9}, 3.5311390163708*^9, 
+   3.531139160363636*^9, 3.531142988140931*^9, {3.531143273532885*^9, 
+   3.531143302304487*^9}, 3.5311433385928783`*^9, {3.531143585311078*^9, 
+   3.531143590603958*^9}, 3.5311445605724916`*^9, 3.531744446558779*^9, {
+   3.5317445042200603`*^9, 3.5317445190071*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Para", " ", "MI"}], " ", "-", 
+     RowBox[{"I", " ", "in", " ", "each", " ", "vertex"}]}], " ", "\[Rule]", 
+    " ", 
+    RowBox[{"-", "1"}]}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"num", ":=", " ", 
+   RowBox[{
+    RowBox[{"+", "I"}], " ", 
+    SuperscriptBox["h", "2"], " ", 
+    RowBox[{"(", "M", ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.529888171120466*^9, 3.529888260191188*^9}, {
+  3.529889156695413*^9, 3.529889189354523*^9}, {3.529941633874658*^9, 
+  3.529941680617788*^9}, {3.529941736776873*^9, 3.529941924795315*^9}, {
+  3.529941989314276*^9, 3.529941992856711*^9}, {3.529942060028827*^9, 
+  3.529942095561554*^9}, {3.5311348622003937`*^9, 3.531134882387841*^9}, {
+  3.531137218017672*^9, 3.5311372336307173`*^9}, {3.531137570207432*^9, 
+  3.5311375773760366`*^9}, {3.531138948204397*^9, 3.531138961544361*^9}, {
+  3.5311395433904867`*^9, 3.531139547691202*^9}, {3.531143028507091*^9, 
+  3.5311430314133987`*^9}, {3.531143061972725*^9, 3.531143096944893*^9}, {
+  3.531143215198368*^9, 3.531143217279085*^9}, {3.5311433498346977`*^9, 
+  3.53114335202424*^9}, {3.531143572373311*^9, 3.53114357653677*^9}, {
+  3.531744534787704*^9, 3.531744565127043*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"SetOptions", "[", 
+  RowBox[{"OneLoop", ",", 
+   RowBox[{"Dimension", " ", "\[Rule]", "D"}]}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"amp", ":=", 
+  RowBox[{"num", "*", 
+   RowBox[{"FeynAmpDenominator", "[", 
+    RowBox[{
+     RowBox[{"PropagatorDenominator", "[", 
+      RowBox[{"k", ",", "mI"}], "]"}], ",", 
+     RowBox[{"PropagatorDenominator", "[", 
+      RowBox[{
+       RowBox[{"-", "k"}], ",", "M"}], "]"}]}], 
+    "]"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"res", ":=", 
+  RowBox[{"OneLoop", "[", 
+   RowBox[{"k", ",", "amp"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"ans2", "=", 
+  RowBox[{"Simplify", "[", "res", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.52988831378051*^9, 3.529888506122473*^9}, {
+   3.529888578518667*^9, 3.529888580911543*^9}, 3.529941943359153*^9, {
+   3.5311348853978577`*^9, 3.53113488627206*^9}, 3.531139223574621*^9, {
+   3.531139422935445*^9, 3.531139423301803*^9}, {3.531143001691555*^9, 
+   3.5311430023706417`*^9}, 3.53114336225523*^9, 3.531143581890695*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Apart2", "\[Rule]", "True"}], ",", 
+    RowBox[{"CancelQP", "\[Rule]", "True"}], ",", 
+    RowBox[{"DenominatorOrder", "\[Rule]", "False"}], ",", 
+    RowBox[{"Dimension", "\[Rule]", "D"}], ",", 
+    RowBox[{"FinalSubstitutions", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"Factoring", "\[Rule]", "False"}], ",", 
+    RowBox[{"FormatType", "\[Rule]", "InputForm"}], ",", 
+    RowBox[{"InitialSubstitutions", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"IntermediateSubstitutions", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"IsolateNames", "\[Rule]", "False"}], ",", 
+    RowBox[{"Mandelstam", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"OneLoopSimplify", "\[Rule]", "False"}], ",", 
+    RowBox[{"Prefactor", "\[Rule]", "1"}], ",", 
+    RowBox[{"ReduceGamma", "\[Rule]", "False"}], ",", 
+    RowBox[{"ReduceToScalars", "\[Rule]", "False"}], ",", 
+    RowBox[{"SmallVariables", "\[Rule]", 
+     RowBox[{"{", "}"}]}], ",", 
+    RowBox[{"WriteOut", "\[Rule]", "False"}], ",", 
+    RowBox[{"WriteOutPaVe", "\[Rule]", "False"}], ",", 
+    RowBox[{"Sum", "\[Rule]", "True"}]}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.52988854793711*^9, 3.529888582259168*^9, 3.529889228022276*^9, 
+   3.529940413968237*^9, 3.529942000939575*^9, {3.529942062929363*^9, 
+   3.5299420753879*^9}, 3.531134936737112*^9, 3.531137267337685*^9, 
+   3.531137596561015*^9, 3.5311394240465527`*^9, 3.531143003377754*^9, 
+   3.531143064475523*^9, 3.531143098614235*^9, 3.531143229152671*^9, 
+   3.531143282389303*^9, 3.531143363005574*^9, {3.531143578520212*^9, 
+   3.531143595696813*^9}, 3.5311445644330673`*^9, 3.531744569207733*^9}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   SuperscriptBox["\[Pi]", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{"-", 
+     SuperscriptBox["h", "2"]}], ")"}], " ", "M", " ", 
+   RowBox[{
+    SubscriptBox["B", "0"], "(", "0", ",", 
+    SuperscriptBox["M", "2"], ",", 
+    SuperscriptBox["mI", "2"], ")"}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.52988854793711*^9, 3.529888582259168*^9, 3.529889228022276*^9, 
+   3.529940413968237*^9, 3.529942000939575*^9, {3.529942062929363*^9, 
+   3.5299420753879*^9}, 3.531134936737112*^9, 3.531137267337685*^9, 
+   3.531137596561015*^9, 3.5311394240465527`*^9, 3.531143003377754*^9, 
+   3.531143064475523*^9, 3.531143098614235*^9, 3.531143229152671*^9, 
+   3.531143282389303*^9, 3.531143363005574*^9, {3.531143578520212*^9, 
+   3.531143595696813*^9}, 3.5311445644330673`*^9, 3.5317445692139053`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PaVeReduce", "[", 
+  RowBox[{"ans1", "+", "ans2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5311435975705643`*^9, 3.531143608286448*^9}, {
+  3.5311438606839237`*^9, 3.531143866140731*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["h", "2"], " ", "M", " ", 
+    RowBox[{
+     SubscriptBox["B", "0"], "(", "0", ",", 
+     SuperscriptBox["M", "2"], ",", 
+     SuperscriptBox["mR", "2"], ")"}]}], "-", 
+   RowBox[{
+    SuperscriptBox["\[Pi]", "2"], " ", 
+    SuperscriptBox["h", "2"], " ", "M", " ", 
+    RowBox[{
+     SubscriptBox["B", "0"], "(", "0", ",", 
+     SuperscriptBox["M", "2"], ",", 
+     SuperscriptBox["mI", "2"], ")"}]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.5311436009215307`*^9, 3.5311436087300243`*^9}, 
+   3.53114386693552*^9, 3.531144565392543*^9, 3.5317445725883713`*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1680, 975},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 147, 2, 83, "Title"],
+Cell[729, 26, 164, 3, 30, "Input",
+ InitializationCell->True],
+Cell[896, 31, 258, 7, 17, "Text"],
+Cell[1157, 40, 728, 23, 17, "Text"],
+Cell[1888, 65, 371, 12, 17, "Text"],
+Cell[2262, 79, 196, 4, 17, "Text"],
+Cell[2461, 85, 1711, 46, 221, "Input",
+ InitializationCell->True]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4209, 136, 449, 12, 88, "Title"],
+Cell[4661, 150, 529, 12, 125, "Text"],
+Cell[5193, 164, 1117, 25, 202, "Text"],
+Cell[CellGroupData[{
+Cell[6335, 193, 1323, 26, 88, "Input"],
+Cell[7661, 221, 567, 10, 31, "Output"],
+Cell[8231, 233, 567, 10, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8835, 248, 1105, 24, 88, "Input"],
+Cell[9943, 274, 1796, 36, 52, "Output"],
+Cell[11742, 312, 846, 17, 35, "Output"]
+}, Open  ]],
+Cell[12603, 332, 1253, 25, 50, "Input"],
+Cell[CellGroupData[{
+Cell[13881, 361, 1029, 23, 88, "Input"],
+Cell[14913, 386, 1741, 35, 52, "Output"],
+Cell[16657, 423, 841, 18, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17535, 446, 211, 4, 30, "Input"],
+Cell[17749, 452, 680, 18, 35, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

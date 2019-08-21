@@ -129,6 +129,100 @@ To obtain in detail could be useful the Feynman parameters for the one-loop neut
 
 \section{Applications}
 
+\section{Radiative seesaw}
+It is based in the inert-doublet scalar dark matter model where in order to have a viable scalar dark matter particle we need a sizeable splitting between the real an imaginary part of the inert doublet
+\begin{align}
+  \eta=\begin{pmatrix}
+    \eta^+\\
+    \dfrac{\rho^0+i A^0}{\sqrt{2}}
+  \end{pmatrix}
+\end{align}
+\begin{align}
+  V=& \mu_{1}^{2} H^{\dagger} H+\mu_{2}^{2} \eta^{\dagger} \eta+\lambda_{1}\left(H^{\dagger} H\right)^{2}+ \lambda_{2}\left(\eta^{\dagger} \eta\right)^{2} +\lambda_{3}\left(H^{\dagger} H\right)\left(\eta^{\dagger} \eta\right)+\lambda_{4}\left(H^{\dagger} \eta\right)\left(\eta^{\dagger} H\right) \nonumber\\
+& + \lambda_{5}\left[\left(\eta^{\dagger} H\right)^{2}+\text { H.c. }\right]
+\end{align}
+The terms relevant for the mass terms are
+\begin{align}
+  V\supset& \frac{\mu_1^2}{2} \left( h+v\right)^2+\frac{\lambda_1}{4} \left( h+v \right)^4
+  +\mu_2^2 \eta^+\eta^- +\frac{\mu_2^2}{2} \rho^{02} +\frac{\mu_2^2}{2} A^{02}
+  +\frac{\lambda_3}{2} \left( h+v \right)^2 \left[ \eta^+\eta^- + \frac{1}{2}\left( \rho^{02}+A^{02} \right) \right] \nonumber\\
+ &+ \frac{\lambda_4 v^2}{4} \left( \rho^{02}+A^{02} \right) + \frac{\lambda_5 v^2}{4} \left( \rho^{02}-A^{02} \right)\,.
+\end{align}
+From here, in addition to the known standard model Higgs mass, we obtain
+\begin{align}
+  m_{\eta^{\pm}}^2=&\mu_2^2+{\lambda_3 v^2}\,,  \nonumber\\ %1/2+1/2
+  m_{\rho}^2=&\mu_2^2+\frac{v^2}{2} \left(\lambda_3+\lambda_4+\lambda_5  \right)\,, \nonumber\\
+  m_{A}^2=&\mu_2^2+\frac{v^2}{2} \left(\lambda_3+\lambda_4-\lambda_5  \right)\,. \nonumber\\
+\end{align}
+
+If we assign zero lepton number to $N_R$ and $-1$ to $\eta$ (see below) the only Lepton number violating term is the one with $\lambda_5$. In this way we expect small neutrino masses for small $\lambda_5$. In the limit $\lambda_5\to $, $m_{\rho}=m_A$ and the neutrinos are massless.
+To explain the smallness of $\lambda_5$ we may follow the same idea than in~\cite{Suematsu:2017kcu}
+\begin{align}
+  \lambda_5 \left( \eta^{\dagger}H \right) \to    \lambda_5 \left( \eta^{\dagger}H \right) \frac{S}{M}
+\end{align}
+The diagram of charge flux is displayed in figure~\ref{fig:rss}
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.5]{rss}
+  \caption{Radiative seesaw with small $\lambda_5$ (Errata: change top $S$ by $S^{*}$)}
+  \label{fig:rss}
+\end{figure}
+
+The relevant Lagrangian must be consistent with
+\begin{align}
+  l+\eta=&n\,,& 2n=&s\,, & 2h=2n+s\,.
+\end{align}
+The solution with a global $\operatorname{U}(1)_{\text{global}}$~\cite{Suematsu:2017kcu}\footnote{Local by just adding $N_L$ with same charge $-1$} is displayed in table~\ref{tab:suematsu}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{c|ll}
+    Fields&$\operatorname{U}(1)_{\text{global}}$& $\phantom{\operatorname{U}(1)_X}$\\ \hline
+    $L$   & $l=\phantom{-}0$&$\phantom{l=-1}$\\
+    $H$   & $h=\phantom{-}0$&$\phantom{h=-1-l=0}$\\
+    $N_R$ & $n=-1$          &$\phantom{n=-1/2}$\\
+    $\eta$& $\eta=-1$       &$\phantom{-1/2-l=1/2}$ \\
+    $S$   & $s=-2$         &$\phantom{s=-1}$ \\
+  \end{tabular}
+  \caption{Global solution to diagram of charge flux in figure~\ref{fig:rss}}
+  \label{tab:suematsu}
+\end{table}
+
+Therefore must include the fermion terms (matrix notation for family indices)
+\begin{align}
+  \mathcal{L}\supset h \left( N_R \right)^{\dagger} L \cdot \eta + y N_R N_R S + \text{h.c}\,.
+\end{align}
+
+After the spontaneous braking of the global symmetry we have the relevant terms
+\begin{align}
+  \mathcal{L}\supset \left[ h \left( N_R \right)^{\dagger} L \cdot \eta + M_R N_R N_R  +
+  \widetilde{\lambda}_{5}\left(\eta^{\dagger} H\right)^{2}+\text { h.c } \right]
+  +\mu_{2}^{2} \eta^{\dagger} \eta+\lambda_{3}\left(H^{\dagger} H\right)\left(\eta^{\dagger} \eta\right)+\lambda_{4}\left(H^{\dagger} \eta\right)\left(\eta^{\dagger} H\right),
+\end{align}
+where
+\begin{align}
+ M_R=& y \langle S \rangle\,,& \widetilde{\lambda}_5=&\lambda_5 \frac{\langle S \rangle }{M}\,.
+\end{align}
+If we assign zero lepton number to $N_R$ we can assign $0$ ($+1$)
+lepton number to $\eta$ such that the term with coupling $h$
+($\widetilde{\lambda}_5$) is violates lepton number. Therefore the
+light neutrino masses are proportional to the product of
+$y \widetilde{\lambda}_5$. In which follows we will drop the tilde in
+$\lambda_5$.
+
+The Lagrangian in the mass basis, relevant for the generation of neutrino masses is
+\begin{align}
+  \mathcal{L}\supset \frac{h}{\sqrt{2}} \left( N_R \right)^{\dagger} \nu_L \left( \rho^0+i A^0  \right)
+  + M_R N_R N_R + \frac{1}{2}m_{\rho}^2 \rho^{02}+ \frac{1}{2}m_{A}^2 A^{02}\,.
+\end{align}
+which generate the two contribution to the neutrino mass displayed in figure~\ref{fig:massbas}
+
+\begin{figure}
+  \centering
+  \includegraphics[scale=0.4]{massbas}
+  \caption{Contribution to neutrino mass in mass basis}
+  \label{fig:massbas}
+\end{figure}
 \section{Singlet-doublet fermions with scalar singlets}
 There~\cite{Restrepo:2015ura}
 
