@@ -2,11 +2,11 @@
 Here we calculate the one-loop neutrino mases in the mass-basis
 
 \section{Extra particles}
-We assume to have $\alpha$-scalar and $n$-fermions with the mass-eigenstate couplings (Weyl spinors)
+We assume to have $\alpha$-scalar  and $n$-fermions in the mass eigenstate basis in Weyl spinor notation
 \begin{align}
-  \mathcal{L}=\left(y_{in\alpha}\nu_{i}\chi_n S_{\alpha}+y'_{mi\alpha}\chi_n\nu_{i} S_{\alpha}^{\dagger}+\text{h.c}+m_n \chi_n\chi_n  \right)+m_{\alpha}^2\,S_{\alpha}^2+
+  \mathcal{L}=\left(y_{in\alpha}\nu_{i}\chi_n S_{\alpha}+m_n \chi_n\chi_n +\text{h.c} \right)+\tfrac{1}{2}m_{\alpha}^2\,S_{\alpha}^2\,.
 \end{align}
-From left to right in Figure~\ref{fig:1lnu}
+From left to right (clockwise) in Figure~\ref{fig:1lnu}
 \begin{figure}
   \centering
   \includegraphics[scale=0.5]{onelooopneutrino}
@@ -17,38 +17,150 @@ From left to right in Figure~\ref{fig:1lnu}
 -i\Sigma^{\nu}_{ij}(p)=&\int \frac{d4k}{\left( 2\pi \right)^{4}}\left(y_{in\alpha}  \right)iS_F(k) \left(y_{jn\alpha}\right)i\Delta_F(p+k) \nonumber\\
 =&\frac{y_{i n\alpha}y_{j n\alpha}}{16\pi^2}\int \frac{d^4k}{i\pi^2}\frac{\cancel{k}+m_{\chi_n}}{\left(k^2-m_{\chi_n}^2  \right)\left[\left(p+k\right)^2-m_{S_\alpha}^2\right]}
 \end{align}
+
 In the limit $p\to 0$
 \begin{align}
 \label{eq:mnub0}
    M^{\nu}_{ij}=&-\frac{y_{i n\alpha}y_{j n\alpha}}{16\pi^2}m_{\chi_n} B_0 \left( 0;m_{\chi_n}^2,m_{S_{\alpha}}^2 \right) \,.
 \end{align}
 where $B_0\left
-(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)$ is the $B_0$ Passarino-Veltman function~\cite{Passarino:1978jh}, to be obtained below
+(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)$ is the $B_0$ Passarino-Veltman function~\cite{Passarino:1978jh} in dimensional regularization 
 
 \begin{align}
+  \label{eq:mnueigi02}
+  B_0 \left(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)=&\frac{\left( 2\pi \mu \right)^{\epsilon}}{i\pi^2}\int d^dk\frac{1}{\left(k^2-m_{\chi_n}^2\right)\left(k^2-m_{S_\alpha}^2\right)}\,.
+\end{align}
+where $\mu$ is the subtraction point of dimensional regularization and $d=4-\epsilon$.
+
+It will be shown below that this can be decomposed as
+\begin{align}
   \label{eq:mnueig}
-  B_0 \left(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)=&\int \frac{d^4k}{i\pi^2}\frac{1}{\left(k^2-m_{\chi_n}^2\right)\left(k^2-m_{S_\alpha}^2\right)}\nonumber\\
+  B_0 \left(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)
             =&\frac{1}{m_{\chi_n}^2-m_{S_\alpha}^2}\left[ A_0\left(m_{\chi_n}^2\right)-A_0\left(m_{S_\alpha}^2\right)  \right],
 \end{align}
-and
+where
+\begin{align}
+   A_{0}\left(m^{2}\right) &=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \frac{1}{k^{2}-m^{2}}\,.
+\end{align}
+
+
+To evaluate the integral through the Passarino-Veltman functions, we start with the general integral with two denominators
+\begin{align}
+  \label{eq:pvbo}
+  B_{0}\left(r_{10}^{2}, m_{0}^{2}, m_{1}^{2}\right)=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \prod_{i=0}^{1} \frac{1}{\left[\left(k+r_{i}\right)^{2}-m_{i}^{2}\right]}
+\end{align}
+In particular
+
+\begin{align}
+  I =&\int \frac{d^{d} k}{(2 \pi)^{d}} \frac{1}{\left[(k+p)^{2}-m_{1}^{2}+i \epsilon\right]\left[k^{2}-m_{2}^{2}+i \epsilon\right]} \nonumber\\
+    =&\int_{0}^{1} d x \int \frac{d^{d} k}{(2 \pi)^{d}} \frac{1}{\left[k^{2}+2 p \cdot k x+p^{2} x-m_{1}^{2} x-m_{2}^{2}(1-x)+i \epsilon\right]^{2}} \nonumber\\
+  =&\int_{0}^{1} d x \int \frac{d^{d} k}{(2 \pi)^{d}} \frac{1}{\left[k^{2}+2 P(x) \cdot k-M^{2}(x)+i \epsilon\right]^{2}} \nonumber\\
+  =&\int_{0}^{1} d x \int \frac{d^{d} k}{(2 \pi)^{d}} \frac{1}{\left\{[k+P(x)]^{2}-P^{2}(x)-M^{2}(x)+i \epsilon\right\}^{2}}
+\end{align}
+where
+\begin{align}
+  P(x)=&x p\,,& M^{2}(x)=&-x p^{2}+m_{1}^{2} x+m_{2}^{2}(1-x).
+\end{align}
+Changing variable $k\to k-P$
+\begin{align}
+  I=\int_{0}^{1} d x \int \frac{d^{d} k}{(2 \pi)^{d}} \frac{1}{\left[k^{2}-C(x)+i \epsilon\right]^{2}}
+\end{align}
+where
+\begin{align}
+  \label{eq:cx}
+  C(x)=P^{2}(x)+M^{2}(x)
+\end{align}
+
+
+In general, the integral to be calculated with dimensional regularization had the general
+defined as
+\begin{align}
+  I_{r, m}=\int \frac{d^{d} k}{(2 \pi)^{d}} \frac{k^{2^{r}}}{\left[k^{2}-C+i \epsilon\right]^{m}}\,.
+\end{align}
+Making a Wick rotation, this can be written as
+\begin{align}
+  I_{r, m}=i(-1)^{r-m} \int \frac{d^{d} k_{E}}{(2 \pi)^{d}} \frac{k_{E}^{2^{r}}}{\left[k_{E}^{2}+C\right]^{m}}
+\end{align}
+where $k_{E}=\left(k_{E}^{0}, \boldsymbol{k}\right)$ is an euclidean vector with
+\begin{align}
+  k^{0}=&i k_{E}^{0}\,,& \text{and} && k_{E}^{2}=&\left(k_{E}^{0}\right)^{2}+|\boldsymbol{k}|^{2}\,.
+\end{align}
+
+
+The integral can be evaluated to give
+\begin{align}
+  I_{r, m}=i C^{r-m+\frac{d}{2}} \frac{(-1)^{r-m}}{(4 \pi)^{\frac{d}{2}}} \frac{\Gamma\left(r+\frac{d}{2}\right)}{\Gamma\left(\frac{d}{2}\right)} \frac{\Gamma\left(m-r-\frac{d}{2}\right)}{\Gamma(m)}\,.
+\end{align}
+By using $d=4-\epsilon$
+\begin{align}
+  I_{r, m}=i \frac{(-1)^{r-m}}{(4 \pi)^{2}}\left(\frac{4 \pi}{C}\right)^{\frac{\epsilon}{2}} C^{2+r-m} \frac{\Gamma\left(2+r-\frac{\epsilon}{2}\right)}{\Gamma\left(2-\frac{\epsilon}{2}\right)} \frac{\Gamma\left(m-r-2+\frac{\epsilon}{2}\right)}{\Gamma(m)}\,.
+\end{align}
+
+We are interested in
+\begin{align}
+  I_{0,2}=\frac{i}{(4 \pi)^{2}}\left(\frac{4 \pi}{C}\right)^{\frac{\epsilon}{2}} \Gamma\left(\frac{\epsilon}{2}\right).
+\end{align}
+where
+\begin{align}
+  \Gamma\left(\frac{\epsilon}{2}\right)=\frac{2}{\epsilon}+\psi(1)+O(\epsilon)
+\end{align}
+where
+\begin{align}
+\psi(z) &=\frac{d}{d z} \ln \Gamma(z) \\ \psi(1) &=-\gamma \,.
+\end{align}
+
+So that
+\begin{align}
+  I_{0,2}=\frac{i}{16 \pi^{2}}\left(\Delta_{\epsilon}-\ln C\right)
+\end{align}
+where
+\begin{align}
+  \Delta_{\epsilon}=\frac{2}{\epsilon}-\gamma+\ln 4 \pi\,,
+\end{align}
+where $\gamma$ is the Euler-Mascheroni constant.
+
+
+Replacing back $C(x)$ from eq~\eqref{eq:cx} in \eqref{eq:pvbo}
+
+\begin{align}
+  \label{eq:gpvbo}
+  B_{0}\left(p^{2}, m_{0}^{2}, m_{1}^{2}\right)=\Delta_{\epsilon}-\int_{0}^{1} d x \ln \left[\frac{-x(1-x) p^{2}+x m_{1}^{2}+(1-x) m_{0}^{2}}{\mu^{2}}\right]
+\end{align}
+
+Taking into account that
+
+\begin{align}
+  \label{eq:I01}
+  I_{0,1}=\frac{i}{16 \pi^{2}} C\left(1+\Delta_{\epsilon}-\ln C\right)\,,
+\end{align}
+we can define
+\begin{align}
+   A_{0}\left(m^{2}\right) &=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \frac{1}{k^{2}-m^{2}}\,.
+\end{align}
+such that
 \begin{align*}
-  A_0\left(m^2\right)=m^2 \left[ \Delta+1-\ln \left( m^2/\mu^2 \right) \right]
+  A_0\left(m^2\right)=m^2 \left[ \Delta_{\epsilon}+1-\ln \left( m^2/\mu^2 \right) \right]
 \end{align*}
-with
-\begin{align*}
-  \Delta=\left( \frac{2}{\epsilon}-\ln\pi+\gamma_E \right),
-\end{align*}
-where $\mu$ is the subtraction point (dimensional regularization) an $\gamma_E$ is the Euler-Mascheroni constant.
+
+In this way, from \eqref{eq:gpvbo} we can get
+\begin{align}
+  B_{0}\left(0, m_{0}^{2}, m_{1}^{2}\right)=&\Delta_{\epsilon}+1-\frac{m_{0}^{2} \ln \frac{m_{0}^{2}}{\mu^{2}}-m_{1}^{2} \ln \frac{m_{1}^{2}}{\mu^{2}}}{m_{0}^{2}-m_{1}^{2}} \nonumber\\
+ =&\frac{A_{0}\left(m_{0}^{2}\right)-A_{0}\left(m_{1}^{2}\right)}{m_{0}^{2}-m_{1}^{2}}\,.
+\end{align}
+
+
 Replacing back in eq.~\eqref{eq:mnueig}, we have
 \begin{align}
    B_0 \left(0;m_{\chi_n}^2,m^2_{S_{\alpha}} \right)=&
    \frac{1}{m_{\chi_n}^2-m_{S_\alpha}^2}\left[m^2_{\chi_n} \left[ \Delta+1-\ln \left( m_{\chi_n}^2/\mu^2 \right) \right]  \right] 
 -m_{S_\alpha}^2 \left[ \Delta+1-\ln \left( m_{S_\alpha}^2/\mu^2 \right) \right] \nonumber\\
-=&(\Delta+1)+\frac{m_{S_\alpha}^2\ln \left( m_{S_\alpha}^2/\mu^2 \right)-m_{\chi_n}^2\ln \left( m_{\chi_n}^2/\mu^2 \right)}{m_{\chi_n}^2-m_{S_\alpha}^2} \nonumber\\
+  =&(\Delta+1)+\frac{m_{S_\alpha}^2\ln \left( m_{S_\alpha}^2/\mu^2 \right)-m_{\chi_n}^2\ln \left( m_{\chi_n}^2/\mu^2 \right)}{m_{\chi_n}^2-m_{S_\alpha}^2} \nonumber\\
+ =&(\Delta+1)+\frac{m_{S_\alpha}^2 \left[ \ln \left( m_{S_\alpha}^2 \right)-\ln \left( \mu^2 \right) \right]-
+     m_{\chi_n}^2 \left[ \ln \left( m_{\chi_n}^2 \right)-\ln \left( \mu^2 \right) \right]}{m_{\chi_n}^2-m_{S_\alpha}^2} \nonumber\\  
 =&\left[\Delta+1+\ln\left( \mu^2 \right) \right]+\frac{m_{S_\alpha}^2\ln \left( m_{S_\alpha}^2 \right)-m_{\chi_n}^2\ln \left( m_{\chi_n}^2 \right)}{m_{\chi_n}^2-m_{S_\alpha}^2} \nonumber\\
 =&\operatorname{cte}(\infty)+\frac{m_{S_\alpha}^2\ln \left( m_{S_\alpha}^2 \right)-m_{\chi_n}^2\ln \left( m_{\chi_n}^2 \right)}{m_{\chi_n}^2-m_{S_\alpha}^2} \,.
 \end{align}
-Reemplazando en eq.~\eqref{eq:mnub0}:
+and replacing back in eq.~\eqref{eq:mnub0}:
 
 \begin{align}
  M^{\nu}_{ij}=&-\frac{y_{i n\alpha}y_{j n\alpha}}{16\pi^2}m_{\chi_n} \left[ \operatorname{cte}(\infty)+
@@ -60,40 +172,23 @@ f \left( m_{\chi_n},m_{S_{\alpha}} \right)=&
 \frac{m_{S_{\alpha}}^2\ln \left(m_{S_{\alpha}}^2\right)-m_{\chi_n}^2\ln \left(m_{\chi_n}^2  \right)}{m_{\chi_n}^2-m_{S_{\alpha}}^2}
 \end{align}
 
+See \url{./FeynCalc/radiativeseesaw.nb} for an example based in the Radiative seesaw below
+
 \subsection{Passarino-Veltman function}
-Following Romao notes: \url{http://porthos.tecnico.ulisboa.pt/Public/textos/one-loop.pdf}\footnote{Old, now part now part of "Advanced Quantum Field Theory" \url{http://porthos.ist.utl.pt/Public/textos/tca.pdf}} We define $A_0, B_0$ as
+Following Romao notes: \url{http://porthos.tecnico.ulisboa.pt/Public/textos/one-loop.pdf}\footnote{Old version, now is a part of "Advanced Quantum Field Theory" \url{http://porthos.ist.utl.pt/Public/textos/tca.pdf}} We define $A_0, B_0$ as
+\begin{align}
+  A_{0}\left(m^{2}\right) &=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \frac{1}{k^{2}-m^{2}} \\
+  B_{0}\left(r_{10}^{2}, m_{0}^{2}, m_{1}^{2}\right) &=\frac{(2 \pi \mu)^{\epsilon}}{i \pi^{2}} \int d^{d} k \prod_{i=0}^{1} \frac{1}{\left[\left(k+r_{i}\right)^{2}-m_{i}^{2}\right]} \end{align}
 
-\includegraphics[scale=0.6]{romao1}
-
-If we write
-
-\includegraphics[scale=0.6]{romao9}
-
-The generic integral is 
-
-\includegraphics[scale=0.6]{romao2}
-
-This gives
-
-\includegraphics[scale=0.5]{romao3}
 
 In particular
+By using $C=m^2$, and factoring out the $i/\left( 16\pi^2 \right)$ in \eqref{eq:I01}
+\begin{align}
+  A_{0}\left(m^{2}\right)=m^{2}\left(\Delta_{\epsilon}+1-\ln \frac{m^{2}}{\mu^{2}}\right).
+\end{align}
 
-\includegraphics[scale=0.6]{romao4}
+We are really concerned by  the integrals with two denominators of the form \eqref{eq:mnueigi02}
 
-where for the tadpole integrals $C=m^2$
-
-With the notation
-
-\includegraphics[scale=0.5]{romao10}
-
-
-
-After factoring out the $i/\left( 16\pi^2 \right)$ in (A.51)
-
-\includegraphics[scale=0.6]{romao5}
-
-For the integrals with two denominators we get,
 
 \includegraphics[scale=0.5]{romao6}
 
