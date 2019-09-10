@@ -1,6 +1,7 @@
 \chapter{One-loop neutrino masses}
 Here we calculate the one-loop neutrino mases in the mass-basis
 
+
 \section{Extra particles}
 We assume to have $\alpha$-scalar  and $n$-fermions in the mass eigenstate basis in Weyl spinor notation
 \begin{align}
@@ -13,6 +14,7 @@ From left to right (clockwise) in Figure~\ref{fig:1lnu}
   \caption{Generic one-loop neutrino mass contribution}
   \label{fig:1lnu}
 \end{figure}
+
 \begin{align}
 -i\Sigma^{\nu}_{ij}(p)=&\int \frac{d4k}{\left( 2\pi \right)^{4}}\left(y_{in\alpha}  \right)iS_F(k) \left(y_{jn\alpha}\right)i\Delta_F(p+k) \nonumber\\
 =&\frac{y_{i n\alpha}y_{j n\alpha}}{16\pi^2}\int \frac{d^4k}{i\pi^2}\frac{\cancel{k}+m_{\chi_n}}{\left(k^2-m_{\chi_n}^2  \right)\left[\left(p+k\right)^2-m_{S_\alpha}^2\right]}
@@ -136,7 +138,6 @@ In[2]:= Dt[-x + x Log[a x], x, Constants -> a]
 Out[3]= Log[a x]
 \end{verbatim}
 
-
 Taking into account that
 
 \begin{align}
@@ -255,10 +256,11 @@ The solution for minus sign in the last equation, corresponding to $S^*$ in the 
     $\eta$& $\eta=-1$       &$\phantom{-1/2-l=1/2}$ \\
     $S$   & $s=-2$         &$\phantom{s=-1}$ \\
   \end{tabular}
-  \caption{Global solution \phantom{see \url{./scotolocal.nb}} to diagram of charge flux in figure~\ref{fig:rss}}
+  \caption{Global solution, see \url{./scotolocal.nb}, to diagram of charge flux in figure~\ref{fig:rss}}
   \label{tab:suematsu}
 \end{table}
 
+\end{document}
 Therefore must include the fermion terms (matrix notation for family indices)
 \begin{align}
   \mathcal{L}\supset h \left( N_R \right)^{\dagger} L \cdot \eta + y N_R N_R S + \text{h.c}\,.
