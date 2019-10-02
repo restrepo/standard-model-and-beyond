@@ -1,0 +1,146 @@
+\documentclass[prd,amsfonts,aps,nofootinbib,notitlepage,11pt,superscriptaddress]{revtex4-1}
+%%% RIGHT WAY TO USE UTF8 %%%
+%https://tex.stackexchange.com/a/54597/59580
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \pdfoutput=1
+  \usepackage[utf8]{inputenc}
+\fi
+%
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{cancel}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{color}
+\usepackage{array,multirow} 
+\usepackage{subcaption}
+
+\begin{document}
+
+\section{Anomaly cancelation}
+From~\cite{Calle:2019mxn}:
+física por la mañana
+We use $f$ ($f$) to denote the general $\operatorname{U}(1)_X$ generation-independent charge assignments of the field $f_R$ ($F_L$). The three linear anomalies in $\operatorname{U}(1)_X$~\cite{Campos:2017dgc}
+\begin{align}
+  \label{eq:anolin}
+  \left[\mathrm{SU}(3)_{C}\right]^{2} \mathrm{U}(1)_{X} :& &
+[3 u+3 d]-[3 \cdot 2 q]=&0, \nonumber\\
+\left[\mathrm{SU}(2)_{L}\right]^{2} \mathrm{U}(1)_{X} :&&
+-[2 l+3 \cdot 2 q]=&0, \nonumber\\
+\left[\mathrm{U}(1)_{Y}\right]^{2} \mathrm{U}(1)_{X} :&&
+{ \left[(-2)^{2} e+3\left(\tfrac{4}{3}\right)^{2} u+3\left(-\tfrac{2}{3}\right)^{2} d\right]-\left[2(-1)^{2} l+3 \cdot 2\left(\tfrac{1}{3}\right)^{2} q\right]}=&
+ 0,
+  \end{align}
+allows to express three $X$-charges in terms of the other two
+\begin{align}
+  u=&-e+\frac{2l}{3}\,,& d=& e-\frac{4l}{3}\,,& q=& -\frac{l}{3}\,.
+\end{align}
+The quadratic anomaly condition is automatically satisfied, while the mixed gauge-gravitational and cubic anomalies depend of any extra singlet quiral fermions of zero hypercharge, like the right-handed counterpart of the Dirac neutrinos. For $N$ extra quiral fields with $X$-charge $n_{\alpha}$, these conditions read
+\begin{align}
+  \left[\text{Grav}\right]^{2} \mathrm{U}(1)_{X}:\ \sum_{\alpha=1}^N n_{\alpha}+3 (e-2l)=&0\,, &  \left[\mathrm{U}(1)_{X}\right]^{3}:\ \sum_{\alpha=1}^N n_{\alpha}^3+3 (e-2l)^3=&0\,. &
+\end{align}
+We choose the solutions with $r\equiv e-2l$, such that
+\begin{align}
+  \label{eq:anolam}
+  \sum_{\alpha=1}^{N} n_{\alpha}=&-3 r\,,   & \sum_{\alpha=1}^{N} n_{\alpha}^3=&-3 r^3\,.
+\end{align}
+The full set of anomaly free SM $X$-charges in terms of two parameters~\cite{Appelquist:2002mw,Campos:2017dgc,Allanach:2018vjg} that we choose as $l$ and $r$, is just
+\begin{align}
+  u=&-r-\frac{4l}{3}\,,&d=&r+\frac{2l}{3}\,,&q=&-\frac{l}{3}\,,&e=&r+2l\,,&h=&-r-l\,.
+  \label{Eq:SMCharges}
+\end{align}
+where the condition in the charged lepton Yukawa couplings have been used to fix $h$, and is automatically consistent with the conditions in the quark Yukawa couplings. By setting $l=0$ in the previous equations, we can define the Abelian symmetry in which only the right-handed charged fermions have non-vanishing $X$-charges as $\operatorname{U}(1)_R$. Then the general anomaly free two-parameter solution can be written as
+\begin{align}
+  X(r,l)=r R- l Y\,.
+\end{align}
+
+
+If we now change $f\to f'= f/r$ for all the charged fermion $X$-charges~\cite{Allanach:2018vjg}, the
+first set of anomaly cancellation conditions Eq.~\eqref{eq:anolin} remains
+invariant, and without lost of generality it is always possible to
+normalize the solutions such that the last set Eq.~\eqref{eq:anolam} is
+just
+\begin{align}
+  \label{eq:anolamnor}
+   \sum_{\alpha=1}^{N} n_{\alpha}^{\prime}=&-3\,,   & \sum_{\alpha=1}^{N} n_{\alpha}^{\prime\, 3}=&-3\,.
+\end{align}
+For example, the solution with $r=3$: $n_{\alpha}=\left( -2,-2,-4,-1 \right)$~\cite{Appelquist:2002mw} can be easily normalized to the form in Eq.~\eqref{eq:anolamnor} with $f\to f/3$
+to $n_{\alpha}'=\left( -2/3,-2/3,-4/3,-1/3 \right)$
+as used in Ref.~\cite{Patra:2016ofq}. In this way, without lost of generality, we will work with the normalized solution in terms of a single parameter~\cite{Jenkins:1987ue,Oda:2015gna,Okada:2018tgy} that we choose to be $l$, by setting $r=1$ as summarized in column $\operatorname{U}(1)_X$ of Table~\ref{tab:partcont3}, which is just
+\begin{align}
+  X(l)=R-l\, Y\,.
+\end{align}
+In particular, this includes the solution  $n_{\alpha}=(-4,-4,+5)$~\cite{Appelquist:2002mw}. 
+
+
+
+%
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|c|c|c|c||c|}
+    \hline  
+    Fields     & $\operatorname{SU}(2)_L$ &  $\operatorname{U}(1)_Y $ & $\operatorname{U}(1)_{X}$& $\operatorname{U}(1)_{B-L}$& $\operatorname{U}(1)_R$& $\operatorname{U}(1)_D$& $\operatorname{U}(1)_G$ & $\operatorname{U}(1)_{\mathcal{D}}$\\ \hline
+$L $     & $\boldsymbol{2}$ & $-1$ & $l$      &  $-1$&    $0$ &  $-3/2$&  $-1/2$ & $0$ \\    
+$d_R $   & $\boldsymbol{1}$ & $-2/3$ & $1+2l/3$ &  $1/3$&    $1$&  $0$&    $2/3$ & $0$\\
+$u_R $   & $\boldsymbol{1}$ & $+4/3$ & $-1-4l/3$&  $1/3$&   $-1$&  $1$&   $-1/3$ & $0$ \\
+$Q $     & $\boldsymbol{2}$ & $1/3$ & $-l/3$   & $1/3$&    $0$&  $1/2$&  $1/6$ & $0$ \\
+$e_R $   & $\boldsymbol{1}$ & $-2$   & $1+2l$   &  $-1$&    $1$ &  $-2$&  $0$ & $0$\\\hline
+$H $     & $\boldsymbol{2}$ & $1$  & $-1-l$   &  $0$&    $-1$ &  $1/2$&  $-1/2$ & $0$ \\\hline
+$N_\alpha$& $\boldsymbol{1}$ & $0$   & $n_\alpha$& $n_\alpha$&  $n_\alpha$ & $n_\alpha$& $n_\alpha$ & $n_\alpha$\\\hline
+  \end{tabular}
+  \caption{General one-parameter solution with some examples of rational solutions
+    ($X=B-L,R,D,G$ and $\mathcal{D}$) for the radiative type-I seesaw realization
+    of the effective operator $\mathcal{O}_{6D}$ for Dirac neutrino masses. The
+    last column requieres the condition $\sum_{\alpha=1}^N n_\alpha=0$\,.}
+    \label{tab:partcont3}
+\end{table}
+%
+
+
+\section{Discrete symmetries}
+
+The possible charge assignments to a field $\phi$ under a $Z_N$ symmetry are
+\begin{align}
+    1,w, w^2, ...,w^{N-1}, \,\,\,\text{with}\,\,\,w=\exp(i2\pi/N). 
+\end{align}
+We assume the existence of $k$ scalar complex fields $\phi_\alpha$, $\alpha=1,2,...,k$, each transforming as
+\begin{align}
+    \phi_\alpha\sim w^\alpha,  \,\,\,\text{with}\,\,\,k\leq N/2.
+%    \begin{cases}
+%    N/2,\,\,\,\text{for}\,\,\, N \,\,\,\text{odd},\\
+%    N/2-1,\,\,\,\text{for}\,\,\, N \,\,\,\text{even}.    
+%    \end{cases} 
+\end{align}
+Note that $(w^\alpha)^*=w^{-\alpha}=w^{N-\alpha}$. 
+
+Consider one $\operatorname{U}(1)_X$ which is broken by a singlet scalar field $S_N$ and one dark scalar field $\phi_1$ where the subscript indicates the $X$-charge of the field. In addition to the self-conjugate terms the gauge symmetry allows the following term~\cite{Batell:2010bp}
+\begin{align}
+  \mathcal{L}\varpropto S_N^{\dagger}\phi_1^N + \text{h.c}\,.
+\end{align}
+
+When $S_N$ acquires a vev, the Lagrangian preserves a discrete $Z_N$ subgroup of $\operatorname{U}(1)_X$ under which the dark scalar field transform as
+\begin{align}
+  \phi\to \phi' = &\operatorname{e}^{2\pi i k/N} \phi_1\,,& k=&0,1,2,\ldots N-1\,.
+\end{align}
+Then the remnant symmetry will be exactly conserved at all orders
+including non-renormalizable terms.  Note that the $Z_N$ symmetry can
+also appears accidentally. In this case, in contrast to the discrete
+gauge symmetries, these accidental symmetries may be violated at the
+non-renormalizable level, and consequently, the DM stability can be
+only granted at the renormalizable level~\cite{Batell:2010bp}.
+
+For the $Z_2$ imposed usually by hand, we can identify this a gauge discrete symmetry associated to Lagrangian of the Singlet Scalar Dark Matter model (SSDM), $\phi_1$, supplemented by the interaction with the singlet scalar $S_2$ which spontaneously breaks some $\operatorname{U}(1)_X$ gauge symmetry. The relevant term in the Lagrangian is
+\begin{align}
+  \mathcal{L}\subset \lambda S_2^{*} \phi_1 \phi_1+ \text{h.c.}\,.
+\end{align}
+Note that in this case $\phi_1$  needs to be complex. However, this Lagrangian term induces a mass splitting between the real an imaginary components of $\phi_1$. In this way we can have the usual SSDM with a real scalar.
+
+For $Z_4$ as remnant of the spontaneous breaking of some $\operatorname{U}(1)_X$,  we can have two-component dark matter depending on the mass hierarchy of the dark sector~\cite{Batell:2010bp,Aoki:2016glu}. For larger $Z_N$ see ~\cite{Batell:2010bp}. In~\cite{Chen:2018lsk} is claimed that the heterogeneous self-interaction is a natural consequence of any 2DM or nDM models. In nDM models there can be various dark matter (DM) annihilation processes that are different from the standard DM annihilation process~\cite{Aoki:2012ub}. In particular it is possible to have an assisted freze-out which further reduce the direct detection signals~\cite{Belanger:2011ww}
+
+\bibliographystyle{apsrev4-1longdoi}
+\bibliography{references}
+
+\end{document}
+
