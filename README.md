@@ -1,7 +1,9 @@
 Detailed lecture notes in Quantum Field Theory
 =============================================
 
-[![DOI](https://zenodo.org/badge/22717/restrepo/beyond-the-standard-model.svg)](https://zenodo.org/badge/latestdoi/22717/restrepo/beyond-the-standard-model) [Google Scholar](https://scholar.google.com/scholar_lookup?title=Detailed+lecture+notes+on+Quantum+Field+Theory&author=D+Restrepo)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3470180.svg)](https://doi.org/10.5281/zenodo.3470180)
+
+[Google Scholar](https://scholar.google.com/scholar_lookup?title=Detailed+lecture+notes+on+Quantum+Field+Theory&author=D+Restrepo)
 
 
 [PDF](https://github.com/restrepo/beyond-the-standard-model/releases/latest) generated with [TravisCI](https://github.com/travis-ci). (See [HowTo-Deploy-LaTeX-Documents](https://github.com/SimonWaldherr/HowTo-Deploy-LaTeX-Documents))
