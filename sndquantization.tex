@@ -13,7 +13,7 @@
 %instiki:* [Quantization of Fermions](#quant-ferm)
 %instiki:
 
-
+\section{Introduction}
 Two key ingredients to formulate the Quantum Field Theory (QFT) are the quantization of systems in which the particles can be created and destroyed (quamtum theory of radiation) and the behavior of relativistic systems. When both ingredients are present the particles can be understood as the excited modes of certain field. When the particles in a system are not relativistic, the formalism of creation and annihilation operators is just an alternative method to describe the Hamiltonian of the Schr\"odinger equation. In relativistic systems however, the existence of negative energy states force the construction of new quantum states, the Fock states, in order to have proper defined probabilities for the states of the system. In section xx we start by building the Fock states associated to a massless not relativistic scalar field. Then we generalize the results to a massive scalar field satisfying the Klein-Gordon equation.
 
 Some parts of the discussion were based in some topics of chapters 4-6 of \cite{Maggiore:2005qv}.
@@ -34,28 +34,31 @@ In conventional quantization the energy of one state is interpreted as the possi
 One step further is to consider the wave function as the eigenstate  of the operator--field acting on certain \emph{Fock states}
 \begin{align}
 \label{eq:1}
-  \widehat{\Phi}|\text{Fock State}\rangle=\Phi||\text{Fock State}\rangle\,,
+  \widehat{\Phi}|\text{Fock State}\rangle=\Phi|\text{Fock State}\rangle\,,
 \end{align}
 Like that usual quantum mechanical observable, the wave function will have an uncertainty. 
 The Fock states are the states under which the classical wave function can be obtained with a small uncertainty
 \begin{align}
     \Phi\pm\Delta\Phi=\langle\text{Fock State}|\widehat{\Phi}|\text{Fock State}\rangle
 \end{align}
+\end{frame}
 This happens when the number of quanta of the Fock state is big enough. In fact, a state with a definite number of quanta has a infinity uncertainty \cite{Gross:1993}.
 
 Eq.~\eqref{eq:1} is the basis for the calculation of cross section and decay widths in quantum field theory. Now we will study how to define a such Fock state for a scalar field.
 
 
+\begin{frame}[fragile,allowframebreaks]
 We have already see in Chapter 1 of \cite{lsm} that a string have a collective wave motion that is described by a continuous field, which satisfies the familiar one-dimensional wave equation
 \begin{align}
 \label{eq:2}
   \frac{1}{v^2}\frac{\partial^2\phi}{\partial t^2}-\frac{\partial^2\phi}{\partial z^2}=0
 \end{align}
+\end{frame}
 This equation can be derived following two different paths. The first is to decomposing the string into individual oscillators for which the usual Lagrangian formalism can be used. The second is just by formulating certain Lagrangian density from which the equation of motion can be obtained  by using the Euler-Lagrange equation
 \begin{align}
   \partial_\mu\left[\frac{\partial\mathcal{L}}{\partial(\partial_\mu\phi)}\right]-\frac{\partial\mathcal{L}}{\partial\phi}=0\,.
 \end{align}
-In the first approach the string is considered to be composed of $N$ oscillators coupled together  by springs with a spring constant $k$. At certain time $t$, the displacement of the oscillator $i$ at time $t$ is represented by $\phi_i(t)$. In Table~\ref{tab:1} it is displayed the corresponding macroscopic quantities. Note also that $1/v^2=\mu/T$.
+In the first approach, the string is considered to be composed of $N$ oscillators coupled together  by springs with a spring constant $k$. At certain time $t$, the displacement of the oscillator $i$ at time $t$ is represented by $\phi_i(t)$. In Table~\ref{tab:1} it is displayed the corresponding macroscopic quantities. Note also that $1/v^2=\mu/T$.
 \begin{table}[htp!]
   \centering
   \begin{tabular}{l|l}
@@ -68,25 +71,26 @@ In the first approach the string is considered to be composed of $N$ oscillators
   \caption{From micro to macro}
 \label{tab:1}
 \end{table}
-It is worth to stress that at the Lagrangian level, which is the sum of each individual oscillator Lagrangian, it is the sum of the kinetic and potential oscillator energy. However, the Lagrangian density only have the kinetic term for the scalar field
+It is worth to stress that the Lagrangian is the sum of each individual oscillator Lagrangian, which in turn is the sum of the kinetic and potential energy  of each oscillator. However, it turns out that the full Lagrangian density only have the kinetic term for the scalar field
 \begin{align}
-  \mathcal{L}&=\frac{1}{2}\left(\frac{1}{v^2}\partial^0\phi\partial_0\phi+\partial^3\phi\partial_3\phi\right)\nonumber\\
-  &\underset{v\to c=1}{\longrightarrow}\;\tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi\,.
+  \mathcal{L}&=\frac{1}{2}\left(\partial^0\phi\partial_0\phi+\partial^3\phi\partial_3\phi\right)\nonumber\\
+  &\underset{v\to c}{\longrightarrow}\;\tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi\,.
 \end{align}
-Note that only in the case $v=c$ this Lagrangian can be written in a covariant form. Moreover, the scalar field $\phi(z,t)$ have nothing to do with the individual oscillators. An specific solution for $\phi(z,t)$ would represent one specific oscillation mode of the string. It turn out that  this specific frequency mode corresponds to an particle state, that does have not connection with the physical particles in the string. 
+where $x^0=vt$. Note that only in the case $v=c$ this Lagrangian density can be written in a covariant form. Moreover, the scalar field $\phi(z,t)$ have nothing to do with the individual oscillators. An specific solution for $\phi(z,t)$ would represent one specific oscillation mode of the string. It turn out that  this specific frequency mode corresponds to an particle state, that does not have connection with the physical particles in the string. 
 
+\begin{frame}[fragile,allowframebreaks]
 The most general discrete solution to the wave equation  \eqref{eq:2} is the Fourier decomposition
 \begin{align}
   \label{eq:3}
   \phi(t,z)=\sum_{n}\frac{v}{\sqrt{2\omega_{n} L}}
-  \left(a_{n} e^{-i (\omega_n t-k_nz) }+a_{n}^* e^{i (\omega_n t-k_n z) }\right)
+  \left(a_{n} \operatorname{e}^{-i (\omega_n t-k_nz) }+a_{n}^* \operatorname{e}^{i (\omega_n t-k_n z) }\right)
 \end{align}
 where the dispersion relation is
 \begin{align}
 \label{eq:4}
   \omega_n^2=v^2 k_n^2
 \end{align}
-where $\omega_n$ is definite positive:
+where $\omega_n$ is positive-definite:
 \begin{align}
   \omega_n=+|v|\sqrt{|k_n|}
 \end{align}
@@ -104,20 +108,21 @@ Therefore
 \begin{align}
   \omega_{-n}=\omega_n\,.
 \end{align}
-In three dimensions and with $v=c=1$, the Lagrangian can be written as
-\begin{align}
-\mathcal{L}=  \tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi
-\end{align}
-This Lagrangian is still covariant after the addition of a function of $\phi$. An interesting case is just the addition of the mass term
-the most general solution to the Klein--Gordon equation is 
-\begin{align}
-\mathcal{L}=  \tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi-\tfrac{1}{2}m^2\phi^2
-\end{align}
-which give to arise to Klein-Gordon 
-\begin{align}
-  \left(\partial_\mu\partial^\mu-m^2\right)\phi=0\,.
-\end{align}
-We now will check the origin of the normalization factor. For simplicity we work with one spatial dimension. By using eq.~\eqref{eq:3}
+\end{frame}
+% In three dimensions and with $v=c=1$, the Lagrangian can be written as
+% \begin{align}
+% \mathcal{L}=  \tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi
+% \end{align}
+% This Lagrangian is still covariant after the addition of any function of $\phi$. An interesting case is just the addition of the mass term
+% \begin{align}
+% \mathcal{L}=  \tfrac{1}{2}\partial^\mu\phi\partial_\mu\phi-\tfrac{1}{2}m^2\phi^2\,,
+% \end{align}
+% which gives to arise to Klein-Gordon equation
+% \begin{align}
+%   \left(\partial_\mu\partial^\mu-m^2\right)\phi=0\,.
+    %   \end{align}
+\begin{frame}[fragile,allowframebreaks]
+We now will check the origin of the normalization factor. By using eq.~\eqref{eq:3}
 \begin{equation}
 \label{eq:6}
    \phi(z,t)=\sum_{n=-\infty}^\infty 
@@ -133,70 +138,76 @@ We now will check the origin of the normalization factor. For simplicity we work
 \end{align}
 we define
 \begin{align}
-  \phi_n(z,t)=\frac{1}{\sqrt{L}}e^{-i(\omega_n t-k_n z)}
+  \phi_n(z,t)=\frac{1}{\sqrt{L}}\operatorname{e}^{-i(\omega_n t-k_n z)}\,,
 \end{align}
-
-y las funciones $\phi_n$ satisfacen las siguientes condiciones de normalizaci\'on
+\end{frame}
+and the functions $\phi_n$ satisfy the following normalization conditions
 \begin{align}
-  \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)=&\frac{1}{L}\int_0^Ldz\,e^{i(\omega_n t-k_n z)}e^{-i(\omega_m t-k_m z)}\nonumber\\
-=&\frac{1}{L}\int_0^Ldz\,\exp\{i[(\omega_n-\omega_m) t-(k_n-k_m) z]\}\nonumber\\
-=&\frac{e^{i(\omega_n-\omega_m)t}}{L}\int_0^Ldz\,e^{-i(k_n-k_m) z}\nonumber\\
+  \int_0^L\operatorname{d}z\,\,\phi_n^*(z,t)\phi_m(z,t)=&\frac{1}{L}\int_0^L\operatorname{d}z\,\,\operatorname{e}^{i(\omega_n t-k_n z)}\operatorname{e}^{-i(\omega_m t-k_m z)}\nonumber\\
+=&\frac{1}{L}\int_0^L\operatorname{d}z\,\,\exp\{i[(\omega_n-\omega_m) t-(k_n-k_m) z]\}\nonumber\\
+=&\frac{\operatorname{e}^{i(\omega_n-\omega_m)t}}{L}\int_0^L\operatorname{d}z\,\,\operatorname{e}^{-i(k_n-k_m) z}\nonumber\\
 \end{align}
 When $n=m$
 \begin{align}
-    \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)=&\frac{1}{L}\int_0^Ldz\nonumber\\
+    \int_0^L\operatorname{d}z\,\,\phi_n^*(z,t)\phi_m(z,t)=&\frac{1}{L}\int_0^L\operatorname{d}z\,\nonumber\\
     =&1
 \end{align}
 For $n\neq m$, $2(n-m)$ is an even integer and then
 \begin{align}
-   \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)  =&\frac{e^{i(\omega_n-\omega_m)t}}{L}\left.
-\frac{e^{-i(k_n-k_m) z}}{-i(k_n-k_m)}\right|_0^L\nonumber\\
-=&\frac{e^{i(\omega_n-\omega_m)t}}{L}\frac{1}{-i(k_n-k_m)}
-\left(e^{-i2\pi(n-m) }-1\right)\nonumber\\
+   \int_0^L\operatorname{d}z\,\,\phi_n^*(z,t)\phi_m(z,t)  =&\frac{\operatorname{e}^{i(\omega_n-\omega_m)t}}{L}\left.
+\frac{\operatorname{e}^{-i(k_n-k_m) z}}{-i(k_n-k_m)}\right|_0^L\nonumber\\
+=&\frac{\operatorname{e}^{i(\omega_n-\omega_m)t}}{L}\frac{1}{-i(k_n-k_m)}
+\left(\operatorname{e}^{-i2\pi(n-m) }-1\right)\nonumber\\
 =&0
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 In this way
 \begin{equation}
 \label{eq:7}
-  \int_0^Ldz\,\phi_n^*(z,t)\phi_m(z,t)=\delta_{nm}.
+  \int_0^L\operatorname{d}z\,\,\phi_n^*(z,t)\phi_m(z,t)=\delta_{nm}.
 \end{equation}
 Moreover
 \begin{equation}
 \label{eq:8}
-  \int_0^Ldz\,\phi_n(z,t)\phi_m(z,t)=\delta_{n,-m}e^{-2i\omega_nt}.
+  \int_0^L\operatorname{d}z\,\,\phi_n(z,t)\phi_m(z,t)=\delta_{n,-m}\operatorname{e}^{-2i\omega_nt}.
 \end{equation}
-
-En tal caso de 
-\begin{equation}
-  \label{eq:9}
-  H=\int_{0}^{L}\mathcal{H}\,dz\,.
-\end{equation}
+\end{frame}
 From the analysis of the Theorem of Noether in chapter~1 of \cite{lsm} we have, that in a similar way to the usual Lagrangian formulation, where the canonical conjugate  variable is used to define the Legendre transformation
 \begin{align}
   \label{eq:10}
   H=p \dot q-L\,,
 \end{align}
-the Hamiltonian density can be obtained from the Lagragian density trough the Legendre transformation
+\begin{frame}[fragile,allowframebreaks]
+the Hamiltonian density, $\mathcal{H}$, can be obtained from the Lagrangian density trough the Legendre transformation
 \begin{align}
 \mathcal{H}&=T^0_0=\frac{\partial\mathcal{L}}{\partial\dot{\phi}}\dot{\phi}
       -\mathcal{L}\\
       &=\Pi(x)\frac{\partial\phi(x)}{\partial t}-\mathcal{L}.
 \end{align}
 where
-\begin{equation}
+\begin{align}
 \label{eq:11}
-  \Pi(x)=\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)}
-\end{equation}
+  \Pi(x)=&\frac{\partial\mathcal{L}}{\partial(\partial\phi(x)/\partial t)} \nonumber\\
+      =& \frac{1}{v^2}\frac{\partial\phi}{\partial t}\,,
+\end{align}
 is the canonical conjugate variable (conjugate momentum) of  the canonical variable $\phi(x)$.
+
+In this way
+\begin{align}
+  \mathcal{H}=&\frac{1}{v^2}\frac{\partial\phi}{\partial t}\frac{\partial\phi}{\partial t}-\frac{1}{2v^2}\frac{\partial\phi}{\partial t}\frac{\partial\phi}{\partial t}+\frac{1}{2}\frac{\partial\phi}{\partial z}\frac{\partial\phi}{\partial z} \nonumber\\
+=&\frac{1}{2v^2}\frac{\partial\phi}{\partial t}\frac{\partial\phi}{\partial t}+\frac{1}{2}\frac{\partial\phi}{\partial z}\frac{\partial\phi}{\partial z}\,.
+\end{align}
 
 We have then,
 \begin{align}
-\label{eq:12}
-  H&=\frac{1}{2v^2}\int_0^Ldz\,\frac{\partial\phi}{\partial t}\frac{\partial\phi}{\partial t}+
-  \frac{1}{2}\int_0^Ldz\,\frac{\partial\phi}{\partial z}\frac{\partial\phi}{\partial z}\nonumber\\
+  \label{eq:12}
+  H&=\int_{0}^{L}\mathcal{H}\,\operatorname{d}z \nonumber\\
+  H&=\frac{1}{2v^2}\int_0^L\operatorname{d}z\,\,\frac{\partial\phi}{\partial t}\frac{\partial\phi}{\partial t}+
+  \frac{1}{2}\int_0^L\operatorname{d}z\,\,\frac{\partial\phi}{\partial z}\frac{\partial\phi}{\partial z}\nonumber\\
 &=\sum_{n=-\infty}^\infty\omega_n\,a_n^*a_n
 \end{align}
-Demostration:
+\end{frame}
+Demonstration:
 \begin{align}
   \frac{\partial\phi}{\partial t}=&\sum_{n=-\infty}^\infty \frac{v}{\sqrt{2\omega_n}}
   \left[-i\omega_n a_n\,\phi_n(z,t)+i\omega_n a_n^*\,\phi_n^*(z,t)\right],\nonumber\\
@@ -231,35 +242,35 @@ Demostration:
 Using eqs.~\eqref{eq:7}, and \eqref{eq:8}
 \begin{align}
   H=  &\frac12
-\sum_{n,m=-\infty}^\infty\int_0^Ldz\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}} 
+\sum_{n,m=-\infty}^\infty\int_0^L\operatorname{d}z\,\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}} 
   \left[a_n a_m \phi_n \phi_m- a_n^*a_m\phi_n^*\phi_m-a_n a_m^* \phi_n \phi_m^*+ a_n^*a_m^*\phi_n^*\phi_m^*\right]\nonumber\\
-&+\frac12\sum_{n,m=-\infty}^\infty\int_0^Ldz \frac{- v^2k_nk_m}{2\sqrt{\omega_n\omega_m}}
+&+\frac12\sum_{n,m=-\infty}^\infty\int_0^L\operatorname{d}z\, \frac{- v^2k_nk_m}{2\sqrt{\omega_n\omega_m}}
   \left[a_n a_m \phi_n \phi_m- a_n^*a_m\phi_n^*\phi_m-a_n a_m^* \phi_n \phi_m^*+ a_n^*a_m^*\phi_n^*\phi_m^*\right]\nonumber\\
   =  &\frac12
 \sum_{n,m=-\infty}^\infty\frac{- \omega_n\omega_m}{2\sqrt{\omega_n\omega_m}} 
-  \left[a_n a_m \delta_{n,-m}e^{-2i\omega_n t}- a_n^*a_m\delta_{n, m}-a_n a_m^* \delta_{n,m}+ a_n^*a_m^*\delta_{n,-m}e^{2i\omega_n t}\right] \nonumber\\
+  \left[a_n a_m \delta_{n,-m}\operatorname{e}^{-2i\omega_n t}- a_n^*a_m\delta_{n, m}-a_n a_m^* \delta_{n,m}+ a_n^*a_m^*\delta_{n,-m}\operatorname{e}^{2i\omega_n t}\right] \nonumber\\
   &+\frac12
 \sum_{n,m=-\infty}^\infty\frac{-v^2 k_nk_m}{2\sqrt{\omega_n\omega_m}} 
-  \left[a_n a_m \delta_{n,-m}e^{-2i\omega_n t}- a_n^*a_m\delta_{n, m}-a_n a_m^* \delta_{n,m}+ a_n^*a_m^*\delta_{n,-m}e^{2i\omega_n t}\right]\nonumber\\
+  \left[a_n a_m \delta_{n,-m}\operatorname{e}^{-2i\omega_n t}- a_n^*a_m\delta_{n, m}-a_n a_m^* \delta_{n,m}+ a_n^*a_m^*\delta_{n,-m}\operatorname{e}^{2i\omega_n t}\right]\nonumber\\
   =  &\frac12
 \sum_{n=-\infty}^\infty 
-  \left[\frac{- \omega_n\omega_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n e^{-2i\omega_n t}
-+\frac{ \omega_n\omega_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{\omega_n\omega_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*e^{2i\omega_n t}\right]\nonumber\\
+  \left[\frac{- \omega_n\omega_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n \operatorname{e}^{-2i\omega_n t}
++\frac{ \omega_n\omega_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{\omega_n\omega_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*\operatorname{e}^{2i\omega_n t}\right]\nonumber\\
 &+\frac12
 \sum_{n=-\infty}^\infty 
-  \left[\frac{-v^2 k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n e^{-2i\omega_n t}
-+\frac{ k_nk_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*e^{2i\omega_n t}\right]
+  \left[\frac{-v^2 k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}}a_n a_n \operatorname{e}^{-2i\omega_n t}
++\frac{ k_nk_n}{2\sqrt{\omega_n\omega_n}}(a_n^*a_n+a_n a_n^*)- \frac{k_nk_{-n}}{2\sqrt{\omega_n\omega_{-n}}} a_n^*a_{-n}^*\operatorname{e}^{2i\omega_n t}\right]
 \end{align}
 
-\end{frame}
-\begin{frame}[fragile,allowframebreaks]
+
+
 Since $\omega_n=\omega_{-n}$ and $k_n=-k_{-n}$
 \begin{align}
  H =  &\frac12
 \sum_{n=-\infty}^\infty \frac{1}{2\omega_n}
-  \left[(- \omega_n^2+v^2 k_n^2)a_n a_n e^{-2i\omega_n t}
+  \left[(- \omega_n^2+v^2 k_n^2)a_n a_n \operatorname{e}^{-2i\omega_n t}
 +( \omega_n^2+v^2 k_n^2)(a_n^*a_n+a_n a_n^*)\right.\nonumber\\
-&+\left.(- \omega_n^2+v^2 k_n^2)a_n^*a_{-n}^*e^{2i\omega_n t}\right]
+&+\left.(- \omega_n^2+v^2 k_n^2)a_n^*a_{-n}^*\operatorname{e}^{2i\omega_n t}\right]
 \end{align}
 Finally, using eq.~\eqref{eq:4}
 \begin{align}
@@ -272,10 +283,10 @@ Since $a_n$ and $a_n^*$ are classical quantities that commutates, the Hamiltonia
   H=\sum_{n=-\infty}^\infty\omega_na_n^*a_n=\sum_{n=-\infty}^\infty\omega_n|a_n|^2
 \end{align}
 
-In this way, the factor $\sqrt{2\omega_{n}}$ in eq.~\eqref{eq:6}, is a convenient choice of normalization for the coefficients $a_n$ which guarantees the Hamiltonian.
+In this way, the factor $\sqrt{2\omega_{n}}$ in eq.~\eqref{eq:6}, is a convenient choice of normalization for the coefficients $a_n$ which guarantees the proper  Hamiltonian.
 
 To quantize the string, we need to promote $H$ to an operator. In canonical quantization we need to identify the proper conjugates variables. For this purpose it is convenient to write eq.~\eqref{eq:14} as the Hamiltonian of an harmonic oscillator.
-\end{frame}
+
 \subsection{Quantization of the string}
 \label{sec:quantization-string}
 \begin{frame}[fragile,allowframebreaks]
@@ -356,7 +367,7 @@ then we recover equations \eqref{eq:16}. The scalar field is now an operator
 \begin{align}
 \label{eq:18}
   \widehat{\phi}=&\sum_{n=-\infty}^\infty\frac{v}{\sqrt{2\omega_nL}}
-  \left[\widehat{a}_n\,e^{-i(\omega_n t-k_n z)}+\widehat{a\,}_n^\dagger\,e^{i(\omega_n t-k_n z)}\right],
+  \left[\widehat{a}_n\,\operatorname{e}^{-i(\omega_n t-k_n z)}+\widehat{a\,}_n^\dagger\,\operatorname{e}^{i(\omega_n t-k_n z)}\right],
 \end{align}
 
 
@@ -378,7 +389,7 @@ it is convenient to renormalize the Hamiltonian as
 \begin{align}
 \label{eq:130}
   \colon\!\widehat{H}\colon=&\sum_{n=-\infty}^{\infty} \omega_n \left(\widehat{a\,}_{n}^\dagger\widehat{a}_{n} +\frac{1}{2}\right)-
-  \sum_{n=-\infty}^{\infty} \frac{1}{2}\nonumber\\
+  \sum_{n=-\infty}^{\infty} \frac{1}{2} \omega_n\nonumber\\
 =&\sum_{n=-\infty}^{\infty} \omega_n \widehat{a\,}_{n}^\dagger\widehat{a}_{n}
 \end{align}
 This procedure is consistent since the related physics quantities arise from energy differences, no from absolute energy determinations.
@@ -631,7 +642,7 @@ is
 \begin{align}
   \label{eq:21}
   \phi(t,\mathbf{x})=&\sum_\mathbf{n}\frac{1}{\sqrt{2E_\mathbf{n} L^3}}
-  \left(a_\mathbf{n} e^{-i p_\mathbf{n}\cdot x }+a_\mathbf{n}^* e^{i p_\mathbf{n}\cdot x }\right)\,,\nonumber\\
+  \left(a_\mathbf{n} \operatorname{e}^{-i p_\mathbf{n}\cdot x }+a_\mathbf{n}^* \operatorname{e}^{i p_\mathbf{n}\cdot x }\right)\,,\nonumber\\
  =&\sum_{n_x,n_y,n_z}\frac{1}{\sqrt{2E_{(n_x,n_y,n_z)} L^3}}
   \left\{a_{(n_x,n_y,n_z)} \exp\{ -i [E_{(n_x,n_y,n_z)}t-p_{x}x-p_{y}y-p_{z}z] \} \right.\nonumber\\
 &\hspace{2cm}\left.+a_{(n_x,n_y,n_z)}^* \exp\{ i[ E_{(n_x,n_y,n_z)}t-p_{x}x-p_{y}y-p_{z}z] \} \right\}\,,
@@ -738,7 +749,7 @@ In particular, this implies that
 \end{align}
 This expression can be also obtained from the definition
 \begin{align}
-  \delta^3(\mathbf{p})=\lim_{V\to\infty}\left(\frac{1}{(2\pi)^3}\int_V d^3x\, e^{-i\mathbf{p}\cdot\mathbf{x} }\right)\,,
+  \delta^3(\mathbf{p})=\lim_{V\to\infty}\left(\frac{1}{(2\pi)^3}\int_V d^3x\, \operatorname{e}^{-i\mathbf{p}\cdot\mathbf{x} }\right)\,,
 \end{align}
 before taking the limit to infinity.
 
@@ -748,9 +759,9 @@ Therefore, in the continuum the solution in eq.~\eqref{eq:21} can be written as
 \begin{align}
 \label{eq:27}
   \phi(t,\mathbf{x})=&\left(\frac{L}{2\pi}\right)^3\int d^3p \frac{1}{\sqrt{2E_\mathbf{p} L^3}}
-  \left(a_\mathbf{p} e^{-i p\cdot x }+a_\mathbf{p}^* e^{i p\cdot x }\right)\nonumber\\
+  \left(a_\mathbf{p} \operatorname{e}^{-i p\cdot x }+a_\mathbf{p}^* \operatorname{e}^{i p\cdot x }\right)\nonumber\\
 =&\int d^3p \frac{\sqrt{L^3}}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
-  \left(a_\mathbf{p} e^{-i p\cdot x }+a_\mathbf{p}^* e^{i p\cdot x }\right)
+  \left(a_\mathbf{p} \operatorname{e}^{-i p\cdot x }+a_\mathbf{p}^* \operatorname{e}^{i p\cdot x }\right)
 \end{align}
 Using eq.~\eqref{eq:24}, we can write the commutation relations~\eqref{eq:17} in the continuum as
 \begin{align}
@@ -767,7 +778,7 @@ Note that again $a_{\mathbf{p}}$ is dimensionless. It is customary to write the 
 Then
 \begin{align}
   \phi(t,\mathbf{x})=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
-  \left(a_\mathbf{p}' e^{-i p\cdot x }+{a_\mathbf{p}'}^* e^{i p\cdot x }\right)\,.
+  \left(a_\mathbf{p}' \operatorname{e}^{-i p\cdot x }+{a_\mathbf{p}'}^* \operatorname{e}^{i p\cdot x }\right)\,.
 \end{align}
 and the commutation relations in eq.~\eqref{eq:28} can be written as
 
@@ -797,7 +808,7 @@ $\phi$ to a hermitian operator means to promote $a_\mathbf{p}$ to an operator; t
 \begin{align}
   \label{eq:31}
   \widehat{\phi}(t,\mathbf{x})=\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}
-  \left(\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a\,}_\mathbf{p}^\dagger e^{i p\cdot x }\right)
+  \left(\widehat{a}_\mathbf{p} \operatorname{e}^{-i p\cdot x }+\widehat{a\,}_\mathbf{p}^\dagger \operatorname{e}^{i p\cdot x }\right)
 \end{align}
 with
 \begin{align}
@@ -814,53 +825,53 @@ by using eq.~\eqref{eq:11}
   \widehat{\Pi}(x)=&\frac{\partial}{\partial(\partial_0\widehat{\phi})}\left[\tfrac{1}{2}(\partial_0\widehat{\phi})^2\right]\nonumber\\
   =&\partial_0\widehat{\phi}\nonumber\\
   =&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_{\mathbf{p}} }}
-  \left(-i E_{\mathbf{p}}\widehat{a}_{\mathbf{p}} e^{-i p\cdot x }+iE_{\mathbf{p}}\widehat{a}_{\mathbf{p}}^\dagger e^{i p\cdot x }\right)\nonumber\\
+  \left(-i E_{\mathbf{p}}\widehat{a}_{\mathbf{p}} \operatorname{e}^{-i p\cdot x }+iE_{\mathbf{p}}\widehat{a}_{\mathbf{p}}^\dagger \operatorname{e}^{i p\cdot x }\right)\nonumber\\
   =&\int d^3p\,\frac{i}{(2\pi)^3}\sqrt{\frac{E_\mathbf{p}}{2}}
-  \left(-\widehat{a}_{\mathbf{p}} e^{-i p\cdot x }+\widehat{a}_{\mathbf{p}}^\dagger e^{i p\cdot x }\right)\nonumber\\
+  \left(-\widehat{a}_{\mathbf{p}} \operatorname{e}^{-i p\cdot x }+\widehat{a}_{\mathbf{p}}^\dagger \operatorname{e}^{i p\cdot x }\right)\nonumber\\
 \end{align}
 Using the expressions for $\widehat{\phi}$, and $\widehat{\Pi}$, in terms of $\widehat{a}_\mathbf{p}$, $\widehat{a}_\mathbf{p}^\dagger$, the commutation relation (\ref{eq:30}) reads 
 \begin{align}
 \left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}
-\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },
--\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }+\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]\nonumber\\
+\left[\widehat{a}_\mathbf{p} \operatorname{e}^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger \operatorname{e}^{i p\cdot x },
+-\widehat{a}_{\mathbf{p}'} \operatorname{e}^{-i p'\cdot y }+\widehat{a}_{\mathbf{p}'}^\dagger \operatorname{e}^{i p'\cdot y }\right]\nonumber\\
 =&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\nonumber\\
-&\left\{ \left[\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }\right]
-+\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]\right\}\nonumber\\
+&\left\{ \left[\widehat{a}_\mathbf{p} \operatorname{e}^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger \operatorname{e}^{i p\cdot x },-\widehat{a}_{\mathbf{p}'} \operatorname{e}^{-i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p} \operatorname{e}^{-i p\cdot x }+\widehat{a}_\mathbf{p}^\dagger \operatorname{e}^{i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger \operatorname{e}^{i p'\cdot y }\right]\right\}\nonumber\\
 =&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\left\{ 
-\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x },-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }\right]\right.\nonumber\\
+\left[\widehat{a}_\mathbf{p} \operatorname{e}^{-i p\cdot x },-\widehat{a}_{\mathbf{p}'} \operatorname{e}^{-i p'\cdot y }\right]\right.\nonumber\\
 &\left.
-+\left[\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },-\widehat{a}_{\mathbf{p}'} e^{-i p'\cdot y }\right]
-+\left[\widehat{a}_\mathbf{p} e^{-i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]
-+\left[\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger e^{i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p}^\dagger \operatorname{e}^{i p\cdot x },-\widehat{a}_{\mathbf{p}'} \operatorname{e}^{-i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p} \operatorname{e}^{-i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger \operatorname{e}^{i p'\cdot y }\right]
++\left[\widehat{a}_\mathbf{p}^\dagger \operatorname{e}^{i p\cdot x },\widehat{a}_{\mathbf{p}'}^\dagger \operatorname{e}^{i p'\cdot y }\right]
 \right\}\nonumber\\
 =&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\left\{ 
--e^{-i (p\cdot x+p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'} \right]\right.\nonumber\\
+-\operatorname{e}^{-i (p\cdot x+p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'} \right]\right.\nonumber\\
 &\left.
--e^{i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'} \right]
-+e^{-i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
-+e^{i (p\cdot x+ p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
+-\operatorname{e}^{i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'} \right]
++\operatorname{e}^{-i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
++\operatorname{e}^{i (p\cdot x+ p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
 \right\}\,.
 \end{align}
 Taking into account the eqs.~\eqref{eq:32f}, then
 \begin{align}
   \left[\widehat{\phi}(t,\mathbf{x}),\widehat{\Pi}(t,\mathbf{y})\right]=&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^6}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\left\{ 
-e^{-i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
--e^{i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'} \right]
+\operatorname{e}^{-i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p} ,\widehat{a}_{\mathbf{p}'}^\dagger \right]
+-\operatorname{e}^{i (p\cdot x- p'\cdot y) }\left[\widehat{a}_\mathbf{p}^\dagger ,\widehat{a}_{\mathbf{p}'} \right]
 \right\}\nonumber\\
 =&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\times\left[
-e^{-i (p\cdot x- p'\cdot y) }\delta^{(3)}(\mathbf{p}-\mathbf{p}')
-+e^{i (p\cdot x- p'\cdot y) }\delta^{(3)}(\mathbf{p}'-\mathbf{p}) 
+\operatorname{e}^{-i (p\cdot x- p'\cdot y) }\delta^{(3)}(\mathbf{p}-\mathbf{p}')
++\operatorname{e}^{i (p\cdot x- p'\cdot y) }\delta^{(3)}(\mathbf{p}'-\mathbf{p}) 
 \right]\nonumber\\
 =&
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\delta^{(3)}(\mathbf{p}-\mathbf{p}')\left[
-e^{-i (p\cdot x- p'\cdot y) }
-+e^{i (p\cdot x- p'\cdot y) }
+\operatorname{e}^{-i (p\cdot x- p'\cdot y) }
++\operatorname{e}^{i (p\cdot x- p'\cdot y) }
 \right]\,.
 \end{align}
 $\delta^{(3)}(\mathbf{p}-\mathbf{p}')$ forces $\mathbf{p}=\mathbf{p}'$, which also means $E_{\mathbf{p}}=E_{\mathbf{p}'}$, and since $x^0=y^0=t$, we have
@@ -869,24 +880,24 @@ $\delta^{(3)}(\mathbf{p}-\mathbf{p}')$ forces $\mathbf{p}=\mathbf{p}'$, which al
 \int d^3p\int d^3p'\,\frac{i}{2(2\pi)^3}\sqrt{\frac{E_{\mathbf{p}'}}{E_{\mathbf{p}}}}\delta^{(3)}(\mathbf{p}-\mathbf{p}')
 \times\nonumber\\
 &\left[
-e^{-i [t(E_{\mathbf{p}}-E_{\mathbf{p}'})-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}'\cdot \mathbf{y} ] }
-+e^{i[ t(E_{\mathbf{p}}-E_{\mathbf{p}'})-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}'\cdot \mathbf{y}] }
+\operatorname{e}^{-i [t(E_{\mathbf{p}}-E_{\mathbf{p}'})-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}'\cdot \mathbf{y} ] }
++\operatorname{e}^{i[ t(E_{\mathbf{p}}-E_{\mathbf{p}'})-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}'\cdot \mathbf{y}] }
 \right]\nonumber\\
 =&\int d^3p\,\frac{i}{2(2\pi)^3}
 \left[
-e^{-i (-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}\cdot \mathbf{y} ) }
-+e^{i(-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}\cdot \mathbf{y}) }
+\operatorname{e}^{-i (-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}\cdot \mathbf{y} ) }
++\operatorname{e}^{i(-\mathbf{p}\cdot \mathbf{x}+ \mathbf{p}\cdot \mathbf{y}) }
 \right]\nonumber\\
 =&\int d^3p\,\frac{i}{2(2\pi)^3}
 \left[
-e^{i \mathbf{p}\cdot( \mathbf{x}- \mathbf{y} ) }
-+e^{-i\mathbf{p}\cdot( \mathbf{x}-  \mathbf{y}) }
+\operatorname{e}^{i \mathbf{p}\cdot( \mathbf{x}- \mathbf{y} ) }
++\operatorname{e}^{-i\mathbf{p}\cdot( \mathbf{x}-  \mathbf{y}) }
 \right]\,.
 \end{align}
 Since
 \begin{align}
- & \delta^{(3)}(\mathbf{x}-\mathbf{y})=\int\frac{d^3p}{(2\pi)^3}e^{-i\mathbf{p}\cdot(\mathbf{x}-\mathbf{y})}\nonumber\\
-=&\delta^{(3)}(-\mathbf{x}+\mathbf{y})=\int\frac{d^3p}{(2\pi)^3}e^{-i\mathbf{p}\cdot(-\mathbf{x}+\mathbf{y})}=
+ & \delta^{(3)}(\mathbf{x}-\mathbf{y})=\int\frac{d^3p}{(2\pi)^3}\operatorname{e}^{-i\mathbf{p}\cdot(\mathbf{x}-\mathbf{y})}\nonumber\\
+=&\delta^{(3)}(-\mathbf{x}+\mathbf{y})=\int\frac{d^3p}{(2\pi)^3}\operatorname{e}^{-i\mathbf{p}\cdot(-\mathbf{x}+\mathbf{y})}=
 \int\frac{d^3p}{(2\pi)^3}e^{i\mathbf{p}\cdot(\mathbf{x}-\mathbf{y})}\,,
 \end{align}
 then
