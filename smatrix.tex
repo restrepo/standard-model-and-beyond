@@ -94,22 +94,24 @@ and we conclude that  $S S^\dagger=S^\dagger S =1$. The unitarity of the $S$--ma
 
 Consider a generic $S$--matrix element
 \begin{align}
-\langle\mathbf{p}_1\ldots\mathbf{p}_n|S|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
+\langle\mathbf{p}_1\ldots\mathbf{p}_m|S|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
 \end{align}
 For notational simplicity the states are just labeled by their momenta, but all our considerations can be generalized to the case in which the spin is taken into account. We have also defined the operator $T$ from $S=1+i T$. We assume that none of the initial momenta $\mathbf{p}_j$ coincides a final momentum $\mathbf{k}_i$. This eliminates processes in which one of the particles behaves as a ``spectator'' and does not interact with the other particles. In the language of Feynman diagrams to be explained later, this means that we will consider only connected diagrams. Therefore, if we restrict to the situation in which no initial and final momenta coincide, the matrix element of the identity operator between these states vanishes, and we need  actually to compute the matrix element of $i T$
 \begin{align}
-\langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
+\langle\mathbf{p}_1\ldots\mathbf{p}_m|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
 \end{align}
 In explicit calculations there will be an overall  Dirac delta factor imposing energy--momentum conservation. In order not to write explicitly the Dirac delta each time we compute a matrix element of $i T$, it is convenient to define a matrix element $M_{fi}$ from 
 the matrix element,
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \label{eq:41}
-  \langle\mathbf{p}_1\ldots\mathbf{p}_n|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
+  \langle\mathbf{p}_1\ldots\mathbf{p}_m|i T|\mathbf{k}_1\ldots\mathbf{k}_n\rangle
 =(2\pi)^4\delta^{(4)}\left(\sum_j p_j-\sum_j k_j\right)i {M}_{fi}\,.
 \end{align}
+\end{frame}
 The labels $i,f$ refer to the initial and final states. Explicitly
 \begin{align}
-  M_{fi}=M(\mathbf{p}_1,\ldots,\mathbf{p}_n;\mathbf{k}_1,\ldots,\mathbf{k}_n)\,.
+  M_{fi}=M(\mathbf{p}_1,\ldots,\mathbf{p}_m;\mathbf{k}_1,\ldots,\mathbf{k}_n)\,.
 \end{align}
 More generally, the initial and final states are labeled also by the spin states of the initial and final particles.
 
@@ -120,6 +122,7 @@ So, instead of $S$ or $T$, the quantity to be calculated is $M_{fi}$, but this n
 %
 \section{Relativistic and no relativistic normalizations}
 \label{sec:relat-no-relat}
+\begin{frame}[fragile,allowframebreaks]
 We first consider a system in a cubic box with spatial volume
 $V=L^3$. At the end of the computation $V$ will be sent to infinity.
 It is sometimes convenient to put the system into a box of size $L$,
@@ -189,25 +192,25 @@ and of course for a multiparticle state
 We denote by $M_{fi}$, defined in eq.~(\ref{eq:41}), the scattering amplitude between the initial state with
 momenta $\mathbf{p}_1,\ldots,\mathbf{p}_n$ and the final state with momenta $\mathbf{k}_1,\ldots,\mathbf{k}_n$, with non-relativistic normalization of the states, and by $\mathcal{M}_{fi}$ the same matrix element with relativistic normalization of the states. Then from  eq.~(\ref{eq:41})
 \begin{align}
-(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i \mathcal{M}_{fi}=&\langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{R}}\nonumber\\
+(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i \mathcal{M}_{fi}=&\langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{R}}\nonumber\\
 =&\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{1/2}
-\prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{1/2}\langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}\nonumber\\
+\prod_{j=1}^{m}\left(2E_{\mathbf{k}_j}V\right)^{1/2}\langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle^{\text{NR}}\nonumber\\
 =&\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{1/2}
-\prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{1/2}(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i {M}_{fi}
+\prod_{j=1}^{m}\left(2E_{\mathbf{k}_j}V\right)^{1/2}(2\pi)^4\delta^{(4)}\left(\sum_i p_i-\sum_i k_i\right)i {M}_{fi}
 \end{align}
 Therefore
 \begin{align}
 \label{eq:44}
   M_{fi}=\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{-1/2}
-\prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{-1/2}\mathcal{M}_{fi}
+\prod_{j=1}^{m}\left(2E_{\mathbf{k}_j}V\right)^{-1/2}\mathcal{M}_{fi}
 \end{align}
 
 the matrix element,
 \begin{align}
   \label{eq:RMfi}
-  \langle\mathbf{k}_1\ldots\mathbf{k}_n|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle
+  \langle\mathbf{k}_1\ldots\mathbf{k}_m|i T|\mathbf{p}_1\ldots\mathbf{p}_n\rangle
 =\prod_{i=1}^{n}\left(2E_{\mathbf{p}_i}V\right)^{-1/2}
-\prod_{j=1}^{n}\left(2E_{\mathbf{k}_j}V\right)^{-1/2}(2\pi)^4\delta^{(4)}\left(\sum_j p_j-\sum_j k_j\right)i \mathcal{M}_{fi}\,.
+\prod_{j=1}^{m}\left(2E_{\mathbf{k}_j}V\right)^{-1/2}(2\pi)^4\delta^{(4)}\left(\sum_j p_j-\sum_j k_j\right)i \mathcal{M}_{fi}\,.
 \end{align}
 
 
@@ -307,7 +310,7 @@ On the other hand the probability for a process with two initial particles colli
 \prod_{j=1}^n\frac{d^3k_j}{(2\pi)^32E_{\mathbf{k}_j}}
 \end{align}
 
-
+\end{frame}
 \section{Cross Section}
 \label{sec:cross-section}
 
@@ -600,7 +603,7 @@ The center of mass (CM) frame is defined by the condition
 
 The $\delta$--function in Eq.~\eqref{eq:cs101}
 \begin{align}
-\label{eq:56}
+\label{eq:56new}
   \delta^{(4)}(p+p_2-p_1'-p_2')=\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2-\mathbf{p}_1'-\mathbf{p}_2')
 \delta(E_1+E_2-E_1'-E_2')
 \end{align}
@@ -641,7 +644,7 @@ In this way, we can write, in general
 \end{align}
 and
 \begin{align}
-\label{eq:57}
+\label{eq:57new}
  4(2\pi)^6 d\Phi^{(2)}&=\delta(E_1+E_2-E_1'-E_2')
 \frac{|\mathbf{p}_1'|E_1'dE_1'}{E_{1}'E_{2}'}d\Omega\nonumber\\
   &=\delta(E_1+E_2-E_1'-E_2')
@@ -666,7 +669,7 @@ we have
 \label{eq:59}
   E_2'=\sqrt{{E_1'}^2-{m_1'}^2+{m_2'}^2}
 \end{align}
-In this way we can express $E_2'$ in terms of $E_1'$ in Eq.~\eqref{eq:57}.
+In this way we can express $E_2'$ in terms of $E_1'$ in Eq.~\eqref{eq:57new}.
 Moreover, we can define the center of mass energy as
 \begin{align}
 \label{eq:smv}
@@ -879,6 +882,7 @@ or, in terms of the kinematic function defined in eq.~\eqref{eq:46}
 
 \section{Decay Rates}
 \label{sec:decay-rates}
+\begin{frame}[fragile,allowframebreaks]
 Consider the matrix element of $i T$ in (\ref{eq:41})
 \begin{align}
   \label{eq:45}
@@ -949,7 +953,7 @@ where
 \end{align}
 The Dirac delta in eq.~\eqref{eq:50} can be written in the CM frame as
 \begin{align}
-\label{eq:153}
+\label{eq:153new}
   \delta^{(4)}(p-p_1-p_2)=&\delta^{(3)}(\mathbf{p}-\mathbf{p}_1-\mathbf{p}_2)\delta(E-E_1-E_2)\nonumber\\
 =&\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2)\delta(M-E_1-E_2)
 \end{align}
@@ -957,7 +961,7 @@ and,
 \begin{align}
    4(2\pi)^6d \Phi^{(2)} (p; p_1, p_2)=&\delta(M-E_1-E_2)\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2)\frac{d^3p_1}{E_{1}}\frac{d^3p_2}{E_{2}}
 \end{align}
-We now proceed  with a calculation similat to the one leading to eq.~\eqref{eq:149} \footnote{ we see that the two quantities are the same after the replacing $\sqrt{s}\to M$, $p_1'\to p_1$ and $p_2'\to p_2$.} 
+We now proceed  with a calculation similar to the one leading to eq.~\eqref{eq:149} \footnote{ we see that the two quantities are the same after the replacing $\sqrt{s}\to M$, $p_1'\to p_1$ and $p_2'\to p_2$.} 
 \begin{align}
 \label{eq:149nn}
   4(2\pi)^6d\Phi^{(2)}=&\delta^{(3)}(\mathbf{p}_1+\mathbf{p}_2)\delta(M-E_1-E_2)
@@ -993,7 +997,7 @@ and
   &=\delta(M-E_1-E_2)
 \frac{|\mathbf{p}_1|dE_1}{E_{2}}d\Omega
 \end{align}
-From the $\delta$--function in Eq.~\eqref{eq:56} we have that in the CM frame
+From the $\delta$--function in Eq.~\eqref{eq:56new} we have that in the CM frame
 \begin{align}
  \mathbf{p}_1-\mathbf{p}_2=0 \overset{\text{CM}}{\Rightarrow}
     \mathbf{p}_1=-\mathbf{p}_2
@@ -1011,9 +1015,9 @@ we have
 \begin{align}
   E_2=\sqrt{{E_1}^2-{m_1}^2+{m_2}^2}
 \end{align}
-In this way we can express $E_2$ in terms of $E_1$ in Eq.~\eqref{eq:57}.
+In this way we can express $E_2$ in terms of $E_1$ in Eq.~\eqref{eq:57new}.
 
-Using The energy part of $\delta$--function in Eq.~\eqref{eq:56} can be written as
+Using The energy part of $\delta$--function in Eq.~\eqref{eq:56new} can be written as
 \begin{align}
   \delta\left(M-E_1-\sqrt{{E_1}^2-{m_1}^2+{m_2}^2}\right)
 \end{align}
@@ -1123,6 +1127,7 @@ By using eq.~\eqref{eq:66nn} we can write this expression also as
 =&\frac{|\mathbf{p}_1|}{32 \pi^2M^2}\left|\mathcal{M}_{fi}\right|^2
 \end{align}
 as usually written in several texts.
+\end{frame}
 
 \subsection{Example}
 Energy violation of the neutron decay in the rest frame. In absence of neutrino we can calculate the energy of the final estate electron. From \eqref{eq:66nn} we have

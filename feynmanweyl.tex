@@ -56,7 +56,7 @@ Si $O^{\text{S}}$ in an operator in the SP, the corresponding Heisenberg operato
 \label{eq:87f}
   O^{\text{H}}(t)=U^\dagger O^{\text{S}}U
 \end{align}
-Hence, the transformation from HP to SP is unitary. At $t=t_i$, states and operators in the two pictures are the same. We see from Eq.~\eqref{eq:86f} that in the HP state vectors are constant in time, while from Eq.~\eqref{eq:87f} the Heisenberg operators evolve with time. Is convenient to keep the temporal label in the Heisenberg states
+Hence, the transformation from HP to SP is unitary. At $t=t_i$, states and operators in the two pictures are the same. We see from Eq.~\eqref{eq:86f} that in the HP state vectors are constant in time, while from Eq.~\eqref{eq:87f} the Heisenberg operators evolve with time. It is convenient to keep the temporal label in the Heisenberg states
 \begin{align}
   |a\rangle_H=|a,t_i\rangle_H
 \end{align}
@@ -85,16 +85,17 @@ gives the Heisenberg equation of motion
 \end{align}
 The interaction picture (IP) arises if the Hamiltonian is split into two parts
 \begin{align}
-  H=H_0+H_{\text{I}}\,.
+  H={\color{blue} H_{0}}+{\color{red} H_{\text{int}}}\,.
 \end{align}
-In quantum field theory $H_I$ will describe the interaction between two fields, themselves described by $H_0$
+In quantum field theory ${\color{red} H_{\text{int}}}$ will describe the interaction between fields\footnote{Corresponding to a Lagrange density with more than two fields}, themselves described by ${\color{blue} H_{0}}$
 
-IP is related to the SP by the unitary transformation
+IP is related to the SP by the unitary transformations
 \begin{align}
 \label{eq:88f}
-  U_i\equiv U_i(t,t_i)=e^{-i H_i(t-t_i)}\,,
+  U_{0}\equiv U_{0}(t,t_i)=e^{-i {\color{blue} H_0}(t-t_i)}\nonumber\\
+  U_{\text{int}}\equiv U_{\text{int}}(t,t_i)=e^{-i {\color{red} H_{\text{int}}}(t-t_i)}\,,
 \end{align}
-in this way,
+along with\footnote{Colors in the hamiltonians are dropped from here.},
 \begin{align}
 \label{eq:89f}
   |a,t\rangle_{\text{I}}=U_0^\dagger|a,t\rangle_{\text{S}}\,,
@@ -104,7 +105,7 @@ and
 \label{eq:90f}
   O^{\text{I}}(t)=U^\dagger_0 O^{\text{S}}U_0\,.
 \end{align}
-Thus the relation between IP and SP is similar to that between HP and SP, but with the unitary transformation $U_0$ involving only the non--interacting Hamiltonian $H_0$. Note that both the vector states as the operators in the IP are time-dependent.
+Therefore, the relation between IP and SP is similar to that between HP and SP, but with the unitary transformation $U_0$ involving only the non--interacting Hamiltonian $H_0$. Note that both the vector states as the operators in the IP are time-dependent.
 
 Differentiating Eq.~\eqref{eq:90f} gives the differential equation of motion operators in the IP:
 \begin{align}
@@ -116,28 +117,29 @@ Substituting Eq.~\eqref{eq:89f} into the Scr\"odinger Eq.~\eqref{eq:84f}, one ob
   i\frac{d}{dt}|a,t\rangle_{\text{S}}=&  H^{\text{S}}|a,t\rangle_{\text{S}}\nonumber\\
   i\frac{d}{dt}\left(U_0|\Phi(t)\rangle\right)=&  H^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
   i\left(\frac{d}{dt}U_0\right)|\Phi(t)\rangle+iU_0\frac{d}{dt}|\Phi(t)\rangle=&  H^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
-  U_0 H_0|\Phi(t)\rangle+iU_0\frac{d}{dt}|\Phi(t)\rangle=&  H^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
-  U_0 H_0|\Phi(t)\rangle+iU_0\frac{d}{dt}|\Phi(t)\rangle=&  (H_0+H_I^{\text{S}})U_0|\Phi(t)\rangle\nonumber\\
-  iU_0\frac{d}{dt}|\Phi(t)\rangle=&  H_I^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
-  i\frac{d}{dt}|\Phi(t)\rangle=& U_0 H_I^{\text{S}}U_0|\Phi(t)\rangle
+   H_0U_0|\Phi(t)\rangle+iU_0\frac{d}{dt}|\Phi(t)\rangle=&  H^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
+   H_0U_0|\Phi(t)\rangle+iU_0\frac{d}{dt}|\Phi(t)\rangle=&  (H_0+H_{\text{int}}^{\text{S}})U_0|\Phi(t)\rangle\nonumber\\
+\cancel{H_0U_0|\Phi(t)\rangle}+iU_0\frac{d}{dt}|\Phi(t)\rangle=& \cancel{H_0U_0|\Phi(t)\rangle}+H_{\text{int}}^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
+  iU_0\frac{d}{dt}|\Phi(t)\rangle=&  H_{\text{int}}^{\text{S}}U_0|\Phi(t)\rangle\nonumber\\
+  i\frac{d}{dt}|\Phi(t)\rangle=& U_0 H_{\text{int}}^{\text{S}}U_0|\Phi(t)\rangle
 \end{align}
 \begin{align}
 \label{eq:91f}
-  i\frac{d}{d t}|\Phi(t)\rangle_{\text{I}}=H^{\text{I}}_I\,|\Phi(t)\rangle_{\text{I}}\,,
+  i\frac{d}{d t}|\Phi(t)\rangle_{\text{I}}=H^{\text{I}}_{\text{int}}\,|\Phi(t)\rangle_{\text{I}}\,,
 \end{align}
 where, as in Eq.~\eqref{eq:90f}
 \begin{align}
   \label{eq:92f}
-  H^{\text{I}}_I=e^{i H_0^{{\text{S}}}(t-t_i)}H^{\text{S}}_I e^{-i H_0^{{\text{S}}}(t-t_i)}
+  H^{\text{I}}_{\text{int}}=e^{i H_0^{{\text{S}}}(t-t_i)}H^{\text{S}}_{\text{int}} e^{-i H_0^{{\text{S}}}(t-t_i)}
 \end{align}
-is the interaction Hamiltonian in the IP, with $H^{\text{S}}_I$ and $H^{\text{S}}_0$ being the interaction and free-field Hamiltonian in the SP. From now on we shall omit the labels I, used in the equations to distinguish the IP, as we shall be working exclusively in the IP in what follows.
+is the interaction Hamiltonian in the IP, with $H^{\text{S}}_{\text{int}}$ and $H^{\text{S}}_0$ being the interaction and free-field Hamiltonian in the SP. From now on we shall omit the labels I, used in the equations to distinguish the IP, as we shall be working exclusively in the IP in what follows.
 
-Eq. \eqref{eq:91f} is a Scr\"odinger-like equation with the time dependent Hamiltonian $H_I(t)$. With the interaction switched off (i.e.  we put $H_I=0$), the state vector is constant in time. The interaction leads to the state $|\Phi(t)\rangle$ changing with time. Given that the system is in a state  $|i\rangle$ at an initial time $t=t_i$, i.e.
+Eq. \eqref{eq:91f} is a Scr\"odinger-like equation with the time dependent Hamiltonian $H_{\text{int}}(t)$. With the interaction switched off (i.e.  we put $H_{\text{int}}=0$), the state vector is constant in time. The interaction leads to the state $|\Phi(t)\rangle$ changing with time. Given that the system is in a state  $|i\rangle$ at an initial time $t=t_i$, i.e.
 \begin{align}
 \label{eq:93f}
   |\Phi(t_i)\rangle=|i\rangle\,,
 \end{align}
-the solution of Eq.~\eqref{eq:91f} with this initial condition gives the state $|\Phi(t)\rangle$ of the system at any other time $t$. It follows from the Hermicity of the operator $H_I(t)$ that the time development of the state $|\Phi(t)\rangle$ according to Eq.~\eqref{eq:91f} is a unitary transformation. Accordingly it preserves the normalization of states
+the solution of Eq.~\eqref{eq:91f} with this initial condition, gives the state $|\Phi(t)\rangle$ of the system at any other time $t$. It follows from the Hermicity of the operator $H_{\text{int}}(t)$ that the time development of the state $|\Phi(t)\rangle$ according to Eq.~\eqref{eq:91f} is a unitary transformation. Accordingly it preserves the normalization of states
 \begin{align}
   \langle\Phi(t)|\Phi(t)\rangle=\text{const}.
 \end{align}
@@ -162,18 +164,19 @@ where $S_{f i}$ is the corresponding probability amplitude.
 
 In order to calculate the $S$--matrix we must solve Eq.~\eqref{eq:91f} for the initial condition \eqref{eq:93f}. These equations can be combined into the integral equation
 \begin{align}
- d |\Phi(t)\rangle=&-i d t\,H_I(t)|\Phi(t)\rangle\nonumber\\
-\int_{|\Phi(-\infty)\rangle}^{|\Phi(t)\rangle} d |\Phi(t)\rangle=&-i \int_\infty^t d t_1\,H_I(t_1)|\Phi(t_1)\rangle\nonumber\\
-|\Phi(t)\rangle-|\Phi(-\infty)\rangle=&-i \int_\infty^t d t_1\,H_I(t_1)|\Phi(t_1)\rangle\nonumber\\
+ d |\Phi(t)\rangle=&-i \operatorname{d}t\,H_{\text{int}}(t)|\Phi(t)\rangle\nonumber\\
+\int_{|\Phi(-\infty)\rangle}^{|\Phi(t)\rangle} d |\Phi(t)\rangle=&-i \int_\infty^t \operatorname{d}t_1\,H_{\text{int}}(t_1)|\Phi(t_1)\rangle\nonumber\\
+|\Phi(t)\rangle-|\Phi(-\infty)\rangle=&-i \int_\infty^t \operatorname{d}t_1\,H_{\text{int}}(t_1)|\Phi(t_1)\rangle\nonumber\\
 \end{align}
+\begin{frame}[fragile,allowframebreaks]
 
 \begin{align}
 \label{eq:94f}
-  |\Phi(t)\rangle=|i\rangle-i\int_{-\infty}^t d t_1\,H_I(t_1)|\Phi(t_1)\rangle\,.
+  |\Phi(t)\rangle=|i\rangle-i\int_{-\infty}^t \operatorname{d}t_1\,H_{\text{int}}(t_1)|\Phi(t_1)\rangle\,.
 \end{align}
 In the limit $t\to\infty$
 \begin{align}
-  |\Phi(\infty)\rangle=S^{(0)}|i\rangle-i\int_{-\infty}^\infty d t_1\,H_I(t_1)|\Phi(t_1)\rangle\,.
+  |\Phi(\infty)\rangle=S^{(0)}|i\rangle-i\int_{-\infty}^\infty \operatorname{d}t_1\,H_{\text{int}}(t_1)|\Phi(t_1)\rangle\,.
 \end{align}
 where 
 \begin{align}
@@ -181,51 +184,63 @@ where
 \end{align}
 From Eq.~\eqref{eq:94f} we can obtain $|\Phi(t_1)\rangle$ at next order:
 \begin{align}
-  |\Phi(t_1)\rangle=&|i\rangle-i\int_{-\infty}^{t_1} d t_2\,H_I(t_2)|\Phi(t_2)\rangle\,.
+  |\Phi(t_1)\rangle=&|i\rangle-i\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_2)|\Phi(t_2)\rangle\,.
 \end{align}
+\end{frame}
 
-
-This equation then can  be solved iteratively. If $H_I$ is small we can solve this equation by iteration
+\begin{frame}[fragile,allowframebreaks]
+This equation then can  be solved iteratively. If $H_{\text{int}}$ is small we can solve this equation by iteration
 \begin{align}
 \label{eq:95f}
-  |\Phi(t)\rangle=|i\rangle+(-i)\int_{-\infty}^t d t_1 H_I(t_1)|i\rangle+(-i)^2\int_{-\infty}^t d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)|\Phi(t_2)\rangle\,.
+  |\Phi(t)\rangle=|i\rangle+(-i)\int_{-\infty}^t \operatorname{d}t_1 H_{\text{int}}(t_1)|i\rangle+(-i)^2\int_{-\infty}^t \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_1)H_{\text{int}}(t_2)|\Phi(t_2)\rangle\,.
 \end{align}
 In the limit $t\to\infty$
 \begin{align}
-  |\Phi(t)\rangle=&\left[S^{(0)}+(-i)\int_{-\infty}^\infty d t_1 H_I(t_1)\right]|i\rangle+(-i)^2\int_{-\infty}^\infty d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)|\Phi(t_2)\rangle\nonumber\\
-  =&\left(S^{(0)}+S^{(1)}\right)|i\rangle+(-i)^2\int_{-\infty}^\infty d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)|\Phi(t_2)\rangle\,,
+  |\Phi(\infty)\rangle=&\left[S^{(0)}+(-i)\int_{-\infty}^\infty \operatorname{d}t_1 H_{\text{int}}(t_1)\right]|i\rangle+(-i)^2\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_1)H_{\text{int}}(t_2)|\Phi(t_2)\rangle\nonumber\\
+  =&\left(S^{(0)}+S^{(1)}\right)|i\rangle+(-i)^2\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_1)H_{\text{int}}(t_2)|\Phi(t_2)\rangle\,,
 \end{align}
 where 
 \begin{align}
   \label{eq:S1}
-  S^{(1)}=(-i)\int_{-\infty}^\infty d t_1 H_I(t_1)\,.
+  S^{(1)}=(-i)\int_{-\infty}^\infty \operatorname{d}t_1 H_{\text{int}}(t_1)\,.
 \end{align}
+
+For an infinity hipervolume we have
+\begin{align}
+  \label{eq:S1d4xc}
+  S^{(1)}=(-i)\int \operatorname{d}^4x\, \mathcal{H}_{\text{int}}(t_1)\,.
+\end{align}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
 The next order of Eq.~\eqref{eq:95f} is
 \begin{align}
-  |\Phi(t)\rangle=&|i\rangle+(-i)\int_{-\infty}^t d t_1 H_I(t_1)|i\rangle+(-i)^2\int_{-\infty}^t d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)\nonumber\\
-  &\times\left[|i\rangle+(-i)\int_{-\infty}^{t_2} d t_3 H_I(t_3)|i\rangle+(-i)^2\int_{-\infty}^{t_2} d t_3\int_{-\infty}^{t_3} d t_4\,H_I(t_3)H_I(t_4)|\Phi(t_4)\rangle\right]
+  |\Phi(t)\rangle=&|i\rangle+(-i)\int_{-\infty}^t \operatorname{d}t_1 H_{\text{int}}(t_1)|i\rangle+(-i)^2\int_{-\infty}^t \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_1)H_{\text{int}}(t_2)\nonumber\\
+  &\times\left[|i\rangle+(-i)\int_{-\infty}^{t_2} \operatorname{d}t_3 H_{\text{int}}(t_3)|i\rangle+(-i)^2\int_{-\infty}^{t_2} \operatorname{d}t_3\int_{-\infty}^{t_3} \operatorname{d}t_4\,H_{\text{int}}(t_3)H_{\text{int}}(t_4)|\Phi(t_4)\rangle\right]
 \end{align}
 \begin{align}
-  |\Phi(t)\rangle=&|i\rangle+(-i)\int_{-\infty}^t d t_1 H_1(t_1)|i\rangle+(-i)^2\int_{-\infty}^t d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)|i\rangle\nonumber\\
-  &+(-i)^3\int_{-\infty}^t d t_1\int_{-\infty}^{t_1} d t_2\int_{-\infty}^{t_2} d t_3\,H_I(t_1)H_I(t_2) H_1(t_3)|i\rangle\nonumber\\
-  &+(-i)^4\int_{-\infty}^t d t_1\int_{-\infty}^{t_1}d t_2 \int_{-\infty}^{t_2} d t_3\int_{-\infty}^{t_3}d t_4 \,H_I(t_1)H_I(t_2)\,H_I(t_3)H_I(t_4)|\Phi(t_4)\rangle
+  |\Phi(t)\rangle=&|i\rangle+(-i)\int_{-\infty}^t \operatorname{d}t_1 H_1(t_1)|i\rangle+(-i)^2\int_{-\infty}^t \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_1)H_{\text{int}}(t_2)|i\rangle\nonumber\\
+  &+(-i)^3\int_{-\infty}^t \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\int_{-\infty}^{t_2} \operatorname{d}t_3\,H_{\text{int}}(t_1)H_{\text{int}}(t_2) H_1(t_3)|i\rangle\nonumber\\
+  &+(-i)^4\int_{-\infty}^t \operatorname{d}t_1\int_{-\infty}^{t_1}\operatorname{d}t_2 \int_{-\infty}^{t_2} \operatorname{d}t_3\int_{-\infty}^{t_3}\operatorname{d}t_4 \,H_{\text{int}}(t_1)H_{\text{int}}(t_2)\,H_{\text{int}}(t_3)H_{\text{int}}(t_4)|\Phi(t_4)\rangle
 \end{align}
 In the limit $t\to\infty$
 \begin{align}
   |\Phi(t)\rangle=&\left(S^{(0)}+S^{(1)}+S^{(2)}+S^{(3)}\right)|i\rangle\nonumber\\
-  &+(-i)^4\int_{-\infty}^\infty d t_1\int_{-\infty}^{t_1}d t_2 \int_{-\infty}^{t_2} d t_3\int_{-\infty}^{t_3}d t_4 \,H_I(t_1)H_I(t_2)\,H_I(t_3)H_I(t_4)|\Phi(t_4)\rangle
+  &+(-i)^4\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1}\operatorname{d}t_2 \int_{-\infty}^{t_2} \operatorname{d}t_3\int_{-\infty}^{t_3}\operatorname{d}t_4 \,H_{\text{int}}(t_1)H_{\text{int}}(t_2)\,H_{\text{int}}(t_3)H_{\text{int}}(t_4)|\Phi(t_4)\rangle
 \end{align}
 where
 \begin{align}
-  S^{(2)}=&(-i)^2\int_{-\infty}^\infty d t_1\int_{-\infty}^{t_1} d t_2\,H_I(t_1)H_I(t_2)\nonumber\\
-  S^{(3)}=&(-i)^3\int_{-\infty}^\infty d t_1\int_{-\infty}^{t_1} d t_2\int_{-\infty}^{t_2} d t_3\,H_I(t_1)H_I(t_2) H_1(t_3)
+  S^{(2)}=&(-i)^2\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\,H_{\text{int}}(t_1)H_{\text{int}}(t_2)\nonumber\\
+  S^{(3)}=&(-i)^3\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1} \operatorname{d}t_2\int_{-\infty}^{t_2} \operatorname{d}t_3\,H_{\text{int}}(t_1)H_{\text{int}}(t_2) H_1(t_3)
 \end{align}
-
+\end{frame}
+\begin{frame}[fragile,allowframebreaks]
 and so on we obtain the $S$--matrix
 \begin{align}
   S=&\sum_{n=0}^\infty S^{(n)}\nonumber\\
-  =&1+\sum_{n=1}^\infty(-i)^n\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{t_1} d t_2\ldots\int_{-\infty}^{t_{n-1}}d t_n\,{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\,.
+  =&1+\sum_{n=1}^\infty(-i)^n\int_{-\infty}^{\infty}\operatorname{d}t_1\,\int_{-\infty}^{t_1} \operatorname{d}t_2\ldots\int_{-\infty}^{t_{n-1}}\operatorname{d}t_n\,{H}_{\text{int}}(t_1){H}_{\text{int}}(t_2)\ldots{H}_{\text{int}}(t_n)\,.
 \end{align}
+\end{frame}
 
 \section{Useful identities}
 The following identities can be used to simplify products of $\sigma$, $\overline{\sigma}$ matrices %eq. 2.48 pag. 10
@@ -256,105 +271,20 @@ We use the notation
   % \label{eq:yyd}
   \sum_s y_{\alpha}(\mathbf{p},s)y^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}}\,, &   \sum_s y^{\dagger \dot{\alpha}}(\mathbf{p},s) y^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta} 
 \end{align}
-
-\includegraphics[scale=0.45]{tmp12} 
-
-
-For the demonstration of the last identity we follow the steps in ~\cite{Dreiner:2008tw}. We start from the Euler-Lagrange equation for a left-spinor:
-
-\includegraphics[scale=0.45]{tmp01} 
-
-The proposed solution is:
-
-\includegraphics[scale=0.4]{tmp02} 
-
-From which we obtains 
-
 \begin{align}
-  \includegraphics[scale=0.45]{tmp03} 
+\sum_{s} x_{\alpha}({\boldsymbol{p}}, s) y^{\beta}({\boldsymbol{p}}, s)=&m \delta_{\alpha}^{\beta}, & \sum_{s} y_{\alpha}({\boldsymbol{p}}, s) x^{\beta}({\boldsymbol{p}}, s)=&-m \delta_{\alpha}^{\beta} \nonumber\\
+\sum_{s} y^{\dagger \dot{\alpha}}({\boldsymbol{p}}, s) \chi_{\dot{\beta}}^{\dagger}({\boldsymbol{p}}, s)=&m \delta^{\dot{\alpha}}_{\dot{\beta}}, & \sum_{s} x^{\dagger \dot{\alpha}}({\boldsymbol{p}}, s) y_{\dot{\beta}}^{\dagger}({\boldsymbol{p}}, s)=&-m \delta^{\dot{\alpha}}_{\dot{\beta}}
 \end{align}
 
-These results are applicable both to spin sums and helicity sums, and hold for both massive and massless spin-1/2 fermions
-
-This results can be combined as 
-
-\includegraphics[scale=0.45]{tmp04}
-
-The relevant basis of two-component spinors $\chi_s$ are eigenstates of $(1/2)\boldsymbol{\sigma}\cdot \boldsymbol{s}$
-
-\includegraphics[scale=0.45]{tmp08}  
-
-and therefore
-
-\includegraphics[scale=0.45]{tmp09}  
 
 
-%\includegraphics[scale=0.45]{tmp05}  
-
-In the following we need an explicit form for the internal Lorentz transformations
-
-\includegraphics[scale=0.45]{tmp06} 
-
-where:
-
-\includegraphics[scale=0.45]{tmp07} 
-
-After some calculations 
-
-\includegraphics[scale=0.45]{tmp10} 
-
-\includegraphics[scale=0.45]{tmp11} 
-
+For the demonstration of the last identity we follow the steps in~\cite{Dreiner:2008tw}. 
 
 \end{frame}
 
-One additional identity is the one relating the two-component spinor momentum space wave function to the four-component spinor wave functions
-
-\includegraphics[scale=0.45]{uvxy}
-
-\section{Mandelstam variables}
-
-We can generalize the defintion of $s$ in eq.\eqref{eq:smv} to the full
-Mandelstam variables \url{http://bolvan.ph.utexas.edu/~vadim/Classes/2011f/STU.pdf}, (See also \cite{Peskin})
-\begin{align}
-\label{eq:mvstu}
-  s=&\left( p_1+p_2 \right)^2=\left( p_1'+p_2' \right)^2 \nonumber\\
-  t=&\left( p_1-p_1' \right)^2=\left( p_2-p_2' \right)^2 \nonumber\\
-  u=&\left( p_1-p_2' \right)^2=\left( p_1'-p_2 \right)^2 \,.
-\end{align}
-The explicit form for $s$ is 
-\begin{align}
-  s=&\left( p_1+p_2 \right)^2 \nonumber\\
- =& p_1^2+p_2^2+2 p_1\cdot p_2 \nonumber\\
-=& m_1^2+m_2^2+2 p_1\cdot p_2\,,
-\end{align}
-from which the product $p_1\cdot p_2$ can be obtained.  By following similar steps for $t$ and $u$, we have
-\begin{align}
-\label{eq:stucs}
-  2 p_1\cdot p_2=&s- m_1^2-m_2^2 \nonumber\\
-  2 p_1'\cdot p_2'=&s- {m_1'}^2-{m_2'}^2 \nonumber\\
-  2 p_1\cdot p_1'=&m_1^2+{m_1'}^2 -t \nonumber\\
-  2 p_2\cdot p_2'=&m_2^2+{m_2'}^2 -t \nonumber\\
-  2 p_1\cdot p_2'=&m_1^2+{m_2'}^2 -u \nonumber\\
-  2 p_2\cdot p_1'=&m_2^2+{m_1'}^2 -u \,.
-\end{align}
-Moreover,
-\begin{align}
-  s+t+u=m_1^2+m_2^2+{m_1'}^2+{m_2'}^2\,.
-\end{align}
-
-In the non-relativistic limit
-\begin{align}
-  s&=m_1^2+m_2^2   +2 p_1\cdot p_2 \approx (m_1+m_2)^2  + m_1m_2 (\mathbf{v}_1-\mathbf{v}_2)>0\,, \nonumber\\
-  t&=m_1^2+{m_1'}^2-2 p_1\cdot p_1'\approx (m_1-m_1')^2 - m_1m_1' (\mathbf{v}_1-\mathbf{v}_1')>0\,,\nonumber\\
-  u&=m_1^2+{m_2'}^2-2 p_1\cdot p_2'\approx (m_1-m_2')^2 - m_1m_2'  (\mathbf{v}_1-\mathbf{v}_2')>0\,.
-\end{align}
-In the center of mass frame ($\boldsymbol{p}_1+\boldsymbol{p}_1=0$)
-\begin{align}
-  s=\left( E_1+\boldsymbol{p}_1+E_2+\boldsymbol{p}_2 \right)^2=\left( E_1+\boldsymbol{p}_1+E_2-\boldsymbol{p}_1 \right)^2=\left( E_1+E_2 \right)^2.
-\end{align} 
 
 \section{Dirac delta function}
+\begin{frame}[fragile,allowframebreaks]
 Consider the next identity, $i,j,l,m=1,2$, and where we will simplify the $\delta$-function by eliminating $q$ 
 \begin{align}
   \label{eq:deltaidf}
@@ -365,27 +295,36 @@ Consider the next identity, $i,j,l,m=1,2$, and where we will simplify the $\delt
   =&\delta^4(-p'_i+p_j-p'_l+p_m) \nonumber\\
   =&\delta^4(p_j+p_m-p'_i-p'_l).
 \end{align}
-
+\end{frame}
 
 \section{Yukawa interaction}
 \label{sec:feynman-diagrams}
+
+\begin{frame}[fragile,allowframebreaks]
 As a concrete example, we take a theory with a fermion field and scalar field, which interact via the Standard Model Yukawa interaction \cite{Lahiri:2005sm}. 
 \begin{align}
 \label{eq:lppp}
   \mathcal{L}_{\text{int}}=&-\frac{h}{\sqrt{2}}\phi\overline{\Psi}\Psi \nonumber\\
 &=-y \phi \left[\left( \psi_R \right)^{\dagger}\psi_L+\left(\psi_L \right)^{\dagger}\psi_R  \right].
 \end{align}
+\end{frame}
 Let the quantum of the field $\phi$ be denoted by $H$, since the particle is a Higgs. The quanta of the fermionic field $f$ will be called electrons. The mass of $H$ is $M$, and the mass of the electron by $m$. Suppose $M\gt 2m$,  so that kinematically it is possible to have the $H$ particle decay into an electron-positron pair. The process is denoted by
 \begin{align}
   H(k)\to e^-(p)+e^+(p')\,,
 \end{align}
 where $k$, $p$, $p'$ are the 4--momenta of the particles.
 
-For the interaction Hamiltonian we have
+\begin{frame}[fragile,allowframebreaks]
+For the interaction Hamiltonian, since it does not depend explicitly in time, we have
+\begin{align}
+  \mathcal{L}_{\text{int}}=  -\mathcal{H}_{\text{int}}\,.
+\end{align}
+
 \begin{align}
 \label{eq:hppp}
-  \mathcal{H}_I=\frac{h}{\sqrt{2}}:(\psi_R)^{\dagger}{\psi_L}\phi:
+  \mathcal{H}_{\text{int}}=\frac{h}{\sqrt{2}}:(\psi_R)^{\dagger}{\psi_L}\phi:
 \end{align}
+
 where the required ordered product will be explained in next section.
 The term linear in the interaction Hamiltonian in the $S$--matrix.  It is
 \begin{align}
@@ -396,7 +335,7 @@ The term linear in the interaction Hamiltonian in the $S$--matrix.  It is
   S^{(1)}=-i \frac{h}{\sqrt{2}} \int d^4x:[(\psi_R)^{\dagger}_++(\psi_R)^{\dagger}_-]({\psi_L}_++{\psi_L}_-)(\phi_++\phi_-):\,.
 \end{align}
 where $+$ or $-$ denote the annihilation or creation operators respectively
-
+\end{frame}
 \begin{align}
  \phi_{+} | n_{\phi} \rangle  \propto& |n-1_{\phi}\rangle & \langle n_{\phi}|\phi_{+} \propto& \langle n+1_{\phi}|
 \end{align}
@@ -409,11 +348,11 @@ and
 
 with similar expressions for fermion or vector fields.
 
-
+\begin{frame}[fragile,allowframebreaks]
 Expanding the ordered product in the interaction Hamiltonian-densyty in eq.~\eqref{eq:hppp} in terms of the  $+$ and $-$ components of the several scalar and fermions fields, we have
 \begin{align}
 \label{eq:fullhppp}
- \mathcal{H}_{int}=&h:\left( (\psi_R)^{\dagger}_{+}+(\psi_R)^{\dagger}_{-}\right) \left( {\psi_L}_{+}+{\psi_L}_{-}\right) \left( \phi_{+}+\phi_{-}\right):\nonumber\\
+ \mathcal{H}_{ \text{int}}=&h:\left( (\psi_R)^{\dagger}_{+}+(\psi_R)^{\dagger}_{-}\right) \left( {\psi_L}_{+}+{\psi_L}_{-}\right) \left( \phi_{+}+\phi_{-}\right):\nonumber\\
 =&h:
 (\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{+}+ 
 (\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{-}+ 
@@ -429,6 +368,7 @@ The ordered product refers to the different from zero terms when the interaction
 \begin{align}
   |i\rangle=&|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle & \text{and,} && \langle f|=&\langle 1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_\phi|
 \end{align}
+\end{frame}
 Evaluating the expectation values for each term in eq.~\eqref{eq:fullhppp} for these initial and final states, we have
 \begin{align*}
  \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{+}{\psi_L}_{+}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle2_{(\psi_R)^{\dagger}},2_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle =0\\ 
@@ -440,8 +380,12 @@ Evaluating the expectation values for each term in eq.~\eqref{eq:fullhppp} for t
  \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle \neq 0\\
  \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{-}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},2_{\phi}\rangle =0
 \end{align*}
-In this way, we have
-
+\begin{frame}[fragile,allowframebreaks]
+In this way, we filter
+\begin{align}
+  \langle1_{(\psi_R)^{\dagger}},1_{{\psi_L}},0_{\phi}|(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{+}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},1_{\phi}\rangle  &\propto  \langle0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}|0_{(\psi_R)^{\dagger}},0_{{\psi_L}},0_{\phi}\rangle =1\,.
+\end{align}
+which is consistent with the definition
 \begin{align}
 :(\psi_R)^{\dagger}{\psi_L}\phi: =&(\psi_R)^{\dagger}_{-}{\psi_L}_{-}\phi_{+}\,.
 \end{align}
@@ -471,22 +415,13 @@ Let us define the one--particle states as in eq.~\eqref{eq:38f}
 \begin{align}
   | H(\mathbf{p})\rangle\equiv\sqrt{\frac{1}{V}}a^\dagger_{\mathbf{p}}|0\rangle 
 \end{align}
-For the two Weyl spinors forming a Dirac spinor we have the solutions
+For the two Weyl spinors forming a Dirac spinor we have the solutions in eq.~\eqref{eq:fourweyl}, from here we can define the one--particle states were defined as in eq.~\eqref{eq:77f}
 \begin{align}
- e_L\to \xi_{\alpha}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x_{\alpha}\left(s,\mathbf{p}\right) a_s e^{-i p\cdot x}+y_{\alpha}\left(s,\mathbf{p}\right) b_s^{\dagger} e^{i p\cdot x}  \right]\nonumber\\
- \left( e_L \right)^{\dagger}\to \xi_{\dot{\alpha}}^{\dagger}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ y_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right) b_s e^{-i p\cdot x}+x_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right) a_s^{\dagger} e^{i p\cdot x}  \right]\nonumber\\
- \left( e_R \right)^{\dagger}\to \eta^{\alpha}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x^{\alpha}\left(s,\mathbf{p}\right) b_s e^{-i p\cdot x}+y^{\alpha}\left(s,\mathbf{p}\right) a_s^{\dagger} e^{i p\cdot x}  \right] \nonumber\\
-  e_R\to \eta^{\dagger\dot{\alpha}}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ y^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right) a_s e^{-i p\cdot x}+x^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right) b_s^{\dagger} e^{i p\cdot x}  \right].
+   | e_L(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}x_{\alpha}\left(s,\mathbf{p}\right) a^\dagger_s(\mathbf{p})|0\rangle, &    | e_R(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}y^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right)a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
+   | \left( e_L \right)^{\dagger}(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}y_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right){b}^\dagger_s(\mathbf{p})|0\rangle,&
+   | \left( e_R \right)^{\dagger}(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}x^{\alpha}\left(s,\mathbf{p}\right){b}^\dagger_s(\mathbf{p})|0\rangle\,.
 \end{align}
 
-
-From here we can define the one--particle states as
-\begin{align}
-  \label{eq:77f}
-   | e_L(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle, &    | e_R(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
-   | \left( e_L \right)^{\dagger}(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle,&
-   | \left( e_R \right)^{\dagger}(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,, 
-\end{align}
 Using the commutation relations, our states are then normalized as
 \begin{align}
 \langle H(\mathbf{p})| H(\mathbf{p}')\rangle=&\frac{(2\pi)^3}{V}\delta^3(\mathbf{p}-\mathbf{p}')\nonumber\\
@@ -587,7 +522,7 @@ For our specific problem, the final state masses of electron and positron is the
 
 The missing part is to calculate the square of the amplitude
 \begin{align}
-  \left| \mathcal{M} \right|^2=&\mathcal{M}^{\dagger}M= \nonumber\\
+  \left| \mathcal{M} \right|^2=&\mathcal{M}^{\dagger}\mathcal{M}= \nonumber\\
 =&\frac{h^{2}}{2}\sum_{s,s'}
  \left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') \right]^{\dagger}
 \left[ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')+y^{\beta}(s,\boldsymbol{p})y_{\beta}(s',\boldsymbol{p}') \right] \nonumber\\
@@ -640,17 +575,31 @@ Therefore
    \left| \mathcal{M} \right|^2=4 \frac{h^{2}}{2} \left( p\cdot p' - mm' \right)
 \end{align}
 
-From eq.~\eqref{eq:153}
+From the conservation of the momentum-energy in the center of mass frame
+\begin{align}
+  k^{\mu}=&\left(M,\boldsymbol{0}\right) \nonumber\\
+  p^{\mu}=&\left(E,\boldsymbol{p}\right) \nonumber\\
+  {p'}^{\mu}=&\left(E',\boldsymbol{p}'\right) \,,
+\end{align}
+as assummed in \eqref{eq:154pdn}, we have
+\begin{align}
+  k^{\mu}=p^{\mu}+{p'}^{\mu},,
+\end{align}
+which implies for each component that
 \begin{align}
   M=&E+{E'}\nonumber\\
-|\mathbf{p}|&=|\mathbf{p}'|
+|\mathbf{p}|&=|\mathbf{p}'|.
+\end{align}
+From the first equation
+\begin{align}
+  M^2=E^2+{E'}^2+2EE'\,.
 \end{align}
 Therefore
 \begin{align}
   E{E'}=\frac{M^2-E^2-{E'}^2}{2}
 \end{align}
 \begin{align*}
-  p\cdot p'-m {m'}&=EE'-\mathbf{p}_{1}\cdot\mathbf{p}_{2}-m {m'}\\
+  p\cdot p'-m {m'}&=EE'-\mathbf{p}\cdot\mathbf{p}'-m {m'}\\
 &=EE'+\mathbf{p}^2-m {m'}\\
 &=\frac{M^2-E^2-{E'}^2}{2}+\mathbf{p}^2-m {m'}\nonumber\\
 &=\frac12\left(M^2-m^2-\mathbf{p}^2-{m'}^2-\mathbf{p}^2\right)+\mathbf{p}^2-m {m'}\\
@@ -708,7 +657,7 @@ For the tau\footnote{to the top quarks is kinematically forbidden, to the bottom
 \begin{align}
   \Gamma(H\to \tau^+\tau^-)=0.26\ \text{MeV}\to \tau= \frac{\hbar}{\Gamma}=2.53\times 10^{-21}\ \text{seconds}\,.
 \end{align}
-
+\end{frame}
 
 
 
@@ -756,11 +705,11 @@ Return back to  the interpretation of interaction in terms of one exchanged part
 
 From \cite{Lahiri:2005sm}. The normal ordering procedure involved putting all the annihilation operators to the right of all creation operators so that it annihilates the vacuum. But the time ordering raises complications because in it all operators at earlier times must be further to the right. So creation operators at later times would be to the right of annihilation operators at later times, contrary to what we need for normal ordering. The advantage of normal ordered products is that their expectation values vanish in the vacuum. 
 
-If $H_I$ contains an even number of fermion factors, we can use the time--ordered product $\operatorname{T}\{\ldots\}$ of $n$ factors to write this expression in the equivalent form. For $S^{(2)}$ we have for example
+If $H_{\text{int}}$ contains an even number of fermion factors, we can use the time--ordered product $\operatorname{T}\{\ldots\}$ of $n$ factors to write this expression in the equivalent form. For $S^{(2)}$ we have for example
 \begin{align}
- \int_{-\infty}^\infty dt_1 \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_1)H_I(t_2)\}=&
-\int_{-\infty}^\infty dt_1\int_{-\infty}^{\infty}d t_2 \theta(t_2-t_1)H_I(t_2)H_I(t_1) \nonumber\\
-&+\int_{-\infty}^\infty dt_1\int_{-\infty}^{\infty}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2)
+ \int_{-\infty}^\infty \operatorname{d}t_1 \int_{-\infty}^{\infty}\operatorname{d}t_2 \operatorname{T}\{H_{\text{int}}(t_1)H_{\text{int}}(t_2)\}=&
+\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{\infty}\operatorname{d}t_2 \theta(t_2-t_1)H_{\text{int}}(t_2)H_{\text{int}}(t_1) \nonumber\\
+&+\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{\infty}\operatorname{d}t_2 \theta(t_1-t_2)H_{\text{int}}(t_1)H_{\text{int}}(t_2)
  \end{align}
 where, for $t_2$ and $t_1$ fixed respectively
  \begin{align}
@@ -776,36 +725,36 @@ where, for $t_2$ and $t_1$ fixed respectively
  \end{align}
 In this way.
 \begin{align}
- \int_{-\infty}^\infty dt_1 \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_1)H_I(t_2)\}=&
-\int_{-\infty}^\infty dt_2\int_{-\infty}^{t_2}d t_1 \theta(t_2-t_1)H_I(t_2)H_I(t_1)\nonumber\\
-&+\cancel{\int_{-\infty}^\infty dt_2\int_{t_2}^{t_1}d t_1 \theta(t_2-t_1)H_I(t_2)H_I(t_1)} \nonumber\\
-&+\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_{1}}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2) \nonumber\\
-&+\cancel{\int_{-\infty}^\infty dt_1\int_{t_1}^{t_2}d t_2 \theta(t_1-t_2)H_I(t_1)H_I(t_2)}\,.
+ \int_{-\infty}^\infty \operatorname{d}t_1 \int_{-\infty}^{\infty}\operatorname{d}t_2 \operatorname{T}\{H_{\text{int}}(t_1)H_{\text{int}}(t_2)\}=&
+\int_{-\infty}^\infty \operatorname{d}t_2\int_{-\infty}^{t_2}\operatorname{d}t_1 \theta(t_2-t_1)H_{\text{int}}(t_2)H_{\text{int}}(t_1)\nonumber\\
+&+\cancel{\int_{-\infty}^\infty \operatorname{d}t_2\int_{t_2}^{t_1}\operatorname{d}t_1 \theta(t_2-t_1)H_{\text{int}}(t_2)H_{\text{int}}(t_1)} \nonumber\\
+&+\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_{1}}\operatorname{d}t_2 \theta(t_1-t_2)H_{\text{int}}(t_1)H_{\text{int}}(t_2) \nonumber\\
+&+\cancel{\int_{-\infty}^\infty \operatorname{d}t_1\int_{t_1}^{t_2}\operatorname{d}t_2 \theta(t_1-t_2)H_{\text{int}}(t_1)H_{\text{int}}(t_2)}\,.
 \end{align}
-The integral in $dt_1$ is for $t_1>t_2$, with $t_2$ fixed, so that $\theta(t_2-t_1)=0$ for $t_1>t_2$. Similarly,
-The integral in $dt_2$ is for $t_2>t_1$, with $t_1$ fixed, so that $\theta(t_1-t_2)=0$ for $t_2>t_1$. Therefore,
+The integral in $\operatorname{d}t_1$ is for $t_1>t_2$, with $t_2$ fixed, so that $\theta(t_2-t_1)=0$ for $t_1>t_2$. Similarly,
+The integral in $\operatorname{d}t_2$ is for $t_2>t_1$, with $t_1$ fixed, so that $\theta(t_1-t_2)=0$ for $t_2>t_1$. Therefore,
 \begin{align}
-   \int_{-\infty}^\infty dt_1 \int_{-\infty}^{\infty}d t_2 \operatorname{T}\{H_I(t_1)H_I(t_2)\}=&
-\int_{-\infty}^\infty dt_2\int_{-\infty}^{t_2}d t_1 H_I(t_2)H_I(t_1)
-+\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_{1}}d t_2 H_I(t_1)H_I(t_2)\nonumber\\
+   \int_{-\infty}^\infty \operatorname{d}t_1 \int_{-\infty}^{\infty}\operatorname{d}t_2 \operatorname{T}\{H_{\text{int}}(t_1)H_{\text{int}}(t_2)\}=&
+\int_{-\infty}^\infty \operatorname{d}t_2\int_{-\infty}^{t_2}\operatorname{d}t_1 H_{\text{int}}(t_2)H_{\text{int}}(t_1)
++\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_{1}}\operatorname{d}t_2 H_{\text{int}}(t_1)H_{\text{int}}(t_2)\nonumber\\
 =&
-\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_1}d t_2 H_I(t_1)H_I(t_2)
-+\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_{1}}d t_2 H_I(t_1)H_I(t_2) \nonumber\\
+\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1}\operatorname{d}t_2 H_{\text{int}}(t_1)H_{\text{int}}(t_2)
++\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_{1}}\operatorname{d}t_2 H_{\text{int}}(t_1)H_{\text{int}}(t_2) \nonumber\\
 =&
-2\int_{-\infty}^\infty dt_1\int_{-\infty}^{t_1}d t_2 H_I(t_1)H_I(t_2)\,.
+2\int_{-\infty}^\infty \operatorname{d}t_1\int_{-\infty}^{t_1}\operatorname{d}t_2 H_{\text{int}}(t_1)H_{\text{int}}(t_2)\,.
 \end{align}
 In terms of the ordering operator all the integrals are between $-\infty$ to $\infty$:
 \begin{align}
-   S=&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}d t_1\,\int_{-\infty}^{\infty} d t_2\ldots\int_{-\infty}^{\infty}d t_n\,\operatorname{T}\{{H}_I(t_1){H}_I(t_2)\ldots{H}_I(t_n)\}\,, 
+   S=&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int_{-\infty}^{\infty}\operatorname{d}t_1\,\int_{-\infty}^{\infty} \operatorname{d}t_2\ldots\int_{-\infty}^{\infty}\operatorname{d}t_n\,\operatorname{T}\{{H}_{\text{int}}(t_1){H}_{\text{int}}(t_2)\ldots{H}_{\text{int}}(t_n)\}\,, 
 \end{align}
 In terms of the Hamiltonian density, we have
 \begin{align}
-  S=1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,, 
+  S=1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_{\text{int}}(x_1)\mathcal{H}_{\text{int}}(x_2)\ldots\mathcal{H}_{\text{int}}(x_n)\}\,, 
 \end{align}
 In the above perturbation formalism the states $|i\rangle$ and $|f\rangle$ are, as usual, eigenstates of the unperturbed free-field Hamiltonian $H_0$. As such can be introduced inside the integrals
 \begin{align}
   S_{f i}=&\langle f|S|i\rangle\nonumber\\
-  =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\langle f|\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}|i\rangle\,.
+  =&1+\sum_{n=1}^\infty\frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\langle f|\operatorname{T}\{\mathcal{H}_{\text{int}}(x_1)\mathcal{H}_{\text{int}}(x_2)\ldots\mathcal{H}_{\text{int}}(x_n)\}|i\rangle\,.
 \end{align}
 
 
@@ -813,8 +762,8 @@ For example, at first order
 \begin{align}
   \label{eq:96f}
   S_{fi}^{(1)}=&\langle f|S^{(1)}|i\rangle\nonumber\\
-  =&\langle f|-i\int d^4x_1\,\operatorname{T}\{\mathcal{H}_I(x_1)\}|i\rangle\nonumber\\
-  =&-i\int d^4x_1\,\langle f|:\mathcal{H}_I(x_1):|i\rangle\,.
+  =&\langle f|-i\int d^4x_1\,\operatorname{T}\{\mathcal{H}_{\text{int}}(x_1)\}|i\rangle\nonumber\\
+  =&-i\int d^4x_1\,\langle f|:\mathcal{H}_{\text{int}}(x_1):|i\rangle\,.
 \end{align}
 In order to evaluate this integrals we need to write the time ordered product in terms of the fields. This can done by induction. We start by considering the simple no trivial case with two scalar fields
 %ver cuaderno de perrito
@@ -910,11 +859,54 @@ The same expression can be obtained for fermions.
 For details of the full result see for example \cite{Lahiri:2005sm}.
 
 
+\section{Mandelstam variables}
+
+We can generalize the definition of $s$ in eq.\eqref{eq:smv} to the full
+Mandelstam variables \url{http://bolvan.ph.utexas.edu/~vadim/Classes/2011f/STU.pdf}, (See also \cite{Peskin})
+\begin{align}
+\label{eq:mvstu}
+  s=&\left( p_1+p_2 \right)^2=\left( p_1'+p_2' \right)^2 \nonumber\\
+  t=&\left( p_1-p_1' \right)^2=\left( p_2-p_2' \right)^2 \nonumber\\
+  u=&\left( p_1-p_2' \right)^2=\left( p_1'-p_2 \right)^2 \,.
+\end{align}
+The explicit form for $s$ is 
+\begin{align}
+  s=&\left( p_1+p_2 \right)^2 \nonumber\\
+ =& p_1^2+p_2^2+2 p_1\cdot p_2 \nonumber\\
+=& m_1^2+m_2^2+2 p_1\cdot p_2\,,
+\end{align}
+from which the product $p_1\cdot p_2$ can be obtained.  By following similar steps for $t$ and $u$, we have
+\begin{align}
+\label{eq:stucs}
+  2 p_1\cdot p_2=&s- m_1^2-m_2^2 \nonumber\\
+  2 p_1'\cdot p_2'=&s- {m_1'}^2-{m_2'}^2 \nonumber\\
+  2 p_1\cdot p_1'=&m_1^2+{m_1'}^2 -t \nonumber\\
+  2 p_2\cdot p_2'=&m_2^2+{m_2'}^2 -t \nonumber\\
+  2 p_1\cdot p_2'=&m_1^2+{m_2'}^2 -u \nonumber\\
+  2 p_2\cdot p_1'=&m_2^2+{m_1'}^2 -u \,.
+\end{align}
+Moreover,
+\begin{align}
+  s+t+u=m_1^2+m_2^2+{m_1'}^2+{m_2'}^2\,.
+\end{align}
+
+In the non-relativistic limit
+\begin{align}
+  s&=m_1^2+m_2^2   +2 p_1\cdot p_2 \approx (m_1+m_2)^2  + m_1m_2 (\mathbf{v}_1-\mathbf{v}_2)>0\,, \nonumber\\
+  t&=m_1^2+{m_1'}^2-2 p_1\cdot p_1'\approx (m_1-m_1')^2 - m_1m_1' (\mathbf{v}_1-\mathbf{v}_1')>0\,,\nonumber\\
+  u&=m_1^2+{m_2'}^2-2 p_1\cdot p_2'\approx (m_1-m_2')^2 - m_1m_2'  (\mathbf{v}_1-\mathbf{v}_2')>0\,.
+\end{align}
+In the center of mass frame ($\boldsymbol{p}_1+\boldsymbol{p}_1=0$)
+\begin{align}
+  s=\left( E_1+\boldsymbol{p}_1+E_2+\boldsymbol{p}_2 \right)^2=\left( E_1+\boldsymbol{p}_1+E_2-\boldsymbol{p}_1 \right)^2=\left( E_1+E_2 \right)^2.
+\end{align} 
+
+
 \section{Scattering}
 \label{sec:scattering}
 From the previous calculation we have
 \begin{align}
-S^{(n)}=  \frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\ldots\mathcal{H}_I(x_n)\}\,.
+S^{(n)}=  \frac{(-i)^n}{n!}\int\cdots\int d^4x_1 d^4x_2\ldots d^4x_n\,\operatorname{T}\{\mathcal{H}_{\text{int}}(x_1)\mathcal{H}_{\text{int}}(x_2)\ldots\mathcal{H}_{\text{int}}(x_n)\}\,.
 \end{align}
 
 \subsection{Higgs mediated scattering}
@@ -935,7 +927,7 @@ with Yukawa Lagrangian
 \end{align}
 We will make the calculation for any Standard Model fermion, but keep the notation just for the electron with mass $m_1$. To keep the calculation in general, we left open the possibility that the second vertex involves a different fermion of mass $m_2$. The Feynman diagrams for the electronic case is displayed in figure~\ref{fig:sct}. Therefore
 \begin{align}
-S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I(x_1)\mathcal{H}_I(x_2)\}\nonumber\\
+S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_{\text{int}}(x_1)\mathcal{H}_{\text{int}}(x_2)\}\nonumber\\
 =&  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}\}\nonumber\\
 =& 
  \frac{(-iy)^2}{2!}\int\int d^4x_1 d^4x_2\,:\left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h^0 \right)_{x_2}:+
@@ -1816,13 +1808,13 @@ We need the interaction of a singlet scalar with the standard model Higgs, $h(x)
 
 hence
 \begin{align}
-  \mathcal{H}_I^{S}=&-\lambda v S^2(x) h(x)\,, &
-   \mathcal{H}_I^{q}=&-y \eta^{\alpha} (x)\xi_{\alpha}(x)h(x)\,,
+  \mathcal{H}_{\text{int}}^{S}=&-\lambda v S^2(x) h(x)\,, &
+   \mathcal{H}_{\text{int}}^{q}=&-y \eta^{\alpha} (x)\xi_{\alpha}(x)h(x)\,,
 \end{align}
 
 The $S$-matrix expansion includes
 \begin{align}
-S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_I^S(x_1)\mathcal{H}_I^q(x_2)\}\nonumber\\
+S^{(2)}=&  \frac{(-i)^2}{2!}\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\mathcal{H}_{\text{int}}^S(x_1)\mathcal{H}_{\text{int}}^q(x_2)\}\nonumber\\
 =&  \frac{(-i)^2}{2!}\lambda y v\int\int d^4x_1 d^4x_2\,\operatorname{T}\{\left(S S h \right)_{x_1} \left( \eta^{\alpha} \xi_{\alpha}h \right)_{x_2}\}\nonumber\\
 =& 
  \frac{(-i)^2}{2!}\lambda y v\int\int d^4x_1 d^4x_2\,:( S

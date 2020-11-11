@@ -927,7 +927,7 @@ The analogy between the simple harmonic oscillator and the field is now complete
 
 \section{Fock space}
 
-\begin{frame}[fragile,allowframebreaks]
+
 Given the Hilbert space of single-particles $\mathcal{H}$, to construct the space of states of variable particle number, consider the collection of all possible spaces of $n$ identical particles for either bosons ($\nu=1$ or fermions $\nu=-1$, $\mathcal{H}^n_{\nu}$. In particular the one-dimensional $\mathcal{H}^0$ space is defined by
 \begin{align}
   \mathcal{H}^0=\left\{ \lambda|0\rangle;\lambda\in \mathbb{C} \right\}
@@ -942,7 +942,7 @@ A state in which the number of particles is not fixed, e.g $n\to\infty$, is give
 with properties
 \begin{align}
   |\Phi\rangle+|\Psi\rangle=&\left\{ |\Phi(n)\rangle+|\Psi(n)\rangle \right\}_n \nonumber\\
-\lambda  |\Phi\rangle=& \left\{\lambda |\Phi(n)\rangle \right\}_n \nonumber\\
+%\lambda  |\Phi\rangle=& \left\{\lambda |\Phi(n)\rangle \right\}_n \nonumber\\
 \langle\Phi|\Psi\rangle=&\sum_{n=0}^{\infty}\langle\Phi(n)|\Psi(n)\rangle\,.
 \end{align}
 
@@ -958,8 +958,10 @@ The operator  $\widehat{A}$ acting on Fock space is defined by
   \widehat{A}|\Phi\rangle=\sum_{n=0}^{\infty} \widehat{A}(n)|\Phi(n)\rangle\,.
 \end{align}
 
+
 %from https://physics.stackexchange.com/questions/296391/meaning-of-fock-space/296429
 Suppose you have a system described by a Hilbert space $H$, for example a single particle. The Hilbert space of two non-interacting particles associated to the same field $\phi$ as that described by $H$ is simply the tensor (aka direct) product
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   H^2 = H \otimes H
 \end{align}
@@ -974,11 +976,12 @@ In QFT there are operators that intertwine the different $H^m$, that is, create 
   \Gamma(H):=C\oplus H\oplus H^2\oplus\cdots\oplus H^N\oplus\cdots
 \end{align}
 known as the Fock Hilbert space of $H$.
+\end{frame}
 
-From a physical point of view, the general definition above of Fock space is immaterial. Identical particles are known to observe a definite (para)statistics that will reduce the actual Hilbert space (by symmetrisation/antisymmetrisation for the bosonic/fermionic case etc...).
+From a physical point of view, the general definition above of Fock space is immaterial. Identical particles are known to observe a definite (para) statistics that will reduce the actual Hilbert space (by symmetrization/antisymmetrization for the bosonic/fermionic case etc...).
 
-
-In eq.~\eqref{eq:sp} we write out the $i^{\text{th}}$ bosonic state occupied by $m_{i}$ particles. Written as a Focj state we have
+\begin{frame}[fragile,allowframebreaks]
+In eq.~\eqref{eq:sp} we write out the $i^{\text{th}}$ bosonic state occupied by $m_{i}$ particles. Written as a Fock state we have
 \begin{align}
 \frac{1}{\sqrt{m!}} \left(\widehat{a\,}_{i}^\dagger\right)^m |\ldots,0_i,\ldots\rangle
 =&|\ldots,m_i,\ldots\rangle\,.
@@ -988,7 +991,7 @@ The complete Fock space for a system
   |m_1,\ldots,m_i,\ldots,m_k \rangle =\prod_{j=1}^k \frac{1}{\sqrt{m_j}!}\left( \hat{a}_j^{m_j} \right)
 |0,\ldots,0_k \rangle
 \end{align}
-
+\end{frame}
 
 As an example,  
 
@@ -1000,6 +1003,7 @@ We can now construct the Fock space following the standard procedure
 for the harmonic oscillator: we interpret $\widehat{a}_\mathbf{p}$ as destruction operators and $\widehat{a}_\mathbf{p}^\dagger$
 as creation operators, and we define a vacuum state $|0\rangle$ as the state
 annihilated by all destruction operators, so for all $\mathbf{p}$
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \widehat{a}_\mathbf{p}|0\rangle=0\,.
 \end{align}
@@ -1057,7 +1061,9 @@ $|\textbf{p}\rangle=\frac{1}{\sqrt{V}}\widehat{a}^\dagger_{\mathbf{p}}|0\rangle$
   \label{tab:666}
 \end{table}
 \renewcommand{\arraystretch}{1}
+\end{frame}
 
+\begin{frame}[fragile,allowframebreaks]
 Similarly we can define many particle states. If a state has $N$ particles with all different momenta $p_1,p_2,\ldots,p_N$, it is defined by
 \begin{align}
   \label{eq:134}
@@ -1066,19 +1072,21 @@ Similarly we can define many particle states. If a state has $N$ particles with 
 \equiv&\frac{1}{V^{N/2}}\widehat{a\,}_{\mathbf{p}_1}^\dagger\cdots
 \widehat{a\,}_{\mathbf{p}_N}^\dagger|0\rangle\nonumber\\
 \end{align}
+\end{frame}
 On the other hand, if we want to construct a state with $m$ particles of momentum $p$, we must have a Fock state similar to~\eqref{eq:128}
 \begin{align}
 \label{eq:135}
   |m_{\mathbf{p}}\rangle=\frac{1}{V^{m/2}}\frac{1}{\sqrt{m!}}\left(\widehat{a\,}_{\mathbf{p}}^\dagger\right)^{m}|0\rangle\,
 \end{align}
+
 From\cite{Lahiri:2005sm}
 \begin{quote}
-  The vacuum, together with single particles states \eqref{eq:38f} and all multi--particle states \eqref{eq:134}, \eqref{eq:135}, constitute a vector space which is calles the \emph{Fock space}. The creation and annihilation operators act on this space.
+  The vacuum, together with single particles states \eqref{eq:38f} and all multi--particle states \eqref{eq:134}, \eqref{eq:135}, constitute a vector space which is called the \emph{Fock space}. The creation and annihilation operators act on this space.
 \end{quote}
 
 
-
-It is convinient to define: 
+\begin{frame}[fragile,allowframebreaks]
+It is convenient to define: 
 \begin{align}
 \label{eq:36}
   \widehat{\phi}(x)=\widehat{\phi}_+(x)+\widehat{\phi}_-(x)
@@ -1090,7 +1098,7 @@ where
   \widehat{a}_\mathbf{p} e^{-i p\cdot x }\nonumber\\
   \widehat{\phi}_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p} }}\widehat{a}_\mathbf{p}^\dagger e^{i p\cdot x }\,.
 \end{align}
-
+\end{frame}
 The effect of the operator field, $\widehat{\phi}_\pm(x)$, on the one particle state $|\mathbf{p}\rangle$
 \begin{align}
   \phi_\pm(x)|\mathbf{p}\rangle
@@ -1102,6 +1110,7 @@ as established in Sec.~\ref{sec:fock-space-real}, it is convenient to work in th
 \end{align}
 
 Now we can write down the action of various field operators on different one particles states.
+\begin{frame}[fragile,allowframebreaks]
 From now on we will denote the particle state with the initial of the name of the particle as a function of its momentum. For example, the creation of a Higgs of momentum $\mathbf{k}$, will be denoted as
 \begin{align}
   |H(\mathbf{k})\rangle=&\frac{1}{\sqrt{V}}\, \widehat{a}^\dagger_{\mathbf{k}}|0\rangle\,.
@@ -1137,7 +1146,7 @@ Similarly, we have  \emph{initial one-particles states} on left and \emph{initia
   \phi_+(x)|H(\mathbf{k})\rangle=&\frac{1}{\sqrt{2 \omega_k V}}e^{-i k\cdot x}|0\rangle,&
  \langle H(\mathbf{k})|\phi_-(x)=&\langle0|\frac{1}{\sqrt{2 \omega_k V}}e^{i k\cdot x} \,.
 \end{align}
-
+\end{frame}
 
 
 
@@ -1177,7 +1186,7 @@ Using (\ref{eq:24}) we have in a finite box
 =&2E_{\mathbf{n}}V
    \delta_{{\mathbf{n}},{\mathbf{m}}}\,.
 \end{align}
-\end{frame}
+
 
 
 \section{Propagator}
@@ -1197,6 +1206,7 @@ where
 \end{align*}
 
 \subsection{Complex scalar field}
+\begin{frame}[fragile,allowframebreaks]
 With conventions
 \begin{align}
   \widehat{\phi}(x)=\widehat{\phi}_+(x)+\widehat{\phi}_-(x)
@@ -1207,12 +1217,12 @@ where
   \widehat{a}_\mathbf{p} e^{-i p\cdot x }\nonumber\\
   \widehat{\phi}_-(x)=&\int d^3p \frac{1}{\sqrt{(2\pi)^32E_\mathbf{p} }}\widehat{b}_\mathbf{p}^\dagger e^{i p\cdot x }\,.
 \end{align}
-
+\end{frame}
 
 
 \section{Quantization of Fermions}
 \label{sec:quant-ferm}
-\begin{frame}[fragile,allowframebreaks]
+
 We consider now the Dirac equation
 \begin{align}
 \label{eq:137}
@@ -1504,11 +1514,13 @@ With them we can define
 
 
 
+\begin{frame}[fragile,allowframebreaks]
 As with the scalar field, we write the Dirac field as an integral over momentum space of the plane wave solutions, with creation and annihilation operators as coefficients,
 \begin{align}
   \psi(x)=\int d^3p\frac{1}{(2\pi)^3\sqrt{2 E_{\mathbf{p}}}}\sum_{s=1,2}\left[a_s(\mathbf{p})u_s(\mathbf{p})e^{-i p\cdot x}
 +b_s^\dagger(\mathbf{p})v_s(\mathbf{p})e^{i p\cdot x}\right]
 \end{align}
+\end{frame}
 \begin{align}
   H=&\int d^3x \mathcal{H}\nonumber\\
 =&\int d^3x\left(\frac{\partial \mathcal{L}}{\partial\dot\psi}\dot\psi -\mathcal{L}\right)\nonumber\\
@@ -1578,15 +1590,18 @@ Therefore
 \end{align}
 
 
-%\left(\right)
+    %     \left(\right)
+\begin{frame}[fragile,allowframebreaks]
 In order to obtain the quantization relations could see that if commutation relations are used we could get
 \begin{align}
   \colon\!H\colon=\int\frac{d^3p}{(2\pi)^3}\sum_{s=1,2}E_{\mathbf{p}}\left[a^\dagger_s(\mathbf{p})a_s(\mathbf{p})-b^\dagger_s(\mathbf{p})b_s(\mathbf{p})\right]
 \end{align}
+\end{frame}
 The minus sign arise from the anticommutation relations, so that a real spinor field, where $b_s(\mathbf{p})=a_s(\mathbf{p})$ is automatically zero.
 \begin{inprogress}
   Check the minus sign in previous equation.
 \end{inprogress}
+\begin{frame}[fragile,allowframebreaks]
 Even after normal ordering, this Hamiltonian could give to arise negative energy eigenvalues, which is a serious problem. If instead we assume that the creation and annihilation operators satisfy anticommutation relations
 \begin{align}
   \left\{a_r(\mathbf{p}),a_s^\dagger(\mathbf{q})\right\}=\left\{b_r(\mathbf{p}),b_s^\dagger(\mathbf{q})\right\}=(2\pi)^3\delta_{r s}\delta^{(3)}(\mathbf{p}-\mathbf{q})
@@ -1603,6 +1618,7 @@ With the anticommutators the normal--ordered Hamiltonian is
 \begin{align}
     \colon\!H\colon=\int\frac{d^3p}{(2\pi)^3}\sum_{s=1,2}E_{\mathbf{p}}\left[a^\dagger_s(\mathbf{p})a_s(\mathbf{p})+b^\dagger_s(\mathbf{p})b_s(\mathbf{p})\right]
 \end{align}
+\end{frame}
 Moreover
 \begin{align}
     \colon\!Q\colon=&q\int d^3x \colon\!\psi^\dagger\psi\colon\nonumber\\
@@ -1610,7 +1626,8 @@ Moreover
 \end{align}
 With this definition $a^\dagger_s(\mathbf{p})$ creates particles of charge $q$, while $b^\dagger_s(\mathbf{p})$ creates antiparticles of charge $-q$.
 In a similarly way to eq.~(\ref{eq:36}), the most general free particle solution to Dirac equation is
-%dar mas detalles de esta expansion
+%        dar mas detalles de esta expansion
+\begin{frame}[fragile,allowframebreaks]
 \begin{align}
   \widehat{\psi}(x)=\widehat{\psi}_+(x)+\widehat{\psi}_-(x)
 \end{align}
@@ -1628,7 +1645,9 @@ The Fourier expansion for antiparticles is
   \widehat{\overline{\psi}}_-(x)=&\int d^3p \frac{1}{(2\pi)^3\sqrt{2E_\mathbf{p}}}\sum_{s=1,2}{a}_s^\dagger(\mathbf{p})\bar{u}_s(\mathbf{p})e^{i p\cdot x} 
 \end{align}
 In this way $a_s^\dagger$ and $a_s$ are the creation and annihilation operators for particles, while $b_s^\dagger$ and $b_s$ are the creation and annihilation operators for antiparticles.
-  
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
 It is clear then that the one particle state is
 \begin{align}
 \label{eq:79fa}
@@ -1639,8 +1658,109 @@ while the one antiparticle state is
 \label{eq:79fb}
      | e^+(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}{b}^\dagger_s(\mathbf{p})|0\rangle\,.
 \end{align}
+\end{frame}
+
+\subsection{Quantization of Weyl spinors}
+\begin{frame}[fragile,allowframebreaks]
+
+We start from the Euler-Lagrange equation for a left-spinor:
+
+\includegraphics[scale=0.45]{tmp01} 
+
+The proposed solution is:
+
+\includegraphics[scale=0.4]{tmp02} 
+
+From which we obtains 
+
+\begin{align}
+  \includegraphics[scale=0.45]{tmp03} 
+\end{align}
+
+These results are applicable both to spin sums and helicity sums, and hold for both massive and massless spin-1/2 fermions
 
 \end{frame}
+
+This results can be combined as 
+
+\includegraphics[scale=0.45]{tmp04}
+
+The relevant basis of two-component spinors $\chi_s$ are eigenstates of $(1/2)\boldsymbol{\sigma}\cdot \boldsymbol{s}$
+
+\includegraphics[scale=0.45]{tmp08}  
+
+and therefore
+
+\includegraphics[scale=0.45]{tmp09}  
+
+
+%\includegraphics[scale=0.45]{tmp05}  
+
+In the following we need an explicit form for the internal Lorentz transformations
+
+\includegraphics[scale=0.45]{tmp06} 
+
+where:
+
+\includegraphics[scale=0.45]{tmp07} 
+
+After some calculations 
+
+\includegraphics[scale=0.45]{tmp10} 
+
+\includegraphics[scale=0.45]{tmp11} 
+
+
+\begin{frame}[fragile,allowframebreaks]
+\begin{align}
+\label{eq:fourweyl}
+ e_L\to \xi_{\alpha}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x_{\alpha}\left(s,\mathbf{p}\right) a_s e^{-i p\cdot x}+y_{\alpha}\left(s,\mathbf{p}\right) b_s^{\dagger} e^{i p\cdot x}  \right]\nonumber\\
+ \left( e_L \right)^{\dagger}\to \xi_{\dot{\alpha}}^{\dagger}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ y_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right) b_s e^{-i p\cdot x}+x_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right) a_s^{\dagger} e^{i p\cdot x}  \right]\nonumber\\
+ \left( e_R \right)^{\dagger}\to \eta^{\alpha}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ x^{\alpha}\left(s,\mathbf{p}\right) b_s e^{-i p\cdot x}+y^{\alpha}\left(s,\mathbf{p}\right) a_s^{\dagger} e^{i p\cdot x}  \right] \nonumber\\
+  e_R\to \eta^{\dagger\dot{\alpha}}=&\sum_s\int \frac{\operatorname{d}^3p}{(2\pi)^3\sqrt{2E_{\mathbf{p}}}} \left[ y^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right) a_s e^{-i p\cdot x}+x^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right) b_s^{\dagger} e^{i p\cdot x}  \right].
+\end{align}
+\end{frame}
+
+\begin{frame}
+from here we can define the one--particle states  
+\begin{align}
+  \label{eq:77f}
+   | e_L(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}x_{\alpha}\left(s,\mathbf{p}\right) a^\dagger_s(\mathbf{p})|0\rangle, &    | e_R(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}y^{\dagger\dot{\alpha}}\left(s,\mathbf{p}\right)a^\dagger_s(\mathbf{p})|0\rangle\nonumber\\
+   | \left( e_L \right)^{\dagger}(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}y_{\dot{\alpha}}^{\dagger}\left(s,\mathbf{p}\right){b}^\dagger_s(\mathbf{p})|0\rangle,&
+   | \left( e_R \right)^{\dagger}(\mathbf{p},s)\rangle\equiv&\sqrt{\frac{1}{V}}x^{\alpha}\left(s,\mathbf{p}\right){b}^\dagger_s(\mathbf{p})|0\rangle\,, 
+\end{align}
+\end{frame}
+
+By following similar steps
+\begin{frame}[fragile,allowframebreaks]
+  \begin{align}
+ \xi_+(x)|e_{L}(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_p V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
+  \langle e_{L}(\mathbf{p},s)|\xi_-^{\dagger}(x)=&\langle 0|\frac{1}{\sqrt{2 E_p V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x}\nonumber\\
+  \eta_+^{\dagger}(x)|e_R (\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
+  \langle e_R(\mathbf{p},s)|\eta_-(x)=&\langle 0|\frac{1}{\sqrt{2 E_{p'} V}}y(s,\mathbf{p})e^{i p\cdot x} \nonumber\\
+  \eta_+(x)|\left( e_R \right)^{\dagger}(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_{p} V}}x(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
+  \langle \left( e_R \right)^{\dagger}(\mathbf{p},s)|\eta^{\dagger}_-(x)=&\langle 0|\frac{1}{\sqrt{2 E_{p} V}}x^{\dagger}(s,\mathbf{p})e^{i p\cdot x} \nonumber\\
+  \xi_+^{\dagger}(x)|\left( e_{L} \right)^{\dagger}(\mathbf{p},s)\rangle=&\frac{1}{\sqrt{2 E_p V}}y^{\dagger}(s,\mathbf{p})e^{-i p\cdot x}|0\rangle,&
+  \langle\left( e_{L} \right)^{\dagger}(\mathbf{p},s)|\xi_-(x)=&\langle 0| \frac{1}{\sqrt{2 E_p V}}y(s,\mathbf{p})e^{i p\cdot x}
+ \,.
+\end{align}  
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks]
+One additional identity is the one relating the two-component spinor momentum space wave function to the four-component spinor wave functions
+
+\includegraphics[scale=0.45]{uvxy}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
 %\left(\right)
 
 %\left(\right)
