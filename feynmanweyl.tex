@@ -540,7 +540,7 @@ x^{\dagger}_{\dot{\alpha}}(s,\boldsymbol{p}){x^{\dagger}}^{\dot{\alpha}}(s',\bol
 &= \sum_{s'}x^{\alpha}(s',\boldsymbol{p}') \left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right)
 {x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}')  \nonumber\\
 &=\left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right) \sum_{s'} {x^{\dagger}}^{\dot{\alpha}}(s',\boldsymbol{p}') x^{\alpha}(s',\boldsymbol{p}')  \nonumber\\
-&=\left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right) \left( p'\cdot \overline{\sigma}_{\dot{\alpha}\alpha} \right) \nonumber\\
+&=\left( p\cdot \sigma_{\alpha{\dot{\alpha}}}  \right) \left( p'\cdot \overline{\sigma}^{\dot{\alpha}\alpha} \right) \nonumber\\
 &=\operatorname{Tr}\left[ \left( p\cdot \sigma \right)\left( p'\cdot \overline{\sigma} \right)  \right] \nonumber\\
 &=p_{\mu}p'_{\nu}\operatorname{Tr}\left[ \sigma^{\mu} \overline{\sigma}^{\nu}  \right] \nonumber\\ 
 &=2 g^{\mu\nu}p_{\mu}p'_{\nu} \nonumber\\
@@ -769,25 +769,35 @@ In order to evaluate this integrals we need to write the time ordered product in
 %ver cuaderno de perrito
 
 
-\subsection{Scalar propagator}
+
+\subsection{Wick theorem}
+To evaluate the time-ordered product we need first to show that
+\begin{align}
+ T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\,,
+\end{align}
+where the last term
+\begin{align}
+  i\Delta_F(x_1-x_2)=&\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\,
+\end{align}
+corresponds to the \emph{scalar propagator}. The demostration is displayed below.
 
 %copy and paste from scanned pages below
-With
-\begin{align}
-  \bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2)\equiv \left\langle 0 |   T\{\phi(x_1)\phi(x_2)\} | 0 \right\rangle
-\end{align}
-
-
-
-
-The Wick contraction can be written as:
+We can rewrite the scalar propagator in terms of 
+the Wick contraction, which is defined just as:
 \begin{align}
 \label{eq:77f}
   \bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2)=&\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\nonumber\\
-=&i\Delta_F(x_1-x_2)
+\,\phi(x_1)\phi(x_2)=&\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\,.
 \end{align}
+
+We can then stablish the Wick theorem as
+\begin{align}
+ T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+\,\phi(x_1)\phi(x_2)\,.
+\end{align}
+For the demostration
+
+
 since
 \begin{align}
   \phi(x)=\phi_+(x)+\phi_-(x)\,,
@@ -796,9 +806,9 @@ since
 T\left[\phi(x_1),\phi(x_2)\right]=\theta(t_1-t_2)\phi(x_1)\phi(x_2)+\theta(t_2-t_1)\phi(x_2)\phi(x_1)
 \end{align}
 \begin{align}
-    \langle0|T\left[\phi(x_1),\phi(x_2)\right]|0\rangle=&\theta(t_1-t_2)\langle0|\phi(x_1)\phi(x_2)+\theta(t_2-t_1)\langle0|\phi(x_2)\phi(x_1)|0\rangle\nonumber\\
-   =&\theta(t_1-t_2)\langle0|\phi_+(x_1)\phi_-(x_2)+\theta(t_2-t_1)\langle0|\phi_+(x_2)\phi_-(x_1)|0\rangle\nonumber\\
-     =&\langle0|\theta(t_1-t_2)\phi(x_1)_+\phi_-(x_2)+\theta(t_2-t_1)\langle0|\phi_+(x_2)\phi_-(x_1)|0\rangle
+    \langle0|T\left[\phi(x_1),\phi(x_2)\right]|0\rangle=&\theta(t_1-t_2)\langle0|\phi(x_1)\phi(x_2)|0\rangle+\theta(t_2-t_1)\langle0|\phi(x_2)\phi(x_1)|0\rangle\nonumber\\
+   =&\theta(t_1-t_2)\langle0|\phi_+(x_1)\phi_-(x_2)|0\rangle+\theta(t_2-t_1)\langle0|\phi_+(x_2)\phi_-(x_1)|0\rangle\nonumber\\
+     =&\langle0|\theta(t_1-t_2)\phi(x_1)_+\phi_-(x_2)|0\rangle+\langle0|\theta(t_2-t_1)\phi_+(x_2)\phi_-(x_1)|0\rangle
 \end{align}
 
 with
@@ -832,15 +842,12 @@ In this way
 
 
 
+and the final result is that
+\begin{align}
+  \langle0|T(\phi(x_1)\phi(x_2))|0\rangle=\int \frac{\operatorname{d}^{4} p}{(2 \pi)^{4}} \frac{e^{-i p \cdot\left(x_1-x_2\right)}}{p^2-m^2-i \varepsilon}
+\end{align}
 
 \includepdf[pages=-]{propagator.pdf}  
-
-\subsection{Wick theorem}
-\begin{align}
-  T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2)
-\end{align}
-The same expression can be obtained for fermions.
 
 \includepdf[pages=-]{wick.pdf}  
 

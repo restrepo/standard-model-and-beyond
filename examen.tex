@@ -1,0 +1,45 @@
+\documentclass{article}
+%\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage[amssymb]{SIunits}
+%\usepackage{enumerate}
+% \usepackage{lipsum}
+% \usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{simplewick}
+\usepackage[colorlinks=true]{hyperref}
+
+
+\begin{document}
+\section{Taller}
+
+\begin{enumerate}
+\item Basado en el método explicado en la sec. 5.3 de \url{http://arxiv.org/abs/physics/0703214}, demuestre alguna de las siguientes identidades
+  \begin{align*}
+1)&&  \sum_s x_{\alpha}(\mathbf{p},s)x^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}}\,, &    \sum_s x^{\dagger \dot{\alpha}}(\mathbf{p},s) x^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta}\nonumber\\
+2)&&  \sum_s y_{\alpha}(\mathbf{p},s)y^{\dagger}_{\dot{\beta}}(\mathbf{p},s)=&p\cdot \sigma_{\alpha\dot{\beta}}\,, &   \sum_s y^{\dagger \dot{\alpha}}(\mathbf{p},s) y^{\beta}(\mathbf{p},s)=&p\cdot \overline{\sigma}^{\dot{\alpha}\beta} \nonumber\\
+3)&& \sum_{s} x_{\alpha}({\boldsymbol{p}}, s) y^{\beta}({\boldsymbol{p}}, s)=&m \delta_{\alpha}^{\beta}, & \sum_{s} y_{\alpha}({\boldsymbol{p}}, s) x^{\beta}({\boldsymbol{p}}, s)=&-m \delta_{\alpha}^{\beta} \nonumber\\
+4)&& \sum_{s} y^{\dagger \dot{\alpha}}({\boldsymbol{p}}, s) \chi_{\dot{\beta}}^{\dagger}({\boldsymbol{p}}, s)=&m \delta^{\dot{\alpha}}_{\dot{\beta}}, & \sum_{s} x^{\dagger \dot{\alpha}}({\boldsymbol{p}}, s) y_{\dot{\beta}}^{\dagger}({\boldsymbol{p}}, s)=&-m \delta^{\dot{\alpha}}_{\dot{\beta}}
+\end{align*}
+
+\item Demuestre el teorema de Wick
+\begin{align}
+ T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+\,\phi(x_1)\phi(x_2)\,,
+\end{align}
+donde
+\begin{align}
+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+  \,\phi(x_1)\phi(x_2)=\langle0|T(\phi(x_1)\phi(x_2))|0\rangle=\int \frac{\operatorname{d}^{4} p}{(2 \pi)^{4}} \frac{e^{-i p \cdot\left(x_1-x_2\right)}}{p^2-m^2-i \varepsilon}
+\end{align}
+Demuestre que la función de Green definida como
+\begin{align}
+  G(x-x')=\bcontraction{\,}{\phi}{(x_1)}{\phi}
+  \,\phi(x)\phi(x')\,,
+\end{align}
+es solución a la ecuación de Klein-Gordon
+
+\end{enumerate}
+
+
+\end{document}
