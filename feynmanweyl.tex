@@ -14,7 +14,6 @@
 %instiki:
 %instiki:* [Scattering](#scattering)
 %instiki:
-In progress: The previous chapter will be rewritten in terms of Weyl spinors.
 
 When the case of interacting fields are considered, the particles can be created, destroyed and scattered. In essence this requires solving the coupled non-linear field equations for given conditions. This is an extremely difficult problem which has only been solved in perturbation theory.
 
@@ -773,11 +772,11 @@ In order to evaluate this integrals we need to write the time ordered product in
 \subsection{Wick theorem}
 To evaluate the time-ordered product we need first to show that
 \begin{align}
- T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\,,
+ \operatorname{T}\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\langle0|\operatorname{T}\{\phi(x_1)\phi(x_2)\}|0\rangle\,,
 \end{align}
 where the last term
 \begin{align}
-  i\Delta_F(x_1-x_2)=&\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\,
+  i\Delta_F(x_1-x_2)=&\langle0|\operatorname{T}\{\phi(x_1)\phi(x_2)\}|0\rangle\,
 \end{align}
 corresponds to the \emph{scalar propagator}. The demostration is displayed below.
 
@@ -787,12 +786,12 @@ the Wick contraction, which is defined just as:
 \begin{align}
 \label{eq:77f}
   \bcontraction{\,}{\phi}{(x_1)}{\phi}
-\,\phi(x_1)\phi(x_2)=&\langle0|T\{\phi(x_1)\phi(x_2)\}|0\rangle\,.
+\,\phi(x_1)\phi(x_2)=&\langle0|\operatorname{T}\{\phi(x_1)\phi(x_2)\}|0\rangle\,.
 \end{align}
 
 We can then stablish the Wick theorem as
 \begin{align}
- T\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
+ \operatorname{T}\{\phi(x_1)\phi(x_2)\}=:\phi(x_1)\phi(x_2):+\bcontraction{\,}{\phi}{(x_1)}{\phi}
 \,\phi(x_1)\phi(x_2)\,.
 \end{align}
 For the demostration
@@ -803,10 +802,10 @@ since
   \phi(x)=\phi_+(x)+\phi_-(x)\,,
 \end{align}
 \begin{align}
-T\left[\phi(x_1),\phi(x_2)\right]=\theta(t_1-t_2)\phi(x_1)\phi(x_2)+\theta(t_2-t_1)\phi(x_2)\phi(x_1)
+\operatorname{T}\left[\phi(x_1),\phi(x_2)\right]=\theta(t_1-t_2)\phi(x_1)\phi(x_2)+\theta(t_2-t_1)\phi(x_2)\phi(x_1)
 \end{align}
 \begin{align}
-    \langle0|T\left[\phi(x_1),\phi(x_2)\right]|0\rangle=&\theta(t_1-t_2)\langle0|\phi(x_1)\phi(x_2)|0\rangle+\theta(t_2-t_1)\langle0|\phi(x_2)\phi(x_1)|0\rangle\nonumber\\
+    \langle0|\operatorname{T}\left[\phi(x_1),\phi(x_2)\right]|0\rangle=&\theta(t_1-t_2)\langle0|\phi(x_1)\phi(x_2)|0\rangle+\theta(t_2-t_1)\langle0|\phi(x_2)\phi(x_1)|0\rangle\nonumber\\
    =&\theta(t_1-t_2)\langle0|\phi_+(x_1)\phi_-(x_2)|0\rangle+\theta(t_2-t_1)\langle0|\phi_+(x_2)\phi_-(x_1)|0\rangle\nonumber\\
      =&\langle0|\theta(t_1-t_2)\phi(x_1)_+\phi_-(x_2)|0\rangle+\langle0|\theta(t_2-t_1)\phi_+(x_2)\phi_-(x_1)|0\rangle
 \end{align}
@@ -854,7 +853,7 @@ and the final result is that
 
  Generalizing  the results for $n$ scalar or fermion fields, but with an even number of fermions fields, we have the Wick theorem
 \begin{align}
-  T\{\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n) \}
+  \operatorname{T}\{\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n) \}
 =&:\Phi(x_1)\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\nonumber\\
 &+\bcontraction{\,}{\Phi}{(x_1)}{\Phi}\,\Phi(x_1)\Phi(x_2):\Phi(x_3)\cdots\Phi(x_n):\nonumber\\
 &+:\Phi(x_1)\bcontraction{\,}{\Phi}{(x_2)}{\Phi}\,\Phi(x_2)\Phi(x_3)\cdots\Phi(x_n):+\cdots  \nonumber\\
@@ -2181,7 +2180,7 @@ Therefore in this case
 For $p\ll M_W^2$ the analysis is similar to the previous one with
 \begin{align}
    \bcontraction{\,}{W^\mu}{(x_1)}{W^\nu}
-\,W^\mu(x_1)W^\nu(x_2)=&\langle0|T\{W^\mu(x_1)W^\nu(x_2)\}|0\rangle\nonumber\\
+\,W^\mu(x_1)W^\nu(x_2)=&\langle0|\operatorname{T}\{W^\mu(x_1)W^\nu(x_2)\}|0\rangle\nonumber\\
 \approx&\int\frac{d^4q}{(2\pi)^4}\frac{g^{\mu\nu}}{M_W^2}e^{-i q\cdot(x_1-x_2)}
 \end{align}
 
