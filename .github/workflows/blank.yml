@@ -16,7 +16,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: fullnotes.tex
+          root_file: beyond.tex
 
       - name: Create Release
         id: create_release
@@ -36,6 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: ./fullnotes.pdf
-          asset_name: fullnotes.pdf
+          asset_path: ./beyon.pdf
+          asset_name: beyond.pdf
           asset_content_type: pdf
