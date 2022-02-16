@@ -36,6 +36,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} 
-          asset_path: ./beyon.pdf
+          asset_path: ./beyond.pdf
           asset_name: beyond.pdf
           asset_content_type: pdf
