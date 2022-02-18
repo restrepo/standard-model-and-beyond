@@ -410,7 +410,7 @@ For generic standard model Higgs couplings we have at least (in the specific cas
 \end{align}
 therefore
 
-By using the general formula for the $2\to 2$ cross section in eq.~\eqref{eq:}
+By using the general formula for the $2\to 2$ cross section in eq.~\eqref{eq:2bcs}
 \begin{align}
   \frac{d\sigma}{d\Omega}=&\frac{1}{64\pi^2s}
 \frac{\lambda^{1/2}(s,{m_2'}^2,{m_1'}^2)}{\lambda^{1/2}(s,m_2^2,m_1^2)}
@@ -436,12 +436,18 @@ We consider two limits here for the partial contribution to the differential cro
 =&\frac{y^4}{128\pi^2}\frac{t^2}{s\left(t-m^2_h\right)^2}
 \end{align}
 \item For some heavy fermion in the non-relativistic limit we have
+  from Eq.~\eqref{eq:nrlim}
 \begin{align}
   t\approx& (m_1-m_1)^2=0\,,& 
   s\approx& (m_1+m_2)^2\,,
 \end{align}
+so that
+\begin{align*}
+\frac{1}{s}  \frac{ \left(2m_1^2-t  \right)\left( 2m_2^2-t \right)}{\left(t-m^2_h\right)^2}=& 4\frac{m_1^2m_2^2}{\left( m_1+m_2\right)^2m_h^4}\,,
+\end{align*}
 and therefore
 \begin{align}
+  \label{eq:mhff}
       \frac{d\sigma}{d\Omega}
 =&\frac{y^4}{32\pi^2m_h^4}\left(\frac{m_1m_2}{m_1+m_2}\right)^2\,.
 \end{align}
@@ -775,23 +781,18 @@ Therefore
 
 
 
-\subsubsection{Fermion quark scattering}
-
-We consider the current of a Weyl fermion mediated by $Z^{\mu}$, with a coupling given by the Lagrangian
-\begin{align}
-\label{eq:xietaz}
-\mathcal{L}=a_L \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} Z_{\mu}\,.
-%+b_L \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} Z_{\mu}
-\end{align}
-
 
 
 
 \section{Direct detection of dark matter}
 
 
-\subsection{Fermion dark matter with vector couplings}
+\subsection{Fermionic dark matter with vector couplings}
 First we consider the SM $t$-channel interaction
+
+\subsubsection{Fermion quark scattering}
+
+
 \begin{align}
   e_L+q_L \to e_L+q_L
 \end{align}
@@ -807,6 +808,15 @@ We have then the two particle states \eqref{eq:bkqlel}  with distinguishable par
 \begin{align}
   e_L\to& \xi_e\,& q_L\to \xi_q\,.
 \end{align}
+
+We consider the current of a Weyl fermion mediated by $Z^{\mu}$, with a coupling, $a_L$, given by the Lagrangian
+\begin{align}
+\label{eq:xietaz}
+\mathcal{L}=a_L \xi^{\dagger}_{\dot{\alpha}}\left( \overline{\sigma}^{\mu} \right)^{\dot{\alpha}\alpha}\xi_{\alpha} Z_{\mu}\,.
+%+b_L \eta^{\alpha} \sigma^{\mu}_{\alpha\dot{\alpha}} \eta^{\dagger\dot{\alpha}} Z_{\mu}
+\end{align}
+
+
 We label the initial (final) momentum as $p_1$, $p_2$ ($p_1'$, $p_2'$) such that
 \begin{align}
   m_e=&m_1=m_1'\,,&m_q=&m_2=m_2'\,.
@@ -1133,7 +1143,7 @@ As an initial step to calculate the probability we must squared this amplitude
 
 The partial amplitude can be written in terms of the Mandelstam variables~\eqref{eq:mvstu} and \eqref{eq:stucs}
 \begin{align}
-  \sum_{\text{spins}} |\mathcal{M}|^2=
+  \sum_{\text{spins}} |\mathcal{M}|^2
   =& 4 \lambda^2 m_q^2\Delta_F^2(p_1-p_1') 
      \left( m_2^2+{m_2'}^2-t \right),
 \end{align}
