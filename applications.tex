@@ -601,9 +601,10 @@ Therefore
 -\frac{1}{\sqrt{2E_1 V}\sqrt{2E_2 V}}\,y^{\alpha}(s',\mathbf{p}_2) x^{\dagger\dot{\alpha}}(s,\mathbf{p}_1)\operatorname{e}^{i p_1\cdot x_1}\operatorname{e}^{i p_2\cdot x_2}
 \end{align}
 
-\subsection{Vector interactions}
+\subsection{Bahba scattering}
 
-\subsubsection{Bahba scattering}
+
+For the full calculation see~\cite{Kersch:1985rn}.
 
 We consider the $t$-channel interaction
 \begin{align}
@@ -898,6 +899,15 @@ and, in this way,
                     =&\frac{a_L^4}{16\pi^2m_Z^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
 \end{align}
 
+After the final integration we have
+\begin{align}
+  \label{eq:csdm}
+       \sigma(e_L+q_L\to e_L+q_L)
+                    =&\frac{a_L^4}{4\pi m_Z^4}\left( \frac{m_em_q}{m_e+m_q} \right)^2\,.
+\end{align}
+
+
+\subsection{Fermionic dark matter with a $Z'$ mediation}
 We are now to interpret this interaction in the context of dark matter.By following the discussion in~\cite{Cirelli:2013ufw}, given the very low energies involved in dark matter scattering with matter, the relevant degree of fredom to be considered are the nucleons directly.
 
 The coupling of a vector field ${Z'}_{\mu}$ with the quark current
@@ -913,8 +923,9 @@ The nucleon charge is obtained by summing over the valence quark of the nucleons
 \begin{align*}
   f_p=&2f_u+f_d\,,& f_n=f_u+2f_d\,,
 \end{align*}
+Note that because of the conservation of the vector current, there is no contribution of
+sea quarks or gluons to the effective couplings~\cite{Frandsen:2011cg}
 
-\subsection{Fermionic dark matter with a $Z'$ mediation}
 
 Consider the Lagrangian of and Abelian $\operatorname{U}(1)_X$ with
 the$X$-charges of the rigth handed components of the standard model
@@ -936,13 +947,13 @@ $\widehat{X}\psi=q_{\psi}\psi$. Then the Lagrangian, relevant for direct detecti
                 +i \left( u_R \right)^{\dagger} {\sigma}^{\mu} D_{\mu} u_R
                 +i \left( d_R \right)^{\dagger} {\sigma}^{\mu} D_{\mu} d_R
                  \nonumber\\ %-\chi+\chi 
-  \supset& \chi \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L Z'_{\mu}
-           +\chi\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R Z'_{\mu}-m \left[\left( \chi_L \right)^{\dagger} \chi_R+
+  \supset& g'\chi \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L Z'_{\mu}
+           +g'\chi\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R Z'_{\mu}-m \left[\left( \chi_L \right)^{\dagger} \chi_R+
                 \left( \chi_R \right)^{\dagger} \chi_L\right] \nonumber\\
-  &-Q \left( u_L \right)^{\dagger} \overline{\sigma}^{\mu} u_L Z'_{\mu}
-    +u \left( u_R \right)^{\dagger} {\sigma}^{\mu}  u_R Z'_{\mu}
--Q \left( d_L \right)^{\dagger} \overline{\sigma}^{\mu} d_L Z'_{\mu}
-  +d \left( d_R \right)^{\dagger} {\sigma}^{\mu}  d_R Z'_{\mu}\,.
+  &-g'Q \left( u_L \right)^{\dagger} \overline{\sigma}^{\mu} u_L Z'_{\mu}
+    +g'u \left( u_R \right)^{\dagger} {\sigma}^{\mu}  u_R Z'_{\mu}
+-g'Q \left( d_L \right)^{\dagger} \overline{\sigma}^{\mu} d_L Z'_{\mu}
+  +g'd \left( d_R \right)^{\dagger} {\sigma}^{\mu}  d_R Z'_{\mu}\,.
 \end{align*}
 
 We have the identities
@@ -960,14 +971,81 @@ where the first two terms corresponds to the vector part and the term in bracket
 
 Wa are interested only in the vector part of the interaction, hence
 \begin{align}
-   \mathcal{L}\supset& \chi \left[ \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L+\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R \right]  Z'_{\mu}
+   \mathcal{L}\supset&g'\chi \left[ \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L+\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R \right]  Z'_{\mu}
            -m \left[\left( \chi_L \right)^{\dagger} \chi_R+
   \left( \chi_R \right)^{\dagger} \chi_L\right] \nonumber\\
-  &+(u-Q)\left[ \frac{1}{2}\left( u_L \right)^{\dagger}\overline{\sigma}^{\mu} u_L+\frac{1}{2}\left( u_R \right)^{\dagger}{\sigma}^{\mu} u_R  \right]
-  +(d-Q)\left[ \frac{1}{2}\left( d_L \right)^{\dagger}\overline{\sigma}^{\mu} d_L+\frac{1}{2}\left( d_R \right)^{\dagger}{\sigma}^{\mu} d_R  \right].
+  &+g'(u-Q)\left[ \frac{1}{2}\left( u_L \right)^{\dagger}\overline{\sigma}^{\mu} u_L+\frac{1}{2}\left( u_R \right)^{\dagger}{\sigma}^{\mu} u_R  \right]
+  +g'(d-Q)\left[ \frac{1}{2}\left( d_L \right)^{\dagger}\overline{\sigma}^{\mu} d_L+\frac{1}{2}\left( d_R \right)^{\dagger}{\sigma}^{\mu} d_R  \right]. \nonumber\\
+=& g'\chi \left[ \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L+\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R \right]  Z'_{\mu}
+           -m \left[\left( \chi_L \right)^{\dagger} \chi_R+
+  \left( \chi_R \right)^{\dagger} \chi_L\right] \nonumber\\
+  &+f_u\left[ \frac{1}{2}\left( u_L \right)^{\dagger}\overline{\sigma}^{\mu} u_L+\frac{1}{2}\left( u_R \right)^{\dagger}{\sigma}^{\mu} u_R  \right]
+  +f_d\left[ \frac{1}{2}\left( d_L \right)^{\dagger}\overline{\sigma}^{\mu} d_L+\frac{1}{2}\left( d_R \right)^{\dagger}{\sigma}^{\mu} d_R  \right].
+\end{align}
+where
+\begin{align}
+  f_u=&g'(u-Q)\,,& f_d=& g'(d-Q).
 \end{align}
 We have already calculated the $\chi_{L}-f_L$ part, ...
- 
+
+
+The direct detection can be calculated directly from the low energy Feynman diagrams involving the neutron and the proton
+\begin{align}
+  \mathcal{L}_N=&g'\chi \left[ \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L+\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R \right]  Z'_{\mu}
+           -m \left[\left( \chi_L \right)^{\dagger} \chi_R+
+  \left( \chi_R \right)^{\dagger} \chi_L\right] \nonumber\\
+  &+f_p\left[ \frac{1}{2}\left( p_L \right)^{\dagger}\overline{\sigma}^{\mu} p_L+\frac{1}{2}\left( p_R \right)^{\dagger}{\sigma}^{\mu} p_R  \right]
+  +f_n\left[ \frac{1}{2}\left( n_L \right)^{\dagger}\overline{\sigma}^{\mu} n_L+\frac{1}{2}\left( n_R \right)^{\dagger}{\sigma}^{\mu} n_R  \right]. 
+\end{align}
+%%%
+The corresponding Lagrangian for a nucleus $X^A$ with $A$ nucleons and $Z$ protons is the sum of the Lagrangian for the $Z$ protons and the $(A-Z)$ neutrons
+\begin{align}
+  \mathcal{L}_{X^A}=&g'\chi \left[ \left( \chi_L \right)^{\dagger}  \overline{\sigma}^{\mu}\chi_L+\left( \chi_R \right)^{\dagger} {\sigma}^{\mu}  \chi_R \right]  Z'_{\mu}
+           -m \left[\left( \chi_L \right)^{\dagger} \chi_R+
+  \left( \chi_R \right)^{\dagger} \chi_L\right] \nonumber\\
+  &+\left[ Z f_p + f_n(A-Z) \right]\left[ \frac{1}{2}\left( X^A_L \right)^{\dagger}\overline{\sigma}^{\mu} X^A_L+\frac{1}{2}\left( X^A_R \right)^{\dagger}{\sigma}^{\mu} X^A_R  \right].
+\end{align}
+Notice
+that the factor
+$\left[f_p Z + f_n (A-Z)\right]$
+is actually a rescaling factor which is introduced for a
+consistent comparison with experimental limits which customarily assume $f_p=f_n$~\cite{Arcadi:2017kky}.
+
+%The calculation for the $\xi_L$-$p_L$ is already done and the result reinterpreted from eq.~\eqref{eq:csdm} for both the proton and the neutron.
+In this way, from~\eqref{eq:csdm}, we have the dark matter-nucleus
+spin-independent cross section~\cite{Feng:2013vod}
+\begin{align}
+       \hat{\sigma}_A
+                    =&\frac{1}{4\pi m_{Z'}^4}\left( \frac{m_\chi m_A}{m_\chi+m_A} \right)^2\left[f_p Z + f_n (A-Z)\right]^2\,.
+\end{align}
+The specific form of the previous equation, depend on the definition and unitis of $f_N$. For example, by redefining
+\begin{align}
+  f_N'=\frac{1}{16 m_{Z'}^4}f_N\,,
+\end{align}
+we have~\cite{Yaguna:2016bga}
+\begin{align}
+       \hat{\sigma}_A
+                    =&\frac{4}{\pi}\left( \frac{m_\chi m_A}{m_\chi+m_A} \right)^2\left[f'_p Z + f'_n (A-Z)\right]^2\,.
+\end{align}
+In particular, the dark matter-proton spin-independent cross
+section is given by
+\begin{align}
+  \sigma_{p}=\frac{4 \mu_{p}^{2}}{\pi} {f'}_{p}^{2}\,,
+\end{align}
+where
+\begin{align}
+  \mu_X=\frac{m_{\chi}m_X}{m_{\chi}+m_X}\,.
+\end{align}
+
+The direct detection dark matter-nucleon cross section can be written as
+\begin{align}
+  \sigma_{N}^{\text{SI}}=\sigma_{p} \frac{\sum_{i} \eta_{i} \mu_{A_{i}}^{2}\left[Z+\left(A_{i}-Z\right) f'_{n} / f'_{p}\right]^{2}}{\sum_{i} \eta_{i} \mu_{A_{i}}^{2} A_{i}^{2}}
+\end{align}
+where $A_i$ are isotopes of the target nucleus $A$ with fractional number abundances $\eta_i$.
+
+Notice that $\sigma_{N}^{\text{SI}}=\sigma_{p}$ for $f_n'=f_p'$, and the details of the nucleous like their mass, isotopes or abundances, are not longer required.
+
+
 \subsection{Scalar dark matter with vector couplings}
 
 The following calculation is expected to be self-contained with every step worked out in detail.
@@ -1343,6 +1421,12 @@ where $m_f=y_f v$.
 See full treatment in \url{https://indico.cern.ch/event/746178/contributions/3384110/attachments/1849289/3035359/SUSY2019_SatomiOkada.pdf}
 
 \end{frame}
+
+\section{Extra examples}
+Solved problems in~\cite{Maggiore:2005qv} 
+\begin{itemize}
+\item  $\pi^+\to l^+\nu_l $ (Problem 8.2, pag. 205)
+\end{itemize}
 
 \section{Exercises}
 Display possible diagrams that correct the mass of the scalar in a theory with $\lambda \phi^4$, with and without a $\phi^3$-term.
