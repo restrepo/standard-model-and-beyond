@@ -908,8 +908,8 @@ After the final integration we have
 
 
 \subsection{Fermionic dark matter with a $Z'$ mediation}
-We are now to interpret this interaction in the context of dark matter.By following the discussion in~\cite{Cirelli:2013ufw}, given the very low energies involved in dark matter scattering with matter, the relevant degree of fredom to be considered are the nucleons directly.
-
+We are now going  to interpret this interaction in the context of dark matter. By following the discussion in~\cite{Cirelli:2013ufw}, given the very low energies involved in dark matter scattering with matter, the relevant degree of fredom to be considered are the nucleons directly.
+$\alpha$
 The coupling of a vector field ${Z'}_{\mu}$ with the quark current
 \begin{align*}
   \mathcal{L}=f_{q}\left[ \left( q_L \right)^{\dagger}\overline{\sigma}^{\mu}q_L+\left( q_R \right)^{\dagger}{\sigma}^{\mu}q_R \right] Z'_{\mu}\,,
@@ -920,9 +920,10 @@ leads to the same vector interaction with the nucleon current
   +\left( N_R \right)^{\dagger}{\sigma}^{\mu}N_R \right] Z'_{\mu}\,.
 \end{align*}
 The nucleon charge is obtained by summing over the valence quark of the nucleons. For $N=p,n$ (proton and neutron respectively)
-\begin{align*}
+\begin{align}
+  \label{eq:fpfn}
   f_p=&2f_u+f_d\,,& f_n=f_u+2f_d\,,
-\end{align*}
+\end{align}
 Note that because of the conservation of the vector current, there is no contribution of
 sea quarks or gluons to the effective couplings~\cite{Frandsen:2011cg}
 
@@ -986,8 +987,6 @@ where
 \begin{align}
   f_u=&g'(u-Q)\,,& f_d=& g'(d-Q).
 \end{align}
-We have already calculated the $\chi_{L}-f_L$ part, ...
-
 
 The direct detection can be calculated directly from the low energy Feynman diagrams involving the neutron and the proton
 \begin{align}
@@ -995,8 +994,9 @@ The direct detection can be calculated directly from the low energy Feynman diag
            -m \left[\left( \chi_L \right)^{\dagger} \chi_R+
   \left( \chi_R \right)^{\dagger} \chi_L\right] \nonumber\\
   &+f_p\left[ \frac{1}{2}\left( p_L \right)^{\dagger}\overline{\sigma}^{\mu} p_L+\frac{1}{2}\left( p_R \right)^{\dagger}{\sigma}^{\mu} p_R  \right]
-  +f_n\left[ \frac{1}{2}\left( n_L \right)^{\dagger}\overline{\sigma}^{\mu} n_L+\frac{1}{2}\left( n_R \right)^{\dagger}{\sigma}^{\mu} n_R  \right]. 
+  +f_n\left[ \frac{1}{2}\left( n_L \right)^{\dagger}\overline{\sigma}^{\mu} n_L+\frac{1}{2}\left( n_R \right)^{\dagger}{\sigma}^{\mu} n_R  \right], 
 \end{align}
+where $f_p$ and $f_u$ are given in eq.~\eqref{eq:fpfn}.
 %%%
 The corresponding Lagrangian for a nucleus $X^A$ with $A$ nucleons and $Z$ protons is the sum of the Lagrangian for the $Z$ protons and the $(A-Z)$ neutrons
 \begin{align}
@@ -1036,6 +1036,7 @@ where
 \begin{align}
   \mu_X=\frac{m_{\chi}m_X}{m_{\chi}+m_X}\,.
 \end{align}
+is the dark matter-nucleus reduced mass.
 
 The direct detection dark matter-nucleon cross section can be written as
 \begin{align}
